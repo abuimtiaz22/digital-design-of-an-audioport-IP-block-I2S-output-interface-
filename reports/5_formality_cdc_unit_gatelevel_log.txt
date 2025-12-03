@@ -1,0 +1,284 @@
+
+                                 Formality (R)
+
+                 Version U-2022.12 for linux64 - Nov 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Build: 7907914
+Hostname: kataja7.oulu.fi
+Current time: Fri Mar 21 10:20:09 2025
+
+Loading db file '/sw/rhel7/synopsys/fm/U-2022.12/libraries/syn/gtech.db'
+
+Script: scripts/fm_glec.tcl
+
+fm_shell (setup)> source -echo -verbose scripts/fm_glec.tcl#################################################################
+#   RTL-vs-gates verification script for Synopsys Formality
+#   (c) 2023, University of Oulu
+#################################################################
+set systemTime [clock seconds]
+1742545212
+puts "Script start time: [clock format $systemTime -format %H:%M:%S]"
+Script start time: 10:20:12
+#################################################################
+# Customizable variables
+#################################################################
+set FORMALITY_TIMEOUT_LIMIT  "00:60:00"
+00:60:00
+set INSERT_SCAN_CHAINS       0
+0
+set VHDL_ARCHITECTURE        "rtl"
+rtl
+set SYNOPSYS_ANALYZE_OPTIONS ""
+set SYNOPSYS_DEFINE_MACROS   ""
+#################################################################
+# Read technology and design settings
+#################################################################
+set EDA_TOOL "Formality"
+Formality
+set EDA_TOOL_TARGET "ASIC"
+ASIC
+source scripts/0_setup.tcl
+set SYNOPSYS_DEFINE_MACROS   [concat $SYNOPSYS_DEFINE_MACROS ",design_top_is_$DESIGN_NAME" ]
+,design_top_is_cdc_unit
+set SYNOPSYS_ANALYZE_OPTIONS [concat $SYNOPSYS_ANALYZE_OPTIONS "-define { $SYNOPSYS_DEFINE_MACROS }" ]
+-define { ,design_top_is_cdc_unit }
+set reports [glob -nocomplain ${REPORTS_DIR}/5_formality_${DESIGN_NAME}_*]
+reports/5_formality_cdc_unit_gatelevel_status_report.txt reports/5_formality_cdc_unit_gatelevel_unmatched_points_report.txt reports/5_formality_cdc_unit_gatelevel_log.txt reports/5_formality_cdc_unit_gatelevel_failing_points_report.txt
+file delete -force $reports
+#################################################################
+# Formality Settings
+#################################################################
+# Read guidance from Design Compiler
+if { [file exists ${RESULTS_DIR}/${DESIGN_NAME}.svf ] == 1} {
+    set synopsys_auto_setup true
+    set_svf ${RESULTS_DIR}/${DESIGN_NAME}.svf
+}
+SVF set to '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/cdc_unit.svf'.
+1
+set verification_timeout_limit $FORMALITY_TIMEOUT_LIMIT
+00:60:00
+set_mismatch_message_filter -warn
+1
+#################################################################
+# Libraries
+#################################################################
+foreach library ${DC_TARGET_LIBRARY_FILE} {
+    set GATE_LIBRARY ${DC_LIBRARY_PATH}/$library
+    read_db " $GATE_LIBRARY "
+}
+Loading db file '/research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db'
+#################################################################
+# Set up reference model
+#################################################################
+foreach filename [concat ${DESIGN_FILES} ${RTL_FILES}] {
+    set ext [file extension $filename]
+    if { $ext == ".vhd" } {
+	read_vhdl -container r -libname WORK $filename
+    } elseif { $ext == ".sv" } {
+	eval "read_sverilog $SYNOPSYS_ANALYZE_OPTIONS -container r -libname WORK $filename"
+    } elseif { $ext == ".v" } {
+	eval "read_verilog $SYNOPSYS_ANALYZE_OPTIONS -container r -libname WORK $filename"
+    }
+}
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/apb_pkg.sv'
+Loading include file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.svh'
+Current container set to 'r'
+Loading verilog file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport_pkg.sv'
+Loading include file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.svh'
+Loading verilog file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport_util_pkg.sv'
+Loading include file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.svh'
+Loading verilog file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv'
+Loading include file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.svh'
+if { $RTL_LANGUAGE == "VHDL" } {
+    eval "set_top r:/WORK/${DESIGN_NAME} -vhdl_arch $VHDL_ARCHITECTURE"
+}  elseif { $RTL_LANGUAGE == "SystemVerilog" } {
+    eval "set_top r:/WORK/${DESIGN_NAME}"
+}
+Setting top design to 'r:/WORK/cdc_unit'
+Status:   Elaborating design cdc_unit   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  92 unlinked power cell(s) with no power down functions on outputs.
+Warning:  29 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'r:/WORK/cdc_unit'
+Reference design set to 'r:/WORK/cdc_unit'
+1
+#	    set_dont_verify_point r:/WORK/${DESIGN_NAME}_RTL/$port
+#################################################################
+# Set up implementation model
+#################################################################
+read_verilog -container i -libname WORK " ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.v " 
+Loading verilog file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/cdc_unit_gatelevel.v'
+Current container set to 'i'
+1
+set_top i:/WORK/${DESIGN_NAME}
+Setting top design to 'i:/WORK/cdc_unit'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  92 unlinked power cell(s) with no power down functions on outputs.
+Warning:  29 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'i:/WORK/cdc_unit'
+Implementation design set to 'i:/WORK/cdc_unit'
+1
+#################################################################
+# Read constraints
+#################################################################
+if { [info exists FORMALITY_GLEC_SETUP_FILE ] } {
+    source -echo $FORMALITY_GLEC_SETUP_FILE
+}
+#################################################################
+# Match compare points
+#################################################################
+match 
+Reference design is 'r:/WORK/cdc_unit'
+Implementation design is 'i:/WORK/cdc_unit'
+Status:  Checking designs...
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+SVF BEGIN: Timestamp: Cpu: 0.001h, Wall: 0.002h, Mem: 0.669G, Current time: Fri Mar 21 10:20:16 2025
+SVF END: Timestamp: Cpu: 0.001h, Wall: 0.002h, Mem: 0.669G, Current time: Fri Mar 21 10:20:16 2025
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+change_names        :          1          0          0          0          1
+environment         :          7          0          0          0          7
+reg_merging         :          1          0          0          0          1
+----------------------------------------------------------------------------
+Total               :          9          0          0          0          9
+
+
+Note: No guide_hier_map commands were found in the SVF. It is
+      important to enable guide_hier_map generation in
+      Design Compiler to avoid SVF rejections that can cause
+      aborted/failing points or long run times during verification.
+      In Design Compiler the recommended methodology uses variable
+      hdlin_enable_hier_map and command set_verification_top.
+
+SVF files read:
+      /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/cdc_unit.svf
+
+SVF files produced:
+  /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/formality_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+
+*********************************** Matching Results ***********************************
+ 163 Compare points matched by name
+ 0 Compare points matched by signature analysis
+ 0 Compare points matched by topology
+ 55 Matched primary inputs, black-box outputs
+ 0(0) Unmatched reference(implementation) compare points
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs
+ 1(0) Unmatched reference(implementation) unread points
+****************************************************************************************
+
+1
+report_unmatched_points > ${REPORTS_DIR}/5_formality_${DESIGN_NAME}_gatelevel_unmatched_points_report.txt
+#################################################################
+# Verify that the logic on compare point logic is equivalent
+#################################################################
+verify 
+Reference design is 'r:/WORK/cdc_unit'
+Implementation design is 'i:/WORK/cdc_unit'
+
+*********************************** Matching Results ***********************************
+ 163 Compare points matched by name
+ 0 Compare points matched by signature analysis
+ 0 Compare points matched by topology
+ 55 Matched primary inputs, black-box outputs
+ 0(0) Unmatched reference(implementation) compare points
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs
+ 1(0) Unmatched reference(implementation) unread points
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: r:/WORK/cdc_unit
+ Implementation design: i:/WORK/cdc_unit
+ 163 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0      53     110       0     163
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+****************************************************************************************
+1
+#################################################################
+# Write out results
+#################################################################
+report_status > ${REPORTS_DIR}/5_formality_${DESIGN_NAME}_gatelevel_status_report.txt
+report_failing_points > ${REPORTS_DIR}/5_formality_${DESIGN_NAME}_gatelevel_failing_points_report.txt
+exec touch ${OUTPUT_DIR}/5_${DESIGN_NAME}_gateverify
+set systemTime [clock seconds]
+1742545217
+puts "Script end time: [clock format $systemTime -format %H:%M:%S]"
+Script end time: 10:20:17
+if { $INTERACTIVE == 0} {
+    exit
+}
+Processing containers....... Done
+fm_shell (verify)> exit
+
+Maximum memory usage for this session: 685 MB
+CPU usage for this session: 3.72 seconds ( 0.00 hours )
+Current time: Fri Mar 21 10:20:36 2025
+Elapsed time: 27 seconds ( 0.01 hours )
+
+Thank you for using Formality (R)!

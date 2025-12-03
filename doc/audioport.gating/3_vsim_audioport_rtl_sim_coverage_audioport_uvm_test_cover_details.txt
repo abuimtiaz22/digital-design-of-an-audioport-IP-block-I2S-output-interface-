@@ -1,0 +1,795 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /audioport_tb/apb
+=== Design Unit: work.apb_if
+=================================================================================
+
+Directive Coverage:
+    Directives                       2         2         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/audioport_tb/apb/psel_to_penable_cov    apb_if Verilog  SVA  input/apb_if.sv(217)
+                                                                              3313 Covered   
+/audioport_tb/apb/penable_deassert_cov   apb_if Verilog  SVA  input/apb_if.sv(232)
+                                                                              3312 Covered   
+
+=================================================================================
+=== Instance: /audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE
+=== Design Unit: work.control_unit_svamod
+=================================================================================
+
+Directive Coverage:
+    Directives                      87        82         5    94.25%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_pready_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(169)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_pslverr_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(179)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_prdata_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(189)
+                                                                              2389015 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_clr_out_pulse 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(200)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_clr_out_valid_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(210)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_cfg_out_pulse 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(221)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_cfg_out_valid_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(233)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_start_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(243)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_valid_start_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(253)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_stop_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(263)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_valid_stop_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(273)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_level_out_pulse 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(283)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_level_out_valid_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(293)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_tick_standby 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(303)
+                                                                              11787 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_tick_out_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(313)
+                                                                              1488 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_tick_out_low 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(323)
+                                                                              2394153 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_fifo_drain 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(335)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_irq_out_rise_first 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(351)
+                                                                                 0 ZERO      
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_irq_out_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(363)
+                                                                              8136 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_irq_out_standby 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(373)
+                                                                              11787 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_irq_out_down 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(383)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_cfg_reg_drv 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(393)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_level_reg_drv 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(403)
+                                                                                 2 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_dsp_regs_drv 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(420)
+                                                                               133 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_pslverr 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(9)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_pready 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(19)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_rindex_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(29)
+                                                                              6626 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_rindex_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(39)
+                                                                              2389015 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_index_range 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(49)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_rbank_r_write 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(59)
+                                                                               177 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_status_reg_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(69)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_status_reg_standby 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(79)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_rbank_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(89)
+                                                                              2395463 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_cfg_reg_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(99)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_level_reg_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(109)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_dsp_regs_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(119)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ldata_r_write 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(129)
+                                                                              1568 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ldata_r_failed_write 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(139)
+                                                                                 0 ZERO      
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ldata_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(149)
+                                                                              2394069 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lhead_r_inc 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(159)
+                                                                              1540 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lhead_r_loop 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(169)
+                                                                                28 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lhead_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(179)
+                                                                              2394069 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_llooped_r_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(189)
+                                                                                28 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_llooped_r_off_1 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(199)
+                                                                                 0 ZERO      
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_llooped_r_off_2 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(209)
+                                                                                24 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_llooped_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(219)
+                                                                              2392581 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ltail_r_inc_1 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(229)
+                                                                                 0 ZERO      
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ltail_r_inc_2 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(239)
+                                                                              1464 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ltail_r_loop_1 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(249)
+                                                                                 0 ZERO      
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ltail_r_loop_2 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(259)
+                                                                                24 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ltail_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(270)
+                                                                              2394149 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lempty_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(280)
+                                                                              2841 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lempty_of 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(290)
+                                                                              2392800 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lfull_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(300)
+                                                                              31319 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lfull_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(310)
+                                                                              2364322 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lfifo_output_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(320)
+                                                                              2392800 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lfifo_output_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(330)
+                                                                              2841 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_prdata_rbank 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(340)
+                                                                               354 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_prdata_lfifo 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(350)
+                                                                              3136 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_prdata_rfifo 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(360)
+                                                                              3136 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_prdata_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(370)
+                                                                              2389015 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_play_r_rise 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(380)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_play_r_fall 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(390)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_play_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(400)
+                                                                              2395634 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_play_out_state 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(410)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_clr_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(420)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_clr_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(430)
+                                                                              2395638 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_clr_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(440)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_cfg_out_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(450)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_cfg_out_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(460)
+                                                                              2395638 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_start_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(470)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_start_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(480)
+                                                                              2395638 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_stop_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(490)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_stop_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(500)
+                                                                              2395638 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_level_out_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(510)
+                                                                                 2 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_level_out_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(520)
+                                                                              2395639 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irqack_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(530)
+                                                                                24 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irqack_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(540)
+                                                                              2395617 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_tick_out_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(550)
+                                                                              11787 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_tick_out_of 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(560)
+                                                                              2383854 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_req_r_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(570)
+                                                                              2383854 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_req_r_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(580)
+                                                                              11786 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irq_r_rise 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(590)
+                                                                               120 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irq_r_fall_stop 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(600)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irq_r_fall_irqack 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(610)
+                                                                                24 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irq_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(620)
+                                                                              2395493 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irq_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(630)
+                                                                              2395641 Covered   
+
+=================================================================================
+=== Instance: /audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE
+=== Design Unit: work.dsp_unit_svamod
+=================================================================================
+
+Directive Coverage:
+    Directives                       3         3         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/cf_tick_out_pulse 
+                                         dsp_unit_svamod Verilog  SVA  input/dsp_unit_svamod.sv(126)
+                                                                              1491 Covered   
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/cf_max_latency 
+                                         dsp_unit_svamod Verilog  SVA  input/dsp_unit_svamod.sv(136)
+                                                                              1488 Covered   
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/cf_dsp_config 
+                                         dsp_unit_svamod Verilog  SVA  input/dsp_unit_svamod.sv(168)
+                                                                                 3 Covered   
+
+=================================================================================
+=== Instance: /audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE
+=== Design Unit: work.cdc_unit_svamod
+=================================================================================
+
+Directive Coverage:
+    Directives                       6         6         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/cf_reset_sync_01 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(112)
+                                                                                 1 Covered   
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/cf_reset_sync_10 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(122)
+                                                                                 1 Covered   
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/cf_play_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(133)
+                                                                              2395629 Covered   
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/cf_req_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(143)
+                                                                              1491 Covered   
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/cf_req_out_pulse 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(154)
+                                                                              1491 Covered   
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/cf_audio_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(166)
+                                                                              1491 Covered   
+
+=================================================================================
+=== Instance: /audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE
+=== Design Unit: work.i2s_unit_svamod
+=================================================================================
+
+Directive Coverage:
+    Directives                      14        14         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_req_out_pulse 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(118)
+                                                                              1491 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_sck_start 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(130)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_req_sck_align 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(140)
+                                                                              1491 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_req_out_seen 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(150)
+                                                                              1488 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_ws_change 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(162)
+                                                                              2976 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_ws_wave 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(172)
+                                                                              9318 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_sdo_change 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(182)
+                                                                              15957 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_sck_wave 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(192)
+                                                                              71427 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_sck_last 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(202)
+                                                                              1488 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_shift_reg_behavior 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(217)
+                                                                              69936 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_shift_reg_reset 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(226)
+                                                                              2608 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_play_r_control 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(234)
+                                                                              571204 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_counter_reset_at_383 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(243)
+                                                                              1488 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_ws_out_mid_behavior 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(252)
+                                                                              285696 Covered   
+
+=================================================================================
+=== Instance: /audioport_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.audioport_svamod
+=================================================================================
+
+Directive Coverage:
+    Directives                       5         5         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/cf_irq_out_rise 
+                                         audioport_svamod Verilog  SVA  input/audioport_svamod.sv(145)
+                                                                              1320 Covered   
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/cf_enter_play_mode 
+                                         audioport_svamod Verilog  SVA  input/audioport_svamod.sv(154)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/cf_enter_standby_mode 
+                                         audioport_svamod Verilog  SVA  input/audioport_svamod.sv(163)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/cr_data_roundtrip 
+                                         audioport_svamod Verilog  SVA  input/audioport_svamod.sv(181)
+                                                                              1482 Covered   
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/cf_active_config 
+                                         audioport_svamod Verilog  SVA  input/audioport_svamod.sv(204)
+                                                                                 3 Covered   
+
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/audioport_tb/apb/psel_to_penable_cov    apb_if Verilog  SVA  input/apb_if.sv(217)
+                                                                              3313 Covered   
+/audioport_tb/apb/penable_deassert_cov   apb_if Verilog  SVA  input/apb_if.sv(232)
+                                                                              3312 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_pready_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(169)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_pslverr_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(179)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_prdata_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(189)
+                                                                              2389015 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_clr_out_pulse 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(200)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_clr_out_valid_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(210)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_cfg_out_pulse 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(221)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_cfg_out_valid_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(233)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_start_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(243)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_valid_start_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(253)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_stop_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(263)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_valid_stop_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(273)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_level_out_pulse 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(283)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_level_out_valid_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(293)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_tick_standby 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(303)
+                                                                              11787 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_tick_out_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(313)
+                                                                              1488 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_tick_out_low 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(323)
+                                                                              2394153 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_fifo_drain 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(335)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_irq_out_rise_first 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(351)
+                                                                                 0 ZERO      
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_irq_out_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(363)
+                                                                              8136 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_irq_out_standby 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(373)
+                                                                              11787 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_irq_out_down 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(383)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_cfg_reg_drv 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(393)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_level_reg_drv 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(403)
+                                                                                 2 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cf_dsp_regs_drv 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(420)
+                                                                               133 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_pslverr 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(9)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_pready 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(19)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_rindex_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(29)
+                                                                              6626 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_rindex_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(39)
+                                                                              2389015 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_index_range 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(49)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_rbank_r_write 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(59)
+                                                                               177 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_status_reg_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(69)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_status_reg_standby 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(79)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_rbank_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(89)
+                                                                              2395463 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_cfg_reg_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(99)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_level_reg_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(109)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_dsp_regs_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(119)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ldata_r_write 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(129)
+                                                                              1568 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ldata_r_failed_write 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(139)
+                                                                                 0 ZERO      
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ldata_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(149)
+                                                                              2394069 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lhead_r_inc 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(159)
+                                                                              1540 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lhead_r_loop 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(169)
+                                                                                28 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lhead_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(179)
+                                                                              2394069 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_llooped_r_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(189)
+                                                                                28 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_llooped_r_off_1 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(199)
+                                                                                 0 ZERO      
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_llooped_r_off_2 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(209)
+                                                                                24 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_llooped_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(219)
+                                                                              2392581 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ltail_r_inc_1 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(229)
+                                                                                 0 ZERO      
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ltail_r_inc_2 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(239)
+                                                                              1464 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ltail_r_loop_1 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(249)
+                                                                                 0 ZERO      
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ltail_r_loop_2 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(259)
+                                                                                24 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_ltail_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(270)
+                                                                              2394149 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lempty_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(280)
+                                                                              2841 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lempty_of 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(290)
+                                                                              2392800 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lfull_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(300)
+                                                                              31319 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lfull_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(310)
+                                                                              2364322 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lfifo_output_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(320)
+                                                                              2392800 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_lfifo_output_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(330)
+                                                                              2841 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_prdata_rbank 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(340)
+                                                                               354 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_prdata_lfifo 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(350)
+                                                                              3136 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_prdata_rfifo 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(360)
+                                                                              3136 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_prdata_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(370)
+                                                                              2389015 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_play_r_rise 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(380)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_play_r_fall 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(390)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_play_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(400)
+                                                                              2395634 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_play_out_state 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(410)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_clr_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(420)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_clr_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(430)
+                                                                              2395638 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_clr_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(440)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_cfg_out_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(450)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_cfg_out_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(460)
+                                                                              2395638 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_start_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(470)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_start_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(480)
+                                                                              2395638 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_stop_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(490)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_stop_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(500)
+                                                                              2395638 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_level_out_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(510)
+                                                                                 2 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_level_out_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(520)
+                                                                              2395639 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irqack_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(530)
+                                                                                24 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irqack_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(540)
+                                                                              2395617 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_tick_out_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(550)
+                                                                              11787 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_tick_out_of 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(560)
+                                                                              2383854 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_req_r_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(570)
+                                                                              2383854 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_req_r_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(580)
+                                                                              11786 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irq_r_rise 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(590)
+                                                                               120 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irq_r_fall_stop 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(600)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irq_r_fall_irqack 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(610)
+                                                                                24 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irq_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(620)
+                                                                              2395493 Covered   
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cr_irq_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(630)
+                                                                              2395641 Covered   
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/cf_tick_out_pulse 
+                                         dsp_unit_svamod Verilog  SVA  input/dsp_unit_svamod.sv(126)
+                                                                              1491 Covered   
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/cf_max_latency 
+                                         dsp_unit_svamod Verilog  SVA  input/dsp_unit_svamod.sv(136)
+                                                                              1488 Covered   
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/cf_dsp_config 
+                                         dsp_unit_svamod Verilog  SVA  input/dsp_unit_svamod.sv(168)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/cf_reset_sync_01 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(112)
+                                                                                 1 Covered   
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/cf_reset_sync_10 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(122)
+                                                                                 1 Covered   
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/cf_play_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(133)
+                                                                              2395629 Covered   
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/cf_req_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(143)
+                                                                              1491 Covered   
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/cf_req_out_pulse 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(154)
+                                                                              1491 Covered   
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/cf_audio_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(166)
+                                                                              1491 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_req_out_pulse 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(118)
+                                                                              1491 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_sck_start 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(130)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_req_sck_align 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(140)
+                                                                              1491 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_req_out_seen 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(150)
+                                                                              1488 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_ws_change 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(162)
+                                                                              2976 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_ws_wave 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(172)
+                                                                              9318 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_sdo_change 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(182)
+                                                                              15957 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_sck_wave 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(192)
+                                                                              71427 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_sck_last 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(202)
+                                                                              1488 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_shift_reg_behavior 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(217)
+                                                                              69936 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_shift_reg_reset 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(226)
+                                                                              2608 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_play_r_control 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(234)
+                                                                              571204 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_counter_reset_at_383 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(243)
+                                                                              1488 Covered   
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/cf_ws_out_mid_behavior 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(252)
+                                                                              285696 Covered   
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/cf_irq_out_rise 
+                                         audioport_svamod Verilog  SVA  input/audioport_svamod.sv(145)
+                                                                              1320 Covered   
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/cf_enter_play_mode 
+                                         audioport_svamod Verilog  SVA  input/audioport_svamod.sv(154)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/cf_enter_standby_mode 
+                                         audioport_svamod Verilog  SVA  input/audioport_svamod.sv(163)
+                                                                                 3 Covered   
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/cr_data_roundtrip 
+                                         audioport_svamod Verilog  SVA  input/audioport_svamod.sv(181)
+                                                                              1482 Covered   
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/cf_active_config 
+                                         audioport_svamod Verilog  SVA  input/audioport_svamod.sv(204)
+                                                                                 3 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 95.72%  COVERS: 117
+
+Total Coverage By Instance (filtered view): 95.72%
+

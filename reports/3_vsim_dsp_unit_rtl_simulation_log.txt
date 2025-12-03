@@ -1,0 +1,328 @@
+# //  Questa Sim-64
+# //  Version 2024.3_2 linux_x86_64 Nov 25 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do scripts/vsim_rtlsim.tcl
+# 1743727317
+# Script start time: 03:41:57
+# 0
+# 1
+# 1
+# -all
+# QuestaSim
+# 0
+# 1
+# output/dsp_unit_rtl.dbg
+# output/dsp_unit_rtl.bin
+# output/dsp_unit_rtl.db
+# dsp_unit_rtl_vopt
+# output/dsp_unit_questasim_work
+#  -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_dsp_unit +define+DESIGN_NAME_MACRO=dsp_unit  +incdir+input  -sv -work work
+#  -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+#  -suppress 10587 -suppress 13408 +acc +cover=bcxefs -coverfec -debugdb -noincr -designfile output/dsp_unit_rtl.bin
+#  -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/dsp_unit_rtl.dbg
+# -suppress 13314 -suppress 13233 +define+RTL_SIM -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_dsp_unit +define+DESIGN_NAME_MACRO=dsp_unit  +incdir+input  -sv -work work
+# -2008 -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+# -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/dsp_unit_rtl.dbg
+# 1
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:41:57 on Apr 04,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+incdir+input" -sv -work work input/apb_pkg.sv 
+# -- Compiling package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 03:41:57 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:41:57 on Apr 04,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+incdir+input" -sv -work work input/audioport_pkg.sv 
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 03:41:57 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:41:57 on Apr 04,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+incdir+input" -sv -work work input/audioport_util_pkg.sv 
+# -- Compiling package audioport_util_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 03:41:57 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:41:57 on Apr 04,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+incdir+input" -sv -work work results/dsp_unit_hls_rtl.v 
+# -- Compiling module mgc_out_dreg_v2
+# -- Compiling module ccs_in_v1
+# -- Compiling module ccs_sync_out_vld_v1
+# -- Compiling module dsp_unit_read_inputs_core
+# -- Compiling module dsp_unit_read_inputs
+# -- Compiling module dsp_unit_write_outputs_core
+# -- Compiling module dsp_unit_write_outputs
+# -- Compiling module dsp_unit_regs_proc
+# -- Compiling module dsp_unit_dsp_proc_dsp_proc_fsm
+# -- Compiling module dsp_unit_dsp_proc_staller
+# -- Compiling module dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl
+# -- Compiling module dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl
+# -- Compiling module dsp_unit_dsp_proc_write_outputs_mioi
+# -- Compiling module dsp_unit_dsp_proc_read_inputs_mioi
+# -- Compiling module dsp_unit_dsp_proc
+# -- Compiling module dsp_unit_rtl
+# 
+# Top level modules:
+# 	dsp_unit_rtl
+# End time: 03:41:58 on Apr 04,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:41:58 on Apr 04,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+incdir+input" -sv -work work input/dsp_unit.sv 
+# -- Compiling package dsp_unit_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module dsp_unit
+# 
+# Top level modules:
+# 	dsp_unit
+# End time: 03:41:58 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:41:58 on Apr 04,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+incdir+input" -sv -work work input/dsp_unit_svamod.sv 
+# -- Compiling package dsp_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module dsp_unit_svamod
+# 
+# Top level modules:
+# 	dsp_unit_svamod
+# End time: 03:41:58 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:41:58 on Apr 04,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+incdir+input" -sv -work work input/dsp_unit_test.sv 
+# -- Compiling package dsp_unit_test_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling program dsp_unit_test
+# 
+# Top level modules:
+# 	dsp_unit_test
+# End time: 03:41:58 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:41:58 on Apr 04,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+incdir+input" -sv -work work input/dsp_unit_tb.sv 
+# -- Compiling package dsp_unit_tb_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module dsp_unit_tb
+# 
+# Top level modules:
+# 	dsp_unit_tb
+# End time: 03:41:58 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:41:58 on Apr 04,2025
+# vopt -reportprogress 300 -suppress 10587 -suppress 13408 "+acc" "+cover=bcxefs" -coverfec -debugdb -noincr -designfile output/dsp_unit_rtl.bin work.dsp_unit_tb -o dsp_unit_rtl_vopt 
+# 
+# Top level modules:
+# 	dsp_unit_tb
+# 
+# Analyzing design...
+# -- Loading module dsp_unit_tb
+# -- Loading module dsp_unit
+# -- Loading module dsp_unit_rtl
+# -- Loading module dsp_unit_dsp_proc
+# -- Loading module dsp_unit_dsp_proc_read_inputs_mioi
+# -- Loading module dsp_unit_read_inputs
+# -- Loading module dsp_unit_read_inputs_core
+# -- Loading module mgc_out_dreg_v2
+# -- Loading module ccs_in_v1
+# -- Loading module ccs_sync_out_vld_v1
+# -- Loading module dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl
+# -- Loading module dsp_unit_dsp_proc_write_outputs_mioi
+# -- Loading module dsp_unit_write_outputs
+# -- Loading module dsp_unit_write_outputs_core
+# -- Loading module dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl
+# -- Loading module dsp_unit_dsp_proc_staller
+# -- Loading module dsp_unit_dsp_proc_dsp_proc_fsm
+# -- Loading module dsp_unit_regs_proc
+# -- Loading program dsp_unit_test
+# -- Loading module dsp_unit_svamod
+# Optimizing 36 design-units (inlining 0/29 module instances):
+# -- Optimizing package dsp_unit_svamod_sv_unit(fast)
+# -- Optimizing package apb_pkg(fast)
+# -- Optimizing package dsp_unit_tb_sv_unit(fast)
+# -- Optimizing package dsp_unit_sv_unit(fast)
+# -- Optimizing package dsp_unit_test_sv_unit(fast)
+# -- Optimizing module dsp_unit_write_outputs_core(fast)
+# -- Processing module dsp_unit_write_outputs_core(fast) for debug
+# -- Optimizing module dsp_unit_tb(fast)
+# -- Processing module dsp_unit_tb(fast) for debug
+# -- Optimizing module dsp_unit_read_inputs(fast)
+# -- Processing module dsp_unit_read_inputs(fast) for debug
+# -- Optimizing module dsp_unit_dsp_proc_write_outputs_mioi(fast)
+# -- Processing module dsp_unit_dsp_proc_write_outputs_mioi(fast) for debug
+# -- Optimizing module dsp_unit(fast)
+# -- Processing module dsp_unit(fast) for debug
+# -- Optimizing module dsp_unit_write_outputs(fast)
+# -- Processing module dsp_unit_write_outputs(fast) for debug
+# -- Optimizing module dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl(fast)
+# -- Processing module dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl(fast) for debug
+# -- Optimizing module mgc_out_dreg_v2(fast)
+# -- Processing module mgc_out_dreg_v2(fast) for debug
+# -- Optimizing module mgc_out_dreg_v2(fast__1)
+# -- Processing module mgc_out_dreg_v2(fast__1) for debug
+# -- Optimizing module mgc_out_dreg_v2(fast__2)
+# -- Processing module mgc_out_dreg_v2(fast__2) for debug
+# -- Optimizing module mgc_out_dreg_v2(fast__3)
+# -- Processing module mgc_out_dreg_v2(fast__3) for debug
+# -- Optimizing module mgc_out_dreg_v2(fast__4)
+# -- Processing module mgc_out_dreg_v2(fast__4) for debug
+# -- Optimizing module mgc_out_dreg_v2(fast__5)
+# -- Processing module mgc_out_dreg_v2(fast__5) for debug
+# -- Optimizing module mgc_out_dreg_v2(fast__6)
+# -- Processing module mgc_out_dreg_v2(fast__6) for debug
+# -- Optimizing module ccs_in_v1(fast)
+# -- Processing module ccs_in_v1(fast) for debug
+# -- Optimizing module ccs_in_v1(fast__1)
+# -- Processing module ccs_in_v1(fast__1) for debug
+# -- Optimizing module ccs_in_v1(fast__2)
+# -- Processing module ccs_in_v1(fast__2) for debug
+# -- Optimizing module ccs_in_v1(fast__3)
+# -- Processing module ccs_in_v1(fast__3) for debug
+# -- Optimizing module dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl(fast)
+# -- Processing module dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl(fast) for debug
+# -- Optimizing module ccs_sync_out_vld_v1(fast)
+# -- Processing module ccs_sync_out_vld_v1(fast) for debug
+# -- Optimizing module dsp_unit_dsp_proc_staller(fast)
+# -- Processing module dsp_unit_dsp_proc_staller(fast) for debug
+# -- Optimizing package audioport_pkg(fast)
+# -- Optimizing package audioport_util_pkg(fast)
+# -- Optimizing module dsp_unit_dsp_proc(fast)
+# -- Processing module dsp_unit_dsp_proc(fast) for debug
+# -- Optimizing module dsp_unit_regs_proc(fast)
+# -- Processing module dsp_unit_regs_proc(fast) for debug
+# -- Optimizing module dsp_unit_svamod(fast)
+# -- Processing module dsp_unit_svamod(fast) for debug
+# -- Optimizing module dsp_unit_rtl(fast)
+# -- Processing module dsp_unit_rtl(fast) for debug
+# -- Optimizing program dsp_unit_test(fast)
+# -- Optimizing module dsp_unit_dsp_proc_dsp_proc_fsm(fast)
+# -- Processing module dsp_unit_dsp_proc_dsp_proc_fsm(fast) for debug
+# ** Note: (vopt-1947)   FSM RECOGNITION INFO
+# 	Fsm recognized in : dsp_unit_dsp_proc_dsp_proc_fsm(fast)
+# 	Current State Variable : state_var : results/dsp_unit_hls_rtl.v(1034)
+# 	Next State Variable : state_var_NS : results/dsp_unit_hls_rtl.v(1035)
+# 	Clock : clk
+# 	Reset States are: { dsp_proc_rlp_C_0 }
+# 	State Set is : { PROCESS_LOOP_C_0 , PROCESS_LOOP_C_1 , SHIFT_LOOP_C_0 , PROCESS_LOOP_C_2 , FILTER_LOOP_C_0 , PROCESS_LOOP_C_3 , dsp_proc_rlp_C_0 }
+# ** Note: (vopt-143) Recognized 1 FSM in module "dsp_unit_dsp_proc_dsp_proc_fsm(fast)".
+# -- Optimizing module dsp_unit_read_inputs_core(fast)
+# -- Processing module dsp_unit_read_inputs_core(fast) for debug
+# -- Optimizing module dsp_unit_dsp_proc_read_inputs_mioi(fast)
+# -- Processing module dsp_unit_dsp_proc_read_inputs_mioi(fast) for debug
+# viscom:
+# VISCOM: Start time: 03:41:59 on Apr 04,2025
+# 
+# VISCOM: QuestaSim /sw/rhel8/siemens/questa_sim-2024.3_2/questasim/linux_x86_64/VisualizerRls/bin/viscom 2024.3_2 at 2024.11 Nov 25 2024
+# VISCOM: Writing output/dsp_unit_rtl.bin
+# VISCOM: Warning at line: 165 file: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit_svamod.sv
+#          Unresolved expression cg_dsp_modes_inst.sample found in module dsp_unit_svamod__fast
+# VISCOM: Done writing output/dsp_unit_rtl.bin
+# VISCOM: End time: 03:42:00 on Apr 04,2025, Elapsed time: 0:00:01 (Process Size : 317MB, Peak Process Size : 317MB)
+# 
+# 
+# Optimized design name is dsp_unit_rtl_vopt
+# End time: 03:42:01 on Apr 04,2025, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0, Suppressed Warnings: 2
+# vsim dsp_unit_rtl_vopt -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/dsp_unit_rtl.dbg 
+# Start time: 03:42:01 on Apr 04,2025
+# Loading sv_std.std
+# Loading work.apb_pkg(fast)
+# Loading work.audioport_pkg(fast)
+# Loading work.audioport_util_pkg(fast)
+# Loading work.dsp_unit_tb_sv_unit(fast)
+# Loading work.dsp_unit_tb(fast)
+# Loading work.dsp_unit_sv_unit(fast)
+# Loading work.dsp_unit(fast)
+# Loading work.dsp_unit_rtl(fast)
+# Loading work.dsp_unit_dsp_proc(fast)
+# Loading work.dsp_unit_dsp_proc_read_inputs_mioi(fast)
+# Loading work.dsp_unit_read_inputs(fast)
+# Loading work.dsp_unit_read_inputs_core(fast)
+# Loading work.mgc_out_dreg_v2(fast)
+# Loading work.mgc_out_dreg_v2(fast__1)
+# Loading work.mgc_out_dreg_v2(fast__2)
+# Loading work.mgc_out_dreg_v2(fast__3)
+# Loading work.mgc_out_dreg_v2(fast__4)
+# Loading work.mgc_out_dreg_v2(fast__5)
+# Loading work.mgc_out_dreg_v2(fast__6)
+# Loading work.ccs_in_v1(fast)
+# Loading work.ccs_sync_out_vld_v1(fast)
+# Loading work.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl(fast)
+# Loading work.dsp_unit_dsp_proc_write_outputs_mioi(fast)
+# Loading work.dsp_unit_write_outputs(fast)
+# Loading work.dsp_unit_write_outputs_core(fast)
+# Loading work.ccs_in_v1(fast__1)
+# Loading work.ccs_in_v1(fast__2)
+# Loading work.ccs_in_v1(fast__3)
+# Loading work.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl(fast)
+# Loading work.dsp_unit_dsp_proc_staller(fast)
+# Loading work.dsp_unit_dsp_proc_dsp_proc_fsm(fast)
+# Loading work.dsp_unit_regs_proc(fast)
+# Loading work.dsp_unit_svamod_sv_unit(fast)
+# Loading work.dsp_unit_svamod(fast)
+# Loading work.dsp_unit_test_sv_unit(fast)
+# Loading work.dsp_unit_test(fast)
+# ** Note: (vsim-8900) Creating design debug database output/dsp_unit_rtl.dbg.
+# 1
+# sim_coverage
+# ** Info: No file specified. Generating default coefficients.
+#    Time: 0 ps  Scope: audioport_util_pkg.read_filter_taps File: input/audioport_util_pkg.sv Line: 138
+# ** Info: Using default filter coefficients.
+#    Time: 0 ps  Scope: dsp_unit_tb.TEST File: input/dsp_unit_test.sv Line: 41
+# ** Info: T1: Program filter
+#    Time: 52 ns  Scope: dsp_unit_tb.TEST File: input/dsp_unit_test.sv Line: 58
+# ** Info: T2: Set level
+#    Time: 377 ns  Scope: dsp_unit_tb.TEST File: input/dsp_unit_test.sv Line: 73
+# ** Info: T3: Impulse, filter enabled
+#    Time: 663 ns  Scope: dsp_unit_tb.TEST File: input/dsp_unit_test.sv Line: 83
+# ** Info: T4: Impulse, filter disabled
+#    Time: 2837081 ns  Scope: dsp_unit_tb.TEST File: input/dsp_unit_test.sv Line: 110
+# ** Info: T5: Continuous play, filter enabled, level changes
+#    Time: 5673499 ns  Scope: dsp_unit_tb.TEST File: input/dsp_unit_test.sv Line: 138
+# ** Info: T6: Clear audio data
+#    Time: 11012157 ns  Scope: dsp_unit_tb.TEST File: input/dsp_unit_test.sv Line: 170
+# ** Note: $finish    : input/dsp_unit_test.sv(177)
+#    Time: 11012443 ns  Iteration: 1  Instance: /dsp_unit_tb/TEST
+# 1
+# Break in Module dsp_unit_test at input/dsp_unit_test.sv line 177
+# ** Note: (vsim-19063) Please note that '-recursive' option's functionality is changed. For more information, please refer 
+# to the reference manual.
+# file21
+# 1743727341
+# Script end time: 03:42:21
+# .main_pane.msgviewer.interior.cs.body.tree
+# Saving coverage database on exit...
+# End time: 03:50:30 on Apr 04,2025, Elapsed time: 0:08:29
+# Errors: 0, Warnings: 0

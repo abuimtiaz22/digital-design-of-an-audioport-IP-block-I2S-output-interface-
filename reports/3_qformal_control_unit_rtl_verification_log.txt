@@ -1,0 +1,563 @@
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# 
+# This material contains trade secrets or otherwise
+# confidential information owned by
+# Siemens Industry Software Inc. or its affiliates
+# (collectively, "SISW"), or its licensors. Access
+# to and use of this information is strictly limited
+# as set forth in the customer's applicable
+# agreements with SISW.
+# 
+# Unpublished work. Copyright 2024 Siemens
+# 
+# do scripts/qformal.tcl
+# Command : vlib output/control_unit_qformal_work
+# Command : vmap work output/control_unit_qformal_work
+# QuestaSim-64 vmap 2024.3_2 Lib Mapping Utility 2024.11 Nov 25 2024
+# vmap work output/control_unit_qformal_work 
+# Modifying modelsim.ini
+# Command : configure output directory output/control_unit_qformal
+# Command : vlog -suppress 13314 +define+design_top_is_control_unit +define+RTL_VERIF +incdir+input -cuname control_unit_sva_bind_pkg -mfcu input/apb_pkg.sv input/audioport_pkg.sv input/audioport_util_pkg.sv input/control_unit.sv input/control_unit_svamod.sv input/sva_bindings.svh
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:49:01 on Feb 13,2025
+# vlog -suppress 13314 "+define+design_top_is_control_unit" "+define+RTL_VERIF" "+incdir+input" -cuname control_unit_sva_bind_pkg -mfcu input/apb_pkg.sv input/audioport_pkg.sv input/audioport_util_pkg.sv input/control_unit.sv input/control_unit_svamod.sv input/sva_bindings.svh 
+# -- Compiling package apb_pkg
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling package audioport_util_pkg
+# -- Importing package audioport_pkg
+# -- Compiling package control_unit_sva_bind_pkg
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module control_unit
+# -- Compiling module control_unit_svamod
+# 
+# Top level modules:
+# 	control_unit
+# End time: 00:49:01 on Feb 13,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Warnings: 6
+# Command : formal compile -d control_unit -cuname control_unit_sva_bind_pkg
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Thu Feb 13 00:49:01 2025 by aimtiaz23 on lehmus-cn2.oulu.fi
+# 
+# Executing Command : formal compile -d control_unit -cuname control_unit_sva_bind_pkg
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qformal.tcl, Line: 164
+# 
+### Starting Step: netlist elaborate ### 
+# 
+## Elaborating Design...
+# Reading MTI mapping for library mapping
+# Writing all MTI mappings to vmap output ...
+# 
+# Top level modules:
+# 	control_unit
+# 	control_unit_sva_bind_pkg
+# 
+# Analyzing design...
+# -- Loading module z0in_work.control_unit
+# -- Loading module z0in_work.control_unit_svamod
+# Optimizing 6 design-units (inlining 0/2 module instances):
+# -- Optimizing package z0in_work.apb_pkg(fast)
+# -- Optimizing package z0in_work.audioport_pkg(fast)
+# -- Optimizing package z0in_work.audioport_util_pkg(fast)
+# -- Optimizing package z0in_work.control_unit_sva_bind_pkg(fast)
+# -- Optimizing module z0in_work.control_unit_svamod(fast)
+# -- Optimizing module z0in_work.control_unit(fast)
+# Optimized design name is zi_opt_csl_1766432175_1
+# Identified prefix 'control_unit'.
+# 
+### Starting Step: netlist create ### 
+# 
+## Synthesizing netlist...
+# Processing module 'control_unit_svamod'
+# Elaborating module 'control_unit_svamod'.
+# Processed 100 assertion language directives.
+# Processed 200 assertion language directives.
+# Processing module 'control_unit'
+# Elaborating module 'control_unit'.
+# 
+##Time Taken (Synthesis) = 1218197.000000 ticks = 1.218197 secs
+# 
+### Starting Step: formal compile ### 
+# 
+## Processing Formal Logic...
+# Processing module 'control_unit_svamod'
+# Restoring module 'control_unit_svamod'.
+# Processing module 'control_unit'
+# Restoring module 'control_unit'.
+# Flattening design 'control_unit_svamod'.
+# Flattening design 'control_unit'.
+# Info    : Detected clock.  Clock: clk.  [netlist-11]
+# Info    : Detected asynchronous reset.  Signal: rst_n, active low.  [netlist-106]
+# 
+# Clocks
+# ------------------------------------------------------------------------------
+# Port                                   Period         Waveform
+# ------------------------------------------------------------------------------
+# clk                                        13            0 6.5 
+# ------------------------------------------------------------------------------
+# 
+# Blackboxes
+# ------------------------------------------------------------------------------
+# Module name                                                Reason
+# ------------------------------------------------------------------------------
+# <no blackboxed modules>
+# ------------------------------------------------------------------------------
+# 
+# Inferred directives
+# ------------------------------------------------------------------------------
+# <no inferred directives>
+# ------------------------------------------------------------------------------
+# 
+# Formal model has been created.  Design 'control_unit'.
+# 
+# Property Summary
+# -------------------------------------------------------------------------------
+# Total  Directives :226
+# Assert Directives :130
+# Assume Directives :11
+# Cover  Directives :85
+# 
+# SVA Summary
+# -------------------------------------------------------------------------------
+# SVA Directive Type        Directives           Checkers
+# -------------------------------------------------------------------------------
+# Assert                       130                 130
+# Assume                        11                  11
+# Cover                         85                  85
+# -------------------------------------------------------------------------------
+# 
+# To see results in the GUI run:
+# qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/control_unit_qformal/propcheck.db
+# 
+# 
+# Message Summary (Excluding Suppressed Messages)
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     1  Info     netlist-106        Detected asynchronous reset.
+#     1  Info     netlist-11         Detected clock.
+# 
+# Final Process Statistics: Max memory 810MB, CPU time 1s, Total time 9s
+# 
+# End of log Thu Feb 13 00:49:10 2025
+# 
+# Command : formal verify -timeout 2h
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Thu Feb 13 00:49:11 2025 by aimtiaz23 on lehmus-cn2.oulu.fi
+# 
+# Executing Command : formal verify -timeout 2h 
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qformal.tcl, Line: 176
+# 
+# Info    : Using initialization sequence file to initialize design state.  File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/rst.questa_init'.  [formal-205]
+# Info    : Automatically constraining reset signal to de-assert after initialization sequence (use -auto_constraint_off option to disable).  Signal 'rst_n', Value '1'.  [formal-285]
+# Info	: Warning(line 4): no $default_clock declared, using clk
+# Applying synthesis semantics to design: control_unit
+# [00:00:00] Target Status: Done 0/215, Update 0/215, Proof radius min=0, avg=0.000
+# [00:00:00] Check Status: Vacuity 0/121
+# [00:00:00] Engine Process Status: 0 running, 0 pending, 0 terminated, Mem=0GB
+# Info    : Established connection with engine process.  Hostname 'lehmus-cn2.oulu.fi', PID 3372999, Id 3, Time [00:00:01].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'lehmus-cn2.oulu.fi', PID 3373005, Id 1, Time [00:00:01].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'lehmus-cn2.oulu.fi', PID 3373010, Id 4, Time [00:00:01].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'lehmus-cn2.oulu.fi', PID 3373019, Id 5, Time [00:00:01].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'lehmus-cn2.oulu.fi', PID 3373026, Id 6, Time [00:00:01].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'lehmus-cn2.oulu.fi', PID 3373018, Id 2, Time [00:00:01].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'lehmus-cn2.oulu.fi', PID 3373029, Id 7, Time [00:00:01].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'lehmus-cn2.oulu.fi', PID 3373035, Id 8, Time [00:00:01].  [formal-385]
+# [00:00:01] Proven: CHECKER_MODULE.X_PSEL (engine:7, vacuity check:inconclusive)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_irq_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_clr_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_play_out_state (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_dsp_regs_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_level_reg_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_cfg_reg_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_index_range (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_pready (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_pslverr (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.af_pslverr_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.af_pready_on (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_rfifo (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_rfull (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_rempty (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_rlooped_r (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_rtail_r (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_rhead_r (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_rdata_r (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_lfifo (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_lfull (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_lempty (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_llooped_r (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_ltail_r (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_lhead_r (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_ldata_r (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_irq_r (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_play_r (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_req_r (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_irqack (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_clr (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_stop (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_start (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_rbank_r (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_apbread (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_apbwrite (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_rindex (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_play_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_audio1_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_audio0_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_tick_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_level_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_clr_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_cfg_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_dsp_regs_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_level_reg_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_cfg_reg_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_irq_out (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_PREADY (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_PSLVERR (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_PRDATA (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_req_in (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_PWDATA (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_PADDR (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_PWRITE (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_PENABLE (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.X_PSEL (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_req_r_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_tick_out_on (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.af_irq_out_standby (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.af_tick_standby (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_prdata_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_rindex_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.af_prdata_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.af_tick_out_low (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_lfull_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_lfifo_output_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_lempty_on (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_irqack_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_level_out_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_stop_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_start_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_cfg_out_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_clr_off (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_play_r_stable (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_ltail_r_stable (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_llooped_r_stable (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_lhead_r_stable (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_ldata_r_stable (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_rbank_r_stable (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_irq_r_stable (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_irq_out (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_clr_out (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_play_out_state (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_dsp_regs_out (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_level_reg_out (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_cfg_reg_out (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_pready (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_pslverr (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_irq_out_down (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_level_out_valid_high (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_level_out_pulse (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_valid_stop_play (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_stop_play (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_valid_start_play (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_start_play (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_clr_out_valid_high (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_clr_out_pulse (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_pslverr_off (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_pready_on (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_tick_out_on (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_tick_standby (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_irq_out_standby (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_tick_out_low (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_index_range (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_lfull_off (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_lempty_on (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_rindex_off (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_irqack_off (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_level_out_off (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_stop_off (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_start_off (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_cfg_out_off (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_clr_off (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_lfifo_output_off (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_prdata_off (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cf_prdata_off (engine:7, radius:2)
+# [00:00:01] Proven: CHECKER_MODULE.ar_llooped_r_on (engine:10, vacuity check:inconclusive)
+# [00:00:01] Proven: CHECKER_MODULE.X_PENABLE (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_PWRITE (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_PADDR (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.ar_clr_on (engine:0, vacuity check:inconclusive)
+# [00:00:01] Proven: CHECKER_MODULE.X_PWDATA (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_req_in (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_PRDATA (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_PSLVERR (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_PREADY (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_irq_out (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_cfg_reg_out (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_level_reg_out (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_dsp_regs_out (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_cfg_out (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_clr_out (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_level_out (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_tick_out (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_audio0_out (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_audio1_out (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_play_out (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_rindex (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_apbwrite (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_apbread (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_rbank_r (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_start (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_stop (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_clr (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_irqack (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_req_r (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_play_r (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_irq_r (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_ldata_r (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_lhead_r (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.af_irq_out_down (engine:0)
+# [00:00:01] Proven: CHECKER_MODULE.X_ltail_r (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_llooped_r (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_lempty (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_lfull (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_lfifo (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.af_irq_out_standby (engine:10, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_rdata_r (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_rhead_r (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_rtail_r (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_rlooped_r (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_rempty (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_rfull (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.X_rfifo (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.af_pready_on (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.af_pslverr_off (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.ar_cfg_reg_out (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.ar_level_reg_out (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.ar_dsp_regs_out (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.af_cfg_reg_drv (engine:10, vacuity check:inconclusive)
+# [00:00:01] Proven: CHECKER_MODULE.af_clr_out_pulse (engine:7)
+# [00:00:01] Proven: CHECKER_MODULE.af_clr_out_valid_high (engine:7)
+# [00:00:01] Proven: CHECKER_MODULE.ar_ltail_r_loop_1 (engine:10, vacuity check:inconclusive)
+# [00:00:01] Proven: CHECKER_MODULE.af_prdata_off (engine:0, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.af_start_play (engine:7)
+# [00:00:01] Proven: CHECKER_MODULE.af_valid_start_play (engine:7)
+# [00:00:01] Proven: CHECKER_MODULE.af_stop_play (engine:7)
+# [00:00:01] Proven: CHECKER_MODULE.af_valid_stop_play (engine:7)
+# [00:00:01] Proven: CHECKER_MODULE.af_level_out_pulse (engine:7)
+# [00:00:01] Proven: CHECKER_MODULE.af_level_out_valid_high (engine:7)
+# [00:00:01] Proven: CHECKER_MODULE.af_tick_standby (engine:7, vacuity check:passed)
+# [00:00:01] Proven: CHECKER_MODULE.af_tick_out_high (engine:7, vacuity check:inconclusive)
+# [00:00:01] Proven: CHECKER_MODULE.af_tick_out_low (engine:7, vacuity check:passed)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_rindex_on (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_prdata_rbank (engine:7, radius:2)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_rbank_r_write (engine:7, radius:4)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_irq_r_fall_stop (engine:7, radius:4)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_stop_on (engine:7, radius:4)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_play_r_fall (engine:7, radius:4)
+# [00:00:01] Vacuity Check Passed: CHECKER_MODULE.ar_status_reg_standby (engine:7, radius:4)
+# [00:00:01] Covered: CHECKER_MODULE.cr_rindex_on (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_prdata_rbank (engine:7, radius:2)
+# [00:00:01] Covered: CHECKER_MODULE.cr_req_r_off (engine:7, radius:4)
+# [00:00:01] Covered: CHECKER_MODULE.cr_irq_r_stable (engine:7, radius:4)
+# [00:00:01] Covered: CHECKER_MODULE.cr_play_r_stable (engine:7, radius:4)
+# [00:00:01] Covered: CHECKER_MODULE.cr_llooped_r_stable (engine:7, radius:4)
+# [00:00:01] Covered: CHECKER_MODULE.cr_ltail_r_stable (engine:7, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cr_lhead_r_stable (engine:7, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cr_stop_on (engine:7, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cr_ldata_r_stable (engine:7, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cr_rbank_r_stable (engine:7, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cr_irq_r_fall_stop (engine:7, radius:6)
+# [00:00:02] Covered: CHECKER_MODULE.cr_play_r_fall (engine:7, radius:6)
+# [00:00:02] Covered: CHECKER_MODULE.cr_status_reg_standby (engine:7, radius:6)
+# [00:00:02] Covered: CHECKER_MODULE.cr_rbank_r_write (engine:7, radius:6)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_prdata_lfifo (engine:7, radius:2)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_ldata_r_write (engine:7, radius:4)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_lhead_r_inc (engine:7, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cr_prdata_lfifo (engine:7, radius:2)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_lfifo_output_on (engine:7, radius:6)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_lempty_of (engine:7, radius:6)
+# [00:00:02] Covered: CHECKER_MODULE.cr_lempty_of (engine:7, radius:6)
+# [00:00:02] Covered: CHECKER_MODULE.cr_lhead_r_inc (engine:7, radius:6)
+# [00:00:02] Covered: CHECKER_MODULE.cr_lfifo_output_on (engine:7, radius:6)
+# [00:00:02] Covered: CHECKER_MODULE.cr_ldata_r_write (engine:7, radius:6)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_cfg_out_on (engine:7, radius:4)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.af_cfg_out_valid_high (engine:7, radius:4)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.af_cfg_out_pulse (engine:7, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cr_cfg_out_on (engine:7, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cf_cfg_out_valid_high (engine:7, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cf_cfg_out_pulse (engine:7, radius:6)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_start_on (engine:7, radius:4)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_play_r_rise (engine:7, radius:4)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_status_reg_play (engine:7, radius:4)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_req_r_on (engine:7, radius:6)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_tick_out_of (engine:7, radius:6)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_irq_r_rise (engine:7, radius:6)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.af_tick_out_high (engine:7, radius:8)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.af_irq_out_high (engine:7, radius:8)
+# [00:00:02] Covered: CHECKER_MODULE.cr_start_on (engine:7, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cr_tick_out_of (engine:7, radius:6)
+# [00:00:02] Covered: CHECKER_MODULE.cr_play_r_rise (engine:7, radius:6)
+# [00:00:02] Covered: CHECKER_MODULE.cr_status_reg_play (engine:7, radius:6)
+# [00:00:02] Covered: CHECKER_MODULE.cr_irq_r_rise (engine:7, radius:8)
+# [00:00:02] Covered: CHECKER_MODULE.cr_req_r_on (engine:7, radius:8)
+# [00:00:02] Covered: CHECKER_MODULE.cf_tick_out_high (engine:7, radius:8)
+# [00:00:02] Covered: CHECKER_MODULE.cf_irq_out_high (engine:7, radius:10)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.af_cfg_reg_drv (engine:7, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cf_cfg_reg_drv (engine:7, radius:6)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.af_level_reg_drv (engine:7, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cf_level_reg_drv (engine:7, radius:6)
+# [00:00:02] Proven: CHECKER_MODULE.ar_lhead_r_loop (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: CHECKER_MODULE.ar_cfg_out_off (engine:0, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_start_on (engine:0, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_start_off (engine:0, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_stop_on (engine:0, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_stop_off (engine:0, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_level_out_on (engine:0, vacuity check:inconclusive)
+# [00:00:02] Proven: CHECKER_MODULE.af_level_reg_drv (engine:10, vacuity check:passed)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.af_dsp_regs_drv (engine:7, radius:4)
+# [00:00:02] Proven: CHECKER_MODULE.ar_lhead_r_stable (engine:10, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_pslverr (engine:7, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_pready (engine:7, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_rindex_on (engine:7, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_rindex_off (engine:7, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_index_range (engine:7, vacuity check:passed)
+# [00:00:02] Covered: CHECKER_MODULE.cf_dsp_regs_drv (engine:7, radius:6)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_level_out_on (engine:10, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cr_level_out_on (engine:10, radius:4)
+# [00:00:02] Proven: CHECKER_MODULE.ar_level_out_off (engine:0, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_irqack_on (engine:0, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_irq_r_fall_irqack (engine:10, radius:4)
+# [00:00:02] Vacuity Check Passed: CHECKER_MODULE.ar_irqack_on (engine:10, radius:4)
+# [00:00:02] Covered: CHECKER_MODULE.cr_irqack_on (engine:10, radius:4)
+# [00:00:02] Proven: CHECKER_MODULE.ar_irqack_off (engine:0, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_tick_out_on (engine:0, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_tick_out_of (engine:0, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_req_r_on (engine:10, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_req_r_off (engine:10, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_irq_r_rise (engine:10, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_irq_r_fall_stop (engine:10, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_irq_r_fall_irqack (engine:10, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.af_cfg_out_valid_high (engine:10, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_ltail_r_loop_2 (engine:10, vacuity check:inconclusive)
+# [00:00:02] Proven: CHECKER_MODULE.af_irq_out_high (engine:10, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_llooped_r_off_1 (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: CHECKER_MODULE.ar_ltail_r_stable (engine:7, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_lempty_on (engine:7, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_lempty_of (engine:7, vacuity check:passed)
+# [00:00:02] Proven: CHECKER_MODULE.ar_lfull_on (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: CHECKER_MODULE.af_cfg_out_pulse (engine:10, vacuity check:passed)
+# [00:00:02] Covered: CHECKER_MODULE.cr_irq_r_fall_irqack (engine:10, radius:6)
+# [00:00:02] Proven: CHECKER_MODULE.ar_llooped_r_off_2 (engine:7, vacuity check:inconclusive)
+# [00:00:03] Proven: CHECKER_MODULE.ar_lfull_off (engine:7, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_ltail_r_inc_1 (engine:10, vacuity check:inconclusive)
+# [00:00:03] Proven: CHECKER_MODULE.ar_lfifo_output_off (engine:7, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_status_reg_play (engine:10, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_llooped_r_stable (engine:7, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_status_reg_standby (engine:10, vacuity check:passed)
+# [00:00:03] Vacuity Check Passed: CHECKER_MODULE.ar_ltail_r_inc_1 (engine:7, radius:8)
+# [00:00:03] Covered: CHECKER_MODULE.cr_ltail_r_inc_1 (engine:7, radius:10)
+# [00:00:03] Proven: CHECKER_MODULE.ar_lfifo_output_on (engine:10, vacuity check:passed)
+# [00:00:03] Vacuity Check Passed: CHECKER_MODULE.ar_ltail_r_inc_2 (engine:7, radius:12)
+# [00:00:03] Covered: CHECKER_MODULE.cr_ltail_r_inc_2 (engine:7, radius:14)
+# [00:00:03] Proven: CHECKER_MODULE.ar_prdata_rbank (engine:0, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_prdata_lfifo (engine:0, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_prdata_rfifo (engine:0, vacuity check:inconclusive)
+# [00:00:03] Vacuity Check Passed: CHECKER_MODULE.ar_prdata_rfifo (engine:7, radius:2)
+# [00:00:03] Covered: CHECKER_MODULE.cr_prdata_rfifo (engine:7, radius:2)
+# [00:00:03] Proven: CHECKER_MODULE.ar_prdata_off (engine:0, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_play_r_rise (engine:10, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_play_r_fall (engine:7, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_play_r_stable (engine:7, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_play_out_state (engine:7, vacuity check:passed)
+# [00:00:03] Vacuity Check Passed: CHECKER_MODULE.ar_clr_on (engine:7, radius:4)
+# [00:00:03] Covered: CHECKER_MODULE.cr_clr_on (engine:7, radius:4)
+# [00:00:03] Proven: CHECKER_MODULE.ar_clr_off (engine:7, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_clr_out (engine:7, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_cfg_out_on (engine:7, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_irq_r_stable (engine:7, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_irq_out (engine:7, vacuity check:passed)
+# [00:00:03] Proven: CHECKER_MODULE.ar_ltail_r_inc_2 (engine:10, vacuity check:passed)
+# [00:00:07] Proven: CHECKER_MODULE.ar_lhead_r_inc (engine:10, vacuity check:passed)
+# Info    : Established connection with client process.  Hostname 'lehmus-cn2.oulu.fi', PID 3373064, Time [00:00:10], Client Process GUI.  [formal-386]
+# [00:00:12] Vacuity Check Passed: CHECKER_MODULE.ar_llooped_r_on (engine:7, radius:224)
+# [00:00:12] Vacuity Check Passed: CHECKER_MODULE.ar_lhead_r_loop (engine:7, radius:224)
+# [00:00:12] Vacuity Check Passed: CHECKER_MODULE.ar_lfull_on (engine:7, radius:226)
+# [00:00:13] Covered: CHECKER_MODULE.cr_llooped_r_on (engine:7, radius:226)
+# [00:00:13] Covered: CHECKER_MODULE.cr_lhead_r_loop (engine:7, radius:226)
+# [00:00:13] Covered: CHECKER_MODULE.cr_lfull_on (engine:7, radius:226)
+# [00:00:40] Proven: CHECKER_MODULE.ar_ldata_r_stable (engine:10, vacuity check:passed)
+# [00:00:46] Proven: CHECKER_MODULE.ar_ldata_r_write (engine:10, vacuity check:passed)
+# [00:00:52] Vacuity Check Passed: CHECKER_MODULE.ar_ldata_r_failed_write (engine:10, radius:228)
+# [00:00:55] Covered: CHECKER_MODULE.cr_ldata_r_failed_write (engine:7, radius:230)
+# [00:01:11] Proven: CHECKER_MODULE.af_dsp_regs_drv (engine:10, vacuity check:passed)
+# [00:01:18] Proven: CHECKER_MODULE.ar_rbank_r_write (engine:10, vacuity check:passed)
+# [00:01:48] Proven: CHECKER_MODULE.ar_ldata_r_failed_write (engine:10, vacuity check:passed)
+# [00:02:01] Proven: CHECKER_MODULE.ar_rbank_r_stable (engine:10, vacuity check:passed)
+# [00:02:11] Vacuity Check Passed: CHECKER_MODULE.ar_llooped_r_off_2 (engine:10, radius:304)
+# [00:02:11] Vacuity Check Passed: CHECKER_MODULE.ar_ltail_r_loop_2 (engine:10, radius:304)
+# [00:02:12] Covered: CHECKER_MODULE.cr_llooped_r_off_2 (engine:10, radius:306)
+# [00:02:12] Covered: CHECKER_MODULE.cr_ltail_r_loop_2 (engine:10, radius:306)
+# [00:02:23] Vacuity Check Passed: CHECKER_MODULE.ar_llooped_r_off_1 (engine:12, radius:250)
+# [00:02:23] Vacuity Check Passed: CHECKER_MODULE.ar_ltail_r_loop_1 (engine:12, radius:250)
+# [00:02:27] Covered: CHECKER_MODULE.cr_llooped_r_off_1 (engine:12, radius:296)
+# [00:02:27] Covered: CHECKER_MODULE.cr_ltail_r_loop_1 (engine:12, radius:296)
+# [00:02:27] Target Status: Done 215/215, Update 215/215, Proof radius min=N/A, avg=N/A
+# [00:02:27] Check Status: Vacuity 121/121
+# [00:02:27] Engine Process Status: 0 running, 0 pending, 8 terminated, Mem=4GB
+# 
+# 
+# --------- Process Statistics ----------
+# Elapsed Time                     147 s
+# Total CPU Time                   274 s
+# Total Peak Memory                3.7 GB
+# ---------- Engine Processes -----------
+# Average CPU Time                  34 s
+# Minimum CPU Utilization           23 %
+# Average Peak Memory              0.4 GB
+# Maximum Peak Memory              0.6 GB
+# Peak Cores                         8
+# Distinct Machines                  1
+# Launch Failures                    0
+# Unexpected Process Terminations    0
+# Successful Re-connections          0
+# ---------------------------------------
+# 
+# 
+# ========================================
+# Property Summary                   Count
+# ========================================
+# Assumes                               11
+# ========================================
+# Asserts                              130
+# ----------------------------------------
+# Proven                               130
+# ========================================
+# Covers                                85
+# ----------------------------------------
+# Covered                               85
+# ========================================
+# 
+# Message Summary
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     1  Info     formal-205         Using initialization sequence file to initialize design state.
+#     1  Info     formal-285         Automatically constraining reset signal to de-assert after initialization sequence (use -auto_constraint_off option to disable).
+#     8  Info     formal-385         Established connection with engine process.
+#     1  Info     formal-386         Established connection with client process.
+# 
+# Final Process Statistics: Peak Memory 0.58GB, Cumulative CPU Time 274s, Elapsed Time 147s
+# 
+# To see results in the GUI run:
+# qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/control_unit_qformal/propcheck.db
+# 
+# Command : formal load db output/control_unit_qformal/propcheck.db/formal_verify.db
+# Command : formal generate ucdb formal_coverage.ucdb
+# Writing output/control_unit_qformal/formal_coverage.ucdb ...

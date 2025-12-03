@@ -1,0 +1,14 @@
+///////////////////////////////////////////////////////////
+//
+// Class: apb_agent_config
+//
+///////////////////////////////////////////////////////////
+
+`ifndef __apb_agent_config__
+`define __apb_agent_config__
+
+class apb_agent_config extends uvm_object;
+   bit has_analyzer = 1;
+endclass 
+
+`endif

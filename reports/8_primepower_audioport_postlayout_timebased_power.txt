@@ -1,0 +1,62 @@
+****************************************
+Report : Time Based Power
+	-verbose
+Design : audioport
+Version: U-2022.12
+Date   : Mon May  5 00:12:27 2025
+****************************************
+
+Sampling Interval: 0.001 ns
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Cell               Design       Wire_model  Library       Selection_type
+--------------------------------------------------------------------------------
+                   audioport    5K_hvratio_1_1
+                                            NangateOpenCellLibrary
+                                                          library default
+
+Power-specific unit information :
+    Voltage Units = 1 V
+    Capacitance Units = 0.001 pf
+    Time Units = 1 ns
+    Dynamic Power Units = 1 W
+    Leakage Power Units = 1 W
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network           2.386e-04 1.918e-04 3.664e-05 4.670e-04 (14.32%)  i
+register                3.970e-04 1.918e-06 1.633e-03 2.031e-03 (62.28%)  
+combinational           1.799e-05 1.017e-04 6.437e-04 7.634e-04 (23.40%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 2.954e-04   ( 9.06%)
+  Cell Internal Power  = 6.536e-04   (20.04%)
+  Cell Leakage Power   = 2.313e-03   (70.91%)
+                         ---------
+Total Power            = 3.262e-03  (100.00%)
+
+X Transition Power     =    0.0000
+Glitching Power        = 3.663e-09
+
+Peak Power             =    0.3908
+Peak Time              =  3323.165
+
+1

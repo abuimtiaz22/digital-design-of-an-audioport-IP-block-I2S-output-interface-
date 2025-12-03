@@ -1,0 +1,797 @@
+Initializing gui preferences from file  /homedir01/aimtiaz23/.synopsys_dc_gui/preferences.tcl
+#################################################################
+#     Synthesis script for Synopsys Design Compiler 
+#     (c) 2023 Univ. of Oulu
+#################################################################
+set systemTime [clock seconds]
+1746297643
+puts "Script start time: [clock format $systemTime -format %H:%M:%S]"
+Script start time: 21:40:43
+set sh_continue_on_error false
+false
+#################################################################
+# Customizable variables
+#################################################################
+set INSERT_SCAN_CHAINS                0
+0
+set GATE_CLOCK                        0
+0
+set CLOCK_GATE_MAX_FANOUT             16 
+16
+set SYNTHESIS_FIX_HOLD                0
+0
+set SYNTHESIS_RECREM_ARCS             0
+0
+set RTL_POWER_ESTIMATION              0
+0
+set VHDL_ARCHITECTURE                 "rtl"
+rtl
+set SYNOPSYS_ANALYZE_OPTIONS          ""
+set SYNOPSYS_ELABORATE_OPTIONS        ""
+set SYNOPSYS_PATHANALYZER_PATHS       100
+100
+set SYNOPSYS_PATHANALYZER_SLACK_LIMIT 10
+10
+set DC_COMPILE_OPTIONS                ""
+set DC_WRITE_PARASITICS               1
+1
+set DC_LINK_LIBRARY_FILES             ""
+set DFT_SETUP_FILE                    ""
+if {$in_gui_session == false } {
+    set INTERACTIVE 0
+}
+#################################################################
+# Read technology and design settings
+#################################################################
+set EDA_TOOL "Design-Compiler"
+Design-Compiler
+set EDA_TOOL_TARGET "ASIC"
+ASIC
+source -echo scripts/0_setup.tcl
+##################################################################################################
+# Flow settings
+##################################################################################################
+set script_debug_enabled 0
+set TEXT_EDITOR "gedit"
+set SHOW_REPORTS 0
+set DUT_INSTANCE_NAME "DUT_INSTANCE"
+set LAUNCH_DIR        [pwd]
+set ::env(LAUNCH_DIR) [pwd]
+set DESIGN_DIR        [pwd]
+set INPUT_DIR         "input"
+set RESULTS_DIR       "results"
+if { [file exists $RESULTS_DIR ] == 0 } {
+    exec mkdir $RESULTS_DIR
+}
+set REPORTS_DIR       "reports"
+if { [file exists $REPORTS_DIR ] == 0 } {
+    exec mkdir $REPORTS_DIR
+}
+set OUTPUT_DIR        "output"
+if { [file exists $OUTPUT_DIR ] == 0 } {
+    exec mkdir $OUTPUT_DIR
+}
+if { [info exists INTERACTIVE ] == 0} {
+    set INTERACTIVE 1
+}
+if {[catch {fconfigure stdin -mode}]} {
+    set INTERACTIVE 0
+} 
+# Override with environment variable so that shell scripts can run be use in batch mode
+if [info exists env(ELLAB_DIGITAL_FLOW_MODE) ] {
+    if { $env(ELLAB_DIGITAL_FLOW_MODE) == "INTERACTIVE" } {
+        set INTERACTIVE 1
+    } else {
+        set INTERACTIVE 0
+    }
+}
+##################################################################################################
+# Design Settings
+##################################################################################################
+set DESIGN_FILES    {}
+set RTL_FILES       {}
+set SVA_FILES       {}
+set TESTBENCH_FILES {}
+source ${INPUT_DIR}/0_setup_design.tcl
+if { [info exists TESTBENCH_NAME] == 0 } {
+    set TESTBENCH_NAME ${DESIGN_NAME}_tb
+}
+##################################################################################################
+# Technology specific settings
+##################################################################################################
+if { [info exists TARGET_TECHNOLOGY ] == 0} {
+    if { [info exists EDA_TOOL_TARGET] } {
+        if { $EDA_TOOL_TARGET == "ASIC" } {
+            set TARGET_TECHNOLOGY "NANGate"
+        } else {
+            #   set TARGET_TECHNOLOGY "Xilinx"
+            set TARGET_TECHNOLOGY "Altera"
+        }
+    } else {
+        set TARGET_TECHNOLOGY "NANGate"
+    }
+}
+if [info exists env(ELLAB_DIGITAL_FLOW_TECH) ] {
+    set TARGET_TECHNOLOGY $env(ELLAB_DIGITAL_FLOW_TECH)
+}
+set setup_file scripts/0_setup_${TARGET_TECHNOLOGY}.tcl
+if [file exists $setup_file] {
+    source $setup_file
+} else {
+    puts "Technology settings not found for ${TARGET_TECHNOLOGY}"
+    exit
+}
+set tmp_list { }
+if { [info exists DESIGN_FILES ] } {
+    foreach filename ${DESIGN_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        } else {
+            if { $script_debug_enabled } {
+                puts "File ${filename} not found"
+                return
+            }
+        }
+    }
+}
+set DESIGN_FILES $tmp_list
+set tmp_list { }
+if { [info exists RTL_FILES ] } {
+    foreach filename ${RTL_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        } else {
+            if { $script_debug_enabled } {
+                puts "File ${filename} not found"
+                return
+            }
+        }
+    }
+}
+set RTL_FILES $tmp_list
+set tmp_list { }
+if { [info exists SVA_FILES ] } {
+    foreach filename ${SVA_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        } else {
+            if { $script_debug_enabled } {
+                puts "File ${filename} not found"
+                return
+            }
+        }
+    }
+}
+set SVA_FILES $tmp_list
+set tmp_list { }
+if { [info exists TESTBENCH_FILES ] } {
+    foreach filename ${TESTBENCH_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        } else {
+        }
+    }
+}
+set TESTBENCH_FILES $tmp_list
+set tmp_list { }
+if { [info exists SYSTEMC_SOURCE_FILES ] } {
+    foreach filename ${SYSTEMC_SOURCE_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        }
+    }
+}
+set SYSTEMC_SOURCE_FILES $tmp_list
+set tmp_list { }
+if { [info exists SYSTEMC_HEADER_FILES ] } {
+    foreach filename ${SYSTEMC_HEADER_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        }
+    }
+}
+set SYSTEMC_HEADER_FILES $tmp_list
+set tmp_list { }
+if { [info exists SYSTEMC_TESTBENCH_FILES ] } {
+    foreach filename ${SYSTEMC_TESTBENCH_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        }
+    }
+}
+set SYSTEMC_TESTBENCH_FILES $tmp_list
+set chan [open ${OUTPUT_DIR}/last_design_name w]
+puts $chan $DESIGN_NAME
+close $chan
+file delete -force [glob -nocomplain $REPORTS_DIR/4_dc_${DESIGN_NAME}_* ]
+#################################################################
+# Design Compiler Settings
+#################################################################
+remove_design -designs
+1
+set sh_output_log_file ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_rtl_synthesis_log.txt
+reports/4_dc_i2s_unit_rtl_synthesis_log.txt
+set_app_var hdlin_vhdl_std 2008
+2008
+if { [info exists DC_ALIB_PATH ] } {
+    set_app_var alib_library_analysis_path $DC_ALIB_PATH
+}
+/research/cas/public/DT3_2025/lib/logic_lib/alib
+if { [info exists DC_SUPPRESS_MESSAGES ] } {
+    foreach msg_id $DC_SUPPRESS_MESSAGES {
+        suppress_message $msg_id
+    }
+}
+set work_dir ${OUTPUT_DIR}/${DESIGN_NAME}_SYNOPSYS_WORK
+output/i2s_unit_SYNOPSYS_WORK
+file delete -force $work_dir
+define_design_lib WORK -path $work_dir
+1
+if { $SYNTHESIS_RECREM_ARCS == 1 } {
+    set enable_recovery_removal_arcs true
+}
+set hdlin_while_loop_iterations 3000
+3000
+set_svf ${RESULTS_DIR}/${DESIGN_NAME}.svf
+1
+#####################################################################################
+#  TECHNOLOGY SETTINGS
+#####################################################################################
+set search_path        "$search_path  $DC_LIBRARY_PATH $work_dir"
+. /sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn /sw/rhel7/synopsys/syn/T-2022.03-SP5-1/dw/syn_ver /sw/rhel7/synopsys/syn/T-2022.03-SP5-1/dw/sim_ver  /research/cas/public/DT3_2025/lib/logic_lib output/i2s_unit_SYNOPSYS_WORK
+set link_library       [concat "* $DC_TARGET_LIBRARY_FILE dw_foundation.sldb  " $DC_LINK_LIBRARY_FILES]
+* NangateOpenCellLibrary_typical.db dw_foundation.sldb
+set target_library     ${DC_TARGET_LIBRARY_FILE}
+NangateOpenCellLibrary_typical.db
+set symbol_library     ${DC_TARGET_LIBRARY_FILE}
+NangateOpenCellLibrary_typical.db
+set synthetic_library  "dw_foundation.sldb"
+dw_foundation.sldb
+if { $RTL_POWER_ESTIMATION == 1 } {
+    saif_map -start
+}
+Information: The SAIF name mapping information database is now active. (PWR-602)
+1
+#####################################################################################
+#  RTL HDL INPUT
+#####################################################################################
+foreach filename [concat ${DESIGN_FILES} ${RTL_FILES} ] {
+    set ext [file extension $filename]
+    if { $ext == ".vhd" } {
+        analyze -library WORK -format vhdl $filename
+    } elseif { $ext == ".sv" } {
+        eval "analyze -library WORK -format sverilog $filename -define { design_top_is_$DESIGN_NAME} $SYNOPSYS_ANALYZE_OPTIONS"
+    } elseif { $ext == ".v" } {
+        eval "analyze -library WORK -format verilog $filename  -define { design_top_is_$DESIGN_NAME} $SYNOPSYS_ANALYZE_OPTIONS"
+    }
+}
+Running PRESTO HDLC
+Compiling source file ./input/apb_pkg.sv
+Opening include file ./input/audioport.svh
+Presto compilation completed successfully.
+Loading db file '/research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db'
+Loading db file '/sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn/dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file ./input/audioport_pkg.sv
+Opening include file ./input/audioport.svh
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./input/audioport_util_pkg.sv
+Opening include file ./input/audioport.svh
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration I2S_UNIT
+Compiling Architecture RTL of I2S_UNIT
+Presto compilation completed successfully.
+if { $RTL_LANGUAGE == "VHDL" } {
+    eval "elaborate $DESIGN_NAME -architecture $VHDL_ARCHITECTURE -library WORK $SYNOPSYS_ELABORATE_OPTIONS"
+} else {
+    eval "elaborate $DESIGN_NAME -library WORK $SYNOPSYS_ELABORATE_OPTIONS"
+}
+Loading db file '/sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn/gtech.db'
+Loading db file '/sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Inferred memory devices in process
+        in routine i2s_unit line 58 in file
+                './input/i2s_unit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     play_r_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine i2s_unit line 73 in file
+                './input/i2s_unit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     counter_reg     | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine i2s_unit line 92 in file
+                './input/i2s_unit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    input_reg_reg    | Flip-flop |  48   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine i2s_unit line 106 in file
+                './input/i2s_unit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |  48   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (i2s_unit)
+Elaborated 1 design.
+Current design is now 'i2s_unit'.
+1
+if { [current_design_name] != $DESIGN_NAME } {
+    rename_design [current_design_name] $DESIGN_NAME
+}
+link
+
+  Linking design 'i2s_unit'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  i2s_unit                    /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/i2s_unit.db
+  NangateOpenCellLibrary (library) /research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db
+  dw_foundation.sldb (library) /sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn/dw_foundation.sldb
+
+1
+set file_name [concat ${DESIGN_NAME}_elaborated.ddc]
+i2s_unit_elaborated.ddc
+write -hierarchy -format ddc -output ${OUTPUT_DIR}/$file_name $DESIGN_NAME
+Writing ddc file 'output/i2s_unit_elaborated.ddc'.
+1
+#####################################################################################
+#  CONSTRAINTS
+#####################################################################################
+set_operating_conditions -library $DC_TARGET_LIBRARY $DC_OPERATING_CONDITIONS
+Using operating conditions 'typical' found in library 'NangateOpenCellLibrary'.
+1
+if { [info exists SDC_FILE ] } {
+    if { [file exists $SDC_FILE ] } {
+        echo "4_dc_srtl_synthesis: Reading SDC_FILE ${SDC_FILE}"
+        read_sdc -echo $SDC_FILE
+    }
+}
+4_dc_srtl_synthesis: Reading SDC_FILE input/i2s_unit.sdc
+
+Reading SDC version 2.1...
+#
+# i2s_unit.sdc: Timing Constraints File
+#
+# 1. Define clock period and clock edge times in ns
+create_clock -name clk -period 54.2 clk
+set_ideal_network clk
+# 2. Define reset input timing wrt clock in ns
+set_input_delay  -clock clk 6.775 rst_n
+# 3. Define input external delays (arrival times) wrt clock in ns
+set_input_delay  -clock clk 6.775 [all_inputs]
+# 4. Define output external delays (setup times) wrt clock in ns
+set_output_delay  -clock clk 6.775 [all_outputs]
+1
+if { [info exists SYNTHESIS_CONSTRAINTS_FILE ] } {
+    source -echo $SYNTHESIS_CONSTRAINTS_FILE
+}
+# Create path groups
+suppress_message UID-101
+set all_clocks [get_clocks -quiet]
+{clk}
+set clock_ports [filter_collection [get_attribute [get_clocks -quiet] sources] object_class==port]
+{clk}
+set non_clock_inputs [remove_from_collection [all_inputs] ${clock_ports} ] 
+{rst_n play_in tick_in audio0_in[23] audio0_in[22] audio0_in[21] audio0_in[20] audio0_in[19] audio0_in[18] audio0_in[17] audio0_in[16] audio0_in[15] audio0_in[14] audio0_in[13] audio0_in[12] audio0_in[11] audio0_in[10] audio0_in[9] audio0_in[8] audio0_in[7] audio0_in[6] audio0_in[5] audio0_in[4] audio0_in[3] audio0_in[2] audio0_in[1] audio0_in[0] audio1_in[23] audio1_in[22] audio1_in[21] audio1_in[20] audio1_in[19] audio1_in[18] audio1_in[17] audio1_in[16] audio1_in[15] audio1_in[14] audio1_in[13] audio1_in[12] audio1_in[11] audio1_in[10] audio1_in[9] audio1_in[8] audio1_in[7] audio1_in[6] audio1_in[5] audio1_in[4] audio1_in[3] audio1_in[2] audio1_in[1] audio1_in[0]}
+unsuppress_message UID-101
+foreach_in_collection clock $all_clocks {
+    if { [get_attribute -quiet $clock sources] != "" } {
+        set clock_name [get_object_name $clock]
+        set reglist [all_registers -clock $clock_name]
+        if { [llength $reglist] > 0 } {
+            group_path -name ${clock_name}_reg2reg -from [all_registers -clock $clock_name -clock_pins] -to [all_registers -data_pins]
+            group_path -name ${clock_name}_in2reg  -from $non_clock_inputs -to [all_registers -clock $clock_name -data_pins]
+            group_path -name ${clock_name}_reg2out -from [all_registers -clock $clock_name -clock_pins] -to [all_outputs]
+        }
+        group_path -name ${clock_name}_in2out  -from [all_inputs] -to [all_outputs]
+    }
+}
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Updating graph... (UID-83)
+Information: Updating graph... (UID-83)
+Information: Updating graph... (UID-83)
+# Enable hold fixing
+if { $SYNTHESIS_FIX_HOLD == 1 } {
+    foreach clock $CLOCK_NAMES {
+        set_fix_hold $clock
+    }
+}
+#####################################################################################
+#  COMPILATION
+#####################################################################################
+set_fix_multiple_port_nets -all -buffer_constants
+1
+if {$INSERT_SCAN_CHAINS > 0 } {
+
+    #####################################################################################
+    #  COMPILATION WITH DFT
+    #####################################################################################
+
+    if { $GATE_CLOCK == 1 } {
+        set_clock_gating_style -max_fanout $CLOCK_GATE_MAX_FANOUT \
+                               -positive_edge_logic {integrated } \
+                               -negative_edge_logic {or} \
+                               -control_point before \
+                               -control_signal scan_enable 
+        eval "compile_ultra $DC_COMPILE_OPTIONS -gate_clock -scan"
+    } else {
+        eval "compile_ultra $DC_COMPILE_OPTIONS -scan"
+    }
+
+    set file_name [concat ${DESIGN_NAME}_compiled.ddc]
+    write -hierarchy -format ddc -output ${OUTPUT_DIR}/$file_name $DESIGN_NAME
+
+    
+    if { [file exists $DFT_SETUP_FILE] } {
+        source -echo $DFT_SETUP_FILE
+    }
+    
+    if { [info exists "DFT_AUTOFIX_SCRIPT" ] } {
+        source -echo $DFT_AUTOFIX_SCRIPT
+    }
+    
+    create_test_protocol -infer_clock -infer_asynch
+    dft_drc
+    dft_drc -verbose > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_dft_drc.txt
+    preview_dft        > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_preview_dft.txt
+    insert_dft
+
+    compile_ultra -incremental -scan
+
+} else {
+
+    #####################################################################################
+    #  COMPILATION WITHOUT DFT
+    #####################################################################################
+
+    if { $GATE_CLOCK == 1 } {
+        set_clock_gating_style -max_fanout $CLOCK_GATE_MAX_FANOUT \
+                               -positive_edge_logic {integrated } \
+                               -negative_edge_logic {or}
+        eval "compile_ultra $DC_COMPILE_OPTIONS -gate_clock"
+    } else {
+        eval "compile_ultra $DC_COMPILE_OPTIONS"
+    }
+    
+}
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | T-2022.03-DWBB_202203.4 |     *     |
+| Licensed DW Building Blocks        | T-2022.03-DWBB_202203.4 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Comand Line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 200                                    |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 106                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 6                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 14                                     |
+| Number of Dont Touch Nets                               | 1                                      |
+| Number of Size Only Cells                               | 106                                    |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'i2s_unit'
+
+Loaded alib file '/research/cas/public/DT3_2025/lib/logic_lib/alib/alib-52/NangateOpenCellLibrary_typical.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'i2s_unit'
+Information: Added key list 'DesignWare' to design 'i2s_unit'. (DDB-72)
+ Implement Synthetic for 'i2s_unit'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: There is no timing violation in design i2s_unit. Delay-based auto_ungroup will not be performed. (OPT-780)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01    1418.3      0.00       0.0      72.4                           46446.7500
+    0:00:01    1418.3      0.00       0.0      72.4                           46446.7500
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:01    1418.3      0.00       0.0      72.4                           46446.7500
+    0:00:01    1418.3      0.00       0.0      72.4                           46446.7500
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:01     825.1      0.00       0.0       5.6                           15652.5410
+    0:00:01     825.1      0.00       0.0       5.6                           15652.5410
+    0:00:01     825.1      0.00       0.0       5.6                           15652.5410
+    0:00:01     825.1      0.00       0.0       5.6                           15652.5410
+    0:00:01     825.1      0.00       0.0       5.6                           15652.5410
+    0:00:01     825.1      0.00       0.0       5.6                           15652.5410
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:01     816.4      0.00       0.0       0.0                           15280.6152
+    0:00:01     816.4      0.00       0.0       0.0                           15280.6152
+    0:00:01     816.4      0.00       0.0       0.0                           15280.6152
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:02     816.4      0.00       0.0       0.0                           15229.7998
+Loading db file '/research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+remove_unconnected_ports -blast_buses [find -hierarchy cell "*" ]
+1
+optimize_netlist -area
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+
+
+  Updating timing information
+
+
+  Beginning Area Optimization
+  -----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01     816.4      0.00       0.0       0.0                           15229.7998
+    0:00:01     815.6      0.00       0.0       0.0                           15236.4678
+Loading db file '/research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+if { $SYNTHESIS_FIX_HOLD == 1 } {
+    echo "4_dc_srtl_synthesis: Fixing hold violations with compile -incremental -only_hold_time"
+    compile -incremental -only_hold_time
+}
+#####################################################################################
+#  WRITE OUT RESULTS
+#####################################################################################
+if { $RTL_POWER_ESTIMATION == 1 } {
+    read_saif -auto_map_names -input ${RESULTS_DIR}/${DESIGN_NAME}_rtl.saif -instance_name ${TESTBENCH_NAME}/${DUT_INSTANCE_NAME} -verbose
+    report_power  > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_power.txt
+    report_saif -hier -rtl_saif -missing > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_saif.txt
+    saif_map -write_map ${RESULTS_DIR}/${DESIGN_NAME}_rtl.saifmap ; # Required by ICC2
+}
+Information: Writing SAIF name mapping information to file 'results/i2s_unit_rtl.saifmap'. (PWR-635)
+1
+report_area -hierarchy -designware -nosplit  > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_area.txt
+report_reference -hierarchy                  > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_reference.txt
+report_timing  -delay_type max               > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_timing_setup.txt
+report_timing -delay_type min                > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_timing_hold.txt
+report_qor                                   > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_qor.txt
+report_clock_timing -type summary            > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_clock_summary.txt
+if {$INSERT_SCAN_CHAINS > 0 } {
+    report_scan_path > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_scan_path.txt
+}
+if { $GATE_CLOCK == 1 } {
+    report_clock_gating -verbose > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_clock_gating_summary.txt
+    report_clock_gating -style > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_clock_gating_style.txt
+    report_clock_gating -structure > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_clock_gating_structure.txt
+    report_clock_gating -gated > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_clock_gating_gated.txt
+    report_clock_gating -ungated > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_clock_gating_ungated.txt
+}
+change_names -rules verilog -hierarchy
+1
+write -hierarchy -format ddc -output ${OUTPUT_DIR}/${DESIGN_NAME}_gatelevel.ddc $DESIGN_NAME
+Writing ddc file 'output/i2s_unit_gatelevel.ddc'.
+1
+if {$INSERT_SCAN_CHAINS > 0 } {
+    write_test_protocol -output ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.spf
+    write_scan_def -output ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.scandef
+}
+write_sdc -version 1.7 ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.sdc
+1
+set verilogout_show_unconnected_pins  true
+true
+write -hierarchy -format verilog -output ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.v
+Writing verilog file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/i2s_unit_gatelevel.v'.
+1
+if { $DC_WRITE_PARASITICS == 1 } {
+    write_sdf -version 2.1 ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.sdf
+}
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/i2s_unit_gatelevel.sdf'. (WT-3)
+1
+set_svf -off
+1
+set systemTime [clock seconds]
+1746297649
+puts "Script end time: [clock format $systemTime -format %H:%M:%S]"
+Script end time: 21:40:49
+if { $INTERACTIVE == 0} {
+    exit
+} else {
+
+# In interactive mode, create path categories for Timing > New Path Analyzer
+    foreach_in_collection path_group [get_path_groups] {
+        set group_name [get_object_name $path_group]
+        set collname ${group_name}_max
+        set $collname [get_timing_paths -group $group_name -delay_type max -nworst $SYNOPSYS_PATHANALYZER_PATHS -max $SYNOPSYS_PATHANALYZER_PATHS -slack_lesser_than $SYNOPSYS_PATHANALYZER_SLACK_LIMIT ]
+        set collname ${group_name}_min
+        set $collname [get_timing_paths -group $group_name -delay_type min -nworst $SYNOPSYS_PATHANALYZER_PATHS -max $SYNOPSYS_PATHANALYZER_PATHS -slack_lesser_than $SYNOPSYS_PATHANALYZER_SLACK_LIMIT ]
+    }
+}
+dc_shell> exit
+
+Memory usage for this session 169 Mbytes.
+Memory usage for this session including child processes 169 Mbytes.
+CPU usage for this session 8 seconds ( 0.00 hours ).
+Elapsed time for this session 71 seconds ( 0.02 hours ).
+
+Thank you...
+

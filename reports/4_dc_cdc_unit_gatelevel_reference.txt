@@ -1,0 +1,40 @@
+ 
+****************************************
+Report : reference
+Design : cdc_unit
+Version: T-2022.03-SP5-1
+Date   : Fri Mar 21 10:19:16 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21_X1           NangateOpenCellLibrary
+                                  1.064000       1      1.064000  
+AOI22_X1           NangateOpenCellLibrary
+                                  1.330000       1      1.330000  
+CLKBUF_X1          NangateOpenCellLibrary
+                                  0.798000       2      1.596000  
+CLKBUF_X2          NangateOpenCellLibrary
+                                  1.064000       1      1.064000  
+DFFR_X1            NangateOpenCellLibrary
+                                  5.320000     110    585.200019  n
+INV_X1             NangateOpenCellLibrary
+                                  0.532000       4      2.128000  
+MUX2_X1            NangateOpenCellLibrary
+                                  1.862000      98    182.475999  
+NOR2_X1            NangateOpenCellLibrary
+                                  0.798000       2      1.596000  
+-----------------------------------------------------------------------------
+Total 8 references                                    776.454018
+1

@@ -1,0 +1,308 @@
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# 
+# This material contains trade secrets or otherwise
+# confidential information owned by
+# Siemens Industry Software Inc. or its affiliates
+# (collectively, "SISW"), or its licensors. Access
+# to and use of this information is strictly limited
+# as set forth in the customer's applicable
+# agreements with SISW.
+# 
+# Unpublished work. Copyright 2024 Siemens
+# 
+# do scripts/qcdc_static.tcl
+# Command : vlib output/cdc_unit_qcdc_cdc_work
+# Command : vmap work output/cdc_unit_qcdc_cdc_work
+# QuestaSim-64 vmap 2024.3_2 Lib Mapping Utility 2024.11 Nov 25 2024
+# vmap work output/cdc_unit_qcdc_cdc_work 
+# Copying /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/share/modeltech/linux_x86_64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Command : vlog -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_cdc_unit +define+RTL_VERIF input/apb_pkg.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:14:19 on Mar 21,2025
+# vlog -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_cdc_unit" "+define+RTL_VERIF" input/apb_pkg.sv 
+# -- Compiling package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 10:14:20 on Mar 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Command : vlog -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_cdc_unit +define+RTL_VERIF input/audioport_pkg.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:14:20 on Mar 21,2025
+# vlog -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_cdc_unit" "+define+RTL_VERIF" input/audioport_pkg.sv 
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 10:14:20 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_cdc_unit +define+RTL_VERIF input/audioport_util_pkg.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:14:20 on Mar 21,2025
+# vlog -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_cdc_unit" "+define+RTL_VERIF" input/audioport_util_pkg.sv 
+# -- Compiling package audioport_util_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 10:14:20 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_cdc_unit +define+RTL_VERIF input/cdc_unit.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:14:20 on Mar 21,2025
+# vlog -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_cdc_unit" "+define+RTL_VERIF" input/cdc_unit.sv 
+# -- Compiling package cdc_unit_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module cdc_unit
+# 
+# Top level modules:
+# 	cdc_unit
+# End time: 10:14:20 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_cdc_unit +define+RTL_VERIF input/cdc_unit_svamod.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:14:20 on Mar 21,2025
+# vlog -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_cdc_unit" "+define+RTL_VERIF" input/cdc_unit_svamod.sv 
+# -- Compiling package cdc_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module cdc_unit_svamod
+# 
+# Top level modules:
+# 	cdc_unit_svamod
+# End time: 10:14:21 on Mar 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Command : cdc run -d cdc_unit -process_dead_end
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Fri Mar 21 10:14:21 2025 by aimtiaz23 on kataja7.oulu.fi
+# 
+# Executing Command : cdc run -d cdc_unit -process_dead_end
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qcdc_static.tcl, Line: 84
+# Performance stats (Design elaboration::started) : cpu : 0(1) sec  memory : 0(244) mb  elapsed : 0(2) sec
+# 
+### Starting Step: netlist elaborate ### 
+# 
+## Elaborating Design...
+# Reading MTI mapping for library mapping
+# Writing all MTI mappings to vmap output ...
+# 
+# Top level modules:
+# 	cdc_unit
+# 
+# Analyzing design...
+# -- Loading module z0in_work.cdc_unit
+# Optimizing 4 design-units (inlining 0/1 module instances):
+# -- Optimizing package z0in_work.apb_pkg(fast)
+# -- Optimizing package z0in_work.audioport_pkg(fast)
+# -- Optimizing package z0in_work.cdc_unit_sv_unit(fast)
+# -- Optimizing module z0in_work.cdc_unit(fast)
+# Optimized design name is zi_opt_cdc_764242852_1
+# Performance stats (Design elaboration::ended) : cpu : 0(1) sec  memory : 358(602) mb  elapsed : 2(4) sec
+# Performance stats (Design synthesis::started) : cpu : 0(1) sec  memory : 0(244) mb  elapsed : 0(4) sec
+# 
+### Starting Step: netlist create ### 
+# 
+## Synthesizing netlist...
+# Elaborating module 'cdc_unit'.
+# 
+##Time Taken (Synthesis) = 26203.000000 ticks = 0.026203 secs
+# Performance stats (Design synthesis::ended) : cpu : 0(1) sec  memory : 398(642) mb  elapsed : 1(5) sec
+# Performance stats (CDC setup::started) : cpu : 0(1) sec  memory : 0(244) mb  elapsed : 0(5) sec
+# 
+### Starting Step: cdc setup ### 
+# 
+## CDC Setup Design...
+# Restoring module 'cdc_unit'.
+# Warning : Scheme name with (-)hyphen option in 'cdc scheme on/off' and 'cdc dmux -check off' will be deprecated in a future release.  Please use scheme name without (-)hyphen in 'cdc scheme on/off'.  [cdc-112]
+#         : File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.questa_dir.tcl', Line '37'.
+# Warning : Clock period or waveform specification has precision exceeding 3 digits past decimal point.  Clock 'mclk', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.questa_dir.tcl', Line 11.  [directive-114]
+#         : Absolute numbers for clock specification are not necessary. Respecify the clocks with relative numbers.
+# 
+## Continuing CDC Setup
+#  -------- Performance stats (Netlist flattening::started) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(1) sec
+# Flattening design 'cdc_unit'.
+#  -------- Performance stats (Netlist flattening::ended) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(1) sec
+# CDC netlist complexity for module 'cdc_unit' is 132.
+# 
+# Signals replaced by netlist constant
+# -------------------------------------------------------------------------------
+# Signal                         Value
+# -------------------------------------------------------------------------------
+# test_mode_in                   1'b0
+# -------------------------------------------------------------------------------
+# 
+#  -------- Performance stats (Constant propagation phase-1::started) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Constant propagation phase-1::ended) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Constant propagation phase-2::started) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Constant propagation phase-2::ended) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Stable propagation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Stable propagation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Analyzing clocks and resets for module 'cdc_unit'
+#  -------- Performance stats (Reset detection and propagation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Info    : Reset detection done.  Identified '2' resets: '2' user-specified and '0' inferred resets.  [reset-4]
+#  -------- Performance stats (Reset detection and propagation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Reset check analysis::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Reset check analysis::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Clock detection and propagation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Info    : Clock processing done.  Identified '2' clocks; '2' user-specified and '0' inferred clocks.  [cdc-44]
+#  -------- Performance stats (Clock detection and propagation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Clock check analysis::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Clock check analysis::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Checking input/output specifications for black box and custom synchronizer modules.
+#  -------- Performance stats (CDC settings report generation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (CDC settings report generation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# 
+#  -------- Performance stats (CDC report generation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (CDC report generation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# 
+# See '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/cdc.rpt' for detailed CDC report.
+# 
+# To view CDC Setup information, use qverify as follows:
+#       qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/cdc.db
+# 
+# Summary: 2 Warnings in cdc setup
+# Performance stats (CDC setup::ended) : cpu : 0(1) sec  memory : 485(729) mb  elapsed : 1(6) sec
+# Performance stats (CDC analysis::started) : cpu : 0(1) sec  memory : 0(247) mb  elapsed : 0(6) sec
+# 
+### Starting Step: cdc run ### 
+# 
+## Analyzing CDC Design...
+# 
+## Continuing CDC Analysis
+#  -------- Performance stats (CDC creation::started) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+#  -------- Performance stats (CDC creation::ended) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+# Processing 8 CDC signals after duplicate removal.
+#  -------- Performance stats (CDC schemes checking::started) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+#  ---------------- Performance stats (Reset deassertion synchronization phase 1::started) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+#  ---------------- Performance stats (Reset deassertion synchronization phase 1::ended) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+# Processing control signals.
+# Processing data signals.
+#  ---------------- Performance stats (Reset deassertion synchronization phase 2::started) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+#  ---------------- Performance stats (Reset deassertion synchronization phase 2::ended) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+# Processing FIFO.
+# Processing reconvergence.
+#  ---------------- Performance stats (CDC reconvergence checking::started) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+#  ---------------- Performance stats (CDC reconvergence checking::ended) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+#  -------- Performance stats (CDC schemes checking::ended) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+# Generating design report.
+#  -------- Performance stats (CDC settings report generation::started) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+#  -------- Performance stats (CDC settings report generation::ended) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+# 
+#  -------- Performance stats (CDC report generation::started) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+#  -------- Performance stats (CDC report generation::ended) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+# 
+# See '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/cdc.rpt' for detailed CDC report.
+# 
+# To view CDC information, use CDC as follows:
+#       qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/cdc.db
+# 
+## Generating Argument Files...
+# Performance stats (CDC analysis::ended) : cpu : 0(1) sec  memory : 398(645) mb  elapsed : 2(8) sec
+# Reading design database from /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/qcache/CDC/CACHE...completed (0.001398 (s)).
+# Performance stats (CDC status update::started) : cpu : 0(1) sec  memory : 0(249) mb  elapsed : 0(8) sec
+## Applying CDC Design Waivers...
+# 
+# CDC Results
+# =================================================================
+# 
+# -----------------------------------------------------------------
+# Total number of checks                                       (7)
+# -----------------------------------------------------------------
+# 
+# Violations (0)
+# -----------------------------------------------------------------
+# <None>
+# 
+# Cautions (2)
+# -----------------------------------------------------------------
+# DMUX synchronization.                                        (2)
+# 
+# Evaluations (3)
+# -----------------------------------------------------------------
+# Single-bit signal synchronized by DFF synchronizer.          (2)
+# Asynchronous reset synchronization.                          (1)
+# 
+# Resolved - Waived or Verified Status (0)
+# -----------------------------------------------------------------
+# <None>
+# 
+# Proven (2)
+# -----------------------------------------------------------------
+# Single-bit signal synchronized by DFF synchronizer.          (1)
+# Pulse Synchronization.                                       (1)
+# 
+# Filtered (0)
+# -----------------------------------------------------------------
+# <None>
+# 
+# 
+#  -------- Performance stats (CDC report generation::started) : cpu : 0(0) sec  memory : 0(310) mb  elapsed : 0(0) sec
+#  -------- Performance stats (CDC report generation::ended) : cpu : 0(0) sec  memory : 0(310) mb  elapsed : 0(0) sec
+# 
+# 
+# Message Summary
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     1  Warning  cdc-112            Scheme name with (-)hyphen option in 'cdc scheme on/off' and 'cdc dmux -check off' will be deprecated in a future release.
+#     1  Warning  directive-114      Clock period or waveform specification has precision exceeding 3 digits past decimal point.
+#     1  Info     cdc-44             Clock processing done.
+#     1  Info     reset-4            Reset detection done.
+# 
+# Summary: 2 Warnings in processing "cdc run"
+# Final Process Statistics: Max memory 482MB, CPU time 0s, Total time 4s
+# Performance stats (CDC status update::ended) : cpu : 0(1) sec  memory : 310(559) mb  elapsed : 1(9) sec
+# Performance stats : Max Memory : 729(mb), CPU time : 1(sec), Elapsed time : 9(sec)  
+# 
+# End of log Fri Mar 21 10:14:28 2025
+# 
+# Command : cdc generate protocol
+# 
+# Executing Command : cdc generate protocol
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qcdc_static.tcl, Line: 85
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Fri Mar 21 10:14:28 2025 by aimtiaz23 on kataja7.oulu.fi
+# 
+### Starting Step: cdc generate protocol ### 
+# 
+## Generating CDC Protocol Assertions...
+#  -------- Performance stats (Generating cdc protocol checkers::started) : cpu : 0(0) sec  memory : 0(310) mb  elapsed : 0(0) sec
+# Compiling SVA Assertions.
+# 
+# Protocols Recognized   :   5
+# 
+# CDC SVA Protocols Summary
+# -------------------------------------------------------------------------------
+# Protocol Type                             Protocols               Checks
+# -------------------------------------------------------------------------------
+# cdc_dsel                                          2                    2
+# cdc_sync                                          3                    3
+# -------------------------------------------------------------------------------
+# All                                               5                    5
+# -------------------------------------------------------------------------------
+# See /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/cdc_protocol.rpt for protocol SVA summary report.
+#  -------- Performance stats (Generating cdc protocol checkers::ended) : cpu : 0(0) sec  memory : 88(398) mb  elapsed : 1(1) sec
+# Final Process Statistics: Max memory 398MB, CPU time 0s, Total time 1s
+# Command : cdc generate report
+# Reading design database from /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/qcache/CDC/CACHE...completed (0.000842 (s)).
+# Performance stats (CDC report generation::started) : cpu : 0(1) sec  memory : 0(249) mb  elapsed : 0(10) sec
+# Performance stats (CDC report generation::ended) : cpu : 0(1) sec  memory : 398(647) mb  elapsed : 0(10) sec
+# See 'output/cdc_unit_qcdc_run_log/cdc_detail.rpt' for detailed CDC report.
+# Command : configure output directory /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir
+# Command : cdc generate testplan results/cdc_unit_rtl_cdc_testplan.xml -ucdb results/cdc_unit_rtl_cdc_coverage.ucdb
+# Reading database output/cdc_unit_qcdc_run_log/cdc.db ...
+# Writing results/cdc_unit_rtl_cdc_coverage.ucdb ...
+# Writing XML file 'results/cdc_unit_rtl_cdc_testplan.xml'
+# Info : No Protocol or FX checkers added to the CDC testplan.
+# 

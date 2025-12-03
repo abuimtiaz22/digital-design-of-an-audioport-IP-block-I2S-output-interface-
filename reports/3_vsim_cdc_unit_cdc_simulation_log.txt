@@ -1,0 +1,393 @@
+# transcript sizelimit $VSIM_TRANSCRIPT_SIZE
+# 
+# set VSIM_DEBUGDB    ${OUTPUT_DIR}/${DESIGN_NAME}_rtl.dbg
+# output/cdc_unit_rtl.dbg
+# set VSIM_DESIGNFILE ${OUTPUT_DIR}/${DESIGN_NAME}_rtl.bin
+# output/cdc_unit_rtl.bin
+# set VSIM_QWAVEDB    ${OUTPUT_DIR}/${DESIGN_NAME}_rtl.db
+# output/cdc_unit_rtl.db
+# set VSIM_VOPTDIR    ${DESIGN_NAME}_rtl_vopt
+# cdc_unit_rtl_vopt
+# set VSIM_WORKDIR    ${OUTPUT_DIR}/${DESIGN_NAME}_questasim_work
+# output/cdc_unit_questasim_work
+# set QUESTA_CDC_DB   ${OUTPUT_DIR}/${DESIGN_NAME}_qcdc_run_log/cdc_sim.db
+# output/cdc_unit_qcdc_run_log/cdc_sim.db
+# set QUESTA_CDC_VLOG ${OUTPUT_DIR}/${DESIGN_NAME}_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vlog.arg
+# output/cdc_unit_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vlog.arg
+# set QUESTA_CDC_VSIM ${OUTPUT_DIR}/${DESIGN_NAME}_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vsim_2step.arg 
+# output/cdc_unit_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vsim_2step.arg
+# 
+# file delete -force $VSIM_DEBUGDB
+# file delete -force $VSIM_DESIGNFILE
+# file delete -force $VSIM_QWAVEDB
+# file delete -force $QUESTA_CDC_DB
+# 
+# if { [info exists vsim_libs_created ] == 0 } {
+#     file delete -force $VSIM_WORKDIR
+# }
+# 
+# set VLOG_SETTINGS " -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec \
+# 		    +define+design_top_is_${DESIGN_NAME} +define+DESIGN_NAME_MACRO=${DESIGN_NAME} +incdir+${INPUT_DIR} \
+#                     -sv -work work"
+#  -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_cdc_unit +define+DESIGN_NAME_MACRO=cdc_unit +incdir+input  -sv -work work
+# set VCOM_SETTINGS " -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh -work work"    
+#  -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh -work work
+# set VSIM_SETTINGS " -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=${VSIM_DEBUGDB}"
+#  -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/cdc_unit_rtl.dbg
+# set VOPT_SETTINGS " +acc +cover=bcxefs -coverfec -debugdb -noincr"
+#  +acc +cover=bcxefs -coverfec -debugdb -noincr
+# 
+#################################################################
+# Merge user settings
+#################################################################
+# 
+# set VSIM_UVM_OPTIONS ""
+# if { $UVM_TESTBENCH == 1} {
+#     set VLOG_RTL_OPTIONS [concat $VLOG_RTL_OPTIONS " +define+UVM_TESTBENCH"]
+#     if { [info exists UVM_TESTNAME] } {
+# 	set VSIM_UVM_OPTIONS "+UVM_TESTNAME=${UVM_TESTNAME}"
+#     }
+# }
+# 
+# set VLOG_SETTINGS [concat $VLOG_RTL_OPTIONS $VLOG_SETTINGS ]
+# -suppress 13314 -suppress 13233 +define+RTL_SIM -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_cdc_unit +define+DESIGN_NAME_MACRO=cdc_unit +incdir+input  -sv -work work
+# set VCOM_SETTINGS [concat $VCOM_RTL_OPTIONS $VCOM_SETTINGS ]
+# -2008 -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh -work work
+# set VSIM_SETTINGS [concat $VSIM_RTL_OPTIONS $VSIM_SETTINGS $VSIM_UVM_OPTIONS]
+# -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/cdc_unit_rtl.dbg
+# 
+#################################################################
+# Create libraries
+#################################################################
+# 
+# if { [info exists vsim_libs_created ] == 0 } {
+#     vlib ${VSIM_WORKDIR}
+#     vmap work ${VSIM_WORKDIR}
+#     set vsim_libs_created 1
+# }
+# 1
+# 
+#################################################################
+# Compilation
+#################################################################
+# 
+# foreach filename [concat ${DESIGN_FILES} ${RTL_FILES} ${SVA_FILES} ${TESTBENCH_FILES}] {
+#     set ext [file extension $filename]
+#     if { $ext == ".vhd" } {
+# 	eval "vcom $VCOM_SETTINGS ${filename}"
+#     } elseif { $ext == ".v" || $ext == ".sv" } {
+# 	eval "vlog $VLOG_SETTINGS ${filename}"	
+#     }
+# }
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:15:05 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/apb_pkg.sv 
+# -- Compiling package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 10:15:05 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:15:05 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/audioport_pkg.sv 
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 10:15:05 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:15:05 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/audioport_util_pkg.sv 
+# -- Compiling package audioport_util_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 10:15:05 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:15:05 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/cdc_unit.sv 
+# -- Compiling package cdc_unit_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module cdc_unit
+# 
+# Top level modules:
+# 	cdc_unit
+# End time: 10:15:06 on Mar 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:15:06 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/cdc_unit_svamod.sv 
+# -- Compiling package cdc_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module cdc_unit_svamod
+# 
+# Top level modules:
+# 	cdc_unit_svamod
+# End time: 10:15:06 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:15:06 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/cdc_unit_test.sv 
+# -- Compiling package cdc_unit_test_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling program cdc_unit_test
+# 
+# Top level modules:
+# 	cdc_unit_test
+# End time: 10:15:06 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:15:06 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/cdc_unit_tb.sv 
+# -- Compiling package cdc_unit_tb_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module cdc_unit_tb
+# 
+# Top level modules:
+# 	cdc_unit_tb
+# End time: 10:15:06 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+#################################################################
+# Protocol checker complation
+#################################################################
+# 
+# if { $VSIM_CDC_QFT_NAMING } {
+#     set CDC_DB_OPTION "+qft_db+${QUESTA_CDC_DB}"
+# } else {
+#     set CDC_DB_OPTION "+0in_set_checksim_db+${QUESTA_CDC_DB}"
+# }
+# +qft_db+output/cdc_unit_qcdc_run_log/cdc_sim.db
+# 
+# eval "vlog -sv $CDC_DB_OPTION +define+ZI_CW_SVA +define+ZI_CW_SVCG -f ${QUESTA_CDC_VLOG}"
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 10:15:06 on Mar 21,2025
+# vlog -reportprogress 300 -sv "+qft_db+output/cdc_unit_qcdc_run_log/cdc_sim.db" "+define+ZI_CW_SVA" "+define+ZI_CW_SVCG" -f output/cdc_unit_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vlog.arg 
+# -- Compiling module cdc_protocol_mod_cdc_unit
+# -- Compiling package CDC_PROTOCOL_PROPS_CUNAME
+# -- Compiling module assertion_off_mod
+# -- Compiling module zin_infer_clk_areset_aligned
+# -- Compiling module assert_cdc_dsel
+# -- Compiling module assert_cdc_hamming_one
+# -- Compiling module assert_cdc_sync
+# -- Compiling module assert_cdc_sample
+# -- Compiling module assert_cdc_glitch
+# -- Compiling module assert_cdc_fifo
+# -- Compiling module assert_cdc_handshake
+# -- Compiling module assert_cdc_clockgate_sync
+# -- Compiling module assert_cdc_clockoff
+# 
+# Top level modules:
+# 	assert_cdc_hamming_one
+# 	assert_cdc_sample
+# 	assert_cdc_glitch
+# 	assert_cdc_fifo
+# 	assert_cdc_handshake
+# 	assert_cdc_clockgate_sync
+# 	assert_cdc_clockoff
+# End time: 10:15:07 on Mar 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+#################################################################
+# Simulation (elaboration)
+#################################################################
+# 
+# eval "vsim -f ${QUESTA_CDC_VSIM} \
+#               ${CDC_DB_OPTION} \
+#                ${VSIM_SETTINGS} \
+# 	       work.${TESTBENCH_NAME}"
+# vsim -f output/cdc_unit_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vsim_2step.arg "+qft_db+output/cdc_unit_qcdc_run_log/cdc_sim.db" -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/cdc_unit_rtl.dbg work.cdc_unit_tb 
+# Start time: 10:15:07 on Mar 21,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vsim-3865) Due to PLI being present, global +acc is being enabled automatically. This will cause your simulation to run very slowly. Please use vsim -no_autoacc to disable this feature. This feature is now deprecated and will be removed from future releases.
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.CDC_PROTOCOL_PROPS_CUNAME(fast)
+# Loading work.apb_pkg(fast)
+# Loading work.audioport_pkg(fast)
+# Loading work.audioport_util_pkg(fast)
+# Loading work.cdc_unit_tb_sv_unit(fast)
+# Loading work.cdc_unit_tb(fast)
+# Loading work.cdc_unit_sv_unit(fast)
+# Loading work.cdc_unit(fast)
+# Loading work.assertion_off_mod(fast)
+# Loading work.cdc_protocol_mod_cdc_unit(fast)
+# Loading work.assert_cdc_dsel(fast)
+# Loading work.assert_cdc_sync(fast)
+# Loading work.assert_cdc_sync(fast__1)
+# Loading work.cdc_unit_svamod_sv_unit(fast)
+# Loading work.cdc_unit_svamod(fast)
+# Loading work.cdc_unit_test_sv_unit(fast)
+# Loading work.cdc_unit_test(fast)
+# Loading /tmp/aimtiaz23@kataja7.oulu.fi_dpi_11993/linux_x86_64_gcc-8/STUB_SYMS_OF_lib0InLoadMTIPLI.so
+# Loading /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/lib/lib0InLoadMTIPLI.so
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# qft: simulation style mti
+# ** Note: (vsim-8900) Creating design debug database output/cdc_unit_rtl.dbg.
+# 
+#################################################################
+# Coverage DB Setup
+#################################################################
+# 
+# if { ${UVM_TESTBENCH} != 0 && [info exists UVM_TESTNAME] } {
+#     set statname "cdc_sim_status_${UVM_TESTNAME}"	
+#     set covname "cdc_sim_coverage_${UVM_TESTNAME}"	
+# } else {
+#     set statname "cdc_sim_status"	
+#     set covname "cdc_sim_coverage"
+# }
+# cdc_sim_coverage
+# 
+# coverage save -onexit ${RESULTS_DIR}/${DESIGN_NAME}_rtl_${covname}.ucdb
+# 
+#################################################################
+# Setup Wave window
+#################################################################
+# 
+# run 0
+# Identified prefix : cdc_unit_tb.DUT_INSTANCE 
+# 
+# CDC SVA Protocols Summary
+# -------------------------------------------------------------------------------
+# Protocol Type                             Protocols               Checks
+# -------------------------------------------------------------------------------
+# cdc_dsel                                          2                    2
+# cdc_sync                                          3                    3
+# -------------------------------------------------------------------------------
+# All                                               5                    5
+# -------------------------------------------------------------------------------
+# 
+# if [batch_mode] {
+#     onfinish stop
+#     if { [file exists ${INPUT_DIR}/3_vsim_rtl_simulation_log.tcl ] == 1 } {
+# 	source ${INPUT_DIR}/3_vsim_rtl_simulation_log.tcl
+#     } else {
+# 	log -r -depth 3 /${TESTBENCH_NAME}/*
+#     }
+# } else {
+#     log -r /*
+# 
+#     if { [info exists VSIM_RTL_WAVES ] == 1 } {
+# 	source $VSIM_RTL_WAVES
+#     } else {
+# 	if { [find instances  /${TESTBENCH_NAME}/${DUT_INSTANCE_NAME}/ ] != "" } { 
+# 	    add wave /${TESTBENCH_NAME}/${DUT_INSTANCE_NAME}/*
+# 	    configure wave -signalnamewidth 1
+# 	    configure wave -datasetprefix 0
+# 	}
+#     }
+# }
+# 
+#################################################################
+# Simulation (run)
+#################################################################
+# 
+# run $RTL_SIMULATION_TIME
+# ** Info: T1: testmux_test
+#    Time: 163944 ps  Scope: cdc_unit_tb.TEST.testmux_test File: input/cdc_unit_test_tasks.svh Line: 2
+# ** Info: T2: reset_sync_test
+#    Time: 767174 ps  Scope: cdc_unit_tb.TEST.reset_sync_test File: input/cdc_unit_test_tasks.svh Line: 58
+# ** Info: T3: play_sync_test
+#    Time: 4043104 ps  Scope: cdc_unit_tb.TEST.play_sync_test File: input/cdc_unit_test_tasks.svh Line: 132
+# ** Info: T4: pulse_sync_test
+#    Time: 5272367 ps  Scope: cdc_unit_tb.TEST.pulse_sync_test File: input/cdc_unit_test_tasks.svh Line: 202
+# ** Info: T5: audio_sync_test
+#    Time: 10824855 ps  Scope: cdc_unit_tb.TEST.audio_sync_test File: input/cdc_unit_test_tasks.svh Line: 267
+#####################################################################################################
+# cdc_unit_test results: PASSED:           5 / FAILED:           0
+#####################################################################################################
+#  
+# ------------------------------------
+# Crossing   |        Latency 
+#            |        ns  clk mclk
+# ------------------------------------
+# reset_sync |    80.580    7    2
+# play_sync  |   106.643    9    2
+# req_sync   |    25.764    2    1
+# audio_sync |   173.913   14    4
+# -----------------------------------
+# ** Note: $finish    : input/cdc_unit_test.sv(176)
+#    Time: 35164186 ps  Iteration: 1  Instance: /cdc_unit_tb/TEST
+# 1
+# Break in Module cdc_unit_test at input/cdc_unit_test.sv line 176
+# 
+#################################################################
+# Post-simulation reporting
+#################################################################
+# 
+# if {! [batch_mode] } {
+#     assertion forceeos
+# }
+# 
+# coverage report -instance=/${TESTBENCH_NAME}/${DUT_INSTANCE_NAME}. \
+#     -output ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${covname}_summary.txt
+# coverage report -instance=/${TESTBENCH_NAME}/${DUT_INSTANCE_NAME}. \
+#     -recursive -output ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${covname}_summary_recursive.txt
+# ** Note: (vsim-19063) Please note that '-recursive' option's functionality is changed. For more information, please refer 
+# to the reference manual.
+# coverage report -instance=/${TESTBENCH_NAME}/${DUT_INSTANCE_NAME}. \
+#     -details \
+#     -output ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${covname}_details.txt
+# coverage report -assert -details -output ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${covname}_assert_details.txt
+# coverage report -directive -details -output ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${covname}_cover_details.txt
+# coverage report -cvg -details -output ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${covname}_cvg_details.txt
+# 
+# set chan [open ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${statname}.txt w]
+# file22
+# if { [assertion count -fails -r /] == 0 } {
+#     puts $chan "PASS"
+# } else {
+#     puts $chan "FAIL"
+# }
+# close $chan
+# 
+#################################################################
+# End-of-run actions
+#################################################################
+# 
+# exec touch ${OUTPUT_DIR}/3_${DESIGN_NAME}_cdcsim
+# 
+# if [batch_mode] {
+#     exit
+# } else {
+#     wave zoom full -window Wave
+#     view msgviewer
+# }
+# .main_pane.msgviewer.interior.cs.body.tree
+# Saving coverage database on exit...
+# Questa Info: Generating reports ... at time 35164186
+# Report Generated               : Fri Mar 21 10:17:05 2025
+# Database File                  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/cdc_sim.db
+# Simulation Date                : Fri Mar 21 10:15:15 2025
+# Design Name                    : cdc_unit
+# 
+# Checker Firings Summary by Checker Type
+# -----------------------------------------------------------------------------------
+# Checker Type                         Checkers          Checkers          Checkers
+#                                                    with Firings   w/o Evaluations
+# -----------------------------------------------------------------------------------
+# cdc_dsel                                    2                 0                 0
+# cdc_sync                                    3                 0                 0
+# -----------------------------------------------------------------------------------
+# Total Checker Summary                       5                 0                 0
+# -----------------------------------------------------------------------------------
+# Questa Info: End generating reports
+# End time: 10:17:05 on Mar 21,2025, Elapsed time: 0:01:58
+# Errors: 0, Warnings: 2

@@ -1,0 +1,125 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : dsp_unit
+Version: T-2022.03-SP5-1
+Date   : Fri Apr  4 03:56:36 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: dsp_regs_in[0]
+              (input port clocked by clk)
+  Endpoint: dsp_unit_rtl_1/dsp_unit_regs_proc_inst/dsp_regs_r_0_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk_in2reg
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dsp_unit           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  dsp_regs_in[0] (in)                                     0.00       0.00 r
+  U4389/Z (MUX2_X1)                                       0.04       0.04 r
+  dsp_unit_rtl_1/dsp_unit_regs_proc_inst/dsp_regs_r_0_reg[0]/D (DFFR_X1)
+                                                          0.01       0.05 r
+  data arrival time                                                  0.05
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dsp_unit_rtl_1/dsp_unit_regs_proc_inst/dsp_regs_r_0_reg[0]/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+  Startpoint: dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/this_audio0_out_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: audio0_out[0]
+            (output port clocked by clk)
+  Path Group: clk_reg2out
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dsp_unit           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/this_audio0_out_reg[0]/CK (DFFR_X1)
+                                                          0.00 #     0.00 r
+  dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/this_audio0_out_reg[0]/Q (DFFR_X1)
+                                                          0.08       0.08 f
+  dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/audio0_out[0] (dsp_unit_dsp_proc)
+                                                          0.00       0.08 f
+  audio0_out[0] (out)                                     0.00       0.08 f
+  data arrival time                                                  0.08
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output external delay                                   0.00       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.08
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/this_audio0_out_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/this_audio0_out_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk_reg2reg
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dsp_unit           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/this_audio0_out_reg[0]/CK (DFFR_X1)
+                                                          0.00 #     0.00 r
+  dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/this_audio0_out_reg[0]/QN (DFFR_X1)
+                                                          0.07       0.07 r
+  dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U7726/ZN (OAI22_X1)
+                                                          0.02       0.09 f
+  dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/this_audio0_out_reg[0]/D (DFFR_X1)
+                                                          0.01       0.10 f
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/this_audio0_out_reg[0]/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  library hold time                                       0.00       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.10
+
+
+1

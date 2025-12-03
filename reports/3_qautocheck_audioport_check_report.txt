@@ -1,0 +1,323 @@
+-------------------------------------------------------------------------------
+Questa AutoCheck Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+-------------------------------------------------------------------------------
+Report Generated               : Thu Apr 10 01:03:28 2025
+-------------------------------------------------------------------------------
+
+Executing Command : autocheck verify -timeout 2m -jobs 4 
+-------------------------------------------------------------------------------
+
+Clock Relationships
+-------------------------------------------------------------------------------
+clk (default)            : PNPNPN
+mclk                     : P--N--
+\$global_clock           : TTTTTT
+
+
+Using user-specified initialization sequence:
+
+---------------- BEGIN RESET SEQUENCE --------------
+$default_input_value 0
+rst_n = 0
+##
+## 2
+rst_n = 1
+
+---------------- END RESET SEQUENCE ----------------
+
+
+Port Constraints
+------------------------------------------------------------------------------------
+Category            Value                      Directive                  Port      
+------------------------------------------------------------------------------------
+Clock               period 17(PE@0,NE@8)       netlist clock              clk       
+Clock               period 52(PE@0,NE@26)      netlist clock              mclk      
+------------------------------------------------------------------------------------
+Reset               active_low(init_seq,1'b1)  netlist reset,formal init  rst_n     
+------------------------------------------------------------------------------------
+Constant            1'b0                       netlist constant           test_mode_in
+------------------------------------------------------------------------------------
+Clock Domain        clk                        netlist port domain        PADDR     
+Clock Domain        clk                        netlist port domain        PENABLE   
+Clock Domain        clk                        netlist port domain        PSEL      
+Clock Domain        clk                        netlist port domain        PWDATA    
+Clock Domain        clk                        netlist port domain        PWRITE    
+Clock Domain        clk                        netlist port domain        rst_n     
+Clock Domain        clk                        netlist port domain        scan_en_in
+Clock Domain        clk                        netlist port domain        test_mode_in
+------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+Assumptions (25)
+-------------------------------------------------------------------------------
+CHECKER_MODULE.mf_apb_access
+CHECKER_MODULE.mf_bus_hold
+CHECKER_MODULE.mf_clear_rule
+CHECKER_MODULE.mf_paddr_align
+CHECKER_MODULE.mf_penable_fall
+CHECKER_MODULE.mf_penable_hold
+CHECKER_MODULE.mf_psel_0
+CHECKER_MODULE.mf_psel_1
+CHECKER_MODULE.mf_psel_before_penable
+CHECKER_MODULE.mf_reset
+cdc_unit_1.CHECKER_MODULE.mf_play_length
+cdc_unit_1.CHECKER_MODULE.mf_req_pulse
+cdc_unit_1.CHECKER_MODULE.mf_tick_interval
+cdc_unit_1.CHECKER_MODULE.mf_tick_pulse
+control_unit_1.CHECKER_MODULE.mf_apb_access
+control_unit_1.CHECKER_MODULE.mf_bus_hold
+control_unit_1.CHECKER_MODULE.mf_paddr_align
+control_unit_1.CHECKER_MODULE.mf_penable_fall
+control_unit_1.CHECKER_MODULE.mf_penable_hold
+control_unit_1.CHECKER_MODULE.mf_psel_0
+control_unit_1.CHECKER_MODULE.mf_psel_1
+control_unit_1.CHECKER_MODULE.mf_psel_before_penable
+control_unit_1.CHECKER_MODULE.mf_req_in_first
+control_unit_1.CHECKER_MODULE.mf_req_in_pulse
+control_unit_1.CHECKER_MODULE.mf_reset
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+X Registers at Completion of Initialization Sequence
+-------------------------------------------------------------------------------
+  0 registers (0.0% of 462 in DUT)
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+Z Registers at Completion of Initialization Sequence
+-------------------------------------------------------------------------------
+  0 registers (0.0% of 462 in DUT)
+-------------------------------------------------------------------------------
+
+
+---------------------------------------
+Formal Netlist Statistics         Count
+---------------------------------------
+Control Point Bits                  116
+  DUT Input Bits                     68
+  Cut Point Bits                      0
+  Black Box Output Bits               0
+  Undriven Wire Bits                  0
+  Modeling Bits                      48
+State Bits                        15337
+  Counter State Bits                150
+  RAM State Bits                      0
+  Register State Bits             14993
+  Property State Bits               194
+Logic Gates                      103308
+  Design Gates                    95054
+  Property Gates                   8254
+---------------------------------------
+
+
+AutoCheck Compile Summary
+-------------------------------------------------------------------------------
+Check                     Evaluations         Found        Waived
+-------------------------------------------------------------------------------
+ASSIGN_IMPLICIT_CONSTANT           43             0             0
+CASE_DUPLICATE                      0             0             0
+CLK_DELAY                          37             0             0
+CLK_IN_DATA                      1400             0             0
+COMBO_LOOP                        121             0             0
+DECLARATION_UNDRIVEN               65             0             0
+DECLARATION_UNUSED                 65             2             0
+DECLARATION_UNUSED_UNDRIVEN         0             0             0
+FUNCTION_INCOMPLETE_ASSIGN          0             0             0
+INDEX_UNREACHABLE                7104             0             0
+LATCH_INFERRED                     36             0             0
+LOGIC_UNDRIVEN                     65             0             0
+LOGIC_UNUSED                      141             1             0
+PORT_UNDRIVEN                     211             0             0
+PORT_UNUSED                       211             1             0
+REG_MIXED_ASSIGNS                 211             0             0
+REG_NO_RESET                      175             0             0
+REG_RACE                            0             0             0
+REG_VARIABLE_ARESET               350             0             0
+RESET_HIGH_LOW                      1             0             0
+RESET_SYNC_ASYNC                    1             0             0
+SLIST_INCOMPLETE                   36             0             0
+X_ASSIGN_REACHABLE                  0             0             0
+-------------------------------------------------------------------------------
+AC Total                        10273             4             0
+-------------------------------------------------------------------------------
+
+
+AutoCheck Verify Summary
+-------------------------------------------------------------------------------
+Check                     Evaluations         Found        Waived
+-------------------------------------------------------------------------------
+ARITH_OVERFLOW_SUB                  0             0             0
+ARITH_OVERFLOW_VAL                  7             0             0
+ARITH_ZERO_DIV                      0             0             0
+ARITH_ZERO_MOD                      0             0             0
+BLOCK_UNREACHABLE                  93             0             0
+BUS_MULTIPLY_DRIVEN                 0             0             0
+BUS_UNDRIVEN                        0             0             0
+BUS_VALUE_CONFLICT                  0             0             0
+CASE_DEFAULT                      OFF           OFF           OFF
+CASE_FULL                           0             0             0
+CASE_PARALLEL                       0             0             0
+FSM_DEADLOCK_STATE                  0             0             0
+FSM_LOCKOUT_STATE                   0             0             0
+FSM_STUCK_BIT                       0             0             0
+FSM_UNREACHABLE_STATE               0             0             0
+FSM_UNREACHABLE_TRANS               0             0             0
+INDEX_ILLEGAL                       5             0             0
+INIT_X_PESSIMISM                    0             0             0
+INIT_X_UNRESOLVED                   0             0             0
+INIT_X_UNRESOLVED_MEM               0             0             0
+ONE_COLD                            0             0             0
+ONE_HOT                             0             0             0
+REG_MULTIPLY_DRIVEN                 0             0             0
+REG_STUCK_AT                      175             1             0
+REG_TOGGLE_VIOLATION               23             2             0
+-------------------------------------------------------------------------------
+AC Total                          303             3             0
+-------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------
+AutoCheck Details
+-----------------------------------------------------------
+
+Type      : DECLARATION_UNUSED
+Severity  : Caution
+Status    : Uninspected
+Module    : cdc_unit
+Name      : tick_reg
+Instance  : cdc_unit_1
+
+Type      : DECLARATION_UNUSED
+Severity  : Caution
+Status    : Uninspected
+Module    : i2s_unit
+Name      : input_reg
+Instance  : i2s_unit_1
+
+Type      : LOGIC_UNUSED
+Severity  : Caution
+Status    : Uninspected
+Module    : audioport
+Name      : cfg_reg[31:1]
+
+Type      : PORT_UNUSED
+Severity  : Caution
+Status    : Uninspected
+Module    : audioport
+Name      : scan_en_in
+
+Type      : REG_STUCK_AT
+Severity  : Caution
+Status    : Uninspected
+Module    : i2s_unit
+Signal    : shift_reg
+Instance  : i2s_unit_1
+Value     : "000000000000000000000000000000000000000000000000"
+Location  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd:38
+
+Type      : REG_TOGGLE_VIOLATION
+Severity  : Caution
+Status    : Uninspected
+Module    : cdc_unit
+Signal    : mrst_n_sync1
+Instance  : cdc_unit_1
+Toggle    : 1'b1 -> 1'b0
+Location  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv:69
+
+Type      : REG_TOGGLE_VIOLATION
+Severity  : Caution
+Status    : Uninspected
+Module    : cdc_unit
+Signal    : mrst_n_sync2
+Instance  : cdc_unit_1
+Toggle    : 1'b1 -> 1'b0
+Location  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv:69
+
+-----------------------------------------------------------
+
+-------------------------------------------------------------------------------
+CPU Time per Check Type
+-------------------------------------------------------------------------------
+ %   Seconds    Check
+-------------------------------------------------------------------------------
+ 0.0%      0    ARITH_OVERFLOW_SUB
+ 0.6%      2    ARITH_OVERFLOW_VAL
+ 0.0%      0    ARITH_ZERO_DIV
+ 0.0%      0    ARITH_ZERO_MOD
+ 1.7%      7    BLOCK_UNREACHABLE
+ 0.0%      0    BUS_MULTIPLY_DRIVEN
+ 0.0%      0    BUS_UNDRIVEN
+ 0.0%      0    BUS_VALUE_CONFLICT
+ 0.0%      0    CASE_DEFAULT
+ 0.0%      0    CASE_FULL
+ 0.0%      0    CASE_PARALLEL
+ 0.0%      0    FSM_DEADLOCK_STATE
+ 0.0%      0    FSM_LOCKOUT_STATE
+ 0.0%      0    FSM_STUCK_BIT
+ 0.0%      0    FSM_UNREACHABLE_STATE
+ 0.0%      0    FSM_UNREACHABLE_TRANS
+ 0.0%      0    INDEX_ILLEGAL
+ 0.0%      0    INIT_X_PESSIMISM
+ 0.0%      0    INIT_X_UNRESOLVED
+ 0.0%      0    INIT_X_UNRESOLVED_MEM
+ 0.0%      0    ONE_COLD
+ 0.0%      0    ONE_HOT
+ 0.0%      0    REG_MULTIPLY_DRIVEN
+96.3%    435    REG_STUCK_AT
+ 1.4%      6    REG_TOGGLE_VIOLATION
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Unused autocheck_report Directives
+-------------------------------------------------------------------------------
+<none>
+-------------------------------------------------------------------------------
+
+
+
+--------- Process Statistics ----------
+Elapsed Time                     120 s
+Total CPU Time                   452 s
+Total Peak Memory                2.9 GB
+---------- Engine Processes -----------
+Average CPU Time                 111 s
+Minimum CPU Utilization           93 %
+Average Peak Memory              0.6 GB
+Maximum Peak Memory              0.9 GB
+Peak Cores                         4
+Distinct Machines                  1
+Launch Failures                    0
+Unexpected Process Terminations    0
+Successful Re-connections          0
+---------------------------------------
+
+
+
+----- Detailed Process Statistics -----
+Elapsed Time                     120 s 
+-------- Orchestration Process --------
+-------- kataja7.oulu.fi:1379 ---------
+CPU Time                           6 s 
+Peak Memory                      0.4 GB
+---------- Engine Processes -----------
+-------- kataja7.oulu.fi:1402 ---------
+CPU Time                         110 s 
+Peak Memory                      0.7 GB
+CPU Utilization                   93 % 
+-------- kataja7.oulu.fi:1411 ---------
+CPU Time                         110 s 
+Peak Memory                      0.9 GB
+CPU Utilization                   93 % 
+-------- kataja7.oulu.fi:1401 ---------
+CPU Time                         115 s 
+Peak Memory                      0.5 GB
+CPU Utilization                   97 % 
+-------- kataja7.oulu.fi:1410 ---------
+CPU Time                         111 s 
+Peak Memory                      0.3 GB
+CPU Utilization                   94 % 
+---------------------------------------
+

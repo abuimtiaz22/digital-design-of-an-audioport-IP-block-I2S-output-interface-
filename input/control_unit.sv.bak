@@ -1,0 +1,101 @@
+`include "audioport.svh"
+
+import audioport_pkg::*;
+
+module control_unit
+  (
+   input logic 			       clk,
+   input logic 			       rst_n,
+   input logic 			       PSEL,
+   input logic 			       PENABLE,
+   input logic 			       PWRITE,
+   input logic [31:0] 		       PADDR,
+   input logic [31:0] 		       PWDATA,
+   input logic 			       req_in,
+   output logic [31:0] 		       PRDATA,
+   output logic 		       PSLVERR,
+   output logic 		       PREADY,
+   output logic 		       irq_out,
+   output logic [31:0] 		       cfg_reg_out,
+   output logic [31:0] 		       level_reg_out,
+   output logic [DSP_REGISTERS*32-1:0] dsp_regs_out,
+   output logic 		       cfg_out,
+   output logic 		       clr_out,
+   output logic 		       level_out,
+   output logic 		       tick_out,
+   output logic [23:0] 		       audio0_out,
+   output logic [23:0] 		       audio1_out,
+   output logic 		       play_out
+   );
+
+
+// Signal Declarations
+logic apbwrite;
+logic apbread;
+logic [$clog2(AUDIOPORT_REGISTERS+2)+1:2] rindex;
+logic start;
+logic stop;
+logic play_r;
+logic req_r;
+logic clr, irqack;
+logic lfifo, rfifo;
+logic lempty, lfull;
+logic rempty, rfull;
+logic [31:0] rbank_r [0:AUDIOPORT_REGISTERS-1];  // Register bank array
+logic [31:0] rbank_r_ns [0:AUDIOPORT_REGISTERS-1];
+logic [23:0] ldata_r [AUDIO_FIFO_SIZE-1:0];  // FIFO data buffer
+logic [$clog2(AUDIO_FIFO_SIZE)-1:0] lhead_r;  // Write index
+logic [$clog2(AUDIO_FIFO_SIZE)-1:0] ltail_r;  // Read index
+logic llooped_r;  // Indicates that the FIFO has looped
+
+logic [23:0] rdata_r [AUDIO_FIFO_SIZE-1:0];  // FIFO data buffer
+logic [$clog2(AUDIO_FIFO_SIZE)-1:0] rhead_r;  // Write index
+logic [$clog2(AUDIO_FIFO_SIZE)-1:0] rtail_r;  // Read index
+logic rlooped_r;  // Indicates that the FIFO has looped
+logic irq_r;
+
+// APB Write Logic
+always_comb begin
+    apbwrite = PREADY && PWRITE && PSEL && PENABLE;
+end
+
+// APB Read Logic
+always_comb begin
+    apbread = !PWRITE && PSEL && PENABLE && PREADY;
+end
+
+// rindex Logic
+always_comb begin
+    if (PSEL)
+        rindex = PADDR[$clog2(AUDIOPORT_REGISTERS+2)+1:2]; 
+    else
+        rindex = 0;
+end
+
+// play_r Logic
+always_ff @(posedge clk or negedge rst_n) begin
+    if (!rst_n)
+        play_r <= 0;
+    else if (start)
+        play_r <= 1;  
+    else if (stop)
+        play_r <= 0; 
+end
+
+// req_r Logic
+always_ff @(posedge clk or negedge rst_n) begin
+  if (!rst_n)
+        req_r <= 0;
+    else if (play_r)
+        req_r <= req_in;
+    else
+        req_r <= 0; 
+end
+// Command Decoder Logic
+
+
+
+
+
+
+endmodule

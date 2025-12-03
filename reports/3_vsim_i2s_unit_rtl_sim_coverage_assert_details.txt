@@ -1,0 +1,263 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.i2s_unit_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      34        34         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_in
+                     input/i2s_unit_svamod.sv(49)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0_in
+                     input/i2s_unit_svamod.sv(50)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1_in
+                     input/i2s_unit_svamod.sv(51)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick_in
+                     input/i2s_unit_svamod.sv(52)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_out
+                     input/i2s_unit_svamod.sv(53)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_sck_out
+                     input/i2s_unit_svamod.sv(54)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_ws_out
+                     input/i2s_unit_svamod.sv(55)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_sdo_out
+                     input/i2s_unit_svamod.sv(56)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_counter
+                     input/i2s_unit_svamod.sv(59)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_r
+                     input/i2s_unit_svamod.sv(60)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_input_reg
+                     input/i2s_unit_svamod.sv(61)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_shift_reg
+                     input/i2s_unit_svamod.sv(62)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_load_enable
+                     input/i2s_unit_svamod.sv(63)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_shift_enable
+                     input/i2s_unit_svamod.sv(64)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_sck_out_logic
+                     input/i2s_unit_svamod.sv(65)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_ws_out_logic
+                     input/i2s_unit_svamod.sv(66)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_end_s
+                     input/i2s_unit_svamod.sv(67)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_play_in_stable
+                     input/i2s_unit_svamod.sv(83)
+                                                        0          5       6952          2       6959          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_tick_in_pulse
+                     input/i2s_unit_svamod.sv(93)
+                                                        0         14       6944          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_tick_in_play_only
+                     input/i2s_unit_svamod.sv(103)
+                                                        0       2522       4436          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_out_pulse
+                     input/i2s_unit_svamod.sv(117)
+                                                        0         15       6943          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_sck_start
+                     input/i2s_unit_svamod.sv(129)
+                                                        0          3       6955          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_sck_align
+                     input/i2s_unit_svamod.sv(139)
+                                                        0         15       6943          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_out_seen
+                     input/i2s_unit_svamod.sv(149)
+                                                        0         14       6944          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_ws_change
+                     input/i2s_unit_svamod.sv(161)
+                                                        0         24       6934          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_ws_wave
+                     input/i2s_unit_svamod.sv(171)
+                                                        0       2216       4548          2       6766          0        1544 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_sdo_change
+                     input/i2s_unit_svamod.sv(181)
+                                                        0        111       6847          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_sck_wave
+                     input/i2s_unit_svamod.sv(191)
+                                                        0        579       6379          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_sck_last
+                     input/i2s_unit_svamod.sv(201)
+                                                        0         12       6946          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_shift_reg_behavior
+                     input/i2s_unit_svamod.sv(216)
+                                                        0        564       6394          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_shift_reg_reset
+                     input/i2s_unit_svamod.sv(225)
+                                                        0       2324       4632          2       6958          0           3 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_play_r_control
+                     input/i2s_unit_svamod.sv(233)
+                                                        0       4436       2522          2       6960          0           2 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_counter_reset_at_383
+                     input/i2s_unit_svamod.sv(242)
+                                                        0         12       6946          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_ws_out_mid_behavior
+                     input/i2s_unit_svamod.sv(251)
+                                                        0       2304       4654          2       6960          0           1 off
+
+=================================================================================
+=== Instance: /i2s_unit_tb/TEST
+=== Design Unit: work.i2s_unit_test
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       4         4         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/i2s_unit_tb/TEST/data_generator/#ublk#203407508#95/immed__122
+                     input/i2s_unit_test.sv(122)
+                                                        0       1537          0          0       1537          0           0 off
+/i2s_unit_tb/TEST/data_generator/#ublk#203407508#165/immed__202
+                     input/i2s_unit_test.sv(202)
+                                                        0       1345          0          0       1345          0           0 off
+/i2s_unit_tb/TEST/data_generator/#ublk#203407508#246/immed__260
+                     input/i2s_unit_test.sv(260)
+                                                        0       1537          0          0       1537          0           0 off
+/i2s_unit_tb/TEST/data_checker/ia_i2s_txrx_check
+                     input/i2s_unit_test.sv(293)
+                                                        0         12          0          0         12          0           0 off
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_in
+                     input/i2s_unit_svamod.sv(49)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0_in
+                     input/i2s_unit_svamod.sv(50)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1_in
+                     input/i2s_unit_svamod.sv(51)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick_in
+                     input/i2s_unit_svamod.sv(52)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_out
+                     input/i2s_unit_svamod.sv(53)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_sck_out
+                     input/i2s_unit_svamod.sv(54)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_ws_out
+                     input/i2s_unit_svamod.sv(55)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_sdo_out
+                     input/i2s_unit_svamod.sv(56)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_counter
+                     input/i2s_unit_svamod.sv(59)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_r
+                     input/i2s_unit_svamod.sv(60)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_input_reg
+                     input/i2s_unit_svamod.sv(61)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_shift_reg
+                     input/i2s_unit_svamod.sv(62)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_load_enable
+                     input/i2s_unit_svamod.sv(63)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_shift_enable
+                     input/i2s_unit_svamod.sv(64)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_sck_out_logic
+                     input/i2s_unit_svamod.sv(65)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_ws_out_logic
+                     input/i2s_unit_svamod.sv(66)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_end_s
+                     input/i2s_unit_svamod.sv(67)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_play_in_stable
+                     input/i2s_unit_svamod.sv(83)
+                                                        0          5       6952          2       6959          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_tick_in_pulse
+                     input/i2s_unit_svamod.sv(93)
+                                                        0         14       6944          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_tick_in_play_only
+                     input/i2s_unit_svamod.sv(103)
+                                                        0       2522       4436          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_out_pulse
+                     input/i2s_unit_svamod.sv(117)
+                                                        0         15       6943          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_sck_start
+                     input/i2s_unit_svamod.sv(129)
+                                                        0          3       6955          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_sck_align
+                     input/i2s_unit_svamod.sv(139)
+                                                        0         15       6943          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_out_seen
+                     input/i2s_unit_svamod.sv(149)
+                                                        0         14       6944          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_ws_change
+                     input/i2s_unit_svamod.sv(161)
+                                                        0         24       6934          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_ws_wave
+                     input/i2s_unit_svamod.sv(171)
+                                                        0       2216       4548          2       6766          0        1544 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_sdo_change
+                     input/i2s_unit_svamod.sv(181)
+                                                        0        111       6847          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_sck_wave
+                     input/i2s_unit_svamod.sv(191)
+                                                        0        579       6379          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_sck_last
+                     input/i2s_unit_svamod.sv(201)
+                                                        0         12       6946          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_shift_reg_behavior
+                     input/i2s_unit_svamod.sv(216)
+                                                        0        564       6394          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_shift_reg_reset
+                     input/i2s_unit_svamod.sv(225)
+                                                        0       2324       4632          2       6958          0           3 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_play_r_control
+                     input/i2s_unit_svamod.sv(233)
+                                                        0       4436       2522          2       6960          0           2 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_counter_reset_at_383
+                     input/i2s_unit_svamod.sv(242)
+                                                        0         12       6946          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_ws_out_mid_behavior
+                     input/i2s_unit_svamod.sv(251)
+                                                        0       2304       4654          2       6960          0           1 off
+/i2s_unit_tb/TEST/data_generator/#ublk#203407508#95/immed__122
+                     input/i2s_unit_test.sv(122)
+                                                        0       1537          0          0       1537          0           0 off
+/i2s_unit_tb/TEST/data_generator/#ublk#203407508#165/immed__202
+                     input/i2s_unit_test.sv(202)
+                                                        0       1345          0          0       1345          0           0 off
+/i2s_unit_tb/TEST/data_generator/#ublk#203407508#246/immed__260
+                     input/i2s_unit_test.sv(260)
+                                                        0       1537          0          0       1537          0           0 off
+/i2s_unit_tb/TEST/data_checker/ia_i2s_txrx_check
+                     input/i2s_unit_test.sv(293)
+                                                        0         12          0          0         12          0           0 off
+
+Total Coverage By Instance (filtered view): 100.00%
+

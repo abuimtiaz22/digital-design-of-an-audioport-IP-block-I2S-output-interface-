@@ -1,0 +1,1872 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /control_unit_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.control_unit_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                     143       138         5    96.50%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PSEL
+                     input/control_unit_svamod.sv(78)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PENABLE
+                     input/control_unit_svamod.sv(79)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PWRITE
+                     input/control_unit_svamod.sv(80)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PADDR
+                     input/control_unit_svamod.sv(81)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PWDATA
+                     input/control_unit_svamod.sv(82)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_in
+                     input/control_unit_svamod.sv(83)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PRDATA
+                     input/control_unit_svamod.sv(84)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PSLVERR
+                     input/control_unit_svamod.sv(85)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PREADY
+                     input/control_unit_svamod.sv(86)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_irq_out
+                     input/control_unit_svamod.sv(87)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_cfg_reg_out
+                     input/control_unit_svamod.sv(88)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_level_reg_out
+                     input/control_unit_svamod.sv(89)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_dsp_regs_out
+                     input/control_unit_svamod.sv(90)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_cfg_out
+                     input/control_unit_svamod.sv(91)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_clr_out
+                     input/control_unit_svamod.sv(92)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_level_out
+                     input/control_unit_svamod.sv(93)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick_out
+                     input/control_unit_svamod.sv(94)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0_out
+                     input/control_unit_svamod.sv(95)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1_out
+                     input/control_unit_svamod.sv(96)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_out
+                     input/control_unit_svamod.sv(97)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rindex
+                     input/control_unit_svamod.sv(99)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_apbwrite
+                     input/control_unit_svamod.sv(100)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_apbread
+                     input/control_unit_svamod.sv(101)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rbank_r
+                     input/control_unit_svamod.sv(102)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_start
+                     input/control_unit_svamod.sv(103)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_stop
+                     input/control_unit_svamod.sv(104)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_clr
+                     input/control_unit_svamod.sv(105)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_irqack
+                     input/control_unit_svamod.sv(106)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_r
+                     input/control_unit_svamod.sv(107)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_r
+                     input/control_unit_svamod.sv(108)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_irq_r
+                     input/control_unit_svamod.sv(109)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_ldata_r
+                     input/control_unit_svamod.sv(110)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_lhead_r
+                     input/control_unit_svamod.sv(111)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_ltail_r
+                     input/control_unit_svamod.sv(112)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_llooped_r
+                     input/control_unit_svamod.sv(113)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_lempty
+                     input/control_unit_svamod.sv(114)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_lfull
+                     input/control_unit_svamod.sv(115)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_lfifo
+                     input/control_unit_svamod.sv(116)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rdata_r
+                     input/control_unit_svamod.sv(117)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rhead_r
+                     input/control_unit_svamod.sv(118)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rtail_r
+                     input/control_unit_svamod.sv(119)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rlooped_r
+                     input/control_unit_svamod.sv(120)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rempty
+                     input/control_unit_svamod.sv(121)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rfull
+                     input/control_unit_svamod.sv(122)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rfifo
+                     input/control_unit_svamod.sv(123)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_reset
+                     input/apb_assumes.svh(10)          0         50     550382          0     550432          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_1
+                     input/apb_assumes.svh(22)          0       3444     271747         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_0
+                     input/apb_assumes.svh(35)          0     271747       3444         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_before_penable
+                     input/apb_assumes.svh(47)          0       1722     273469         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_penable_fall
+                     input/apb_assumes.svh(58)          0       1725     273465         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_penable_hold
+                     input/apb_assumes.svh(69)          0          0     275191         25     275216          0           0 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_bus_hold
+                     input/apb_assumes.svh(80)          0       1722     273469         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_apb_access
+                     input/apb_assumes.svh(101)
+                                                        0       1721     273469         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_paddr_align
+                     input/apb_assumes.svh(112)
+                                                        0       3444     271747         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_req_in_pulse
+                     input/control_unit_svamod.sv(144)
+                                                        0        289     274902         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_req_in_first
+                     input/control_unit_svamod.sv(158)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_pready_on
+                     input/control_unit_svamod.sv(168)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_pslverr_off
+                     input/control_unit_svamod.sv(178)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_prdata_off
+                     input/control_unit_svamod.sv(188)
+                                                        0     271747       3444         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_clr_out_pulse
+                     input/control_unit_svamod.sv(199)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_clr_out_valid_high
+                     input/control_unit_svamod.sv(209)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_cfg_out_pulse
+                     input/control_unit_svamod.sv(220)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_cfg_out_valid_high
+                     input/control_unit_svamod.sv(232)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_start_play
+                     input/control_unit_svamod.sv(242)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_valid_start_play
+                     input/control_unit_svamod.sv(252)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_stop_play
+                     input/control_unit_svamod.sv(262)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_valid_stop_play
+                     input/control_unit_svamod.sv(272)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_level_out_pulse
+                     input/control_unit_svamod.sv(282)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_level_out_valid_high
+                     input/control_unit_svamod.sv(292)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_tick_standby
+                     input/control_unit_svamod.sv(302)
+                                                        0       4223     270968         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_tick_out_high
+                     input/control_unit_svamod.sv(312)
+                                                        0        284     274907         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_tick_out_low
+                     input/control_unit_svamod.sv(322)
+                                                        0     274907        284         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_fifo_drain
+                     input/control_unit_svamod.sv(334)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_rise_first
+                     input/control_unit_svamod.sv(350)
+                                                        0          0     275191         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_high
+                     input/control_unit_svamod.sv(362)
+                                                        0       1094     274096         26     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_standby
+                     input/control_unit_svamod.sv(372)
+                                                        0       4223     270968         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_down
+                     input/control_unit_svamod.sv(382)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_cfg_reg_drv
+                     input/control_unit_svamod.sv(392)
+                                                        0          2     275189         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_level_reg_drv
+                     input/control_unit_svamod.sv(402)
+                                                        0          2     275189         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_dsp_regs_drv
+                     input/control_unit_svamod.sv(419)
+                                                        0        266     274925         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_pslverr
+                     input/control_unit_wba.svh(8)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_pready
+                     input/control_unit_wba.svh(18)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_rindex_on
+                     input/control_unit_wba.svh(28)
+                                                        0       3444     271747         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_rindex_off
+                     input/control_unit_wba.svh(38)
+                                                        0     271747       3444         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_index_range
+                     input/control_unit_wba.svh(48)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_rbank_r_write
+                     input/control_unit_wba.svh(58)
+                                                        0        290     274900         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_status_reg_play
+                     input/control_unit_wba.svh(68)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_status_reg_standby
+                     input/control_unit_wba.svh(78)
+                                                        0          2     275188         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_rbank_r_stable
+                     input/control_unit_wba.svh(88)
+                                                        0     274888        291         37     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_cfg_reg_out
+                     input/control_unit_wba.svh(98)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_level_reg_out
+                     input/control_unit_wba.svh(108)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_dsp_regs_out
+                     input/control_unit_wba.svh(118)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ldata_r_write
+                     input/control_unit_wba.svh(128)
+                                                        0        449     274742         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ldata_r_failed_write
+                     input/control_unit_wba.svh(138)
+                                                        0          0     275191         25     275216          0           0 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ldata_r_stable
+                     input/control_unit_wba.svh(148)
+                                                        0     274728        450         37     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lhead_r_inc
+                     input/control_unit_wba.svh(158)
+                                                        0        441     274750         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lhead_r_loop
+                     input/control_unit_wba.svh(168)
+                                                        0          8     275183         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lhead_r_stable
+                     input/control_unit_wba.svh(178)
+                                                        0     274728        450         37     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_llooped_r_on
+                     input/control_unit_wba.svh(188)
+                                                        0          8     275183         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_llooped_r_off_1
+                     input/control_unit_wba.svh(198)
+                                                        0          0     275191         25     275216          0           0 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_llooped_r_off_2
+                     input/control_unit_wba.svh(208)
+                                                        0          5     275186         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_llooped_r_stable
+                     input/control_unit_wba.svh(218)
+                                                        0     274446        732         37     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_inc_1
+                     input/control_unit_wba.svh(228)
+                                                        0          2     275189         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_inc_2
+                     input/control_unit_wba.svh(238)
+                                                        0        275     274916         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_loop_1
+                     input/control_unit_wba.svh(248)
+                                                        0          0     275191         25     275216          0           0 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_loop_2
+                     input/control_unit_wba.svh(258)
+                                                        0          5     275186         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_stable
+                     input/control_unit_wba.svh(269)
+                                                        0     274895        283         37     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lempty_on
+                     input/control_unit_wba.svh(279)
+                                                        0       2219     272972         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lempty_of
+                     input/control_unit_wba.svh(289)
+                                                        0     272972       2219         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lfull_on
+                     input/control_unit_wba.svh(299)
+                                                        0       4782     270409         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lfull_off
+                     input/control_unit_wba.svh(309)
+                                                        0     270409       4782         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lfifo_output_on
+                     input/control_unit_wba.svh(319)
+                                                        0     272972       2219         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lfifo_output_off
+                     input/control_unit_wba.svh(329)
+                                                        0       2219     272972         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_prdata_rbank
+                     input/control_unit_wba.svh(339)
+                                                        0       1412     273779         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_prdata_lfifo
+                     input/control_unit_wba.svh(349)
+                                                        0       1016     274175         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_prdata_rfifo
+                     input/control_unit_wba.svh(359)
+                                                        0       1016     274175         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_prdata_off
+                     input/control_unit_wba.svh(369)
+                                                        0     271747       3444         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_play_r_rise
+                     input/control_unit_wba.svh(379)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_play_r_fall
+                     input/control_unit_wba.svh(389)
+                                                        0          2     275188         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_play_r_stable
+                     input/control_unit_wba.svh(399)
+                                                        0     275172          7         37     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_play_out_state
+                     input/control_unit_wba.svh(409)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_clr_on
+                     input/control_unit_wba.svh(419)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_clr_off
+                     input/control_unit_wba.svh(429)
+                                                        0     275190          1         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_clr_out
+                     input/control_unit_wba.svh(439)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_cfg_out_on
+                     input/control_unit_wba.svh(449)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_cfg_out_off
+                     input/control_unit_wba.svh(459)
+                                                        0     275190          1         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_start_on
+                     input/control_unit_wba.svh(469)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_start_off
+                     input/control_unit_wba.svh(479)
+                                                        0     275187          4         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_stop_on
+                     input/control_unit_wba.svh(489)
+                                                        0          3     275188         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_stop_off
+                     input/control_unit_wba.svh(499)
+                                                        0     275188          3         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_level_out_on
+                     input/control_unit_wba.svh(509)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_level_out_off
+                     input/control_unit_wba.svh(519)
+                                                        0     275190          1         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irqack_on
+                     input/control_unit_wba.svh(529)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irqack_off
+                     input/control_unit_wba.svh(539)
+                                                        0     275187          4         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_tick_out_on
+                     input/control_unit_wba.svh(549)
+                                                        0       4223     270968         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_tick_out_of
+                     input/control_unit_wba.svh(559)
+                                                        0     270968       4223         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_req_r_on
+                     input/control_unit_wba.svh(569)
+                                                        0     270966       4223         26     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_req_r_off
+                     input/control_unit_wba.svh(579)
+                                                        0       4212     270968         36     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_r_rise
+                     input/control_unit_wba.svh(589)
+                                                        0         96     275094         26     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_r_fall_stop
+                     input/control_unit_wba.svh(599)
+                                                        0          2     275188         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_r_fall_irqack
+                     input/control_unit_wba.svh(609)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_r_stable
+                     input/control_unit_wba.svh(619)
+                                                        0     275076        104         36     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_out
+                     input/control_unit_wba.svh(629)
+                                                        0     275191          0         25     275216          0           1 off
+
+Covergroup Coverage:
+    Covergroups                      2        na        na    95.83%
+        Coverpoints/Crosses          4        na        na        na
+            Covergroup Bins        158       155         3    98.10%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cg_rbreads 
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                   138        138          -                      
+    missing/total bins:                                     0        138          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint #coverpoint__0#                        100.00%        100          -    Covered              
+        covered/total bins:                               138        138          -                      
+        missing/total bins:                                 0        138          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cg_rbreads_inst  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                   138        138          -                      
+    missing/total bins:                                     0        138          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint #coverpoint__0#                        100.00%        100          -    Covered              
+        covered/total bins:                               138        138          -                      
+        missing/total bins:                                 0        138          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin reg_addresses[587202560]                       42          1          -    Covered              
+        bin reg_addresses[587202561]                       10          1          -    Covered              
+        bin reg_addresses[587202562]                       10          1          -    Covered              
+        bin reg_addresses[587202563]                       10          1          -    Covered              
+        bin reg_addresses[587202564]                       10          1          -    Covered              
+        bin reg_addresses[587202565]                       10          1          -    Covered              
+        bin reg_addresses[587202566]                       10          1          -    Covered              
+        bin reg_addresses[587202567]                       10          1          -    Covered              
+        bin reg_addresses[587202568]                       10          1          -    Covered              
+        bin reg_addresses[587202569]                       10          1          -    Covered              
+        bin reg_addresses[587202570]                       10          1          -    Covered              
+        bin reg_addresses[587202571]                       10          1          -    Covered              
+        bin reg_addresses[587202572]                       10          1          -    Covered              
+        bin reg_addresses[587202573]                       10          1          -    Covered              
+        bin reg_addresses[587202574]                       10          1          -    Covered              
+        bin reg_addresses[587202575]                       10          1          -    Covered              
+        bin reg_addresses[587202576]                       10          1          -    Covered              
+        bin reg_addresses[587202577]                       10          1          -    Covered              
+        bin reg_addresses[587202578]                       10          1          -    Covered              
+        bin reg_addresses[587202579]                       10          1          -    Covered              
+        bin reg_addresses[587202580]                       10          1          -    Covered              
+        bin reg_addresses[587202581]                       10          1          -    Covered              
+        bin reg_addresses[587202582]                       10          1          -    Covered              
+        bin reg_addresses[587202583]                       10          1          -    Covered              
+        bin reg_addresses[587202584]                       10          1          -    Covered              
+        bin reg_addresses[587202585]                       10          1          -    Covered              
+        bin reg_addresses[587202586]                       10          1          -    Covered              
+        bin reg_addresses[587202587]                       10          1          -    Covered              
+        bin reg_addresses[587202588]                       10          1          -    Covered              
+        bin reg_addresses[587202589]                       10          1          -    Covered              
+        bin reg_addresses[587202590]                       10          1          -    Covered              
+        bin reg_addresses[587202591]                       10          1          -    Covered              
+        bin reg_addresses[587202592]                       10          1          -    Covered              
+        bin reg_addresses[587202593]                       10          1          -    Covered              
+        bin reg_addresses[587202594]                       10          1          -    Covered              
+        bin reg_addresses[587202595]                       10          1          -    Covered              
+        bin reg_addresses[587202596]                       10          1          -    Covered              
+        bin reg_addresses[587202597]                       10          1          -    Covered              
+        bin reg_addresses[587202598]                       10          1          -    Covered              
+        bin reg_addresses[587202599]                       10          1          -    Covered              
+        bin reg_addresses[587202600]                       10          1          -    Covered              
+        bin reg_addresses[587202601]                       10          1          -    Covered              
+        bin reg_addresses[587202602]                       10          1          -    Covered              
+        bin reg_addresses[587202603]                       10          1          -    Covered              
+        bin reg_addresses[587202604]                       10          1          -    Covered              
+        bin reg_addresses[587202605]                       10          1          -    Covered              
+        bin reg_addresses[587202606]                       10          1          -    Covered              
+        bin reg_addresses[587202607]                       10          1          -    Covered              
+        bin reg_addresses[587202608]                       10          1          -    Covered              
+        bin reg_addresses[587202609]                       10          1          -    Covered              
+        bin reg_addresses[587202610]                       10          1          -    Covered              
+        bin reg_addresses[587202611]                       10          1          -    Covered              
+        bin reg_addresses[587202612]                       10          1          -    Covered              
+        bin reg_addresses[587202613]                       10          1          -    Covered              
+        bin reg_addresses[587202614]                       10          1          -    Covered              
+        bin reg_addresses[587202615]                       10          1          -    Covered              
+        bin reg_addresses[587202616]                       10          1          -    Covered              
+        bin reg_addresses[587202617]                       10          1          -    Covered              
+        bin reg_addresses[587202618]                       10          1          -    Covered              
+        bin reg_addresses[587202619]                       10          1          -    Covered              
+        bin reg_addresses[587202620]                       10          1          -    Covered              
+        bin reg_addresses[587202621]                       10          1          -    Covered              
+        bin reg_addresses[587202622]                       10          1          -    Covered              
+        bin reg_addresses[587202623]                       10          1          -    Covered              
+        bin reg_addresses[587202624]                       10          1          -    Covered              
+        bin reg_addresses[587202625]                       10          1          -    Covered              
+        bin reg_addresses[587202626]                       10          1          -    Covered              
+        bin reg_addresses[587202627]                       10          1          -    Covered              
+        bin reg_addresses[587202628]                       10          1          -    Covered              
+        bin reg_addresses[587202629]                       10          1          -    Covered              
+        bin reg_addresses[587202630]                       10          1          -    Covered              
+        bin reg_addresses[587202631]                       10          1          -    Covered              
+        bin reg_addresses[587202632]                       10          1          -    Covered              
+        bin reg_addresses[587202633]                       10          1          -    Covered              
+        bin reg_addresses[587202634]                       10          1          -    Covered              
+        bin reg_addresses[587202635]                       10          1          -    Covered              
+        bin reg_addresses[587202636]                       10          1          -    Covered              
+        bin reg_addresses[587202637]                       10          1          -    Covered              
+        bin reg_addresses[587202638]                       10          1          -    Covered              
+        bin reg_addresses[587202639]                       10          1          -    Covered              
+        bin reg_addresses[587202640]                       10          1          -    Covered              
+        bin reg_addresses[587202641]                       10          1          -    Covered              
+        bin reg_addresses[587202642]                       10          1          -    Covered              
+        bin reg_addresses[587202643]                       10          1          -    Covered              
+        bin reg_addresses[587202644]                       10          1          -    Covered              
+        bin reg_addresses[587202645]                       10          1          -    Covered              
+        bin reg_addresses[587202646]                       10          1          -    Covered              
+        bin reg_addresses[587202647]                       10          1          -    Covered              
+        bin reg_addresses[587202648]                       10          1          -    Covered              
+        bin reg_addresses[587202649]                       10          1          -    Covered              
+        bin reg_addresses[587202650]                       10          1          -    Covered              
+        bin reg_addresses[587202651]                       10          1          -    Covered              
+        bin reg_addresses[587202652]                       10          1          -    Covered              
+        bin reg_addresses[587202653]                       10          1          -    Covered              
+        bin reg_addresses[587202654]                       10          1          -    Covered              
+        bin reg_addresses[587202655]                       10          1          -    Covered              
+        bin reg_addresses[587202656]                       10          1          -    Covered              
+        bin reg_addresses[587202657]                       10          1          -    Covered              
+        bin reg_addresses[587202658]                       10          1          -    Covered              
+        bin reg_addresses[587202659]                       10          1          -    Covered              
+        bin reg_addresses[587202660]                       10          1          -    Covered              
+        bin reg_addresses[587202661]                       10          1          -    Covered              
+        bin reg_addresses[587202662]                       10          1          -    Covered              
+        bin reg_addresses[587202663]                       10          1          -    Covered              
+        bin reg_addresses[587202664]                       10          1          -    Covered              
+        bin reg_addresses[587202665]                       10          1          -    Covered              
+        bin reg_addresses[587202666]                       10          1          -    Covered              
+        bin reg_addresses[587202667]                       10          1          -    Covered              
+        bin reg_addresses[587202668]                       10          1          -    Covered              
+        bin reg_addresses[587202669]                       10          1          -    Covered              
+        bin reg_addresses[587202670]                       10          1          -    Covered              
+        bin reg_addresses[587202671]                       10          1          -    Covered              
+        bin reg_addresses[587202672]                       10          1          -    Covered              
+        bin reg_addresses[587202673]                       10          1          -    Covered              
+        bin reg_addresses[587202674]                       10          1          -    Covered              
+        bin reg_addresses[587202675]                       10          1          -    Covered              
+        bin reg_addresses[587202676]                       10          1          -    Covered              
+        bin reg_addresses[587202677]                       10          1          -    Covered              
+        bin reg_addresses[587202678]                       10          1          -    Covered              
+        bin reg_addresses[587202679]                       10          1          -    Covered              
+        bin reg_addresses[587202680]                       10          1          -    Covered              
+        bin reg_addresses[587202681]                       10          1          -    Covered              
+        bin reg_addresses[587202682]                       10          1          -    Covered              
+        bin reg_addresses[587202683]                       10          1          -    Covered              
+        bin reg_addresses[587202684]                       10          1          -    Covered              
+        bin reg_addresses[587202685]                       10          1          -    Covered              
+        bin reg_addresses[587202686]                       10          1          -    Covered              
+        bin reg_addresses[587202687]                       10          1          -    Covered              
+        bin reg_addresses[587202688]                       10          1          -    Covered              
+        bin reg_addresses[587202689]                       10          1          -    Covered              
+        bin reg_addresses[587202690]                       10          1          -    Covered              
+        bin reg_addresses[587202691]                       10          1          -    Covered              
+        bin reg_addresses[587202692]                       10          1          -    Covered              
+        bin reg_addresses[587202693]                       10          1          -    Covered              
+        bin reg_addresses[587202694]                       10          1          -    Covered              
+        bin reg_addresses[587202695]                       10          1          -    Covered              
+        bin reg_addresses[587202696]                       10          1          -    Covered              
+        bin reg_addresses[587202697]                       10          1          -    Covered              
+ TYPE /control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cg_commands 
+                                                       91.66%        100          -    Uncovered            
+    covered/total bins:                                    17         20          -                      
+    missing/total bins:                                     3         20          -                      
+    % Hit:                                             85.00%        100          -                      
+    Coverpoint PWDATA                                 100.00%        100          -    Covered              
+        covered/total bins:                                 6          6          -                      
+        missing/total bins:                                 0          6          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint play_out                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross #cross__0#                                   75.00%        100          -    Uncovered            
+        covered/total bins:                                 9         12          -                      
+        missing/total bins:                                 3         12          -                      
+        % Hit:                                         75.00%        100          -                      
+ Covergroup instance \/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cg_commands_inst  
+                                                       91.66%        100          -    Uncovered            
+    covered/total bins:                                    17         20          -                      
+    missing/total bins:                                     3         20          -                      
+    % Hit:                                             85.00%        100          -                      
+    Coverpoint PWDATA                                 100.00%        100          -    Covered              
+        covered/total bins:                                 6          6          -                      
+        missing/total bins:                                 0          6          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cmd_clr                                       341          1          -    Covered              
+        bin cmd_cfg                                         5          1          -    Covered              
+        bin cmd_level                                      11          1          -    Covered              
+        bin cmd_start                                   91100          1          -    Covered              
+        bin cmd_stop                                       66          1          -    Covered              
+        bin cmd_irqack                                 178879          1          -    Covered              
+        default bin illegal                              4814                     -    Occurred             
+    Coverpoint play_out                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin standby                                      4248          1          -    Covered              
+        bin play                                       270968          1          -    Covered              
+    Cross #cross__0#                                   75.00%        100          -    Uncovered            
+        covered/total bins:                                 9         12          -                      
+        missing/total bins:                                 3         12          -                      
+        % Hit:                                         75.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <cmd_irqack,play>                      178870          1          -    Covered              
+            bin <cmd_stop,play>                             6          1          -    Covered              
+            bin <cmd_start,play>                        91083          1          -    Covered              
+            bin <cmd_irqack,standby>                        9          1          -    Covered              
+            bin <cmd_stop,standby>                         60          1          -    Covered              
+            bin <cmd_start,standby>                        17          1          -    Covered              
+            bin <cmd_level,standby>                        11          1          -    Covered              
+            bin <cmd_cfg,standby>                           5          1          -    Covered              
+            bin <cmd_clr,standby>                         341          1          -    Covered              
+            bin <cmd_level,play>                            0          1          1    ZERO                 
+            bin <cmd_cfg,play>                              0          1          1    ZERO                 
+            bin <cmd_clr,play>                              0          1          1    ZERO                 
+
+Directive Coverage:
+    Directives                      87        83         4    95.40%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_pready_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(169)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_pslverr_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(179)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_prdata_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(189)
+                                                                              271747 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_clr_out_pulse 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(200)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_clr_out_valid_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(210)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_cfg_out_pulse 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(221)
+                                                                                 1 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_cfg_out_valid_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(233)
+                                                                                 1 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_start_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(243)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_valid_start_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(253)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_stop_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(263)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_valid_stop_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(273)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_level_out_pulse 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(283)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_level_out_valid_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(293)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_tick_standby 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(303)
+                                                                              4223 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_tick_out_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(313)
+                                                                               284 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_tick_out_low 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(323)
+                                                                              274907 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_fifo_drain 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(335)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_irq_out_rise_first 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(351)
+                                                                                 0 ZERO      
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_irq_out_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(363)
+                                                                              1094 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_irq_out_standby 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(373)
+                                                                              4223 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_irq_out_down 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(383)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_cfg_reg_drv 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(393)
+                                                                                 2 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_level_reg_drv 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(403)
+                                                                                 2 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_dsp_regs_drv 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(420)
+                                                                               266 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_pslverr 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(9)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_pready 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(19)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_rindex_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(29)
+                                                                              3444 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_rindex_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(39)
+                                                                              271747 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_index_range 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(49)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_rbank_r_write 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(59)
+                                                                               290 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_status_reg_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(69)
+                                                                                 4 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_status_reg_standby 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(79)
+                                                                                 2 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_rbank_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(89)
+                                                                              274888 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_cfg_reg_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(99)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_level_reg_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(109)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_dsp_regs_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(119)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ldata_r_write 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(129)
+                                                                               449 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ldata_r_failed_write 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(139)
+                                                                                 0 ZERO      
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ldata_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(149)
+                                                                              274728 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lhead_r_inc 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(159)
+                                                                               441 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lhead_r_loop 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(169)
+                                                                                 8 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lhead_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(179)
+                                                                              274728 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_llooped_r_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(189)
+                                                                                 8 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_llooped_r_off_1 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(199)
+                                                                                 0 ZERO      
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_llooped_r_off_2 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(209)
+                                                                                 5 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_llooped_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(219)
+                                                                              274446 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ltail_r_inc_1 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(229)
+                                                                                 2 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ltail_r_inc_2 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(239)
+                                                                               275 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ltail_r_loop_1 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(249)
+                                                                                 0 ZERO      
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ltail_r_loop_2 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(259)
+                                                                                 5 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ltail_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(270)
+                                                                              274895 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lempty_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(280)
+                                                                              2219 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lempty_of 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(290)
+                                                                              272972 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lfull_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(300)
+                                                                              4782 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lfull_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(310)
+                                                                              270409 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lfifo_output_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(320)
+                                                                              272972 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lfifo_output_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(330)
+                                                                              2219 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_prdata_rbank 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(340)
+                                                                              1412 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_prdata_lfifo 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(350)
+                                                                              1016 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_prdata_rfifo 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(360)
+                                                                              1016 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_prdata_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(370)
+                                                                              271747 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_play_r_rise 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(380)
+                                                                                 4 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_play_r_fall 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(390)
+                                                                                 2 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_play_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(400)
+                                                                              275172 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_play_out_state 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(410)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_clr_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(420)
+                                                                                 1 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_clr_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(430)
+                                                                              275190 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_clr_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(440)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_cfg_out_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(450)
+                                                                                 1 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_cfg_out_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(460)
+                                                                              275190 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_start_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(470)
+                                                                                 4 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_start_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(480)
+                                                                              275187 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_stop_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(490)
+                                                                                 3 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_stop_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(500)
+                                                                              275188 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_level_out_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(510)
+                                                                                 1 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_level_out_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(520)
+                                                                              275190 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irqack_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(530)
+                                                                                 4 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irqack_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(540)
+                                                                              275187 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_tick_out_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(550)
+                                                                              4223 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_tick_out_of 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(560)
+                                                                              270968 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_req_r_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(570)
+                                                                              270966 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_req_r_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(580)
+                                                                              4212 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irq_r_rise 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(590)
+                                                                                96 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irq_r_fall_stop 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(600)
+                                                                                 2 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irq_r_fall_irqack 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(610)
+                                                                                 4 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irq_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(620)
+                                                                              275076 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irq_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(630)
+                                                                              275191 Covered   
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       2         2         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /control_unit_tb/DUT_INSTANCE/CHECKER_MODULE --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File input/control_unit_svamod.sv
+    449             1                          1     
+    476             1                          1     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        902       500       402    55.43%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /control_unit_tb/DUT_INSTANCE/CHECKER_MODULE --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                        PADDR[0-1]           0           0           0           0           0           0           3        0.00 
+                                      PADDR[28-30]           0           0           0           0           0           0           3        0.00 
+                                     PRDATA[24-31]           0           0           0           0           0           0           3        0.00 
+                                            PREADY           0           0           0           0           0           0           3        0.00 
+                                           PSLVERR           0           0           0           0           0           0           3        0.00 
+                                    cfg_reg_out[3]           0           0           0           0           0           0           3        0.00 
+                                  cfg_reg_out[5-6]           0           0           0           0           0           0           3        0.00 
+                                    cfg_reg_out[8]           0           0           0           0           0           0           3        0.00 
+                                cfg_reg_out[10-31]           0           0           0           0           0           0           3        0.00 
+                                  level_reg_out[3]           0           0           0           0           0           0           3        0.00 
+                                level_reg_out[5-6]           0           0           0           0           0           0           3        0.00 
+                                  level_reg_out[8]           0           0           0           0           0           0           3        0.00 
+                              level_reg_out[10-31]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =        317 
+Toggled Node Count   =        250 
+Untoggled Node Count =         67 
+
+Toggle Coverage      =      55.43% (500 of 902 bins)
+
+=================================================================================
+=== Instance: /control_unit_tb/DUT_INSTANCE
+=== Design Unit: work.control_unit
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        74        71         3    95.94%
+
+================================Branch Details================================
+
+Branch Coverage for instance /control_unit_tb/DUT_INSTANCE
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File input/control_unit.sv
+------------------------------------IF Branch------------------------------------
+    49                                      3453     Count coming in to IF
+    49              1                       1722     
+    51              1                       1731     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    62                                        52     Count coming in to IF
+    62              1                         26     
+    64              1                          4     
+    66              1                          3     
+                                              19     All False Count
+Branch totals: 4 hits of 4 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    72                                       907     Count coming in to IF
+    72              1                         26     
+    74              1                        856     
+    76              1                         25     
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    114                                     5745     Count coming in to IF
+    114             1                       2031     
+                                            3714     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    116                                     2031     Count coming in to IF
+    116             1                        995     
+    119             1                        518     
+    122             1                        518     
+                                         ***0***     All False Count
+Branch totals: 3 hits of 4 branches = 75.00%
+
+------------------------------------IF Branch------------------------------------
+    134                                      578     Count coming in to IF
+    134             1                        572     
+    136             1                          6     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    143                                     4668     Count coming in to IF
+    143             1                         26     
+    145             1                       4642     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    146                                     4642     Count coming in to IF
+    146             1                        291     
+                                            4351     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    149                                     4642     Count coming in to IF
+    149             1                          4     
+                                            4638     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    152                                     4642     Count coming in to IF
+    152             1                          3     
+                                            4639     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    174                                     1503     Count coming in to IF
+    174             1                         26     
+    180             1                       1477     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    198                                     7030     Count coming in to IF
+    198             1                        890     
+                                            6140     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    200                                      890     Count coming in to IF
+    200             1                        874     
+    202             1                         16     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    209                                     7030     Count coming in to IF
+    209             1                          5     
+                                            7025     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    210                                        5     Count coming in to IF
+    210             1                          5     
+    212             1                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    219                                     7030     Count coming in to IF
+    219             1                        280     
+                                            6750     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    220                                      280     Count coming in to IF
+    220             1                        275     
+    222             1                          5     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    229                                     7030     Count coming in to IF
+    229             1                          2     
+                                            7028     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    241                                      744     Count coming in to IF
+    241             1                        732     
+    243             1                         12     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    252                                      736     Count coming in to IF
+    252             1                         10     
+    254             1                        726     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    257                                      736     Count coming in to IF
+    257             1                          8     
+    259             1                        728     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    281                                     1503     Count coming in to IF
+    281             1                         26     
+    287             1                       1477     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    305                                     7030     Count coming in to IF
+    305             1                        890     
+                                            6140     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    307                                      890     Count coming in to IF
+    307             1                        874     
+    309             1                         16     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    316                                     7030     Count coming in to IF
+    316             1                          5     
+                                            7025     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    317                                        5     Count coming in to IF
+    317             1                          5     
+    319             1                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    326                                     7030     Count coming in to IF
+    326             1                        280     
+                                            6750     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    327                                      280     Count coming in to IF
+    327             1                        275     
+    329             1                          5     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    336                                     7030     Count coming in to IF
+    336             1                          2     
+                                            7028     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    348                                      744     Count coming in to IF
+    348             1                        732     
+    350             1                         12     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    359                                      736     Count coming in to IF
+    359             1                         10     
+    361             1                        726     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    364                                      736     Count coming in to IF
+    364             1                          8     
+    366             1                        728     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    374                                       89     Count coming in to IF
+    374             1                         26     
+    376             1                          3     
+    378             1                          4     
+    380             1                         14     
+                                              42     All False Count
+Branch totals: 5 hits of 5 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      42        36         6    85.71%
+
+================================Condition Details================================
+
+Condition Coverage for instance /control_unit_tb/DUT_INSTANCE --
+
+  File input/control_unit.sv
+----------------Focused Condition View-------------------
+Line       116 Item    1  (rindex < 138)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       119 Item    1  (rindex == 138)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       122 Item    1  (rindex == 139)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+       Input Term   Covered  Reason for no coverage   Hint
+      -----------  --------  -----------------------  --------------
+  (rindex == 139)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (rindex == 139)_0     -                             
+  Row   2:          1  (rindex == 139)_1     -                             
+
+----------------Focused Condition View-------------------
+Line       146 Item    1  (apbwrite && (rindex < 138))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       198 Item    1  ((apbwrite && (rindex == 138)) && ~lfull)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       200 Item    1  (lhead_r != (56 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       209 Item    1  ((apbread && (rindex == 138)) && ~lempty)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       210 Item    1  (ltail_r != (56 - 1))
+Condition totals: 0 of 1 input term covered = 0.00%
+
+             Input Term   Covered  Reason for no coverage   Hint
+            -----------  --------  -----------------------  --------------
+  (ltail_r != (56 - 1))         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target               Non-masking condition(s)      
+ ---------  ---------  --------------------     -------------------------     
+  Row   1:    ***0***  (ltail_r != (56 - 1))_0  -                             
+  Row   2:          1  (ltail_r != (56 - 1))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       219 Item    1  ((play_r && req_r) && ~lempty)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       220 Item    1  (ltail_r != (56 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       252 Item    1  ((lhead_r == ltail_r) && ~llooped_r)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       257 Item    1  ((lhead_r == ltail_r) && llooped_r)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       305 Item    1  ((apbwrite && (rindex == 139)) && ~rfull)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       307 Item    1  (rhead_r != (56 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       316 Item    1  ((apbread && (rindex == 139)) && ~rempty)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       317 Item    1  (rtail_r != (56 - 1))
+Condition totals: 0 of 1 input term covered = 0.00%
+
+             Input Term   Covered  Reason for no coverage   Hint
+            -----------  --------  -----------------------  --------------
+  (rtail_r != (56 - 1))         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target               Non-masking condition(s)      
+ ---------  ---------  --------------------     -------------------------     
+  Row   1:    ***0***  (rtail_r != (56 - 1))_0  -                             
+  Row   2:          1  (rtail_r != (56 - 1))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       326 Item    1  ((play_r && req_r) && ~rempty)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       327 Item    1  (rtail_r != (56 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       359 Item    1  ((rhead_r == rtail_r) && ~rlooped_r)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       364 Item    1  ((rhead_r == rtail_r) && rlooped_r)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       380 Item    1  ((((stop ~| irqack) && play_r) && lempty) && rempty)
+Condition totals: 2 of 5 input terms covered = 40.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+        stop         N  '_1' not hit             Hit '_1'
+      irqack         N  '_1' not hit             Hit '_1'
+      play_r         Y
+      lempty         Y
+      rempty         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  stop_0                (rempty && lempty && play_r && ~irqack)
+  Row   2:    ***0***  stop_1                ~irqack                       
+  Row   3:          1  irqack_0              (rempty && lempty && play_r && ~stop)
+  Row   4:    ***0***  irqack_1              ~stop                         
+  Row   5:          1  play_r_0              (stop ~| irqack)              
+  Row   6:          1  play_r_1              (rempty && lempty && (stop ~| irqack))
+  Row   7:          1  lempty_0              ((stop ~| irqack) && play_r)  
+  Row   8:          1  lempty_1              (rempty && ((stop ~| irqack) && play_r))
+  Row   9:    ***0***  rempty_0              (((stop ~| irqack) && play_r) && lempty)
+ Row   10:          1  rempty_1              (((stop ~| irqack) && play_r) && lempty)
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     27        25         2    92.59%
+
+================================Expression Details================================
+
+Expression Coverage for instance /control_unit_tb/DUT_INSTANCE --
+
+  File input/control_unit.sv
+----------------Focused Expression View-----------------
+Line       42 Item    1  (((PREADY && PWRITE) && PSEL) && PENABLE)
+Expression totals: 3 of 4 input terms covered = 75.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+      PREADY         N  '_0' not hit             Hit '_0'
+      PWRITE         Y
+        PSEL         Y
+     PENABLE         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  PREADY_0              -                             
+  Row   2:          1  PREADY_1              (PENABLE && PSEL && PWRITE)   
+  Row   3:          1  PWRITE_0              PREADY                        
+  Row   4:          1  PWRITE_1              (PENABLE && PSEL && PREADY)   
+  Row   5:          1  PSEL_0                (PREADY && PWRITE)            
+  Row   6:          1  PSEL_1                (PENABLE && (PREADY && PWRITE))
+  Row   7:          1  PENABLE_0             ((PREADY && PWRITE) && PSEL)  
+  Row   8:          1  PENABLE_1             ((PREADY && PWRITE) && PSEL)  
+
+----------------Focused Expression View-----------------
+Line       44 Item    1  (((~PWRITE && PSEL) && PENABLE) && PREADY)
+Expression totals: 3 of 4 input terms covered = 75.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+      PWRITE         Y
+        PSEL         Y
+     PENABLE         Y
+      PREADY         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  PWRITE_0              (PREADY && PENABLE && PSEL)   
+  Row   2:          1  PWRITE_1              -                             
+  Row   3:          1  PSEL_0                ~PWRITE                       
+  Row   4:          1  PSEL_1                (PREADY && PENABLE && ~PWRITE)
+  Row   5:          1  PENABLE_0             (~PWRITE && PSEL)             
+  Row   6:          1  PENABLE_1             (PREADY && (~PWRITE && PSEL)) 
+  Row   7:    ***0***  PREADY_0              ((~PWRITE && PSEL) && PENABLE)
+  Row   8:          1  PREADY_1              ((~PWRITE && PSEL) && PENABLE)
+
+----------------Focused Expression View-----------------
+Line       86 Item    1  ((apbwrite && (rindex == 0)) && (PWDATA == 2))
+Expression totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Expression View-----------------
+Line       88 Item    1  ((apbwrite && (rindex == 0)) && (PWDATA == 4))
+Expression totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Expression View-----------------
+Line       90 Item    1  ((apbwrite && (rindex == 0)) && (PWDATA == 8))
+Expression totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Expression View-----------------
+Line       92 Item    1  ((apbwrite && (rindex == 0)) && (PWDATA == 16))
+Expression totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Expression View-----------------
+Line       94 Item    1  ((apbwrite && (rindex == 0)) && (PWDATA == 32))
+Expression totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Expression View-----------------
+Line       101 Item    1  (((~play_r && apbwrite) && (rindex == 0)) && (PWDATA == 1))
+Expression totals: 4 of 4 input terms covered = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     117       113         4    96.58%
+
+================================Statement Details================================
+
+Statement Coverage for instance /control_unit_tb/DUT_INSTANCE --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File input/control_unit.sv
+    40              1                       5183     
+    42              1                       5183     
+    44              1                       5183     
+    48              1                       3453     
+    50              1                       1722     
+    52              1                       1731     
+    61              1                         52     
+    63              1                         26     
+    65              1                          4     
+    67              1                          3     
+    71              1                        907     
+    73              1                         26     
+    75              1                        856     
+    77              1                         25     
+    83              1                       5449     
+    86              1                       5449     
+    88              1                       5449     
+    90              1                       5449     
+    92              1                       5449     
+    94              1                       5449     
+    100             1                       5458     
+    101             1                       5458     
+    109             1                       5745     
+    110             1                       5745     
+    111             1                       5745     
+    112             1                       5745     
+    117             1                        995     
+    120             1                        518     
+    123             1                        518     
+    133             1                        578     
+    135             1                        572     
+    137             1                          6     
+    142             1                       4668     
+    144             1                         26     
+    147             1                        291     
+    150             1                          4     
+    153             1                          3     
+    173             1                       1503     
+    175             1                         26     
+    176             1                         26     
+    177             1                         26     
+    178             1                         26     
+    181             1                       1477     
+    182             1                       1477     
+    183             1                       1477     
+    184             1                       1477     
+    189             1                       7030     
+    191             1                       7030     
+    192             1                       7030     
+    193             1                       7030     
+    194             1                       7030     
+    199             1                        890     
+    201             1                        874     
+    203             1                         16     
+    204             1                         16     
+    211             1                          5     
+    213             1                    ***0***     
+    214             1                    ***0***     
+    221             1                        275     
+    223             1                          5     
+    224             1                          5     
+    230             1                          2     
+    231             1                          2     
+    232             1                          2     
+    233             1                          2     
+    240             1                        744     
+    242             1                        732     
+    244             1                         12     
+    250             1                        736     
+    253             1                         10     
+    255             1                        726     
+    258             1                          8     
+    260             1                        728     
+    280             1                       1503     
+    282             1                         26     
+    283             1                         26     
+    284             1                         26     
+    285             1                         26     
+    288             1                       1477     
+    289             1                       1477     
+    290             1                       1477     
+    291             1                       1477     
+    296             1                       7030     
+    298             1                       7030     
+    299             1                       7030     
+    300             1                       7030     
+    301             1                       7030     
+    306             1                        890     
+    308             1                        874     
+    310             1                         16     
+    311             1                         16     
+    318             1                          5     
+    320             1                    ***0***     
+    321             1                    ***0***     
+    328             1                        275     
+    330             1                          5     
+    331             1                          5     
+    337             1                          2     
+    338             1                          2     
+    339             1                          2     
+    340             1                          2     
+    347             1                        744     
+    349             1                        732     
+    351             1                         12     
+    357             1                        736     
+    360             1                         10     
+    362             1                        726     
+    365             1                          8     
+    367             1                        728     
+    373             1                         89     
+    375             1                         26     
+    377             1                          3     
+    379             1                          4     
+    381             1                         14     
+    389             1                          6     
+    390             1                          6     
+    391             1                        298     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        954       552       402    57.86%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /control_unit_tb/DUT_INSTANCE --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                        PADDR[0-1]           0           0           0           0           0           0           3        0.00 
+                                      PADDR[28-30]           0           0           0           0           0           0           3        0.00 
+                                     PRDATA[24-31]           0           0           0           0           0           0           3        0.00 
+                                            PREADY           0           0           0           0           0           0           3        0.00 
+                                           PSLVERR           0           0           0           0           0           0           3        0.00 
+                                    cfg_reg_out[3]           0           0           0           0           0           0           3        0.00 
+                                  cfg_reg_out[5-6]           0           0           0           0           0           0           3        0.00 
+                                    cfg_reg_out[8]           0           0           0           0           0           0           3        0.00 
+                                cfg_reg_out[10-31]           0           0           0           0           0           0           3        0.00 
+                                  level_reg_out[3]           0           0           0           0           0           0           3        0.00 
+                                level_reg_out[5-6]           0           0           0           0           0           0           3        0.00 
+                                  level_reg_out[8]           0           0           0           0           0           0           3        0.00 
+                              level_reg_out[10-31]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =        343 
+Toggled Node Count   =        276 
+Untoggled Node Count =         67 
+
+Toggle Coverage      =      57.86% (552 of 954 bins)
+
+
+TOTAL COVERGROUP COVERAGE: 95.83%  COVERGROUP TYPES: 2
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_pready_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(169)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_pslverr_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(179)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_prdata_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(189)
+                                                                              271747 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_clr_out_pulse 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(200)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_clr_out_valid_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(210)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_cfg_out_pulse 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(221)
+                                                                                 1 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_cfg_out_valid_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(233)
+                                                                                 1 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_start_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(243)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_valid_start_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(253)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_stop_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(263)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_valid_stop_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(273)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_level_out_pulse 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(283)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_level_out_valid_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(293)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_tick_standby 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(303)
+                                                                              4223 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_tick_out_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(313)
+                                                                               284 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_tick_out_low 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(323)
+                                                                              274907 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_fifo_drain 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(335)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_irq_out_rise_first 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(351)
+                                                                                 0 ZERO      
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_irq_out_high 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(363)
+                                                                              1094 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_irq_out_standby 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(373)
+                                                                              4223 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_irq_out_down 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(383)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_cfg_reg_drv 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(393)
+                                                                                 2 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_level_reg_drv 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(403)
+                                                                                 2 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_dsp_regs_drv 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_svamod.sv(420)
+                                                                               266 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_pslverr 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(9)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_pready 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(19)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_rindex_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(29)
+                                                                              3444 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_rindex_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(39)
+                                                                              271747 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_index_range 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(49)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_rbank_r_write 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(59)
+                                                                               290 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_status_reg_play 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(69)
+                                                                                 4 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_status_reg_standby 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(79)
+                                                                                 2 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_rbank_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(89)
+                                                                              274888 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_cfg_reg_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(99)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_level_reg_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(109)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_dsp_regs_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(119)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ldata_r_write 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(129)
+                                                                               449 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ldata_r_failed_write 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(139)
+                                                                                 0 ZERO      
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ldata_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(149)
+                                                                              274728 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lhead_r_inc 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(159)
+                                                                               441 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lhead_r_loop 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(169)
+                                                                                 8 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lhead_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(179)
+                                                                              274728 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_llooped_r_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(189)
+                                                                                 8 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_llooped_r_off_1 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(199)
+                                                                                 0 ZERO      
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_llooped_r_off_2 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(209)
+                                                                                 5 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_llooped_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(219)
+                                                                              274446 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ltail_r_inc_1 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(229)
+                                                                                 2 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ltail_r_inc_2 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(239)
+                                                                               275 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ltail_r_loop_1 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(249)
+                                                                                 0 ZERO      
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ltail_r_loop_2 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(259)
+                                                                                 5 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_ltail_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(270)
+                                                                              274895 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lempty_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(280)
+                                                                              2219 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lempty_of 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(290)
+                                                                              272972 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lfull_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(300)
+                                                                              4782 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lfull_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(310)
+                                                                              270409 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lfifo_output_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(320)
+                                                                              272972 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_lfifo_output_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(330)
+                                                                              2219 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_prdata_rbank 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(340)
+                                                                              1412 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_prdata_lfifo 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(350)
+                                                                              1016 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_prdata_rfifo 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(360)
+                                                                              1016 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_prdata_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(370)
+                                                                              271747 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_play_r_rise 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(380)
+                                                                                 4 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_play_r_fall 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(390)
+                                                                                 2 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_play_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(400)
+                                                                              275172 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_play_out_state 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(410)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_clr_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(420)
+                                                                                 1 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_clr_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(430)
+                                                                              275190 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_clr_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(440)
+                                                                              275191 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_cfg_out_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(450)
+                                                                                 1 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_cfg_out_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(460)
+                                                                              275190 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_start_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(470)
+                                                                                 4 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_start_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(480)
+                                                                              275187 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_stop_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(490)
+                                                                                 3 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_stop_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(500)
+                                                                              275188 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_level_out_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(510)
+                                                                                 1 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_level_out_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(520)
+                                                                              275190 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irqack_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(530)
+                                                                                 4 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irqack_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(540)
+                                                                              275187 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_tick_out_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(550)
+                                                                              4223 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_tick_out_of 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(560)
+                                                                              270968 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_req_r_on 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(570)
+                                                                              270966 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_req_r_off 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(580)
+                                                                              4212 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irq_r_rise 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(590)
+                                                                                96 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irq_r_fall_stop 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(600)
+                                                                                 2 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irq_r_fall_irqack 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(610)
+                                                                                 4 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irq_r_stable 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(620)
+                                                                              275076 Covered   
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cr_irq_out 
+                                         control_unit_svamod Verilog  SVA  input/control_unit_wba.svh(630)
+                                                                              275191 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 95.40%  COVERS: 87
+
+TOTAL ASSERTION COVERAGE: 96.50%  ASSERTIONS: 143
+
+Total Coverage By Instance (filtered view): 89.12%
+

@@ -1,0 +1,125 @@
+-------------------------------------------------------------------------------
+Questa CDC Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+CDC Protocol report
+Design : audioport
+
+Created Fri Apr 25 15:12:58 2025
+-------------------------------------------------------------------------------
+
+=================================================================
+Section 1  : CDC SVA Protocol Summary
+Section 2  : CDC SVA Protocol List
+Section 3  : CDC SVA Protocol Details
+Section 4  : CDC SVA Protocol Setup
+=================================================================
+
+=================================================================
+Section 1  : CDC SVA Protocol Summary
+=================================================================
+
+Protocols Recognized   :   7
+-------------------------------------------------------------------------------
+Protocol Type                             Protocols               Checks
+-------------------------------------------------------------------------------
+cdc_dsel                                          2                    2
+cdc_glitch                                        1                    1
+cdc_hamming_one                                   1                    1
+cdc_sync                                          3                    3
+-------------------------------------------------------------------------------
+All                                               7                    7
+-------------------------------------------------------------------------------
+
+=================================================================
+Section 2  : CDC SVA Protocol List
+=================================================================
+
+cdc_dsel  cdc_protocol.dmux_31965
+cdc_dsel  cdc_protocol.dmux_96957
+cdc_glitch  cdc_protocol.combo_logic_7812
+cdc_hamming_one  cdc_protocol.reconvergence_48968
+cdc_sync  cdc_protocol.async_reset_91666
+cdc_sync  cdc_protocol.two_dff_63324_7156
+cdc_sync  cdc_protocol.two_dff_73219
+
+=================================================================
+Section 3  : CDC SVA Protocol Details
+=================================================================
+
+Type/Scheme   :  cdc_dsel  cdc_protocol.dmux_31965
+----------------------------------------------------
+  Check tx_data_stable   : Off <Default Off>
+  Check rx_data_stable   : On <Default On>
+  Check tx_select_stable : Off <Default Off>
+  TX SIGNAL              : cdc_unit_1.audio1_reg
+  TX CLOCK               : clk
+  RX SIGNAL              : cdc_unit_1.audio1_out
+  RX CLOCK               : mclk
+  TX_MIN                 : 4
+
+Type/Scheme   :  cdc_dsel  cdc_protocol.dmux_96957
+----------------------------------------------------
+  Check tx_data_stable   : Off <Default Off>
+  Check rx_data_stable   : On <Default On>
+  Check tx_select_stable : Off <Default Off>
+  TX SIGNAL              : cdc_unit_1.audio0_reg
+  TX CLOCK               : clk
+  RX SIGNAL              : cdc_unit_1.audio0_out
+  RX CLOCK               : mclk
+  TX_MIN                 : 4
+
+Type/Scheme   :  cdc_glitch  cdc_protocol.combo_logic_7812
+----------------------------------------------------
+  Check glitch           : On <Default On>
+  RX SIGNAL              : cdc_unit_1.req_in_sync1
+  RX CLOCK               : clk
+
+Type/Scheme   :  cdc_hamming_one  cdc_protocol.reconvergence_48968
+----------------------------------------------------
+  Check tx_hamming       : On <Default On>
+  Check tx_stable        : Off <Default Off>
+  TX SIGNAL              : {cdc_unit_1.handshake_req_sync2,cdc_unit_1.play_in_sync2}
+  TX CLOCK               : mclk
+  TX_MIN                 : 2
+  ASSOCIATED SCHEMES     : reconvergence_11176  reconvergence_7080  reconvergence_19368  reconvergence_15272  reconvergence_27560  reconvergence_23464  reconvergence_35752  reconvergence_31656  reconvergence_78408  reconvergence_74312  reconvergence_24680  reconvergence_84040  reconvergence_79944  reconvergence_92232  reconvergence_88136  reconvergence_424  reconvergence_96328  reconvergence_8616  reconvergence_4520  reconvergence_51272  reconvergence_47176  reconvergence_97544  reconvergence_59752  reconvergence_55656  reconvergence_67944  reconvergence_63848  reconvergence_76136  reconvergence_72040  reconvergence_84328  reconvergence_80232  reconvergence_26984  reconvergence_22888  reconvergence_73256  reconvergence_38312  reconvergence_34216  reconvergence_46504  reconvergence_42408  reconvergence_54696  reconvergence_50600  reconvergence_62888  reconvergence_58792  reconvergence_51816  reconvergence_27528  reconvergence_392  reconvergence_76104  reconvergence_54664  reconvergence_30376  reconvergence_71154  
+
+Type/Scheme   :  cdc_sync  cdc_protocol.async_reset_91666
+----------------------------------------------------
+  Check tx_stable        : On <Default On>
+  TX SIGNAL              : rst_n
+  TX CLOCK               : clk
+  TX_MIN                 : 4
+
+Type/Scheme   :  cdc_sync  cdc_protocol.two_dff_63324_7156
+----------------------------------------------------
+  Check tx_stable        : On <Default On>
+  TX SIGNAL              : cdc_unit_1.handshake_req
+  TX CLOCK               : clk
+  TX_MIN                 : 4
+
+Type/Scheme   :  cdc_sync  cdc_protocol.two_dff_73219
+----------------------------------------------------
+  Check tx_stable        : On <Default On>
+  TX SIGNAL              : control_unit_1.play_r
+  TX CLOCK               : clk
+  TX_MIN                 : 4
+
+
+=================================================================
+Section 4  : CDC SVA Protocol Setup
+=================================================================
+
+Questa Propcheck Makefile
+----------------------------------------------------
+   Makefile  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_protocol/formal/Makefile
+
+Questa Sim argument files (2-step flow)
+----------------------------------------------------
+  vlog  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vlog.arg
+  vsim  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vsim_2step.arg
+
+Questa Sim vopt flow argument files (3-step flow)
+----------------------------------------------------
+  vlog  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vlog.arg
+  vopt  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vopt.arg
+  vsim  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vsim_3step.arg
+

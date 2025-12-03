@@ -1,0 +1,568 @@
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# 
+# This material contains trade secrets or otherwise
+# confidential information owned by
+# Siemens Industry Software Inc. or its affiliates
+# (collectively, "SISW"), or its licensors. Access
+# to and use of this information is strictly limited
+# as set forth in the customer's applicable
+# agreements with SISW.
+# 
+# Unpublished work. Copyright 2024 Siemens
+# 
+# do scripts/connectcheck.tcl
+# Command : vlib connectcheck_work
+# Command : vmap work connectcheck_work
+# QuestaSim-64 vmap 2024.3_2 Lib Mapping Utility 2024.11 Nov 25 2024
+# vmap work connectcheck_work 
+# Modifying modelsim.ini
+# Command : vcom -mixedsvvh -work work input/i2s_unit.vhd
+# QuestaSim-64 vcom 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:55:25 on Apr 10,2025
+# vcom -mixedsvvh -work work input/i2s_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_unit
+# -- Compiling architecture RTL of i2s_unit
+# End time: 00:55:25 on Apr 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+design_top_is_audioport +define+RTL_VERIF +incdir+input -cuname audioport_sva_bind_pkg -mfcu input/apb_pkg.sv input/audioport_pkg.sv input/audioport_util_pkg.sv input/control_unit.sv results/dsp_unit_hls_rtl.v input/dsp_unit.sv input/cdc_unit.sv input/audioport.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:55:25 on Apr 10,2025
+# vlog "+define+design_top_is_audioport" "+define+RTL_VERIF" "+incdir+input" -cuname audioport_sva_bind_pkg -mfcu input/apb_pkg.sv input/audioport_pkg.sv input/audioport_util_pkg.sv input/control_unit.sv results/dsp_unit_hls_rtl.v input/dsp_unit.sv input/cdc_unit.sv input/audioport.sv 
+# -- Compiling package apb_pkg
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling package audioport_util_pkg
+# -- Importing package audioport_pkg
+# -- Compiling package audioport_sva_bind_pkg
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module control_unit
+# -- Compiling module mgc_out_dreg_v2
+# -- Compiling module ccs_in_v1
+# -- Compiling module ccs_sync_out_vld_v1
+# -- Compiling module dsp_unit_read_inputs_core
+# -- Compiling module dsp_unit_read_inputs
+# -- Compiling module dsp_unit_write_outputs_core
+# -- Compiling module dsp_unit_write_outputs
+# -- Compiling module dsp_unit_regs_proc
+# -- Compiling module dsp_unit_dsp_proc_dsp_proc_fsm
+# -- Compiling module dsp_unit_dsp_proc_staller
+# -- Compiling module dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl
+# -- Compiling module dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl
+# -- Compiling module dsp_unit_dsp_proc_write_outputs_mioi
+# -- Compiling module dsp_unit_dsp_proc_read_inputs_mioi
+# -- Compiling module dsp_unit_dsp_proc
+# -- Compiling module dsp_unit_rtl
+# -- Compiling module dsp_unit
+# -- Compiling module cdc_unit
+# -- Compiling module audioport
+# 
+# Top level modules:
+# 	audioport
+# End time: 00:55:25 on Apr 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : connectcheck elaborate -d audioport
+# Command : netlist create -d audioport -tool propcheck
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Thu Apr 10 00:55:25 2025 by aimtiaz23 on kataja7.oulu.fi
+# 
+# Executing Command : netlist create -d audioport -tool propcheck
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/connectcheck.tcl, Line: 63
+# 
+### Starting Step: netlist elaborate ### 
+# 
+## Elaborating Design...
+# Reading MTI mapping for library mapping
+# Writing all MTI mappings to vmap output ...
+# 
+# Top level modules:
+# 	audioport
+# 
+# Analyzing design...
+# -- Loading module z0in_work.audioport
+# -- Loading module z0in_work.control_unit
+# -- Loading module z0in_work.dsp_unit
+# -- Loading module z0in_work.dsp_unit_rtl
+# -- Loading module z0in_work.dsp_unit_dsp_proc
+# -- Loading module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi
+# -- Loading module z0in_work.dsp_unit_read_inputs
+# -- Loading module z0in_work.dsp_unit_read_inputs_core
+# -- Loading module z0in_work.mgc_out_dreg_v2
+# -- Loading module z0in_work.ccs_in_v1
+# -- Loading module z0in_work.ccs_sync_out_vld_v1
+# -- Loading module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl
+# -- Loading module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi
+# -- Loading module z0in_work.dsp_unit_write_outputs
+# -- Loading module z0in_work.dsp_unit_write_outputs_core
+# -- Loading module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl
+# -- Loading module z0in_work.dsp_unit_dsp_proc_staller
+# -- Loading module z0in_work.dsp_unit_dsp_proc_dsp_proc_fsm
+# -- Loading module z0in_work.dsp_unit_regs_proc
+# -- Loading module z0in_work.cdc_unit
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading entity i2s_unit
+# -- Loading architecture RTL of i2s_unit
+# Optimizing 33 design-units (inlining 0/29 module instances, 0/1 architecture instances):
+# -- Optimizing package z0in_work.apb_pkg(fast)
+# -- Optimizing package z0in_work.audioport_pkg(fast)
+# -- Optimizing package z0in_work.audioport_sva_bind_pkg(fast)
+# -- Optimizing module z0in_work.control_unit(fast)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__1)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__2)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__3)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__4)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__5)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__6)
+# -- Optimizing module z0in_work.ccs_in_v1(fast)
+# -- Optimizing module z0in_work.ccs_sync_out_vld_v1(fast)
+# -- Optimizing module z0in_work.dsp_unit_read_inputs_core(fast)
+# -- Optimizing module z0in_work.dsp_unit_read_inputs(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi(fast)
+# -- Optimizing module z0in_work.ccs_in_v1(fast__1)
+# -- Optimizing module z0in_work.ccs_in_v1(fast__2)
+# -- Optimizing module z0in_work.ccs_in_v1(fast__3)
+# -- Optimizing module z0in_work.dsp_unit_write_outputs_core(fast)
+# -- Optimizing module z0in_work.dsp_unit_write_outputs(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_staller(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_dsp_proc_fsm(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc(fast)
+# -- Optimizing module z0in_work.dsp_unit_regs_proc(fast)
+# -- Optimizing module z0in_work.dsp_unit_rtl(fast)
+# -- Optimizing module z0in_work.dsp_unit(fast)
+# -- Optimizing module z0in_work.cdc_unit(fast)
+# -- Optimizing architecture RTL of i2s_unit
+# -- Optimizing module z0in_work.audioport(fast)
+# Optimized design name is zi_opt_csl_1592258848_1
+# 
+### Starting Step: netlist create ### 
+# 
+## Synthesizing netlist...
+# Processing module 'control_unit'
+# Elaborating module 'control_unit'.
+# Processing module 'mgc_out_dreg_v2'
+# Elaborating module 'mgc_out_dreg_v2'.
+# Processing module 'mgc_out_dreg_v2(3)'
+# Elaborating module 'mgc_out_dreg_v2(3)'.
+# Processing module 'mgc_out_dreg_v2(5)'
+# Elaborating module 'mgc_out_dreg_v2(5)'.
+# Processing module 'ccs_in_v1'
+# Elaborating module 'ccs_in_v1'.
+# Processing module 'ccs_sync_out_vld_v1'
+# Elaborating module 'ccs_sync_out_vld_v1'.
+# Processing module 'dsp_unit_read_inputs_core'
+# Elaborating module 'dsp_unit_read_inputs_core'.
+# Processing module 'dsp_unit_read_inputs'
+# Elaborating module 'dsp_unit_read_inputs'.
+# Processing module 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'
+# Elaborating module 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'.
+# Processing module 'dsp_unit_dsp_proc_read_inputs_mioi'
+# Elaborating module 'dsp_unit_dsp_proc_read_inputs_mioi'.
+# Processing module 'ccs_in_v1(1)'
+# Elaborating module 'ccs_in_v1(1)'.
+# Processing module 'dsp_unit_write_outputs_core'
+# Elaborating module 'dsp_unit_write_outputs_core'.
+# Processing module 'dsp_unit_write_outputs'
+# Elaborating module 'dsp_unit_write_outputs'.
+# Processing module 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'
+# Elaborating module 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'.
+# Processing module 'dsp_unit_dsp_proc_write_outputs_mioi'
+# Elaborating module 'dsp_unit_dsp_proc_write_outputs_mioi'.
+# Processing module 'dsp_unit_dsp_proc_staller'
+# Elaborating module 'dsp_unit_dsp_proc_staller'.
+# Processing module 'dsp_unit_dsp_proc_dsp_proc_fsm'
+# Elaborating module 'dsp_unit_dsp_proc_dsp_proc_fsm'.
+# Processing module 'dsp_unit_dsp_proc'
+# Elaborating module 'dsp_unit_dsp_proc'.
+# Processing module 'dsp_unit_regs_proc'
+# Elaborating module 'dsp_unit_regs_proc'.
+# Processing module 'dsp_unit_rtl'
+# Elaborating module 'dsp_unit_rtl'.
+# Processing module 'dsp_unit'
+# Elaborating module 'dsp_unit'.
+# Processing module 'cdc_unit'
+# Elaborating module 'cdc_unit'.
+# Processing module 'i2s_unit(rtl)'
+# Elaborating module 'i2s_unit(rtl)'.
+# Processing module 'audioport'
+# Elaborating module 'audioport'.
+# 
+##Time Taken (Synthesis) = 3164549.000000 ticks = 3.164549 secs
+# Final Process Statistics: Max memory 726MB, CPU time 5s, Total time 7s
+# 
+# End of log Thu Apr 10 00:55:34 2025
+# 
+# INFO: Processing 62 connectivity specification...
+# Command : connectcheck compile
+# Reading design database from /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_connectcheck/propcheck.db/FORMAL/CACHE...completed (0.045989 (s)).
+# Command : formal compile
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Thu Apr 10 00:55:35 2025 by aimtiaz23 on kataja7.oulu.fi
+# 
+# Executing Command : formal compile
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/connectcheck.tcl, Line: 70
+# 
+### Starting Step: formal compile ### 
+# 
+## Processing Formal Logic...
+# Processing module 'control_unit'
+# Restoring module 'control_unit'.
+# Processing module 'mgc_out_dreg_v2'
+# Restoring module 'mgc_out_dreg_v2'.
+# Processing module 'mgc_out_dreg_v2(3)'
+# Restoring module 'mgc_out_dreg_v2(3)'.
+# Processing module 'mgc_out_dreg_v2(5)'
+# Restoring module 'mgc_out_dreg_v2(5)'.
+# Processing module 'ccs_in_v1'
+# Restoring module 'ccs_in_v1'.
+# Processing module 'ccs_sync_out_vld_v1'
+# Restoring module 'ccs_sync_out_vld_v1'.
+# Processing module 'dsp_unit_read_inputs_core'
+# Restoring module 'dsp_unit_read_inputs_core'.
+# Processing module 'dsp_unit_read_inputs'
+# Restoring module 'dsp_unit_read_inputs'.
+# Processing module 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'
+# Restoring module 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'.
+# Processing module 'dsp_unit_dsp_proc_read_inputs_mioi'
+# Restoring module 'dsp_unit_dsp_proc_read_inputs_mioi'.
+# Processing module 'ccs_in_v1(1)'
+# Restoring module 'ccs_in_v1(1)'.
+# Processing module 'dsp_unit_write_outputs_core'
+# Restoring module 'dsp_unit_write_outputs_core'.
+# Processing module 'dsp_unit_write_outputs'
+# Restoring module 'dsp_unit_write_outputs'.
+# Processing module 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'
+# Restoring module 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'.
+# Processing module 'dsp_unit_dsp_proc_write_outputs_mioi'
+# Restoring module 'dsp_unit_dsp_proc_write_outputs_mioi'.
+# Processing module 'dsp_unit_dsp_proc_staller'
+# Restoring module 'dsp_unit_dsp_proc_staller'.
+# Processing module 'dsp_unit_dsp_proc_dsp_proc_fsm'
+# Restoring module 'dsp_unit_dsp_proc_dsp_proc_fsm'.
+# Processing module 'dsp_unit_dsp_proc'
+# Restoring module 'dsp_unit_dsp_proc'.
+# Processing module 'dsp_unit_regs_proc'
+# Restoring module 'dsp_unit_regs_proc'.
+# Processing module 'dsp_unit_rtl'
+# Restoring module 'dsp_unit_rtl'.
+# Processing module 'dsp_unit'
+# Restoring module 'dsp_unit'.
+# Processing module 'cdc_unit'
+# Restoring module 'cdc_unit'.
+# Processing module 'i2s_unit(rtl)'
+# Restoring module 'i2s_unit(rtl)'.
+# Processing module 'audioport'
+# Restoring module 'audioport'.
+# Flattening design 'control_unit'.
+# Flattening design 'mgc_out_dreg_v2'.
+# Flattening design 'mgc_out_dreg_v2(3)'.
+# Flattening design 'mgc_out_dreg_v2(5)'.
+# Flattening design 'ccs_in_v1'.
+# Flattening design 'ccs_sync_out_vld_v1'.
+# Flattening design 'dsp_unit_read_inputs_core'.
+# Flattening design 'dsp_unit_read_inputs'.
+# Flattening design 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'.
+# Flattening design 'dsp_unit_dsp_proc_read_inputs_mioi'.
+# Flattening design 'ccs_in_v1(1)'.
+# Flattening design 'dsp_unit_write_outputs_core'.
+# Flattening design 'dsp_unit_write_outputs'.
+# Flattening design 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'.
+# Flattening design 'dsp_unit_dsp_proc_write_outputs_mioi'.
+# Flattening design 'dsp_unit_dsp_proc_staller'.
+# Flattening design 'dsp_unit_dsp_proc_dsp_proc_fsm'.
+# Flattening design 'dsp_unit_dsp_proc'.
+# Flattening design 'dsp_unit_regs_proc'.
+# Flattening design 'dsp_unit_rtl'.
+# Flattening design 'dsp_unit'.
+# Flattening design 'cdc_unit'.
+# Flattening design 'i2s_unit(rtl)'.
+# Flattening design 'audioport'.
+# Info    : Detected clock.  Clock: clk.  [netlist-11]
+# Info    : Detected asynchronous reset.  Signal: rst_n, active low.  [netlist-106]
+# 
+# Clocks
+# ------------------------------------------------------------------------------
+# Port                                   Period         Waveform
+# ------------------------------------------------------------------------------
+# clk                      [inferred]       100             0 50 
+# ------------------------------------------------------------------------------
+# 
+# Blackboxes
+# ------------------------------------------------------------------------------
+# Module name                                                Reason
+# ------------------------------------------------------------------------------
+# <no blackboxed modules>
+# ------------------------------------------------------------------------------
+# 
+# Inferred directives
+# ------------------------------------------------------------------------------
+# netlist clock clk -period 100 -waveform 0 50
+# ------------------------------------------------------------------------------
+# 
+# Formal model has been created.  Design 'audioport'.
+# 
+# Property Summary
+# -------------------------------------------------------------------------------
+# Total  Directives :0
+# Assert Directives :0
+# Assume Directives :0
+# Cover  Directives :0
+# -------------------------------------------------------------------------------
+# 
+# Design Checks Summary
+# -------------------------------------------------------------------------------
+# Check                              Found
+# -------------------------------------------------------------------------------
+# DECLARATION_UNDRIVEN                    1
+# -------------------------------------------------------------------------------
+# Total                                  1
+# -------------------------------------------------------------------------------
+# 
+# 
+# To see results in the GUI run:
+# qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_connectcheck/propcheck.db
+# 
+# 
+# Message Summary (Excluding Suppressed Messages)
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     1  Info     netlist-106        Detected asynchronous reset.
+#     1  Info     netlist-11         Detected clock.
+# 
+# Final Process Statistics: Max memory 498MB, CPU time 1s, Total time 2s
+# 
+# End of log Thu Apr 10 00:55:38 2025
+# 
+# Command : connectcheck verify -exclude_cover
+# Reading design database from /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_connectcheck/propcheck.db/FORMAL/CACHE...completed (0.045413 (s)).
+# Command : find properties -assume
+# 
+# Compiling incremental directives ...
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Thu Apr 10 00:55:40 2025 by aimtiaz23 on kataja7.oulu.fi
+# 
+# Compiling incremental directives ...
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Thu Apr 10 00:55:46 2025 by aimtiaz23 on kataja7.oulu.fi
+# Command : find properties -assert -cover
+# INFO: Generating ConnectCheck property report...
+# Command : report output directory
+# Current Output Directory : output/audioport_connectcheck
+# Command : find properties -group connectcheck -assume
+# Command : find properties -group connectcheck -assert -cover
+# Command : formal verify -exclude_cover -group connectcheck
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Thu Apr 10 00:55:50 2025 by aimtiaz23 on kataja7.oulu.fi
+# 
+# Executing Command : formal verify -exclude_cover -group connectcheck  
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/connectcheck.tcl, Line: 72
+# 
+# Info    : Using initialization sequence file to initialize design state.  File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/rst.questa_init'.  [formal-205]
+# Info    : Automatically constraining reset signal to de-assert after initialization sequence (use -auto_constraint_off option to disable).  Signal 'rst_n', Value '1'.  [formal-285]
+# Info	: Warning(line 4): no $default_clock declared, using clk
+# Applying synthesis semantics to design: audioport
+# [00:00:02] Target Status: Done 0/62, Update 0/62, Proof radius min=0, avg=0.00
+# [00:00:02] Check Status: Vacuity 0/62
+# [00:00:02] Engine Process Status: 0 running, 0 pending, 0 terminated, Mem=0GB
+# Info    : Established connection with engine process.  Hostname 'kataja7.oulu.fi', PID 1047, Id 1, Time [00:00:02].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'kataja7.oulu.fi', PID 1053, Id 2, Time [00:00:02].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'kataja7.oulu.fi', PID 1055, Id 4, Time [00:00:02].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'kataja7.oulu.fi', PID 1052, Id 3, Time [00:00:02].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'kataja7.oulu.fi', PID 1054, Id 5, Time [00:00:02].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'kataja7.oulu.fi', PID 1062, Id 6, Time [00:00:02].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'kataja7.oulu.fi', PID 1067, Id 7, Time [00:00:02].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'kataja7.oulu.fi', PID 1068, Id 8, Time [00:00:02].  [formal-385]
+# [00:00:02] Proven: LINE_26_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_2_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_33_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_26_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_2_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_24_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_38_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_33_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_27_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_34_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_14_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_34_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_3_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_35_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_35_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_3_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_25_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_39_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_36_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_36_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_37_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_37_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_38_CHECK_connect (engine:7, vacuity check:passed)
+# [00:00:02] Proven: LINE_4_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_39_CHECK_connect (engine:7, vacuity check:passed)
+# [00:00:02] Proven: LINE_40_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_40_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_41_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_41_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_14_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Proven: LINE_42_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_42_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_15_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_4_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_5_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_27_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Proven: LINE_50_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_43_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_5_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_6_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_28_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_6_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_7_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_15_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_7_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_8_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_8_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_16_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_9_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_43_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_28_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Proven: LINE_44_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_9_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_10_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_29_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_10_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_44_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_11_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_45_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_16_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_29_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Proven: LINE_17_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_45_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_11_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_46_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_30_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_12_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_46_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_50_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Proven: LINE_47_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_12_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_13_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_17_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Proven: LINE_51_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_30_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_47_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_13_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_48_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_18_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_31_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_48_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_18_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_49_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_19_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_19_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_49_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_31_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Proven: LINE_20_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_51_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Proven: LINE_32_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_20_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_21_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_52_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_21_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_22_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_52_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_32_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Proven: LINE_53_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_22_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_23_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_55_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_53_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_54_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_23_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_24_CHECK_connect (engine:7, vacuity check:passed)
+# [00:00:02] Proven: LINE_57_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_54_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_25_CHECK_connect (engine:7, vacuity check:passed)
+# [00:00:02] Vacuity Check Passed: LINE_59_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Proven: LINE_63_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_55_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_58_CHECK_connect (engine:0, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_60_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Proven: LINE_56_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_60_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_61_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_56_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_61_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_63_CHECK_connect (engine:10, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_57_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Proven: LINE_62_CHECK_connect (engine:7, vacuity check:inconclusive)
+# [00:00:02] Vacuity Check Passed: LINE_58_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Vacuity Check Passed: LINE_62_CHECK_connect (engine:7, radius:1)
+# [00:00:02] Parallel execution of engine 7 activated
+# [00:00:02] Proven: LINE_59_CHECK_connect (engine:7, vacuity check:passed)
+# [00:00:03] Target Status: Done 62/62, Update 62/62, Proof radius min=N/A, avg=N/A
+# [00:00:03] Check Status: Vacuity 62/62
+# [00:00:03] Engine Process Status: 0 running, 0 pending, 8 terminated, Mem=2GB
+# 
+# 
+# --------- Process Statistics ----------
+# Elapsed Time                       3 s
+# Total CPU Time                     2 s
+# Total Peak Memory                2.2 GB
+# ---------- Engine Processes -----------
+# Average CPU Time                   0 s
+# Minimum CPU Utilization            0 %
+# Average Peak Memory              0.2 GB
+# Maximum Peak Memory              0.4 GB
+# Peak Cores                         8
+# Distinct Machines                  1
+# Launch Failures                    0
+# Unexpected Process Terminations    0
+# Successful Re-connections          0
+# ---------------------------------------
+# 
+# 
+# ========================================
+# Property Summary                   Count
+# ========================================
+# Assumes                                1
+# ========================================
+# Asserts                               62
+# ----------------------------------------
+# Proven                                62
+# ========================================
+# 
+# Message Summary
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     1  Info     formal-205         Using initialization sequence file to initialize design state.
+#     1  Info     formal-285         Automatically constraining reset signal to de-assert after initialization sequence (use -auto_constraint_off option to disable).
+#     8  Info     formal-385         Established connection with engine process.
+# 
+# Final Process Statistics: Peak Memory 0.46GB, Cumulative CPU Time 2s, Elapsed Time 3s
+# 
+# To see results in the GUI run:
+# qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_connectcheck/propcheck.db
+# 
+# 

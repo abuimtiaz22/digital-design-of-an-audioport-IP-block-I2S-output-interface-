@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : area
+Design : cdc_unit
+Version: T-2022.03-SP5-1
+Date   : Fri Mar 21 10:19:16 2025
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                          108
+Number of nets:                           277
+Number of cells:                          220
+Number of combinational cells:            109
+Number of sequential cells:               110
+Number of macros/black boxes:               0
+Number of buf/inv:                          7
+Number of references:                       8
+
+Combinational area:                191.253999
+Buf/Inv area:                        4.788000
+Noncombinational area:             585.200019
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   776.454018
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+cdc_unit                           776.4540    100.0  191.2540   585.2000  0.0000  cdc_unit
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+Total                                                 191.2540   585.2000  0.0000
+
+
+Area of detected synthetic parts
+--------------------------------
+  No DW parts to report!
+
+Total synthetic cell area:              0.0000  0.0%  
+
+1

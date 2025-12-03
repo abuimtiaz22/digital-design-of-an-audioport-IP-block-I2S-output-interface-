@@ -1,0 +1,93 @@
+Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6080
+=== Design Unit: work.assert_cdc_dsel
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       1         1         0   100.00%
+    Covergroups                      1        na        na    50.00%
+        Coverpoints/Crosses          2        na        na        na
+            Covergroup Bins          2         1         1    50.00%
+    Directives                       1         1         0   100.00%
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6100
+=== Design Unit: work.assert_cdc_dsel
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       1         1         0   100.00%
+    Covergroups                      1        na        na    50.00%
+        Coverpoints/Crosses          2        na        na        na
+            Covergroup Bins          2         1         1    50.00%
+    Directives                       1         1         0   100.00%
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/async_reset_8013
+=== Design Unit: work.assert_cdc_sync
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       1         1         0   100.00%
+    Covergroups                      1        na        na    50.00%
+        Coverpoints/Crosses          2        na        na        na
+            Covergroup Bins          2         1         1    50.00%
+    Directives                       1         1         0   100.00%
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_63806
+=== Design Unit: work.assert_cdc_sync
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       1         1         0   100.00%
+    Covergroups                      1        na        na    50.00%
+        Coverpoints/Crosses          2        na        na        na
+            Covergroup Bins          2         1         1    50.00%
+    Directives                       1         1         0   100.00%
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_74335
+=== Design Unit: work.assert_cdc_sync
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       1         1         0   100.00%
+    Covergroups                      1        na        na    50.00%
+        Coverpoints/Crosses          2        na        na        na
+            Covergroup Bins          2         1         1    50.00%
+    Directives                       1         1         0   100.00%
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.cdc_unit_svamod
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                      21        21         0   100.00%
+    Directives                       6         6         0   100.00%
+    Toggles                        218       218         0   100.00%
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE
+=== Design Unit: work.cdc_unit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        29        29         0   100.00%
+    Conditions                       2         2         0   100.00%
+    Expressions                     11        11         0   100.00%
+    Statements                      56        56         0   100.00%
+    Toggles                        352       352         0   100.00%
+
+
+TOTAL COVERGROUP COVERAGE: 50.00%  COVERGROUP TYPES: 5
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 11
+
+TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 26
+
+Total Coverage By Instance (filtered view): 93.75%
+

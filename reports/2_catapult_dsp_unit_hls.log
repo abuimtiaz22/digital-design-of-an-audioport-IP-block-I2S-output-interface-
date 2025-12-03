@@ -1,0 +1,566 @@
+//  Catapult Ultra Synthesis 2024.2_1/1143609 (Production Release) Wed Nov 13 18:57:31 PST 2024
+//  
+//          Copyright (c) Siemens EDA, 1996-2024, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                   PROPERTY OF SIEMENS EDA OR ITS LICENSORS.
+//  
+//  Running on Linux aimtiaz23@lehmus-cn8.oulu.fi:355224 4.18.0-553.44.1.el8_10.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v27.2_1.0, HLS_PKGS v27.2_1.0, 
+//                       SIF_TOOLKITS v27.2_1.0, SIF_XILINX v27.2_1.0, 
+//                       SIF_ALTERA v27.2_1.0, CCS_LIBS v27.2_1.0, 
+//                       CDS_PPRO v2024.1_3, CDS_DesignChecker v2024.2_1, 
+//                       CDS_OASYS v21.1_3.1, CDS_PSR v24.1_0.20, 
+//                       DesignPad v2.78_1.0, DesignAnalyzer 2024.2/1130210
+//  
+//  Start time Fri Apr  4 03:21:48 2025
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log3552247c2b5278.0"
+dofile ./scripts/catapult_hls.tcl
+# > set CATAPULT_REMOVE_PROJECT           1
+# 1
+# > set CATAPULT_COMPILER_FLAGS           ""
+# > set CATAPULT_SUPPRESS_WARNINGS        {}
+# > set EDA_TOOL "Catapult"
+# Catapult
+# > source scripts/0_setup.tcl
+# > if { [file exists scripts/catapult_proc.tcl ] } {
+# >     source scripts/catapult_proc.tcl
+# > }
+# > logfile move ${LAUNCH_DIR}/${REPORTS_DIR}/2_catapult_${DESIGN_NAME}_hls.log
+# Moving session transcript to file "/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/reports/2_catapult_dsp_unit_hls.log"
+# > logfile move -disable
+# > options set Flows/LowPower/SWITCHING_ACTIVITY_TYPE saif
+# saif
+# > options set Cache/UserCacheHome                    ${LAUNCH_DIR}/${OUTPUT_DIR}/${DESIGN_NAME}_catapult_cache
+# /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_catapult_cache
+# > options set Input/CompilerFlags                    [concat "-DCATAPULT_HLS" $CATAPULT_COMPILER_FLAGS]
+# -DCATAPULT_HLS
+# > options set Input/CppStandard                      c++14
+# c++14
+# > options set Input/TargetPlatform                   x86_64
+# x86_64
+# > foreach w $CATAPULT_SUPPRESS_WARNINGS {
+# >     options set Message/Hide $w -append
+# > }
+# > directive set -TRANSACTION_DONE_SIGNAL false
+# /TRANSACTION_DONE_SIGNAL false
+# > directive set /PRESERVE_UNUSED_PORTS   true
+# /PRESERVE_UNUSED_PORTS true
+# > if { [info exists CATAPULT_TRANSACTION_DONE_SIGNAL] } {
+# >     if { $CATAPULT_TRANSACTION_DONE_SIGNAL == 1 } {
+# > 	directive set -TRANSACTION_DONE_SIGNAL true
+# >     } else {
+# > 	directive set -TRANSACTION_DONE_SIGNAL false
+# >     }
+# > }
+# > if { ![info exists HLS_RTL_FILE ] } {
+# >     set HLS_RTL_FILE ${RESULTS_DIR}/${DESIGN_NAME}_hls_rtl.v
+# > }
+# results/dsp_unit_hls_rtl.v
+# > file delete -force $HLS_RTL_FILE
+# > if { [info exists CATAPULT_PROJECT_NAME] == 0} {
+# >     set CATAPULT_PROJECT_NAME ${DESIGN_NAME}_CATAPULT_PROJECT
+# > }
+# dsp_unit_CATAPULT_PROJECT
+# > if { [info exists CATAPULT_PROJECT_DIR] == 0} {
+# >     set CATAPULT_PROJECT_DIR ${OUTPUT_DIR}
+# > }
+# > if { $CATAPULT_REMOVE_PROJECT == 1 && [file exists "${CATAPULT_PROJECT_DIR}/${CATAPULT_PROJECT_NAME}" ] == 1 } {
+# >     puts "Deleting old project directory"
+# >     file delete -force "${CATAPULT_PROJECT_DIR}/${CATAPULT_PROJECT_NAME}"
+# > }
+# Deleting old project directory
+# > if { [file exists "${CATAPULT_PROJECT_DIR}/${CATAPULT_PROJECT_NAME}" ] == 1 } {
+# >     project load "${CATAPULT_PROJECT_DIR}/${CATAPULT_PROJECT_NAME}"
+# >     set_working_dir ${LAUNCH_DIR}
+# >     solution new -state initial
+# > } else {
+# >     
+# >     set old_search_path [ options get ProjectInit/ComponentLibs SearchPath ]
+# >     project new -name ${CATAPULT_PROJECT_NAME} -directory "${CATAPULT_PROJECT_DIR}/${CATAPULT_PROJECT_NAME}"
+# >     if { [info exists CATAPULT_SOLUTION_NAME] } {
+# > 	solution rename $CATAPULT_SOLUTION_NAME
+# >     }
+# > }
+# Creating project directory '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/dsp_unit_CATAPULT_PROJECT/'. (PRJ-1)
+# > foreach filename $SYSTEMC_HEADER_FILES {
+# >     solution file add ${LAUNCH_DIR}/$filename -preserve_path true	
+# > }
+# > foreach filename $SYSTEMC_SOURCE_FILES {
+# >     solution file add ${LAUNCH_DIR}/$filename -preserve_path true	
+# > }
+# > foreach filename $SYSTEMC_TESTBENCH_FILES {
+# >     solution file add ${LAUNCH_DIR}/$filename -exclude true  -preserve_path true	
+# > }
+# > go new
+# > go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Front End called with arguments: -- /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit.cpp /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit_top.h /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit_tb.h /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.6 (CIN-1)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 18.65 seconds, memory usage 2245092kB, peak memory usage 2245092kB (SOL-9)
+# > solution design set [list $DESIGN_NAME ] -top
+# solution design set dsp_unit -top (HC-8)
+# > create_clocks_and_resets ; # See catapult_proc.tcl
+# Clock Spec: clk {-CLOCK_PERIOD 10.0 -CLOCK_HIGH_TIME 5.0 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0 -RESET_KIND async  -RESET_ASYNC_NAME rst_n -RESET_ASYNC_ACTIVE low}
+# /CLOCKS {clk {-CLOCK_PERIOD 10.0 -CLOCK_HIGH_TIME 5.0 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0 -RESET_KIND async  -RESET_ASYNC_NAME rst_n -RESET_ASYNC_ACTIVE low}}
+# > go compile
+# Info: Starting transformation 'compile' on solution 'dsp_unit.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/../input/dsp_unit.h(13): Found top design routine 'dsp_unit' specified by directive (CIN-52)
+# $PROJECT_HOME/../input/dsp_unit.h(50): Inlining member function 'dsp_unit::dsp_unit' on object '' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(4): Inlining member function 'dsp_unit::dsp_proc' on object '' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(24): Inlining member function 'sc_core::sc_inout<sc_dt::sc_int<24>>::write' on object 'audio0_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(25): Inlining member function 'sc_core::sc_inout<sc_dt::sc_int<24>>::write' on object 'audio1_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(26): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'tick_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): Synthesizing method 'dsp_unit::read_inputs' (CIN-13)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): Inlining member function 'dsp_unit::read_inputs' on object 'this' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): Optimizing block '/dsp_unit::read_inputs' ... (CIN-4)
+# $PROJECT_HOME/../input/dsp_unit.h(63): INOUT port 'this.level0_r' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../input/dsp_unit.h(64): INOUT port 'this.level1_r' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../input/dsp_unit.h(65): INOUT port 'this.filter_r' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): INOUT port 'filter' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(111): INOUT port 'level0' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(111): INOUT port 'level1' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(112): INOUT port 'audio0' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(112): INOUT port 'audio1' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): Synthesizing method 'dsp_unit::write_outputs' (CIN-13)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): Inlining member function 'dsp_unit::write_outputs' on object 'this' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(133): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'this.tick_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(134): Inlining member function 'sc_core::sc_inout<sc_dt::sc_int<24>>::write' on object 'this.audio0_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(135): Inlining member function 'sc_core::sc_inout<sc_dt::sc_int<24>>::write' on object 'this.audio1_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(137): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'this.tick_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): Optimizing block '/dsp_unit::write_outputs' ... (CIN-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(142): Inlining member function 'dsp_unit::regs_proc' on object '' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.h(13): Optimizing block '/dsp_unit' ... (CIN-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(44): Creating instance '/read_inputs():inst' of ModularIO 'dsp_unit::read_inputs' (CIN-204)
+# $PROJECT_HOME/../input/dsp_unit.cpp(104): Creating instance '/write_outputs():inst' of ModularIO 'dsp_unit::write_outputs' (CIN-204)
+# Info: $PROJECT_HOME/../input/dsp_unit.h(50): Partition '/dsp_unit/SC_CTOR' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/../input/dsp_unit.cpp(52): Loop '/dsp_unit/dsp_proc/scheduled_region:if:for' iterated at most 67 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(63): Loop '/dsp_unit/dsp_proc/SHIFT_LOOP' iterated at most 66 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(82): Loop '/dsp_unit/dsp_proc/FILTER_LOOP' iterated at most 67 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(54): Detected constant initialization of array 'data0_r', optimizing loop 'scheduled_region:if:for' (LOOP-12)
+# $PROJECT_HOME/../input/dsp_unit.cpp(55): Detected constant initialization of array 'data1_r', optimizing loop 'scheduled_region:if:for' (LOOP-12)
+# $PROJECT_HOME/../input/dsp_unit.cpp(149): Loop '/dsp_unit/regs_proc/COEFF_RESET_LOOP' iterated at most 134 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(164): Loop '/dsp_unit/regs_proc/COEFF_WRITE_LOOP' iterated at most 134 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): INOUT port 'tick' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): INOUT port 'clr' is only used as an output. (OPT-11)
+# Design 'dsp_unit' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file '../../../workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v1/scverify/Verify_orig_cxx_osci.mk'
+# Makefile for Original Design + Testbench written to file '../../../workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v1/scverify/Verify_orig_cxx_msim.mk'
+# Info: CDesignChecker Shell script written to '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v1/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'dsp_unit.v1': elapsed time 15.06 seconds, memory usage 2245092kB, peak memory usage 2245092kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 539, Real ops = 25, Vars = 212 (SOL-21)
+# > if { [info exists CATAPULT_LIBPATHS ] } {
+# >     foreach l $CATAPULT_LIBPATHS {
+# > 	solution options set ComponentLibs/SearchPath  [list $l] -append
+# >     }
+# > }
+# > if { [info exists CATAPULT_TECHLIBPATHS ] } {
+# >     foreach l $CATAPULT_TECHLIBPATHS {
+# > 	solution options set ComponentLibs/TechLibSearchPath  [list $l] -append
+# >     }
+# > }
+# > if { [info exists CATAPULT_TECHLIBS ] } {
+# >     foreach l $CATAPULT_TECHLIBS {
+# > 	puts "solution library add ${l}"	
+# > 	eval "solution library add ${l}"	
+# >     }
+# > } else {
+# >     solution library add mgc_sample-065nm-dw_beh_dc -- -rtlsyntool DesignCompiler -vendor Sample -technology 065nm -Designware Yes
+# > }
+# solution library add NangateOpenCellLibrary_dc
+# > go libraries
+# Info: Starting transformation 'libraries' on solution 'dsp_unit.v1' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/fpops.lib' [FPOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_dw_ops.lib' [CCS_DW_OPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_connections.lib' [ccs_connections]... (LIB-49)
+# Reading component library '/research/cas/public/DT3_2025/lib/catapult/NangateOpenCelLibrary_dc.lib' [NangateOpenCellLibrary_dc]... (LIB-49)
+# Info: Completed transformation 'libraries' on solution 'dsp_unit.v1': elapsed time 0.45 seconds, memory usage 2245092kB, peak memory usage 2245092kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 539, Real ops = 25, Vars = 212 (SOL-21)
+# > go assembly
+# Info: Starting transformation 'assembly' on solution 'dsp_unit.v1' (SOL-8)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): Loop '/dsp_unit::write_outputs/core/main' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): Loop '/dsp_unit::read_inputs/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'assembly' on solution 'dsp_unit.v1': elapsed time 0.51 seconds, memory usage 2245092kB, peak memory usage 2245092kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 541, Real ops = 25, Vars = 206 (SOL-21)
+# > if { [info exists CATAPULT_DIRECTIVE_FILE ] } {
+# >     source $CATAPULT_DIRECTIVE_FILE
+# > }
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Front End called with arguments: -- /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit.cpp /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit_top.h /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit_tb.h /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.6 (CIN-1)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 18.68 seconds, memory usage 2310628kB, peak memory usage 2376164kB (SOL-9)
+# solution design set dsp_unit -top (HC-8)
+# Info: Starting transformation 'compile' on solution 'dsp_unit.v2' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/../input/dsp_unit.h(13): Found top design routine 'dsp_unit' specified by directive (CIN-52)
+# $PROJECT_HOME/../input/dsp_unit.h(50): Inlining member function 'dsp_unit::dsp_unit' on object '' (CIN-64)
+# Warning: $PROJECT_HOME/../input/dsp_unit.h(57): Method sc_module::dont_initialize is not supported for synthesis and will be ignored, this may cause a simulation mismatch (CIN-108)
+# $PROJECT_HOME/../input/dsp_unit.cpp(4): Inlining member function 'dsp_unit::dsp_proc' on object '' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(24): Inlining member function 'sc_core::sc_inout<sc_dt::sc_int<24>>::write' on object 'audio0_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(25): Inlining member function 'sc_core::sc_inout<sc_dt::sc_int<24>>::write' on object 'audio1_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(26): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'tick_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): Synthesizing method 'dsp_unit::read_inputs' (CIN-13)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): Inlining member function 'dsp_unit::read_inputs' on object 'this' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): Optimizing block '/dsp_unit::read_inputs' ... (CIN-4)
+# $PROJECT_HOME/../input/dsp_unit.h(63): INOUT port 'this.level0_r' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../input/dsp_unit.h(64): INOUT port 'this.level1_r' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../input/dsp_unit.h(65): INOUT port 'this.filter_r' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): INOUT port 'filter' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(111): INOUT port 'level0' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(111): INOUT port 'level1' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(112): INOUT port 'audio0' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(112): INOUT port 'audio1' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): Synthesizing method 'dsp_unit::write_outputs' (CIN-13)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): Inlining member function 'dsp_unit::write_outputs' on object 'this' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(133): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'this.tick_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(134): Inlining member function 'sc_core::sc_inout<sc_dt::sc_int<24>>::write' on object 'this.audio0_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(135): Inlining member function 'sc_core::sc_inout<sc_dt::sc_int<24>>::write' on object 'this.audio1_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(137): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'this.tick_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): Optimizing block '/dsp_unit::write_outputs' ... (CIN-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(142): Inlining member function 'dsp_unit::regs_proc' on object '' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.h(13): Optimizing block '/dsp_unit' ... (CIN-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(44): Creating instance '/read_inputs():inst' of ModularIO 'dsp_unit::read_inputs' (CIN-204)
+# $PROJECT_HOME/../input/dsp_unit.cpp(104): Creating instance '/write_outputs():inst' of ModularIO 'dsp_unit::write_outputs' (CIN-204)
+# Info: $PROJECT_HOME/../input/dsp_unit.h(50): Partition '/dsp_unit/SC_CTOR' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/../input/dsp_unit.cpp(52): Loop '/dsp_unit/dsp_proc/scheduled_region:if:for' iterated at most 67 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(63): Loop '/dsp_unit/dsp_proc/SHIFT_LOOP' iterated at most 66 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(82): Loop '/dsp_unit/dsp_proc/FILTER_LOOP' iterated at most 67 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(54): Detected constant initialization of array 'data0_r', optimizing loop 'scheduled_region:if:for' (LOOP-12)
+# $PROJECT_HOME/../input/dsp_unit.cpp(55): Detected constant initialization of array 'data1_r', optimizing loop 'scheduled_region:if:for' (LOOP-12)
+# $PROJECT_HOME/../input/dsp_unit.cpp(149): Loop '/dsp_unit/regs_proc/COEFF_RESET_LOOP' iterated at most 134 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(164): Loop '/dsp_unit/regs_proc/COEFF_WRITE_LOOP' iterated at most 134 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): INOUT port 'tick' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): INOUT port 'clr' is only used as an output. (OPT-11)
+# Design 'dsp_unit' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file '../../../workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/scverify/Verify_orig_cxx_osci.mk'
+# Makefile for Original Design + Testbench written to file '../../../workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/scverify/Verify_orig_cxx_msim.mk'
+# Info: CDesignChecker Shell script written to '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'dsp_unit.v2': elapsed time 15.17 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 539, Real ops = 25, Vars = 212 (SOL-21)
+# Info: Starting transformation 'libraries' on solution 'dsp_unit.v2' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Completed transformation 'libraries' on solution 'dsp_unit.v2': elapsed time 0.30 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 539, Real ops = 25, Vars = 212 (SOL-21)
+# /dsp_unit/dsp_proc/FILTER_LOOP/UNROLL no
+# > go extract
+# Info: Starting transformation 'assembly' on solution 'dsp_unit.v2' (SOL-8)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): Loop '/dsp_unit::write_outputs/core/main' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): Loop '/dsp_unit::read_inputs/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'assembly' on solution 'dsp_unit.v2': elapsed time 0.53 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 541, Real ops = 25, Vars = 206 (SOL-21)
+# Info: Starting transformation 'loops' on solution 'dsp_unit.v2' (SOL-8)
+# $PROJECT_HOME/../input/dsp_unit.cpp(63): Loop '/dsp_unit/dsp_proc/SHIFT_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(82): Loop '/dsp_unit/dsp_proc/FILTER_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(38): Loop '/dsp_unit/dsp_proc/PROCESS_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(164): Loop '/dsp_unit/regs_proc/COEFF_WRITE_LOOP' is being fully unrolled (134 times). (LOOP-7)
+# $PROJECT_HOME/../input/dsp_unit.h(55): Loop '/dsp_unit/regs_proc/main' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): Loop '/dsp_unit/dsp_unit::write_outputs/core/main' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(115): Loop '/dsp_unit/dsp_unit::read_inputs/core/INPUT_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): Loop '/dsp_unit/dsp_unit::read_inputs/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'dsp_unit.v2': elapsed time 0.94 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 537, Real ops = 22, Vars = 208 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'dsp_unit.v2' (SOL-8)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): I/O-Port Resource '/dsp_unit/dsp_unit::read_inputs/tick:rsc' (from var: tick) mapped to 'mgc_ioport.mgc_out_dreg' (size: 1). (MEM-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): I/O-Port Resource '/dsp_unit/dsp_unit::read_inputs/clr:rsc' (from var: clr) mapped to 'mgc_ioport.mgc_out_dreg' (size: 1). (MEM-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): I/O-Port Resource '/dsp_unit/dsp_unit::read_inputs/filter:rsc' (from var: filter) mapped to 'mgc_ioport.mgc_out_dreg' (size: 1). (MEM-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(111): I/O-Port Resource '/dsp_unit/dsp_unit::read_inputs/level0:rsc' (from var: level0) mapped to 'mgc_ioport.mgc_out_dreg' (size: 16). (MEM-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(111): I/O-Port Resource '/dsp_unit/dsp_unit::read_inputs/level1:rsc' (from var: level1) mapped to 'mgc_ioport.mgc_out_dreg' (size: 16). (MEM-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(112): I/O-Port Resource '/dsp_unit/dsp_unit::read_inputs/audio0:rsc' (from var: audio0) mapped to 'mgc_ioport.mgc_out_dreg' (size: 24). (MEM-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(112): I/O-Port Resource '/dsp_unit/dsp_unit::read_inputs/audio1:rsc' (from var: audio1) mapped to 'mgc_ioport.mgc_out_dreg' (size: 24). (MEM-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): I/O-Port Resource '/dsp_unit/dsp_unit::read_inputs/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): I/O-Port Resource '/dsp_unit/dsp_unit::write_outputs/dsp0:rsc' (from var: dsp0) mapped to 'ccs_ioport.ccs_in' (size: 24). (MEM-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): I/O-Port Resource '/dsp_unit/dsp_unit::write_outputs/dsp1:rsc' (from var: dsp1) mapped to 'ccs_ioport.ccs_in' (size: 24). (MEM-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): I/O-Port Resource '/dsp_unit/dsp_unit::write_outputs/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# Warning: $PROJECT_HOME/../input/dsp_unit.cpp(65): Writing to register bank 'data0_r' with 66 registers using a dynamic index can cause excessive runtime and undesired hardware.  Please inspect coding style. (MEM-74)
+# Warning: $PROJECT_HOME/../input/dsp_unit.cpp(66): Writing to register bank 'data1_r' with 66 registers using a dynamic index can cause excessive runtime and undesired hardware.  Please inspect coding style. (MEM-74)
+# Info: Completed transformation 'memories' on solution 'dsp_unit.v2': elapsed time 1.86 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 1382, Real ops = 407, Vars = 470 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'dsp_unit.v2' (SOL-8)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Module 'dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429_0' in the cache is valid & accepted for CCORE 'dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429' (TD-3)
+# Reading solution library '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/dsp_unit_CATAPULT_PROJECT/td_ccore_solutions/dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429_0/.sif/solIndex_2_acfc0430-fb56-46f3-adf1-1c1ab65b20eb.xml' ... (LIB-129)
+# Module for CCORE 'dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429' has been successfully synthesized (TD-4)
+# Module 'dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429_0' in the cache is valid & accepted for CCORE 'dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429' (TD-3)
+# Module for CCORE 'dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429' has been successfully synthesized (TD-4)
+# Module 'dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429_0' in the cache is valid & accepted for CCORE 'dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429' (TD-3)
+# Module for CCORE 'dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429' has been successfully synthesized (TD-4)
+# Module 'dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429_0' in the cache is valid & accepted for CCORE 'dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429' (TD-3)
+# Module for CCORE 'dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429' has been successfully synthesized (TD-4)
+# Module 'dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5_0' in the cache is valid & accepted for CCORE 'dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5' (TD-3)
+# Reading solution library '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/dsp_unit_CATAPULT_PROJECT/td_ccore_solutions/dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5_0/.sif/solIndex_2_340149ff-060e-461a-b0eb-d6b0ac337d4f.xml' ... (LIB-129)
+# Module for CCORE 'dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5' has been successfully synthesized (TD-4)
+# Module 'dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5_0' in the cache is valid & accepted for CCORE 'dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5' (TD-3)
+# Module for CCORE 'dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5' has been successfully synthesized (TD-4)
+# Module 'dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5_0' in the cache is valid & accepted for CCORE 'dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5' (TD-3)
+# Module for CCORE 'dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5' has been successfully synthesized (TD-4)
+# Module 'dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5_0' in the cache is valid & accepted for CCORE 'dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5' (TD-3)
+# Module for CCORE 'dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5' has been successfully synthesized (TD-4)
+# Info: Completed transformation 'cluster' on solution 'dsp_unit.v2': elapsed time 1.65 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 1339, Real ops = 405, Vars = 437 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'dsp_unit.v2' (SOL-8)
+# $PROJECT_HOME/../input/dsp_unit.h(55): Deleting operations after LOOP "main" dsp_unit.h(55,6,1) without exit (OPT-1)
+# Design 'dsp_unit' contains '1220' real operations. (SOL-11)
+# Warning: Extrapolation detected. Script '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Completed transformation 'architect' on solution 'dsp_unit.v2': elapsed time 5.77 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 5029, Real ops = 1220, Vars = 839 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'dsp_unit.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/dsp_unit/dsp_proc' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(82): Prescheduled LOOP '/dsp_unit/dsp_proc/FILTER_LOOP' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/../input/dsp_unit.cpp(63): Prescheduled LOOP '/dsp_unit/dsp_proc/SHIFT_LOOP' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/../input/dsp_unit.cpp(38): Prescheduled LOOP '/dsp_unit/dsp_proc/PROCESS_LOOP' (4 c-steps) (SCHD-7)
+# $PROJECT_HOME/../input/dsp_unit.cpp(4): Prescheduled LOOP '/dsp_unit/dsp_proc/dsp_proc:rlp' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/../input/dsp_unit.cpp(4): Prescheduled SEQUENTIAL '/dsp_unit/dsp_proc' (total length 138 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(4): Initial schedule of SEQUENTIAL '/dsp_unit/dsp_proc': Latency = 134, Area (Datapath, Register, Total) = 37541.43, 34819.40, 72360.83 (CRAAS-11)
+# Warning: The design 'SEQUENTIAL' cannot be scheduled within the latency goal of 101 cycles. (CRAAS-13)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(4): Final schedule of SEQUENTIAL '/dsp_unit/dsp_proc': Latency = 134, Area (Datapath, Register, Total) = 37541.43, 34819.40, 72360.83 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Performing concurrent resource allocation and scheduling on '/dsp_unit/regs_proc' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../input/dsp_unit.h(55): Prescheduled LOOP '/dsp_unit/regs_proc/main' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/../input/dsp_unit.cpp(142): Prescheduled LOOP '/dsp_unit/regs_proc/regs_proc:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/../input/dsp_unit.cpp(142): Prescheduled SEQUENTIAL '/dsp_unit/regs_proc' (total length 1 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(142): Initial schedule of SEQUENTIAL '/dsp_unit/regs_proc': Latency = 1, Area (Datapath, Register, Total) = 0.00, 0.00, 0.00 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(142): Final schedule of SEQUENTIAL '/dsp_unit/regs_proc': Latency = 1, Area (Datapath, Register, Total) = 0.00, 0.00, 0.00 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'dsp_unit.v2': elapsed time 3.18 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 5029, Real ops = 1220, Vars = 839 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'dsp_unit.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/dsp_unit/dsp_proc' (CRAAS-1)
+# Performing concurrent resource allocation and scheduling on '/dsp_unit/regs_proc' (CRAAS-1)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(44): Not creating buffer for wait controller for component 'read_inputs():mio' (SCHD-46)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(44): Not creating buffer for wait controller for component 'read_inputs():mio' (SCHD-46)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(44): Not creating buffer for wait controller for component 'read_inputs():mio' (SCHD-46)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(44): Not creating buffer for wait controller for component 'read_inputs():mio' (SCHD-46)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(44): Not creating buffer for wait controller for component 'read_inputs():mio' (SCHD-46)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(44): Not creating buffer for wait controller for component 'read_inputs():mio' (SCHD-46)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(44): Not creating buffer for wait controller for component 'read_inputs():mio' (SCHD-46)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(63): Loop '/dsp_unit/dsp_proc/SHIFT_LOOP' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+# Info: $PROJECT_HOME/../input/dsp_unit.cpp(82): Loop '/dsp_unit/dsp_proc/FILTER_LOOP' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'dsp_unit.v2': elapsed time 18.49 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 4033, Real ops = 965, Vars = 1185 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'dsp_unit.v2' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Creating shared register 'data0_r(1).lpi#2' for variables 'data0_r(1).lpi#2, data0_r(2).sva#2, data0_r(1).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(10).lpi#2' for variables 'data0_r(10).lpi#2, data0_r(11).sva#2, data0_r(10).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(10).sva#2' for variables 'data0_r(10).sva#2, data0_r(9).lpi#2, data0_r(9).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(11).lpi#2' for variables 'data0_r(11).lpi#2, data0_r(12).sva#2, data0_r(11).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(12).lpi#2' for variables 'data0_r(12).lpi#2, data0_r(13).sva#2, data0_r(12).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(13).lpi#2' for variables 'data0_r(13).lpi#2, data0_r(14).sva#2, data0_r(13).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(14).lpi#2' for variables 'data0_r(14).lpi#2, data0_r(15).sva#2, data0_r(14).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(15).lpi#2' for variables 'data0_r(15).lpi#2, data0_r(16).sva#2, data0_r(15).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(16).lpi#2' for variables 'data0_r(16).lpi#2, data0_r(17).sva#2, data0_r(16).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(17).lpi#2' for variables 'data0_r(17).lpi#2, data0_r(18).sva#2, data0_r(17).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(18).lpi#2' for variables 'data0_r(18).lpi#2, data0_r(19).sva#2, data0_r(18).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(19).lpi#2' for variables 'data0_r(19).lpi#2, data0_r(20).sva#2, data0_r(19).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(2).lpi#2' for variables 'data0_r(2).lpi#2, data0_r(3).sva#2, data0_r(2).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(20).lpi#2' for variables 'data0_r(20).lpi#2, data0_r(21).sva#2, data0_r(20).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(21).lpi#2' for variables 'data0_r(21).lpi#2, data0_r(22).sva#2, data0_r(21).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(22).lpi#2' for variables 'data0_r(22).lpi#2, data0_r(23).sva#2, data0_r(22).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(23).lpi#2' for variables 'data0_r(23).lpi#2, data0_r(24).sva#2, data0_r(23).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(24).lpi#2' for variables 'data0_r(24).lpi#2, data0_r(25).sva#2, data0_r(24).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(25).lpi#2' for variables 'data0_r(25).lpi#2, data0_r(26).sva#2, data0_r(25).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(26).lpi#2' for variables 'data0_r(26).lpi#2, data0_r(27).sva#2, data0_r(26).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(27).lpi#2' for variables 'data0_r(27).lpi#2, data0_r(28).sva#2, data0_r(27).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(28).lpi#2' for variables 'data0_r(28).lpi#2, data0_r(29).sva#2, data0_r(28).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(29).lpi#2' for variables 'data0_r(29).lpi#2, data0_r(30).sva#2, data0_r(29).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(3).lpi#2' for variables 'data0_r(3).lpi#2, data0_r(4).sva#2, data0_r(3).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(30).lpi#2' for variables 'data0_r(30).lpi#2, data0_r(31).sva#2, data0_r(30).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(31).lpi#2' for variables 'data0_r(31).lpi#2, data0_r(32).sva#2, data0_r(31).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(32).lpi#2' for variables 'data0_r(32).lpi#2, data0_r(33).sva#2, data0_r(32).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(33).lpi#2' for variables 'data0_r(33).lpi#2, data0_r(34).sva#2, data0_r(33).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(34).lpi#2' for variables 'data0_r(34).lpi#2, data0_r(35).sva#2, data0_r(34).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(35).lpi#2' for variables 'data0_r(35).lpi#2, data0_r(36).sva#2, data0_r(35).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(36).lpi#2' for variables 'data0_r(36).lpi#2, data0_r(37).sva#2, data0_r(36).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(37).lpi#2' for variables 'data0_r(37).lpi#2, data0_r(38).sva#2, data0_r(37).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(38).lpi#2' for variables 'data0_r(38).lpi#2, data0_r(39).sva#2, data0_r(38).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(39).lpi#2' for variables 'data0_r(39).lpi#2, data0_r(40).sva#2, data0_r(39).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(4).lpi#2' for variables 'data0_r(4).lpi#2, data0_r(5).sva#2, data0_r(4).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(40).lpi#2' for variables 'data0_r(40).lpi#2, data0_r(41).sva#2, data0_r(40).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(41).lpi#2' for variables 'data0_r(41).lpi#2, data0_r(42).sva#2, data0_r(41).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(42).lpi#2' for variables 'data0_r(42).lpi#2, data0_r(43).sva#2, data0_r(42).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(43).lpi#2' for variables 'data0_r(43).lpi#2, data0_r(44).sva#2, data0_r(43).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(44).lpi#2' for variables 'data0_r(44).lpi#2, data0_r(45).sva#2, data0_r(44).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(45).lpi#2' for variables 'data0_r(45).lpi#2, data0_r(46).sva#2, data0_r(45).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(46).lpi#2' for variables 'data0_r(46).lpi#2, data0_r(47).sva#2, data0_r(46).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(47).lpi#2' for variables 'data0_r(47).lpi#2, data0_r(48).sva#2, data0_r(47).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(48).lpi#2' for variables 'data0_r(48).lpi#2, data0_r(49).sva#2, data0_r(48).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(49).lpi#2' for variables 'data0_r(49).lpi#2, data0_r(50).sva#2, data0_r(49).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(5).lpi#2' for variables 'data0_r(5).lpi#2, data0_r(6).sva#2, data0_r(5).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(50).lpi#2' for variables 'data0_r(50).lpi#2, data0_r(51).sva#2, data0_r(50).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(51).lpi#2' for variables 'data0_r(51).lpi#2, data0_r(52).sva#2, data0_r(51).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(52).lpi#2' for variables 'data0_r(52).lpi#2, data0_r(53).sva#2, data0_r(52).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(53).lpi#2' for variables 'data0_r(53).lpi#2, data0_r(54).sva#2, data0_r(53).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(54).lpi#2' for variables 'data0_r(54).lpi#2, data0_r(55).sva#2, data0_r(54).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(55).lpi#2' for variables 'data0_r(55).lpi#2, data0_r(56).sva#2, data0_r(55).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(56).lpi#2' for variables 'data0_r(56).lpi#2, data0_r(57).sva#2, data0_r(56).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(57).lpi#2' for variables 'data0_r(57).lpi#2, data0_r(58).sva#2, data0_r(57).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(58).lpi#2' for variables 'data0_r(58).lpi#2, data0_r(59).sva#2, data0_r(58).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(59).lpi#2' for variables 'data0_r(59).lpi#2, data0_r(60).sva#2, data0_r(59).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(6).lpi#2' for variables 'data0_r(6).lpi#2, data0_r(7).sva#2, data0_r(6).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(60).lpi#2' for variables 'data0_r(60).lpi#2, data0_r(61).sva#2, data0_r(60).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(61).lpi#2' for variables 'data0_r(61).lpi#2, data0_r(62).sva#2, data0_r(61).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(62).lpi#2' for variables 'data0_r(62).lpi#2, data0_r(63).sva#2, data0_r(62).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(63).lpi#2' for variables 'data0_r(63).lpi#2, data0_r(64).sva#2, data0_r(63).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(64).lpi#2' for variables 'data0_r(64).lpi#2, data0_r(65).sva#2, data0_r(64).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(65).lpi#2' for variables 'data0_r(65).lpi#2, data0_r(66).sva#2, data0_r(65).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(7).lpi#2' for variables 'data0_r(7).lpi#2, data0_r(8).sva#2, data0_r(7).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data0_r(8).lpi#2' for variables 'data0_r(8).lpi#2, data0_r(9).sva#2, data0_r(8).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(1).lpi#2' for variables 'data1_r(1).lpi#2, data1_r(2).sva#2, data1_r(1).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(10).lpi#2' for variables 'data1_r(10).lpi#2, data1_r(11).sva#2, data1_r(10).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(10).sva#2' for variables 'data1_r(10).sva#2, data1_r(9).lpi#2, data1_r(9).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(11).lpi#2' for variables 'data1_r(11).lpi#2, data1_r(12).sva#2, data1_r(11).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(12).lpi#2' for variables 'data1_r(12).lpi#2, data1_r(13).sva#2, data1_r(12).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(13).lpi#2' for variables 'data1_r(13).lpi#2, data1_r(14).sva#2, data1_r(13).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(14).lpi#2' for variables 'data1_r(14).lpi#2, data1_r(15).sva#2, data1_r(14).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(15).lpi#2' for variables 'data1_r(15).lpi#2, data1_r(16).sva#2, data1_r(15).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(16).lpi#2' for variables 'data1_r(16).lpi#2, data1_r(17).sva#2, data1_r(16).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(17).lpi#2' for variables 'data1_r(17).lpi#2, data1_r(18).sva#2, data1_r(17).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(18).lpi#2' for variables 'data1_r(18).lpi#2, data1_r(19).sva#2, data1_r(18).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(19).lpi#2' for variables 'data1_r(19).lpi#2, data1_r(20).sva#2, data1_r(19).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(2).lpi#2' for variables 'data1_r(2).lpi#2, data1_r(3).sva#2, data1_r(2).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(20).lpi#2' for variables 'data1_r(20).lpi#2, data1_r(21).sva#2, data1_r(20).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(21).lpi#2' for variables 'data1_r(21).lpi#2, data1_r(22).sva#2, data1_r(21).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(22).lpi#2' for variables 'data1_r(22).lpi#2, data1_r(23).sva#2, data1_r(22).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(23).lpi#2' for variables 'data1_r(23).lpi#2, data1_r(24).sva#2, data1_r(23).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(24).lpi#2' for variables 'data1_r(24).lpi#2, data1_r(25).sva#2, data1_r(24).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(25).lpi#2' for variables 'data1_r(25).lpi#2, data1_r(26).sva#2, data1_r(25).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(26).lpi#2' for variables 'data1_r(26).lpi#2, data1_r(27).sva#2, data1_r(26).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(27).lpi#2' for variables 'data1_r(27).lpi#2, data1_r(28).sva#2, data1_r(27).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(28).lpi#2' for variables 'data1_r(28).lpi#2, data1_r(29).sva#2, data1_r(28).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(29).lpi#2' for variables 'data1_r(29).lpi#2, data1_r(30).sva#2, data1_r(29).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(3).lpi#2' for variables 'data1_r(3).lpi#2, data1_r(4).sva#2, data1_r(3).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(30).lpi#2' for variables 'data1_r(30).lpi#2, data1_r(31).sva#2, data1_r(30).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(31).lpi#2' for variables 'data1_r(31).lpi#2, data1_r(32).sva#2, data1_r(31).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(32).lpi#2' for variables 'data1_r(32).lpi#2, data1_r(33).sva#2, data1_r(32).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(33).lpi#2' for variables 'data1_r(33).lpi#2, data1_r(34).sva#2, data1_r(33).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(34).lpi#2' for variables 'data1_r(34).lpi#2, data1_r(35).sva#2, data1_r(34).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(35).lpi#2' for variables 'data1_r(35).lpi#2, data1_r(36).sva#2, data1_r(35).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(36).lpi#2' for variables 'data1_r(36).lpi#2, data1_r(37).sva#2, data1_r(36).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(37).lpi#2' for variables 'data1_r(37).lpi#2, data1_r(38).sva#2, data1_r(37).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(38).lpi#2' for variables 'data1_r(38).lpi#2, data1_r(39).sva#2, data1_r(38).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(39).lpi#2' for variables 'data1_r(39).lpi#2, data1_r(40).sva#2, data1_r(39).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(4).lpi#2' for variables 'data1_r(4).lpi#2, data1_r(5).sva#2, data1_r(4).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(40).lpi#2' for variables 'data1_r(40).lpi#2, data1_r(41).sva#2, data1_r(40).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(41).lpi#2' for variables 'data1_r(41).lpi#2, data1_r(42).sva#2, data1_r(41).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(42).lpi#2' for variables 'data1_r(42).lpi#2, data1_r(43).sva#2, data1_r(42).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(43).lpi#2' for variables 'data1_r(43).lpi#2, data1_r(44).sva#2, data1_r(43).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(44).lpi#2' for variables 'data1_r(44).lpi#2, data1_r(45).sva#2, data1_r(44).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(45).lpi#2' for variables 'data1_r(45).lpi#2, data1_r(46).sva#2, data1_r(45).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(46).lpi#2' for variables 'data1_r(46).lpi#2, data1_r(47).sva#2, data1_r(46).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(47).lpi#2' for variables 'data1_r(47).lpi#2, data1_r(48).sva#2, data1_r(47).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(48).lpi#2' for variables 'data1_r(48).lpi#2, data1_r(49).sva#2, data1_r(48).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(49).lpi#2' for variables 'data1_r(49).lpi#2, data1_r(50).sva#2, data1_r(49).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(5).lpi#2' for variables 'data1_r(5).lpi#2, data1_r(6).sva#2, data1_r(5).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(50).lpi#2' for variables 'data1_r(50).lpi#2, data1_r(51).sva#2, data1_r(50).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(51).lpi#2' for variables 'data1_r(51).lpi#2, data1_r(52).sva#2, data1_r(51).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(52).lpi#2' for variables 'data1_r(52).lpi#2, data1_r(53).sva#2, data1_r(52).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(53).lpi#2' for variables 'data1_r(53).lpi#2, data1_r(54).sva#2, data1_r(53).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(54).lpi#2' for variables 'data1_r(54).lpi#2, data1_r(55).sva#2, data1_r(54).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(55).lpi#2' for variables 'data1_r(55).lpi#2, data1_r(56).sva#2, data1_r(55).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(56).lpi#2' for variables 'data1_r(56).lpi#2, data1_r(57).sva#2, data1_r(56).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(57).lpi#2' for variables 'data1_r(57).lpi#2, data1_r(58).sva#2, data1_r(57).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(58).lpi#2' for variables 'data1_r(58).lpi#2, data1_r(59).sva#2, data1_r(58).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(59).lpi#2' for variables 'data1_r(59).lpi#2, data1_r(60).sva#2, data1_r(59).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(6).lpi#2' for variables 'data1_r(6).lpi#2, data1_r(7).sva#2, data1_r(6).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(60).lpi#2' for variables 'data1_r(60).lpi#2, data1_r(61).sva#2, data1_r(60).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(61).lpi#2' for variables 'data1_r(61).lpi#2, data1_r(62).sva#2, data1_r(61).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(62).lpi#2' for variables 'data1_r(62).lpi#2, data1_r(63).sva#2, data1_r(62).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(63).lpi#2' for variables 'data1_r(63).lpi#2, data1_r(64).sva#2, data1_r(63).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(64).lpi#2' for variables 'data1_r(64).lpi#2, data1_r(65).sva#2, data1_r(64).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(65).lpi#2' for variables 'data1_r(65).lpi#2, data1_r(66).sva#2, data1_r(65).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(7).lpi#2' for variables 'data1_r(7).lpi#2, data1_r(8).sva#2, data1_r(7).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'data1_r(8).lpi#2' for variables 'data1_r(8).lpi#2, data1_r(9).sva#2, data1_r(8).sva' (2 registers deleted). (FSM-3)
+# Info: Completed transformation 'dpfsm' on solution 'dsp_unit.v2': elapsed time 13.14 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 3558, Real ops = 1867, Vars = 870 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'dsp_unit.v2' (SOL-8)
+# Info: Running transformation 'instance' on solution 'dsp_unit.v2': elapsed time 5.30 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-15)
+# Info: Running transformation 'instance' on solution 'dsp_unit.v2': elapsed time 6.66 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-15)
+# Info: Running transformation 'instance' on solution 'dsp_unit.v2': elapsed time 7.88 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-15)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'dsp_unit.v2': elapsed time 9.49 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 4186, Real ops = 1797, Vars = 4159 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'dsp_unit.v2' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating SCVerify ccs_wrapper_dsp_unit.vhdl
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+# Add dependent file: /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/siflibs/ccs_sync_out_vld_v1.vhd
+# Add dependent file: ../../../workdir/results/dsp_unit_CATAPULT_PROJECT/td_ccore_solutions/dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5_0/rtl.vhdl
+# Add dependent file: ../../../workdir/results/dsp_unit_CATAPULT_PROJECT/td_ccore_solutions/dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429_0/rtl.vhdl
+# Add dependent file: ../../../workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/rtl.vhdl
+# Finished writing concatenated file: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+# Add dependent file: /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/siflibs/ccs_sync_out_vld_v1.vhd
+# Add dependent file: ../../../workdir/results/dsp_unit_CATAPULT_PROJECT/td_ccore_solutions/dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5_0/rtl.vhdl
+# Add dependent file: ../../../workdir/results/dsp_unit_CATAPULT_PROJECT/td_ccore_solutions/dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429_0/rtl.vhdl
+# Add dependent file: ../../../workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/rtl.vhdl
+# Finished writing concatenated simulation file: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/concat_sim_rtl.vhdl
+# Generating SCVerify SystemC wrapper
+# Info: Wrote wave database file to /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/scverify/ccs_wave_signals.dat
+# Makefile for RTL VHDL written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Makefile for Concat concat_sim_rtl VHDL written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Generating SCVerify ccs_wrapper_dsp_unit.v
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# Add dependent file: /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/siflibs/ccs_sync_out_vld_v1.v
+# Add dependent file: ../../../workdir/results/dsp_unit_CATAPULT_PROJECT/td_ccore_solutions/dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5_0/rtl.v
+# Add dependent file: ../../../workdir/results/dsp_unit_CATAPULT_PROJECT/td_ccore_solutions/dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429_0/rtl.v
+# Add dependent file: ../../../workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/rtl.v
+# Finished writing concatenated file: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# Add dependent file: /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/siflibs/ccs_sync_out_vld_v1.v
+# Add dependent file: ../../../workdir/results/dsp_unit_CATAPULT_PROJECT/td_ccore_solutions/dsp_unit__read_inputs_2d4b614b0baec5d87f090052330f1a33a7f5_0/rtl.v
+# Add dependent file: ../../../workdir/results/dsp_unit_CATAPULT_PROJECT/td_ccore_solutions/dsp_unit__write_outputs_608c4176cd6fb6e57a2f980b670eca7e7429_0/rtl.v
+# Add dependent file: ../../../workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/rtl.v
+# Finished writing concatenated simulation file: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2/concat_sim_rtl.v
+# Makefile for RTL Verilog written to file './scverify/Verify_rtl_v_msim.mk'
+# Makefile for Concat concat_sim_rtl Verilog written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'dsp_unit.v2': elapsed time 8.73 seconds, memory usage 2310668kB, peak memory usage 2376164kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 4312, Real ops = 1808, Vars = 1029 (SOL-21)
+# > set solution_dir [solution get /SOLUTION_DIR]
+# /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/dsp_unit_CATAPULT_PROJECT/dsp_unit.v2
+# > exec cat ${solution_dir}/concat_rtl.v | sed  "s/module ${DESIGN_NAME}\ /module ${DESIGN_NAME}_rtl\ /" > ${LAUNCH_DIR}/${HLS_RTL_FILE}
+# > save_reports
+# Report written to file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/reports/2_catapult_dsp_unit_dsp_unit.v2_solution_report.txt'
+# Report written to file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/reports/2_catapult_dsp_unit_dsp_unit.v2_area.txt'
+# Report written to file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/reports/2_catapult_dsp_unit_dsp_unit.v2_timing.txt'
+# Report written to file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/reports/2_catapult_dsp_unit_dsp_unit.v2_performance.txt'
+# Report written to file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/reports/2_catapult_dsp_unit_dsp_unit.v2_registers.txt'
+# Report written to file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/reports/2_catapult_dsp_unit_dsp_unit.v2_ops.txt'
+# > if { [info exists CATAPULT_POST_SCRIPT ] } {
+# >     eval $CATAPULT_POST_SCRIPT
+# > }
+# > project save
+# > end dofile ./scripts/catapult_hls.tcl
+quit
+// Finish time Fri Apr  4 03:28:23 2025, time elapsed 6:35, peak memory 2.34GB, exit status 0

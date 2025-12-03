@@ -1,0 +1,34 @@
+# do scripts/vsim_rtlsim.tcl
+# 1736767683
+# Script start time: 13:28:03
+# 0
+# 1
+# 1
+# -all
+# QuestaSim
+# 0
+# 1
+# output/tlm_audioport_rtl.dbg
+# output/tlm_audioport_rtl.bin
+# output/tlm_audioport_rtl.db
+# tlm_audioport_rtl_vopt
+# output/tlm_audioport_questasim_work
+#  -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_tlm_audioport +define+DESIGN_NAME_MACRO=tlm_audioport  +incdir+input  -sv -work work
+#  -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+#  -suppress 10587 -suppress 13408 +acc +cover=bcxefs -coverfec -debugdb -noincr -designfile output/tlm_audioport_rtl.bin
+#  -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/tlm_audioport_rtl.dbg
+# -suppress 13314 -suppress 13233 +define+RTL_SIM -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_tlm_audioport +define+DESIGN_NAME_MACRO=tlm_audioport  +incdir+input  -sv -work work
+# -2008 -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+# -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/tlm_audioport_rtl.dbg
+# 1
+# QuestaSim-64 vopt 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 13:28:03 on Jan 13,2025
+# vopt -suppress 10587 -suppress 13408 "+acc" "+cover=bcxefs" -coverfec -debugdb -noincr -designfile output/tlm_audioport_rtl.bin work.tlm_audioport_tb -o tlm_audioport_rtl_vopt 
+# 
+# Top level modules:
+# ** Error: (vopt-11) Could not find work.tlm_audioport_tb.
+# Optimization failed
+# End time: 13:28:03 on Jan 13,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0, Suppressed Warnings: 1
+# ** Error: /sw/rhel8/siemens/questa_sim-2024.3_2/questasim/linux_x86_64/vopt failed.
+# Executing ONERROR command at macro ./scripts/vsim_rtlsim.tcl line 108

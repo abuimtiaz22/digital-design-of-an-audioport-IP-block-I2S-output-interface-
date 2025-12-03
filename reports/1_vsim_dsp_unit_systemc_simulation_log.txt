@@ -1,0 +1,238 @@
+# //  Questa Sim-64
+# //  Version 2024.3_2 linux_x86_64 Nov 25 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do scripts/vsim_scsim.tcl
+#  -DSC_GUI_SIMULATION
+# -sc_arg "-run" -sc_arg "vsim_systemc"
+# -all
+# 10000
+# QuestaSim
+# 0
+# 1
+# transcript file ${REPORTS_DIR}/1_vsim_${DESIGN_NAME}_systemc_simulation_log.txt
+# transcript sizelimit $VSIM_TRANSCRIPT_SIZE
+# 
+# set VSIM_DEBUGDB     ${OUTPUT_DIR}/${DESIGN_NAME}_systemc.dbg
+# output/dsp_unit_systemc.dbg
+# set VSIM_DESIGNFILE  ${OUTPUT_DIR}/${DESIGN_NAME}_systemc.bin
+# output/dsp_unit_systemc.bin
+# set VSIM_QWAVEDB     ${OUTPUT_DIR}/${DESIGN_NAME}_systemc.db
+# output/dsp_unit_systemc.db
+# set VSIM_VOPTDIR     ${DESIGN_NAME}_systemc_vopt
+# dsp_unit_systemc_vopt
+# set VSIM_WORKDIR     ${OUTPUT_DIR}/${DESIGN_NAME}_questasim_work
+# output/dsp_unit_questasim_work
+# set VSIM_SCLIBDIR    ${OUTPUT_DIR}/${DESIGN_NAME}_questasim_sclib
+# output/dsp_unit_questasim_sclib
+# 
+# if { [info exists vsim_libs_created ] == 0 } {
+#     file delete -force $VSIM_DEBUGDB
+#     file delete -force $VSIM_DESIGNFILE
+#     file delete -force $VSIM_QWAVEDB
+#     file delete -force $VSIM_WORKDIR
+#     file delete -force $VSIM_SCLIBDIR
+# }
+# 
+# set SCCOM_SETTINGS " -g -I ${INPUT_DIR} -work $VSIM_SCLIBDIR -verbose"
+#  -g -I input -work output/dsp_unit_questasim_sclib -verbose
+# set VLOG_SETTINGS " +define+design_top_is_${DESIGN_NAME} +define+DESIGN_NAME_MACRO=${DESIGN_NAME} +incdir+${INPUT_DIR} -mfcu -sv -work work"
+#  +define+design_top_is_dsp_unit +define+DESIGN_NAME_MACRO=dsp_unit +incdir+input -mfcu -sv -work work
+#set VSIM_SETTINGS " -displaymsgmode both -voptargs=+acc -classdebug -debugDB=${VSIM_DEBUGDB} -sclib ${VSIM_SCLIBDIR} -L ${VSIM_SCLIBDIR}"
+# set VSIM_SETTINGS " -note 6599 -msgmode both -displaymsgmode both -classdebug -debugDB=${VSIM_DEBUGDB} -sclib ${VSIM_SCLIBDIR} -L ${VSIM_SCLIBDIR}"
+#  -note 6599 -msgmode both -displaymsgmode both -classdebug -debugDB=output/dsp_unit_systemc.dbg -sclib output/dsp_unit_questasim_sclib -L output/dsp_unit_questasim_sclib
+# set VOPT_SETTINGS " -suppress 10587 +acc -noincr -designfile ${VSIM_DESIGNFILE} -sclib ${VSIM_SCLIBDIR} -L ${VSIM_SCLIBDIR}"
+#  -suppress 10587 +acc -noincr -designfile output/dsp_unit_systemc.bin -sclib output/dsp_unit_questasim_sclib -L output/dsp_unit_questasim_sclib
+# 
+#################################################################
+# Merge user settings
+#################################################################
+# 
+# set VLOG_SETTINGS [concat $VLOG_SYSTEMC_OPTIONS $VLOG_SETTINGS ]
+# -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_dsp_unit +define+DESIGN_NAME_MACRO=dsp_unit +incdir+input -mfcu -sv -work work
+# set VSIM_SETTINGS [concat $VSIM_SYSTEMC_OPTIONS $VSIM_SETTINGS ]
+# -sc_arg "-run" -sc_arg "vsim_systemc" -sc_arg "-output" -sc_arg "results" -note 6599 -msgmode both -displaymsgmode both -classdebug -debugDB=output/dsp_unit_systemc.dbg -sclib output/dsp_unit_questasim_sclib -L output/dsp_unit_questasim_sclib
+# set SCCOM_SETTINGS [concat $VSIM_SCCOM_OPTIONS $SCCOM_SETTINGS ]
+# -DSC_GUI_SIMULATION -g -I input -work output/dsp_unit_questasim_sclib -verbose
+# 
+#################################################################
+# Create libraries
+#################################################################
+# 
+# if { [info exists vsim_libs_created ] == 0 } {
+#     vlib ${VSIM_WORKDIR}
+#     vmap work ${VSIM_WORKDIR}
+#     vlib ${VSIM_SCLIBDIR}
+#     vmap systemc_lib ${VSIM_SCLIBDIR}
+#     set vsim_libs_created 1
+# }
+# 1
+# 
+#################################################################
+# Compilation
+#################################################################
+# 
+# SystemC
+# foreach filename [concat ${SYSTEMC_SOURCE_FILES} ${SYSTEMC_TESTBENCH_FILES} ] {
+#     eval "sccom $SCCOM_SETTINGS ${filename}"
+# }
+# sccom -reportprogress -DSC_GUI_SIMULATION -g -I input -work output/dsp_unit_questasim_sclib -verbose input/dsp_unit.cpp 
+# Start time: 13:09:20 on Mar 28,2025
+# 
+# QuestaSim-64 sccom 2024.3_2 compiler 2024.11 Nov 25 2024
+# 
+# -- Compiling module dsp_unit
+# Exported modules:
+# 	dsp_unit
+# End time: 13:09:24 on Mar 28,2025, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# sccom -reportprogress -DSC_GUI_SIMULATION -g -I input -work output/dsp_unit_questasim_sclib -verbose input/dsp_unit_tb.cpp 
+# Start time: 13:09:24 on Mar 28,2025
+# 
+# QuestaSim-64 sccom 2024.3_2 compiler 2024.11 Nov 25 2024
+# 
+# -- Compiling module dsp_unit_tb
+# End time: 13:09:27 on Mar 28,2025, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# sccom -reportprogress -DSC_GUI_SIMULATION -g -I input -work output/dsp_unit_questasim_sclib -verbose input/dsp_unit_top.cpp 
+# Start time: 13:09:27 on Mar 28,2025
+# 
+# QuestaSim-64 sccom 2024.3_2 compiler 2024.11 Nov 25 2024
+# 
+# -- Compiling module dsp_unit
+# -- Compiling module dsp_unit_tb
+# -- Compiling module dsp_unit_top
+# End time: 13:09:29 on Mar 28,2025, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# sccom -reportprogress -DSC_GUI_SIMULATION -g -I input -work output/dsp_unit_questasim_sclib -verbose input/dsp_unit_sc_main.cpp 
+# Start time: 13:09:29 on Mar 28,2025
+# 
+# QuestaSim-64 sccom 2024.3_2 compiler 2024.11 Nov 25 2024
+# 
+# -- Compiling module dsp_unit
+# -- Compiling module dsp_unit_tb
+# -- Compiling module dsp_unit_top
+# Exported modules:
+# 	sc_main
+# End time: 13:09:33 on Mar 28,2025, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# eval "sccom ${SCCOM_SETTINGS} -link"
+# sccom -reportprogress -DSC_GUI_SIMULATION -g -I input -work output/dsp_unit_questasim_sclib -verbose -link 
+# Start time: 13:09:33 on Mar 28,2025
+# 
+# QuestaSim-64 sccom 2024.3_2 compiler 2024.11 Nov 25 2024
+# End time: 13:09:36 on Mar 28,2025, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# 
+#################################################################
+# Optimization
+#################################################################
+# 
+# eval "vopt $VOPT_SETTINGS systemc_lib.sc_main -o ${VSIM_VOPTDIR}"
+# QuestaSim-64 vopt 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 13:09:36 on Mar 28,2025
+# vopt -reportprogress 300 -suppress 10587 "+acc" -noincr -designfile output/dsp_unit_systemc.bin -sclib output/dsp_unit_questasim_sclib -L output/dsp_unit_questasim_sclib systemc_lib.sc_main -o dsp_unit_systemc_vopt 
+# 
+# Top level modules:
+# 	sc_main
+# 
+# Analyzing design...
+# -- Loading shared library /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_sclib/_sc/linux_x86_64_gcc-10.3.0/systemc.so
+# -- Loading systemc module /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_sclib.sc_main
+# Optimizing 0 design-units (inlining 0/5 systemc instances):
+# viscom:
+# VISCOM: Start time: 13:09:37 on Mar 28,2025
+# 
+# VISCOM: QuestaSim /sw/rhel8/siemens/questa_sim-2024.3_2/questasim/linux_x86_64/VisualizerRls/bin/viscom 2024.3_2 at 2024.11 Nov 25 2024
+# VISCOM: Writing output/dsp_unit_systemc.bin
+# VISCOM: Done writing output/dsp_unit_systemc.bin
+# VISCOM: End time: 13:09:37 on Mar 28,2025, Elapsed time: 0:00:00 (Process Size : 367MB, Peak Process Size : 410MB)
+# 
+# 
+# Optimized design name is dsp_unit_systemc_vopt
+# End time: 13:09:37 on Mar 28,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0, Suppressed Warnings: 1
+# 
+#################################################################
+# Simulation (elaboration)
+#################################################################
+# 
+# eval "vsim ${VSIM_VOPTDIR} ${VSIM_SETTINGS}"
+# vsim dsp_unit_systemc_vopt -sc_arg "-run" -sc_arg "vsim_systemc" -sc_arg "-output" -sc_arg "results" -note 6599 -msgmode both -displaymsgmode both -classdebug -debugDB=output/dsp_unit_systemc.dbg -sclib output/dsp_unit_questasim_sclib -L output/dsp_unit_questasim_sclib 
+# Start time: 13:09:37 on Mar 28,2025
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_sclib/_sc/linux_x86_64_gcc-10.3.0/systemc.so
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_sclib.sc_main
+# Simulation output is saved to file results/dsp_unit_vsim_systemc_out.txt
+# Simulation output is saved in SoX format to file results/dsp_unit_vsim_systemc_out.dat
+# ** Note: (vsim-8900) Creating design debug database output/dsp_unit_systemc.dbg.
+# It appears vopt was not run with -debugdb option on this design.
+# Advanced Causality and Schematic debug features will not be available.
+#eval "vsim $VSIM_SETTINGS  systemc_lib.sc_main"
+# 
+#################################################################
+# Setup Wave window
+#################################################################
+# 
+# run 0 
+# Using default filter coefficients values
+# 
+# if [batch_mode] {
+#     onfinish stop
+# } else {
+#     log -r /*
+#     if { [info exists VSIM_SC_WAVES ] == 1 } {
+# 	source $VSIM_SC_WAVES
+#     } else {
+# 	add wave -r sim:/sc_main/*
+# 	configure wave -signalnamewidth 1
+# 	configure wave -datasetprefix 0
+#     }
+# }
+# 
+#################################################################
+# Simulation (run)
+#################################################################
+# 
+# run $SYSTEMC_SIMULATION_TIME
+# Using default filter coefficients values
+# ** Note (downgraded): (vsim-6599) T1, Write to config registers
+# ** Note (downgraded): (vsim-6599) T2: Write dsp_regs
+# ** Note (downgraded): (vsim-6599) T3; Scaling Filters OFF
+# ** Note (downgraded): (vsim-6599) T4 Filter, Impulse
+# ** Note (downgraded): (vsim-6599) T5 FIR0 Sweep
+# ** Note (downgraded): (vsim-6599) T6 FIR1 Sweep
+# ** Note (downgraded): (vsim-6599) T7 Clear Data
+# ** Note (downgraded): (vsim-6599) Stop
+# Max. latency = 1 clock cycles.
+# ** Note: (vsim-6574) SystemC simulation stopped by user.
+# 1
+# 
+# 
+#################################################################
+# Post-simulation reporting
+#################################################################
+# 
+# if [batch_mode] {
+#     exit
+# } else {
+#     wave zoom full
+# }
+# 0 ns
+# 77642183 ns
+# 
+# SIMULATION STOPPED AT TIME = 73944936 ns
+# --------------------------------------------------------------------------------
+# Maximum latency = 0
+# --------------------------------------------------------------------------------
+# End time: 14:02:07 on Mar 28,2025, Elapsed time: 0:52:30
+# Errors: 0, Warnings: 0

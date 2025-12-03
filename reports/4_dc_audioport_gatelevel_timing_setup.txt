@@ -1,0 +1,611 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : audioport
+Version: T-2022.03-SP5-1
+Date   : Sun May  4 01:02:33 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: PADDR[4] (input port clocked by clk)
+  Endpoint: dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/clk_gate_data0_r_3_lpi_2_reg/latch
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  audioport          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    5.00       5.00 f
+  PADDR[4] (in)                                           0.00       5.00 f
+  control_unit_1/PADDR[4] (control_unit_test_1)           0.00       5.00 f
+  control_unit_1/U68/ZN (NOR2_X1)                         0.06       5.06 r
+  control_unit_1/U133/ZN (NAND2_X1)                       0.08       5.14 f
+  control_unit_1/U134/ZN (INV_X1)                         0.05       5.19 r
+  control_unit_1/U135/ZN (NAND2_X1)                       0.06       5.25 f
+  control_unit_1/U277/ZN (NOR2_X1)                        0.17       5.42 r
+  control_unit_1/U278/ZN (INV_X1)                         0.04       5.46 f
+  control_unit_1/U287/ZN (NOR4_X1)                        0.09       5.55 r
+  control_unit_1/U289/ZN (NAND2_X1)                       0.03       5.58 f
+  control_unit_1/U74/ZN (NOR4_X1)                         0.19       5.77 r
+  control_unit_1/U290/Z (CLKBUF_X1)                       0.13       5.90 r
+  control_unit_1/clr_out (control_unit_test_1)            0.00       5.90 r
+  dsp_unit_1/clr_in (dsp_unit_test_1)                     0.00       5.90 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/clr_in (dsp_unit_dsp_proc_test_1)
+                                                          0.00       5.90 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2529/ZN (NOR2_X1)
+                                                          0.04       5.94 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2530/ZN (OAI21_X1)
+                                                          0.15       6.09 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U155/ZN (NAND2_X2)
+                                                          0.15       6.24 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U471/ZN (OAI21_X1)
+                                                          0.13       6.37 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U8929/ZN (INV_X1)
+                                                          0.12       6.49 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U347/Z (CLKBUF_X2)
+                                                          0.19       6.68 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U8956/ZN (OAI21_X1)
+                                                          0.10       6.78 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/clk_gate_data0_r_3_lpi_2_reg/EN (SNPS_CLOCK_GATE_HIGH_dsp_unit_dsp_proc_133)
+                                                          0.00       6.78 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/clk_gate_data0_r_3_lpi_2_reg/latch/E (CLKGATETST_X1)
+                                                          0.01       6.79 r
+  data arrival time                                                  6.79
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (ideal)                             0.00      17.50
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/clk_gate_data0_r_3_lpi_2_reg/latch/CK (CLKGATETST_X1)
+                                                          0.00      17.50 r
+  clock gating setup time                                -0.09      17.41
+  data required time                                                17.41
+  --------------------------------------------------------------------------
+  data required time                                                17.41
+  data arrival time                                                 -6.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.62
+
+
+  Startpoint: PADDR[4] (input port clocked by clk)
+  Endpoint: control_unit_1/ldata_r_reg[10][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk_in2reg
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  audioport          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    5.00       5.00 f
+  PADDR[4] (in)                                           0.00       5.00 f
+  control_unit_1/PADDR[4] (control_unit_test_1)           0.00       5.00 f
+  control_unit_1/U68/ZN (NOR2_X1)                         0.06       5.06 r
+  control_unit_1/U133/ZN (NAND2_X1)                       0.08       5.14 f
+  control_unit_1/U134/ZN (INV_X1)                         0.05       5.19 r
+  control_unit_1/U135/ZN (NAND2_X1)                       0.06       5.25 f
+  control_unit_1/U277/ZN (NOR2_X1)                        0.17       5.42 r
+  control_unit_1/U278/ZN (INV_X1)                         0.04       5.46 f
+  control_unit_1/U287/ZN (NOR4_X1)                        0.09       5.55 r
+  control_unit_1/U289/ZN (NAND2_X1)                       0.03       5.58 f
+  control_unit_1/U74/ZN (NOR4_X1)                         0.19       5.77 r
+  control_unit_1/U290/Z (CLKBUF_X1)                       0.13       5.90 r
+  control_unit_1/U304/ZN (NOR2_X1)                        0.08       5.98 f
+  control_unit_1/U305/Z (CLKBUF_X3)                       0.18       6.16 f
+  control_unit_1/U308/Z (CLKBUF_X1)                       0.21       6.38 f
+  control_unit_1/ldata_r_reg[10][0]/D (SDFFR_X1)          0.03       6.40 f
+  data arrival time                                                  6.40
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (ideal)                             0.00      17.50
+  control_unit_1/ldata_r_reg[10][0]/CK (SDFFR_X1)         0.00      17.50 r
+  library setup time                                     -0.11      17.39
+  data required time                                                17.39
+  --------------------------------------------------------------------------
+  data required time                                                17.39
+  data arrival time                                                 -6.40
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.99
+
+
+  Startpoint: control_unit_1/ltail_r_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PRDATA[1] (output port clocked by clk)
+  Path Group: clk_reg2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  audioport          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_unit_1/ltail_r_reg[4]/CK (SDFFR_X1)             0.00       0.00 r
+  control_unit_1/ltail_r_reg[4]/QN (SDFFR_X1)             0.11       0.11 f
+  control_unit_1/U644/ZN (NAND2_X1)                       0.05       0.16 r
+  control_unit_1/U648/ZN (NOR2_X1)                        0.06       0.21 f
+  control_unit_1/U649/Z (CLKBUF_X1)                       0.19       0.40 f
+  control_unit_1/U680/Z (CLKBUF_X1)                       0.22       0.63 f
+  control_unit_1/U692/Z (CLKBUF_X1)                       0.15       0.77 f
+  control_unit_1/U1053/ZN (AOI22_X1)                      0.08       0.85 r
+  control_unit_1/U1057/ZN (AND4_X1)                       0.07       0.92 r
+  control_unit_1/U1058/ZN (NAND4_X1)                      0.04       0.96 f
+  control_unit_1/U1059/ZN (AOI22_X1)                      0.06       1.03 r
+  control_unit_1/U1070/ZN (OAI211_X1)                     0.05       1.08 f
+  control_unit_1/U1226/ZN (AOI22_X1)                      0.06       1.14 r
+  control_unit_1/U1227/ZN (OAI221_X1)                     0.05       1.19 f
+  control_unit_1/PRDATA[1] (control_unit_test_1)          0.00       1.19 f
+  U7/Z (MUX2_X1)                                          0.07       1.26 f
+  PRDATA[1] (out)                                         0.00       1.26 f
+  data arrival time                                                  1.26
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (ideal)                             0.00      17.50
+  output external delay                                  -5.00      12.50
+  data required time                                                12.50
+  --------------------------------------------------------------------------
+  data required time                                                12.50
+  data arrival time                                                 -1.26
+  --------------------------------------------------------------------------
+  slack (MET)                                                       11.24
+
+
+  Startpoint: dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_dsp_proc_fsm_inst/state_var_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/scheduled_region_else_if_else_acc1_54_0_sva_reg[54]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk_reg2reg
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  audioport          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_dsp_proc_fsm_inst/state_var_reg[0]/CK (SDFFR_X1)
+                                                          0.00       0.00 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_dsp_proc_fsm_inst/state_var_reg[0]/QN (SDFFR_X1)
+                                                          0.10       0.10 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U256/ZN (OR3_X1)
+                                                          0.09       0.20 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U255/ZN (INV_X1)
+                                                          0.12       0.32 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U478/ZN (INV_X1)
+                                                          0.09       0.41 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U479/ZN (NAND2_X1)
+                                                          0.05       0.45 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U481/ZN (AOI211_X1)
+                                                          0.04       0.49 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U482/ZN (XNOR2_X1)
+                                                          0.07       0.56 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U483/ZN (AND2_X1)
+                                                          0.05       0.61 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U484/ZN (AOI221_X1)
+                                                          0.12       0.73 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U486/ZN (AOI21_X1)
+                                                          0.06       0.79 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2553/S (FA_X1)
+                                                          0.15       0.94 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2550/ZN (AOI22_X1)
+                                                          0.04       0.98 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4933/ZN (NOR2_X1)
+                                                          0.07       1.06 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4934/ZN (NOR2_X1)
+                                                          0.03       1.08 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4935/ZN (NAND2_X1)
+                                                          0.11       1.20 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5114/ZN (NOR2_X1)
+                                                          0.09       1.29 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5115/Z (CLKBUF_X1)
+                                                          0.17       1.46 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5116/ZN (AOI22_X1)
+                                                          0.10       1.56 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5127/ZN (NAND4_X1)
+                                                          0.05       1.61 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5128/ZN (NOR4_X1)
+                                                          0.10       1.70 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5129/ZN (NAND3_X1)
+                                                          0.04       1.74 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5130/ZN (NOR4_X1)
+                                                          0.18       1.92 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5249/Z (CLKBUF_X1)
+                                                          0.16       2.08 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5317/ZN (NAND2_X1)
+                                                          0.05       2.13 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5318/ZN (XNOR2_X1)
+                                                          0.13       2.27 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5319/ZN (OAI22_X1)
+                                                          0.05       2.32 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5320/ZN (AOI211_X1)
+                                                          0.11       2.43 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5321/ZN (NAND2_X1)
+                                                          0.05       2.47 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5323/ZN (OAI211_X1)
+                                                          0.05       2.53 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5324/ZN (OAI21_X1)
+                                                          0.04       2.57 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5325/ZN (OAI22_X1)
+                                                          0.05       2.62 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U5326/ZN (INV_X1)
+                                                          0.03       2.65 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/intadd_1/U40/CO (FA_X1)
+                                                          0.10       2.75 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/intadd_1/U39/S (FA_X1)
+                                                          0.13       2.88 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4910/ZN (INV_X1)
+                                                          0.02       2.90 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/intadd_18/U4/CO (FA_X1)
+                                                          0.10       3.00 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/intadd_18/U3/CO (FA_X1)
+                                                          0.09       3.09 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/intadd_18/U2/CO (FA_X1)
+                                                          0.09       3.18 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2468/ZN (INV_X1)
+                                                          0.03       3.21 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2470/ZN (NOR2_X1)
+                                                          0.03       3.24 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2471/ZN (AOI21_X1)
+                                                          0.08       3.32 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2472/ZN (NOR2_X1)
+                                                          0.03       3.35 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2474/ZN (OAI21_X1)
+                                                          0.06       3.41 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U15688/CO (FA_X1)
+                                                          0.08       3.49 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2476/ZN (NOR2_X1)
+                                                          0.03       3.51 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2477/ZN (AOI21_X1)
+                                                          0.06       3.58 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2479/ZN (NOR2_X1)
+                                                          0.03       3.61 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2480/ZN (AOI21_X1)
+                                                          0.07       3.67 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2482/ZN (NOR2_X1)
+                                                          0.03       3.70 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2483/ZN (AOI21_X1)
+                                                          0.07       3.77 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2485/ZN (NOR2_X1)
+                                                          0.03       3.80 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2486/ZN (AOI21_X1)
+                                                          0.07       3.87 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2487/ZN (NOR2_X1)
+                                                          0.03       3.90 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2489/ZN (OAI21_X1)
+                                                          0.06       3.96 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2490/ZN (NOR2_X1)
+                                                          0.03       3.99 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2492/ZN (OAI21_X1)
+                                                          0.06       4.05 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2493/ZN (NOR2_X1)
+                                                          0.03       4.08 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2495/ZN (OAI21_X1)
+                                                          0.06       4.14 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2496/ZN (NOR2_X1)
+                                                          0.03       4.17 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2498/ZN (OAI21_X1)
+                                                          0.06       4.23 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2500/ZN (NOR2_X1)
+                                                          0.03       4.26 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2501/ZN (AOI21_X1)
+                                                          0.07       4.32 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2503/ZN (NOR2_X1)
+                                                          0.03       4.35 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2504/ZN (AOI21_X1)
+                                                          0.07       4.42 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2505/ZN (NOR2_X1)
+                                                          0.03       4.45 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2507/ZN (OAI21_X1)
+                                                          0.06       4.51 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2508/ZN (NOR2_X1)
+                                                          0.03       4.54 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2510/ZN (OAI21_X1)
+                                                          0.06       4.60 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2511/ZN (NOR2_X1)
+                                                          0.03       4.63 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2513/ZN (OAI21_X1)
+                                                          0.06       4.69 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2514/ZN (NOR2_X1)
+                                                          0.03       4.72 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2516/ZN (OAI21_X1)
+                                                          0.07       4.79 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2517/ZN (AOI222_X1)
+                                                          0.06       4.85 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2520/CO (FA_X1)
+                                                          0.12       4.97 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2523/ZN (NOR2_X1)
+                                                          0.04       5.01 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2524/ZN (AOI21_X1)
+                                                          0.03       5.04 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2564/CO (FA_X1)
+                                                          0.10       5.14 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2565/ZN (INV_X1)
+                                                          0.04       5.18 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2566/ZN (NOR2_X1)
+                                                          0.03       5.21 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2568/ZN (OAI22_X1)
+                                                          0.06       5.26 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2569/ZN (NOR2_X1)
+                                                          0.03       5.30 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2571/ZN (OAI21_X1)
+                                                          0.06       5.36 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2572/ZN (NOR2_X1)
+                                                          0.03       5.39 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2574/ZN (OAI21_X1)
+                                                          0.06       5.45 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2575/ZN (NOR2_X1)
+                                                          0.03       5.48 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2577/ZN (OAI21_X1)
+                                                          0.06       5.54 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2578/ZN (NOR2_X1)
+                                                          0.03       5.57 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2580/ZN (OAI21_X1)
+                                                          0.06       5.63 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2581/ZN (NOR2_X1)
+                                                          0.03       5.66 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2583/ZN (OAI21_X1)
+                                                          0.06       5.72 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2584/ZN (NOR2_X1)
+                                                          0.03       5.75 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2586/ZN (OAI21_X1)
+                                                          0.06       5.81 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2587/ZN (NOR2_X1)
+                                                          0.03       5.84 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2589/ZN (OAI21_X1)
+                                                          0.06       5.90 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2590/ZN (NOR2_X1)
+                                                          0.03       5.93 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2592/ZN (OAI21_X1)
+                                                          0.06       5.99 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2593/ZN (NOR2_X1)
+                                                          0.03       6.02 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2595/ZN (OAI21_X1)
+                                                          0.06       6.08 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2596/ZN (NOR2_X1)
+                                                          0.03       6.11 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2598/ZN (OAI21_X1)
+                                                          0.06       6.17 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2599/ZN (NOR2_X1)
+                                                          0.03       6.20 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2601/ZN (OAI21_X1)
+                                                          0.06       6.26 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2602/ZN (NOR2_X1)
+                                                          0.03       6.29 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2604/ZN (OAI21_X1)
+                                                          0.06       6.35 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2605/ZN (NOR2_X1)
+                                                          0.03       6.38 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2607/ZN (OAI21_X1)
+                                                          0.06       6.44 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2609/ZN (NOR2_X1)
+                                                          0.03       6.47 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2611/ZN (OAI21_X1)
+                                                          0.06       6.53 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2612/ZN (INV_X1)
+                                                          0.03       6.56 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2613/ZN (OAI222_X1)
+                                                          0.07       6.63 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U2614/ZN (INV_X1)
+                                                          0.03       6.66 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4889/CO (FA_X1)
+                                                          0.09       6.75 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4890/ZN (NOR2_X1)
+                                                          0.06       6.80 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4892/ZN (OAI21_X1)
+                                                          0.04       6.84 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4893/ZN (NOR2_X1)
+                                                          0.06       6.90 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4895/ZN (OAI21_X1)
+                                                          0.04       6.94 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4896/ZN (AOI222_X1)
+                                                          0.13       7.07 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4897/ZN (NOR2_X1)
+                                                          0.04       7.11 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4899/ZN (OAI21_X1)
+                                                          0.06       7.17 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4901/ZN (NOR2_X1)
+                                                          0.03       7.20 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4902/ZN (AOI21_X1)
+                                                          0.07       7.26 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4903/ZN (NOR2_X1)
+                                                          0.03       7.30 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4905/ZN (OAI21_X1)
+                                                          0.07       7.37 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U4906/ZN (AOI222_X1)
+                                                          0.06       7.42 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U15996/CO (FA_X1)
+                                                          0.11       7.53 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U15997/ZN (XNOR2_X1)
+                                                          0.06       7.59 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U15998/ZN (XNOR2_X1)
+                                                          0.07       7.65 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U15999/ZN (OAI21_X1)
+                                                          0.04       7.69 f
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/U16000/ZN (AOI21_X1)
+                                                          0.06       7.74 r
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/scheduled_region_else_if_else_acc1_54_0_sva_reg[54]/D (SDFFR_X1)
+                                                          0.01       7.75 r
+  data arrival time                                                  7.75
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (ideal)                             0.00      17.50
+  dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/scheduled_region_else_if_else_acc1_54_0_sva_reg[54]/CK (SDFFR_X1)
+                                                          0.00      17.50 r
+  library setup time                                     -0.07      17.43
+  data required time                                                17.43
+  --------------------------------------------------------------------------
+  data required time                                                17.43
+  data arrival time                                                 -7.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        9.68
+
+
+  Startpoint: cdc_unit_1/tick_prev_reg
+              (rising edge-triggered flip-flop clocked by mclk)
+  Endpoint: cdc_unit_1/mrst_n_sync1_reg
+            (rising edge-triggered flip-flop clocked by mclk')
+  Path Group: mclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  audioport          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock mclk (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  cdc_unit_1/tick_prev_reg/CK (DFFR_X1)                   0.00       0.00 r
+  cdc_unit_1/tick_prev_reg/Q (DFFR_X1)                    0.10       0.10 r
+  cdc_unit_1/mrst_n_sync1_reg/SI (SDFFR_X1)               0.01       0.11 r
+  data arrival time                                                  0.11
+
+  clock mclk' (rise edge)                                27.12      27.12
+  clock network delay (ideal)                             0.00      27.12
+  cdc_unit_1/mrst_n_sync1_reg/CK (SDFFR_X1)               0.00      27.12 r
+  library setup time                                     -0.07      27.05
+  data required time                                                27.05
+  --------------------------------------------------------------------------
+  data required time                                                27.05
+  data arrival time                                                 -0.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                       26.94
+
+
+  Startpoint: PADDR[2] (input port clocked by clk)
+  Endpoint: PRDATA[1] (output port clocked by clk)
+  Path Group: mclk_in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  audioport          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    5.00       5.00 f
+  PADDR[2] (in)                                           0.00       5.00 f
+  control_unit_1/PADDR[2] (control_unit_test_1)           0.00       5.00 f
+  control_unit_1/U132/ZN (NAND2_X1)                       0.04       5.04 r
+  control_unit_1/U145/ZN (INV_X1)                         0.03       5.08 f
+  control_unit_1/U146/ZN (NAND2_X1)                       0.08       5.15 r
+  control_unit_1/U147/ZN (INV_X1)                         0.04       5.19 f
+  control_unit_1/U153/ZN (NAND2_X1)                       0.08       5.27 r
+  control_unit_1/U198/ZN (NOR2_X1)                        0.08       5.35 f
+  control_unit_1/U919/Z (CLKBUF_X1)                       0.17       5.52 f
+  control_unit_1/U1185/ZN (AOI22_X1)                      0.10       5.62 r
+  control_unit_1/U1186/ZN (NAND4_X1)                      0.05       5.66 f
+  control_unit_1/U1187/ZN (NOR4_X1)                       0.09       5.76 r
+  control_unit_1/U1224/ZN (NAND4_X1)                      0.05       5.81 f
+  control_unit_1/U1225/ZN (NOR4_X1)                       0.10       5.90 r
+  control_unit_1/U1227/ZN (OAI221_X1)                     0.05       5.95 f
+  control_unit_1/PRDATA[1] (control_unit_test_1)          0.00       5.95 f
+  U7/Z (MUX2_X1)                                          0.07       6.02 f
+  PRDATA[1] (out)                                         0.00       6.02 f
+  data arrival time                                                  6.02
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (ideal)                             0.00      17.50
+  output external delay                                  -5.00      12.50
+  data required time                                                12.50
+  --------------------------------------------------------------------------
+  data required time                                                12.50
+  data arrival time                                                 -6.02
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.48
+
+
+  Startpoint: i2s_unit_1/shift_reg_reg[47]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PRDATA[1] (output port clocked by clk)
+  Path Group: mclk_reg2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  audioport          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  i2s_unit_1/shift_reg_reg[47]/CK (SDFFR_X1)              0.00       0.00 r
+  i2s_unit_1/shift_reg_reg[47]/QN (SDFFR_X1)              0.09       0.09 f
+  i2s_unit_1/test_so (i2s_unit_test_1)                    0.00       0.09 f
+  U7/Z (MUX2_X1)                                          0.06       0.15 f
+  PRDATA[1] (out)                                         0.00       0.16 f
+  data arrival time                                                  0.16
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (ideal)                             0.00      17.50
+  output external delay                                  -5.00      12.50
+  data required time                                                12.50
+  --------------------------------------------------------------------------
+  data required time                                                12.50
+  data arrival time                                                 -0.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                       12.34
+
+
+  Startpoint: i2s_unit_1/counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: i2s_unit_1/shift_reg_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: mclk_reg2reg
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  audioport          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  i2s_unit_1/counter_reg[0]/CK (SDFFR_X1)                 0.00       0.00 r
+  i2s_unit_1/counter_reg[0]/Q (SDFFR_X1)                  0.08       0.08 f
+  i2s_unit_1/U5/ZN (NAND2_X1)                             0.05       0.13 r
+  i2s_unit_1/U6/ZN (NOR2_X1)                              0.03       0.16 f
+  i2s_unit_1/U8/ZN (NAND3_X1)                             0.04       0.20 r
+  i2s_unit_1/U27/ZN (NOR2_X1)                             0.03       0.23 f
+  i2s_unit_1/U29/ZN (NOR2_X1)                             0.16       0.39 r
+  i2s_unit_1/U3/Z (CLKBUF_X2)                             0.18       0.57 r
+  i2s_unit_1/U65/ZN (AOI22_X1)                            0.06       0.62 f
+  i2s_unit_1/U66/ZN (INV_X1)                              0.03       0.66 r
+  i2s_unit_1/shift_reg_reg[11]/D (SDFFR_X1)               0.01       0.67 r
+  data arrival time                                                  0.67
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (ideal)                             0.00      17.50
+  i2s_unit_1/shift_reg_reg[11]/CK (SDFFR_X1)              0.00      17.50 r
+  library setup time                                     -0.07      17.43
+  data required time                                                17.43
+  --------------------------------------------------------------------------
+  data required time                                                17.43
+  data arrival time                                                 -0.67
+  --------------------------------------------------------------------------
+  slack (MET)                                                       16.76
+
+
+1

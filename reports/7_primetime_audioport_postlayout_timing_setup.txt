@@ -1,0 +1,576 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-group **async_default** **clock_gating_default** **default** clk clk_in2reg clk_reg2out clk_reg2reg mclk mclk_in2out mclk_in2reg mclk_reg2out mclk_reg2reg
+	-sort_by slack
+Design : audioport
+Version: U-2022.12
+Date   : Sun May  4 14:39:50 2025
+****************************************
+
+
+  Startpoint: rst_n (input port clocked by clk)
+  Endpoint: i2s_unit_1/shift_reg_reg_34_
+               (recovery check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    8.25       8.25 r
+  rst_n (in)                                              0.00 &     8.25 r
+  FE_OFC63_rst_n/ZN (INV_X2)                              0.06 &     8.31 f
+  FE_OFC139_rst_n/Z (CLKBUF_X3)                           0.15 &     8.47 f
+  FE_OFC310_rst_n/ZN (INV_X2)                             0.16 &     8.63 r
+  cdc_unit_1/U125/Z (MUX2_X2)                             0.14 &     8.77 r
+  cdc_unit_1/FE_OFC773_muxrst_n/Z (CLKBUF_X3)             0.13 &     8.90 r
+  cdc_unit_1/FE_OFC774_muxrst_n/Z (BUF_X2)                0.18 &     9.08 r
+  i2s_unit_1/shift_reg_reg_34_/RN (SDFFR_X1)              0.02 &     9.10 r
+  data arrival time                                                  9.10
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (propagated)                        0.34      17.84
+  clock reconvergence pessimism                           0.00      17.84
+  i2s_unit_1/shift_reg_reg_34_/CK (SDFFR_X1)                        17.84 r
+  library recovery time                                   0.03      17.87
+  data required time                                                17.87
+  ------------------------------------------------------------------------------
+  data required time                                                17.87
+  data arrival time                                                 -9.10
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        8.77
+
+
+  Startpoint: PWDATA[9] (input port clocked by clk)
+  Endpoint: dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_46_lpi_2_reg/latch_clone
+               (rising clock gating-check end-point clocked by clk)
+  Path Group: **clock_gating_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    5.00       5.00 f
+  PWDATA[9] (in)                                          0.00 &     5.00 f
+  control_unit_1/FE_OFC738_PWDATA_9/Z (CLKBUF_X3)         0.14 &     5.14 f
+  control_unit_1/FE_OFC739_PWDATA_9/Z (CLKBUF_X3)         0.16 &     5.30 f
+  control_unit_1/U283/ZN (NOR4_X1)                        0.14 &     5.43 r
+  control_unit_1/FE_OFC1846_n93/Z (BUF_X1)                0.05 &     5.48 r
+  control_unit_1/U286/ZN (NAND4_X1)                       0.03 &     5.51 f
+  control_unit_1/U287/ZN (NOR4_X1)                        0.07 &     5.59 r
+  control_unit_1/FE_OFC1880_n99/Z (CLKBUF_X1)             0.06 &     5.64 r
+  control_unit_1/U289/ZN (NAND2_X1)                       0.02 &     5.66 f
+  control_unit_1/U74/ZN (NOR4_X1)                         0.08 &     5.74 r
+  control_unit_1/FE_OFC1230_clr/Z (BUF_X2)                0.11 &     5.85 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U2529/ZN (NOR2_X1)
+                                                          0.02 &     5.87 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U2530/ZN (OAI21_X1)
+                                                          0.03 &     5.90 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/FE_OFC1326_read_inputs_mioi_wen_comp/Z (BUF_X1)
+                                                          0.09 &     5.99 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U155/ZN (NAND2_X2)
+                                                          0.09 &     6.08 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U471/ZN (OAI21_X1)
+                                                          0.12 &     6.20 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U8929/ZN (INV_X4)
+                                                          0.05 &     6.25 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U8974/ZN (OAI21_X1)
+                                                          0.08 &     6.33 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_46_lpi_2_reg/latch_clone/E (CLKGATETST_X8)
+                                                          0.00 &     6.33 r
+  data arrival time                                                  6.33
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (propagated)                        0.21      17.71
+  clock reconvergence pessimism                           0.00      17.71
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_46_lpi_2_reg/latch_clone/CK (CLKGATETST_X8)
+                                                                    17.71 r
+  clock gating setup time                                -0.20      17.51
+  data required time                                                17.51
+  ------------------------------------------------------------------------------
+  data required time                                                17.51
+  data arrival time                                                 -6.33
+  ------------------------------------------------------------------------------
+  slack (MET)                                                       11.18
+
+
+  Startpoint: scan_en_in (input port clocked by clk)
+  Endpoint: control_unit_1/rbank_r_reg_21__26_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    5.00       5.00 f
+  scan_en_in (in)                                         0.00 &     5.00 f
+  FE_OFC360_scan_en_in/ZN (INV_X4)                        0.07 &     5.07 r
+  FE_OFC468_scan_en_in/ZN (INV_X4)                        0.16 &     5.23 f
+  FE_OFC634_scan_en_in/Z (CLKBUF_X3)                      0.21 &     5.44 f
+  control_unit_1/rbank_r_reg_21__26_/SE (SDFFR_X1)        0.02 &     5.46 f
+  data arrival time                                                  5.46
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (propagated)                        0.32      17.82
+  clock reconvergence pessimism                           0.00      17.82
+  control_unit_1/rbank_r_reg_21__26_/CK (SDFFR_X1)                  17.82 r
+  library setup time                                     -0.10      17.73
+  data required time                                                17.73
+  ------------------------------------------------------------------------------
+  data required time                                                17.73
+  data arrival time                                                 -5.46
+  ------------------------------------------------------------------------------
+  slack (MET)                                                       12.26
+
+
+  Startpoint: PWDATA[9] (input port clocked by clk)
+  Endpoint: control_unit_1/ldata_r_reg_8__0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk_in2reg
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    5.00       5.00 f
+  PWDATA[9] (in)                                          0.00 &     5.00 f
+  control_unit_1/FE_OFC738_PWDATA_9/Z (CLKBUF_X3)         0.14 &     5.14 f
+  control_unit_1/FE_OFC739_PWDATA_9/Z (CLKBUF_X3)         0.16 &     5.30 f
+  control_unit_1/U283/ZN (NOR4_X1)                        0.14 &     5.43 r
+  control_unit_1/FE_OFC1846_n93/Z (BUF_X1)                0.05 &     5.48 r
+  control_unit_1/U286/ZN (NAND4_X1)                       0.03 &     5.51 f
+  control_unit_1/U287/ZN (NOR4_X1)                        0.07 &     5.59 r
+  control_unit_1/FE_OFC1880_n99/Z (CLKBUF_X1)             0.06 &     5.64 r
+  control_unit_1/U289/ZN (NAND2_X1)                       0.02 &     5.66 f
+  control_unit_1/U74/ZN (NOR4_X1)                         0.08 &     5.74 r
+  control_unit_1/FE_OFC1230_clr/Z (BUF_X2)                0.11 &     5.85 r
+  control_unit_1/U304/ZN (NOR2_X1)                        0.02 &     5.87 f
+  control_unit_1/FE_OFC1314_net20854/Z (CLKBUF_X3)        0.12 &     5.99 f
+  control_unit_1/FE_OFC1315_net20854/Z (BUF_X2)           0.16 &     6.15 f
+  control_unit_1/ldata_r_reg_8__0_/D (SDFFR_X1)           0.01 &     6.16 f
+  data arrival time                                                  6.16
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (propagated)                        0.29      17.79
+  clock reconvergence pessimism                           0.00      17.79
+  control_unit_1/ldata_r_reg_8__0_/CK (SDFFR_X1)                    17.79 r
+  library setup time                                     -0.09      17.70
+  data required time                                                17.70
+  ------------------------------------------------------------------------------
+  data required time                                                17.70
+  data arrival time                                                 -6.16
+  ------------------------------------------------------------------------------
+  slack (MET)                                                       11.54
+
+
+  Startpoint: control_unit_1/ltail_r_reg_5_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PRDATA[1] (output port clocked by clk)
+  Path Group: clk_reg2out
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.33       0.33
+  control_unit_1/ltail_r_reg_5_/CK (SDFFR_X1)             0.00       0.33 r
+  control_unit_1/ltail_r_reg_5_/QN (SDFFR_X1)             0.11 &     0.44 f
+  control_unit_1/U645/ZN (NAND2_X1)                       0.03 &     0.47 r
+  control_unit_1/U655/ZN (NOR2_X1)                        0.01 &     0.48 f
+  control_unit_1/FE_OFC784_n223/Z (CLKBUF_X3)             0.12 &     0.60 f
+  control_unit_1/FE_OFC785_n223/Z (CLKBUF_X3)             0.15 &     0.75 f
+  control_unit_1/U1044/ZN (AOI22_X1)                      0.10 &     0.85 r
+  control_unit_1/U1047/ZN (AND4_X1)                       0.07 &     0.92 r
+  control_unit_1/U1048/ZN (NAND4_X1)                      0.06 &     0.98 f
+  control_unit_1/U1059/ZN (AOI22_X1)                      0.11 &     1.09 r
+  control_unit_1/U1070/ZN (OAI211_X1)                     0.05 &     1.14 f
+  control_unit_1/FE_OFC1312_audio0_1/Z (CLKBUF_X1)        0.08 &     1.22 f
+  control_unit_1/U1226/ZN (AOI22_X1)                      0.05 &     1.27 r
+  control_unit_1/FE_OFC1584_n625/Z (CLKBUF_X1)            0.08 &     1.35 r
+  control_unit_1/U1227/ZN (OAI221_X1)                     0.05 &     1.40 f
+  FE_OFC1715_n73/Z (CLKBUF_X1)                            0.08 &     1.48 f
+  U7/Z (MUX2_X1)                                          0.10 &     1.58 f
+  PRDATA[1] (out)                                         0.00 &     1.58 f
+  data arrival time                                                  1.58
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (propagated)                        0.00      17.50
+  clock reconvergence pessimism                           0.00      17.50
+  output external delay                                  -5.00      12.50
+  data required time                                                12.50
+  ------------------------------------------------------------------------------
+  data required time                                                12.50
+  data arrival time                                                 -1.58
+  ------------------------------------------------------------------------------
+  slack (MET)                                                       10.92
+
+
+  Startpoint: dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_dsp_proc_fsm_inst_state_var_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/scheduled_region_else_if_else_acc1_54_0_sva_reg_54_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk_reg2reg
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.35       0.35
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_dsp_proc_fsm_inst_state_var_reg_0_/CK (SDFFR_X1)
+                                                          0.00       0.35 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_dsp_proc_fsm_inst_state_var_reg_0_/QN (SDFFR_X1)
+                                                          0.12 &     0.47 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U256/ZN (OR3_X1)
+                                                          0.12 &     0.59 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U255/ZN (INV_X1)
+                                                          0.11 &     0.70 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U480/ZN (NOR2_X1)
+                                                          0.02 &     0.72 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U481/ZN (AOI211_X1)
+                                                          0.09 &     0.81 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U482/ZN (XNOR2_X1)
+                                                          0.04 &     0.85 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U483/ZN (AND2_X1)
+                                                          0.04 &     0.89 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U484/ZN (AOI221_X1)
+                                                          0.11 &     1.00 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U486/ZN (AOI21_X1)
+                                                          0.04 &     1.04 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U2553/S (FA_X1)
+                                                          0.13 &     1.17 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U2550/ZN (AOI22_X1)
+                                                          0.02 &     1.19 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4933/ZN (NOR2_X1)
+                                                          0.07 &     1.25 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4934/ZN (NOR2_X1)
+                                                          0.02 &     1.27 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4935/ZN (NAND2_X2)
+                                                          0.08 &     1.35 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5114/ZN (NOR2_X1)
+                                                          0.02 &     1.37 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/FE_OFC1368_n5208/Z (CLKBUF_X3)
+                                                          0.12 &     1.49 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5282/ZN (AOI22_X1)
+                                                          0.13 &     1.62 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5284/ZN (NAND4_X1)
+                                                          0.07 &     1.69 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5296/ZN (NOR4_X1)
+                                                          0.13 &     1.82 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5297/ZN (NAND4_X1)
+                                                          0.18 &     2.00 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5298/ZN (INV_X1)
+                                                          0.19 &     2.19 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5299/ZN (OAI21_X1)
+                                                          0.04 &     2.23 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5301/ZN (NAND2_X1)
+                                                          0.03 &     2.25 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5302/ZN (XNOR2_X1)
+                                                          0.08 &     2.33 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5305/ZN (OAI222_X1)
+                                                          0.06 &     2.39 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5306/ZN (AOI211_X1)
+                                                          0.08 &     2.47 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5307/ZN (INV_X1)
+                                                          0.02 &     2.49 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5323/ZN (OAI211_X1)
+                                                          0.03 &     2.51 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5324/ZN (OAI21_X1)
+                                                          0.03 &     2.54 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5325/ZN (OAI22_X1)
+                                                          0.04 &     2.58 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U5326/ZN (INV_X1)
+                                                          0.02 &     2.59 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U40/CO (FA_X1)
+                                                          0.08 &     2.67 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U39/CO (FA_X1)
+                                                          0.07 &     2.74 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U38/CO (FA_X1)
+                                                          0.07 &     2.81 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U37/CO (FA_X1)
+                                                          0.07 &     2.88 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U36/CO (FA_X1)
+                                                          0.07 &     2.96 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U35/CO (FA_X1)
+                                                          0.07 &     3.03 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U34/CO (FA_X1)
+                                                          0.07 &     3.10 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U33/CO (FA_X1)
+                                                          0.07 &     3.17 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U32/CO (FA_X1)
+                                                          0.07 &     3.24 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U31/CO (FA_X1)
+                                                          0.07 &     3.32 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U30/CO (FA_X1)
+                                                          0.08 &     3.40 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U29/CO (FA_X1)
+                                                          0.07 &     3.47 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U28/CO (FA_X1)
+                                                          0.07 &     3.54 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U27/CO (FA_X1)
+                                                          0.08 &     3.62 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U26/CO (FA_X1)
+                                                          0.07 &     3.69 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U25/CO (FA_X1)
+                                                          0.08 &     3.77 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U24/CO (FA_X1)
+                                                          0.07 &     3.84 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U23/CO (FA_X1)
+                                                          0.07 &     3.91 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U22/CO (FA_X1)
+                                                          0.07 &     3.99 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U21/CO (FA_X1)
+                                                          0.07 &     4.06 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U20/CO (FA_X1)
+                                                          0.07 &     4.13 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U19/CO (FA_X1)
+                                                          0.07 &     4.20 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U18/CO (FA_X1)
+                                                          0.07 &     4.28 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U17/CO (FA_X1)
+                                                          0.07 &     4.35 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U16/CO (FA_X1)
+                                                          0.07 &     4.42 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U15/CO (FA_X1)
+                                                          0.07 &     4.49 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U14/CO (FA_X1)
+                                                          0.07 &     4.56 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U13/CO (FA_X1)
+                                                          0.07 &     4.64 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U12/CO (FA_X1)
+                                                          0.07 &     4.71 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U11/CO (FA_X1)
+                                                          0.07 &     4.78 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U10/CO (FA_X1)
+                                                          0.07 &     4.85 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U9/CO (FA_X1)
+                                                          0.07 &     4.93 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U8/CO (FA_X1)
+                                                          0.07 &     5.00 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U7/CO (FA_X1)
+                                                          0.07 &     5.07 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U6/CO (FA_X1)
+                                                          0.07 &     5.15 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U5/CO (FA_X1)
+                                                          0.07 &     5.22 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U4/CO (FA_X1)
+                                                          0.07 &     5.29 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U3/CO (FA_X1)
+                                                          0.07 &     5.36 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_1_U2/CO (FA_X1)
+                                                          0.07 &     5.43 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4914/ZN (INV_X1)
+                                                          0.02 &     5.45 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/intadd_15_U7/S (FA_X1)
+                                                          0.09 &     5.54 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U2608/ZN (INV_X1)
+                                                          0.02 &     5.56 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U2609/ZN (NOR2_X1)
+                                                          0.01 &     5.58 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U2611/ZN (OAI21_X1)
+                                                          0.05 &     5.62 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U2612/ZN (INV_X1)
+                                                          0.01 &     5.64 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U2613/ZN (OAI222_X1)
+                                                          0.06 &     5.70 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U2614/ZN (INV_X1)
+                                                          0.01 &     5.71 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4889/CO (FA_X1)
+                                                          0.07 &     5.78 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4890/ZN (NOR2_X1)
+                                                          0.04 &     5.83 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4892/ZN (OAI21_X1)
+                                                          0.02 &     5.85 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4893/ZN (NOR2_X1)
+                                                          0.04 &     5.89 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4895/ZN (OAI21_X1)
+                                                          0.03 &     5.92 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4896/ZN (AOI222_X1)
+                                                          0.11 &     6.03 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4897/ZN (NOR2_X1)
+                                                          0.02 &     6.05 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4899/ZN (OAI21_X1)
+                                                          0.05 &     6.09 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4901/ZN (NOR2_X1)
+                                                          0.02 &     6.11 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4902/ZN (AOI21_X1)
+                                                          0.05 &     6.16 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4903/ZN (NOR2_X1)
+                                                          0.02 &     6.18 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4905/ZN (OAI21_X1)
+                                                          0.06 &     6.23 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U4906/ZN (AOI222_X1)
+                                                          0.04 &     6.27 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U15996/CO (FA_X1)
+                                                          0.08 &     6.36 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U15997/ZN (XNOR2_X1)
+                                                          0.04 &     6.40 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U15998/ZN (XNOR2_X1)
+                                                          0.04 &     6.45 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U15999/ZN (OAI21_X1)
+                                                          0.03 &     6.48 r
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/U16000/ZN (AOI21_X1)
+                                                          0.02 &     6.50 f
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/scheduled_region_else_if_else_acc1_54_0_sva_reg_54_/D (SDFFR_X1)
+                                                          0.00 &     6.50 f
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (propagated)                        0.35      17.85
+  clock reconvergence pessimism                           0.00      17.85
+  dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/scheduled_region_else_if_else_acc1_54_0_sva_reg_54_/CK (SDFFR_X1)
+                                                                    17.85 r
+  library setup time                                     -0.07      17.77
+  data required time                                                17.77
+  ------------------------------------------------------------------------------
+  data required time                                                17.77
+  data arrival time                                                 -6.50
+  ------------------------------------------------------------------------------
+  slack (MET)                                                       11.27
+
+
+  Startpoint: i2s_unit_1/shift_reg_reg_2_
+               (rising edge-triggered flip-flop clocked by mclk)
+  Endpoint: cdc_unit_1/mrst_n_sync1_reg
+               (rising edge-triggered flip-flop clocked by mclk')
+  Last common pin: mclk
+  Path Group: mclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock mclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        0.12       0.12
+  i2s_unit_1/shift_reg_reg_2_/CK (SDFFR_X1)               0.00       0.12 r
+  i2s_unit_1/shift_reg_reg_2_/QN (SDFFR_X1)               0.10 &     0.22 f
+  cdc_unit_1/mrst_n_sync1_reg/SI (SDFFR_X1)               0.00 &     0.22 f
+  data arrival time                                                  0.22
+
+  clock mclk' (rise edge)                                27.12      27.12
+  clock network delay (propagated)                        0.11      27.24
+  clock reconvergence pessimism                           0.00      27.24
+  cdc_unit_1/mrst_n_sync1_reg/CK (SDFFR_X1)                         27.24 r
+  library setup time                                     -0.08      27.16
+  data required time                                                27.16
+  ------------------------------------------------------------------------------
+  data required time                                                27.16
+  data arrival time                                                 -0.22
+  ------------------------------------------------------------------------------
+  slack (MET)                                                       26.94
+
+
+  Startpoint: PSEL (input port clocked by clk)
+  Endpoint: PRDATA[10] (output port clocked by clk)
+  Path Group: mclk_in2out
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    5.00       5.00 f
+  PSEL (in)                                               0.00 &     5.00 f
+  control_unit_1/U132/ZN (NAND2_X1)                       0.03 &     5.03 r
+  control_unit_1/U145/ZN (INV_X1)                         0.01 &     5.05 f
+  control_unit_1/U158/ZN (NAND3_X1)                       0.06 &     5.11 r
+  control_unit_1/U159/ZN (INV_X1)                         0.02 &     5.12 f
+  control_unit_1/U160/ZN (NAND2_X1)                       0.09 &     5.21 r
+  control_unit_1/U165/ZN (NOR2_X1)                        0.01 &     5.23 f
+  control_unit_1/FE_OFC985_n5184/Z (BUF_X1)               0.08 &     5.31 f
+  control_unit_1/FE_OFC1851_FE_OFN1044_n5184/Z (CLKBUF_X3)
+                                                          0.10 &     5.41 f
+  control_unit_1/U2789/ZN (AOI22_X1)                      0.20 &     5.61 r
+  control_unit_1/U2792/ZN (NAND4_X1)                      0.05 &     5.66 f
+  control_unit_1/U2793/ZN (NOR4_X1)                       0.10 &     5.76 r
+  control_unit_1/U2821/ZN (NAND4_X1)                      0.06 &     5.81 f
+  control_unit_1/U2822/ZN (NOR4_X1)                       0.11 &     5.92 r
+  control_unit_1/U2824/ZN (OAI221_X1)                     0.08 &     6.00 f
+  PRDATA[10] (out)                                        0.00 &     6.00 f
+  data arrival time                                                  6.00
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (propagated)                        0.00      17.50
+  clock reconvergence pessimism                           0.00      17.50
+  output external delay                                  -5.00      12.50
+  data required time                                                12.50
+  ------------------------------------------------------------------------------
+  data required time                                                12.50
+  data arrival time                                                 -6.00
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        6.50
+
+
+  Startpoint: i2s_unit_1/shift_reg_reg_47_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PRDATA[1] (output port clocked by clk)
+  Path Group: mclk_reg2out
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.34       0.34
+  i2s_unit_1/shift_reg_reg_47_/CK (SDFFR_X1)              0.00       0.34 r
+  i2s_unit_1/shift_reg_reg_47_/QN (SDFFR_X1)              0.11 &     0.45 f
+  U7/Z (MUX2_X1)                                          0.08 &     0.53 f
+  PRDATA[1] (out)                                         0.00 &     0.53 f
+  data arrival time                                                  0.53
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (propagated)                        0.00      17.50
+  clock reconvergence pessimism                           0.00      17.50
+  output external delay                                  -5.00      12.50
+  data required time                                                12.50
+  ------------------------------------------------------------------------------
+  data required time                                                12.50
+  data arrival time                                                 -0.53
+  ------------------------------------------------------------------------------
+  slack (MET)                                                       11.97
+
+
+  Startpoint: i2s_unit_1/counter_reg_5_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: i2s_unit_1/shift_reg_reg_39_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: cdc_unit_1/U123/Z
+  Path Group: mclk_reg2reg
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.34       0.34
+  i2s_unit_1/counter_reg_5_/CK (SDFFR_X1)                 0.00       0.34 r
+  i2s_unit_1/counter_reg_5_/Q (SDFFR_X1)                  0.09 &     0.43 f
+  i2s_unit_1/U7/ZN (NOR4_X1)                              0.08 &     0.51 r
+  i2s_unit_1/U8/ZN (NAND3_X1)                             0.04 &     0.55 f
+  i2s_unit_1/U31/ZN (INV_X1)                              0.02 &     0.57 r
+  i2s_unit_1/U30/ZN (AND2_X1)                             0.07 &     0.63 r
+  i2s_unit_1/FE_OFC1222_n48/Z (BUF_X2)                    0.12 &     0.75 r
+  i2s_unit_1/U57/ZN (AOI22_X1)                            0.08 &     0.83 f
+  i2s_unit_1/U58/ZN (INV_X1)                              0.02 &     0.85 r
+  i2s_unit_1/shift_reg_reg_39_/D (SDFFR_X1)               0.00 &     0.85 r
+  data arrival time                                                  0.85
+
+  clock clk (rise edge)                                  17.50      17.50
+  clock network delay (propagated)                        0.34      17.84
+  clock reconvergence pessimism                           0.00      17.84
+  i2s_unit_1/shift_reg_reg_39_/CK (SDFFR_X1)                        17.84 r
+  library setup time                                     -0.06      17.78
+  data required time                                                17.78
+  ------------------------------------------------------------------------------
+  data required time                                                17.78
+  data arrival time                                                 -0.85
+  ------------------------------------------------------------------------------
+  slack (MET)                                                       16.93
+
+
+1

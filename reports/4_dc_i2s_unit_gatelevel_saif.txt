@@ -1,0 +1,37 @@
+ 
+****************************************
+Report : saif
+        -missing
+        -hierarchy
+        -rtl_saif
+Design : i2s_unit
+Version: T-2022.03-SP5-1
+Date   : Sat May  3 21:40:49 2025
+****************************************
+
+  
+
+--------------------------------------------------------------------------------
+              User              Default           Propagated
+Object type   Annotated (%)     Activity (%)      Activity (%)       Total
+--------------------------------------------------------------------------------
+  
+ Ports        56(100.00%)       0(0.00%)          0(0.00%)           56
+ Seq Cells    106(100.00%)      0(0.00%)          0(0.00%)           106
+ Tri Cells    0(0.00%)          0(0.00%)          0(0.00%)           0
+--------------------------------------------------------------------------------
+
+ List of Non-annotated ports :
+
+   0 ports
+
+ List of Non-annotated sequential cells :
+
+   0 sequential cells
+
+ List of Non-annotated three-state cells :
+
+   0 three-state cells
+
+--------------------------------------------------------------------------------
+1

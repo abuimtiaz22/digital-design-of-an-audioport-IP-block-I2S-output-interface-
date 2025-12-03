@@ -1,0 +1,174 @@
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# 
+# This material contains trade secrets or otherwise
+# confidential information owned by
+# Siemens Industry Software Inc. or its affiliates
+# (collectively, "SISW"), or its licensors. Access
+# to and use of this information is strictly limited
+# as set forth in the customer's applicable
+# agreements with SISW.
+# 
+# Unpublished work. Copyright 2024 Siemens
+# 
+# do scripts/qlint.tcl
+# Command : vlib output/control_unit_qlint_work
+# Command : vmap work output/control_unit_qlint_work
+# QuestaSim-64 vmap 2024.3_2 Lib Mapping Utility 2024.11 Nov 25 2024
+# vmap work output/control_unit_qlint_work 
+# Modifying modelsim.ini
+# Command : vlog +define+design_top_is_control_unit +define+SYNTHESIS +incdir+input -cuname control_unit_sva_bind_pkg -mfcu input/apb_pkg.sv input/audioport_pkg.sv input/audioport_util_pkg.sv input/control_unit.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 22:26:49 on Feb 12,2025
+# vlog "+define+design_top_is_control_unit" "+define+SYNTHESIS" "+incdir+input" -cuname control_unit_sva_bind_pkg -mfcu input/apb_pkg.sv input/audioport_pkg.sv input/audioport_util_pkg.sv input/control_unit.sv 
+# -- Compiling package apb_pkg
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling package audioport_util_pkg
+# -- Importing package audioport_pkg
+# -- Compiling package control_unit_sva_bind_pkg
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 22:26:49 on Feb 12,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : sdc load input/control_unit.sdc
+# 
+# Loaded goal 'release'.
+# Command : lint run -d control_unit {}
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Wed Feb 12 22:26:49 2025 by aimtiaz23 on lehmus-cn2.oulu.fi
+# 
+# Executing Command : lint run -d control_unit {}
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qlint.tcl, Line: 88
+# 
+### Starting Step: netlist elaborate ### 
+# 
+## Elaborating Design...
+# Reading MTI mapping for library mapping
+# Writing all MTI mappings to vmap output ...
+# 
+# Top level modules:
+# 	control_unit
+# 
+# Analyzing design...
+# -- Loading module z0in_work.control_unit
+# 
+# Performing 363 Lint Checks
+# =============================
+# 
+# Lint Stage 1 of 5 - Pre Design Elaboration (11 checks)
+# -------------------------------------------------------
+# Optimizing 4 design-units (inlining 0/1 module instances):
+# -- Optimizing package z0in_work.apb_pkg(fast)
+# Lint Stage-1 100% complete [Total Progress -   7%]
+# 
+# Lint Stage 2 of 5 - Design Elaboration (265 checks)
+# ----------------------------------------------------
+# -- Optimizing package z0in_work.audioport_pkg(fast)
+# Lint Stage-2  25% complete (1 out of 4 modules checked) [Total Progress -   9%]
+# -- Optimizing package z0in_work.control_unit_sva_bind_pkg(fast)
+# Lint Stage-2  50% complete (2 out of 4 modules checked) [Total Progress -  14%]
+# -- Optimizing module z0in_work.control_unit(fast)
+# Lint Stage-2  75% complete (3 out of 4 modules checked) [Total Progress -  18%]
+# Optimized design name is zi_opt_def_1236546508_1
+# Lint Stage-2 100% complete (4 out of 4 modules checked) [Total Progress -  23%]
+# 
+### Starting Step: netlist create ### 
+# 
+## Synthesizing netlist...
+# 
+# Lint Stage 3 of 5 - Post Design Elaboration (37 checks)
+# --------------------------------------------------------
+# Lint Stage-3  24% complete [Total Progress -  27%]
+# Lint Stage-3  49% complete [Total Progress -  29%]
+# Lint Stage-3  73% complete [Total Progress -  32%]
+# Warning : All files in a library are compiled without -lint du option.  Library 'connectcheck_work'.  [lint-43]
+#         : Compile time check and pragma detection will not work for this library.
+# Warning : All files in a library are compiled without -lint du option.  Library 'control_unit_qlint_work'.  [lint-43]
+#         : Compile time check and pragma detection will not work for this library.
+# Lint Stage-3  97% complete [Total Progress -  34%]
+# Lint Stage-3 100% complete [Total Progress -  35%]
+# Analyzing designs.
+# Elaborating module 'control_unit'.
+# Warning : Latch inferred in always_comb.  Signal 'PRDATA' in module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line 109.  [elaboration-835]
+#         : Possible RTL coding oversight. Elaboration will continue.
+# 
+# Lint Stage 4 of 5 - Design Synthesis (14 checks)
+# -------------------------------------------------
+# Lint Stage-4  21% complete [Total Progress -  67%]
+# Lint Stage-4  43% complete [Total Progress -  69%]
+# Lint Stage-4  64% complete [Total Progress -  71%]
+# Lint Stage-4  86% complete [Total Progress -  73%]
+# Lint Stage-4 100% complete [Total Progress -  75%]
+# Flattening design 'control_unit'.
+# 
+# Lint Stage 5 of 5 - Post Design Synthesis (36 checks)
+# ------------------------------------------------------
+# Lint Stage-5  25% complete [Total Progress -  88%]
+# Lint Stage-5  50% complete [Total Progress -  92%]
+# Lint Stage-5  75% complete [Total Progress -  96%]
+# Lint Stage-5 100% complete [Total Progress - 100%]
+# 
+# Lint Checking Completed
+# 
+# Trend Report: Trend directory path is not set, HTML trend report will not be generated.
+# 
+##Time Taken (Synthesis) = 555320.000000 ticks = 0.555320 secs
+# Summary: 3 Warnings in processing "netlist create"
+# Performance stats (Sdc processing::started) : cpu : 0(1) sec  memory : 0(260) mb  elapsed : 0(14) sec
+# Reading design database from output/control_unit_qlint_run_log/qcache/LINT/CACHE...completed (0.006213 (s)).
+# Performance stats (Sdc processing::ended) : cpu : 1(2) sec  memory : 777(1037) mb  elapsed : 0(14) sec
+## Applying Lint Waivers...
+# 
+# Message Summary
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     1  Warning  elaboration-835    Latch inferred in always_comb.
+#     2  Warning  lint-43            All files in a library are compiled without -lint du option.
+# 
+# Final Process Statistics: Max memory 774MB, CPU time 1s, Total time 12s
+# Result Summary
+# -----------------------------------------------------------
+# Error (0)
+# -----------------------------------------------------------
+# 
+# -----------------------------------------------------------
+# Warning (9)
+# -----------------------------------------------------------
+#   concurrent_block_with_duplicate_assign  :6
+#   latch_inferred                          :1
+#   seq_block_has_complex_cond              :1
+#   seq_block_has_duplicate_assign          :1
+# 
+# -----------------------------------------------------------
+# Info (16)
+# -----------------------------------------------------------
+#   combo_path_input_to_output              :3
+#   const_output                            :2
+#   line_char_large                         :4
+#   module_output_not_registered            :7
+# 
+# -----------------------------------------------------------
+# Resolved (0)
+# -----------------------------------------------------------
+# 
+# Generating Debug Information...
+# 
+# =================================================================
+# To view results in batch
+#   /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/control_unit_qlint_run_log/lint.rpt
+# 
+# To view results in GUI 
+#   qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/control_unit_qlint_run_log/lint.db
+# =================================================================
+# 
+# End of log Wed Feb 12 22:27:05 2025
+# 

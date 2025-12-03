@@ -1,0 +1,540 @@
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# 
+# This material contains trade secrets or otherwise
+# confidential information owned by
+# Siemens Industry Software Inc. or its affiliates
+# (collectively, "SISW"), or its licensors. Access
+# to and use of this information is strictly limited
+# as set forth in the customer's applicable
+# agreements with SISW.
+# 
+# Unpublished work. Copyright 2024 Siemens
+# 
+# do scripts/qrdc_static.tcl
+# Command : vlib output/audioport_qrdc_work
+# Command : vmap work output/audioport_qrdc_work
+# QuestaSim-64 vmap 2024.3_2 Lib Mapping Utility 2024.11 Nov 25 2024
+# vmap work output/audioport_qrdc_work 
+# Modifying modelsim.ini
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/apb_pkg.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:48 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/apb_pkg.sv 
+# -- Compiling package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:15:48 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/audioport_pkg.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:48 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/audioport_pkg.sv 
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:15:48 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/audioport_util_pkg.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:48 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/audioport_util_pkg.sv 
+# -- Compiling package audioport_util_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:15:48 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/control_unit.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:48 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/control_unit.sv 
+# -- Compiling package control_unit_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 15:15:49 on Apr 25,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF results/dsp_unit_hls_rtl.v
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:49 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" results/dsp_unit_hls_rtl.v 
+# -- Compiling module mgc_out_dreg_v2
+# -- Compiling module ccs_in_v1
+# -- Compiling module ccs_sync_out_vld_v1
+# -- Compiling module dsp_unit_read_inputs_core
+# -- Compiling module dsp_unit_read_inputs
+# -- Compiling module dsp_unit_write_outputs_core
+# -- Compiling module dsp_unit_write_outputs
+# -- Compiling module dsp_unit_regs_proc
+# -- Compiling module dsp_unit_dsp_proc_dsp_proc_fsm
+# -- Compiling module dsp_unit_dsp_proc_staller
+# -- Compiling module dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl
+# -- Compiling module dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl
+# -- Compiling module dsp_unit_dsp_proc_write_outputs_mioi
+# -- Compiling module dsp_unit_dsp_proc_read_inputs_mioi
+# -- Compiling module dsp_unit_dsp_proc
+# -- Compiling module dsp_unit_rtl
+# 
+# Top level modules:
+# 	dsp_unit_rtl
+# End time: 15:15:49 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/dsp_unit.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:49 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/dsp_unit.sv 
+# -- Compiling package dsp_unit_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module dsp_unit
+# 
+# Top level modules:
+# 	dsp_unit
+# End time: 15:15:49 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/cdc_unit.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:49 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/cdc_unit.sv 
+# -- Compiling package cdc_unit_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module cdc_unit
+# 
+# Top level modules:
+# 	cdc_unit
+# End time: 15:15:49 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vcom -2008 -mixedsvvh -work work input/i2s_unit.vhd
+# QuestaSim-64 vcom 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:49 on Apr 25,2025
+# vcom -2008 -mixedsvvh -work work input/i2s_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_unit
+# -- Compiling architecture RTL of i2s_unit
+# End time: 15:15:49 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/audioport.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:49 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/audioport.sv 
+# -- Compiling package audioport_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module audioport
+# 
+# Top level modules:
+# 	audioport
+# End time: 15:15:49 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/control_unit_svamod.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:49 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/control_unit_svamod.sv 
+# -- Compiling package control_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module control_unit_svamod
+# 
+# Top level modules:
+# 	control_unit_svamod
+# End time: 15:15:50 on Apr 25,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0, Suppressed Warnings: 6
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/dsp_unit_svamod.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:50 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/dsp_unit_svamod.sv 
+# -- Compiling package dsp_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module dsp_unit_svamod
+# 
+# Top level modules:
+# 	dsp_unit_svamod
+# End time: 15:15:50 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/cdc_unit_svamod.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:50 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/cdc_unit_svamod.sv 
+# -- Compiling package cdc_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module cdc_unit_svamod
+# 
+# Top level modules:
+# 	cdc_unit_svamod
+# End time: 15:15:50 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/i2s_unit_svamod.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:50 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/i2s_unit_svamod.sv 
+# -- Compiling package i2s_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module i2s_unit_svamod
+# 
+# Top level modules:
+# 	i2s_unit_svamod
+# End time: 15:15:50 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/audioport_svamod.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:15:50 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/audioport_svamod.sv 
+# -- Compiling package audioport_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module audioport_svamod
+# 
+# Top level modules:
+# 	audioport_svamod
+# End time: 15:15:50 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : resetcheck run -d audioport
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Fri Apr 25 15:15:50 2025 by aimtiaz23 on lehmus-cn3.oulu.fi
+# 
+# Executing Command : resetcheck run -d audioport
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qrdc_static.tcl, Line: 57
+# Performance stats (Design elaboration::started) : cpu : 0(1) sec  memory : 0(245) mb  elapsed : 0(2) sec
+# 
+### Starting Step: netlist elaborate ### 
+# 
+## Elaborating Design...
+# Reading MTI mapping for library mapping
+# Writing all MTI mappings to vmap output ...
+# 
+# Top level modules:
+# 	audioport
+# 
+# Analyzing design...
+# -- Loading module z0in_work.audioport
+# -- Loading module z0in_work.control_unit
+# -- Loading module z0in_work.dsp_unit
+# -- Loading module z0in_work.dsp_unit_rtl
+# -- Loading module z0in_work.dsp_unit_dsp_proc
+# -- Loading module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi
+# -- Loading module z0in_work.dsp_unit_read_inputs
+# -- Loading module z0in_work.dsp_unit_read_inputs_core
+# -- Loading module z0in_work.mgc_out_dreg_v2
+# -- Loading module z0in_work.ccs_in_v1
+# -- Loading module z0in_work.ccs_sync_out_vld_v1
+# -- Loading module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl
+# -- Loading module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi
+# -- Loading module z0in_work.dsp_unit_write_outputs
+# -- Loading module z0in_work.dsp_unit_write_outputs_core
+# -- Loading module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl
+# -- Loading module z0in_work.dsp_unit_dsp_proc_staller
+# -- Loading module z0in_work.dsp_unit_dsp_proc_dsp_proc_fsm
+# -- Loading module z0in_work.dsp_unit_regs_proc
+# -- Loading module z0in_work.cdc_unit
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading entity i2s_unit
+# -- Loading architecture RTL of i2s_unit
+# Optimizing 36 design-units (inlining 0/29 module instances, 0/1 architecture instances):
+# -- Optimizing package z0in_work.apb_pkg(fast)
+# -- Optimizing package z0in_work.audioport_pkg(fast)
+# -- Optimizing package z0in_work.audioport_sv_unit(fast)
+# -- Optimizing package z0in_work.control_unit_sv_unit(fast)
+# -- Optimizing package z0in_work.dsp_unit_sv_unit(fast)
+# -- Optimizing package z0in_work.cdc_unit_sv_unit(fast)
+# -- Optimizing module z0in_work.control_unit(fast)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast)
+# -- Elaborating structural module work.mgc_out_dreg_v2(fast)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__1)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__2)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__3)
+# -- Elaborating structural module work.mgc_out_dreg_v2(3)(fast__3)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__4)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__5)
+# -- Elaborating structural module work.mgc_out_dreg_v2(5)(fast__5)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__6)
+# -- Optimizing module z0in_work.ccs_in_v1(fast)
+# -- Elaborating structural module work.ccs_in_v1(fast)
+# -- Optimizing module z0in_work.ccs_sync_out_vld_v1(fast)
+# -- Elaborating structural module work.ccs_sync_out_vld_v1(fast)
+# -- Optimizing module z0in_work.dsp_unit_read_inputs_core(fast)
+# -- Optimizing module z0in_work.dsp_unit_read_inputs(fast)
+# -- Elaborating structural module work.dsp_unit_read_inputs(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi(fast)
+# -- Optimizing module z0in_work.ccs_in_v1(fast__1)
+# -- Elaborating structural module work.ccs_in_v1(1)(fast__1)
+# -- Optimizing module z0in_work.ccs_in_v1(fast__2)
+# -- Optimizing module z0in_work.ccs_in_v1(fast__3)
+# -- Optimizing module z0in_work.dsp_unit_write_outputs_core(fast)
+# -- Optimizing module z0in_work.dsp_unit_write_outputs(fast)
+# -- Elaborating structural module work.dsp_unit_write_outputs(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi(fast)
+# -- Elaborating structural module work.dsp_unit_dsp_proc_write_outputs_mioi(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_staller(fast)
+# -- Elaborating structural module work.dsp_unit_dsp_proc_staller(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_dsp_proc_fsm(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc(fast)
+# -- Optimizing module z0in_work.dsp_unit_regs_proc(fast)
+# -- Optimizing module z0in_work.dsp_unit_rtl(fast)
+# -- Elaborating structural module work.dsp_unit_rtl(fast)
+# -- Optimizing module z0in_work.dsp_unit(fast)
+# -- Optimizing module z0in_work.cdc_unit(fast)
+# -- Optimizing architecture RTL of i2s_unit
+# -- Optimizing module z0in_work.audioport(fast)
+# Optimized design name is zi_opt_def_247870953_1
+# Performance stats (Design elaboration::ended) : cpu : 0(1) sec  memory : 363(608) mb  elapsed : 6(8) sec
+# Performance stats (Design synthesis::started) : cpu : 0(1) sec  memory : 0(245) mb  elapsed : 0(8) sec
+# 
+### Starting Step: netlist create ### 
+# 
+## Synthesizing netlist...
+# Analyzing designs.
+# Elaborating module 'control_unit'.
+# Elaborating module 'dsp_unit_read_inputs_core'.
+# Elaborating module 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'.
+# Elaborating module 'dsp_unit_dsp_proc_read_inputs_mioi'.
+# Elaborating module 'dsp_unit_write_outputs_core'.
+# Elaborating module 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'.
+# Elaborating module 'dsp_unit_dsp_proc_dsp_proc_fsm'.
+# Elaborating module 'dsp_unit_dsp_proc'.
+# Elaborating module 'dsp_unit_regs_proc'.
+# Elaborating module 'dsp_unit'.
+# Elaborating module 'cdc_unit'.
+# Elaborating module 'i2s_unit(rtl)'.
+# Elaborating module 'audioport'.
+# 
+##Time Taken (Synthesis) = 641594.000000 ticks = 0.641594 secs
+# Performance stats (Design synthesis::ended) : cpu : 1(2) sec  memory : 634(879) mb  elapsed : 2(10) sec
+# Performance stats (RDC analysis::started) : cpu : 0(2) sec  memory : 0(245) mb  elapsed : 0(10) sec
+# 
+### Starting Step: rdc run ### 
+# 
+## Analyzing Design in RDC...
+# Warning : All 'resetcheck' based directives, commands and preferences used for RDC analysis will be deprecated soon and will be replaced with 'rdc' based directives, commands and preferences.  [reset-66]
+# Analyzing designs.
+# Restoring module 'control_unit'.
+# Restoring module 'dsp_unit_read_inputs_core'.
+# Restoring module 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'.
+# Restoring module 'dsp_unit_dsp_proc_read_inputs_mioi'.
+# Restoring module 'dsp_unit_write_outputs_core'.
+# Restoring module 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'.
+# Restoring module 'dsp_unit_dsp_proc_dsp_proc_fsm'.
+# Restoring module 'dsp_unit_dsp_proc'.
+# Restoring module 'dsp_unit_regs_proc'.
+# Restoring module 'dsp_unit'.
+# Restoring module 'cdc_unit'.
+# Restoring module 'i2s_unit(rtl)'.
+# Restoring module 'audioport'.
+# Warning : Clock period or waveform specification has precision exceeding 3 digits past decimal point.  Clock 'mclk', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 11.  [directive-114]
+#         : Absolute numbers for clock specification are not necessary. Respecify the clocks with relative numbers.
+# 
+## Continuing Reset Check Analysis
+#  -------- Performance stats (Netlist flattening::started) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(0) sec
+# Flattening design 'audioport'.
+#  -------- Performance stats (Netlist flattening::ended) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 1(1) sec
+# Info    : Possible dead end paths not reported.  [hdl-262]
+#         : Design paths may exist that do not propagate to a sequential element or an output port of the design.
+# 
+# Signals replaced by netlist constant
+# -------------------------------------------------------------------------------
+# Signal                         Value
+# -------------------------------------------------------------------------------
+# test_mode_in                   1'b0
+# -------------------------------------------------------------------------------
+# 
+#  -------- Performance stats (Constant propagation phase-1::started) : cpu : 0(0) sec  memory : 0(394) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Constant propagation phase-1::ended) : cpu : 0(0) sec  memory : 12(406) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Constant propagation phase-2::started) : cpu : 0(0) sec  memory : 0(406) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Constant propagation phase-2::ended) : cpu : 0(0) sec  memory : 0(406) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Stable propagation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Stable propagation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Processing Reset checks for module 'audioport'
+#  -------- Performance stats (Reset detection and propagation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Warning : Found internal reset signals.  [netlist-82]
+#         : Signals would not be considered as resets for analysis.
+# Internal resets
+# ===============
+# control_unit_1.stop
+# ---------------
+# Info    : Reset detection done.  Identified '2' resets: '2' user-specified and '0' inferred resets.  [reset-4]
+#  -------- Performance stats (Reset detection and propagation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Reset check analysis::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Reset check analysis::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Clock detection and propagation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Info    : Clock processing done.  Identified '2' clocks; '2' user-specified and '0' inferred clocks.  [cdc-44]
+#  -------- Performance stats (Clock detection and propagation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Warning : Signal specified in directive has no match.  Signal 'cdc_unit1.mrst_n', Argument '-reset', Directive 'netlist port resetdomain', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 31.  [reset-13]
+#         : Signal will be ignored.
+# Checking input/output specifications for black box and custom synchronizer modules.
+#  -------- Performance stats (RDC creation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (RDC creation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (RDC creation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (RDC creation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (RDC schemes checking::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Processing 6 RDC signals after duplicate removal.
+#  -------- Performance stats (RDC schemes checking::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (RDC assist::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (RDC assist::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+# Entered Portal case 
+#  -------- Performance stats (RDC settings report generation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (RDC settings report generation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+## Generating RDC Report...
+#  -------- Performance stats (RDC report generation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (RDC report generation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# 
+# Performance stats (RDC analysis::ended) : cpu : 0(2) sec  memory : 482(727) mb  elapsed : 1(11) sec
+# Reading design database from /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qrdc_run_log/qcache/RESETCHECK/CACHE...completed (0.018903 (s)).
+# Performance stats (RDC status update::started) : cpu : 0(2) sec  memory : 0(255) mb  elapsed : 0(11) sec
+## Applying RDC Design Waivers...
+# Creating report file resetcheck.rpt
+#  -------- Performance stats (RDC report generation::started) : cpu : 0(0) sec  memory : 0(310) mb  elapsed : 0(0) sec
+#  -------- Performance stats (RDC report generation::ended) : cpu : 0(0) sec  memory : 0(310) mb  elapsed : 0(0) sec
+# 
+# ResetCheck Summary
+# -----------------------------------------------------------------
+# Total number of checks:                                      (6)
+# -----------------------------------------------------------------
+# 
+# Violation (1)
+# -----------------------------------------------------------------
+# Combinational logic before RDC/CDC synchronizer              (1)
+# 
+# Caution (2)
+# -----------------------------------------------------------------
+# Reset domain crossing from areset to areset spans clock domains (2)
+# 
+# Evaluation (3)
+# -----------------------------------------------------------------
+# RDC/CDC signal synchronized by DFF synchronizer              (3)
+# 
+# Resolved - Waived or Verified Status (0)
+# -----------------------------------------------------------------
+# <None>
+# 
+# Filtered (0)
+# -----------------------------------------------------------------
+# <None>
+# 
+# 
+# 
+# See '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qrdc_run_log/resetcheck.rpt' for detailed resetcheck report.
+# 
+# To view ResetCheck information, use qverify as follows:
+#       qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qrdc_run_log/resetcheck.db
+# 
+# Message Summary
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     1  Warning  directive-114      Clock period or waveform specification has precision exceeding 3 digits past decimal point.
+#     1  Warning  netlist-82         Found internal reset signals.
+#     1  Warning  reset-13           Signal specified in directive has no match.
+#     1  Warning  reset-66           All 'resetcheck' based directives, commands and preferences used for RDC analysis will be deprecated soon and will be replaced with 'rdc' based directives, commands and preferences.
+#     1  Info     cdc-44             Clock processing done.
+#     1  Info     hdl-262            Possible dead end paths not reported.
+#     1  Info     reset-4            Reset detection done.
+# 
+# Summary: 4 Warnings in processing "resetcheck run"
+# Final Process Statistics: Max memory 634MB, CPU time 1s, Total time 10s
+# Performance stats (RDC status update::ended) : cpu : 0(2) sec  memory : 310(565) mb  elapsed : 1(12) sec
+# 
+# End of log Fri Apr 25 15:16:00 2025
+# 
+# Command : resetcheck generate protocol
+# 
+# Executing Command : resetcheck generate protocol
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qrdc_static.tcl, Line: 61
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Fri Apr 25 15:16:00 2025 by aimtiaz23 on lehmus-cn3.oulu.fi
+# 
+### Starting Step: rdc generate protocol ### 
+# 
+## Generating RDC Protocol Assertions...
+#  -------- Performance stats (Generating rdc protocol checkers::started) : cpu : 0(0) sec  memory : 0(306) mb  elapsed : 0(0) sec
+# Compiling SVA Assertions.
+# 
+# Constraints Recognized   :   0
+# 
+# Resetcheck SVA Constraint Summary 
+# -------------------------------------------------------------------------------
+# Constraint Type                    Constraint Count      Assertion Count
+# -------------------------------------------------------------------------------
+# reset order                                       0                    0
+# -------------------------------------------------------------------------------
+# All                                               0                    0
+# -------------------------------------------------------------------------------
+# See /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qrdc_run_log/resetcheck_constraint.rpt for constraint SVA summary report.
+# 
+# 
+# Protocols Recognized   :   0
+# 
+# Resetcheck SVA Protocols Summary
+# -------------------------------------------------------------------------------
+# Protocol Type                             Protocols               Checks
+# -------------------------------------------------------------------------------
+# rdc_isolation_data                                0                    0
+# rdc_isolation_clockgate                           0                    0
+# rdc_clockoff                                      0                    0
+# rdc_tx_at_reset_value                             0                    0
+# -------------------------------------------------------------------------------
+# All                                               0                    0
+# -------------------------------------------------------------------------------
+#  -------- Performance stats (Generating rdc protocol checkers::ended) : cpu : 0(0) sec  memory : 4(310) mb  elapsed : 0(0) sec
+# Final Process Statistics: Max memory 310MB, CPU time 0s, Total time 0s
+# Command : resetcheck generate report reset_report.rpt
+# Reading design database from /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qrdc_run_log/qcache/RESETCHECK/CACHE...completed (0.017373 (s)).
+# Performance stats (RDC report generation::started) : cpu : 0(2) sec  memory : 0(258) mb  elapsed : 0(13) sec
+# Performance stats (RDC report generation::ended) : cpu : 0(2) sec  memory : 310(568) mb  elapsed : 0(13) sec
+# See 'output/audioport_qrdc_run_log/reset_report.rpt' for detailed Resetcheck report.
+# Command : resetcheck generate tree -reset reset_tree.rpt
+# See 'output/audioport_qrdc_run_log/reset_tree.rpt' for detailed reset tree report.
+# 

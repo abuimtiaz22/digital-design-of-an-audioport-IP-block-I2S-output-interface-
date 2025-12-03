@@ -1,0 +1,185 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : control_unit
+Version: T-2022.03-SP5-1
+Date   : Thu Feb 13 14:57:07 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: PSEL (input port clocked by clk)
+  Endpoint: cfg_out (output port clocked by clk)
+  Path Group: clk_in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  control_unit       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.62       1.62 r
+  PSEL (in)                                0.00       1.62 r
+  U20312/ZN (NAND3_X1)                     0.04       1.67 f
+  U20314/ZN (NOR3_X1)                      0.10       1.77 r
+  U20338/ZN (NAND2_X1)                     0.12       1.89 f
+  U20354/ZN (NOR2_X1)                      0.19       2.08 r
+  U20350/Z (CLKBUF_X1)                     0.19       2.27 r
+  U20423/ZN (INV_X2)                       0.14       2.41 f
+  U20348/ZN (NOR4_X1)                      0.16       2.57 r
+  U34364/ZN (NAND2_X1)                     0.04       2.61 f
+  U34365/ZN (NOR3_X1)                      0.10       2.71 r
+  U34366/ZN (NAND2_X1)                     0.04       2.74 f
+  U34367/ZN (NOR3_X1)                      0.05       2.79 r
+  cfg_out (out)                            0.00       2.80 r
+  data arrival time                                   2.80
+
+  clock clk (rise edge)                   13.00      13.00
+  clock network delay (ideal)              0.00      13.00
+  output external delay                   -1.62      11.38
+  data required time                                 11.38
+  -----------------------------------------------------------
+  data required time                                 11.38
+  data arrival time                                  -2.80
+  -----------------------------------------------------------
+  slack (MET)                                         8.58
+
+
+  Startpoint: PSEL (input port clocked by clk)
+  Endpoint: rdata_r_reg[14][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk_in2reg
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  control_unit       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.62       1.62 f
+  PSEL (in)                                0.00       1.62 f
+  U20438/ZN (NAND2_X1)                     0.04       1.67 r
+  U20439/ZN (INV_X1)                       0.03       1.70 f
+  U20441/ZN (NOR2_X1)                      0.10       1.80 r
+  U20356/ZN (NAND2_X1)                     0.11       1.91 f
+  U20358/ZN (NOR2_X1)                      0.18       2.09 r
+  U30328/Z (CLKBUF_X1)                     0.18       2.28 r
+  U20376/ZN (AND2_X1)                      0.21       2.49 r
+  U34347/ZN (OAI211_X1)                    0.14       2.63 f
+  U34348/ZN (INV_X1)                       0.07       2.70 r
+  U20360/ZN (NAND2_X1)                     0.04       2.74 f
+  U20366/ZN (NOR3_X1)                      0.17       2.91 r
+  U35527/ZN (NAND2_X1)                     0.19       3.10 f
+  U20379/ZN (NAND2_X1)                     0.22       3.32 r
+  U35528/ZN (OAI22_X1)                     0.06       3.39 f
+  rdata_r_reg[14][0]/D (DFFR_X1)           0.01       3.40 f
+  data arrival time                                   3.40
+
+  clock clk (rise edge)                   13.00      13.00
+  clock network delay (ideal)              0.00      13.00
+  rdata_r_reg[14][0]/CK (DFFR_X1)          0.00      13.00 r
+  library setup time                      -0.05      12.95
+  data required time                                 12.95
+  -----------------------------------------------------------
+  data required time                                 12.95
+  data arrival time                                  -3.40
+  -----------------------------------------------------------
+  slack (MET)                                         9.55
+
+
+  Startpoint: rtail_r_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PRDATA[10] (output port clocked by clk)
+  Path Group: clk_reg2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  control_unit       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  rtail_r_reg[5]/CK (DFFR_X1)              0.00 #     0.00 r
+  rtail_r_reg[5]/QN (DFFR_X1)              0.10       0.10 f
+  U29933/ZN (NAND2_X1)                     0.06       0.17 r
+  U29950/ZN (NOR2_X1)                      0.06       0.23 f
+  U20319/Z (CLKBUF_X1)                     0.19       0.42 f
+  U20316/Z (CLKBUF_X1)                     0.22       0.64 f
+  U31149/ZN (AOI22_X1)                     0.10       0.75 r
+  U31151/ZN (AND4_X1)                      0.07       0.82 r
+  U31152/ZN (NAND4_X1)                     0.04       0.86 f
+  U31153/ZN (AOI22_X1)                     0.06       0.93 r
+  U31154/ZN (NAND2_X1)                     0.03       0.96 f
+  U31248/ZN (AOI222_X1)                    0.10       1.06 r
+  U31249/ZN (INV_X1)                       0.02       1.07 f
+  PRDATA[10] (out)                         0.00       1.08 f
+  data arrival time                                   1.08
+
+  clock clk (rise edge)                   13.00      13.00
+  clock network delay (ideal)              0.00      13.00
+  output external delay                   -1.62      11.38
+  data required time                                 11.38
+  -----------------------------------------------------------
+  data required time                                 11.38
+  data arrival time                                  -1.08
+  -----------------------------------------------------------
+  slack (MET)                                        10.30
+
+
+  Startpoint: rhead_r_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata_r_reg[14][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk_reg2reg
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  control_unit       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  rhead_r_reg[3]/CK (DFFR_X1)              0.00 #     0.00 r
+  rhead_r_reg[3]/Q (DFFR_X1)               0.11       0.11 f
+  U29919/ZN (OAI22_X1)                     0.07       0.18 r
+  U29920/ZN (AOI221_X1)                    0.03       0.21 f
+  U29921/ZN (NAND3_X1)                     0.04       0.25 r
+  U34347/ZN (OAI211_X1)                    0.07       0.33 f
+  U34348/ZN (INV_X1)                       0.07       0.40 r
+  U20360/ZN (NAND2_X1)                     0.04       0.44 f
+  U20366/ZN (NOR3_X1)                      0.17       0.61 r
+  U35527/ZN (NAND2_X1)                     0.19       0.80 f
+  U20379/ZN (NAND2_X1)                     0.22       1.03 r
+  U35528/ZN (OAI22_X1)                     0.06       1.09 f
+  rdata_r_reg[14][0]/D (DFFR_X1)           0.01       1.10 f
+  data arrival time                                   1.10
+
+  clock clk (rise edge)                   13.00      13.00
+  clock network delay (ideal)              0.00      13.00
+  rdata_r_reg[14][0]/CK (DFFR_X1)          0.00      13.00 r
+  library setup time                      -0.05      12.95
+  data required time                                 12.95
+  -----------------------------------------------------------
+  data required time                                 12.95
+  data arrival time                                  -1.10
+  -----------------------------------------------------------
+  slack (MET)                                        11.85
+
+
+1

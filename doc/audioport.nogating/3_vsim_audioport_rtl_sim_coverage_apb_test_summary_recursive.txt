@@ -1,0 +1,386 @@
+Recursive Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.control_unit_1.CHECKER_MODULE
+=== Design Unit: work.control_unit_svamod
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                     143       103        40    72.02%
+    Covergroups                      2        na        na    35.50%
+        Coverpoints/Crosses          4        na        na        na
+            Covergroup Bins        158        76        82    48.10%
+    Directives                      87        50        37    57.47%
+    Statements                       2         2         0   100.00%
+    Toggles                       1542       202      1340    13.09%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.control_unit_1
+=== Design Unit: work.control_unit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                     143       103        40    72.02%
+    Branches                        74        40        34    54.05%
+    Conditions                      42         1        41     2.38%
+    Covergroups                      2        na        na    35.50%
+        Coverpoints/Crosses          4        na        na        na
+            Covergroup Bins        158        76        82    48.10%
+    Directives                      87        50        37    57.47%
+    Expressions                     27         6        21    22.22%
+    Statements                     119        78        41    65.54%
+    Toggles                       3012       307      2705    10.19%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.dsp_unit_read_inputs_core_inst.tick_rsci
+=== Design Unit: work.mgc_out_dreg_v2
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         12         0        12     0.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.dsp_unit_read_inputs_core_inst.clr_rsci
+=== Design Unit: work.mgc_out_dreg_v2
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         12         0        12     0.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.dsp_unit_read_inputs_core_inst.filter_rsci
+=== Design Unit: work.mgc_out_dreg_v2
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         12         0        12     0.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.dsp_unit_read_inputs_core_inst.level0_rsci
+=== Design Unit: work.mgc_out_dreg_v2
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        192         0       192     0.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.dsp_unit_read_inputs_core_inst.level1_rsci
+=== Design Unit: work.mgc_out_dreg_v2
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        192         0       192     0.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.dsp_unit_read_inputs_core_inst.audio0_rsci
+=== Design Unit: work.mgc_out_dreg_v2
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        288         0       288     0.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.dsp_unit_read_inputs_core_inst.audio1_rsci
+=== Design Unit: work.mgc_out_dreg_v2
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        288         0       288     0.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.dsp_unit_read_inputs_core_inst.ccs_ccore_start_rsci
+=== Design Unit: work.ccs_in_v1
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.dsp_unit_read_inputs_core_inst.ccs_ccore_done_synci
+=== Design Unit: work.ccs_sync_out_vld_v1
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         12         0        12     0.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.dsp_unit_read_inputs_core_inst
+=== Design Unit: work.dsp_unit_read_inputs_core
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+    Expressions                      7         2         5    28.57%
+    Statements                       5         5         0   100.00%
+    Toggles                       1032         8      1024     0.77%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi
+=== Design Unit: work.dsp_unit_read_inputs
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+    Expressions                      7         2         5    28.57%
+    Statements                       5         5         0   100.00%
+    Toggles                       1032         8      1024     0.77%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl_inst
+=== Design Unit: work.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      4         2         2    50.00%
+    Statements                       2         2         0   100.00%
+    Toggles                         28         6        22    21.42%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst
+=== Design Unit: work.dsp_unit_dsp_proc_read_inputs_mioi
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+    Expressions                     13         5         8    38.46%
+    Statements                       8         8         0   100.00%
+    Toggles                       1058        13      1045     1.22%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst.write_outputs_mioi.dsp_unit_write_outputs_core_inst.dsp0_rsci
+=== Design Unit: work.ccs_in_v1
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        288         0       288     0.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst.write_outputs_mioi.dsp_unit_write_outputs_core_inst.dsp1_rsci
+=== Design Unit: work.ccs_in_v1
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        288         0       288     0.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst.write_outputs_mioi.dsp_unit_write_outputs_core_inst.ccs_ccore_start_rsci
+=== Design Unit: work.ccs_in_v1
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         12         0        12     0.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst.write_outputs_mioi.dsp_unit_write_outputs_core_inst
+=== Design Unit: work.dsp_unit_write_outputs_core
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         5         4         1    80.00%
+    Statements                       8         6         2    75.00%
+    Toggles                        890         3       887     0.33%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst.write_outputs_mioi
+=== Design Unit: work.dsp_unit_write_outputs
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         5         4         1    80.00%
+    Statements                       8         6         2    75.00%
+    Toggles                       1184         3      1181     0.25%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl_inst
+=== Design Unit: work.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      2         0         2     0.00%
+    Statements                       1         1         0   100.00%
+    Toggles                         18         1        17     5.55%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst
+=== Design Unit: work.dsp_unit_dsp_proc_write_outputs_mioi
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         5         4         1    80.00%
+    Expressions                      2         0         2     0.00%
+    Statements                       9         7         2    77.77%
+    Toggles                       1196         4      1192     0.33%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_staller_inst
+=== Design Unit: work.dsp_unit_dsp_proc_staller
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         12         2        10    16.66%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_dsp_proc_fsm_inst
+=== Design Unit: work.dsp_unit_dsp_proc_dsp_proc_fsm
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        17         7        10    41.17%
+    FSM States                       7         3         4    42.85%
+    FSM Transitions                101         3        98     2.97%
+    Statements                      22        10        12    45.45%
+    Toggles                        100        18        82    18.00%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst
+=== Design Unit: work.dsp_unit_dsp_proc
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                       378       166       212    43.91%
+    Expressions                   1074        14      1060     1.30%
+    FSM States                       7         3         4    42.85%
+    FSM Transitions                101         3        98     2.97%
+    Statements                    1507      1220       287    80.95%
+    Toggles                      77016        71     76945     0.09%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1.dsp_unit_regs_proc_inst
+=== Design Unit: work.dsp_unit_regs_proc
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         9         6         3    66.66%
+    Expressions                      2         0         2     0.00%
+    Statements                     278       141       137    50.71%
+    Toggles                      26336        24     26312     0.09%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.dsp_unit_rtl_1
+=== Design Unit: work.dsp_unit_rtl
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                       387       172       215    44.44%
+    Expressions                   1076        14      1062     1.30%
+    FSM States                       7         3         4    42.85%
+    FSM Transitions                101         3        98     2.97%
+    Statements                    1785      1361       424    76.24%
+    Toggles                     103344        92    103252     0.08%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.CHECKER_MODULE
+=== Design Unit: work.dsp_unit_svamod
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                      14        12         2    85.71%
+    Covergroups                      1        na        na     0.00%
+        Coverpoints/Crosses          1        na        na        na
+            Covergroup Bins          2         0         2     0.00%
+    Directives                       3         0         3     0.00%
+    Statements                       1         1         0   100.00%
+    Toggles                        998        24       974     2.40%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1
+=== Design Unit: work.dsp_unit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                      14        12         2    85.71%
+    Branches                       387       172       215    44.44%
+    Covergroups                      1        na        na     0.00%
+        Coverpoints/Crosses          1        na        na        na
+            Covergroup Bins          2         0         2     0.00%
+    Directives                       3         0         3     0.00%
+    Expressions                   1076        14      1062     1.30%
+    FSM States                       7         3         4    42.85%
+    FSM Transitions                101         3        98     2.97%
+    Statements                    1786      1362       424    76.25%
+    Toggles                     103932        92    103840     0.08%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.cdc_unit_1.CHECKER_MODULE
+=== Design Unit: work.cdc_unit_svamod
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                      21        14         7    66.66%
+    Directives                       6         3         3    50.00%
+    Toggles                        642         9       633     1.40%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.cdc_unit_1
+=== Design Unit: work.cdc_unit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                      21        14         7    66.66%
+    Branches                        29        22         7    75.86%
+    Conditions                       2         0         2     0.00%
+    Directives                       6         3         3    50.00%
+    Expressions                     11         3         8    27.27%
+    Statements                      56        46        10    82.14%
+    Toggles                       1356        20      1336     1.47%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.i2s_unit_1.CHECKER_MODULE
+=== Design Unit: work.i2s_unit_svamod
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                      35        14        21    40.00%
+    Directives                      13         0        13     0.00%
+    Toggles                        980         3       977     0.30%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.i2s_unit_1
+=== Design Unit: work.i2s_unit(rtl)
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                      35        14        21    40.00%
+    Branches                        25        16         9    64.00%
+    Conditions                       4         0         4     0.00%
+    Directives                      13         0        13     0.00%
+    Expressions                      2         0         2     0.00%
+    Statements                      22        16         6    72.72%
+    Toggles                       1978         9      1969     0.45%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.CHECKER_MODULE
+=== Design Unit: work.audioport_svamod
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                      48        41         7    85.41%
+    Covergroups                      1        na        na     0.00%
+        Coverpoints/Crosses          1        na        na        na
+            Covergroup Bins          2         0         2     0.00%
+    Directives                       5         0         5     0.00%
+    Statements                       1         1         0   100.00%
+    Toggles                       1652       187      1465    11.31%
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE
+=== Design Unit: work.audioport
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                     261       184        77    70.49%
+    Branches                       515       250       265    48.54%
+    Conditions                      48         1        47     2.08%
+    Covergroups                      4        na        na    17.75%
+        Coverpoints/Crosses          6        na        na        na
+            Covergroup Bins        162        76        86    46.91%
+    Directives                     114        53        61    46.49%
+    Expressions                   1116        23      1093     2.06%
+    FSM States                       7         3         4    42.85%
+    FSM Transitions                101         3        98     2.97%
+    Statements                    1984      1503       481    75.75%
+    Toggles                     113100       598    112502     0.52%
+
+
+Total Coverage By Instance (filtered view): 30.95%
+

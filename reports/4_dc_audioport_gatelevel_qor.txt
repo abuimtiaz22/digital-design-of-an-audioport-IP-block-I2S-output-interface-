@@ -1,0 +1,175 @@
+ 
+****************************************
+Report : qor
+Design : audioport
+Version: T-2022.03-SP5-1
+Date   : Sun May  4 01:02:34 2025
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              17.00
+  Critical Path Length:          1.79
+  Critical Path Slack:          10.62
+  Critical Path Clk Period:     17.50
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'clk_in2reg'
+  -----------------------------------
+  Levels of Logic:              13.00
+  Critical Path Length:          1.40
+  Critical Path Slack:          10.99
+  Critical Path Clk Period:     17.50
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'clk_reg2out'
+  -----------------------------------
+  Levels of Logic:              13.00
+  Critical Path Length:          1.26
+  Critical Path Slack:          11.24
+  Critical Path Clk Period:     17.50
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'clk_reg2reg'
+  -----------------------------------
+  Levels of Logic:             128.00
+  Critical Path Length:          7.75
+  Critical Path Slack:           9.68
+  Critical Path Clk Period:     17.50
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'mclk'
+  -----------------------------------
+  Levels of Logic:               0.00
+  Critical Path Length:          0.11
+  Critical Path Slack:          26.94
+  Critical Path Clk Period:     54.25
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'mclk_in2out'
+  -----------------------------------
+  Levels of Logic:              14.00
+  Critical Path Length:          1.02
+  Critical Path Slack:           6.48
+  Critical Path Clk Period:     17.50
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'mclk_reg2out'
+  -----------------------------------
+  Levels of Logic:               1.00
+  Critical Path Length:          0.16
+  Critical Path Slack:          12.34
+  Critical Path Clk Period:     17.50
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'mclk_reg2reg'
+  -----------------------------------
+  Levels of Logic:               8.00
+  Critical Path Length:          0.67
+  Critical Path Slack:          16.76
+  Critical Path Clk Period:     17.50
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:       1010
+  Hierarchical Port Count:      17506
+  Leaf Cell Count:              38894
+  Buf/Inv Cell Count:            1469
+  Buf Cell Count:                 491
+  Inv Cell Count:                 978
+  CT Buf/Inv Cell Count:            1
+  Combinational Cell Count:     22748
+  Sequential Cell Count:        16146
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    28944.790571
+  Noncombinational Area:
+                        104688.291454
+  Buf/Inv Area:            981.007999
+  Total Buffer Area:           442.89
+  Total Inverter Area:         538.12
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:            133633.082025
+  Design Area:          133633.082025
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         54578
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: lehmus-cn8.oulu.fi
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.00
+  Logic Optimization:                  0.00
+  Mapping Optimization:                0.00
+  -----------------------------------------
+  Overall Compile Time:               30.27
+  Overall Compile Wall Clock Time:    30.87
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

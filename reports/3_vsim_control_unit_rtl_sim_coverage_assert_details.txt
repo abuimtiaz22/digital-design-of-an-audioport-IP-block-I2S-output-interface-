@@ -1,0 +1,1117 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /control_unit_tb/apb
+=== Design Unit: work.apb_if
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      10        10         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/control_unit_tb/apb/psel_valid
+                     input/apb_if.sv(203)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/penable_valid
+                     input/apb_if.sv(204)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/pwrite_valid
+                     input/apb_if.sv(205)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/paddr_valid
+                     input/apb_if.sv(206)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/pwdata_valid
+                     input/apb_if.sv(207)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/pready_valid
+                     input/apb_if.sv(208)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/pslverr_valid
+                     input/apb_if.sv(209)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/psel_to_penable_ok
+                     input/apb_if.sv(216)               0       1722     273469         25     275216          0           1 off
+/control_unit_tb/apb/max_wait_states_ok
+                     input/apb_if.sv(224)               0       1722     273469         25     275216          0           1 off
+/control_unit_tb/apb/penable_deassert_ok
+                     input/apb_if.sv(231)               0       1725     273465         25     275215          0           1 off
+
+=================================================================================
+=== Instance: /control_unit_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.control_unit_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                     143       138         5    96.50%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PSEL
+                     input/control_unit_svamod.sv(78)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PENABLE
+                     input/control_unit_svamod.sv(79)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PWRITE
+                     input/control_unit_svamod.sv(80)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PADDR
+                     input/control_unit_svamod.sv(81)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PWDATA
+                     input/control_unit_svamod.sv(82)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_in
+                     input/control_unit_svamod.sv(83)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PRDATA
+                     input/control_unit_svamod.sv(84)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PSLVERR
+                     input/control_unit_svamod.sv(85)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PREADY
+                     input/control_unit_svamod.sv(86)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_irq_out
+                     input/control_unit_svamod.sv(87)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_cfg_reg_out
+                     input/control_unit_svamod.sv(88)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_level_reg_out
+                     input/control_unit_svamod.sv(89)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_dsp_regs_out
+                     input/control_unit_svamod.sv(90)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_cfg_out
+                     input/control_unit_svamod.sv(91)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_clr_out
+                     input/control_unit_svamod.sv(92)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_level_out
+                     input/control_unit_svamod.sv(93)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick_out
+                     input/control_unit_svamod.sv(94)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0_out
+                     input/control_unit_svamod.sv(95)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1_out
+                     input/control_unit_svamod.sv(96)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_out
+                     input/control_unit_svamod.sv(97)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rindex
+                     input/control_unit_svamod.sv(99)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_apbwrite
+                     input/control_unit_svamod.sv(100)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_apbread
+                     input/control_unit_svamod.sv(101)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rbank_r
+                     input/control_unit_svamod.sv(102)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_start
+                     input/control_unit_svamod.sv(103)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_stop
+                     input/control_unit_svamod.sv(104)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_clr
+                     input/control_unit_svamod.sv(105)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_irqack
+                     input/control_unit_svamod.sv(106)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_r
+                     input/control_unit_svamod.sv(107)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_r
+                     input/control_unit_svamod.sv(108)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_irq_r
+                     input/control_unit_svamod.sv(109)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_ldata_r
+                     input/control_unit_svamod.sv(110)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_lhead_r
+                     input/control_unit_svamod.sv(111)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_ltail_r
+                     input/control_unit_svamod.sv(112)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_llooped_r
+                     input/control_unit_svamod.sv(113)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_lempty
+                     input/control_unit_svamod.sv(114)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_lfull
+                     input/control_unit_svamod.sv(115)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_lfifo
+                     input/control_unit_svamod.sv(116)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rdata_r
+                     input/control_unit_svamod.sv(117)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rhead_r
+                     input/control_unit_svamod.sv(118)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rtail_r
+                     input/control_unit_svamod.sv(119)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rlooped_r
+                     input/control_unit_svamod.sv(120)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rempty
+                     input/control_unit_svamod.sv(121)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rfull
+                     input/control_unit_svamod.sv(122)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rfifo
+                     input/control_unit_svamod.sv(123)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_reset
+                     input/apb_assumes.svh(10)          0         50     550382          0     550432          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_1
+                     input/apb_assumes.svh(22)          0       3444     271747         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_0
+                     input/apb_assumes.svh(35)          0     271747       3444         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_before_penable
+                     input/apb_assumes.svh(47)          0       1722     273469         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_penable_fall
+                     input/apb_assumes.svh(58)          0       1725     273465         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_penable_hold
+                     input/apb_assumes.svh(69)          0          0     275191         25     275216          0           0 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_bus_hold
+                     input/apb_assumes.svh(80)          0       1722     273469         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_apb_access
+                     input/apb_assumes.svh(101)
+                                                        0       1721     273469         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_paddr_align
+                     input/apb_assumes.svh(112)
+                                                        0       3444     271747         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_req_in_pulse
+                     input/control_unit_svamod.sv(144)
+                                                        0        289     274902         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_req_in_first
+                     input/control_unit_svamod.sv(158)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_pready_on
+                     input/control_unit_svamod.sv(168)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_pslverr_off
+                     input/control_unit_svamod.sv(178)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_prdata_off
+                     input/control_unit_svamod.sv(188)
+                                                        0     271747       3444         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_clr_out_pulse
+                     input/control_unit_svamod.sv(199)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_clr_out_valid_high
+                     input/control_unit_svamod.sv(209)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_cfg_out_pulse
+                     input/control_unit_svamod.sv(220)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_cfg_out_valid_high
+                     input/control_unit_svamod.sv(232)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_start_play
+                     input/control_unit_svamod.sv(242)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_valid_start_play
+                     input/control_unit_svamod.sv(252)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_stop_play
+                     input/control_unit_svamod.sv(262)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_valid_stop_play
+                     input/control_unit_svamod.sv(272)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_level_out_pulse
+                     input/control_unit_svamod.sv(282)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_level_out_valid_high
+                     input/control_unit_svamod.sv(292)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_tick_standby
+                     input/control_unit_svamod.sv(302)
+                                                        0       4223     270968         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_tick_out_high
+                     input/control_unit_svamod.sv(312)
+                                                        0        284     274907         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_tick_out_low
+                     input/control_unit_svamod.sv(322)
+                                                        0     274907        284         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_fifo_drain
+                     input/control_unit_svamod.sv(334)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_rise_first
+                     input/control_unit_svamod.sv(350)
+                                                        0          0     275191         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_high
+                     input/control_unit_svamod.sv(362)
+                                                        0       1094     274096         26     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_standby
+                     input/control_unit_svamod.sv(372)
+                                                        0       4223     270968         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_down
+                     input/control_unit_svamod.sv(382)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_cfg_reg_drv
+                     input/control_unit_svamod.sv(392)
+                                                        0          2     275189         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_level_reg_drv
+                     input/control_unit_svamod.sv(402)
+                                                        0          2     275189         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_dsp_regs_drv
+                     input/control_unit_svamod.sv(419)
+                                                        0        266     274925         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_pslverr
+                     input/control_unit_wba.svh(8)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_pready
+                     input/control_unit_wba.svh(18)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_rindex_on
+                     input/control_unit_wba.svh(28)
+                                                        0       3444     271747         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_rindex_off
+                     input/control_unit_wba.svh(38)
+                                                        0     271747       3444         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_index_range
+                     input/control_unit_wba.svh(48)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_rbank_r_write
+                     input/control_unit_wba.svh(58)
+                                                        0        290     274900         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_status_reg_play
+                     input/control_unit_wba.svh(68)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_status_reg_standby
+                     input/control_unit_wba.svh(78)
+                                                        0          2     275188         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_rbank_r_stable
+                     input/control_unit_wba.svh(88)
+                                                        0     274888        291         37     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_cfg_reg_out
+                     input/control_unit_wba.svh(98)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_level_reg_out
+                     input/control_unit_wba.svh(108)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_dsp_regs_out
+                     input/control_unit_wba.svh(118)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ldata_r_write
+                     input/control_unit_wba.svh(128)
+                                                        0        449     274742         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ldata_r_failed_write
+                     input/control_unit_wba.svh(138)
+                                                        0          0     275191         25     275216          0           0 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ldata_r_stable
+                     input/control_unit_wba.svh(148)
+                                                        0     274728        450         37     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lhead_r_inc
+                     input/control_unit_wba.svh(158)
+                                                        0        441     274750         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lhead_r_loop
+                     input/control_unit_wba.svh(168)
+                                                        0          8     275183         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lhead_r_stable
+                     input/control_unit_wba.svh(178)
+                                                        0     274728        450         37     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_llooped_r_on
+                     input/control_unit_wba.svh(188)
+                                                        0          8     275183         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_llooped_r_off_1
+                     input/control_unit_wba.svh(198)
+                                                        0          0     275191         25     275216          0           0 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_llooped_r_off_2
+                     input/control_unit_wba.svh(208)
+                                                        0          5     275186         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_llooped_r_stable
+                     input/control_unit_wba.svh(218)
+                                                        0     274446        732         37     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_inc_1
+                     input/control_unit_wba.svh(228)
+                                                        0          2     275189         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_inc_2
+                     input/control_unit_wba.svh(238)
+                                                        0        275     274916         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_loop_1
+                     input/control_unit_wba.svh(248)
+                                                        0          0     275191         25     275216          0           0 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_loop_2
+                     input/control_unit_wba.svh(258)
+                                                        0          5     275186         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_stable
+                     input/control_unit_wba.svh(269)
+                                                        0     274895        283         37     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lempty_on
+                     input/control_unit_wba.svh(279)
+                                                        0       2219     272972         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lempty_of
+                     input/control_unit_wba.svh(289)
+                                                        0     272972       2219         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lfull_on
+                     input/control_unit_wba.svh(299)
+                                                        0       4782     270409         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lfull_off
+                     input/control_unit_wba.svh(309)
+                                                        0     270409       4782         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lfifo_output_on
+                     input/control_unit_wba.svh(319)
+                                                        0     272972       2219         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lfifo_output_off
+                     input/control_unit_wba.svh(329)
+                                                        0       2219     272972         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_prdata_rbank
+                     input/control_unit_wba.svh(339)
+                                                        0       1412     273779         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_prdata_lfifo
+                     input/control_unit_wba.svh(349)
+                                                        0       1016     274175         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_prdata_rfifo
+                     input/control_unit_wba.svh(359)
+                                                        0       1016     274175         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_prdata_off
+                     input/control_unit_wba.svh(369)
+                                                        0     271747       3444         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_play_r_rise
+                     input/control_unit_wba.svh(379)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_play_r_fall
+                     input/control_unit_wba.svh(389)
+                                                        0          2     275188         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_play_r_stable
+                     input/control_unit_wba.svh(399)
+                                                        0     275172          7         37     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_play_out_state
+                     input/control_unit_wba.svh(409)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_clr_on
+                     input/control_unit_wba.svh(419)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_clr_off
+                     input/control_unit_wba.svh(429)
+                                                        0     275190          1         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_clr_out
+                     input/control_unit_wba.svh(439)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_cfg_out_on
+                     input/control_unit_wba.svh(449)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_cfg_out_off
+                     input/control_unit_wba.svh(459)
+                                                        0     275190          1         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_start_on
+                     input/control_unit_wba.svh(469)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_start_off
+                     input/control_unit_wba.svh(479)
+                                                        0     275187          4         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_stop_on
+                     input/control_unit_wba.svh(489)
+                                                        0          3     275188         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_stop_off
+                     input/control_unit_wba.svh(499)
+                                                        0     275188          3         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_level_out_on
+                     input/control_unit_wba.svh(509)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_level_out_off
+                     input/control_unit_wba.svh(519)
+                                                        0     275190          1         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irqack_on
+                     input/control_unit_wba.svh(529)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irqack_off
+                     input/control_unit_wba.svh(539)
+                                                        0     275187          4         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_tick_out_on
+                     input/control_unit_wba.svh(549)
+                                                        0       4223     270968         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_tick_out_of
+                     input/control_unit_wba.svh(559)
+                                                        0     270968       4223         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_req_r_on
+                     input/control_unit_wba.svh(569)
+                                                        0     270966       4223         26     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_req_r_off
+                     input/control_unit_wba.svh(579)
+                                                        0       4212     270968         36     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_r_rise
+                     input/control_unit_wba.svh(589)
+                                                        0         96     275094         26     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_r_fall_stop
+                     input/control_unit_wba.svh(599)
+                                                        0          2     275188         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_r_fall_irqack
+                     input/control_unit_wba.svh(609)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_r_stable
+                     input/control_unit_wba.svh(619)
+                                                        0     275076        104         36     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_out
+                     input/control_unit_wba.svh(629)
+                                                        0     275191          0         25     275216          0           1 off
+
+=================================================================================
+=== Instance: /control_unit_tb/TEST
+=== Design Unit: work.control_unit_test
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      31        31         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/control_unit_tb/TEST/apb_test/ia_apb_test1
+                     input/control_unit_test_tasks.svh(31)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/address_decoding_test/immed__66
+                     input/control_unit_test_tasks.svh(66)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/address_decoding_test/#ublk#166378660#58/immed__60
+                     input/control_unit_test_tasks.svh(60)
+                                                        0        140          0          0        140          0           0 off
+/control_unit_tb/TEST/register_test/ia_register_test_1
+                     input/control_unit_test_tasks.svh(93)
+                                                        0        140          0          0        140          0           0 off
+/control_unit_tb/TEST/prdata_off_test/ia_prdata_test_2
+                     input/control_unit_test_tasks.svh(166)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/prdata_off_test/ia_prdata_test_3
+                     input/control_unit_test_tasks.svh(172)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/prdata_off_test/ia_prdata_test_4
+                     input/control_unit_test_tasks.svh(178)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/prdata_off_test/#anonblk#166378660#125#4#/#ublk#166378660#125/immed__129
+                     input/control_unit_test_tasks.svh(129)
+                                                        0        138          0          0        138          0           0 off
+/control_unit_tb/TEST/prdata_off_test/#anonblk#166378660#134#4#/#ublk#166378660#134/immed__138
+                     input/control_unit_test_tasks.svh(138)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/prdata_off_test/#anonblk#166378660#143#4#/#ublk#166378660#143/immed__147
+                     input/control_unit_test_tasks.svh(147)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/prdata_off_test/#anonblk#166378660#155#4#/ia_prdata_test_1
+                     input/control_unit_test_tasks.svh(159)
+                                                        0        138          0          0        138          0           0 off
+/control_unit_tb/TEST/cmd_clr_test/immed__220
+                     input/control_unit_test_tasks.svh(220)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/cmd_clr_test/#anonblk#166378660#209#4#/#ublk#166378660#209/immed__214
+                     input/control_unit_test_tasks.svh(214)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/cmd_clr_test/#anonblk#166378660#209#4#/#ublk#166378660#209/immed__212
+                     input/control_unit_test_tasks.svh(212)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/cmd_clr_test/#anonblk#166378660#224#4#/ia_cmd_clr_test_1
+                     input/control_unit_test_tasks.svh(226)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/cmd_clr_test/#anonblk#166378660#224#4#/ia_cmd_clr_test_2
+                     input/control_unit_test_tasks.svh(230)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/cmd_cfg_test/immed__248
+                     input/control_unit_test_tasks.svh(248)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/cmd_level_test/immed__266
+                     input/control_unit_test_tasks.svh(266)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/req_tick_test/req_writer/ia_req_tick_test_1
+                     input/control_unit_test_tasks.svh(318)
+                                                        0          9          0          0          9          0           0 off
+/control_unit_tb/TEST/req_tick_test/#ublk#166378660#290/immed__300
+                     input/control_unit_test_tasks.svh(300)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/req_tick_test/#ublk#166378660#290/immed__293
+                     input/control_unit_test_tasks.svh(293)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/immed__429
+                     input/control_unit_test_tasks.svh(429)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/immed__377
+                     input/control_unit_test_tasks.svh(377)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/ia_irq_down_test_1
+                     input/control_unit_test_tasks.svh(393)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/ia_irq_down_test_2
+                     input/control_unit_test_tasks.svh(405)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/ia_irq_down_test_3
+                     input/control_unit_test_tasks.svh(424)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/ia_irq_down_test_4
+                     input/control_unit_test_tasks.svh(433)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/#anonblk#166378660#363#4#/#ublk#166378660#363/immed__370
+                     input/control_unit_test_tasks.svh(370)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/irq_down_test/#anonblk#166378660#363#4#/#ublk#166378660#363/immed__365
+                     input/control_unit_test_tasks.svh(365)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/performance_test/host_process/ia_performance_test_1
+                     input/control_unit_test_tasks.svh(488)
+                                                        0     268626          0          0     268626          0           0 off
+/control_unit_tb/TEST/performance_test/audio_out_reader/ia_performance_test_2
+                     input/control_unit_test_tasks.svh(547)
+                                                        0        168          0          0        168          0           0 off
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/control_unit_tb/apb/psel_valid
+                     input/apb_if.sv(203)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/penable_valid
+                     input/apb_if.sv(204)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/pwrite_valid
+                     input/apb_if.sv(205)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/paddr_valid
+                     input/apb_if.sv(206)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/pwdata_valid
+                     input/apb_if.sv(207)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/pready_valid
+                     input/apb_if.sv(208)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/pslverr_valid
+                     input/apb_if.sv(209)               0     275216          0          0     275216          0           1 off
+/control_unit_tb/apb/psel_to_penable_ok
+                     input/apb_if.sv(216)               0       1722     273469         25     275216          0           1 off
+/control_unit_tb/apb/max_wait_states_ok
+                     input/apb_if.sv(224)               0       1722     273469         25     275216          0           1 off
+/control_unit_tb/apb/penable_deassert_ok
+                     input/apb_if.sv(231)               0       1725     273465         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PSEL
+                     input/control_unit_svamod.sv(78)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PENABLE
+                     input/control_unit_svamod.sv(79)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PWRITE
+                     input/control_unit_svamod.sv(80)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PADDR
+                     input/control_unit_svamod.sv(81)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PWDATA
+                     input/control_unit_svamod.sv(82)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_in
+                     input/control_unit_svamod.sv(83)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PRDATA
+                     input/control_unit_svamod.sv(84)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PSLVERR
+                     input/control_unit_svamod.sv(85)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_PREADY
+                     input/control_unit_svamod.sv(86)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_irq_out
+                     input/control_unit_svamod.sv(87)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_cfg_reg_out
+                     input/control_unit_svamod.sv(88)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_level_reg_out
+                     input/control_unit_svamod.sv(89)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_dsp_regs_out
+                     input/control_unit_svamod.sv(90)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_cfg_out
+                     input/control_unit_svamod.sv(91)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_clr_out
+                     input/control_unit_svamod.sv(92)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_level_out
+                     input/control_unit_svamod.sv(93)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick_out
+                     input/control_unit_svamod.sv(94)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0_out
+                     input/control_unit_svamod.sv(95)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1_out
+                     input/control_unit_svamod.sv(96)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_out
+                     input/control_unit_svamod.sv(97)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rindex
+                     input/control_unit_svamod.sv(99)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_apbwrite
+                     input/control_unit_svamod.sv(100)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_apbread
+                     input/control_unit_svamod.sv(101)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rbank_r
+                     input/control_unit_svamod.sv(102)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_start
+                     input/control_unit_svamod.sv(103)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_stop
+                     input/control_unit_svamod.sv(104)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_clr
+                     input/control_unit_svamod.sv(105)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_irqack
+                     input/control_unit_svamod.sv(106)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_r
+                     input/control_unit_svamod.sv(107)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_r
+                     input/control_unit_svamod.sv(108)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_irq_r
+                     input/control_unit_svamod.sv(109)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_ldata_r
+                     input/control_unit_svamod.sv(110)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_lhead_r
+                     input/control_unit_svamod.sv(111)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_ltail_r
+                     input/control_unit_svamod.sv(112)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_llooped_r
+                     input/control_unit_svamod.sv(113)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_lempty
+                     input/control_unit_svamod.sv(114)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_lfull
+                     input/control_unit_svamod.sv(115)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_lfifo
+                     input/control_unit_svamod.sv(116)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rdata_r
+                     input/control_unit_svamod.sv(117)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rhead_r
+                     input/control_unit_svamod.sv(118)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rtail_r
+                     input/control_unit_svamod.sv(119)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rlooped_r
+                     input/control_unit_svamod.sv(120)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rempty
+                     input/control_unit_svamod.sv(121)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rfull
+                     input/control_unit_svamod.sv(122)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_rfifo
+                     input/control_unit_svamod.sv(123)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_reset
+                     input/apb_assumes.svh(10)          0         50     550382          0     550432          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_1
+                     input/apb_assumes.svh(22)          0       3444     271747         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_0
+                     input/apb_assumes.svh(35)          0     271747       3444         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_before_penable
+                     input/apb_assumes.svh(47)          0       1722     273469         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_penable_fall
+                     input/apb_assumes.svh(58)          0       1725     273465         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_penable_hold
+                     input/apb_assumes.svh(69)          0          0     275191         25     275216          0           0 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_bus_hold
+                     input/apb_assumes.svh(80)          0       1722     273469         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_apb_access
+                     input/apb_assumes.svh(101)
+                                                        0       1721     273469         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_paddr_align
+                     input/apb_assumes.svh(112)
+                                                        0       3444     271747         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_req_in_pulse
+                     input/control_unit_svamod.sv(144)
+                                                        0        289     274902         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_req_in_first
+                     input/control_unit_svamod.sv(158)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_pready_on
+                     input/control_unit_svamod.sv(168)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_pslverr_off
+                     input/control_unit_svamod.sv(178)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_prdata_off
+                     input/control_unit_svamod.sv(188)
+                                                        0     271747       3444         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_clr_out_pulse
+                     input/control_unit_svamod.sv(199)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_clr_out_valid_high
+                     input/control_unit_svamod.sv(209)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_cfg_out_pulse
+                     input/control_unit_svamod.sv(220)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_cfg_out_valid_high
+                     input/control_unit_svamod.sv(232)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_start_play
+                     input/control_unit_svamod.sv(242)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_valid_start_play
+                     input/control_unit_svamod.sv(252)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_stop_play
+                     input/control_unit_svamod.sv(262)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_valid_stop_play
+                     input/control_unit_svamod.sv(272)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_level_out_pulse
+                     input/control_unit_svamod.sv(282)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_level_out_valid_high
+                     input/control_unit_svamod.sv(292)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_tick_standby
+                     input/control_unit_svamod.sv(302)
+                                                        0       4223     270968         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_tick_out_high
+                     input/control_unit_svamod.sv(312)
+                                                        0        284     274907         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_tick_out_low
+                     input/control_unit_svamod.sv(322)
+                                                        0     274907        284         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_fifo_drain
+                     input/control_unit_svamod.sv(334)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_rise_first
+                     input/control_unit_svamod.sv(350)
+                                                        0          0     275191         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_high
+                     input/control_unit_svamod.sv(362)
+                                                        0       1094     274096         26     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_standby
+                     input/control_unit_svamod.sv(372)
+                                                        0       4223     270968         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_down
+                     input/control_unit_svamod.sv(382)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_cfg_reg_drv
+                     input/control_unit_svamod.sv(392)
+                                                        0          2     275189         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_level_reg_drv
+                     input/control_unit_svamod.sv(402)
+                                                        0          2     275189         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_dsp_regs_drv
+                     input/control_unit_svamod.sv(419)
+                                                        0        266     274925         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_pslverr
+                     input/control_unit_wba.svh(8)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_pready
+                     input/control_unit_wba.svh(18)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_rindex_on
+                     input/control_unit_wba.svh(28)
+                                                        0       3444     271747         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_rindex_off
+                     input/control_unit_wba.svh(38)
+                                                        0     271747       3444         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_index_range
+                     input/control_unit_wba.svh(48)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_rbank_r_write
+                     input/control_unit_wba.svh(58)
+                                                        0        290     274900         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_status_reg_play
+                     input/control_unit_wba.svh(68)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_status_reg_standby
+                     input/control_unit_wba.svh(78)
+                                                        0          2     275188         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_rbank_r_stable
+                     input/control_unit_wba.svh(88)
+                                                        0     274888        291         37     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_cfg_reg_out
+                     input/control_unit_wba.svh(98)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_level_reg_out
+                     input/control_unit_wba.svh(108)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_dsp_regs_out
+                     input/control_unit_wba.svh(118)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ldata_r_write
+                     input/control_unit_wba.svh(128)
+                                                        0        449     274742         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ldata_r_failed_write
+                     input/control_unit_wba.svh(138)
+                                                        0          0     275191         25     275216          0           0 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ldata_r_stable
+                     input/control_unit_wba.svh(148)
+                                                        0     274728        450         37     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lhead_r_inc
+                     input/control_unit_wba.svh(158)
+                                                        0        441     274750         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lhead_r_loop
+                     input/control_unit_wba.svh(168)
+                                                        0          8     275183         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lhead_r_stable
+                     input/control_unit_wba.svh(178)
+                                                        0     274728        450         37     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_llooped_r_on
+                     input/control_unit_wba.svh(188)
+                                                        0          8     275183         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_llooped_r_off_1
+                     input/control_unit_wba.svh(198)
+                                                        0          0     275191         25     275216          0           0 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_llooped_r_off_2
+                     input/control_unit_wba.svh(208)
+                                                        0          5     275186         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_llooped_r_stable
+                     input/control_unit_wba.svh(218)
+                                                        0     274446        732         37     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_inc_1
+                     input/control_unit_wba.svh(228)
+                                                        0          2     275189         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_inc_2
+                     input/control_unit_wba.svh(238)
+                                                        0        275     274916         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_loop_1
+                     input/control_unit_wba.svh(248)
+                                                        0          0     275191         25     275216          0           0 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_loop_2
+                     input/control_unit_wba.svh(258)
+                                                        0          5     275186         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_ltail_r_stable
+                     input/control_unit_wba.svh(269)
+                                                        0     274895        283         37     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lempty_on
+                     input/control_unit_wba.svh(279)
+                                                        0       2219     272972         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lempty_of
+                     input/control_unit_wba.svh(289)
+                                                        0     272972       2219         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lfull_on
+                     input/control_unit_wba.svh(299)
+                                                        0       4782     270409         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lfull_off
+                     input/control_unit_wba.svh(309)
+                                                        0     270409       4782         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lfifo_output_on
+                     input/control_unit_wba.svh(319)
+                                                        0     272972       2219         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_lfifo_output_off
+                     input/control_unit_wba.svh(329)
+                                                        0       2219     272972         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_prdata_rbank
+                     input/control_unit_wba.svh(339)
+                                                        0       1412     273779         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_prdata_lfifo
+                     input/control_unit_wba.svh(349)
+                                                        0       1016     274175         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_prdata_rfifo
+                     input/control_unit_wba.svh(359)
+                                                        0       1016     274175         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_prdata_off
+                     input/control_unit_wba.svh(369)
+                                                        0     271747       3444         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_play_r_rise
+                     input/control_unit_wba.svh(379)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_play_r_fall
+                     input/control_unit_wba.svh(389)
+                                                        0          2     275188         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_play_r_stable
+                     input/control_unit_wba.svh(399)
+                                                        0     275172          7         37     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_play_out_state
+                     input/control_unit_wba.svh(409)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_clr_on
+                     input/control_unit_wba.svh(419)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_clr_off
+                     input/control_unit_wba.svh(429)
+                                                        0     275190          1         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_clr_out
+                     input/control_unit_wba.svh(439)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_cfg_out_on
+                     input/control_unit_wba.svh(449)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_cfg_out_off
+                     input/control_unit_wba.svh(459)
+                                                        0     275190          1         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_start_on
+                     input/control_unit_wba.svh(469)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_start_off
+                     input/control_unit_wba.svh(479)
+                                                        0     275187          4         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_stop_on
+                     input/control_unit_wba.svh(489)
+                                                        0          3     275188         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_stop_off
+                     input/control_unit_wba.svh(499)
+                                                        0     275188          3         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_level_out_on
+                     input/control_unit_wba.svh(509)
+                                                        0          1     275190         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_level_out_off
+                     input/control_unit_wba.svh(519)
+                                                        0     275190          1         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irqack_on
+                     input/control_unit_wba.svh(529)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irqack_off
+                     input/control_unit_wba.svh(539)
+                                                        0     275187          4         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_tick_out_on
+                     input/control_unit_wba.svh(549)
+                                                        0       4223     270968         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_tick_out_of
+                     input/control_unit_wba.svh(559)
+                                                        0     270968       4223         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_req_r_on
+                     input/control_unit_wba.svh(569)
+                                                        0     270966       4223         26     275215          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_req_r_off
+                     input/control_unit_wba.svh(579)
+                                                        0       4212     270968         36     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_r_rise
+                     input/control_unit_wba.svh(589)
+                                                        0         96     275094         26     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_r_fall_stop
+                     input/control_unit_wba.svh(599)
+                                                        0          2     275188         25     275215          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_r_fall_irqack
+                     input/control_unit_wba.svh(609)
+                                                        0          4     275187         25     275216          0           1 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_r_stable
+                     input/control_unit_wba.svh(619)
+                                                        0     275076        104         36     275216          0           2 off
+/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/ar_irq_out
+                     input/control_unit_wba.svh(629)
+                                                        0     275191          0         25     275216          0           1 off
+/control_unit_tb/TEST/apb_test/ia_apb_test1
+                     input/control_unit_test_tasks.svh(31)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/address_decoding_test/immed__66
+                     input/control_unit_test_tasks.svh(66)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/address_decoding_test/#ublk#166378660#58/immed__60
+                     input/control_unit_test_tasks.svh(60)
+                                                        0        140          0          0        140          0           0 off
+/control_unit_tb/TEST/register_test/ia_register_test_1
+                     input/control_unit_test_tasks.svh(93)
+                                                        0        140          0          0        140          0           0 off
+/control_unit_tb/TEST/prdata_off_test/ia_prdata_test_2
+                     input/control_unit_test_tasks.svh(166)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/prdata_off_test/ia_prdata_test_3
+                     input/control_unit_test_tasks.svh(172)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/prdata_off_test/ia_prdata_test_4
+                     input/control_unit_test_tasks.svh(178)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/prdata_off_test/#anonblk#166378660#125#4#/#ublk#166378660#125/immed__129
+                     input/control_unit_test_tasks.svh(129)
+                                                        0        138          0          0        138          0           0 off
+/control_unit_tb/TEST/prdata_off_test/#anonblk#166378660#134#4#/#ublk#166378660#134/immed__138
+                     input/control_unit_test_tasks.svh(138)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/prdata_off_test/#anonblk#166378660#143#4#/#ublk#166378660#143/immed__147
+                     input/control_unit_test_tasks.svh(147)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/prdata_off_test/#anonblk#166378660#155#4#/ia_prdata_test_1
+                     input/control_unit_test_tasks.svh(159)
+                                                        0        138          0          0        138          0           0 off
+/control_unit_tb/TEST/cmd_clr_test/immed__220
+                     input/control_unit_test_tasks.svh(220)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/cmd_clr_test/#anonblk#166378660#209#4#/#ublk#166378660#209/immed__214
+                     input/control_unit_test_tasks.svh(214)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/cmd_clr_test/#anonblk#166378660#209#4#/#ublk#166378660#209/immed__212
+                     input/control_unit_test_tasks.svh(212)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/cmd_clr_test/#anonblk#166378660#224#4#/ia_cmd_clr_test_1
+                     input/control_unit_test_tasks.svh(226)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/cmd_clr_test/#anonblk#166378660#224#4#/ia_cmd_clr_test_2
+                     input/control_unit_test_tasks.svh(230)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/cmd_cfg_test/immed__248
+                     input/control_unit_test_tasks.svh(248)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/cmd_level_test/immed__266
+                     input/control_unit_test_tasks.svh(266)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/req_tick_test/req_writer/ia_req_tick_test_1
+                     input/control_unit_test_tasks.svh(318)
+                                                        0          9          0          0          9          0           0 off
+/control_unit_tb/TEST/req_tick_test/#ublk#166378660#290/immed__300
+                     input/control_unit_test_tasks.svh(300)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/req_tick_test/#ublk#166378660#290/immed__293
+                     input/control_unit_test_tasks.svh(293)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/immed__429
+                     input/control_unit_test_tasks.svh(429)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/immed__377
+                     input/control_unit_test_tasks.svh(377)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/ia_irq_down_test_1
+                     input/control_unit_test_tasks.svh(393)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/ia_irq_down_test_2
+                     input/control_unit_test_tasks.svh(405)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/ia_irq_down_test_3
+                     input/control_unit_test_tasks.svh(424)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/ia_irq_down_test_4
+                     input/control_unit_test_tasks.svh(433)
+                                                        0          1          0          0          1          0           0 off
+/control_unit_tb/TEST/irq_down_test/#anonblk#166378660#363#4#/#ublk#166378660#363/immed__370
+                     input/control_unit_test_tasks.svh(370)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/irq_down_test/#anonblk#166378660#363#4#/#ublk#166378660#363/immed__365
+                     input/control_unit_test_tasks.svh(365)
+                                                        0         56          0          0         56          0           0 off
+/control_unit_tb/TEST/performance_test/host_process/ia_performance_test_1
+                     input/control_unit_test_tasks.svh(488)
+                                                        0     268626          0          0     268626          0           0 off
+/control_unit_tb/TEST/performance_test/audio_out_reader/ia_performance_test_2
+                     input/control_unit_test_tasks.svh(547)
+                                                        0        168          0          0        168          0           0 off
+
+Total Coverage By Instance (filtered view): 97.28%
+

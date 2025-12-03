@@ -1,0 +1,159 @@
+-------------------------------------------------------------------------------
+Questa CDC Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+CDC FX report
+Design : audioport
+
+Created Fri Apr 25 15:12:58 2025
+-------------------------------------------------------------------------------
+
+=================================================================
+Section 1  : CDC FX Summary
+Section 2  : CDC FX List
+Section 3  : CDC FX Details
+Section 4  : CDC FX Setup
+=================================================================
+
+=================================================================
+Section 1  : CDC FX Summary
+=================================================================
+
+FX Checkers Recognized   :   7
+-------------------------------------------------------------------------------
+CDC FX Checker                                Count               Checks
+-------------------------------------------------------------------------------
+cdc_fx                                            6                    3
+cdc_rfx                                           1                    0
+-------------------------------------------------------------------------------
+All                                               7                    3
+-------------------------------------------------------------------------------
+
+=================================================================
+Section 2  : CDC FX List
+=================================================================
+
+cdc_fx  cdc_fx.combo_logic_7812
+cdc_fx  cdc_fx.dmux_31965
+cdc_fx  cdc_fx.dmux_96957
+cdc_fx  cdc_fx.two_dff_63324
+cdc_fx  cdc_fx.two_dff_63324_7156
+cdc_fx  cdc_fx.two_dff_73219
+cdc_rfx  cdc_fx.async_reset_91666
+
+=================================================================
+Section 3  : CDC FX Details
+=================================================================
+
+Type/Scheme   :  cdc_fx  cdc_fx.combo_logic_7812
+----------------------------------------------------
+  Check cdc_fx           : On <Default On>
+  Check glitch_caught    : Off <Default Off>
+  Check glitch_swallowed : Off <Default Off>
+  TX REG                 : i2s_unit_1.counter
+  TX CLOCK               : mclk
+  RX REG                 : cdc_unit_1.req_in_sync1
+  RX CLOCK               : clk
+  TX RESET               : i2s_unit_1.play_r
+  RX RESET               : 1'b0
+  RX ARESET              : ( ! rst_n)
+  RX LOAD ENABLE         : 1'b1
+
+Type/Scheme   :  cdc_fx  cdc_fx.dmux_31965
+----------------------------------------------------
+  Check cdc_fx           : On <Default On>
+  Check glitch_caught    : Off <Default Off>
+  Check glitch_swallowed : Off <Default Off>
+  TX REG                 : cdc_unit_1.audio1_reg
+  TX CLOCK               : clk
+  RX REG                 : cdc_unit_1.audio1_out
+  RX CLOCK               : mclk
+  TX RESET               : 1'b0
+  RX RESET               : 1'b0
+  RX ARESET              : ( ! cdc_unit_1.mrst_n_sync2)
+  RX LOAD ENABLE         : (cdc_unit_1.handshake_req_sync2 && ( ! cdc_unit_1.tick_prev))
+
+Type/Scheme   :  cdc_fx  cdc_fx.dmux_96957
+----------------------------------------------------
+  Check cdc_fx           : On <Default On>
+  Check glitch_caught    : Off <Default Off>
+  Check glitch_swallowed : Off <Default Off>
+  TX REG                 : cdc_unit_1.audio0_reg
+  TX CLOCK               : clk
+  RX REG                 : cdc_unit_1.audio0_out
+  RX CLOCK               : mclk
+  TX RESET               : 1'b0
+  RX RESET               : 1'b0
+  RX ARESET              : ( ! cdc_unit_1.mrst_n_sync2)
+  RX LOAD ENABLE         : (cdc_unit_1.handshake_req_sync2 && ( ! cdc_unit_1.tick_prev))
+
+Type/Scheme   :  cdc_fx  cdc_fx.two_dff_63324
+----------------------------------------------------
+  Check cdc_fx           : Off <Default Off>
+  Check glitch_caught    : Off <Default Off>
+  Check glitch_swallowed : Off <Default Off>
+  TX REG                 : cdc_unit_1.handshake_ack
+  TX CLOCK               : mclk
+  RX REG                 : cdc_unit_1.handshake_ack_sync1
+  RX CLOCK               : clk
+  TX RESET               : 1'b0
+  RX RESET               : 1'b0
+  RX ARESET              : ( ! rst_n)
+  RX LOAD ENABLE         : 1'b1
+
+Type/Scheme   :  cdc_fx  cdc_fx.two_dff_63324_7156
+----------------------------------------------------
+  Check cdc_fx           : Off <Default Off>
+  Check glitch_caught    : Off <Default Off>
+  Check glitch_swallowed : Off <Default Off>
+  TX REG                 : cdc_unit_1.handshake_req
+  TX CLOCK               : clk
+  RX REG                 : cdc_unit_1.handshake_req_sync1
+  RX CLOCK               : mclk
+  TX RESET               : 1'b0
+  RX RESET               : 1'b0
+  RX ARESET              : ( ! cdc_unit_1.mrst_n_sync2)
+  RX LOAD ENABLE         : 1'b1
+
+Type/Scheme   :  cdc_fx  cdc_fx.two_dff_73219
+----------------------------------------------------
+  Check cdc_fx           : Off <Default Off>
+  Check glitch_caught    : Off <Default Off>
+  Check glitch_swallowed : Off <Default Off>
+  TX REG                 : control_unit_1.play_r
+  TX CLOCK               : clk
+  RX REG                 : cdc_unit_1.play_in_sync1
+  RX CLOCK               : mclk
+  TX RESET               : 1'b0
+  RX RESET               : 1'b0
+  RX ARESET              : ( ! cdc_unit_1.mrst_n_sync2)
+  RX LOAD ENABLE         : 1'b1
+
+Type/Scheme   :  cdc_rfx  cdc_fx.async_reset_91666
+----------------------------------------------------
+  Check cdc_rfx          : Off <Default Off>
+  TX REG                 : rst_n
+  RX REG                 : cdc_unit_1.mrst_n_sync1
+  RX CLOCK               : cdc_unit_1.rsync_clk
+  RX RESET               : 1'b0
+  RX ARESET              : ( ! rst_n)
+  RX LOAD ENABLE         : 1'b1
+
+
+=================================================================
+Section 4  : CDC FX Setup
+=================================================================
+
+User-specified timescale     : None
+
+User-specified delay         : None
+
+Questa Sim argument files (2-step flow)
+----------------------------------------------------
+  vlog  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_fx/simulation/cdc_fx_vlog.arg
+  vsim  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_fx/simulation/cdc_fx_vsim_2step.arg
+
+Questa Sim vopt flow argument files (3-step flow)
+----------------------------------------------------
+  vlog  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_fx/simulation/cdc_fx_vlog.arg
+  vopt  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_fx/simulation/cdc_fx_vopt.arg
+  vsim  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_fx/simulation/cdc_fx_vsim_3step.arg
+

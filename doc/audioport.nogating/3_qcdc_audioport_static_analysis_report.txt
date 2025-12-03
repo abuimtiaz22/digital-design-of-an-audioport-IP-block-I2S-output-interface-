@@ -1,0 +1,405 @@
+
+Questa CDC Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+
+-----------------------------------------------------------------
+Clock Domain Crossing Analysis Report.
+
+Created Fri Apr 25 15:12:59 2025
+-----------------------------------------------------------------
+
+
+=================================================================
+Section 1  : Clock Information
+Section 2  : Reset Information
+Section 3  : CDC Results
+Section 4  : Custom Synchronization
+Section 5  : Custom Synchronizers without External Crossings
+Section 6  : Modal Analysis Information
+Section 7  : Modal Design Information
+Section 8  : Constant Information
+Section 9  : Design Information
+Section 10 : Port Domain Information
+=================================================================
+
+
+=================================================================
+Section 1 : Clock Information
+=================================================================
+
+Clock Group Summary for 'audioport' 
+===================================
+Total Number of Clock Groups         : 2
+ 1. User-Specified                   :(2)
+ 2. Inferred                         :(0)
+    2.1 Primary                      : 0
+    2.2 Undriven                     : 0
+    2.3 Blackbox                     : 0
+    2.4 Gated Mux                    : 0
+    2.5 Gated Combo                  : 0
+ 3. Ignored                          :(0)
+
+
+=================================================================
+1. User-Specified (2)
+=================================================================
+Group     0(14979 Register Bits, 0 Latch Bits)
+-----------
+clk 
+  control_unit_1.clk 
+  dsp_unit_1.clk 
+    dsp_unit_1.dsp_unit_rtl_1.clk 
+      dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.clk 
+        dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.clk 
+          dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.ccs_MIO_clk 
+            dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.dsp_unit_read_inputs_core_inst.ccs_MIO_clk 
+        dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst.clk 
+          dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst.write_outputs_mioi.ccs_MIO_clk 
+            dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst.write_outputs_mioi.dsp_unit_write_outputs_core_inst.ccs_MIO_clk 
+        dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_dsp_proc_fsm_inst.clk 
+      dsp_unit_1.dsp_unit_rtl_1.dsp_unit_regs_proc_inst.clk 
+  cdc_unit_1.clk 
+
+Group     1(163 Register Bits, 0 Latch Bits)
+-----------
+mclk 
+  cdc_unit_1.mclk 
+    cdc_unit_1.muxclk 
+      cdc_unit_1.muxclk_out 
+        muxclk 
+          i2s_unit_1.clk 
+    cdc_unit_1.rsync_clk 
+
+
+=================================================================
+2. Inferred (0)
+=================================================================
+
+2.1 Primary (0)
+-----------------------------------------------------------------
+None
+
+2.2 Undriven (0)
+-----------------------------------------------------------------
+None
+
+2.3 Blackbox (0)
+-----------------------------------------------------------------
+None
+
+2.4 Gated Mux (0)
+-----------------------------------------------------------------
+None
+
+2.5 Gated Combo (0)
+-----------------------------------------------------------------
+None
+
+=================================================================
+3. Ignored(0)
+=================================================================
+None
+
+
+=================================================================
+Section 2 : Reset Information
+=================================================================
+
+Reset Tree Summary for 'audioport' 
+===================================
+Total Number of Resets               : 2
+ 1. User-Specified                   :(2)
+ 2. Inferred                         :(0)
+   2.1 Asynchronous                  :(0)
+   2.2 Asynchronous & Synchronous    :(0)
+   2.3 Synchronous                   :(0)
+ 3. Ignored                          :(0)
+
+
+
+Reset Tree Notations: 
+    A  --> Asynchronous Reset
+    H  --> Active High Reset
+    I  --> Ignored 
+    L  --> Active Low Reset
+    P  --> Inferred from Reset Port
+    PD --> Power Domain
+    S  --> Synchronous Reset
+    Se --> Set 
+    U  --> User Specified 
+    V  --> Virtual Reset 
+
+=================================================================
+1. User-Specified (2)
+=================================================================
+Group       1: rst_n
+---------------------
+rst_n <rst_n:U,A,L> (14982 Register Bits, 0 Latch Bits)
+  cdc_unit_1.rst_n 
+    cdc_unit_1.mrst_n_sync2 
+  control_unit_1.rst_n 
+    control_unit_1.play_r <rst_n:U,S,L>
+      control_unit_1.play_out 
+        play 
+          cdc_unit_1.play_in 
+  dsp_unit_1.rst_n 
+    dsp_unit_1.dsp_unit_rtl_1.rst_n 
+      dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.rst_n 
+        dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_dsp_proc_fsm_inst.rst_n 
+        dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.rst_n 
+          dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.ccs_MIO_arst 
+            dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_read_inputs_mioi_inst.read_inputs_mioi.dsp_unit_read_inputs_core_inst.ccs_MIO_arst 
+        dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst.rst_n 
+          dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst.write_outputs_mioi.ccs_MIO_arst 
+            dsp_unit_1.dsp_unit_rtl_1.dsp_unit_dsp_proc_inst.dsp_unit_dsp_proc_write_outputs_mioi_inst.write_outputs_mioi.dsp_unit_write_outputs_core_inst.ccs_MIO_arst 
+      dsp_unit_1.dsp_unit_rtl_1.dsp_unit_regs_proc_inst.rst_n 
+
+Group       2: mrst_n
+----------------------
+cdc_unit_1.mrst_n <mrst_n:U,A,L> (218 Register Bits, 0 Latch Bits)
+  cdc_unit_1.muxrst_n 
+    cdc_unit_1.muxrst_n_out 
+      muxrst_n 
+        i2s_unit_1.rst_n 
+          i2s_unit_1.play_r <mrst_n:U,S,L>
+
+
+=================================================================
+2. Inferred (0)
+=================================================================
+
+-----------------------------------------------------------------
+2.1 Asynchronous (0)
+-----------------------------------------------------------------
+None
+
+-----------------------------------------------------------------
+2.2 Asynchronous & Synchronous (0)
+-----------------------------------------------------------------
+None
+
+-----------------------------------------------------------------
+2.3 Synchronous (0)
+-----------------------------------------------------------------
+None
+
+=================================================================
+3. Ignored (0)
+=================================================================
+None
+
+=================================================================
+Section 3 : CDC Results
+=================================================================
+CDC Summary
+=================================================================
+-----------------------------------------------------------------
+Total number of checks                                       (8)
+-----------------------------------------------------------------
+
+Violations (1)
+-----------------------------------------------------------------
+Combinational logic before synchronizer.                     (1)
+
+Cautions (3)
+-----------------------------------------------------------------
+DMUX synchronization.                                        (2)
+Reconvergence of synchronizers.                              (1)
+
+Evaluations (3)
+-----------------------------------------------------------------
+Single-bit signal synchronized by DFF synchronizer.          (2)
+Asynchronous reset synchronization.                          (1)
+
+Resolved - Waived or Verified Status (0)
+-----------------------------------------------------------------
+<None>
+
+Proven (1)
+-----------------------------------------------------------------
+Single-bit signal synchronized by DFF synchronizer.          (1)
+
+Filtered (0)
+-----------------------------------------------------------------
+<None>
+
+
+Violations
+=================================================================
+Combinational logic before synchronizer. (combo_logic)
+-----------------------------------------------------------------
+clk : end : cdc_unit_1.req_in_sync1 (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 111)
+	mclk : start : i2s_unit_1.counter (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd : 80) (ID:combo_logic_7812) (Status : uninspected)
+	Base Type : PULSE SYNC
+
+
+
+Cautions
+=================================================================
+DMUX synchronization. (dmux)
+-----------------------------------------------------------------
+clk : start : cdc_unit_1.audio0_reg (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 134)
+	mclk : end : cdc_unit_1.audio0_out (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 191) (ID:dmux_96957) (Status : uninspected)
+		Synchronizer ID : two_dff_63324_7156
+
+clk : start : cdc_unit_1.audio1_reg (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 135)
+	mclk : end : cdc_unit_1.audio1_out (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 192) (ID:dmux_31965) (Status : uninspected)
+		Synchronizer ID : two_dff_63324_7156
+
+
+Reconvergence of synchronizers. (reconvergence)
+-----------------------------------------------------------------
+mclk : end : i2s_unit_1.shift_reg[0] (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd : 113) (ID:reconvergence_48968) (Status : uninspected)
+	mclk : start : cdc_unit_1.handshake_req_sync2 (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 47) (Synchronizer ID:two_dff_63324_7156) (Depth:2) (Reconvergence Severity:Caution)
+	mclk : start : cdc_unit_1.play_in_sync2 (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 33) (Synchronizer ID:two_dff_73219) (Depth:1) (Reconvergence Severity:Caution)
+
+
+
+Evaluations
+=================================================================
+Single-bit signal synchronized by DFF synchronizer. (two_dff)
+-----------------------------------------------------------------
+clk : start : cdc_unit_1.handshake_req (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 137)
+	mclk : end : cdc_unit_1.handshake_req_sync1 (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 151) (ID:two_dff_63324_7156) (Status : uninspected)
+	Synchronizer length : 2
+
+clk : start : control_unit_1.play_r (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv : 65)
+	mclk : end : cdc_unit_1.play_in_sync1 (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 91) (ID:two_dff_73219) (Status : uninspected)
+	Synchronizer length : 2
+
+
+Asynchronous reset synchronization. (async_reset)
+-----------------------------------------------------------------
+clk : start : rst_n (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.sv : 12)
+	mclk : end : cdc_unit_1.mrst_n_sync1 (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 76) (ID:async_reset_91666) (Status : uninspected)
+	Base Type : TWO DFF SYNCHRONIZER
+	Synchronizer length : 2
+
+
+
+Resolved - Waived or Verified Status
+=================================================================
+<none>
+
+Proven
+=================================================================
+Single-bit signal synchronized by DFF synchronizer. (two_dff)
+-----------------------------------------------------------------
+mclk : start : cdc_unit_1.handshake_ack (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 162)
+	clk : end : cdc_unit_1.handshake_ack_sync1 (/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv : 175) (ID:two_dff_63324) (Status : uninspected)
+	Synchronizer length : 2
+
+
+
+Filtered
+=================================================================
+<none>
+
+
+
+
+=================================================================
+Section 4 : Custom Synchronization
+=================================================================
+
+
+Module                Instance            
+------------------------------------
+None
+
+
+
+=================================================================
+Section 5 : Custom Synchronizers without External Crossings
+=================================================================
+
+Module                Instance            
+------------------------------------
+None
+
+
+=================================================================
+Section 6 : Modal Analysis Information
+=================================================================
+
+Mode information
+================
+
+None
+
+User Modes
+==========
+
+None
+
+Inferred Modes
+==============
+
+None
+
+
+=================================================================
+Section 7 : Modal Design Information
+=================================================================
+
+
+=================================================================
+Section 8 : Constant Information
+=================================================================
+
+Signal                         value                         
+-----------------------------------------------------------------
+test_mode_in                   1'b0                          
+
+
+=================================================================
+Section 9  : Design Information
+=================================================================
+
+Design Information
+--------------------------
+Design Complexity Number          = 8629
+Number of CDC Signals             = 56
+Number of blackboxes              = 0
+Number of Register bits           = 15142
+Number of Latch bits              = 0
+Number of RAMs                    = 0
+Number of Empty Modules           = 0
+Number of Unresolved Modules      = 0
+Number of Gate-Level Modules      = 0
+Number of Dead-end Registers      = 1
+Number of Unclocked Registers     = 0
+Number of Unclocked Latches       = 0
+
+Detail Design Information
+=========================
+
+Dead-end Registers: 
+------------------- 
+  cdc_unit_1.tick_reg (1)
+
+
+
+
+=================================================================
+Section 10 : Port Domain Information
+=================================================================
+Port                Direction     Constraints    Clock Domain             Type      
+-----------------------------------------------------------------------------------
+clk                   input         Clock          { clk }                 User    
+rst_n                 input         Reset          { clk }                 User    
+mclk                  input         Clock          { mclk }                User    
+PSEL                  input                        { clk }                 User    
+PENABLE               input                        { clk }                 User    
+PWRITE                input                        { clk }                 User    
+PADDR                 input                        { clk }                 User    
+PWDATA                input                        { clk }                 User    
+test_mode_in          input         Constant       { <constant> }          User    
+scan_en_in            input                        { clk }                 User    
+PRDATA                output                       { clk }                 User    
+PREADY                output                       { clk }                 User    
+PSLVERR               output                       { clk }                 User    
+irq_out               output                       { clk }                 User    
+ws_out                output                       { mclk }                User    
+sck_out               output                       { mclk }                User    
+sdo_out               output                       { mclk }                User    
+

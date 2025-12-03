@@ -1,0 +1,645 @@
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# 
+# This material contains trade secrets or otherwise
+# confidential information owned by
+# Siemens Industry Software Inc. or its affiliates
+# (collectively, "SISW"), or its licensors. Access
+# to and use of this information is strictly limited
+# as set forth in the customer's applicable
+# agreements with SISW.
+# 
+# Unpublished work. Copyright 2024 Siemens
+# 
+# do scripts/qcdc_static.tcl
+# Command : vlib output/audioport_qcdc_cdc_work
+# Command : vmap work output/audioport_qcdc_cdc_work
+# QuestaSim-64 vmap 2024.3_2 Lib Mapping Utility 2024.11 Nov 25 2024
+# vmap work output/audioport_qcdc_cdc_work 
+# Modifying modelsim.ini
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/apb_pkg.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:37 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/apb_pkg.sv 
+# -- Compiling package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:12:37 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/audioport_pkg.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:37 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/audioport_pkg.sv 
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:12:37 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/audioport_util_pkg.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:37 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/audioport_util_pkg.sv 
+# -- Compiling package audioport_util_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:12:37 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/control_unit.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:37 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/control_unit.sv 
+# -- Compiling package control_unit_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 15:12:37 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF results/dsp_unit_hls_rtl.v
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:37 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" results/dsp_unit_hls_rtl.v 
+# -- Compiling module mgc_out_dreg_v2
+# -- Compiling module ccs_in_v1
+# -- Compiling module ccs_sync_out_vld_v1
+# -- Compiling module dsp_unit_read_inputs_core
+# -- Compiling module dsp_unit_read_inputs
+# -- Compiling module dsp_unit_write_outputs_core
+# -- Compiling module dsp_unit_write_outputs
+# -- Compiling module dsp_unit_regs_proc
+# -- Compiling module dsp_unit_dsp_proc_dsp_proc_fsm
+# -- Compiling module dsp_unit_dsp_proc_staller
+# -- Compiling module dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl
+# -- Compiling module dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl
+# -- Compiling module dsp_unit_dsp_proc_write_outputs_mioi
+# -- Compiling module dsp_unit_dsp_proc_read_inputs_mioi
+# -- Compiling module dsp_unit_dsp_proc
+# -- Compiling module dsp_unit_rtl
+# 
+# Top level modules:
+# 	dsp_unit_rtl
+# End time: 15:12:37 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/dsp_unit.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:37 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/dsp_unit.sv 
+# -- Compiling package dsp_unit_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module dsp_unit
+# 
+# Top level modules:
+# 	dsp_unit
+# End time: 15:12:38 on Apr 25,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/cdc_unit.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:38 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/cdc_unit.sv 
+# -- Compiling package cdc_unit_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module cdc_unit
+# 
+# Top level modules:
+# 	cdc_unit
+# End time: 15:12:38 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vcom -2008 -mixedsvvh -work work input/i2s_unit.vhd
+# QuestaSim-64 vcom 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:38 on Apr 25,2025
+# vcom -2008 -mixedsvvh -work work input/i2s_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_unit
+# -- Compiling architecture RTL of i2s_unit
+# End time: 15:12:38 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/audioport.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:38 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/audioport.sv 
+# -- Compiling package audioport_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module audioport
+# 
+# Top level modules:
+# 	audioport
+# End time: 15:12:38 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/control_unit_svamod.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:38 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/control_unit_svamod.sv 
+# -- Compiling package control_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module control_unit_svamod
+# 
+# Top level modules:
+# 	control_unit_svamod
+# End time: 15:12:38 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Warnings: 6
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/dsp_unit_svamod.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:38 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/dsp_unit_svamod.sv 
+# -- Compiling package dsp_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module dsp_unit_svamod
+# 
+# Top level modules:
+# 	dsp_unit_svamod
+# End time: 15:12:38 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/cdc_unit_svamod.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:38 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/cdc_unit_svamod.sv 
+# -- Compiling package cdc_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module cdc_unit_svamod
+# 
+# Top level modules:
+# 	cdc_unit_svamod
+# End time: 15:12:39 on Apr 25,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/i2s_unit_svamod.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:39 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/i2s_unit_svamod.sv 
+# -- Compiling package i2s_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module i2s_unit_svamod
+# 
+# Top level modules:
+# 	i2s_unit_svamod
+# End time: 15:12:39 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : vlog +define+apb_test_classes +define+control_unit_uvm_test_classes +define+audioport_uvm_test_classes -suppress 13314 -suppress 13233 +define+RTL_SIM +define+design_top_is_audioport +define+RTL_VERIF input/audioport_svamod.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 15:12:39 on Apr 25,2025
+# vlog "+define+apb_test_classes" "+define+control_unit_uvm_test_classes" "+define+audioport_uvm_test_classes" -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+design_top_is_audioport" "+define+RTL_VERIF" input/audioport_svamod.sv 
+# -- Compiling package audioport_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module audioport_svamod
+# 
+# Top level modules:
+# 	audioport_svamod
+# End time: 15:12:39 on Apr 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : cdc run -d audioport -process_dead_end
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Fri Apr 25 15:12:39 2025 by aimtiaz23 on lehmus-cn3.oulu.fi
+# 
+# Executing Command : cdc run -d audioport -process_dead_end
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qcdc_static.tcl, Line: 84
+# Performance stats (Design elaboration::started) : cpu : 0(1) sec  memory : 0(245) mb  elapsed : 0(3) sec
+# 
+### Starting Step: netlist elaborate ### 
+# 
+## Elaborating Design...
+# Reading MTI mapping for library mapping
+# Writing all MTI mappings to vmap output ...
+# 
+# Top level modules:
+# 	audioport
+# 
+# Analyzing design...
+# -- Loading module z0in_work.audioport
+# -- Loading module z0in_work.control_unit
+# -- Loading module z0in_work.dsp_unit
+# -- Loading module z0in_work.dsp_unit_rtl
+# -- Loading module z0in_work.dsp_unit_dsp_proc
+# -- Loading module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi
+# -- Loading module z0in_work.dsp_unit_read_inputs
+# -- Loading module z0in_work.dsp_unit_read_inputs_core
+# -- Loading module z0in_work.mgc_out_dreg_v2
+# -- Loading module z0in_work.ccs_in_v1
+# -- Loading module z0in_work.ccs_sync_out_vld_v1
+# -- Loading module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl
+# -- Loading module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi
+# -- Loading module z0in_work.dsp_unit_write_outputs
+# -- Loading module z0in_work.dsp_unit_write_outputs_core
+# -- Loading module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl
+# -- Loading module z0in_work.dsp_unit_dsp_proc_staller
+# -- Loading module z0in_work.dsp_unit_dsp_proc_dsp_proc_fsm
+# -- Loading module z0in_work.dsp_unit_regs_proc
+# -- Loading module z0in_work.cdc_unit
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading entity i2s_unit
+# -- Loading architecture RTL of i2s_unit
+# Optimizing 36 design-units (inlining 0/29 module instances, 0/1 architecture instances):
+# -- Optimizing package z0in_work.apb_pkg(fast)
+# -- Optimizing package z0in_work.audioport_pkg(fast)
+# -- Optimizing package z0in_work.audioport_sv_unit(fast)
+# -- Optimizing package z0in_work.control_unit_sv_unit(fast)
+# -- Optimizing package z0in_work.dsp_unit_sv_unit(fast)
+# -- Optimizing package z0in_work.cdc_unit_sv_unit(fast)
+# -- Optimizing module z0in_work.control_unit(fast)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast)
+# -- Elaborating structural module work.mgc_out_dreg_v2(fast)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__1)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__2)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__3)
+# -- Elaborating structural module work.mgc_out_dreg_v2(3)(fast__3)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__4)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__5)
+# -- Elaborating structural module work.mgc_out_dreg_v2(5)(fast__5)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__6)
+# -- Optimizing module z0in_work.ccs_in_v1(fast)
+# -- Elaborating structural module work.ccs_in_v1(fast)
+# -- Optimizing module z0in_work.ccs_sync_out_vld_v1(fast)
+# -- Elaborating structural module work.ccs_sync_out_vld_v1(fast)
+# -- Optimizing module z0in_work.dsp_unit_read_inputs_core(fast)
+# -- Optimizing module z0in_work.dsp_unit_read_inputs(fast)
+# -- Elaborating structural module work.dsp_unit_read_inputs(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi(fast)
+# -- Optimizing module z0in_work.ccs_in_v1(fast__1)
+# -- Elaborating structural module work.ccs_in_v1(1)(fast__1)
+# -- Optimizing module z0in_work.ccs_in_v1(fast__2)
+# -- Optimizing module z0in_work.ccs_in_v1(fast__3)
+# -- Optimizing module z0in_work.dsp_unit_write_outputs_core(fast)
+# -- Optimizing module z0in_work.dsp_unit_write_outputs(fast)
+# -- Elaborating structural module work.dsp_unit_write_outputs(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi(fast)
+# -- Elaborating structural module work.dsp_unit_dsp_proc_write_outputs_mioi(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_staller(fast)
+# -- Elaborating structural module work.dsp_unit_dsp_proc_staller(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_dsp_proc_fsm(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc(fast)
+# -- Optimizing module z0in_work.dsp_unit_regs_proc(fast)
+# -- Optimizing module z0in_work.dsp_unit_rtl(fast)
+# -- Elaborating structural module work.dsp_unit_rtl(fast)
+# -- Optimizing module z0in_work.dsp_unit(fast)
+# -- Optimizing module z0in_work.cdc_unit(fast)
+# -- Optimizing architecture RTL of i2s_unit
+# -- Optimizing module z0in_work.audioport(fast)
+# Optimized design name is zi_opt_cdc_478806875_1
+# Performance stats (Design elaboration::ended) : cpu : 1(2) sec  memory : 363(608) mb  elapsed : 12(15) sec
+# Performance stats (Design synthesis::started) : cpu : 0(2) sec  memory : 0(245) mb  elapsed : 0(15) sec
+# 
+### Starting Step: netlist create ### 
+# 
+## Synthesizing netlist...
+# Elaborating module 'control_unit'.
+# Elaborating module 'dsp_unit_read_inputs_core'.
+# Elaborating module 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'.
+# Elaborating module 'dsp_unit_dsp_proc_read_inputs_mioi'.
+# Elaborating module 'dsp_unit_write_outputs_core'.
+# Elaborating module 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'.
+# Elaborating module 'dsp_unit_dsp_proc_dsp_proc_fsm'.
+# Elaborating module 'dsp_unit_dsp_proc'.
+# Elaborating module 'dsp_unit_regs_proc'.
+# Elaborating module 'dsp_unit'.
+# Elaborating module 'cdc_unit'.
+# Elaborating module 'i2s_unit(rtl)'.
+# Elaborating module 'audioport'.
+# 
+##Time Taken (Synthesis) = 655681.000000 ticks = 0.655681 secs
+# Performance stats (Design synthesis::ended) : cpu : 1(3) sec  memory : 634(879) mb  elapsed : 1(16) sec
+# Performance stats (CDC setup::started) : cpu : 0(3) sec  memory : 0(245) mb  elapsed : 0(16) sec
+# 
+### Starting Step: cdc setup ### 
+# 
+## CDC Setup Design...
+# Restoring module 'control_unit'.
+# Restoring module 'dsp_unit_read_inputs_core'.
+# Restoring module 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'.
+# Restoring module 'dsp_unit_dsp_proc_read_inputs_mioi'.
+# Restoring module 'dsp_unit_write_outputs_core'.
+# Restoring module 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'.
+# Restoring module 'dsp_unit_dsp_proc_dsp_proc_fsm'.
+# Restoring module 'dsp_unit_dsp_proc'.
+# Restoring module 'dsp_unit_regs_proc'.
+# Restoring module 'dsp_unit'.
+# Restoring module 'cdc_unit'.
+# Restoring module 'i2s_unit(rtl)'.
+# Restoring module 'audioport'.
+# Warning : Scheme name with (-)hyphen option in 'cdc scheme on/off' and 'cdc dmux -check off' will be deprecated in a future release.  Please use scheme name without (-)hyphen in 'cdc scheme on/off'.  [cdc-112]
+#         : File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line '39'.
+# Warning : Clock period or waveform specification has precision exceeding 3 digits past decimal point.  Clock 'mclk', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 11.  [directive-114]
+#         : Absolute numbers for clock specification are not necessary. Respecify the clocks with relative numbers.
+# 
+## Continuing CDC Setup
+#  -------- Performance stats (Netlist flattening::started) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(1) sec
+# Flattening design 'audioport'.
+#  -------- Performance stats (Netlist flattening::ended) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(1) sec
+# CDC netlist complexity for module 'audioport' is 8629.
+# 
+# Signals replaced by netlist constant
+# -------------------------------------------------------------------------------
+# Signal                         Value
+# -------------------------------------------------------------------------------
+# test_mode_in                   1'b0
+# -------------------------------------------------------------------------------
+# 
+#  -------- Performance stats (Constant propagation phase-1::started) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Constant propagation phase-1::ended) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Constant propagation phase-2::started) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Constant propagation phase-2::ended) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Stable propagation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Stable propagation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Analyzing clocks and resets for module 'audioport'
+#  -------- Performance stats (Reset detection and propagation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Warning : Found internal reset signals.  [netlist-82]
+#         : Signals would not be considered as resets for analysis.
+# Internal resets
+# ===============
+# control_unit_1.stop
+# ---------------
+# Info    : Reset detection done.  Identified '2' resets: '2' user-specified and '0' inferred resets.  [reset-4]
+#  -------- Performance stats (Reset detection and propagation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Reset check analysis::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Reset check analysis::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Clock detection and propagation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Info    : Clock processing done.  Identified '2' clocks; '2' user-specified and '0' inferred clocks.  [cdc-44]
+#  -------- Performance stats (Clock detection and propagation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Clock check analysis::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (Clock check analysis::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# Checking input/output specifications for black box and custom synchronizer modules.
+#  -------- Performance stats (CDC settings report generation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (CDC settings report generation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# 
+#  -------- Performance stats (CDC report generation::started) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+#  -------- Performance stats (CDC report generation::ended) : cpu : 0(0) sec  memory : 0(482) mb  elapsed : 0(1) sec
+# 
+# Compile Assertion Results
+# =================================================================
+# Checker Directives Recognized  : 0
+# Checker Directives Processed   : 0
+# Incorrect Checker Directives   : 0
+# Checkers Synthesized           : 0
+# Checkers with Warnings         : 0
+# 
+# Checker Summary
+# -------------------------------------------------------------------------------
+# Checker Type                                 Directives   Checkers     Checks
+# -------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
+# All                                                   0          0          0
+# -------------------------------------------------------------------------------
+# 
+# 
+# See '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc.rpt' for detailed CDC report.
+# 
+# To view CDC Setup information, use qverify as follows:
+#       qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc.db
+# 
+# Summary: 3 Warnings in cdc setup
+# Performance stats (CDC setup::ended) : cpu : 0(3) sec  memory : 484(729) mb  elapsed : 2(18) sec
+# Performance stats (CDC analysis::started) : cpu : 0(3) sec  memory : 0(247) mb  elapsed : 0(18) sec
+# 
+### Starting Step: cdc run ### 
+# 
+## Analyzing CDC Design...
+# 
+## Continuing CDC Analysis
+#  -------- Performance stats (CDC creation::started) : cpu : 0(0) sec  memory : 0(398) mb  elapsed : 0(0) sec
+#  -------- Performance stats (CDC creation::ended) : cpu : 0(0) sec  memory : 4(402) mb  elapsed : 0(0) sec
+# Processing 8 CDC signals after duplicate removal.
+#  -------- Performance stats (CDC schemes checking::started) : cpu : 0(0) sec  memory : 0(402) mb  elapsed : 0(0) sec
+#  ---------------- Performance stats (Reset deassertion synchronization phase 1::started) : cpu : 0(0) sec  memory : 0(402) mb  elapsed : 0(0) sec
+#  ---------------- Performance stats (Reset deassertion synchronization phase 1::ended) : cpu : 0(0) sec  memory : 0(402) mb  elapsed : 0(0) sec
+# Processing control signals.
+# Processing data signals.
+#  ---------------- Performance stats (Reset deassertion synchronization phase 2::started) : cpu : 0(0) sec  memory : 0(402) mb  elapsed : 0(0) sec
+#  ---------------- Performance stats (Reset deassertion synchronization phase 2::ended) : cpu : 0(0) sec  memory : 0(402) mb  elapsed : 0(0) sec
+# Processing FIFO.
+# Processing reconvergence.
+#  ---------------- Performance stats (CDC reconvergence checking::started) : cpu : 0(0) sec  memory : 0(402) mb  elapsed : 0(0) sec
+#  ---------------- Performance stats (CDC reconvergence checking::ended) : cpu : 0(0) sec  memory : 0(402) mb  elapsed : 0(0) sec
+#  -------- Performance stats (CDC schemes checking::ended) : cpu : 0(0) sec  memory : 0(402) mb  elapsed : 0(0) sec
+# Generating design report.
+# Compiling Assertions
+# Assertions Compiled: 6
+#  -------- Performance stats (CDC settings report generation::started) : cpu : 0(0) sec  memory : 0(402) mb  elapsed : 0(0) sec
+#  -------- Performance stats (CDC settings report generation::ended) : cpu : 0(0) sec  memory : 0(402) mb  elapsed : 1(1) sec
+# 
+# Info    : Default metastability window is used.  [directive-216]
+#  -------- Performance stats (CDC report generation::started) : cpu : 0(0) sec  memory : 0(402) mb  elapsed : 0(1) sec
+#  -------- Performance stats (CDC report generation::ended) : cpu : 0(0) sec  memory : 0(402) mb  elapsed : 0(1) sec
+# 
+# Compile Assertion Results
+# =================================================================
+# Checker Directives Recognized  : 6
+# Checker Directives Processed   : 6
+# Incorrect Checker Directives   : 0
+# Checkers Synthesized           : 6
+# Checkers with Warnings         : 0
+# 
+# Checker Summary
+# -------------------------------------------------------------------------------
+# Checker Type                                 Directives   Checkers     Checks
+# -------------------------------------------------------------------------------
+# cdc_fx                                                6          6          2
+# -------------------------------------------------------------------------------
+# All                                                   6          6          2
+# -------------------------------------------------------------------------------
+# 
+# 
+# See '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc.rpt' for detailed CDC report.
+# 
+# To view CDC information, use CDC as follows:
+#       qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc.db
+# 
+## Generating Argument Files...
+# 
+# To simulate these checkers with Questa add the following:
+# To vlog:
+# 	-f /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_sim.arg
+# To vcom:
+# 	-f /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_sim_vhdl.arg
+# To vsim:
+# 	-f /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_sim.arg.vsim
+# 	-pli /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/lib/lib0InLoadMTIPLI.so
+# 
+# To simulate these checkers with Questa with vopt flow add the following:
+# To vlog:
+# 	-f /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_sim.arg
+# To vcom:
+# 	-f /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_sim_vhdl.arg
+# To vopt:
+# 	-f /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_sim.arg.vopt
+# To vsim:
+# 	-f /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_sim.arg.vsimrun
+# 	-pli /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/lib/lib0InLoadMTIPLI.so
+# Performance stats (CDC analysis::ended) : cpu : 0(3) sec  memory : 402(649) mb  elapsed : 1(19) sec
+# Reading design database from /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/qcache/CDC/CACHE...completed (0.0192 (s)).
+# Performance stats (CDC status update::started) : cpu : 0(3) sec  memory : 0(258) mb  elapsed : 0(21) sec
+## Applying CDC Design Waivers...
+# 
+# CDC Results
+# =================================================================
+# 
+# -----------------------------------------------------------------
+# Total number of checks                                       (8)
+# -----------------------------------------------------------------
+# 
+# Violations (1)
+# -----------------------------------------------------------------
+# Combinational logic before synchronizer.                     (1)
+# 
+# Cautions (3)
+# -----------------------------------------------------------------
+# DMUX synchronization.                                        (2)
+# Reconvergence of synchronizers.                              (1)
+# 
+# Evaluations (3)
+# -----------------------------------------------------------------
+# Single-bit signal synchronized by DFF synchronizer.          (2)
+# Asynchronous reset synchronization.                          (1)
+# 
+# Resolved - Waived or Verified Status (0)
+# -----------------------------------------------------------------
+# <None>
+# 
+# Proven (1)
+# -----------------------------------------------------------------
+# Single-bit signal synchronized by DFF synchronizer.          (1)
+# 
+# Filtered (0)
+# -----------------------------------------------------------------
+# <None>
+# 
+# 
+#  -------- Performance stats (CDC report generation::started) : cpu : 0(0) sec  memory : 0(310) mb  elapsed : 0(0) sec
+#  -------- Performance stats (CDC report generation::ended) : cpu : 0(0) sec  memory : 0(310) mb  elapsed : 0(0) sec
+# 
+# 
+# Message Summary
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     1  Warning  cdc-112            Scheme name with (-)hyphen option in 'cdc scheme on/off' and 'cdc dmux -check off' will be deprecated in a future release.
+#     1  Warning  directive-114      Clock period or waveform specification has precision exceeding 3 digits past decimal point.
+#     1  Warning  netlist-82         Found internal reset signals.
+#     1  Info     cdc-44             Clock processing done.
+#     1  Info     directive-216      Default metastability window is used.
+#     1  Info     reset-4            Reset detection done.
+# 
+# Summary: 3 Warnings in processing "cdc run"
+# Final Process Statistics: Max memory 634MB, CPU time 2s, Total time 13s
+# Performance stats (CDC status update::ended) : cpu : 0(3) sec  memory : 310(568) mb  elapsed : 0(21) sec
+# Performance stats : Max Memory : 879(mb), CPU time : 3(sec), Elapsed time : 21(sec)  
+# 
+# End of log Fri Apr 25 15:12:57 2025
+# 
+# Command : cdc generate protocol
+# 
+# Executing Command : cdc generate protocol
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qcdc_static.tcl, Line: 85
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Fri Apr 25 15:12:57 2025 by aimtiaz23 on lehmus-cn3.oulu.fi
+# 
+### Starting Step: cdc generate protocol ### 
+# 
+## Generating CDC Protocol Assertions...
+#  -------- Performance stats (Generating cdc protocol checkers::started) : cpu : 0(0) sec  memory : 0(306) mb  elapsed : 0(0) sec
+# Compiling SVA Assertions.
+# 
+# Protocols Recognized   :   7
+# 
+# CDC SVA Protocols Summary
+# -------------------------------------------------------------------------------
+# Protocol Type                             Protocols               Checks
+# -------------------------------------------------------------------------------
+# cdc_dsel                                          2                    2
+# cdc_glitch                                        1                    1
+# cdc_hamming_one                                   1                    1
+# cdc_sync                                          3                    3
+# -------------------------------------------------------------------------------
+# All                                               7                    7
+# -------------------------------------------------------------------------------
+# See /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_protocol.rpt for protocol SVA summary report.
+#  -------- Performance stats (Generating cdc protocol checkers::ended) : cpu : 0(0) sec  memory : 92(398) mb  elapsed : 1(1) sec
+# Final Process Statistics: Max memory 398MB, CPU time 0s, Total time 1s
+# Command : cdc generate fx
+# 
+# Executing Command : cdc generate fx
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qcdc_static.tcl, Line: 87
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Fri Apr 25 15:12:58 2025 by aimtiaz23 on lehmus-cn3.oulu.fi
+# 
+### Starting Step: cdc generate fx ### 
+# 
+## Generating CDC FX Assertions...
+#  -------- Performance stats (Generating cdc fx checkers::started) : cpu : 0(0) sec  memory : 0(306) mb  elapsed : 0(0) sec
+# Compiling SVA Assertions.
+# Info    : FX injector not applicable for scheme.  Scheme:reconvergence.  [hdl-308]
+# Info    : Default metastability window is used.  [directive-216]
+# 
+# FX Checkers Recognized   :   7
+# 
+# CDC FX Summary
+# -------------------------------------------------------------------------------
+# CDC FX Checker                                Count               Checks
+# -------------------------------------------------------------------------------
+# cdc_fx                                            6                    3
+# cdc_rfx                                           1                    0
+# -------------------------------------------------------------------------------
+# All                                               7                    3
+# -------------------------------------------------------------------------------
+# 
+# To simulate CDC FX checkers with Questa Sim with vopt flow add the following:
+# 	To vlog:
+# 		-f /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_fx/simulation/cdc_fx_vlog.arg
+# 	To vopt:
+# 		-f /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_fx/simulation/cdc_fx_vopt.arg
+# 	To vsim:
+# 		-f /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/cdc_fx/simulation/cdc_fx_vsim_3step.arg
+#  -------- Performance stats (Generating cdc fx checkers::ended) : cpu : 0(0) sec  memory : 406(712) mb  elapsed : 1(1) sec
+# 
+# Message Summary
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     1  Info     directive-216      Default metastability window is used.
+#     1  Info     hdl-308            FX injector not applicable for scheme.
+# 
+# Final Process Statistics: Max memory 314MB, CPU time 0s, Total time 1s
+# Command : cdc generate report
+# Reading design database from /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qcdc_run_log/qcache/CDC/CACHE...completed (0.016846 (s)).
+# Performance stats (CDC report generation::started) : cpu : 0(3) sec  memory : 0(258) mb  elapsed : 0(23) sec
+# Performance stats (CDC report generation::ended) : cpu : 0(3) sec  memory : 314(572) mb  elapsed : 0(23) sec
+# See 'output/audioport_qcdc_run_log/cdc_detail.rpt' for detailed CDC report.
+# Command : configure output directory /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir
+# Command : cdc generate testplan results/audioport_rtl_cdc_testplan.xml -ucdb results/audioport_rtl_cdc_coverage.ucdb
+# Reading database output/audioport_qcdc_run_log/cdc.db ...
+# Writing results/audioport_rtl_cdc_coverage.ucdb ...
+# Writing XML file 'results/audioport_rtl_cdc_testplan.xml'
+# Info : No Protocol or FX checkers added to the CDC testplan.
+# 

@@ -1,0 +1,525 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.i2s_unit_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      34        34         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_in
+                     input/i2s_unit_svamod.sv(49)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0_in
+                     input/i2s_unit_svamod.sv(50)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1_in
+                     input/i2s_unit_svamod.sv(51)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick_in
+                     input/i2s_unit_svamod.sv(52)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_out
+                     input/i2s_unit_svamod.sv(53)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_sck_out
+                     input/i2s_unit_svamod.sv(54)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_ws_out
+                     input/i2s_unit_svamod.sv(55)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_sdo_out
+                     input/i2s_unit_svamod.sv(56)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_counter
+                     input/i2s_unit_svamod.sv(59)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_r
+                     input/i2s_unit_svamod.sv(60)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_input_reg
+                     input/i2s_unit_svamod.sv(61)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_shift_reg
+                     input/i2s_unit_svamod.sv(62)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_load_enable
+                     input/i2s_unit_svamod.sv(63)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_shift_enable
+                     input/i2s_unit_svamod.sv(64)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_sck_out_logic
+                     input/i2s_unit_svamod.sv(65)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_ws_out_logic
+                     input/i2s_unit_svamod.sv(66)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_end_s
+                     input/i2s_unit_svamod.sv(67)
+                                                        0       6958          0          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_play_in_stable
+                     input/i2s_unit_svamod.sv(83)
+                                                        0          5       6952          2       6959          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_tick_in_pulse
+                     input/i2s_unit_svamod.sv(93)
+                                                        0         14       6944          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_tick_in_play_only
+                     input/i2s_unit_svamod.sv(103)
+                                                        0       2522       4436          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_out_pulse
+                     input/i2s_unit_svamod.sv(117)
+                                                        0         15       6943          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_sck_start
+                     input/i2s_unit_svamod.sv(129)
+                                                        0          3       6955          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_sck_align
+                     input/i2s_unit_svamod.sv(139)
+                                                        0         15       6943          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_out_seen
+                     input/i2s_unit_svamod.sv(149)
+                                                        0         14       6944          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_ws_change
+                     input/i2s_unit_svamod.sv(161)
+                                                        0         24       6934          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_ws_wave
+                     input/i2s_unit_svamod.sv(171)
+                                                        0       2216       4548          2       6766          0        1544 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_sdo_change
+                     input/i2s_unit_svamod.sv(181)
+                                                        0        111       6847          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_sck_wave
+                     input/i2s_unit_svamod.sv(191)
+                                                        0        579       6379          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_sck_last
+                     input/i2s_unit_svamod.sv(201)
+                                                        0         12       6946          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_shift_reg_behavior
+                     input/i2s_unit_svamod.sv(216)
+                                                        0        564       6394          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_shift_reg_reset
+                     input/i2s_unit_svamod.sv(225)
+                                                        0       2324       4632          2       6958          0           3 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_play_r_control
+                     input/i2s_unit_svamod.sv(233)
+                                                        0       4436       2522          2       6960          0           2 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_counter_reset_at_383
+                     input/i2s_unit_svamod.sv(242)
+                                                        0         12       6946          2       6960          0           1 off
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_ws_out_mid_behavior
+                     input/i2s_unit_svamod.sv(251)
+                                                        0       2304       4654          2       6960          0           1 off
+
+Directive Coverage:
+    Directives                      17        17         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_play_in_stable 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(84)
+                                                                                 5 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_tick_in_pulse 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(94)
+                                                                                14 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_tick_in_play_only 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(104)
+                                                                              2522 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_out_pulse 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(118)
+                                                                                15 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_sck_start 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(130)
+                                                                                 3 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_sck_align 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(140)
+                                                                                15 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_out_seen 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(150)
+                                                                                14 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_ws_change 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(162)
+                                                                                24 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_ws_wave 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(172)
+                                                                              2216 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_sdo_change 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(182)
+                                                                               111 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_sck_wave 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(192)
+                                                                               579 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_sck_last 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(202)
+                                                                                12 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_shift_reg_behavior 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(217)
+                                                                               564 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_shift_reg_reset 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(226)
+                                                                              2324 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_play_r_control 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(234)
+                                                                              4436 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_counter_reset_at_383 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(243)
+                                                                                12 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_ws_out_mid_behavior 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(252)
+                                                                              2304 Covered   
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        338       333         5    98.52%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                             rst_n           0           1           0           0           0           0           3       16.66 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =        167 
+Toggled Node Count   =        166 
+Untoggled Node Count =          1 
+
+Toggle Coverage      =      98.52% (333 of 338 bins)
+
+=================================================================================
+=== Instance: /i2s_unit_tb/DUT_INSTANCE
+=== Design Unit: work.i2s_unit(rtl)
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        39        39         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /i2s_unit_tb/DUT_INSTANCE
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File input/i2s_unit.vhd
+------------------------------------IF Branch------------------------------------
+    52                                      1167     Count coming in to IF
+    52              1                       1158     
+    52              2                          9     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    53                                        33     Count coming in to IF
+    53              1                         27     
+    53              2                          6     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    54                                       128     Count coming in to IF
+    54              1                        120     
+    54              2                          8     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    61                                        42     Count coming in to IF
+    61              1                          2     
+    63              1                         40     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    64                                        40     Count coming in to IF
+    64              1                          3     
+    66              1                         30     
+                                               7     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    75                                      4641     Count coming in to IF
+    75              1                          2     
+    77              1                       4639     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    78                                      4639     Count coming in to IF
+    78              1                       4632     
+    84              1                          7     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    79                                      4632     Count coming in to IF
+    79              1                         12     
+    81              1                       4620     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    94                                        37     Count coming in to IF
+    94              1                          2     
+    96              1                         35     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    97                                        35     Count coming in to IF
+    97              1                         14     
+    99              1                          4     
+                                              17     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    108                                     1180     Count coming in to IF
+    108             1                          2     
+    110             1                       1178     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    111                                     1178     Count coming in to IF
+    111             1                       1171     
+    117             1                          7     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    112                                     1171     Count coming in to IF
+    112             1                         15     
+    114             1                        564     
+                                             592     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    133                                     4637     Count coming in to IF
+    133             1                         15     
+                                            4622     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    138                                     4637     Count coming in to IF
+    138             1                         15     
+                                            4622     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    142                                     4637     Count coming in to IF
+    142             1                        564     
+                                            4073     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    146                                     4637     Count coming in to IF
+    146             1                       2304     
+                                            2333     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    150                                     4637     Count coming in to IF
+    150             1                       2321     
+    152             1                       2316     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      11         9         2    81.81%
+
+================================Condition Details================================
+
+Condition Coverage for instance /i2s_unit_tb/DUT_INSTANCE --
+
+  File input/i2s_unit.vhd
+----------------Focused Condition View-------------------
+Line       64 Item    1  (((play_r = '1') and (play_in = '0')) and (end_s = '1'))
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       97 Item    1  ((tick_in = '1') and (play_r = '1'))
+Condition totals: 1 of 2 input terms covered = 50.00%
+
+       Input Term   Covered  Reason for no coverage   Hint
+      -----------  --------  -----------------------  --------------
+  (tick_in = '1')         Y
+   (play_r = '1')         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (tick_in = '1')_0     -                             
+  Row   2:          1  (tick_in = '1')_1     (play_r = '1')                
+  Row   3:    ***0***  (play_r = '1')_0      (tick_in = '1')               
+  Row   4:          1  (play_r = '1')_1      (tick_in = '1')               
+
+----------------Focused Condition View-------------------
+Line       142 Item    1  ((counter = 11) or (((counter > 11) and (((TO_INTEGER(counter) - 11) mod 8) = 0)) and (counter <= 383)))
+Condition totals: 3 of 4 input terms covered = 75.00%
+
+                                Input Term   Covered  Reason for no coverage   Hint
+                               -----------  --------  -----------------------  --------------
+                            (counter = 11)         Y
+                            (counter > 11)         Y
+  (((TO_INTEGER(counter) - 11) mod 8) = 0)         Y
+                          (counter <= 383)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                                  Non-masking condition(s)      
+ ---------  ---------  --------------------                        -------------------------     
+  Row   1:          1  (counter = 11)_0                            not (((counter > 11) and (((TO_INTEGER(counter) - 11) mod 8) = 0)) and (counter <= 383))
+  Row   2:          1  (counter = 11)_1                            -                             
+  Row   3:          1  (counter > 11)_0                            not (counter = 11)            
+  Row   4:          1  (counter > 11)_1                            not (counter = 11) && (counter <= 383) && (((TO_INTEGER(counter) - 11) mod 8) = 0)
+  Row   5:          1  (((TO_INTEGER(counter) - 11) mod 8) = 0)_0  not (counter = 11) && (counter > 11)
+  Row   6:          1  (((TO_INTEGER(counter) - 11) mod 8) = 0)_1  not (counter = 11) && (counter <= 383) && (counter > 11)
+  Row   7:    ***0***  (counter <= 383)_0                          not (counter = 11) && ((counter > 11) and (((TO_INTEGER(counter) - 11) mod 8) = 0))
+  Row   8:          1  (counter <= 383)_1                          not (counter = 11) && ((counter > 11) and (((TO_INTEGER(counter) - 11) mod 8) = 0))
+
+----------------Focused Condition View-------------------
+Line       146 Item    1  ((counter > 187) and (counter < 380))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      31        31         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /i2s_unit_tb/DUT_INSTANCE --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File input/i2s_unit.vhd
+    52              1                       1167     
+    53              1                         33     
+    54              1                        128     
+    62              1                          2     
+    65              1                          3     
+    67              1                         30     
+    76              1                          2     
+    80              1                         12     
+    82              1                       4620     
+    85              1                          7     
+    95              1                          2     
+    98              1                         14     
+    100             1                          4     
+    109             1                          2     
+    113             1                         15     
+    115             1                        564     
+    118             1                          7     
+    124             1                       4637     
+    126             1                       4637     
+    127             1                       4637     
+    128             1                       4637     
+    129             1                       4637     
+    130             1                       4637     
+    131             1                       4637     
+    134             1                         15     
+    135             1                         15     
+    139             1                         15     
+    143             1                        564     
+    147             1                       2304     
+    151             1                       2321     
+    153             1                       2316     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        338       333         5    98.52%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /i2s_unit_tb/DUT_INSTANCE --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                             rst_n           0           1           0           0           0           0           3       16.66 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =        167 
+Toggled Node Count   =        166 
+Untoggled Node Count =          1 
+
+Toggle Coverage      =      98.52% (333 of 338 bins)
+
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_play_in_stable 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(84)
+                                                                                 5 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_tick_in_pulse 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(94)
+                                                                                14 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_tick_in_play_only 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(104)
+                                                                              2522 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_out_pulse 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(118)
+                                                                                15 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_sck_start 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(130)
+                                                                                 3 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_sck_align 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(140)
+                                                                                15 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_out_seen 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(150)
+                                                                                14 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_ws_change 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(162)
+                                                                                24 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_ws_wave 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(172)
+                                                                              2216 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_sdo_change 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(182)
+                                                                               111 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_sck_wave 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(192)
+                                                                               579 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_sck_last 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(202)
+                                                                                12 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_shift_reg_behavior 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(217)
+                                                                               564 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_shift_reg_reset 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(226)
+                                                                              2324 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_play_r_control 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(234)
+                                                                              4436 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_counter_reset_at_383 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(243)
+                                                                                12 Covered   
+/i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_ws_out_mid_behavior 
+                                         i2s_unit_svamod Verilog  SVA  input/i2s_unit_svamod.sv(252)
+                                                                              2304 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 17
+
+TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 34
+
+Total Coverage By Instance (filtered view): 96.72%
+

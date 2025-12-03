@@ -1,0 +1,838 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.control_unit_1.CHECKER_MODULE
+=== Design Unit: work.control_unit_svamod
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      2        na        na    35.50%
+        Coverpoints/Crosses          4        na        na        na
+            Covergroup Bins        158        76        82    48.10%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE .audioport_tb.DUT_INSTANCE.control_unit_1.CHECKER_MODULE.cg_rbreads 
+                                                       54.34%        100          -    Uncovered            
+    covered/total bins:                                    75        138          -                      
+    missing/total bins:                                    63        138          -                      
+    % Hit:                                             54.34%        100          -                      
+    Coverpoint #coverpoint__0#                         54.34%        100          -    Uncovered            
+        covered/total bins:                                75        138          -                      
+        missing/total bins:                                63        138          -                      
+        % Hit:                                         54.34%        100          -                      
+ Covergroup instance \/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cg_rbreads_inst  
+                                                       54.34%        100          -    Uncovered            
+    covered/total bins:                                    75        138          -                      
+    missing/total bins:                                    63        138          -                      
+    % Hit:                                             54.34%        100          -                      
+    Coverpoint #coverpoint__0#                         54.34%        100          -    Uncovered            
+        covered/total bins:                                75        138          -                      
+        missing/total bins:                                63        138          -                      
+        % Hit:                                         54.34%        100          -                      
+        bin reg_addresses[587202560]                        0          1          -    ZERO                 
+        bin reg_addresses[587202561]                       14          1          -    Covered              
+        bin reg_addresses[587202562]                        0          1          -    ZERO                 
+        bin reg_addresses[587202563]                        2          1          -    Covered              
+        bin reg_addresses[587202564]                       10          1          -    Covered              
+        bin reg_addresses[587202565]                       10          1          -    Covered              
+        bin reg_addresses[587202566]                        0          1          -    ZERO                 
+        bin reg_addresses[587202567]                       10          1          -    Covered              
+        bin reg_addresses[587202568]                        0          1          -    ZERO                 
+        bin reg_addresses[587202569]                        0          1          -    ZERO                 
+        bin reg_addresses[587202570]                        2          1          -    Covered              
+        bin reg_addresses[587202571]                        4          1          -    Covered              
+        bin reg_addresses[587202572]                       18          1          -    Covered              
+        bin reg_addresses[587202573]                        2          1          -    Covered              
+        bin reg_addresses[587202574]                        8          1          -    Covered              
+        bin reg_addresses[587202575]                        4          1          -    Covered              
+        bin reg_addresses[587202576]                        0          1          -    ZERO                 
+        bin reg_addresses[587202577]                        2          1          -    Covered              
+        bin reg_addresses[587202578]                        8          1          -    Covered              
+        bin reg_addresses[587202579]                        4          1          -    Covered              
+        bin reg_addresses[587202580]                        6          1          -    Covered              
+        bin reg_addresses[587202581]                        4          1          -    Covered              
+        bin reg_addresses[587202582]                        4          1          -    Covered              
+        bin reg_addresses[587202583]                       10          1          -    Covered              
+        bin reg_addresses[587202584]                       18          1          -    Covered              
+        bin reg_addresses[587202585]                        0          1          -    ZERO                 
+        bin reg_addresses[587202586]                        6          1          -    Covered              
+        bin reg_addresses[587202587]                        2          1          -    Covered              
+        bin reg_addresses[587202588]                       10          1          -    Covered              
+        bin reg_addresses[587202589]                       24          1          -    Covered              
+        bin reg_addresses[587202590]                        0          1          -    ZERO                 
+        bin reg_addresses[587202591]                        8          1          -    Covered              
+        bin reg_addresses[587202592]                       12          1          -    Covered              
+        bin reg_addresses[587202593]                       10          1          -    Covered              
+        bin reg_addresses[587202594]                        0          1          -    ZERO                 
+        bin reg_addresses[587202595]                        0          1          -    ZERO                 
+        bin reg_addresses[587202596]                        0          1          -    ZERO                 
+        bin reg_addresses[587202597]                       16          1          -    Covered              
+        bin reg_addresses[587202598]                        0          1          -    ZERO                 
+        bin reg_addresses[587202599]                        4          1          -    Covered              
+        bin reg_addresses[587202600]                        4          1          -    Covered              
+        bin reg_addresses[587202601]                        8          1          -    Covered              
+        bin reg_addresses[587202602]                        4          1          -    Covered              
+        bin reg_addresses[587202603]                        2          1          -    Covered              
+        bin reg_addresses[587202604]                        8          1          -    Covered              
+        bin reg_addresses[587202605]                        0          1          -    ZERO                 
+        bin reg_addresses[587202606]                        6          1          -    Covered              
+        bin reg_addresses[587202607]                        0          1          -    ZERO                 
+        bin reg_addresses[587202608]                        6          1          -    Covered              
+        bin reg_addresses[587202609]                        0          1          -    ZERO                 
+        bin reg_addresses[587202610]                        6          1          -    Covered              
+        bin reg_addresses[587202611]                        0          1          -    ZERO                 
+        bin reg_addresses[587202612]                        0          1          -    ZERO                 
+        bin reg_addresses[587202613]                        0          1          -    ZERO                 
+        bin reg_addresses[587202614]                        4          1          -    Covered              
+        bin reg_addresses[587202615]                        4          1          -    Covered              
+        bin reg_addresses[587202616]                        0          1          -    ZERO                 
+        bin reg_addresses[587202617]                        0          1          -    ZERO                 
+        bin reg_addresses[587202618]                        0          1          -    ZERO                 
+        bin reg_addresses[587202619]                        0          1          -    ZERO                 
+        bin reg_addresses[587202620]                        6          1          -    Covered              
+        bin reg_addresses[587202621]                       10          1          -    Covered              
+        bin reg_addresses[587202622]                        0          1          -    ZERO                 
+        bin reg_addresses[587202623]                       20          1          -    Covered              
+        bin reg_addresses[587202624]                        0          1          -    ZERO                 
+        bin reg_addresses[587202625]                        0          1          -    ZERO                 
+        bin reg_addresses[587202626]                        0          1          -    ZERO                 
+        bin reg_addresses[587202627]                        0          1          -    ZERO                 
+        bin reg_addresses[587202628]                       10          1          -    Covered              
+        bin reg_addresses[587202629]                        2          1          -    Covered              
+        bin reg_addresses[587202630]                        0          1          -    ZERO                 
+        bin reg_addresses[587202631]                        2          1          -    Covered              
+        bin reg_addresses[587202632]                        0          1          -    ZERO                 
+        bin reg_addresses[587202633]                        0          1          -    ZERO                 
+        bin reg_addresses[587202634]                        0          1          -    ZERO                 
+        bin reg_addresses[587202635]                        0          1          -    ZERO                 
+        bin reg_addresses[587202636]                        6          1          -    Covered              
+        bin reg_addresses[587202637]                        0          1          -    ZERO                 
+        bin reg_addresses[587202638]                        2          1          -    Covered              
+        bin reg_addresses[587202639]                        0          1          -    ZERO                 
+        bin reg_addresses[587202640]                       10          1          -    Covered              
+        bin reg_addresses[587202641]                        0          1          -    ZERO                 
+        bin reg_addresses[587202642]                        0          1          -    ZERO                 
+        bin reg_addresses[587202643]                        0          1          -    ZERO                 
+        bin reg_addresses[587202644]                        0          1          -    ZERO                 
+        bin reg_addresses[587202645]                        2          1          -    Covered              
+        bin reg_addresses[587202646]                        6          1          -    Covered              
+        bin reg_addresses[587202647]                        0          1          -    ZERO                 
+        bin reg_addresses[587202648]                        2          1          -    Covered              
+        bin reg_addresses[587202649]                        0          1          -    ZERO                 
+        bin reg_addresses[587202650]                        6          1          -    Covered              
+        bin reg_addresses[587202651]                        0          1          -    ZERO                 
+        bin reg_addresses[587202652]                        0          1          -    ZERO                 
+        bin reg_addresses[587202653]                        0          1          -    ZERO                 
+        bin reg_addresses[587202654]                        8          1          -    Covered              
+        bin reg_addresses[587202655]                        0          1          -    ZERO                 
+        bin reg_addresses[587202656]                        4          1          -    Covered              
+        bin reg_addresses[587202657]                        2          1          -    Covered              
+        bin reg_addresses[587202658]                        0          1          -    ZERO                 
+        bin reg_addresses[587202659]                        6          1          -    Covered              
+        bin reg_addresses[587202660]                        8          1          -    Covered              
+        bin reg_addresses[587202661]                        2          1          -    Covered              
+        bin reg_addresses[587202662]                        0          1          -    ZERO                 
+        bin reg_addresses[587202663]                        8          1          -    Covered              
+        bin reg_addresses[587202664]                        6          1          -    Covered              
+        bin reg_addresses[587202665]                        0          1          -    ZERO                 
+        bin reg_addresses[587202666]                        0          1          -    ZERO                 
+        bin reg_addresses[587202667]                        4          1          -    Covered              
+        bin reg_addresses[587202668]                        0          1          -    ZERO                 
+        bin reg_addresses[587202669]                        0          1          -    ZERO                 
+        bin reg_addresses[587202670]                       12          1          -    Covered              
+        bin reg_addresses[587202671]                        4          1          -    Covered              
+        bin reg_addresses[587202672]                        2          1          -    Covered              
+        bin reg_addresses[587202673]                        0          1          -    ZERO                 
+        bin reg_addresses[587202674]                        0          1          -    ZERO                 
+        bin reg_addresses[587202675]                        0          1          -    ZERO                 
+        bin reg_addresses[587202676]                        4          1          -    Covered              
+        bin reg_addresses[587202677]                        8          1          -    Covered              
+        bin reg_addresses[587202678]                        2          1          -    Covered              
+        bin reg_addresses[587202679]                        0          1          -    ZERO                 
+        bin reg_addresses[587202680]                        8          1          -    Covered              
+        bin reg_addresses[587202681]                        0          1          -    ZERO                 
+        bin reg_addresses[587202682]                        2          1          -    Covered              
+        bin reg_addresses[587202683]                        0          1          -    ZERO                 
+        bin reg_addresses[587202684]                        2          1          -    Covered              
+        bin reg_addresses[587202685]                        6          1          -    Covered              
+        bin reg_addresses[587202686]                        0          1          -    ZERO                 
+        bin reg_addresses[587202687]                        2          1          -    Covered              
+        bin reg_addresses[587202688]                        2          1          -    Covered              
+        bin reg_addresses[587202689]                        0          1          -    ZERO                 
+        bin reg_addresses[587202690]                        0          1          -    ZERO                 
+        bin reg_addresses[587202691]                        0          1          -    ZERO                 
+        bin reg_addresses[587202692]                        0          1          -    ZERO                 
+        bin reg_addresses[587202693]                        8          1          -    Covered              
+        bin reg_addresses[587202694]                       14          1          -    Covered              
+        bin reg_addresses[587202695]                        0          1          -    ZERO                 
+        bin reg_addresses[587202696]                        0          1          -    ZERO                 
+        bin reg_addresses[587202697]                        6          1          -    Covered              
+ TYPE .audioport_tb.DUT_INSTANCE.control_unit_1.CHECKER_MODULE.cg_commands 
+                                                       16.66%        100          -    Uncovered            
+    covered/total bins:                                     1         20          -                      
+    missing/total bins:                                    19         20          -                      
+    % Hit:                                              5.00%        100          -                      
+    Coverpoint PWDATA                                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          6          -                      
+        missing/total bins:                                 6          6          -                      
+        % Hit:                                          0.00%        100          -                      
+    Coverpoint play_out                                50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+    Cross #cross__0#                                    0.00%        100          -    ZERO                 
+        covered/total bins:                                 0         12          -                      
+        missing/total bins:                                12         12          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cg_commands_inst  
+                                                       16.66%        100          -    Uncovered            
+    covered/total bins:                                     1         20          -                      
+    missing/total bins:                                    19         20          -                      
+    % Hit:                                              5.00%        100          -                      
+    Coverpoint PWDATA                                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          6          -                      
+        missing/total bins:                                 6          6          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cmd_clr                                         0          1          -    ZERO                 
+        bin cmd_cfg                                         0          1          -    ZERO                 
+        bin cmd_level                                       0          1          -    ZERO                 
+        bin cmd_start                                       0          1          -    ZERO                 
+        bin cmd_stop                                        0          1          -    ZERO                 
+        bin cmd_irqack                                      0          1          -    ZERO                 
+        default bin illegal                              2379                     -    Occurred             
+    Coverpoint play_out                                50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin standby                                      2379          1          -    Covered              
+        bin play                                            0          1          -    ZERO                 
+    Cross #cross__0#                                    0.00%        100          -    ZERO                 
+        covered/total bins:                                 0         12          -                      
+        missing/total bins:                                12         12          -                      
+        % Hit:                                          0.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <*,*>                                       0          1         12    ZERO                 
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.dsp_unit_1.CHECKER_MODULE
+=== Design Unit: work.dsp_unit_svamod
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na     0.00%
+        Coverpoints/Crosses          1        na        na        na
+            Covergroup Bins          2         0         2     0.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE .audioport_tb.DUT_INSTANCE.dsp_unit_1.CHECKER_MODULE.cg_dsp_modes 
+                                                        0.00%        100          -    ZERO                 
+    covered/total bins:                                     0          2          -                      
+    missing/total bins:                                     2          2          -                      
+    % Hit:                                              0.00%        100          -                      
+    Coverpoint cfgbit                                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          2          -                      
+        missing/total bins:                                 2          2          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/cg_dsp_modes_inst  
+                                                        0.00%        100          -    ZERO                 
+    covered/total bins:                                     0          2          -                      
+    missing/total bins:                                     2          2          -                      
+    % Hit:                                              0.00%        100          -                      
+    Coverpoint cfgbit                                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          2          -                      
+        missing/total bins:                                 2          2          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin modes[0]                                        0          1          -    ZERO                 
+        bin modes[1]                                        0          1          -    ZERO                 
+
+=================================================================================
+=== Instance: .audioport_tb.DUT_INSTANCE.CHECKER_MODULE
+=== Design Unit: work.audioport_svamod
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na     0.00%
+        Coverpoints/Crosses          1        na        na        na
+            Covergroup Bins          2         0         2     0.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE .audioport_tb.DUT_INSTANCE.CHECKER_MODULE.cg_active_config 
+                                                        0.00%        100          -    ZERO                 
+    covered/total bins:                                     0          2          -                      
+    missing/total bins:                                     2          2          -                      
+    % Hit:                                              0.00%        100          -                      
+    Coverpoint configs                                  0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          2          -                      
+        missing/total bins:                                 2          2          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/cg_active_config_inst  
+                                                        0.00%        100          -    ZERO                 
+    covered/total bins:                                     0          2          -                      
+    missing/total bins:                                     2          2          -                      
+    % Hit:                                              0.00%        100          -                      
+    Coverpoint configs                                  0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          2          -                      
+        missing/total bins:                                 2          2          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cfgmodes[0]                                     0          1          -    ZERO                 
+        bin cfgmodes[1]                                     0          1          -    ZERO                 
+
+=================================================================================
+=== Instance: .apb_env_pkg
+=== Design Unit: work.apb_env_pkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      2        na        na    99.21%
+        Coverpoints/Crosses          2        na        na        na
+            Covergroup Bins        128       127         1    99.21%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE .apb_env_pkg.apb_analyzer.dut_write_coverage    100.00%        100          -    Covered              
+    covered/total bins:                                    64         64          -                      
+    missing/total bins:                                     0         64          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint write_cov                              100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0:1]                                       3          1          -    Covered              
+        bin auto[2:3]                                       4          1          -    Covered              
+        bin auto[4:5]                                       9          1          -    Covered              
+        bin auto[6:7]                                       5          1          -    Covered              
+        bin auto[8:9]                                       2          1          -    Covered              
+        bin auto[10:11]                                     6          1          -    Covered              
+        bin auto[12:13]                                     9          1          -    Covered              
+        bin auto[14:15]                                    10          1          -    Covered              
+        bin auto[16:17]                                     3          1          -    Covered              
+        bin auto[18:19]                                     8          1          -    Covered              
+        bin auto[20:21]                                     7          1          -    Covered              
+        bin auto[22:23]                                    10          1          -    Covered              
+        bin auto[24:25]                                     5          1          -    Covered              
+        bin auto[26:27]                                     6          1          -    Covered              
+        bin auto[28:29]                                     6          1          -    Covered              
+        bin auto[30:31]                                     4          1          -    Covered              
+        bin auto[32:33]                                     8          1          -    Covered              
+        bin auto[34:35]                                     6          1          -    Covered              
+        bin auto[36:37]                                    10          1          -    Covered              
+        bin auto[38:39]                                     4          1          -    Covered              
+        bin auto[40:41]                                    11          1          -    Covered              
+        bin auto[42:43]                                     6          1          -    Covered              
+        bin auto[44:45]                                     8          1          -    Covered              
+        bin auto[46:47]                                     9          1          -    Covered              
+        bin auto[48:49]                                     7          1          -    Covered              
+        bin auto[50:51]                                     4          1          -    Covered              
+        bin auto[52:53]                                     6          1          -    Covered              
+        bin auto[54:55]                                     6          1          -    Covered              
+        bin auto[56:57]                                     6          1          -    Covered              
+        bin auto[58:59]                                     5          1          -    Covered              
+        bin auto[60:61]                                     8          1          -    Covered              
+        bin auto[62:63]                                     9          1          -    Covered              
+        bin auto[64:65]                                     4          1          -    Covered              
+        bin auto[66:67]                                     3          1          -    Covered              
+        bin auto[68:69]                                     6          1          -    Covered              
+        bin auto[70:71]                                     4          1          -    Covered              
+        bin auto[72:73]                                     1          1          -    Covered              
+        bin auto[74:75]                                     9          1          -    Covered              
+        bin auto[76:77]                                     6          1          -    Covered              
+        bin auto[78:79]                                     4          1          -    Covered              
+        bin auto[80:81]                                     4          1          -    Covered              
+        bin auto[82:83]                                     7          1          -    Covered              
+        bin auto[84:85]                                     6          1          -    Covered              
+        bin auto[86:87]                                     4          1          -    Covered              
+        bin auto[88:89]                                     4          1          -    Covered              
+        bin auto[90:91]                                     4          1          -    Covered              
+        bin auto[92:93]                                     3          1          -    Covered              
+        bin auto[94:95]                                     6          1          -    Covered              
+        bin auto[96:97]                                    11          1          -    Covered              
+        bin auto[98:99]                                     8          1          -    Covered              
+        bin auto[100:101]                                   8          1          -    Covered              
+        bin auto[102:103]                                   5          1          -    Covered              
+        bin auto[104:105]                                   6          1          -    Covered              
+        bin auto[106:107]                                   4          1          -    Covered              
+        bin auto[108:109]                                   4          1          -    Covered              
+        bin auto[110:111]                                   7          1          -    Covered              
+        bin auto[112:113]                                   4          1          -    Covered              
+        bin auto[114:115]                                   7          1          -    Covered              
+        bin auto[116:117]                                   6          1          -    Covered              
+        bin auto[118:119]                                   4          1          -    Covered              
+        bin auto[120:121]                                  11          1          -    Covered              
+        bin auto[122:123]                                   7          1          -    Covered              
+        bin auto[124:125]                                  10          1          -    Covered              
+        bin auto[126:127]                                   6          1          -    Covered              
+ TYPE .apb_env_pkg.apb_analyzer.dut_read_coverage      98.43%        100          -    Uncovered            
+    covered/total bins:                                    63         64          -                      
+    missing/total bins:                                     1         64          -                      
+    % Hit:                                             98.43%        100          -                      
+    Coverpoint read_cov                                98.43%        100          -    Uncovered            
+        covered/total bins:                                63         64          -                      
+        missing/total bins:                                 1         64          -                      
+        % Hit:                                         98.43%        100          -                      
+        bin auto[0:1]                                       5          1          -    Covered              
+        bin auto[2:3]                                       2          1          -    Covered              
+        bin auto[4:5]                                       8          1          -    Covered              
+        bin auto[6:7]                                      10          1          -    Covered              
+        bin auto[8:9]                                       4          1          -    Covered              
+        bin auto[10:11]                                     4          1          -    Covered              
+        bin auto[12:13]                                     4          1          -    Covered              
+        bin auto[14:15]                                     8          1          -    Covered              
+        bin auto[16:17]                                     0          1          -    ZERO                 
+        bin auto[18:19]                                     5          1          -    Covered              
+        bin auto[20:21]                                     4          1          -    Covered              
+        bin auto[22:23]                                    11          1          -    Covered              
+        bin auto[24:25]                                     7          1          -    Covered              
+        bin auto[26:27]                                     3          1          -    Covered              
+        bin auto[28:29]                                    18          1          -    Covered              
+        bin auto[30:31]                                     7          1          -    Covered              
+        bin auto[32:33]                                     9          1          -    Covered              
+        bin auto[34:35]                                     9          1          -    Covered              
+        bin auto[36:37]                                    14          1          -    Covered              
+        bin auto[38:39]                                     2          1          -    Covered              
+        bin auto[40:41]                                    14          1          -    Covered              
+        bin auto[42:43]                                     4          1          -    Covered              
+        bin auto[44:45]                                     5          1          -    Covered              
+        bin auto[46:47]                                     3          1          -    Covered              
+        bin auto[48:49]                                    11          1          -    Covered              
+        bin auto[50:51]                                     7          1          -    Covered              
+        bin auto[52:53]                                     5          1          -    Covered              
+        bin auto[54:55]                                     3          1          -    Covered              
+        bin auto[56:57]                                     3          1          -    Covered              
+        bin auto[58:59]                                     3          1          -    Covered              
+        bin auto[60:61]                                    10          1          -    Covered              
+        bin auto[62:63]                                    15          1          -    Covered              
+        bin auto[64:65]                                     2          1          -    Covered              
+        bin auto[66:67]                                     1          1          -    Covered              
+        bin auto[68:69]                                     8          1          -    Covered              
+        bin auto[70:71]                                     2          1          -    Covered              
+        bin auto[72:73]                                     1          1          -    Covered              
+        bin auto[74:75]                                     3          1          -    Covered              
+        bin auto[76:77]                                    17          1          -    Covered              
+        bin auto[78:79]                                     3          1          -    Covered              
+        bin auto[80:81]                                     6          1          -    Covered              
+        bin auto[82:83]                                     5          1          -    Covered              
+        bin auto[84:85]                                     3          1          -    Covered              
+        bin auto[86:87]                                    10          1          -    Covered              
+        bin auto[88:89]                                     1          1          -    Covered              
+        bin auto[90:91]                                     2          1          -    Covered              
+        bin auto[92:93]                                     5          1          -    Covered              
+        bin auto[94:95]                                     2          1          -    Covered              
+        bin auto[96:97]                                     9          1          -    Covered              
+        bin auto[98:99]                                     7          1          -    Covered              
+        bin auto[100:101]                                   7          1          -    Covered              
+        bin auto[102:103]                                   6          1          -    Covered              
+        bin auto[104:105]                                   5          1          -    Covered              
+        bin auto[106:107]                                   1          1          -    Covered              
+        bin auto[108:109]                                   2          1          -    Covered              
+        bin auto[110:111]                                   8          1          -    Covered              
+        bin auto[112:113]                                   1          1          -    Covered              
+        bin auto[114:115]                                   7          1          -    Covered              
+        bin auto[116:117]                                  13          1          -    Covered              
+        bin auto[118:119]                                   3          1          -    Covered              
+        bin auto[120:121]                                  11          1          -    Covered              
+        bin auto[122:123]                                   4          1          -    Covered              
+        bin auto[124:125]                                   6          1          -    Covered              
+        bin auto[126:127]                                   6          1          -    Covered              
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE .audioport_tb.DUT_INSTANCE.control_unit_1.CHECKER_MODULE.cg_rbreads 
+                                                       54.34%        100          -    Uncovered            
+    covered/total bins:                                    75        138          -                      
+    missing/total bins:                                    63        138          -                      
+    % Hit:                                             54.34%        100          -                      
+    Coverpoint #coverpoint__0#                         54.34%        100          -    Uncovered            
+        covered/total bins:                                75        138          -                      
+        missing/total bins:                                63        138          -                      
+        % Hit:                                         54.34%        100          -                      
+ Covergroup instance \/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cg_rbreads_inst  
+                                                       54.34%        100          -    Uncovered            
+    covered/total bins:                                    75        138          -                      
+    missing/total bins:                                    63        138          -                      
+    % Hit:                                             54.34%        100          -                      
+    Coverpoint #coverpoint__0#                         54.34%        100          -    Uncovered            
+        covered/total bins:                                75        138          -                      
+        missing/total bins:                                63        138          -                      
+        % Hit:                                         54.34%        100          -                      
+        bin reg_addresses[587202560]                        0          1          -    ZERO                 
+        bin reg_addresses[587202561]                       14          1          -    Covered              
+        bin reg_addresses[587202562]                        0          1          -    ZERO                 
+        bin reg_addresses[587202563]                        2          1          -    Covered              
+        bin reg_addresses[587202564]                       10          1          -    Covered              
+        bin reg_addresses[587202565]                       10          1          -    Covered              
+        bin reg_addresses[587202566]                        0          1          -    ZERO                 
+        bin reg_addresses[587202567]                       10          1          -    Covered              
+        bin reg_addresses[587202568]                        0          1          -    ZERO                 
+        bin reg_addresses[587202569]                        0          1          -    ZERO                 
+        bin reg_addresses[587202570]                        2          1          -    Covered              
+        bin reg_addresses[587202571]                        4          1          -    Covered              
+        bin reg_addresses[587202572]                       18          1          -    Covered              
+        bin reg_addresses[587202573]                        2          1          -    Covered              
+        bin reg_addresses[587202574]                        8          1          -    Covered              
+        bin reg_addresses[587202575]                        4          1          -    Covered              
+        bin reg_addresses[587202576]                        0          1          -    ZERO                 
+        bin reg_addresses[587202577]                        2          1          -    Covered              
+        bin reg_addresses[587202578]                        8          1          -    Covered              
+        bin reg_addresses[587202579]                        4          1          -    Covered              
+        bin reg_addresses[587202580]                        6          1          -    Covered              
+        bin reg_addresses[587202581]                        4          1          -    Covered              
+        bin reg_addresses[587202582]                        4          1          -    Covered              
+        bin reg_addresses[587202583]                       10          1          -    Covered              
+        bin reg_addresses[587202584]                       18          1          -    Covered              
+        bin reg_addresses[587202585]                        0          1          -    ZERO                 
+        bin reg_addresses[587202586]                        6          1          -    Covered              
+        bin reg_addresses[587202587]                        2          1          -    Covered              
+        bin reg_addresses[587202588]                       10          1          -    Covered              
+        bin reg_addresses[587202589]                       24          1          -    Covered              
+        bin reg_addresses[587202590]                        0          1          -    ZERO                 
+        bin reg_addresses[587202591]                        8          1          -    Covered              
+        bin reg_addresses[587202592]                       12          1          -    Covered              
+        bin reg_addresses[587202593]                       10          1          -    Covered              
+        bin reg_addresses[587202594]                        0          1          -    ZERO                 
+        bin reg_addresses[587202595]                        0          1          -    ZERO                 
+        bin reg_addresses[587202596]                        0          1          -    ZERO                 
+        bin reg_addresses[587202597]                       16          1          -    Covered              
+        bin reg_addresses[587202598]                        0          1          -    ZERO                 
+        bin reg_addresses[587202599]                        4          1          -    Covered              
+        bin reg_addresses[587202600]                        4          1          -    Covered              
+        bin reg_addresses[587202601]                        8          1          -    Covered              
+        bin reg_addresses[587202602]                        4          1          -    Covered              
+        bin reg_addresses[587202603]                        2          1          -    Covered              
+        bin reg_addresses[587202604]                        8          1          -    Covered              
+        bin reg_addresses[587202605]                        0          1          -    ZERO                 
+        bin reg_addresses[587202606]                        6          1          -    Covered              
+        bin reg_addresses[587202607]                        0          1          -    ZERO                 
+        bin reg_addresses[587202608]                        6          1          -    Covered              
+        bin reg_addresses[587202609]                        0          1          -    ZERO                 
+        bin reg_addresses[587202610]                        6          1          -    Covered              
+        bin reg_addresses[587202611]                        0          1          -    ZERO                 
+        bin reg_addresses[587202612]                        0          1          -    ZERO                 
+        bin reg_addresses[587202613]                        0          1          -    ZERO                 
+        bin reg_addresses[587202614]                        4          1          -    Covered              
+        bin reg_addresses[587202615]                        4          1          -    Covered              
+        bin reg_addresses[587202616]                        0          1          -    ZERO                 
+        bin reg_addresses[587202617]                        0          1          -    ZERO                 
+        bin reg_addresses[587202618]                        0          1          -    ZERO                 
+        bin reg_addresses[587202619]                        0          1          -    ZERO                 
+        bin reg_addresses[587202620]                        6          1          -    Covered              
+        bin reg_addresses[587202621]                       10          1          -    Covered              
+        bin reg_addresses[587202622]                        0          1          -    ZERO                 
+        bin reg_addresses[587202623]                       20          1          -    Covered              
+        bin reg_addresses[587202624]                        0          1          -    ZERO                 
+        bin reg_addresses[587202625]                        0          1          -    ZERO                 
+        bin reg_addresses[587202626]                        0          1          -    ZERO                 
+        bin reg_addresses[587202627]                        0          1          -    ZERO                 
+        bin reg_addresses[587202628]                       10          1          -    Covered              
+        bin reg_addresses[587202629]                        2          1          -    Covered              
+        bin reg_addresses[587202630]                        0          1          -    ZERO                 
+        bin reg_addresses[587202631]                        2          1          -    Covered              
+        bin reg_addresses[587202632]                        0          1          -    ZERO                 
+        bin reg_addresses[587202633]                        0          1          -    ZERO                 
+        bin reg_addresses[587202634]                        0          1          -    ZERO                 
+        bin reg_addresses[587202635]                        0          1          -    ZERO                 
+        bin reg_addresses[587202636]                        6          1          -    Covered              
+        bin reg_addresses[587202637]                        0          1          -    ZERO                 
+        bin reg_addresses[587202638]                        2          1          -    Covered              
+        bin reg_addresses[587202639]                        0          1          -    ZERO                 
+        bin reg_addresses[587202640]                       10          1          -    Covered              
+        bin reg_addresses[587202641]                        0          1          -    ZERO                 
+        bin reg_addresses[587202642]                        0          1          -    ZERO                 
+        bin reg_addresses[587202643]                        0          1          -    ZERO                 
+        bin reg_addresses[587202644]                        0          1          -    ZERO                 
+        bin reg_addresses[587202645]                        2          1          -    Covered              
+        bin reg_addresses[587202646]                        6          1          -    Covered              
+        bin reg_addresses[587202647]                        0          1          -    ZERO                 
+        bin reg_addresses[587202648]                        2          1          -    Covered              
+        bin reg_addresses[587202649]                        0          1          -    ZERO                 
+        bin reg_addresses[587202650]                        6          1          -    Covered              
+        bin reg_addresses[587202651]                        0          1          -    ZERO                 
+        bin reg_addresses[587202652]                        0          1          -    ZERO                 
+        bin reg_addresses[587202653]                        0          1          -    ZERO                 
+        bin reg_addresses[587202654]                        8          1          -    Covered              
+        bin reg_addresses[587202655]                        0          1          -    ZERO                 
+        bin reg_addresses[587202656]                        4          1          -    Covered              
+        bin reg_addresses[587202657]                        2          1          -    Covered              
+        bin reg_addresses[587202658]                        0          1          -    ZERO                 
+        bin reg_addresses[587202659]                        6          1          -    Covered              
+        bin reg_addresses[587202660]                        8          1          -    Covered              
+        bin reg_addresses[587202661]                        2          1          -    Covered              
+        bin reg_addresses[587202662]                        0          1          -    ZERO                 
+        bin reg_addresses[587202663]                        8          1          -    Covered              
+        bin reg_addresses[587202664]                        6          1          -    Covered              
+        bin reg_addresses[587202665]                        0          1          -    ZERO                 
+        bin reg_addresses[587202666]                        0          1          -    ZERO                 
+        bin reg_addresses[587202667]                        4          1          -    Covered              
+        bin reg_addresses[587202668]                        0          1          -    ZERO                 
+        bin reg_addresses[587202669]                        0          1          -    ZERO                 
+        bin reg_addresses[587202670]                       12          1          -    Covered              
+        bin reg_addresses[587202671]                        4          1          -    Covered              
+        bin reg_addresses[587202672]                        2          1          -    Covered              
+        bin reg_addresses[587202673]                        0          1          -    ZERO                 
+        bin reg_addresses[587202674]                        0          1          -    ZERO                 
+        bin reg_addresses[587202675]                        0          1          -    ZERO                 
+        bin reg_addresses[587202676]                        4          1          -    Covered              
+        bin reg_addresses[587202677]                        8          1          -    Covered              
+        bin reg_addresses[587202678]                        2          1          -    Covered              
+        bin reg_addresses[587202679]                        0          1          -    ZERO                 
+        bin reg_addresses[587202680]                        8          1          -    Covered              
+        bin reg_addresses[587202681]                        0          1          -    ZERO                 
+        bin reg_addresses[587202682]                        2          1          -    Covered              
+        bin reg_addresses[587202683]                        0          1          -    ZERO                 
+        bin reg_addresses[587202684]                        2          1          -    Covered              
+        bin reg_addresses[587202685]                        6          1          -    Covered              
+        bin reg_addresses[587202686]                        0          1          -    ZERO                 
+        bin reg_addresses[587202687]                        2          1          -    Covered              
+        bin reg_addresses[587202688]                        2          1          -    Covered              
+        bin reg_addresses[587202689]                        0          1          -    ZERO                 
+        bin reg_addresses[587202690]                        0          1          -    ZERO                 
+        bin reg_addresses[587202691]                        0          1          -    ZERO                 
+        bin reg_addresses[587202692]                        0          1          -    ZERO                 
+        bin reg_addresses[587202693]                        8          1          -    Covered              
+        bin reg_addresses[587202694]                       14          1          -    Covered              
+        bin reg_addresses[587202695]                        0          1          -    ZERO                 
+        bin reg_addresses[587202696]                        0          1          -    ZERO                 
+        bin reg_addresses[587202697]                        6          1          -    Covered              
+ TYPE .audioport_tb.DUT_INSTANCE.control_unit_1.CHECKER_MODULE.cg_commands 
+                                                       16.66%        100          -    Uncovered            
+    covered/total bins:                                     1         20          -                      
+    missing/total bins:                                    19         20          -                      
+    % Hit:                                              5.00%        100          -                      
+    Coverpoint PWDATA                                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          6          -                      
+        missing/total bins:                                 6          6          -                      
+        % Hit:                                          0.00%        100          -                      
+    Coverpoint play_out                                50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+    Cross #cross__0#                                    0.00%        100          -    ZERO                 
+        covered/total bins:                                 0         12          -                      
+        missing/total bins:                                12         12          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/cg_commands_inst  
+                                                       16.66%        100          -    Uncovered            
+    covered/total bins:                                     1         20          -                      
+    missing/total bins:                                    19         20          -                      
+    % Hit:                                              5.00%        100          -                      
+    Coverpoint PWDATA                                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          6          -                      
+        missing/total bins:                                 6          6          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cmd_clr                                         0          1          -    ZERO                 
+        bin cmd_cfg                                         0          1          -    ZERO                 
+        bin cmd_level                                       0          1          -    ZERO                 
+        bin cmd_start                                       0          1          -    ZERO                 
+        bin cmd_stop                                        0          1          -    ZERO                 
+        bin cmd_irqack                                      0          1          -    ZERO                 
+        default bin illegal                              2379                     -    Occurred             
+    Coverpoint play_out                                50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin standby                                      2379          1          -    Covered              
+        bin play                                            0          1          -    ZERO                 
+    Cross #cross__0#                                    0.00%        100          -    ZERO                 
+        covered/total bins:                                 0         12          -                      
+        missing/total bins:                                12         12          -                      
+        % Hit:                                          0.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <*,*>                                       0          1         12    ZERO                 
+ TYPE .audioport_tb.DUT_INSTANCE.dsp_unit_1.CHECKER_MODULE.cg_dsp_modes 
+                                                        0.00%        100          -    ZERO                 
+    covered/total bins:                                     0          2          -                      
+    missing/total bins:                                     2          2          -                      
+    % Hit:                                              0.00%        100          -                      
+    Coverpoint cfgbit                                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          2          -                      
+        missing/total bins:                                 2          2          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/cg_dsp_modes_inst  
+                                                        0.00%        100          -    ZERO                 
+    covered/total bins:                                     0          2          -                      
+    missing/total bins:                                     2          2          -                      
+    % Hit:                                              0.00%        100          -                      
+    Coverpoint cfgbit                                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          2          -                      
+        missing/total bins:                                 2          2          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin modes[0]                                        0          1          -    ZERO                 
+        bin modes[1]                                        0          1          -    ZERO                 
+ TYPE .audioport_tb.DUT_INSTANCE.CHECKER_MODULE.cg_active_config 
+                                                        0.00%        100          -    ZERO                 
+    covered/total bins:                                     0          2          -                      
+    missing/total bins:                                     2          2          -                      
+    % Hit:                                              0.00%        100          -                      
+    Coverpoint configs                                  0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          2          -                      
+        missing/total bins:                                 2          2          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/cg_active_config_inst  
+                                                        0.00%        100          -    ZERO                 
+    covered/total bins:                                     0          2          -                      
+    missing/total bins:                                     2          2          -                      
+    % Hit:                                              0.00%        100          -                      
+    Coverpoint configs                                  0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          2          -                      
+        missing/total bins:                                 2          2          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cfgmodes[0]                                     0          1          -    ZERO                 
+        bin cfgmodes[1]                                     0          1          -    ZERO                 
+ TYPE .apb_env_pkg.apb_analyzer.dut_write_coverage    100.00%        100          -    Covered              
+    covered/total bins:                                    64         64          -                      
+    missing/total bins:                                     0         64          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint write_cov                              100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0:1]                                       3          1          -    Covered              
+        bin auto[2:3]                                       4          1          -    Covered              
+        bin auto[4:5]                                       9          1          -    Covered              
+        bin auto[6:7]                                       5          1          -    Covered              
+        bin auto[8:9]                                       2          1          -    Covered              
+        bin auto[10:11]                                     6          1          -    Covered              
+        bin auto[12:13]                                     9          1          -    Covered              
+        bin auto[14:15]                                    10          1          -    Covered              
+        bin auto[16:17]                                     3          1          -    Covered              
+        bin auto[18:19]                                     8          1          -    Covered              
+        bin auto[20:21]                                     7          1          -    Covered              
+        bin auto[22:23]                                    10          1          -    Covered              
+        bin auto[24:25]                                     5          1          -    Covered              
+        bin auto[26:27]                                     6          1          -    Covered              
+        bin auto[28:29]                                     6          1          -    Covered              
+        bin auto[30:31]                                     4          1          -    Covered              
+        bin auto[32:33]                                     8          1          -    Covered              
+        bin auto[34:35]                                     6          1          -    Covered              
+        bin auto[36:37]                                    10          1          -    Covered              
+        bin auto[38:39]                                     4          1          -    Covered              
+        bin auto[40:41]                                    11          1          -    Covered              
+        bin auto[42:43]                                     6          1          -    Covered              
+        bin auto[44:45]                                     8          1          -    Covered              
+        bin auto[46:47]                                     9          1          -    Covered              
+        bin auto[48:49]                                     7          1          -    Covered              
+        bin auto[50:51]                                     4          1          -    Covered              
+        bin auto[52:53]                                     6          1          -    Covered              
+        bin auto[54:55]                                     6          1          -    Covered              
+        bin auto[56:57]                                     6          1          -    Covered              
+        bin auto[58:59]                                     5          1          -    Covered              
+        bin auto[60:61]                                     8          1          -    Covered              
+        bin auto[62:63]                                     9          1          -    Covered              
+        bin auto[64:65]                                     4          1          -    Covered              
+        bin auto[66:67]                                     3          1          -    Covered              
+        bin auto[68:69]                                     6          1          -    Covered              
+        bin auto[70:71]                                     4          1          -    Covered              
+        bin auto[72:73]                                     1          1          -    Covered              
+        bin auto[74:75]                                     9          1          -    Covered              
+        bin auto[76:77]                                     6          1          -    Covered              
+        bin auto[78:79]                                     4          1          -    Covered              
+        bin auto[80:81]                                     4          1          -    Covered              
+        bin auto[82:83]                                     7          1          -    Covered              
+        bin auto[84:85]                                     6          1          -    Covered              
+        bin auto[86:87]                                     4          1          -    Covered              
+        bin auto[88:89]                                     4          1          -    Covered              
+        bin auto[90:91]                                     4          1          -    Covered              
+        bin auto[92:93]                                     3          1          -    Covered              
+        bin auto[94:95]                                     6          1          -    Covered              
+        bin auto[96:97]                                    11          1          -    Covered              
+        bin auto[98:99]                                     8          1          -    Covered              
+        bin auto[100:101]                                   8          1          -    Covered              
+        bin auto[102:103]                                   5          1          -    Covered              
+        bin auto[104:105]                                   6          1          -    Covered              
+        bin auto[106:107]                                   4          1          -    Covered              
+        bin auto[108:109]                                   4          1          -    Covered              
+        bin auto[110:111]                                   7          1          -    Covered              
+        bin auto[112:113]                                   4          1          -    Covered              
+        bin auto[114:115]                                   7          1          -    Covered              
+        bin auto[116:117]                                   6          1          -    Covered              
+        bin auto[118:119]                                   4          1          -    Covered              
+        bin auto[120:121]                                  11          1          -    Covered              
+        bin auto[122:123]                                   7          1          -    Covered              
+        bin auto[124:125]                                  10          1          -    Covered              
+        bin auto[126:127]                                   6          1          -    Covered              
+ TYPE .apb_env_pkg.apb_analyzer.dut_read_coverage      98.43%        100          -    Uncovered            
+    covered/total bins:                                    63         64          -                      
+    missing/total bins:                                     1         64          -                      
+    % Hit:                                             98.43%        100          -                      
+    Coverpoint read_cov                                98.43%        100          -    Uncovered            
+        covered/total bins:                                63         64          -                      
+        missing/total bins:                                 1         64          -                      
+        % Hit:                                         98.43%        100          -                      
+        bin auto[0:1]                                       5          1          -    Covered              
+        bin auto[2:3]                                       2          1          -    Covered              
+        bin auto[4:5]                                       8          1          -    Covered              
+        bin auto[6:7]                                      10          1          -    Covered              
+        bin auto[8:9]                                       4          1          -    Covered              
+        bin auto[10:11]                                     4          1          -    Covered              
+        bin auto[12:13]                                     4          1          -    Covered              
+        bin auto[14:15]                                     8          1          -    Covered              
+        bin auto[16:17]                                     0          1          -    ZERO                 
+        bin auto[18:19]                                     5          1          -    Covered              
+        bin auto[20:21]                                     4          1          -    Covered              
+        bin auto[22:23]                                    11          1          -    Covered              
+        bin auto[24:25]                                     7          1          -    Covered              
+        bin auto[26:27]                                     3          1          -    Covered              
+        bin auto[28:29]                                    18          1          -    Covered              
+        bin auto[30:31]                                     7          1          -    Covered              
+        bin auto[32:33]                                     9          1          -    Covered              
+        bin auto[34:35]                                     9          1          -    Covered              
+        bin auto[36:37]                                    14          1          -    Covered              
+        bin auto[38:39]                                     2          1          -    Covered              
+        bin auto[40:41]                                    14          1          -    Covered              
+        bin auto[42:43]                                     4          1          -    Covered              
+        bin auto[44:45]                                     5          1          -    Covered              
+        bin auto[46:47]                                     3          1          -    Covered              
+        bin auto[48:49]                                    11          1          -    Covered              
+        bin auto[50:51]                                     7          1          -    Covered              
+        bin auto[52:53]                                     5          1          -    Covered              
+        bin auto[54:55]                                     3          1          -    Covered              
+        bin auto[56:57]                                     3          1          -    Covered              
+        bin auto[58:59]                                     3          1          -    Covered              
+        bin auto[60:61]                                    10          1          -    Covered              
+        bin auto[62:63]                                    15          1          -    Covered              
+        bin auto[64:65]                                     2          1          -    Covered              
+        bin auto[66:67]                                     1          1          -    Covered              
+        bin auto[68:69]                                     8          1          -    Covered              
+        bin auto[70:71]                                     2          1          -    Covered              
+        bin auto[72:73]                                     1          1          -    Covered              
+        bin auto[74:75]                                     3          1          -    Covered              
+        bin auto[76:77]                                    17          1          -    Covered              
+        bin auto[78:79]                                     3          1          -    Covered              
+        bin auto[80:81]                                     6          1          -    Covered              
+        bin auto[82:83]                                     5          1          -    Covered              
+        bin auto[84:85]                                     3          1          -    Covered              
+        bin auto[86:87]                                    10          1          -    Covered              
+        bin auto[88:89]                                     1          1          -    Covered              
+        bin auto[90:91]                                     2          1          -    Covered              
+        bin auto[92:93]                                     5          1          -    Covered              
+        bin auto[94:95]                                     2          1          -    Covered              
+        bin auto[96:97]                                     9          1          -    Covered              
+        bin auto[98:99]                                     7          1          -    Covered              
+        bin auto[100:101]                                   7          1          -    Covered              
+        bin auto[102:103]                                   6          1          -    Covered              
+        bin auto[104:105]                                   5          1          -    Covered              
+        bin auto[106:107]                                   1          1          -    Covered              
+        bin auto[108:109]                                   2          1          -    Covered              
+        bin auto[110:111]                                   8          1          -    Covered              
+        bin auto[112:113]                                   1          1          -    Covered              
+        bin auto[114:115]                                   7          1          -    Covered              
+        bin auto[116:117]                                  13          1          -    Covered              
+        bin auto[118:119]                                   3          1          -    Covered              
+        bin auto[120:121]                                  11          1          -    Covered              
+        bin auto[122:123]                                   4          1          -    Covered              
+        bin auto[124:125]                                   6          1          -    Covered              
+        bin auto[126:127]                                   6          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 44.90%  COVERGROUP TYPES: 6
+
+Total Coverage By Instance (filtered view): 44.90%
+

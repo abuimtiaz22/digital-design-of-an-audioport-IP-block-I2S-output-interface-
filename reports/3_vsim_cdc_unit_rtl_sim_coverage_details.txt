@@ -1,0 +1,402 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.cdc_unit_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      21        21         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_test_mode_in
+                     input/cdc_unit_svamod.sv(47)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0_in
+                     input/cdc_unit_svamod.sv(48)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1_in
+                     input/cdc_unit_svamod.sv(49)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick_in
+                     input/cdc_unit_svamod.sv(50)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_in
+                     input/cdc_unit_svamod.sv(51)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_in
+                     input/cdc_unit_svamod.sv(52)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0_out
+                     input/cdc_unit_svamod.sv(53)
+                                                        0       1872          1          1       1874          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1_out
+                     input/cdc_unit_svamod.sv(54)
+                                                        0       1872          1          1       1874          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick_out
+                     input/cdc_unit_svamod.sv(55)
+                                                        0       1872          1          1       1874          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_out
+                     input/cdc_unit_svamod.sv(56)
+                                                        0       2394          1          1       2396          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_out
+                     input/cdc_unit_svamod.sv(57)
+                                                        0       2299          1          1       2301          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_tick_pulse
+                     input/cdc_unit_svamod.sv(70)
+                                                        0         50       2543        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_tick_interval
+                     input/cdc_unit_svamod.sv(80)
+                                                        0         50       2543        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_play_length
+                     input/cdc_unit_svamod.sv(90)
+                                                        0         14       2579        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_req_pulse
+                     input/cdc_unit_svamod.sv(99)
+                                                        0         50        565         45        660          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_reset_sync_01
+                     input/cdc_unit_svamod.sv(111)
+                                                        0         10        624          0        634          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_reset_sync_10
+                     input/cdc_unit_svamod.sv(121)
+                                                        0         10       2636          0       2646          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_play_sync
+                     input/cdc_unit_svamod.sv(132)
+                                                        0       2391          0          0       2391          0          10 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_sync
+                     input/cdc_unit_svamod.sv(142)
+                                                        0         50       2249          0       2299          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_out_pulse
+                     input/cdc_unit_svamod.sv(153)
+                                                        0         50       2249          0       2299          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_audio_sync
+                     input/cdc_unit_svamod.sv(165)
+                                                        0         50       1822          0       1872          0           1 off
+
+Directive Coverage:
+    Directives                       6         6         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_reset_sync_01 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(112)
+                                                                                10 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_reset_sync_10 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(122)
+                                                                                10 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_play_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(133)
+                                                                              2391 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(143)
+                                                                                50 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_out_pulse 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(154)
+                                                                                50 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_audio_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(166)
+                                                                                50 Covered   
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        218       218         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =        109 
+Toggled Node Count   =        109 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (218 of 218 bins)
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE
+=== Design Unit: work.cdc_unit
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        29        29         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /cdc_unit_tb/DUT_INSTANCE
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File input/cdc_unit.sv
+------------------------------------IF Branch------------------------------------
+    57                                      6708     Count coming in to IF
+    57              1                         39     
+    57              2                       6669     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    58                                      6708     Count coming in to IF
+    58              1                         39     
+    58              2                       6669     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    59                                        55     Count coming in to IF
+    59              1                          5     
+    59              2                         50     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    72                                        64     Count coming in to IF
+    72              1                         25     
+    75              1                         39     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    87                                        60     Count coming in to IF
+    87              1                         26     
+    90              1                         34     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    105                                      439     Count coming in to IF
+    105             1                         26     
+    110             1                        413     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    127                                      289     Count coming in to IF
+    127             1                         26     
+    132             1                        263     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    133                                      263     Count coming in to IF
+    133             1                         50     
+    138             1                        100     
+                                             113     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    147                                      339     Count coming in to IF
+    147             1                         26     
+    150             1                        313     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    158                                      239     Count coming in to IF
+    158             1                         26     
+    160             1                        213     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    161                                      213     Count coming in to IF
+    161             1                        100     
+    163             1                        113     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    171                                      339     Count coming in to IF
+    171             1                         26     
+    174             1                        313     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    182                                      339     Count coming in to IF
+    182             1                         26     
+    187             1                        313     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    190                                      313     Count coming in to IF
+    190             1                         50     
+    194             1                        263     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         2         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /cdc_unit_tb/DUT_INSTANCE --
+
+  File input/cdc_unit.sv
+----------------Focused Condition View-------------------
+Line       190 Item    1  (handshake_req_sync2 && ~tick_prev)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     11        11         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /cdc_unit_tb/DUT_INSTANCE --
+
+  File input/cdc_unit.sv
+-----------Focused Expression View (Bimodal)------------
+Line       57 Item    1  (test_mode_in? clk: mclk)
+Expression totals: 3 of 3 input terms covered = 100.00%
+
+-----------Focused Expression View (Bimodal)------------
+Line       58 Item    1  (test_mode_in? clk: ~mclk)
+Expression totals: 3 of 3 input terms covered = 100.00%
+
+-----------Focused Expression View (Bimodal)------------
+Line       59 Item    1  (test_mode_in? rst_n: mrst_n)
+Expression totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Expression View-----------------
+Line       118 Item    1  (req_in_sync2 & ~req_in_prev)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      56        56         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /cdc_unit_tb/DUT_INSTANCE --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File input/cdc_unit.sv
+    57              1                       6710     
+    58              1                       6710     
+    59              1                         56     
+    71              1                         64     
+    73              1                         25     
+    74              1                         25     
+    76              1                         39     
+    77              1                         39     
+    86              1                         60     
+    88              1                         26     
+    89              1                         26     
+    91              1                         34     
+    92              1                         34     
+    104             1                        439     
+    106             1                         26     
+    107             1                         26     
+    108             1                         26     
+    111             1                        413     
+    112             1                        413     
+    113             1                        413     
+    118             1                        202     
+    126             1                        289     
+    128             1                         26     
+    129             1                         26     
+    130             1                         26     
+    131             1                         26     
+    134             1                         50     
+    135             1                         50     
+    136             1                         50     
+    137             1                         50     
+    139             1                        100     
+    140             1                        100     
+    146             1                        339     
+    148             1                         26     
+    149             1                         26     
+    151             1                        313     
+    152             1                        313     
+    157             1                        239     
+    159             1                         26     
+    162             1                        100     
+    164             1                        113     
+    170             1                        339     
+    172             1                         26     
+    173             1                         26     
+    175             1                        313     
+    176             1                        313     
+    181             1                        339     
+    183             1                         26     
+    184             1                         26     
+    185             1                         26     
+    186             1                         26     
+    188             1                        313     
+    191             1                         50     
+    192             1                         50     
+    193             1                         50     
+    195             1                        263     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        352       352         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /cdc_unit_tb/DUT_INSTANCE --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =        176 
+Toggled Node Count   =        176 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (352 of 352 bins)
+
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_reset_sync_01 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(112)
+                                                                                10 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_reset_sync_10 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(122)
+                                                                                10 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_play_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(133)
+                                                                              2391 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(143)
+                                                                                50 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_out_pulse 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(154)
+                                                                                50 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_audio_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(166)
+                                                                                50 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 6
+
+TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 21
+
+Total Coverage By Instance (filtered view): 100.00%
+

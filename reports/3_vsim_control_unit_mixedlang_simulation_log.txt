@@ -1,0 +1,204 @@
+# do scripts/vsim_mixedsim.tcl
+# 0
+# 1
+# 0
+# -all
+# QuestaSim
+# 0
+# 1
+# output/i2s_unit_rtl.dbg
+# output/i2s_unit_rtl.bin
+# output/i2s_unit_rtl.db
+# i2s_unit_rtl_vopt
+# output/i2s_unit_questasim_work
+#  -g -I input -work output/i2s_unit_questasim_work -verbose
+#  +define+design_top_is_i2s_unit +define+DESIGN_NAME_MACRO=i2s_unit +incdir+input -work work -sv
+#  -mixedsvvh -work work
+#  -assertdebug -msgmode both -classdebug -uvmcontrol=all -debugDB=output/i2s_unit_rtl.dbg -sclib output/i2s_unit_questasim_work -L output/i2s_unit_questasim_work
+#  +acc -suppress 10587 -debugdb -noincr -sclib output/i2s_unit_questasim_work -L output/i2s_unit_questasim_work
+# -suppress 13314 -suppress 13233 +define+RTL_SIM +define+SYSTEMC_DUT +define+design_top_is_i2s_unit +define+DESIGN_NAME_MACRO=i2s_unit +incdir+input -work work -sv
+# -mixedsvvh -work work
+# -assertdebug -msgmode both -classdebug -uvmcontrol=all -debugDB=output/i2s_unit_rtl.dbg -sclib output/i2s_unit_questasim_work -L output/i2s_unit_questasim_work
+# 1
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 02:26:39 on Feb 28,2025
+# vlog -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+SYSTEMC_DUT" "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -work work -sv input/apb_pkg.sv 
+# -- Compiling package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 02:26:39 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 02:26:39 on Feb 28,2025
+# vlog -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+SYSTEMC_DUT" "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -work work -sv input/audioport_pkg.sv 
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 02:26:39 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 02:26:39 on Feb 28,2025
+# vlog -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+SYSTEMC_DUT" "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -work work -sv input/audioport_util_pkg.sv 
+# -- Compiling package audioport_util_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 02:26:39 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 02:26:39 on Feb 28,2025
+# vlog -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+SYSTEMC_DUT" "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -work work -sv input/i2s_unit_svamod.sv 
+# -- Compiling package i2s_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module i2s_unit_svamod
+# 
+# Top level modules:
+# 	i2s_unit_svamod
+# End time: 02:26:39 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 02:26:39 on Feb 28,2025
+# vlog -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+SYSTEMC_DUT" "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -work work -sv input/i2s_if.sv 
+# -- Compiling package i2s_if_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling interface i2s_if
+# -- Compiling module i2s_if_tb
+# 
+# Top level modules:
+# 	i2s_if_tb
+# End time: 02:26:40 on Feb 28,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 02:26:40 on Feb 28,2025
+# vlog -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+SYSTEMC_DUT" "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -work work -sv input/i2s_unit_test.sv 
+# -- Compiling package i2s_unit_test_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling program i2s_unit_test
+# 
+# Top level modules:
+# 	i2s_unit_test
+# End time: 02:26:40 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 02:26:40 on Feb 28,2025
+# vlog -suppress 13314 -suppress 13233 "+define+RTL_SIM" "+define+SYSTEMC_DUT" "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -work work -sv input/i2s_unit_tb.sv 
+# -- Compiling package i2s_unit_tb_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module i2s_unit_tb
+# 
+# Top level modules:
+# 	i2s_unit_tb
+# End time: 02:26:40 on Feb 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# sccom -verbose -g -I input -work output/i2s_unit_questasim_work -verbose input/i2s_unit.cpp 
+# Start time: 02:26:40 on Feb 28,2025
+# 
+# QuestaSim-64 sccom 2024.3_2 compiler 2024.11 Nov 25 2024
+# 
+# -- Compiling module i2s_unit
+# Exported modules:
+# 	i2s_unit
+# End time: 02:26:43 on Feb 28,2025, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# sccom -g -I input -work output/i2s_unit_questasim_work -verbose -link 
+# Start time: 02:26:43 on Feb 28,2025
+# 
+# QuestaSim-64 sccom 2024.3_2 compiler 2024.11 Nov 25 2024
+# End time: 02:26:46 on Feb 28,2025, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 02:26:46 on Feb 28,2025
+# vopt "+acc" -suppress 10587 -debugdb -noincr -sclib output/i2s_unit_questasim_work -L output/i2s_unit_questasim_work work.i2s_unit_tb -o i2s_unit_rtl_vopt 
+# 
+# Top level modules:
+# 	i2s_unit_tb
+# 
+# Analyzing design...
+# -- Loading module i2s_unit_tb
+# -- Loading interface i2s_if
+# -- Loading program i2s_unit_test
+# -- Loading shared library /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/i2s_unit_questasim_work/_sc/linux_x86_64_gcc-10.3.0/systemc.so
+# -- Loading systemc module /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/i2s_unit_questasim_work.i2s_unit
+# -- Loading module i2s_unit_svamod
+# Optimizing 12 design-units (inlining 0/4 module instances, 0/1 systemc instances):
+# -- Optimizing package apb_pkg(fast)
+# -- Optimizing package audioport_pkg(fast)
+# -- Optimizing package audioport_util_pkg(fast)
+# -- Optimizing package i2s_unit_tb_sv_unit(fast)
+# -- Optimizing package i2s_if_sv_unit(fast)
+# -- Optimizing package i2s_unit_test_sv_unit(fast)
+# -- Optimizing package i2s_unit_svamod_sv_unit(fast)
+# -- Optimizing module i2s_unit_svamod(fast)
+# -- Processing module i2s_unit_svamod(fast) for debug
+# -- Optimizing program i2s_unit_test(fast)
+# -- Optimizing module i2s_unit_tb(fast)
+# -- Processing module i2s_unit_tb(fast) for debug
+# -- Optimizing interface i2s_if(fast__1)
+# -- Optimizing interface i2s_if(fast)
+# Optimized design name is i2s_unit_rtl_vopt
+# End time: 02:26:47 on Feb 28,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0, Suppressed Warnings: 1
+# vsim i2s_unit_rtl_vopt -assertdebug -msgmode both -classdebug -uvmcontrol=all -debugDB=output/i2s_unit_rtl.dbg -sclib output/i2s_unit_questasim_work -L output/i2s_unit_questasim_work 
+# Start time: 02:26:47 on Feb 28,2025
+# //  Questa Sim-64
+# //  Version 2024.3_2 linux_x86_64 Nov 25 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.apb_pkg(fast)
+# Loading work.audioport_pkg(fast)
+# Loading work.audioport_util_pkg(fast)
+# Loading work.i2s_unit_tb_sv_unit(fast)
+# Loading work.i2s_unit_tb(fast)
+# Loading work.i2s_if_sv_unit(fast)
+# Loading work.i2s_if(fast__1)
+# Loading work.i2s_unit_test_sv_unit(fast)
+# Loading work.i2s_unit_test(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/i2s_unit_questasim_work/_sc/linux_x86_64_gcc-10.3.0/systemc.so
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/i2s_unit_questasim_work.i2s_unit
+# Loading work.i2s_unit_svamod_sv_unit(fast)
+# Loading work.i2s_unit_svamod(fast)
+# ** Note: (vsim-8900) Creating design debug database output/i2s_unit_rtl.dbg.
+# sim_coverage
+# ** Info: T1: Regular Pattern Test
+#    Time: 135635 ps  Scope: i2s_unit_tb.TEST.data_generator File: input/i2s_unit_test.sv Line: 72
+# ** Info: T2: Stop Test
+#    Time: 126384693 ps  Scope: i2s_unit_tb.TEST.data_generator File: input/i2s_unit_test.sv Line: 141
+# ** Info: T2: STOP
+#    Time: 200495657 ps  Scope: i2s_unit_tb.TEST.data_generator File: input/i2s_unit_test.sv Line: 197
+# ** Info: T3: Random
+#    Time: 283829801 ps  Scope: i2s_unit_tb.TEST.data_generator File: input/i2s_unit_test.sv Line: 222
+# ** Info: Test end
+#    Time: 377597977 ps  Scope: i2s_unit_tb.TEST.data_generator File: input/i2s_unit_test.sv Line: 274
+#####################################################################################################
+# i2s_unit_test results: PASSED:           3 / FAILED:           0
+#####################################################################################################
+# ** Note: $finish    : input/i2s_unit_test.sv(323)
+#    Time: 377597977 ps  Iteration: 0  Instance: /i2s_unit_tb/TEST
+# Break in Module i2s_unit_test at input/i2s_unit_test.sv line 323
+# Stopped at input/i2s_unit_test.sv line 323
+# Saving coverage database on exit...
+# End time: 02:26:48 on Feb 28,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

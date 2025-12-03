@@ -1,0 +1,163 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6080
+=== Design Unit: work.assert_cdc_dsel
+=================================================================================
+
+Directive Coverage:
+    Directives                       1         1         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6080/cdc_dsel_rx_data_stable_check/cdc_dsel_rx_data_stable_cover/cover_data_stable 
+                                         assert_cdc_dsel Verilog  SVA  /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/share/CDC_PROTOCOL/cdc_protocol_dsel.sv(144)
+                                                                                50 Covered   
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6100
+=== Design Unit: work.assert_cdc_dsel
+=================================================================================
+
+Directive Coverage:
+    Directives                       1         1         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6100/cdc_dsel_rx_data_stable_check/cdc_dsel_rx_data_stable_cover/cover_data_stable 
+                                         assert_cdc_dsel Verilog  SVA  /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/share/CDC_PROTOCOL/cdc_protocol_dsel.sv(144)
+                                                                                50 Covered   
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/async_reset_8013
+=== Design Unit: work.assert_cdc_sync
+=================================================================================
+
+Directive Coverage:
+    Directives                       1         1         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/async_reset_8013/cdc_sync_tx_stable_check/cdc_sync_tx_stable_cover/cover_stable 
+                                         assert_cdc_sync Verilog  SVA  /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/share/CDC_PROTOCOL/cdc_protocol_sync.sv(83)
+                                                                                25 Covered   
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_63806
+=== Design Unit: work.assert_cdc_sync
+=================================================================================
+
+Directive Coverage:
+    Directives                       1         1         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_63806/cdc_sync_tx_stable_check/cdc_sync_tx_stable_cover/cover_stable 
+                                         assert_cdc_sync Verilog  SVA  /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/share/CDC_PROTOCOL/cdc_protocol_sync.sv(83)
+                                                                               100 Covered   
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_74335
+=== Design Unit: work.assert_cdc_sync
+=================================================================================
+
+Directive Coverage:
+    Directives                       1         1         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_74335/cdc_sync_tx_stable_check/cdc_sync_tx_stable_cover/cover_stable 
+                                         assert_cdc_sync Verilog  SVA  /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/share/CDC_PROTOCOL/cdc_protocol_sync.sv(83)
+                                                                                14 Covered   
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.cdc_unit_svamod
+=================================================================================
+
+Directive Coverage:
+    Directives                       6         6         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_reset_sync_01 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(112)
+                                                                                10 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_reset_sync_10 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(122)
+                                                                                10 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_play_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(133)
+                                                                              2391 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(143)
+                                                                                50 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_out_pulse 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(154)
+                                                                                50 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_audio_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(166)
+                                                                                50 Covered   
+
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6080/cdc_dsel_rx_data_stable_check/cdc_dsel_rx_data_stable_cover/cover_data_stable 
+                                         assert_cdc_dsel Verilog  SVA  /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/share/CDC_PROTOCOL/cdc_protocol_dsel.sv(144)
+                                                                                50 Covered   
+/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6100/cdc_dsel_rx_data_stable_check/cdc_dsel_rx_data_stable_cover/cover_data_stable 
+                                         assert_cdc_dsel Verilog  SVA  /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/share/CDC_PROTOCOL/cdc_protocol_dsel.sv(144)
+                                                                                50 Covered   
+/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/async_reset_8013/cdc_sync_tx_stable_check/cdc_sync_tx_stable_cover/cover_stable 
+                                         assert_cdc_sync Verilog  SVA  /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/share/CDC_PROTOCOL/cdc_protocol_sync.sv(83)
+                                                                                25 Covered   
+/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_63806/cdc_sync_tx_stable_check/cdc_sync_tx_stable_cover/cover_stable 
+                                         assert_cdc_sync Verilog  SVA  /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/share/CDC_PROTOCOL/cdc_protocol_sync.sv(83)
+                                                                               100 Covered   
+/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_74335/cdc_sync_tx_stable_check/cdc_sync_tx_stable_cover/cover_stable 
+                                         assert_cdc_sync Verilog  SVA  /sw/rhel8/siemens/questa_static_2024.3_2/questa_static_formal/linux_x86_64/share/CDC_PROTOCOL/cdc_protocol_sync.sv(83)
+                                                                                14 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_reset_sync_01 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(112)
+                                                                                10 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_reset_sync_10 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(122)
+                                                                                10 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_play_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(133)
+                                                                              2391 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(143)
+                                                                                50 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_req_out_pulse 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(154)
+                                                                                50 Covered   
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cf_audio_sync 
+                                         cdc_unit_svamod Verilog  SVA  input/cdc_unit_svamod.sv(166)
+                                                                                50 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 11
+
+Total Coverage By Instance (filtered view): 100.00%
+

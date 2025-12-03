@@ -1,0 +1,160 @@
+====================================================================================================
+Lint Check Report
+Questa Lint  Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+
+Timestamp            : Wed Feb 12 22:33:33 2025
+Description          : Report for referring checks count, check violations details, and  design information
+Design               : control_unit
+Database             : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/control_unit_qlint_run_log/lint.db
+Design Quality Score : 99.7%
+
+Sections:
+   Section 1 : Check Summary
+   Section 2 : Check Details
+   Section 3 : Design Information
+====================================================================================================
+
+
+====================================================================================================
+Section 1 : Check Summary
+====================================================================================================
+-------------
+| Error (0) |
+-------------
+
+---------------
+| Warning (8) |
+---------------
+  concurrent_block_with_duplicate_assign  : 6
+  seq_block_has_complex_cond              : 1
+  seq_block_has_duplicate_assign          : 1
+
+-------------
+| Info (17) |
+-------------
+  combo_path_input_to_output              : 4
+  const_output                            : 2
+  line_char_large                         : 4
+  module_output_not_registered            : 7
+
+----------------
+| Resolved (0) |
+----------------
+
+
+====================================================================================================
+Section 2 : Check Details
+====================================================================================================
+-------------
+| Error (0) |
+-------------
+
+
+---------------
+| Warning (8) |
+---------------
+
+Check: concurrent_block_with_duplicate_assign [Category: Rtl Design Style] (6)
+       [Message: Signal is assigned in multiple concurrent statements. Signal '<signal>', Module '<module>', File '<file>', Total Assigns Count '<count>', First Assign at Line '<line1>', Second Assign at Line '<line2>'.]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+concurrent_block_with_duplicate_assign: [uninspected] Signal is assigned in multiple concurrent statements. Signal 'lhead_ns', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Total Assigns Count '2', First Assign at Line '201', Second Assign at Line '231'. [Example Hierarchy:control_unit]
+
+concurrent_block_with_duplicate_assign: [uninspected] Signal is assigned in multiple concurrent statements. Signal 'llooped_ns', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Total Assigns Count '4', First Assign at Line '204', Second Assign at Line '214'. [Example Hierarchy:control_unit]
+
+concurrent_block_with_duplicate_assign: [uninspected] Signal is assigned in multiple concurrent statements. Signal 'ltail_ns', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Total Assigns Count '3', First Assign at Line '211', Second Assign at Line '221'. [Example Hierarchy:control_unit]
+
+concurrent_block_with_duplicate_assign: [uninspected] Signal is assigned in multiple concurrent statements. Signal 'rhead_ns', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Total Assigns Count '2', First Assign at Line '308', Second Assign at Line '338'. [Example Hierarchy:control_unit]
+
+concurrent_block_with_duplicate_assign: [uninspected] Signal is assigned in multiple concurrent statements. Signal 'rlooped_ns', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Total Assigns Count '4', First Assign at Line '311', Second Assign at Line '321'. [Example Hierarchy:control_unit]
+
+concurrent_block_with_duplicate_assign: [uninspected] Signal is assigned in multiple concurrent statements. Signal 'rtail_ns', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Total Assigns Count '3', First Assign at Line '318', Second Assign at Line '328'. [Example Hierarchy:control_unit]
+
+
+Check: seq_block_has_complex_cond [Category: Reset] (1)
+       [Message: Sequential block has complex condition. Condition '<condition>', Module '<module>', File '<file>', Condition at line '<line>', Block at line '<line1>'.]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+seq_block_has_complex_cond: [uninspected] Sequential block has complex condition. Condition '!stop && !irqack && play_r && lempty && rempty', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Condition at line '380', Block at line '373'. [Example Hierarchy:control_unit]
+
+
+Check: seq_block_has_duplicate_assign [Category: Rtl Design Style] (1)
+       [Message: Signal is assigned more than once in a sequential block. Signal '<signal>', Module '<module>', File '<file>', Total Assigns Count '<count>', First Assign at Line '<line1>', Second Assign at Line '<line2>'.]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+seq_block_has_duplicate_assign: [uninspected] Signal is assigned more than once in a sequential block. Signal 'rbank_r[1][0]', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Total Assigns Count '2', First Assign at Line '150', Second Assign at Line '153'. [Example Hierarchy:control_unit]
+
+
+
+-------------
+| Info (17) |
+-------------
+
+Check: combo_path_input_to_output [Category: Connectivity] (4)
+       [Message: Top level input to output has pure combinational path. Input port(s) '<input>', Output port '<output>', Module '<module>', File '<file>', Line '<line>']
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+combo_path_input_to_output: [uninspected] Top level input to output has pure combinational path. Input port(s) 'PADDR and PSEL', Output port 'PRDATA', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '15' [Example Hierarchy:control_unit]
+
+combo_path_input_to_output: [uninspected] Top level input to output has pure combinational path. Input port(s) 'PADDR, PENABLE, PSEL, PWDATA and PWRITE', Output port 'cfg_out', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '22' [Example Hierarchy:control_unit]
+
+combo_path_input_to_output: [uninspected] Top level input to output has pure combinational path. Input port(s) 'PADDR, PENABLE, PSEL, PWDATA and PWRITE', Output port 'clr_out', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '23' [Example Hierarchy:control_unit]
+
+combo_path_input_to_output: [uninspected] Top level input to output has pure combinational path. Input port(s) 'PADDR, PENABLE, PSEL, PWDATA and PWRITE', Output port 'level_out', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '24' [Example Hierarchy:control_unit]
+
+
+Check: const_output [Category: Connectivity] (2)
+       [Message: Constant value drives output port. Output '<output>', Module '<module>', File '<file>', Line '<line>' .]
+--------------------------------------------------------------------------------------------------------------------------
+const_output: [uninspected] Constant value drives output port. Output 'PREADY', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '110' . [Example Hierarchy:control_unit]
+
+const_output: [uninspected] Constant value drives output port. Output 'PSLVERR', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '111' . [Example Hierarchy:control_unit]
+
+
+Check: line_char_large [Category: Rtl Design Style] (4)
+       [Message: Line has more characters than the specified limit. Current count '<count>', Specified Limit '<limit>', Tab equivalent spacing '<tab_size>', File '<file>', Line '<line>'.]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+line_char_large: [uninspected] Line has more characters than the specified limit. Current count '111', Specified Limit '110', Tab equivalent spacing '2', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport_pkg.sv', Line '112'. [RTL ID:388d64bb_00300]
+
+line_char_large: [uninspected] Line has more characters than the specified limit. Current count '112', Specified Limit '110', Tab equivalent spacing '2', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport_pkg.sv', Line '113'. [RTL ID:ee9147a2_00300]
+
+line_char_large: [uninspected] Line has more characters than the specified limit. Current count '111', Specified Limit '110', Tab equivalent spacing '2', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport_pkg.sv', Line '114'. [RTL ID:7c4727f6_00300]
+
+line_char_large: [uninspected] Line has more characters than the specified limit. Current count '111', Specified Limit '110', Tab equivalent spacing '2', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport_pkg.sv', Line '117'. [RTL ID:fec5e4ae_00300]
+
+
+Check: module_output_not_registered [Category: Connectivity] (7)
+       [Message: Module output port is not registered. Port '<port>', Module '<module>', File '<file>', Line '<line>'.]
+------------------------------------------------------------------------------------------------------------------------
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'PRDATA', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '15'. [Example Hierarchy:control_unit]
+
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'cfg_out', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '22'. [Example Hierarchy:control_unit]
+
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'clr_out', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '23'. [Example Hierarchy:control_unit]
+
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'level_out', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '24'. [Example Hierarchy:control_unit]
+
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'tick_out', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '25'. [Example Hierarchy:control_unit]
+
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'audio0_out', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '26'. [Example Hierarchy:control_unit]
+
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'audio1_out', Module 'control_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv', Line '27'. [Example Hierarchy:control_unit]
+
+
+
+----------------
+| Resolved (0) |
+----------------
+
+
+
+====================================================================================================
+Section 3 : Design Information
+====================================================================================================
+-----------
+| Summary |
+-----------
+  Register Bits                           : 7133
+  Latch Bits                              : 0
+  User-specified Blackboxes               : 0
+  Inferred Blackboxes                     : 0
+  Empty Modules                           : 0
+  Unresolved Modules                      : 0
+  Hierarchical IPs                        : 0
+

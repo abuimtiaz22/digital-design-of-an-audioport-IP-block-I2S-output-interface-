@@ -1,0 +1,25 @@
+**************************************************
+Report         : status
+
+Reference      : r:/WORK/audioport
+Implementation : i:/WORK/audioport
+Version        : U-2022.12
+Date           : Sun May  4 14:17:48 2025
+**************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+----------------------
+ Reference design: r:/WORK/audioport
+ Implementation design: i:/WORK/audioport
+ 15179 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0      38   15141       0   15179
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Clock-gate LAT                                                             329     329
+****************************************************************************************
+1

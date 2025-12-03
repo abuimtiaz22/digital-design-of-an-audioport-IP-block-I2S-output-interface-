@@ -1,0 +1,211 @@
+# //  Questa Sim-64
+# //  Version 2024.3_2 linux_x86_64 Nov 25 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do scripts/vsim_rtlsim.tcl
+# 1742549918
+# Script start time: 11:38:38
+# 0
+# 1
+# 1
+# -all
+# QuestaSim
+# 0
+# 1
+# output/cdc_unit_rtl.dbg
+# output/cdc_unit_rtl.bin
+# output/cdc_unit_rtl.db
+# cdc_unit_rtl_vopt
+# output/cdc_unit_questasim_work
+#  -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_cdc_unit +define+DESIGN_NAME_MACRO=cdc_unit  +incdir+input  -sv -work work
+#  -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+#  -suppress 10587 -suppress 13408 +acc +cover=bcxefs -coverfec -debugdb -noincr -designfile output/cdc_unit_rtl.bin
+#  -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/cdc_unit_rtl.dbg
+# -suppress 13314 -suppress 13233 +define+RTL_SIM -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_cdc_unit +define+DESIGN_NAME_MACRO=cdc_unit  +incdir+input  -sv -work work
+# -2008 -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+# -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/cdc_unit_rtl.dbg
+# 1
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:38:38 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/apb_pkg.sv 
+# -- Compiling package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 11:38:39 on Mar 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:38:39 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/audioport_pkg.sv 
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 11:38:39 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:38:39 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/audioport_util_pkg.sv 
+# -- Compiling package audioport_util_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 11:38:39 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:38:39 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/cdc_unit.sv 
+# -- Compiling package cdc_unit_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module cdc_unit
+# 
+# Top level modules:
+# 	cdc_unit
+# End time: 11:38:39 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:38:39 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/cdc_unit_svamod.sv 
+# -- Compiling package cdc_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module cdc_unit_svamod
+# 
+# Top level modules:
+# 	cdc_unit_svamod
+# End time: 11:38:40 on Mar 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:38:40 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/cdc_unit_test.sv 
+# -- Compiling package cdc_unit_test_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling program cdc_unit_test
+# 
+# Top level modules:
+# 	cdc_unit_test
+# End time: 11:38:40 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:38:40 on Mar 21,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/cdc_unit_tb.sv 
+# -- Compiling package cdc_unit_tb_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module cdc_unit_tb
+# 
+# Top level modules:
+# 	cdc_unit_tb
+# End time: 11:38:40 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:38:40 on Mar 21,2025
+# vopt -reportprogress 300 -suppress 10587 -suppress 13408 "+acc" "+cover=bcxefs" -coverfec -debugdb -noincr -designfile output/cdc_unit_rtl.bin work.cdc_unit_tb -o cdc_unit_rtl_vopt 
+# 
+# Top level modules:
+# 	cdc_unit_tb
+# 
+# Analyzing design...
+# -- Loading module cdc_unit_tb
+# -- Loading module cdc_unit
+# -- Loading program cdc_unit_test
+# -- Loading module cdc_unit_svamod
+# Optimizing 11 design-units (inlining 0/4 module instances):
+# -- Optimizing package apb_pkg(fast)
+# -- Optimizing package audioport_pkg(fast)
+# -- Optimizing package audioport_util_pkg(fast)
+# -- Optimizing package cdc_unit_tb_sv_unit(fast)
+# -- Optimizing package cdc_unit_sv_unit(fast)
+# -- Optimizing package cdc_unit_test_sv_unit(fast)
+# -- Optimizing package cdc_unit_svamod_sv_unit(fast)
+# -- Optimizing module cdc_unit_svamod(fast)
+# -- Processing module cdc_unit_svamod(fast) for debug
+# -- Optimizing program cdc_unit_test(fast)
+# -- Optimizing module cdc_unit(fast)
+# -- Processing module cdc_unit(fast) for debug
+# -- Optimizing module cdc_unit_tb(fast)
+# -- Processing module cdc_unit_tb(fast) for debug
+# viscom:
+# VISCOM: Start time: 11:38:41 on Mar 21,2025
+# 
+# VISCOM: QuestaSim /sw/rhel8/siemens/questa_sim-2024.3_2/questasim/linux_x86_64/VisualizerRls/bin/viscom 2024.3_2 at 2024.11 Nov 25 2024
+# VISCOM: Writing output/cdc_unit_rtl.bin
+# VISCOM: Done writing output/cdc_unit_rtl.bin
+# VISCOM: End time: 11:38:41 on Mar 21,2025, Elapsed time: 0:00:00 (Process Size : 316MB, Peak Process Size : 317MB)
+# 
+# 
+# Optimized design name is cdc_unit_rtl_vopt
+# End time: 11:38:41 on Mar 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0, Suppressed Warnings: 1
+# vsim cdc_unit_rtl_vopt -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/cdc_unit_rtl.dbg 
+# Start time: 11:38:41 on Mar 21,2025
+# Loading sv_std.std
+# Loading work.apb_pkg(fast)
+# Loading work.audioport_pkg(fast)
+# Loading work.audioport_util_pkg(fast)
+# Loading work.cdc_unit_tb_sv_unit(fast)
+# Loading work.cdc_unit_tb(fast)
+# Loading work.cdc_unit_sv_unit(fast)
+# Loading work.cdc_unit(fast)
+# Loading work.cdc_unit_svamod_sv_unit(fast)
+# Loading work.cdc_unit_svamod(fast)
+# Loading work.cdc_unit_test_sv_unit(fast)
+# Loading work.cdc_unit_test(fast)
+# ** Note: (vsim-8900) Creating design debug database output/cdc_unit_rtl.dbg.
+# 1
+# sim_coverage
+# ** Info: T1: testmux_test
+#    Time: 163944 ps  Scope: cdc_unit_tb.TEST.testmux_test File: input/cdc_unit_test_tasks.svh Line: 2
+# ** Info: T2: reset_sync_test
+#    Time: 767174 ps  Scope: cdc_unit_tb.TEST.reset_sync_test File: input/cdc_unit_test_tasks.svh Line: 58
+# ** Info: T3: play_sync_test
+#    Time: 4043104 ps  Scope: cdc_unit_tb.TEST.play_sync_test File: input/cdc_unit_test_tasks.svh Line: 132
+# ** Info: T4: pulse_sync_test
+#    Time: 5272367 ps  Scope: cdc_unit_tb.TEST.pulse_sync_test File: input/cdc_unit_test_tasks.svh Line: 202
+# ** Info: T5: audio_sync_test
+#    Time: 10824855 ps  Scope: cdc_unit_tb.TEST.audio_sync_test File: input/cdc_unit_test_tasks.svh Line: 267
+#####################################################################################################
+# cdc_unit_test results: PASSED:           5 / FAILED:           0
+#####################################################################################################
+#  
+# ------------------------------------
+# Crossing   |        Latency 
+#            |        ns  clk mclk
+# ------------------------------------
+# reset_sync |    80.580    7    2
+# play_sync  |   106.643    9    2
+# req_sync   |    25.764    2    1
+# audio_sync |   173.913   14    4
+# -----------------------------------
+# ** Note: $finish    : input/cdc_unit_test.sv(176)
+#    Time: 35164186 ps  Iteration: 1  Instance: /cdc_unit_tb/TEST
+# 1
+# Break in Module cdc_unit_test at input/cdc_unit_test.sv line 176
+# ** Note: (vsim-19063) Please note that '-recursive' option's functionality is changed. For more information, please refer 
+# to the reference manual.
+# ** Note: (vsim-17388) No matching coverage data found.
+# file22
+# 1742549931
+# Script end time: 11:38:51
+# .main_pane.msgviewer.interior.cs.body.tree
+# Saving coverage database on exit...
+# End time: 11:39:33 on Mar 21,2025, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 0

@@ -1,0 +1,1655 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /audioport_tb/apb
+=== Design Unit: work.apb_if
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      10        10         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/audioport_tb/apb/psel_valid
+                     input/apb_if.sv(203)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/penable_valid
+                     input/apb_if.sv(204)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/pwrite_valid
+                     input/apb_if.sv(205)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/paddr_valid
+                     input/apb_if.sv(206)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/pwdata_valid
+                     input/apb_if.sv(207)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/pready_valid
+                     input/apb_if.sv(208)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/pslverr_valid
+                     input/apb_if.sv(209)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/psel_to_penable_ok
+                     input/apb_if.sv(216)               0        160      13797         21      13978          0           1 off
+/audioport_tb/apb/max_wait_states_ok
+                     input/apb_if.sv(224)               0        160      13797         21      13978          0           1 off
+/audioport_tb/apb/penable_deassert_ok
+                     input/apb_if.sv(231)               0        705      13252         21      13978          0           1 off
+
+=================================================================================
+=== Instance: /audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE
+=== Design Unit: work.control_unit_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                     143       132        11    92.30%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PSEL
+                     input/control_unit_svamod.sv(78)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PENABLE
+                     input/control_unit_svamod.sv(79)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PWRITE
+                     input/control_unit_svamod.sv(80)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PADDR
+                     input/control_unit_svamod.sv(81)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PWDATA
+                     input/control_unit_svamod.sv(82)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_req_in
+                     input/control_unit_svamod.sv(83)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PRDATA
+                     input/control_unit_svamod.sv(84)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PSLVERR
+                     input/control_unit_svamod.sv(85)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PREADY
+                     input/control_unit_svamod.sv(86)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_irq_out
+                     input/control_unit_svamod.sv(87)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_cfg_reg_out
+                     input/control_unit_svamod.sv(88)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_level_reg_out
+                     input/control_unit_svamod.sv(89)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_dsp_regs_out
+                     input/control_unit_svamod.sv(90)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_cfg_out
+                     input/control_unit_svamod.sv(91)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_clr_out
+                     input/control_unit_svamod.sv(92)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_level_out
+                     input/control_unit_svamod.sv(93)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_tick_out
+                     input/control_unit_svamod.sv(94)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_audio0_out
+                     input/control_unit_svamod.sv(95)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_audio1_out
+                     input/control_unit_svamod.sv(96)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_play_out
+                     input/control_unit_svamod.sv(97)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rindex
+                     input/control_unit_svamod.sv(99)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_apbwrite
+                     input/control_unit_svamod.sv(100)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_apbread
+                     input/control_unit_svamod.sv(101)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rbank_r
+                     input/control_unit_svamod.sv(102)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_start
+                     input/control_unit_svamod.sv(103)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_stop
+                     input/control_unit_svamod.sv(104)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_clr
+                     input/control_unit_svamod.sv(105)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_irqack
+                     input/control_unit_svamod.sv(106)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_req_r
+                     input/control_unit_svamod.sv(107)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_play_r
+                     input/control_unit_svamod.sv(108)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_irq_r
+                     input/control_unit_svamod.sv(109)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_ldata_r
+                     input/control_unit_svamod.sv(110)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_lhead_r
+                     input/control_unit_svamod.sv(111)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_ltail_r
+                     input/control_unit_svamod.sv(112)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_llooped_r
+                     input/control_unit_svamod.sv(113)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_lempty
+                     input/control_unit_svamod.sv(114)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_lfull
+                     input/control_unit_svamod.sv(115)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_lfifo
+                     input/control_unit_svamod.sv(116)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rdata_r
+                     input/control_unit_svamod.sv(117)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rhead_r
+                     input/control_unit_svamod.sv(118)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rtail_r
+                     input/control_unit_svamod.sv(119)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rlooped_r
+                     input/control_unit_svamod.sv(120)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rempty
+                     input/control_unit_svamod.sv(121)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rfull
+                     input/control_unit_svamod.sv(122)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rfifo
+                     input/control_unit_svamod.sv(123)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_reset
+                     input/apb_assumes.svh(10)          0         42      27914          0      27956          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_psel_1
+                     input/apb_assumes.svh(22)          0        320      13637         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_psel_0
+                     input/apb_assumes.svh(35)          0      13637        320         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_psel_before_penable
+                     input/apb_assumes.svh(47)          0        160      13797         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_penable_fall
+                     input/apb_assumes.svh(58)          0        705      13252         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_penable_hold
+                     input/apb_assumes.svh(69)          0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_bus_hold
+                     input/apb_assumes.svh(80)          0        160      13797         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_apb_access
+                     input/apb_assumes.svh(101)
+                                                        0        160      13797         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_paddr_align
+                     input/apb_assumes.svh(112)
+                                                        0        320      13637         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_req_in_pulse
+                     input/control_unit_svamod.sv(144)
+                                                        0          9      13948         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_req_in_first
+                     input/control_unit_svamod.sv(158)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_pready_on
+                     input/control_unit_svamod.sv(168)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_pslverr_off
+                     input/control_unit_svamod.sv(178)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_prdata_off
+                     input/control_unit_svamod.sv(188)
+                                                        0      13637        320         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_clr_out_pulse
+                     input/control_unit_svamod.sv(199)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_clr_out_valid_high
+                     input/control_unit_svamod.sv(209)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_cfg_out_pulse
+                     input/control_unit_svamod.sv(220)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_cfg_out_valid_high
+                     input/control_unit_svamod.sv(232)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_start_play
+                     input/control_unit_svamod.sv(242)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_valid_start_play
+                     input/control_unit_svamod.sv(252)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_stop_play
+                     input/control_unit_svamod.sv(262)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_valid_stop_play
+                     input/control_unit_svamod.sv(272)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_level_out_pulse
+                     input/control_unit_svamod.sv(282)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_level_out_valid_high
+                     input/control_unit_svamod.sv(292)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_tick_standby
+                     input/control_unit_svamod.sv(302)
+                                                        0       1525      12432         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_tick_out_high
+                     input/control_unit_svamod.sv(312)
+                                                        0          8      13949         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_tick_out_low
+                     input/control_unit_svamod.sv(322)
+                                                        0      13949          8         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_fifo_drain
+                     input/control_unit_svamod.sv(334)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_irq_out_rise_first
+                     input/control_unit_svamod.sv(350)
+                                                        0          0      13957         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_irq_out_high
+                     input/control_unit_svamod.sv(362)
+                                                        0       1660      12297         21      13978          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_irq_out_standby
+                     input/control_unit_svamod.sv(372)
+                                                        0       1525      12432         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_irq_out_down
+                     input/control_unit_svamod.sv(382)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_cfg_reg_drv
+                     input/control_unit_svamod.sv(392)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_level_reg_drv
+                     input/control_unit_svamod.sv(402)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_dsp_regs_drv
+                     input/control_unit_svamod.sv(419)
+                                                        0        133      13824         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_pslverr
+                     input/control_unit_wba.svh(8)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_pready
+                     input/control_unit_wba.svh(18)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_rindex_on
+                     input/control_unit_wba.svh(28)
+                                                        0        320      13637         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_rindex_off
+                     input/control_unit_wba.svh(38)
+                                                        0      13637        320         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_index_range
+                     input/control_unit_wba.svh(48)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_rbank_r_write
+                     input/control_unit_wba.svh(58)
+                                                        0        145      13812         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_status_reg_play
+                     input/control_unit_wba.svh(68)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_status_reg_standby
+                     input/control_unit_wba.svh(78)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_rbank_r_stable
+                     input/control_unit_wba.svh(88)
+                                                        0      13811        145         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_cfg_reg_out
+                     input/control_unit_wba.svh(98)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_level_reg_out
+                     input/control_unit_wba.svh(108)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_dsp_regs_out
+                     input/control_unit_wba.svh(118)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ldata_r_write
+                     input/control_unit_wba.svh(128)
+                                                        0          5      13952         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ldata_r_failed_write
+                     input/control_unit_wba.svh(138)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ldata_r_stable
+                     input/control_unit_wba.svh(148)
+                                                        0      13950          6         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lhead_r_inc
+                     input/control_unit_wba.svh(158)
+                                                        0          5      13952         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lhead_r_loop
+                     input/control_unit_wba.svh(168)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lhead_r_stable
+                     input/control_unit_wba.svh(178)
+                                                        0      13950          6         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_llooped_r_on
+                     input/control_unit_wba.svh(188)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_llooped_r_off_1
+                     input/control_unit_wba.svh(198)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_llooped_r_off_2
+                     input/control_unit_wba.svh(208)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_llooped_r_stable
+                     input/control_unit_wba.svh(218)
+                                                        0      13946         10         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ltail_r_inc_1
+                     input/control_unit_wba.svh(228)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ltail_r_inc_2
+                     input/control_unit_wba.svh(238)
+                                                        0          4      13953         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ltail_r_loop_1
+                     input/control_unit_wba.svh(248)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ltail_r_loop_2
+                     input/control_unit_wba.svh(258)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ltail_r_stable
+                     input/control_unit_wba.svh(269)
+                                                        0      13951          5         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lempty_on
+                     input/control_unit_wba.svh(279)
+                                                        0       7909       6048         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lempty_of
+                     input/control_unit_wba.svh(289)
+                                                        0       6048       7909         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lfull_on
+                     input/control_unit_wba.svh(299)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lfull_off
+                     input/control_unit_wba.svh(309)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lfifo_output_on
+                     input/control_unit_wba.svh(319)
+                                                        0       6048       7909         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lfifo_output_off
+                     input/control_unit_wba.svh(329)
+                                                        0       7909       6048         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_prdata_rbank
+                     input/control_unit_wba.svh(339)
+                                                        0        290      13667         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_prdata_lfifo
+                     input/control_unit_wba.svh(349)
+                                                        0         10      13947         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_prdata_rfifo
+                     input/control_unit_wba.svh(359)
+                                                        0         20      13937         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_prdata_off
+                     input/control_unit_wba.svh(369)
+                                                        0      13637        320         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_play_r_rise
+                     input/control_unit_wba.svh(379)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_play_r_fall
+                     input/control_unit_wba.svh(389)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_play_r_stable
+                     input/control_unit_wba.svh(399)
+                                                        0      13954          2         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_play_out_state
+                     input/control_unit_wba.svh(409)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_clr_on
+                     input/control_unit_wba.svh(419)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_clr_off
+                     input/control_unit_wba.svh(429)
+                                                        0      13956          1         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_clr_out
+                     input/control_unit_wba.svh(439)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_cfg_out_on
+                     input/control_unit_wba.svh(449)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_cfg_out_off
+                     input/control_unit_wba.svh(459)
+                                                        0      13956          1         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_start_on
+                     input/control_unit_wba.svh(469)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_start_off
+                     input/control_unit_wba.svh(479)
+                                                        0      13956          1         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_stop_on
+                     input/control_unit_wba.svh(489)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_stop_off
+                     input/control_unit_wba.svh(499)
+                                                        0      13956          1         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_level_out_on
+                     input/control_unit_wba.svh(509)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_level_out_off
+                     input/control_unit_wba.svh(519)
+                                                        0      13956          1         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irqack_on
+                     input/control_unit_wba.svh(529)
+                                                        0          4      13953         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irqack_off
+                     input/control_unit_wba.svh(539)
+                                                        0      13953          4         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_tick_out_on
+                     input/control_unit_wba.svh(549)
+                                                        0       1525      12432         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_tick_out_of
+                     input/control_unit_wba.svh(559)
+                                                        0      12432       1525         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_req_r_on
+                     input/control_unit_wba.svh(569)
+                                                        0      12432       1525         21      13978          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_req_r_off
+                     input/control_unit_wba.svh(579)
+                                                        0       1524      12432         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irq_r_rise
+                     input/control_unit_wba.svh(589)
+                                                        0        324      13633         21      13978          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irq_r_fall_stop
+                     input/control_unit_wba.svh(599)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irq_r_fall_irqack
+                     input/control_unit_wba.svh(609)
+                                                        0          4      13953         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irq_r_stable
+                     input/control_unit_wba.svh(619)
+                                                        0      13627        329         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irq_out
+                     input/control_unit_wba.svh(629)
+                                                        0      13957          0         21      13978          0           1 off
+
+=================================================================================
+=== Instance: /audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE
+=== Design Unit: work.dsp_unit_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      14        14         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_tick_in
+                     input/dsp_unit_svamod.sv(40)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_cfg_in
+                     input/dsp_unit_svamod.sv(41)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_level_in
+                     input/dsp_unit_svamod.sv(42)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_clr_in
+                     input/dsp_unit_svamod.sv(43)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_audio0_in
+                     input/dsp_unit_svamod.sv(44)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_audio1_in
+                     input/dsp_unit_svamod.sv(45)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_dsp_regs_in
+                     input/dsp_unit_svamod.sv(46)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_level_reg_in
+                     input/dsp_unit_svamod.sv(47)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_cfg_reg_in
+                     input/dsp_unit_svamod.sv(48)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_audio0_out
+                     input/dsp_unit_svamod.sv(49)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_audio1_out
+                     input/dsp_unit_svamod.sv(50)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_tick_out
+                     input/dsp_unit_svamod.sv(51)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/af_tick_out_pulse
+                     input/dsp_unit_svamod.sv(125)
+                                                        0          9      13948         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/af_max_latency
+                     input/dsp_unit_svamod.sv(135)
+                                                        0          8      13949         21      13978          0           1 off
+
+=================================================================================
+=== Instance: /audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE
+=== Design Unit: work.cdc_unit_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      21        21         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_test_mode_in
+                     input/cdc_unit_svamod.sv(47)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_audio0_in
+                     input/cdc_unit_svamod.sv(48)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_audio1_in
+                     input/cdc_unit_svamod.sv(49)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_tick_in
+                     input/cdc_unit_svamod.sv(50)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_play_in
+                     input/cdc_unit_svamod.sv(51)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_req_in
+                     input/cdc_unit_svamod.sv(52)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_audio0_out
+                     input/cdc_unit_svamod.sv(53)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_audio1_out
+                     input/cdc_unit_svamod.sv(54)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_tick_out
+                     input/cdc_unit_svamod.sv(55)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_play_out
+                     input/cdc_unit_svamod.sv(56)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_req_out
+                     input/cdc_unit_svamod.sv(57)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/mf_tick_pulse
+                     input/cdc_unit_svamod.sv(70)
+                                                        0          9      13948         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/mf_tick_interval
+                     input/cdc_unit_svamod.sv(80)
+                                                        0          9      13948         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/mf_play_length
+                     input/cdc_unit_svamod.sv(90)
+                                                        0          2      13955         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/mf_req_pulse
+                     input/cdc_unit_svamod.sv(99)
+                                                        0          9       3333          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/af_reset_sync_01
+                     input/cdc_unit_svamod.sv(111)
+                                                        0          1       3348          0       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/af_reset_sync_10
+                     input/cdc_unit_svamod.sv(121)
+                                                        0          1      13977          0      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/af_play_sync
+                     input/cdc_unit_svamod.sv(132)
+                                                        0      13946          0         29      13975          0           9 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/af_req_sync
+                     input/cdc_unit_svamod.sv(142)
+                                                        0          9      13948         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/af_req_out_pulse
+                     input/cdc_unit_svamod.sv(153)
+                                                        0          9      13948         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/af_audio_sync
+                     input/cdc_unit_svamod.sv(165)
+                                                        0          9      13940         29      13978          0           1 off
+
+=================================================================================
+=== Instance: /audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE
+=== Design Unit: work.i2s_unit_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      31        31         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_play_in
+                     input/i2s_unit_svamod.sv(49)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_audio0_in
+                     input/i2s_unit_svamod.sv(50)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_audio1_in
+                     input/i2s_unit_svamod.sv(51)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_tick_in
+                     input/i2s_unit_svamod.sv(52)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_req_out
+                     input/i2s_unit_svamod.sv(53)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_sck_out
+                     input/i2s_unit_svamod.sv(54)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_ws_out
+                     input/i2s_unit_svamod.sv(55)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_sdo_out
+                     input/i2s_unit_svamod.sv(56)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_counter
+                     input/i2s_unit_svamod.sv(59)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_play_r
+                     input/i2s_unit_svamod.sv(60)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_input_reg
+                     input/i2s_unit_svamod.sv(61)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_shift_reg
+                     input/i2s_unit_svamod.sv(62)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_load_enable
+                     input/i2s_unit_svamod.sv(63)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_shift_enable
+                     input/i2s_unit_svamod.sv(64)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_sck_out_logic
+                     input/i2s_unit_svamod.sv(65)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_ws_out_logic
+                     input/i2s_unit_svamod.sv(66)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_end_s
+                     input/i2s_unit_svamod.sv(67)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_req_out_pulse
+                     input/i2s_unit_svamod.sv(117)
+                                                        0          9       3333          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_sck_start
+                     input/i2s_unit_svamod.sv(129)
+                                                        0          1       3341          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_req_sck_align
+                     input/i2s_unit_svamod.sv(139)
+                                                        0          9       3333          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_req_out_seen
+                     input/i2s_unit_svamod.sv(149)
+                                                        0          8       3334          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_ws_change
+                     input/i2s_unit_svamod.sv(161)
+                                                        0         16       3326          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_ws_wave
+                     input/i2s_unit_svamod.sv(171)
+                                                        0        217       3032          7       3256          0         370 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_sdo_change
+                     input/i2s_unit_svamod.sv(181)
+                                                        0         28       3314          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_sck_wave
+                     input/i2s_unit_svamod.sv(191)
+                                                        0        385       2957          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_sck_last
+                     input/i2s_unit_svamod.sv(201)
+                                                        0          8       3334          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_shift_reg_behavior
+                     input/i2s_unit_svamod.sv(216)
+                                                        0        376       2966          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_shift_reg_reset
+                     input/i2s_unit_svamod.sv(225)
+                                                        0        260       3080          7       3347          0           3 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_play_r_control
+                     input/i2s_unit_svamod.sv(233)
+                                                        0       2979        363          7       3349          0           2 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_counter_reset_at_383
+                     input/i2s_unit_svamod.sv(242)
+                                                        0          8       3334          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_ws_out_mid_behavior
+                     input/i2s_unit_svamod.sv(251)
+                                                        0       1536       1806          7       3349          0           1 off
+
+=================================================================================
+=== Instance: /audioport_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.audioport_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      48        46         2    95.83%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PSEL
+                     input/audioport_svamod.sv(78)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PENABLE
+                     input/audioport_svamod.sv(79)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PWRITE
+                     input/audioport_svamod.sv(80)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PADDR
+                     input/audioport_svamod.sv(81)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PWDATA
+                     input/audioport_svamod.sv(82)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PRDATA
+                     input/audioport_svamod.sv(83)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PREADY
+                     input/audioport_svamod.sv(84)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PSLVERR
+                     input/audioport_svamod.sv(85)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_irq_out
+                     input/audioport_svamod.sv(86)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_test_mode_in
+                     input/audioport_svamod.sv(87)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_scan_en_in
+                     input/audioport_svamod.sv(88)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_sck_out
+                     input/audioport_svamod.sv(90)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_ws_out
+                     input/audioport_svamod.sv(91)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_sdo_out
+                     input/audioport_svamod.sv(92)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick
+                     input/audioport_svamod.sv(93)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_play
+                     input/audioport_svamod.sv(94)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_req
+                     input/audioport_svamod.sv(95)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_cfg
+                     input/audioport_svamod.sv(96)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_level
+                     input/audioport_svamod.sv(97)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_clr
+                     input/audioport_svamod.sv(98)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0
+                     input/audioport_svamod.sv(99)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1
+                     input/audioport_svamod.sv(100)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_daudio0
+                     input/audioport_svamod.sv(101)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_daudio1
+                     input/audioport_svamod.sv(102)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_dtick
+                     input/audioport_svamod.sv(103)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_cfg_reg
+                     input/audioport_svamod.sv(104)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_level_reg
+                     input/audioport_svamod.sv(105)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_dsp_regs
+                     input/audioport_svamod.sv(106)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_mtick
+                     input/audioport_svamod.sv(107)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_mplay
+                     input/audioport_svamod.sv(108)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_mreq
+                     input/audioport_svamod.sv(109)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_maudio0
+                     input/audioport_svamod.sv(110)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_maudio1
+                     input/audioport_svamod.sv(111)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_reset
+                     input/apb_assumes.svh(10)          0         42      27914          0      27956          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_1
+                     input/apb_assumes.svh(22)          0        320      13637         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_0
+                     input/apb_assumes.svh(35)          0      13637        320         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_before_penable
+                     input/apb_assumes.svh(47)          0        160      13797         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_penable_fall
+                     input/apb_assumes.svh(58)          0        705      13252         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_penable_hold
+                     input/apb_assumes.svh(69)          0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_bus_hold
+                     input/apb_assumes.svh(80)          0        160      13797         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_apb_access
+                     input/apb_assumes.svh(101)
+                                                        0        160      13797         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_paddr_align
+                     input/apb_assumes.svh(112)
+                                                        0        320      13637         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_start_stop_interval
+                     input/audioport_svamod.sv(126)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_clear_rule
+                     input/audioport_svamod.sv(135)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_rise
+                     input/audioport_svamod.sv(144)
+                                                        0          0      13957         21      13978          0           8 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/af_enter_play_mode
+                     input/audioport_svamod.sv(153)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/af_enter_standby_mode
+                     input/audioport_svamod.sv(162)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/ar_data_roundtrip
+                     input/audioport_svamod.sv(179)
+                                                        0          6       3336          7       3349          0           2 off
+
+=================================================================================
+=== Instance: /audioport_uvm_tests_pkg
+=== Design Unit: work.audioport_uvm_tests_pkg
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       1         1         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/audioport_uvm_tests_pkg/control_unit_uvm_test/run_phase/ia_control_unit_uvm_test
+                     input/uvm/control_unit_uvm_test.svh(46)
+                                                        0          1          0          0          1          0           0 off
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/audioport_tb/apb/psel_valid
+                     input/apb_if.sv(203)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/penable_valid
+                     input/apb_if.sv(204)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/pwrite_valid
+                     input/apb_if.sv(205)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/paddr_valid
+                     input/apb_if.sv(206)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/pwdata_valid
+                     input/apb_if.sv(207)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/pready_valid
+                     input/apb_if.sv(208)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/pslverr_valid
+                     input/apb_if.sv(209)               0      13978          0          0      13978          0           1 off
+/audioport_tb/apb/psel_to_penable_ok
+                     input/apb_if.sv(216)               0        160      13797         21      13978          0           1 off
+/audioport_tb/apb/max_wait_states_ok
+                     input/apb_if.sv(224)               0        160      13797         21      13978          0           1 off
+/audioport_tb/apb/penable_deassert_ok
+                     input/apb_if.sv(231)               0        705      13252         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PSEL
+                     input/control_unit_svamod.sv(78)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PENABLE
+                     input/control_unit_svamod.sv(79)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PWRITE
+                     input/control_unit_svamod.sv(80)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PADDR
+                     input/control_unit_svamod.sv(81)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PWDATA
+                     input/control_unit_svamod.sv(82)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_req_in
+                     input/control_unit_svamod.sv(83)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PRDATA
+                     input/control_unit_svamod.sv(84)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PSLVERR
+                     input/control_unit_svamod.sv(85)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_PREADY
+                     input/control_unit_svamod.sv(86)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_irq_out
+                     input/control_unit_svamod.sv(87)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_cfg_reg_out
+                     input/control_unit_svamod.sv(88)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_level_reg_out
+                     input/control_unit_svamod.sv(89)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_dsp_regs_out
+                     input/control_unit_svamod.sv(90)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_cfg_out
+                     input/control_unit_svamod.sv(91)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_clr_out
+                     input/control_unit_svamod.sv(92)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_level_out
+                     input/control_unit_svamod.sv(93)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_tick_out
+                     input/control_unit_svamod.sv(94)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_audio0_out
+                     input/control_unit_svamod.sv(95)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_audio1_out
+                     input/control_unit_svamod.sv(96)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_play_out
+                     input/control_unit_svamod.sv(97)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rindex
+                     input/control_unit_svamod.sv(99)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_apbwrite
+                     input/control_unit_svamod.sv(100)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_apbread
+                     input/control_unit_svamod.sv(101)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rbank_r
+                     input/control_unit_svamod.sv(102)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_start
+                     input/control_unit_svamod.sv(103)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_stop
+                     input/control_unit_svamod.sv(104)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_clr
+                     input/control_unit_svamod.sv(105)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_irqack
+                     input/control_unit_svamod.sv(106)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_req_r
+                     input/control_unit_svamod.sv(107)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_play_r
+                     input/control_unit_svamod.sv(108)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_irq_r
+                     input/control_unit_svamod.sv(109)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_ldata_r
+                     input/control_unit_svamod.sv(110)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_lhead_r
+                     input/control_unit_svamod.sv(111)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_ltail_r
+                     input/control_unit_svamod.sv(112)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_llooped_r
+                     input/control_unit_svamod.sv(113)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_lempty
+                     input/control_unit_svamod.sv(114)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_lfull
+                     input/control_unit_svamod.sv(115)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_lfifo
+                     input/control_unit_svamod.sv(116)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rdata_r
+                     input/control_unit_svamod.sv(117)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rhead_r
+                     input/control_unit_svamod.sv(118)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rtail_r
+                     input/control_unit_svamod.sv(119)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rlooped_r
+                     input/control_unit_svamod.sv(120)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rempty
+                     input/control_unit_svamod.sv(121)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rfull
+                     input/control_unit_svamod.sv(122)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/X_rfifo
+                     input/control_unit_svamod.sv(123)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_reset
+                     input/apb_assumes.svh(10)          0         42      27914          0      27956          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_psel_1
+                     input/apb_assumes.svh(22)          0        320      13637         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_psel_0
+                     input/apb_assumes.svh(35)          0      13637        320         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_psel_before_penable
+                     input/apb_assumes.svh(47)          0        160      13797         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_penable_fall
+                     input/apb_assumes.svh(58)          0        705      13252         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_penable_hold
+                     input/apb_assumes.svh(69)          0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_bus_hold
+                     input/apb_assumes.svh(80)          0        160      13797         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_apb_access
+                     input/apb_assumes.svh(101)
+                                                        0        160      13797         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_paddr_align
+                     input/apb_assumes.svh(112)
+                                                        0        320      13637         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_req_in_pulse
+                     input/control_unit_svamod.sv(144)
+                                                        0          9      13948         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/mf_req_in_first
+                     input/control_unit_svamod.sv(158)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_pready_on
+                     input/control_unit_svamod.sv(168)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_pslverr_off
+                     input/control_unit_svamod.sv(178)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_prdata_off
+                     input/control_unit_svamod.sv(188)
+                                                        0      13637        320         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_clr_out_pulse
+                     input/control_unit_svamod.sv(199)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_clr_out_valid_high
+                     input/control_unit_svamod.sv(209)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_cfg_out_pulse
+                     input/control_unit_svamod.sv(220)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_cfg_out_valid_high
+                     input/control_unit_svamod.sv(232)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_start_play
+                     input/control_unit_svamod.sv(242)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_valid_start_play
+                     input/control_unit_svamod.sv(252)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_stop_play
+                     input/control_unit_svamod.sv(262)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_valid_stop_play
+                     input/control_unit_svamod.sv(272)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_level_out_pulse
+                     input/control_unit_svamod.sv(282)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_level_out_valid_high
+                     input/control_unit_svamod.sv(292)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_tick_standby
+                     input/control_unit_svamod.sv(302)
+                                                        0       1525      12432         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_tick_out_high
+                     input/control_unit_svamod.sv(312)
+                                                        0          8      13949         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_tick_out_low
+                     input/control_unit_svamod.sv(322)
+                                                        0      13949          8         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_fifo_drain
+                     input/control_unit_svamod.sv(334)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_irq_out_rise_first
+                     input/control_unit_svamod.sv(350)
+                                                        0          0      13957         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_irq_out_high
+                     input/control_unit_svamod.sv(362)
+                                                        0       1660      12297         21      13978          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_irq_out_standby
+                     input/control_unit_svamod.sv(372)
+                                                        0       1525      12432         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_irq_out_down
+                     input/control_unit_svamod.sv(382)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_cfg_reg_drv
+                     input/control_unit_svamod.sv(392)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_level_reg_drv
+                     input/control_unit_svamod.sv(402)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/af_dsp_regs_drv
+                     input/control_unit_svamod.sv(419)
+                                                        0        133      13824         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_pslverr
+                     input/control_unit_wba.svh(8)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_pready
+                     input/control_unit_wba.svh(18)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_rindex_on
+                     input/control_unit_wba.svh(28)
+                                                        0        320      13637         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_rindex_off
+                     input/control_unit_wba.svh(38)
+                                                        0      13637        320         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_index_range
+                     input/control_unit_wba.svh(48)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_rbank_r_write
+                     input/control_unit_wba.svh(58)
+                                                        0        145      13812         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_status_reg_play
+                     input/control_unit_wba.svh(68)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_status_reg_standby
+                     input/control_unit_wba.svh(78)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_rbank_r_stable
+                     input/control_unit_wba.svh(88)
+                                                        0      13811        145         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_cfg_reg_out
+                     input/control_unit_wba.svh(98)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_level_reg_out
+                     input/control_unit_wba.svh(108)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_dsp_regs_out
+                     input/control_unit_wba.svh(118)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ldata_r_write
+                     input/control_unit_wba.svh(128)
+                                                        0          5      13952         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ldata_r_failed_write
+                     input/control_unit_wba.svh(138)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ldata_r_stable
+                     input/control_unit_wba.svh(148)
+                                                        0      13950          6         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lhead_r_inc
+                     input/control_unit_wba.svh(158)
+                                                        0          5      13952         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lhead_r_loop
+                     input/control_unit_wba.svh(168)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lhead_r_stable
+                     input/control_unit_wba.svh(178)
+                                                        0      13950          6         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_llooped_r_on
+                     input/control_unit_wba.svh(188)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_llooped_r_off_1
+                     input/control_unit_wba.svh(198)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_llooped_r_off_2
+                     input/control_unit_wba.svh(208)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_llooped_r_stable
+                     input/control_unit_wba.svh(218)
+                                                        0      13946         10         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ltail_r_inc_1
+                     input/control_unit_wba.svh(228)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ltail_r_inc_2
+                     input/control_unit_wba.svh(238)
+                                                        0          4      13953         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ltail_r_loop_1
+                     input/control_unit_wba.svh(248)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ltail_r_loop_2
+                     input/control_unit_wba.svh(258)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_ltail_r_stable
+                     input/control_unit_wba.svh(269)
+                                                        0      13951          5         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lempty_on
+                     input/control_unit_wba.svh(279)
+                                                        0       7909       6048         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lempty_of
+                     input/control_unit_wba.svh(289)
+                                                        0       6048       7909         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lfull_on
+                     input/control_unit_wba.svh(299)
+                                                        0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lfull_off
+                     input/control_unit_wba.svh(309)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lfifo_output_on
+                     input/control_unit_wba.svh(319)
+                                                        0       6048       7909         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_lfifo_output_off
+                     input/control_unit_wba.svh(329)
+                                                        0       7909       6048         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_prdata_rbank
+                     input/control_unit_wba.svh(339)
+                                                        0        290      13667         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_prdata_lfifo
+                     input/control_unit_wba.svh(349)
+                                                        0         10      13947         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_prdata_rfifo
+                     input/control_unit_wba.svh(359)
+                                                        0         20      13937         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_prdata_off
+                     input/control_unit_wba.svh(369)
+                                                        0      13637        320         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_play_r_rise
+                     input/control_unit_wba.svh(379)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_play_r_fall
+                     input/control_unit_wba.svh(389)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_play_r_stable
+                     input/control_unit_wba.svh(399)
+                                                        0      13954          2         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_play_out_state
+                     input/control_unit_wba.svh(409)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_clr_on
+                     input/control_unit_wba.svh(419)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_clr_off
+                     input/control_unit_wba.svh(429)
+                                                        0      13956          1         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_clr_out
+                     input/control_unit_wba.svh(439)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_cfg_out_on
+                     input/control_unit_wba.svh(449)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_cfg_out_off
+                     input/control_unit_wba.svh(459)
+                                                        0      13956          1         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_start_on
+                     input/control_unit_wba.svh(469)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_start_off
+                     input/control_unit_wba.svh(479)
+                                                        0      13956          1         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_stop_on
+                     input/control_unit_wba.svh(489)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_stop_off
+                     input/control_unit_wba.svh(499)
+                                                        0      13956          1         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_level_out_on
+                     input/control_unit_wba.svh(509)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_level_out_off
+                     input/control_unit_wba.svh(519)
+                                                        0      13956          1         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irqack_on
+                     input/control_unit_wba.svh(529)
+                                                        0          4      13953         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irqack_off
+                     input/control_unit_wba.svh(539)
+                                                        0      13953          4         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_tick_out_on
+                     input/control_unit_wba.svh(549)
+                                                        0       1525      12432         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_tick_out_of
+                     input/control_unit_wba.svh(559)
+                                                        0      12432       1525         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_req_r_on
+                     input/control_unit_wba.svh(569)
+                                                        0      12432       1525         21      13978          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_req_r_off
+                     input/control_unit_wba.svh(579)
+                                                        0       1524      12432         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irq_r_rise
+                     input/control_unit_wba.svh(589)
+                                                        0        324      13633         21      13978          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irq_r_fall_stop
+                     input/control_unit_wba.svh(599)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irq_r_fall_irqack
+                     input/control_unit_wba.svh(609)
+                                                        0          4      13953         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irq_r_stable
+                     input/control_unit_wba.svh(619)
+                                                        0      13627        329         21      13977          0           2 off
+/audioport_tb/DUT_INSTANCE/control_unit_1/CHECKER_MODULE/ar_irq_out
+                     input/control_unit_wba.svh(629)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_tick_in
+                     input/dsp_unit_svamod.sv(40)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_cfg_in
+                     input/dsp_unit_svamod.sv(41)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_level_in
+                     input/dsp_unit_svamod.sv(42)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_clr_in
+                     input/dsp_unit_svamod.sv(43)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_audio0_in
+                     input/dsp_unit_svamod.sv(44)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_audio1_in
+                     input/dsp_unit_svamod.sv(45)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_dsp_regs_in
+                     input/dsp_unit_svamod.sv(46)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_level_reg_in
+                     input/dsp_unit_svamod.sv(47)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_cfg_reg_in
+                     input/dsp_unit_svamod.sv(48)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_audio0_out
+                     input/dsp_unit_svamod.sv(49)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_audio1_out
+                     input/dsp_unit_svamod.sv(50)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/X_tick_out
+                     input/dsp_unit_svamod.sv(51)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/af_tick_out_pulse
+                     input/dsp_unit_svamod.sv(125)
+                                                        0          9      13948         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/dsp_unit_1/CHECKER_MODULE/af_max_latency
+                     input/dsp_unit_svamod.sv(135)
+                                                        0          8      13949         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_test_mode_in
+                     input/cdc_unit_svamod.sv(47)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_audio0_in
+                     input/cdc_unit_svamod.sv(48)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_audio1_in
+                     input/cdc_unit_svamod.sv(49)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_tick_in
+                     input/cdc_unit_svamod.sv(50)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_play_in
+                     input/cdc_unit_svamod.sv(51)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_req_in
+                     input/cdc_unit_svamod.sv(52)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_audio0_out
+                     input/cdc_unit_svamod.sv(53)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_audio1_out
+                     input/cdc_unit_svamod.sv(54)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_tick_out
+                     input/cdc_unit_svamod.sv(55)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_play_out
+                     input/cdc_unit_svamod.sv(56)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/X_req_out
+                     input/cdc_unit_svamod.sv(57)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/mf_tick_pulse
+                     input/cdc_unit_svamod.sv(70)
+                                                        0          9      13948         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/mf_tick_interval
+                     input/cdc_unit_svamod.sv(80)
+                                                        0          9      13948         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/mf_play_length
+                     input/cdc_unit_svamod.sv(90)
+                                                        0          2      13955         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/mf_req_pulse
+                     input/cdc_unit_svamod.sv(99)
+                                                        0          9       3333          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/af_reset_sync_01
+                     input/cdc_unit_svamod.sv(111)
+                                                        0          1       3348          0       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/af_reset_sync_10
+                     input/cdc_unit_svamod.sv(121)
+                                                        0          1      13977          0      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/af_play_sync
+                     input/cdc_unit_svamod.sv(132)
+                                                        0      13946          0         29      13975          0           9 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/af_req_sync
+                     input/cdc_unit_svamod.sv(142)
+                                                        0          9      13948         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/af_req_out_pulse
+                     input/cdc_unit_svamod.sv(153)
+                                                        0          9      13948         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/cdc_unit_1/CHECKER_MODULE/af_audio_sync
+                     input/cdc_unit_svamod.sv(165)
+                                                        0          9      13940         29      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_play_in
+                     input/i2s_unit_svamod.sv(49)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_audio0_in
+                     input/i2s_unit_svamod.sv(50)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_audio1_in
+                     input/i2s_unit_svamod.sv(51)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_tick_in
+                     input/i2s_unit_svamod.sv(52)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_req_out
+                     input/i2s_unit_svamod.sv(53)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_sck_out
+                     input/i2s_unit_svamod.sv(54)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_ws_out
+                     input/i2s_unit_svamod.sv(55)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_sdo_out
+                     input/i2s_unit_svamod.sv(56)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_counter
+                     input/i2s_unit_svamod.sv(59)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_play_r
+                     input/i2s_unit_svamod.sv(60)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_input_reg
+                     input/i2s_unit_svamod.sv(61)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_shift_reg
+                     input/i2s_unit_svamod.sv(62)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_load_enable
+                     input/i2s_unit_svamod.sv(63)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_shift_enable
+                     input/i2s_unit_svamod.sv(64)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_sck_out_logic
+                     input/i2s_unit_svamod.sv(65)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_ws_out_logic
+                     input/i2s_unit_svamod.sv(66)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/X_end_s
+                     input/i2s_unit_svamod.sv(67)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_req_out_pulse
+                     input/i2s_unit_svamod.sv(117)
+                                                        0          9       3333          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_sck_start
+                     input/i2s_unit_svamod.sv(129)
+                                                        0          1       3341          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_req_sck_align
+                     input/i2s_unit_svamod.sv(139)
+                                                        0          9       3333          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_req_out_seen
+                     input/i2s_unit_svamod.sv(149)
+                                                        0          8       3334          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_ws_change
+                     input/i2s_unit_svamod.sv(161)
+                                                        0         16       3326          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_ws_wave
+                     input/i2s_unit_svamod.sv(171)
+                                                        0        217       3032          7       3256          0         370 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_sdo_change
+                     input/i2s_unit_svamod.sv(181)
+                                                        0         28       3314          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_sck_wave
+                     input/i2s_unit_svamod.sv(191)
+                                                        0        385       2957          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_sck_last
+                     input/i2s_unit_svamod.sv(201)
+                                                        0          8       3334          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_shift_reg_behavior
+                     input/i2s_unit_svamod.sv(216)
+                                                        0        376       2966          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_shift_reg_reset
+                     input/i2s_unit_svamod.sv(225)
+                                                        0        260       3080          7       3347          0           3 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_play_r_control
+                     input/i2s_unit_svamod.sv(233)
+                                                        0       2979        363          7       3349          0           2 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_counter_reset_at_383
+                     input/i2s_unit_svamod.sv(242)
+                                                        0          8       3334          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/i2s_unit_1/CHECKER_MODULE/af_ws_out_mid_behavior
+                     input/i2s_unit_svamod.sv(251)
+                                                        0       1536       1806          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PSEL
+                     input/audioport_svamod.sv(78)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PENABLE
+                     input/audioport_svamod.sv(79)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PWRITE
+                     input/audioport_svamod.sv(80)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PADDR
+                     input/audioport_svamod.sv(81)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PWDATA
+                     input/audioport_svamod.sv(82)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PRDATA
+                     input/audioport_svamod.sv(83)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PREADY
+                     input/audioport_svamod.sv(84)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_PSLVERR
+                     input/audioport_svamod.sv(85)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_irq_out
+                     input/audioport_svamod.sv(86)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_test_mode_in
+                     input/audioport_svamod.sv(87)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_scan_en_in
+                     input/audioport_svamod.sv(88)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_sck_out
+                     input/audioport_svamod.sv(90)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_ws_out
+                     input/audioport_svamod.sv(91)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_sdo_out
+                     input/audioport_svamod.sv(92)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick
+                     input/audioport_svamod.sv(93)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_play
+                     input/audioport_svamod.sv(94)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_req
+                     input/audioport_svamod.sv(95)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_cfg
+                     input/audioport_svamod.sv(96)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_level
+                     input/audioport_svamod.sv(97)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_clr
+                     input/audioport_svamod.sv(98)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0
+                     input/audioport_svamod.sv(99)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1
+                     input/audioport_svamod.sv(100)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_daudio0
+                     input/audioport_svamod.sv(101)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_daudio1
+                     input/audioport_svamod.sv(102)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_dtick
+                     input/audioport_svamod.sv(103)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_cfg_reg
+                     input/audioport_svamod.sv(104)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_level_reg
+                     input/audioport_svamod.sv(105)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_dsp_regs
+                     input/audioport_svamod.sv(106)
+                                                        0      13957          0         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_mtick
+                     input/audioport_svamod.sv(107)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_mplay
+                     input/audioport_svamod.sv(108)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_mreq
+                     input/audioport_svamod.sv(109)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_maudio0
+                     input/audioport_svamod.sv(110)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/X_maudio1
+                     input/audioport_svamod.sv(111)
+                                                        0       3342          0          7       3349          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_reset
+                     input/apb_assumes.svh(10)          0         42      27914          0      27956          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_1
+                     input/apb_assumes.svh(22)          0        320      13637         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_0
+                     input/apb_assumes.svh(35)          0      13637        320         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_psel_before_penable
+                     input/apb_assumes.svh(47)          0        160      13797         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_penable_fall
+                     input/apb_assumes.svh(58)          0        705      13252         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_penable_hold
+                     input/apb_assumes.svh(69)          0          0      13957         21      13978          0           0 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_bus_hold
+                     input/apb_assumes.svh(80)          0        160      13797         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_apb_access
+                     input/apb_assumes.svh(101)
+                                                        0        160      13797         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_paddr_align
+                     input/apb_assumes.svh(112)
+                                                        0        320      13637         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_start_stop_interval
+                     input/audioport_svamod.sv(126)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/mf_clear_rule
+                     input/audioport_svamod.sv(135)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/af_irq_out_rise
+                     input/audioport_svamod.sv(144)
+                                                        0          0      13957         21      13978          0           8 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/af_enter_play_mode
+                     input/audioport_svamod.sv(153)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/af_enter_standby_mode
+                     input/audioport_svamod.sv(162)
+                                                        0          1      13956         21      13978          0           1 off
+/audioport_tb/DUT_INSTANCE/CHECKER_MODULE/ar_data_roundtrip
+                     input/audioport_svamod.sv(179)
+                                                        0          6       3336          7       3349          0           2 off
+/audioport_uvm_tests_pkg/control_unit_uvm_test/run_phase/ia_control_unit_uvm_test
+                     input/uvm/control_unit_uvm_test.svh(46)
+                                                        0          1          0          0          1          0           0 off
+
+Total Coverage By Instance (filtered view): 95.14%
+

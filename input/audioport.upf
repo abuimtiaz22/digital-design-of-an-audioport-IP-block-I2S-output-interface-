@@ -1,0 +1,37 @@
+#############################################################################################
+#
+#  Power Domain PD_TOP
+#
+#############################################################################################
+
+create_power_domain PD_TOP -include_scope \
+    -supply { primary }
+
+# Create supply ports
+
+create_supply_port VDD -direction in
+create_supply_port VSS -direction in
+
+# Create supply nets
+
+create_supply_net  VDD
+create_supply_net  VSS
+
+# Connect ports to nets
+
+connect_supply_net VDD     -ports {VDD}
+connect_supply_net VSS     -ports {VSS}
+
+# Connect VDD and VSS to the primary supply set of the domain
+
+create_supply_set PD_TOP.primary  \
+    -function {power VDD} \
+    -function {ground VSS} \
+    -update
+
+# Define power states of the supply sets of PD_TOP
+
+add_power_state PD_TOP.primary \
+    -state VDD_ON {-supply_expr { power ==  {FULL_ON 1.1 } && ground == {FULL_ON 0.0 } } }
+
+

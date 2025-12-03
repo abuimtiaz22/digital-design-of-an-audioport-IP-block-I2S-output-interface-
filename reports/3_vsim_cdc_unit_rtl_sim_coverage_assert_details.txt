@@ -1,0 +1,149 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.cdc_unit_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      21        21         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_test_mode_in
+                     input/cdc_unit_svamod.sv(47)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0_in
+                     input/cdc_unit_svamod.sv(48)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1_in
+                     input/cdc_unit_svamod.sv(49)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick_in
+                     input/cdc_unit_svamod.sv(50)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_in
+                     input/cdc_unit_svamod.sv(51)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_in
+                     input/cdc_unit_svamod.sv(52)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0_out
+                     input/cdc_unit_svamod.sv(53)
+                                                        0       1872          1          1       1874          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1_out
+                     input/cdc_unit_svamod.sv(54)
+                                                        0       1872          1          1       1874          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick_out
+                     input/cdc_unit_svamod.sv(55)
+                                                        0       1872          1          1       1874          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_out
+                     input/cdc_unit_svamod.sv(56)
+                                                        0       2394          1          1       2396          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_out
+                     input/cdc_unit_svamod.sv(57)
+                                                        0       2299          1          1       2301          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_tick_pulse
+                     input/cdc_unit_svamod.sv(70)
+                                                        0         50       2543        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_tick_interval
+                     input/cdc_unit_svamod.sv(80)
+                                                        0         50       2543        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_play_length
+                     input/cdc_unit_svamod.sv(90)
+                                                        0         14       2579        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_req_pulse
+                     input/cdc_unit_svamod.sv(99)
+                                                        0         50        565         45        660          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_reset_sync_01
+                     input/cdc_unit_svamod.sv(111)
+                                                        0         10        624          0        634          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_reset_sync_10
+                     input/cdc_unit_svamod.sv(121)
+                                                        0         10       2636          0       2646          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_play_sync
+                     input/cdc_unit_svamod.sv(132)
+                                                        0       2391          0          0       2391          0          10 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_sync
+                     input/cdc_unit_svamod.sv(142)
+                                                        0         50       2249          0       2299          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_out_pulse
+                     input/cdc_unit_svamod.sv(153)
+                                                        0         50       2249          0       2299          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_audio_sync
+                     input/cdc_unit_svamod.sv(165)
+                                                        0         50       1822          0       1872          0           1 off
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_test_mode_in
+                     input/cdc_unit_svamod.sv(47)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0_in
+                     input/cdc_unit_svamod.sv(48)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1_in
+                     input/cdc_unit_svamod.sv(49)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick_in
+                     input/cdc_unit_svamod.sv(50)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_in
+                     input/cdc_unit_svamod.sv(51)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_in
+                     input/cdc_unit_svamod.sv(52)
+                                                        0       2593          0        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio0_out
+                     input/cdc_unit_svamod.sv(53)
+                                                        0       1872          1          1       1874          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_audio1_out
+                     input/cdc_unit_svamod.sv(54)
+                                                        0       1872          1          1       1874          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_tick_out
+                     input/cdc_unit_svamod.sv(55)
+                                                        0       1872          1          1       1874          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_play_out
+                     input/cdc_unit_svamod.sv(56)
+                                                        0       2394          1          1       2396          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/X_req_out
+                     input/cdc_unit_svamod.sv(57)
+                                                        0       2299          1          1       2301          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_tick_pulse
+                     input/cdc_unit_svamod.sv(70)
+                                                        0         50       2543        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_tick_interval
+                     input/cdc_unit_svamod.sv(80)
+                                                        0         50       2543        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_play_length
+                     input/cdc_unit_svamod.sv(90)
+                                                        0         14       2579        112       2705          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/mf_req_pulse
+                     input/cdc_unit_svamod.sv(99)
+                                                        0         50        565         45        660          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_reset_sync_01
+                     input/cdc_unit_svamod.sv(111)
+                                                        0         10        624          0        634          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_reset_sync_10
+                     input/cdc_unit_svamod.sv(121)
+                                                        0         10       2636          0       2646          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_play_sync
+                     input/cdc_unit_svamod.sv(132)
+                                                        0       2391          0          0       2391          0          10 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_sync
+                     input/cdc_unit_svamod.sv(142)
+                                                        0         50       2249          0       2299          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_req_out_pulse
+                     input/cdc_unit_svamod.sv(153)
+                                                        0         50       2249          0       2299          0           1 off
+/cdc_unit_tb/DUT_INSTANCE/CHECKER_MODULE/af_audio_sync
+                     input/cdc_unit_svamod.sv(165)
+                                                        0         50       1822          0       1872          0           1 off
+
+Total Coverage By Instance (filtered view): 100.00%
+

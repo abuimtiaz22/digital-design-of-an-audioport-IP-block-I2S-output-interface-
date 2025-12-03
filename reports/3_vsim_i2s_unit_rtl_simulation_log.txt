@@ -1,0 +1,381 @@
+# //  Questa Sim-64
+# //  Version 2024.3_2 linux_x86_64 Nov 25 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do scripts/vsim_rtlsim.tcl
+# 1745518251
+# Script start time: 21:10:51
+# 0
+# 1
+# 1
+# -all
+# QuestaSim
+# 0
+# 1
+# output/i2s_unit_rtl.dbg
+# output/i2s_unit_rtl.bin
+# output/i2s_unit_rtl.db
+# i2s_unit_rtl_vopt
+# output/i2s_unit_questasim_work
+#  -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_i2s_unit +define+DESIGN_NAME_MACRO=i2s_unit  +incdir+input  -sv -work work
+#  -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+#  -suppress 10587 -suppress 13408 +acc +cover=bcxefs -coverfec -debugdb -noincr -designfile output/i2s_unit_rtl.bin
+#  -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/i2s_unit_rtl.dbg
+# -suppress 13314 -suppress 13233 +define+RTL_SIM -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_i2s_unit +define+DESIGN_NAME_MACRO=i2s_unit  +incdir+input  -sv -work work
+# -2008 -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+# -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/i2s_unit_rtl.dbg
+# 1
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:10:52 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/apb_pkg.sv 
+# -- Compiling package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:10:52 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:10:52 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/audioport_pkg.sv 
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:10:52 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:10:52 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/audioport_util_pkg.sv 
+# -- Compiling package audioport_util_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:10:52 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:10:52 on Apr 24,2025
+# vcom -reportprogress 300 -2008 -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec -mixedsvvh -work work input/i2s_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_unit
+# -- Compiling architecture RTL of i2s_unit
+# End time: 21:10:52 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:10:52 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/i2s_unit_svamod.sv 
+# -- Compiling package i2s_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module i2s_unit_svamod
+# 
+# Top level modules:
+# 	i2s_unit_svamod
+# End time: 21:10:52 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:10:52 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/i2s_if.sv 
+# -- Compiling package i2s_if_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling interface i2s_if
+# -- Compiling module i2s_if_tb
+# 
+# Top level modules:
+# 	i2s_if_tb
+# End time: 21:10:53 on Apr 24,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:10:53 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/i2s_unit_test.sv 
+# -- Compiling package i2s_unit_test_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling program i2s_unit_test
+# 
+# Top level modules:
+# 	i2s_unit_test
+# End time: 21:10:53 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:10:53 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/i2s_unit_tb.sv 
+# -- Compiling package i2s_unit_tb_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module i2s_unit_tb
+# 
+# Top level modules:
+# 	i2s_unit_tb
+# End time: 21:10:53 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:10:53 on Apr 24,2025
+# vopt -reportprogress 300 -suppress 10587 -suppress 13408 "+acc" "+cover=bcxefs" -coverfec -debugdb -noincr -designfile output/i2s_unit_rtl.bin work.i2s_unit_tb -o i2s_unit_rtl_vopt 
+# 
+# Top level modules:
+# 	i2s_unit_tb
+# 
+# Analyzing design...
+# -- Loading module i2s_unit_tb
+# -- Loading interface i2s_if
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading entity i2s_unit
+# -- Loading architecture RTL of i2s_unit
+# -- Loading program i2s_unit_test
+# -- Loading module i2s_unit_svamod
+# ** Error: input/sva_bindings.svh(160): (vopt-1136) Unknown identifier "mode_reg".
+# Optimization failed
+# End time: 21:10:53 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0, Suppressed Warnings: 1
+# ** Error: /sw/rhel8/siemens/questa_sim-2024.3_2/questasim/linux_x86_64/vopt failed.
+# Error in macro ./scripts/vsim_rtlsim.tcl line 108
+# Return status = 2
+#     (procedure "compile" line 1)
+#     invoked from within
+# "compile NoFilter vopt -suppress 10587 -suppress 13408 +acc +cover=bcxefs -coverfec -debugdb -noincr -designfile output/i2s_unit_rtl.bin work.i2s_unit_..."
+#     ("eval" body line 1)
+#     invoked from within
+# "eval compile NoFilter vopt $flow $args"
+#     (procedure "vopt" line 24)
+#     invoked from within
+# "vopt  -suppress 10587 -suppress 13408 +acc +cover=bcxefs -coverfec -debugdb -noincr -designfile output/i2s_unit_rtl.bin work.i2s_unit_tb -o i2s_unit_r..."
+#     ("eval" body line 1)
+#     invoked from within
+# "eval "vopt $VOPT_SETTINGS work.${TESTBENCH_NAME} -o ${VSIM_VOPTDIR}""
+do scripts/vsim_rtlsim.tcl
+# 1745518317
+# Script start time: 21:11:57
+# 0
+# 1
+# 1
+# -all
+# QuestaSim
+# 0
+# 1
+# output/i2s_unit_rtl.dbg
+# output/i2s_unit_rtl.bin
+# output/i2s_unit_rtl.db
+# i2s_unit_rtl_vopt
+# output/i2s_unit_questasim_work
+#  -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_i2s_unit +define+DESIGN_NAME_MACRO=i2s_unit  +incdir+input  -sv -work work
+#  -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+#  -suppress 10587 -suppress 13408 +acc +cover=bcxefs -coverfec -debugdb -noincr -designfile output/i2s_unit_rtl.bin
+#  -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/i2s_unit_rtl.dbg
+# -suppress 13314 -suppress 13233 +define+RTL_SIM -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_i2s_unit +define+DESIGN_NAME_MACRO=i2s_unit  +incdir+input  -sv -work work
+# -2008 -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+# -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/i2s_unit_rtl.dbg
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:11:57 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/apb_pkg.sv 
+# -- Compiling package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:11:57 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:11:57 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/audioport_pkg.sv 
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:11:57 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:11:57 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/audioport_util_pkg.sv 
+# -- Compiling package audioport_util_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:11:57 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:11:57 on Apr 24,2025
+# vcom -reportprogress 300 -2008 -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec -mixedsvvh -work work input/i2s_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_unit
+# -- Compiling architecture RTL of i2s_unit
+# End time: 21:11:57 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:11:57 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/i2s_unit_svamod.sv 
+# -- Compiling package i2s_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module i2s_unit_svamod
+# 
+# Top level modules:
+# 	i2s_unit_svamod
+# End time: 21:11:58 on Apr 24,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:11:58 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/i2s_if.sv 
+# -- Compiling package i2s_if_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling interface i2s_if
+# -- Compiling module i2s_if_tb
+# 
+# Top level modules:
+# 	i2s_if_tb
+# End time: 21:11:58 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:11:58 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/i2s_unit_test.sv 
+# -- Compiling package i2s_unit_test_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling program i2s_unit_test
+# 
+# Top level modules:
+# 	i2s_unit_test
+# End time: 21:11:58 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:11:58 on Apr 24,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_i2s_unit" "+define+DESIGN_NAME_MACRO=i2s_unit" "+incdir+input" -sv -work work input/i2s_unit_tb.sv 
+# -- Compiling package i2s_unit_tb_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module i2s_unit_tb
+# 
+# Top level modules:
+# 	i2s_unit_tb
+# End time: 21:11:58 on Apr 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 21:11:58 on Apr 24,2025
+# vopt -reportprogress 300 -suppress 10587 -suppress 13408 "+acc" "+cover=bcxefs" -coverfec -debugdb -noincr -designfile output/i2s_unit_rtl.bin work.i2s_unit_tb -o i2s_unit_rtl_vopt 
+# 
+# Top level modules:
+# 	i2s_unit_tb
+# 
+# Analyzing design...
+# -- Loading module i2s_unit_tb
+# -- Loading interface i2s_if
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading entity i2s_unit
+# -- Loading architecture RTL of i2s_unit
+# -- Loading program i2s_unit_test
+# -- Loading module i2s_unit_svamod
+# -- Loading package vl_types
+# Optimizing 15 design-units (inlining 0/6 module instances, 0/1 architecture instances):
+# -- Optimizing architecture RTL of i2s_unit
+# -- Processing architecture RTL of i2s_unit for debug
+# -- Optimizing package apb_pkg(fast)
+# -- Optimizing package audioport_pkg(fast)
+# -- Optimizing package audioport_util_pkg(fast)
+# -- Optimizing package i2s_unit_tb_sv_unit(fast)
+# -- Optimizing package i2s_if_sv_unit(fast)
+# -- Optimizing package i2s_unit_test_sv_unit(fast)
+# -- Optimizing package i2s_unit_svamod_sv_unit(fast)
+# -- Optimizing module i2s_unit_svamod(fast)
+# -- Processing module i2s_unit_svamod(fast) for debug
+# -- Optimizing program i2s_unit_test(fast)
+# -- Optimizing module i2s_unit_tb(fast)
+# -- Processing module i2s_unit_tb(fast) for debug
+# -- Optimizing interface i2s_if(fast__1)
+# -- Optimizing interface i2s_if(fast)
+# viscom:
+# VISCOM: Start time: 21:11:59 on Apr 24,2025
+# 
+# VISCOM: QuestaSim /sw/rhel8/siemens/questa_sim-2024.3_2/questasim/linux_x86_64/VisualizerRls/bin/viscom 2024.3_2 at 2024.11 Nov 25 2024
+# VISCOM: Writing output/i2s_unit_rtl.bin
+# VISCOM: Done writing output/i2s_unit_rtl.bin
+# VISCOM: End time: 21:11:59 on Apr 24,2025, Elapsed time: 0:00:00 (Process Size : 319MB, Peak Process Size : 319MB)
+# 
+# 
+# Optimized design name is i2s_unit_rtl_vopt
+# End time: 21:11:59 on Apr 24,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0, Suppressed Warnings: 1
+# vsim i2s_unit_rtl_vopt -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/i2s_unit_rtl.dbg 
+# Start time: 21:12:00 on Apr 24,2025
+# Loading sv_std.std
+# Loading work.apb_pkg(fast)
+# Loading work.audioport_pkg(fast)
+# Loading work.audioport_util_pkg(fast)
+# Loading work.i2s_unit_tb_sv_unit(fast)
+# Loading work.i2s_unit_tb(fast)
+# Loading work.i2s_if_sv_unit(fast)
+# Loading work.i2s_if(fast__1)
+# Loading work.i2s_unit_test_sv_unit(fast)
+# Loading work.i2s_unit_test(fast)
+# Loading std.standard
+# Loading verilog.vl_resolve(body)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading verilog.vl_types(body)
+# Loading work.i2s_unit(rtl)#1
+# Loading work.i2s_unit_svamod_sv_unit(fast)
+# Loading work.i2s_unit_svamod(fast)
+# ** Note: (vsim-8900) Creating design debug database output/i2s_unit_rtl.dbg.
+# 1
+# sim_coverage
+# ** Info: T1: Regular Pattern Test
+#    Time: 135635 ps  Scope: i2s_unit_tb.TEST.data_generator File: input/i2s_unit_test.sv Line: 72
+# ** Info: T2: Stop Test
+#    Time: 126384693 ps  Scope: i2s_unit_tb.TEST.data_generator File: input/i2s_unit_test.sv Line: 141
+# ** Info: T2: STOP
+#    Time: 200495657 ps  Scope: i2s_unit_tb.TEST.data_generator File: input/i2s_unit_test.sv Line: 197
+# ** Info: T3: Random
+#    Time: 283829801 ps  Scope: i2s_unit_tb.TEST.data_generator File: input/i2s_unit_test.sv Line: 222
+# ** Info: Test end
+#    Time: 377597977 ps  Scope: i2s_unit_tb.TEST.data_generator File: input/i2s_unit_test.sv Line: 274
+#####################################################################################################
+# i2s_unit_test results: PASSED:           3 / FAILED:           0
+#####################################################################################################
+# ** Note: $finish    : input/i2s_unit_test.sv(323)
+#    Time: 377597977 ps  Iteration: 0  Instance: /i2s_unit_tb/TEST
+# 1
+# Break in Module i2s_unit_test at input/i2s_unit_test.sv line 323
+# ** Note: (vsim-19063) Please note that '-recursive' option's functionality is changed. For more information, please refer 
+# to the reference manual.
+# ** Note: (vsim-17388) No matching coverage data found.
+# file21
+# 1745518325
+# Script end time: 21:12:05
+# .main_pane.msgviewer.interior.cs.body.tree
+# Saving coverage database on exit...
+# End time: 21:12:28 on Apr 24,2025, Elapsed time: 0:00:28
+# Errors: 0, Warnings: 0

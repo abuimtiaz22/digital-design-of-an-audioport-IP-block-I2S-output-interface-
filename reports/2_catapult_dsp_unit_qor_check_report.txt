@@ -1,0 +1,139 @@
+-- Catapult System Level Synthesis: C Design Checker Formal Rules Report by Rule Status
+
+Current Option Settings
+  Option                          Description                                          Value
+  ------------------------------  --------------------------------------------------   -----
+  WAIVER_FILE                     C Design Checker Waiver file                         
+  MEMORY_LIMIT                    Memory Usage Limit in (GB)                           0
+  SYMBOLIC_MEMSIZE_THRESHOLD      Symbolic Memory Size Threshold                       256
+  VERIFICATION_EFFORT             Verification Effort                                  medium
+  VERIFICATION_MODE               Verification modes of CDesignChecker run             QofR Checks
+  WAVE_FORMAT                     Waveform database format.  qwave or fsdb             qwave
+  RPT_UNDECIDED_PROPS             Report undecided properties in report files          true
+  GLOBAL_OPTIONS                  Global Options                                       
+  ABR                             ABR - Array Bounds Read                              SKIPPED
+  ABW                             ABW - Array Bounds Write                             SKIPPED
+  ACC                             ACC - Accumulator of native C type                   CHECKED
+  ACS                             ACS - Accumulator of saturated type                  CHECKED
+  AIC                             AIC - Assignment used Instead of Comparison          DISABLED
+  ALS                             ALS - Ac_int Left Shift check                        DISABLED
+  AOB                             AOB - Arithmetic Operator with Boolean               DISABLED
+  APT                             APT - Array Dimension Power of Two                   CHECKED
+  AWE                             AWE - Assignments Without Effect                     DISABLED
+  CAS                             CAS - Incomplete Switch-Case                         SKIPPED
+  CBU                             CBU - Conditional break in Unrolled Loop             CHECKED
+  CCC                             CCC - Static constant comparison                     DISABLED
+  CGR                             CGR - Conditional Guard in Rolled Loop               CHECKED
+  CIA                             CIA - Comparison Instead of Assignment               DISABLED
+  CMC                             CMC - C style Memory Check                           CHECKED
+  CNS                             CNS - Constant condition of if/switch                DISABLED
+  CWB                             CWB - Case Without Break                             DISABLED
+  DBZ                             DBZ - Divide By Zero                                 SKIPPED
+  DIU                             DIU - Dynamic Index in Unrolled Loop                 CHECKED
+  FVI                             FVI - For Loop with Variable Iterations              CHECKED
+  FXD                             FXD - Mixed fixed and non-fixed datatypes            DISABLED
+  ISE                             ISE - Illegal Shift Error                            SKIPPED
+  LRC                             LRC - Long Reset Cycle                               CHECKED
+  MDB                             MDB - Missing Default Branch                         DISABLED
+  MXS                             MXS - Mixed signed and unsigned datatypes            DISABLED
+  NCO                             NCO - No Contribution to Output                      DISABLED
+  OSA                             OSA - Optimal Size Accumulator                       CHECKED
+  OVL                             OVL - Overflow/Underflow                             SKIPPED
+  PDD                             PDD - Platform dependent datatype (long)             DISABLED
+  RIU                             RIU - Rolled loop Inside Unrolled loop               CHECKED
+  RRT                             RRT - Reset referenced in thread                     DISABLED
+  SAT                             SAT - Sub-optimal Adder Tree                         CHECKED
+  STF                             STF - Funcs with statics called multiple times       DISABLED
+  SUD                             SUD - Suboptimal Use of Divide and Modulus Operator  CHECKED
+  UMR                             UMR - Uninitialized Memory Read                      SKIPPED
+
+FATAL                                                   Violated     Waived  Undecided
+----------------------------------------------------- ---------- ---------- ----------
+
+ERROR                                                   Violated     Waived  Undecided
+----------------------------------------------------- ---------- ---------- ----------
+
+WARNING                                                 Violated     Waived  Undecided
+----------------------------------------------------- ---------- ---------- ----------
+ACC - Accumulator of native C type                             0          0          0
+ACS - Accumulator of saturated type                            0          0          0
+CBU - Conditional break in Unrolled Loop                       0          0          0
+CGR - Conditional Guard in Rolled Loop                         0          0          0
+DIU - Dynamic Index in Unrolled Loop                           0          0          0
+FVI - For Loop with Variable Iterations                        0          0          0
+OSA - Optimal Size Accumulator                                 2          0          0
+RIU - Rolled loop Inside Unrolled loop                         0          0          0
+SAT - Sub-optimal Adder Tree                                   0          0          0
+SUD - Suboptimal Use of Divide and Modulus Operator            0          0          0
+
+INFO                                                    Violated     Waived  Undecided
+----------------------------------------------------- ---------- ---------- ----------
+APT - Array Dimension Power of Two                             3          0          0
+CMC - C style Memory Check                                     0          0          0
+LRC - Long Reset Cycle                                         0          0          0
+
+DISABLED                                              
+----------------------------------------------------- 
+AIC - Assignment used Instead of Comparison           
+ALS - Ac_int Left Shift check                         
+AOB - Arithmetic Operator with Boolean                
+AWE - Assignments Without Effect                      
+CCC - Static constant comparison                      
+CIA - Comparison Instead of Assignment                
+CNS - Constant condition of if/switch                 
+CWB - Case Without Break                              
+FXD - Mixed fixed and non-fixed datatypes             
+MDB - Missing Default Branch                          
+MXS - Mixed signed and unsigned datatypes             
+NCO - No Contribution to Output                       
+PDD - Platform dependent datatype (long)              
+RRT - Reset referenced in thread                      
+STF - Funcs with statics called multiple times        
+
+Violations - 5 (0 fatal, 0 error, 2 warning, 3 info)
+FATAL                                                       
+ERROR                                                       
+WARNING                                                     
+  OSA - Optimal Size Accumulator - 2                        
+    dsp_unit.cpp:80:25                                      
+      | 78   	// To do: Execute filters                          
+      | 79           {                                           
+      > 80             sc_bigint<64> acc0 = 0;                   
+      | 81             sc_bigint<64> acc1 = 0;                   
+      | 82             FILTER_LOOP: for (int i = 0; i < FILTER_TAPS; ++i)
+                                                            
+    dsp_unit.cpp:81:25                                      
+      | 79           {                                           
+      | 80             sc_bigint<64> acc0 = 0;                   
+      > 81             sc_bigint<64> acc1 = 0;                   
+      | 82             FILTER_LOOP: for (int i = 0; i < FILTER_TAPS; ++i)
+      | 83             {                                         
+                                                            
+INFO                                                        
+  APT - Array Dimension Power of Two - 3                    
+    dsp_unit.h:62:31                                        
+      | 60       // 5.                                           
+      | 61    private:                                           
+      > 62       sc_signal < sc_int<32>  > dsp_regs_r[DSP_REGISTERS];
+      | 63       sc_signal < sc_uint<16> > level0_r;             
+      | 64       sc_signal < sc_uint<16> > level1_r;             
+                                                            
+    dsp_unit.h:66:31                                        
+      | 64       sc_signal < sc_uint<16> > level1_r;             
+      | 65       sc_signal < bool >        filter_r;             
+      > 66       sc_int    < DATABITS >    data0_r[FILTER_TAPS]; 
+      | 67       sc_int    < DATABITS >    data1_r[FILTER_TAPS]; 
+      | 68       //To do: Declare member variables you need here 
+                                                            
+    dsp_unit.h:67:31                                        
+      | 65       sc_signal < bool >        filter_r;             
+      | 66       sc_int    < DATABITS >    data0_r[FILTER_TAPS]; 
+      > 67       sc_int    < DATABITS >    data1_r[FILTER_TAPS]; 
+      | 68       //To do: Declare member variables you need here 
+      | 69                                                       
+                                                            
+                                                            
+Waived - 0 (0 fatal, 0 error, 0 warning, 0 info)
+                                                            
+
+End of Report

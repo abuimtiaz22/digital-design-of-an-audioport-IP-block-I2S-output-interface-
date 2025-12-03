@@ -1,0 +1,64 @@
+Information: Updating design information... (UID-85)
+Information: There are 172 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
+Warning: There are 5 switching activity information conflicts. (PWR-19)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (0.114286) for the clock net 'clk' conflicts with the annotated value (0.153846). Using the annotated value. (PWR-12)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : audioport
+Version: T-2022.03-SP5-1
+Date   : Sun May  4 01:02:15 2025
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+audioport              5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   4.1558 mW   (83%)
+  Net Switching Power  = 859.3159 uW   (17%)
+                         ---------
+Total Dynamic Power    =   5.0151 mW  (100%)
+
+Cell Leakage Power     =   2.3238 mW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  3.7879e+03          824.4775        5.9280e+04        4.6716e+03  (  63.66%)  i
+register         357.0789            0.7316        1.6305e+06        1.9884e+03  (  27.09%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational     10.8291           34.1047        6.3402e+05          678.9527  (   9.25%)
+--------------------------------------------------------------------------------------------------
+Total          4.1558e+03 uW       859.3139 uW     2.3238e+06 nW     7.3389e+03 uW
+1

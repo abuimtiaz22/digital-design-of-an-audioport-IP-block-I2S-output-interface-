@@ -1,0 +1,36 @@
+Recursive Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /control_unit_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.control_unit_svamod
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                     143       138         5    96.50%
+    Covergroups                      2        na        na    95.83%
+        Coverpoints/Crosses          4        na        na        na
+            Covergroup Bins        158       155         3    98.10%
+    Directives                      87        83         4    95.40%
+    Statements                       2         2         0   100.00%
+    Toggles                        902       500       402    55.43%
+
+=================================================================================
+=== Instance: /control_unit_tb/DUT_INSTANCE
+=== Design Unit: work.control_unit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                     143       138         5    96.50%
+    Branches                        74        71         3    95.94%
+    Conditions                      42        36         6    85.71%
+    Covergroups                      2        na        na    95.83%
+        Coverpoints/Crosses          4        na        na        na
+            Covergroup Bins        158       155         3    98.10%
+    Directives                      87        83         4    95.40%
+    Expressions                     27        25         2    92.59%
+    Statements                     119       115         4    96.63%
+    Toggles                       1696       922       774    54.36%
+
+
+Total Coverage By Instance (filtered view): 89.12%
+

@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------
+Questa Reset Check Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+Resetcheck Protocol report
+Design : audioport
+
+Created Fri Apr 25 15:16:00 2025
+-------------------------------------------------------------------------------
+
+=================================================================
+Section 1  : Resetcheck SVA Protocol Summary
+Section 2  : Resetcheck SVA Protocol List
+Section 3  : Resetcheck SVA Protocol Details
+Section 4  : Resetcheck SVA Protocol Setup
+=================================================================
+
+=================================================================
+Section 1  : Resetcheck SVA Protocol Summary
+=================================================================
+
+Protocols Recognized   :   0
+-------------------------------------------------------------------------------
+Protocol Type                             Protocols               Checks
+-------------------------------------------------------------------------------
+rdc_isolation_data                                0                    0
+rdc_isolation_clockgate                           0                    0
+rdc_clockoff                                      0                    0
+rdc_tx_at_reset_value                             0                    0
+-------------------------------------------------------------------------------
+All                                               0                    0
+-------------------------------------------------------------------------------
+
+=================================================================
+Section 2  : Resetcheck SVA Protocol List
+=================================================================
+
+
+=================================================================
+Section 3  : Resetcheck SVA Protocol Details
+=================================================================
+
+None
+=================================================================
+Section 4  : Resetcheck SVA Protocol Setup
+=================================================================
+
+Questa Sim argument files (2-step flow)
+----------------------------------------------------
+  vlog  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qrdc_run_log/resetcheck_protocol/simulation/resetcheck_protocol_vlog.arg (Protocol Arguments)
+        : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qrdc_run_log/resetcheck_protocol/simulation/resetcheck_constraint_vlog.arg (Constraint Arguments)
+  vsim  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qrdc_run_log/resetcheck_protocol/simulation/resetcheck_protocol_vsim_2step.arg
+
+Questa Sim vopt flow argument files (3-step flow)
+----------------------------------------------------
+  vlog  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qrdc_run_log/resetcheck_protocol/simulation/resetcheck_protocol_vlog.arg (Protocol Arguments)
+        : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qrdc_run_log/resetcheck_protocol/simulation/resetcheck_constraint_vlog.arg (Constraint Arguments)
+  vopt  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qrdc_run_log/resetcheck_protocol/simulation/resetcheck_protocol_vopt.arg
+  vsim  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qrdc_run_log/resetcheck_protocol/simulation/resetcheck_protocol_vsim_3step.arg
+

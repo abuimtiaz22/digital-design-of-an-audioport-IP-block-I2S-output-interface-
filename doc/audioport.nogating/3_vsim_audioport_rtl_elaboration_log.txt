@@ -1,0 +1,242 @@
+# VISUALIZERROOT = '/sw/rhel7/siemens/questa_sim-2023.2_2/questasim/linux_x86_64/VisualizerRls'
+# USER = 'aimtiaz23'
+# Mentor Graphics software version 2023.2_2 (Build on Jun  9 2023)
+# Copyright (C) 1999-2025 by Mentor Graphics All rights reserved.
+
+# vsim -f audioport_viz_rtl_args.f -do scripts/viz_rtlelab.tcl -l reports/3_vsim_audioport_rtl_elaboration_log.txt
+# vsim audioport_rtl_vopt -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -qwavedb=+livesim+signal+class++uvm_configdb+uvm_factory+uvm_schematic+transaction+assertion+locals+systemc+wavefile=results/audioport_rtl_qwave.db -visualizer=results/audioport_rtl_designfile.bin "+no_session" "+UVM_TESTNAME=audioport_uvm_test" "+no_qwavedb_threading" 
+# Start time: 12:21:25 on Apr 25,2025
+# Loading Mentor Graphics Visualizer shared object '/sw/rhel7/siemens/questa_sim-2023.2_2/questasim/bin/../linux_x86_64/VisualizerRls/bin/libqvisualizer.so'
+# //  Questa Sim-64
+# //  Version 2023.2_2 linux_x86_64 Jun  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.i2s_if(fast)
+# Loading work.irq_out_if(fast)
+# Loading work.apb_if(fast)
+# Loading work.apb_pkg(fast)
+# Loading work.audioport_pkg(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.apb_env_pkg(fast)
+# Loading work.control_unit_env_pkg(fast)
+# Loading work.audioport_util_pkg(fast)
+# Loading work.audioport_env_pkg(fast)
+# Loading work.audioport_uvm_tests_pkg(fast)
+# Loading work.audioport_tb_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.audioport_tb(fast)
+# Loading work.apb_if_sv_unit(fast)
+# Loading work.apb_if(fast__2)
+# Loading work.irq_out_if_sv_unit(fast)
+# Loading work.irq_out_if(fast__2)
+# Loading work.i2s_if_sv_unit(fast)
+# Loading work.i2s_if(fast__2)
+# Loading work.audioport_sv_unit(fast)
+# Loading work.audioport(fast)
+# Loading work.control_unit_sv_unit(fast)
+# Loading work.control_unit(fast)
+# Loading work.control_unit_svamod_sv_unit(fast)
+# Loading work.control_unit_svamod(fast)
+# Loading work.dsp_unit_sv_unit(fast)
+# Loading work.dsp_unit(fast)
+# Loading work.dsp_unit_rtl(fast)
+# Loading work.dsp_unit_dsp_proc(fast)
+# Loading work.dsp_unit_dsp_proc_read_inputs_mioi(fast)
+# Loading work.dsp_unit_read_inputs(fast)
+# Loading work.dsp_unit_read_inputs_core(fast)
+# Loading work.mgc_out_dreg_v2(fast)
+# Loading work.mgc_out_dreg_v2(fast__1)
+# Loading work.mgc_out_dreg_v2(fast__2)
+# Loading work.mgc_out_dreg_v2(fast__3)
+# Loading work.mgc_out_dreg_v2(fast__4)
+# Loading work.mgc_out_dreg_v2(fast__5)
+# Loading work.mgc_out_dreg_v2(fast__6)
+# Loading work.ccs_in_v1(fast)
+# Loading work.ccs_sync_out_vld_v1(fast)
+# Loading work.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl(fast)
+# Loading work.dsp_unit_dsp_proc_write_outputs_mioi(fast)
+# Loading work.dsp_unit_write_outputs(fast)
+# Loading work.dsp_unit_write_outputs_core(fast)
+# Loading work.ccs_in_v1(fast__1)
+# Loading work.ccs_in_v1(fast__2)
+# Loading work.ccs_in_v1(fast__3)
+# Loading work.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl(fast)
+# Loading work.dsp_unit_dsp_proc_staller(fast)
+# Loading work.dsp_unit_dsp_proc_dsp_proc_fsm(fast)
+# Loading work.dsp_unit_regs_proc(fast)
+# Loading work.dsp_unit_svamod_sv_unit(fast)
+# Loading work.dsp_unit_svamod(fast)
+# Loading work.cdc_unit_sv_unit(fast)
+# Loading work.cdc_unit(fast)
+# Loading work.cdc_unit_svamod_sv_unit(fast)
+# Loading work.cdc_unit_svamod(fast)
+# Loading work.audioport_svamod_sv_unit(fast)
+# Loading work.audioport_svamod(fast)
+# Loading std.standard
+# Loading verilog.vl_resolve(body)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading verilog.vl_types(body)
+# Loading work.i2s_unit(rtl)#1
+# Loading work.i2s_unit_svamod_sv_unit(fast)
+# Loading work.i2s_unit_svamod(fast)
+# Loading /sw/rhel7/siemens/questa_sim-2023.2_2/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# Opening log file /tmp/visscratch.EC1jXc/hdloffice.log
+
+# 12:21:27: Loading design data...
+# 12:21:27: Loaded  design units
+# 12:21:27: Loaded  design hierarchy
+# Warning: The wave file cannot be loaded because either the simulation has not yet logged any data, or qwavedb logging has not been enabled.
+# Warning: The wave file cannot be loaded because either the simulation has not yet logged any data, or qwavedb logging has not been enabled.
+# The Message Viewer cannot be opened without a wave file open.
+# Warning: The wave file cannot be loaded because either the simulation has not yet logged any data, or qwavedb logging has not been enabled.
+# 	 Class Filter File used = /sw/rhel7/siemens/questa_sim-2023.2_2/questasim/bin/../linux_x86_64/VisualizerRls/bin/../config/uvmclassfilter.txt
+# do scripts/viz_rtlelab.tcl
+# 0
+# 1
+# 1
+# -all
+# QuestaSim
+# 1
+# 0
+# 1
+# sim_coverage_audioport_uvm_test
+# 1
+#  wave file name = results/audioport_rtl_qwave.db
+# 
+# *****************************************************************
+#    Using QuickLZ compression software.
+# *****************************************************************
+# 
+# Qwave threading will not be used.
+# qwavedb_dumpvars: Initiating qwavedb class logging
+# 
+# 	Loading class filter file '/sw/rhel7/siemens/questa_sim-2023.2_2/questasim/bin/../linux_x86_64/VisualizerRls/bin/../config/uvmclassfilter.txt'
+# 
+# qwavedb_dumpvars: Done initiating qwavedb class logging
+# Mentor Graphics software version 2023.2_2 (Build number 0)
+# Copyright (C) 1999-2025 by Mentor Graphics All rights reserved.
+# qwavedb_dumpvars: Initiating qwavedb waveform capturing
+# 
+# 
+# qwavedb_dumpvars: Done initiating qwavedb waveform capturing
+# 
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(all)
+# UVM_INFO @ 0: reporter [RNTST] Running test audioport_uvm_test...
+# **************************************************************************
+# * Questa UVM Transaction Recording Turned ON.                            *
+# * recording_detail has been set.                                         *
+# *  To turn off, set 'recording_detail' to off:                           *
+# * uvm_config_db#(int)            ::set(null, "", "recording_detail", 0); *
+# * uvm_config_db#(uvm_bitstream_t)::set(null, "", "recording_detail", 0); *
+# **************************************************************************
+# ** Info: No file specified. Generating default coefficients.
+#    Time: 0 ps  Scope: audioport_util_pkg.read_filter_taps File: input/audioport_util_pkg.sv Line: 138
+# ** Info: Using default filter coefficients.
+#    Time: 0 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 36
+# ** Info: Progam filter
+#    Time: 0 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 48
+# 12:21:29: Loading waveform header...
+# 12:21:29: Loaded  waveform header
+#   Error: Unable to wave audioport_tb.DUT_INSTANCE.dsp_regs.
+# ** Note: (vsim-4905) QWAVEDB:  logging of additional nested aggregates (UPA of UPS of UPA) is enabled.
+# Started logging "audioport_tb.i2s.monitor.audio_out" at time 0
+# Flushing waveform data
+
+# ** Info: Fill FIFO
+#    Time: 5492500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 61
+# ** Info: Set level
+#    Time: 11860500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 83
+# ** Info: Filter ON          1
+#    Time: 13927500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 107
+# ** Info: Start
+#    Time: 15994500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 179
+# ** Info: Stop
+#    Time: 10346022500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 188
+# ** Info: Clear
+#    Time: 10376056500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 197
+# ** Info: Fill FIFOs
+#    Time: 10386086500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 211
+# ** Info: Filter OFF          2
+#    Time: 10390451500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 125
+# ** Info: Start
+#    Time: 10392529500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 179
+# ** Info: Stop
+#    Time: 20722557500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 188
+# ** Info: Clear
+#    Time: 20752591500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 197
+# ** Info: Fill FIFOs
+#    Time: 20762621500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 211
+# ** Info: Filter OFF + scaling
+#    Time: 20766986500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 144
+# ** Info: Start
+#    Time: 20769142500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 179
+# ** Info: Stop
+#    Time: 31099170500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 188
+# ** Info: Clear
+#    Time: 31129204500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 197
+# ** Info: Fill FIFOs
+#    Time: 31139234500 ps  Scope: audioport_uvm_tests_pkg.audioport_main_sequence.body File: input/uvm/audioport_main_sequence.svh Line: 211
+#####################################################################################################
+# audioport_uvm_test results: PASSED:           1 / FAILED:           0
+#####################################################################################################
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 31143599500: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO @ 31143599500: uvm_test_top.m_env.m_control_unit_agent.m_driver [apb_driver] =========================== apb_driver REPORT =============================================
+# UVM_INFO @ 31143599500: uvm_test_top.m_env.m_control_unit_agent.m_driver [apb_driver] DUT:         3313 writes,      0 reads generated
+# UVM_INFO @ 31143599500: uvm_test_top.m_env.m_control_unit_agent.m_driver [apb_driver]                 0 failed,      0 failed
+# UVM_INFO @ 31143599500: uvm_test_top.m_env.m_control_unit_agent.m_driver [apb_driver] Other APB:      0 writes,      0 reads generated
+# UVM_INFO @ 31143599500: uvm_test_top.m_env.m_control_unit_agent.m_driver [apb_driver]                 0 failed,      0 failed
+# UVM_INFO @ 31143599500: uvm_test_top.m_env.m_control_unit_agent.m_driver [apb_driver] ===========================================================================================
+# UVM_INFO @ 31143599500: uvm_test_top.m_env.m_scoreboard.m_comparator [audioport_comparator]        1488 samples compared,           0 differences detected
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   11
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [apb_driver]     6
+# [audioport_comparator]     1
+# ** Note: $finish    : /sw/rhel7/siemens/questa_sim-2023.2_2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 31143599500 ps  Iteration: 69  Instance: .audioport_tb
+# Stopped at /sw/rhel7/siemens/questa_sim-2023.2_2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# 1
+# Break in Task uvm_root::run_test at /sw/rhel7/siemens/questa_sim-2023.2_2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430

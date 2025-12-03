@@ -1,0 +1,37 @@
+ 
+****************************************
+Report : saif
+        -missing
+        -hierarchy
+        -rtl_saif
+Design : cdc_unit
+Version: T-2022.03-SP5-1
+Date   : Fri Mar 21 10:19:16 2025
+****************************************
+
+  
+
+--------------------------------------------------------------------------------
+              User              Default           Propagated
+Object type   Annotated (%)     Activity (%)      Activity (%)       Total
+--------------------------------------------------------------------------------
+  
+ Ports        108(100.00%)      0(0.00%)          0(0.00%)           108
+ Seq Cells    110(100.00%)      0(0.00%)          0(0.00%)           110
+ Tri Cells    0(0.00%)          0(0.00%)          0(0.00%)           0
+--------------------------------------------------------------------------------
+
+ List of Non-annotated ports :
+
+   0 ports
+
+ List of Non-annotated sequential cells :
+
+   0 sequential cells
+
+ List of Non-annotated three-state cells :
+
+   0 three-state cells
+
+--------------------------------------------------------------------------------
+1

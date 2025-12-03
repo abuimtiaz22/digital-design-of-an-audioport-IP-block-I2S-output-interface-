@@ -1,0 +1,105 @@
+-- Catapult System Level Synthesis: C Design Checker Formal Rules Report by Rule Status
+
+Current Option Settings
+  Option                          Description                                          Value
+  ------------------------------  --------------------------------------------------   -----
+  WAIVER_FILE                     C Design Checker Waiver file                         
+  MEMORY_LIMIT                    Memory Usage Limit in (GB)                           0
+  SYMBOLIC_MEMSIZE_THRESHOLD      Symbolic Memory Size Threshold                       256
+  VERIFICATION_EFFORT             Verification Effort                                  medium
+  VERIFICATION_MODE               Verification modes of CDesignChecker run             Check for Overflow/Underflow
+  WAVE_FORMAT                     Waveform database format.  qwave or fsdb             qwave
+  RPT_UNDECIDED_PROPS             Report undecided properties in report files          true
+  GLOBAL_OPTIONS                  Global Options                                       
+  ABR                             ABR - Array Bounds Read                              DISABLED
+  ABW                             ABW - Array Bounds Write                             DISABLED
+  ACC                             ACC - Accumulator of native C type                   DISABLED
+  ACS                             ACS - Accumulator of saturated type                  DISABLED
+  AIC                             AIC - Assignment used Instead of Comparison          DISABLED
+  ALS                             ALS - Ac_int Left Shift check                        DISABLED
+  AOB                             AOB - Arithmetic Operator with Boolean               DISABLED
+  APT                             APT - Array Dimension Power of Two                   DISABLED
+  AWE                             AWE - Assignments Without Effect                     DISABLED
+  CAS                             CAS - Incomplete Switch-Case                         DISABLED
+  CBU                             CBU - Conditional break in Unrolled Loop             DISABLED
+  CCC                             CCC - Static constant comparison                     DISABLED
+  CGR                             CGR - Conditional Guard in Rolled Loop               DISABLED
+  CIA                             CIA - Comparison Instead of Assignment               DISABLED
+  CMC                             CMC - C style Memory Check                           DISABLED
+  CNS                             CNS - Constant condition of if/switch                DISABLED
+  CWB                             CWB - Case Without Break                             DISABLED
+  DBZ                             DBZ - Divide By Zero                                 DISABLED
+  DIU                             DIU - Dynamic Index in Unrolled Loop                 DISABLED
+  FVI                             FVI - For Loop with Variable Iterations              DISABLED
+  FXD                             FXD - Mixed fixed and non-fixed datatypes            DISABLED
+  ISE                             ISE - Illegal Shift Error                            DISABLED
+  LRC                             LRC - Long Reset Cycle                               DISABLED
+  MDB                             MDB - Missing Default Branch                         DISABLED
+  MXS                             MXS - Mixed signed and unsigned datatypes            DISABLED
+  NCO                             NCO - No Contribution to Output                      DISABLED
+  OSA                             OSA - Optimal Size Accumulator                       DISABLED
+  OVL                             OVL - Overflow/Underflow                             CHECKED
+  PDD                             PDD - Platform dependent datatype (long)             DISABLED
+  RIU                             RIU - Rolled loop Inside Unrolled loop               DISABLED
+  RRT                             RRT - Reset referenced in thread                     DISABLED
+  SAT                             SAT - Sub-optimal Adder Tree                         DISABLED
+  STF                             STF - Funcs with statics called multiple times       DISABLED
+  SUD                             SUD - Suboptimal Use of Divide and Modulus Operator  DISABLED
+  UMR                             UMR - Uninitialized Memory Read                      DISABLED
+
+FATAL                                                   Violated     Waived  Undecided
+----------------------------------------------------- ---------- ---------- ----------
+
+ERROR                                                   Violated     Waived  Undecided
+----------------------------------------------------- ---------- ---------- ----------
+OVL - Overflow/Underflow                                       0          0          4
+
+WARNING                                                 Violated     Waived  Undecided
+----------------------------------------------------- ---------- ---------- ----------
+
+INFO                                                    Violated     Waived  Undecided
+----------------------------------------------------- ---------- ---------- ----------
+
+DISABLED                                              
+----------------------------------------------------- 
+ABR - Array Bounds Read                               
+ABW - Array Bounds Write                              
+ACC - Accumulator of native C type                    
+ACS - Accumulator of saturated type                   
+AIC - Assignment used Instead of Comparison           
+ALS - Ac_int Left Shift check                         
+AOB - Arithmetic Operator with Boolean                
+APT - Array Dimension Power of Two                    
+AWE - Assignments Without Effect                      
+CAS - Incomplete Switch-Case                          
+CBU - Conditional break in Unrolled Loop              
+CCC - Static constant comparison                      
+CGR - Conditional Guard in Rolled Loop                
+CIA - Comparison Instead of Assignment                
+CMC - C style Memory Check                            
+CNS - Constant condition of if/switch                 
+CWB - Case Without Break                              
+DBZ - Divide By Zero                                  
+DIU - Dynamic Index in Unrolled Loop                  
+FVI - For Loop with Variable Iterations               
+FXD - Mixed fixed and non-fixed datatypes             
+ISE - Illegal Shift Error                             
+LRC - Long Reset Cycle                                
+MDB - Missing Default Branch                          
+MXS - Mixed signed and unsigned datatypes             
+NCO - No Contribution to Output                       
+OSA - Optimal Size Accumulator                        
+PDD - Platform dependent datatype (long)              
+RIU - Rolled loop Inside Unrolled loop                
+RRT - Reset referenced in thread                      
+SAT - Sub-optimal Adder Tree                          
+STF - Funcs with statics called multiple times        
+SUD - Suboptimal Use of Divide and Modulus Operator   
+UMR - Uninitialized Memory Read                       
+
+Violations - 0 (0 fatal, 0 error, 0 warning, 0 info)
+                                                            
+Waived - 0 (0 fatal, 0 error, 0 warning, 0 info)
+                                                            
+
+End of Report

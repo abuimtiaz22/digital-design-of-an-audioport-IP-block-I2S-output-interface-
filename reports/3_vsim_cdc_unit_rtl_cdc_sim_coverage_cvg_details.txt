@@ -1,0 +1,362 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6080
+=== Design Unit: work.assert_cdc_dsel
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na    50.00%
+        Coverpoints/Crosses          2        na        na        na
+            Covergroup Bins          2         1         1    50.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6080/cg_cdc_dsel 
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_tranfers_checked                    100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_asserted_for_tx_min                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6080/cg_i_cdc_dsel  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_tranfers_checked                    100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cpb_transfers_checked                         100          1          -    Covered              
+    Coverpoint cp_asserted_for_tx_min                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cpb_asserted_for_tx_min                         0          1          -    ZERO                 
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6100
+=== Design Unit: work.assert_cdc_dsel
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na    50.00%
+        Coverpoints/Crosses          2        na        na        na
+            Covergroup Bins          2         1         1    50.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6100/cg_cdc_dsel 
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_tranfers_checked                    100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_asserted_for_tx_min                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6100/cg_i_cdc_dsel  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_tranfers_checked                    100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cpb_transfers_checked                         100          1          -    Covered              
+    Coverpoint cp_asserted_for_tx_min                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cpb_asserted_for_tx_min                         0          1          -    ZERO                 
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/async_reset_8013
+=== Design Unit: work.assert_cdc_sync
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na    50.00%
+        Coverpoints/Crosses          2        na        na        na
+            Covergroup Bins          2         1         1    50.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/async_reset_8013/cg_cdc_sync 
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_values_checked                      100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_value_change_at_tx_min                0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/async_reset_8013/cg_i_cdc_sync  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_values_checked                      100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cpb_values_checked                             26          1          -    Covered              
+    Coverpoint cp_value_change_at_tx_min                0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cpb_value_change_at_tx_min                      0          1          -    ZERO                 
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_63806
+=== Design Unit: work.assert_cdc_sync
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na    50.00%
+        Coverpoints/Crosses          2        na        na        na
+            Covergroup Bins          2         1         1    50.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_63806/cg_cdc_sync 
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_values_checked                      100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_value_change_at_tx_min                0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_63806/cg_i_cdc_sync  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_values_checked                      100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cpb_values_checked                            101          1          -    Covered              
+    Coverpoint cp_value_change_at_tx_min                0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cpb_value_change_at_tx_min                      0          1          -    ZERO                 
+
+=================================================================================
+=== Instance: /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_74335
+=== Design Unit: work.assert_cdc_sync
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na    50.00%
+        Coverpoints/Crosses          2        na        na        na
+            Covergroup Bins          2         1         1    50.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_74335/cg_cdc_sync 
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_values_checked                      100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_value_change_at_tx_min                0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_74335/cg_i_cdc_sync  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_values_checked                      100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cpb_values_checked                             15          1          -    Covered              
+    Coverpoint cp_value_change_at_tx_min                0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cpb_value_change_at_tx_min                      0          1          -    ZERO                 
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6080/cg_cdc_dsel 
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_tranfers_checked                    100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_asserted_for_tx_min                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6080/cg_i_cdc_dsel  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_tranfers_checked                    100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cpb_transfers_checked                         100          1          -    Covered              
+    Coverpoint cp_asserted_for_tx_min                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cpb_asserted_for_tx_min                         0          1          -    ZERO                 
+ TYPE /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6100/cg_cdc_dsel 
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_tranfers_checked                    100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_asserted_for_tx_min                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/dmux_6100/cg_i_cdc_dsel  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_tranfers_checked                    100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cpb_transfers_checked                         100          1          -    Covered              
+    Coverpoint cp_asserted_for_tx_min                   0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cpb_asserted_for_tx_min                         0          1          -    ZERO                 
+ TYPE /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/async_reset_8013/cg_cdc_sync 
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_values_checked                      100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_value_change_at_tx_min                0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/async_reset_8013/cg_i_cdc_sync  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_values_checked                      100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cpb_values_checked                             26          1          -    Covered              
+    Coverpoint cp_value_change_at_tx_min                0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cpb_value_change_at_tx_min                      0          1          -    ZERO                 
+ TYPE /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_63806/cg_cdc_sync 
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_values_checked                      100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_value_change_at_tx_min                0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_63806/cg_i_cdc_sync  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_values_checked                      100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cpb_values_checked                            101          1          -    Covered              
+    Coverpoint cp_value_change_at_tx_min                0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cpb_value_change_at_tx_min                      0          1          -    ZERO                 
+ TYPE /cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_74335/cg_cdc_sync 
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_values_checked                      100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_value_change_at_tx_min                0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/cdc_unit_tb/DUT_INSTANCE/cdc_protocol/two_dff_74335/cg_i_cdc_sync  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint cp_values_checked                      100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cpb_values_checked                             15          1          -    Covered              
+    Coverpoint cp_value_change_at_tx_min                0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin cpb_value_change_at_tx_min                      0          1          -    ZERO                 
+
+TOTAL COVERGROUP COVERAGE: 50.00%  COVERGROUP TYPES: 5
+
+Total Coverage By Instance (filtered view): 50.00%
+

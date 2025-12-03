@@ -1,0 +1,314 @@
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# 
+# This material contains trade secrets or otherwise
+# confidential information owned by
+# Siemens Industry Software Inc. or its affiliates
+# (collectively, "SISW"), or its licensors. Access
+# to and use of this information is strictly limited
+# as set forth in the customer's applicable
+# agreements with SISW.
+# 
+# Unpublished work. Copyright 2024 Siemens
+# 
+# do scripts/qautocheck.tcl
+# Command : vlib output/control_unit_qautocheck_work
+# Command : vmap work output/control_unit_qautocheck_work
+# QuestaSim-64 vmap 2024.3_2 Lib Mapping Utility 2024.11 Nov 25 2024
+# vmap work output/control_unit_qautocheck_work 
+# Modifying modelsim.ini
+# Command : vlog +define+design_top_is_control_unit +define+RTL_VERIF +incdir+input -cuname control_unit_sva_bind_pkg -mfcu input/apb_pkg.sv input/audioport_pkg.sv input/audioport_util_pkg.sv input/control_unit.sv input/control_unit_svamod.sv input/sva_bindings.svh
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 01:00:17 on Feb 13,2025
+# vlog "+define+design_top_is_control_unit" "+define+RTL_VERIF" "+incdir+input" -cuname control_unit_sva_bind_pkg -mfcu input/apb_pkg.sv input/audioport_pkg.sv input/audioport_util_pkg.sv input/control_unit.sv input/control_unit_svamod.sv input/sva_bindings.svh 
+# -- Compiling package apb_pkg
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling package audioport_util_pkg
+# -- Importing package audioport_pkg
+# ** Warning: input/control_unit_svamod.sv(46): (vlog-13314) Defaulting port 'rbank_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: input/control_unit_svamod.sv(54): (vlog-13314) Defaulting port 'ldata_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: input/control_unit_svamod.sv(61): (vlog-13314) Defaulting port 'rdata_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling package control_unit_sva_bind_pkg
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module control_unit
+# -- Compiling module control_unit_svamod
+# ** Warning: input/control_unit_svamod.sv(46): (vlog-13314) Defaulting port 'rbank_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: input/control_unit_svamod.sv(54): (vlog-13314) Defaulting port 'ldata_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: input/control_unit_svamod.sv(61): (vlog-13314) Defaulting port 'rdata_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	control_unit
+# End time: 01:00:17 on Feb 13,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 6
+# Command : autocheck compile -d control_unit {}
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Thu Feb 13 01:00:17 2025 by aimtiaz23 on lehmus-cn2.oulu.fi
+# 
+# Executing Command : autocheck compile -d control_unit {}
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qautocheck.tcl, Line: 103
+# 
+### Starting Step: netlist elaborate ### 
+# 
+## Elaborating Design...
+# Reading MTI mapping for library mapping
+# Writing all MTI mappings to vmap output ...
+# 
+# Top level modules:
+# 	control_unit
+# 
+# Analyzing design...
+# -- Loading module z0in_work.control_unit
+# -- Loading module z0in_work.control_unit_svamod
+# Optimizing 6 design-units (inlining 0/2 module instances):
+# -- Optimizing package z0in_work.apb_pkg(fast)
+# -- Optimizing package z0in_work.audioport_pkg(fast)
+# -- Optimizing package z0in_work.audioport_util_pkg(fast)
+# -- Optimizing package z0in_work.control_unit_sva_bind_pkg(fast)
+# -- Optimizing module z0in_work.control_unit_svamod(fast)
+# Warning : Vopt warning.  (vopt-13314) Defaulting port 'rbank_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed, File 'input/control_unit_svamod.sv', Line 46.  [parser-285]
+#         : Elaboration will continue.
+# Warning : Vopt warning.  (vopt-13314) Defaulting port 'ldata_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed, File 'input/control_unit_svamod.sv', Line 54.  [parser-285]
+#         : Elaboration will continue.
+# Warning : Vopt warning.  (vopt-13314) Defaulting port 'rdata_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed, File 'input/control_unit_svamod.sv', Line 61.  [parser-285]
+#         : Elaboration will continue.
+# -- Optimizing module z0in_work.control_unit(fast)
+# Optimized design name is zi_opt_af0_1431587986_1
+# Summary: 3 Warnings in processing "netlist elaborate"
+# 
+### Starting Step: netlist create ### 
+# 
+## Synthesizing netlist...
+# Processing module 'control_unit_svamod'
+# Elaborating module 'control_unit_svamod'.
+# Processing module 'control_unit'
+# Elaborating module 'control_unit'.
+# 
+##Time Taken (Synthesis) = 689732.000000 ticks = 0.689732 secs
+# Summary: 3 Warnings in processing "netlist create"
+# 
+### Starting Step: autocheck compile ### 
+# 
+## Processing Formal Logic...
+# Processing module 'control_unit_svamod'
+# Restoring module 'control_unit_svamod'.
+# Processing module 'control_unit'
+# Restoring module 'control_unit'.
+# Flattening design 'control_unit_svamod'.
+# Flattening design 'control_unit'.
+# Info    : Detected clock.  Clock: clk.  [netlist-11]
+# Info    : Detected asynchronous reset.  Signal: rst_n, active low.  [netlist-106]
+# 
+# Clocks
+# ------------------------------------------------------------------------------
+# Port                                   Period         Waveform
+# ------------------------------------------------------------------------------
+# clk                      [inferred]       100             0 50 
+# ------------------------------------------------------------------------------
+# 
+# Blackboxes
+# ------------------------------------------------------------------------------
+# Module name                                                Reason
+# ------------------------------------------------------------------------------
+# <no blackboxed modules>
+# ------------------------------------------------------------------------------
+# 
+# Inferred directives
+# ------------------------------------------------------------------------------
+# netlist clock clk -period 100 -waveform 0 50
+# ------------------------------------------------------------------------------
+# 
+# Formal model has been created.  Design 'control_unit'.
+# 
+# Property Summary
+# -------------------------------------------------------------------------------
+# Total  Directives :11
+# Assert Directives :0
+# Assume Directives :11
+# Cover  Directives :0
+# 
+# SVA Summary
+# -------------------------------------------------------------------------------
+# SVA Directive Type        Directives           Checkers
+# -------------------------------------------------------------------------------
+# Assert                         0                   0
+# Assume                        11                  11
+# Cover                          0                   0
+# -------------------------------------------------------------------------------
+# 
+# AutoCheck Compile Summary
+# -------------------------------------------------------------------------------
+# Check                     Evaluations         Found        Waived
+# -------------------------------------------------------------------------------
+# ASSIGN_IMPLICIT_CONSTANT           25             0             0
+# CASE_DUPLICATE                      0             0             0
+# CLK_DELAY                          12             0             0
+# CLK_IN_DATA                       600             0             0
+# COMBO_LOOP                         48             0             0
+# DECLARATION_UNDRIVEN               13             0             0
+# DECLARATION_UNUSED                 13             0             0
+# DECLARATION_UNUSED_UNDRIVEN         0             0             0
+# FUNCTION_INCOMPLETE_ASSIGN          0             0             0
+# INDEX_UNREACHABLE                7104             0             0
+# LATCH_INFERRED                     28             0             0
+# LOGIC_UNDRIVEN                     13             0             0
+# LOGIC_UNUSED                      139             0             0
+# PORT_UNDRIVEN                      69             0             0
+# PORT_UNUSED                        69             0             0
+# REG_MIXED_ASSIGNS                 178             0             0
+# REG_NO_RESET                      150             0             0
+# REG_RACE                            0             0             0
+# REG_VARIABLE_ARESET               300             0             0
+# RESET_HIGH_LOW                      1             0             0
+# RESET_SYNC_ASYNC                    1             0             0
+# SLIST_INCOMPLETE                   28             0             0
+# X_ASSIGN_REACHABLE                  0             0             0
+# -------------------------------------------------------------------------------
+# AC Total                         8791             0             0
+# -------------------------------------------------------------------------------
+# 
+# 
+# To see results in the GUI run:
+# qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/control_unit_qautocheck_run_log/autocheck.db
+# 
+# 
+# Message Summary
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     3  Warning  parser-285         Vopt warning.
+#     1  Info     netlist-106        Detected asynchronous reset.
+#     1  Info     netlist-11         Detected clock.
+# 
+# Summary: 3 Warnings in processing "autocheck compile"
+# Final Process Statistics: Max memory 722MB, CPU time 2s, Total time 10s
+# 
+# End of log Thu Feb 13 01:00:29 2025
+# 
+# Command : autocheck verify -timeout 2m -jobs 4
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Thu Feb 13 01:00:29 2025 by aimtiaz23 on lehmus-cn2.oulu.fi
+# 
+# Executing Command : autocheck verify -timeout 2m -jobs 4 
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qautocheck.tcl, Line: 109
+# 
+# Info    : Using initialization sequence file to initialize design state.  File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/rst.questa_init'.  [formal-205]
+# Info    : Automatically constraining reset signal to de-assert after initialization sequence (use -auto_constraint_off option to disable).  Signal 'rst_n', Value '1'.  [formal-285]
+# Info	: Warning(line 4): no $default_clock declared, using clk
+# Applying synthesis semantics to design: control_unit
+# Info    : The number of engine jobs set is less than the available compute resources.  Remove the '-jobs 4' option to improve performance. Up to 16 engine jobs can be simultaneously run per license.  [formal-477]
+# [00:00:00] Status: Done 0/225, 0 issues, Mem=0GB
+# Info    : Established connection with engine process.  Hostname 'lehmus-cn2.oulu.fi', PID 3374507, Id 3, Time [00:00:00].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'lehmus-cn2.oulu.fi', PID 3374509, Id 1, Time [00:00:00].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'lehmus-cn2.oulu.fi', PID 3374510, Id 4, Time [00:00:00].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'lehmus-cn2.oulu.fi', PID 3374515, Id 2, Time [00:00:00].  [formal-385]
+# Info    : Timeout reached.  Formal process will terminate.  [formal-206]
+# [00:02:00] Status: Done 221/225, 0 issues, Mem=2GB
+# 
+# AutoCheck Compile Summary
+# -------------------------------------------------------------------------------
+# Check                     Evaluations         Found        Waived
+# -------------------------------------------------------------------------------
+# ASSIGN_IMPLICIT_CONSTANT           25             0             0
+# CASE_DUPLICATE                      0             0             0
+# CLK_DELAY                          12             0             0
+# CLK_IN_DATA                       600             0             0
+# COMBO_LOOP                         48             0             0
+# DECLARATION_UNDRIVEN               13             0             0
+# DECLARATION_UNUSED                 13             0             0
+# DECLARATION_UNUSED_UNDRIVEN         0             0             0
+# FUNCTION_INCOMPLETE_ASSIGN          0             0             0
+# INDEX_UNREACHABLE                7104             0             0
+# LATCH_INFERRED                     28             0             0
+# LOGIC_UNDRIVEN                     13             0             0
+# LOGIC_UNUSED                      139             0             0
+# PORT_UNDRIVEN                      69             0             0
+# PORT_UNUSED                        69             0             0
+# REG_MIXED_ASSIGNS                 178             0             0
+# REG_NO_RESET                      150             0             0
+# REG_RACE                            0             0             0
+# REG_VARIABLE_ARESET               300             0             0
+# RESET_HIGH_LOW                      1             0             0
+# RESET_SYNC_ASYNC                    1             0             0
+# SLIST_INCOMPLETE                   28             0             0
+# X_ASSIGN_REACHABLE                  0             0             0
+# -------------------------------------------------------------------------------
+# AC Total                         8791             0             0
+# -------------------------------------------------------------------------------
+# 
+# 
+# AutoCheck Verify Summary
+# -------------------------------------------------------------------------------
+# Check                     Evaluations         Found        Waived
+# -------------------------------------------------------------------------------
+# ARITH_OVERFLOW_SUB                  0             0             0
+# ARITH_OVERFLOW_VAL                  6             0             0
+# ARITH_ZERO_DIV                      0             0             0
+# ARITH_ZERO_MOD                      0             0             0
+# BLOCK_UNREACHABLE                  59             0             0
+# BUS_MULTIPLY_DRIVEN                 0             0             0
+# BUS_UNDRIVEN                        0             0             0
+# BUS_VALUE_CONFLICT                  0             0             0
+# CASE_DEFAULT                      OFF           OFF           OFF
+# CASE_FULL                           0             0             0
+# CASE_PARALLEL                       0             0             0
+# FSM_DEADLOCK_STATE                  0             0             0
+# FSM_LOCKOUT_STATE                   0             0             0
+# FSM_STUCK_BIT                       0             0             0
+# FSM_UNREACHABLE_STATE               0             0             0
+# FSM_UNREACHABLE_TRANS               0             0             0
+# INDEX_ILLEGAL                       5             0             0
+# INIT_X_PESSIMISM                    0             0             0
+# INIT_X_UNRESOLVED                   0             0             0
+# INIT_X_UNRESOLVED_MEM               0             0             0
+# ONE_COLD                            0             0             0
+# ONE_HOT                             0             0             0
+# REG_MULTIPLY_DRIVEN                 0             0             0
+# REG_STUCK_AT                      150             0             0
+# REG_TOGGLE_VIOLATION                5             0             0
+# -------------------------------------------------------------------------------
+# AC Total                          225             0             0
+# -------------------------------------------------------------------------------
+# 
+# 
+# 
+# --------- Process Statistics ----------
+# Elapsed Time                     120 s
+# Total CPU Time                   230 s
+# Total Peak Memory                2.0 GB
+# ---------- Engine Processes -----------
+# Average CPU Time                  56 s
+# Minimum CPU Utilization           46 %
+# Average Peak Memory              0.4 GB
+# Maximum Peak Memory              0.5 GB
+# Peak Cores                         4
+# Distinct Machines                  1
+# Launch Failures                    0
+# Unexpected Process Terminations    0
+# Successful Re-connections          0
+# ---------------------------------------
+# 
+# 
+# Message Summary
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     1  Info     formal-205         Using initialization sequence file to initialize design state.
+#     1  Info     formal-206         Timeout reached.
+#     1  Info     formal-285         Automatically constraining reset signal to de-assert after initialization sequence (use -auto_constraint_off option to disable).
+#     4  Info     formal-385         Established connection with engine process.
+#     1  Info     formal-477         The number of engine jobs set is less than the available compute resources.
+# 
+# Final Process Statistics: Peak Memory 0.46GB, Cumulative CPU Time 230s, Elapsed Time 120s
+# 
+# To see results in the GUI run:
+# qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/control_unit_qautocheck_run_log/autocheck.db
+# 
+# 

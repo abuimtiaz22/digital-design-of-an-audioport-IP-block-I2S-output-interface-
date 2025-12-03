@@ -1,0 +1,450 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /control_unit_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.control_unit_svamod
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      2        na        na    95.83%
+        Coverpoints/Crosses          4        na        na        na
+            Covergroup Bins        158       155         3    98.10%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cg_rbreads 
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                   138        138          -                      
+    missing/total bins:                                     0        138          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint #coverpoint__0#                        100.00%        100          -    Covered              
+        covered/total bins:                               138        138          -                      
+        missing/total bins:                                 0        138          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cg_rbreads_inst  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                   138        138          -                      
+    missing/total bins:                                     0        138          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint #coverpoint__0#                        100.00%        100          -    Covered              
+        covered/total bins:                               138        138          -                      
+        missing/total bins:                                 0        138          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin reg_addresses[587202560]                       42          1          -    Covered              
+        bin reg_addresses[587202561]                       10          1          -    Covered              
+        bin reg_addresses[587202562]                       10          1          -    Covered              
+        bin reg_addresses[587202563]                       10          1          -    Covered              
+        bin reg_addresses[587202564]                       10          1          -    Covered              
+        bin reg_addresses[587202565]                       10          1          -    Covered              
+        bin reg_addresses[587202566]                       10          1          -    Covered              
+        bin reg_addresses[587202567]                       10          1          -    Covered              
+        bin reg_addresses[587202568]                       10          1          -    Covered              
+        bin reg_addresses[587202569]                       10          1          -    Covered              
+        bin reg_addresses[587202570]                       10          1          -    Covered              
+        bin reg_addresses[587202571]                       10          1          -    Covered              
+        bin reg_addresses[587202572]                       10          1          -    Covered              
+        bin reg_addresses[587202573]                       10          1          -    Covered              
+        bin reg_addresses[587202574]                       10          1          -    Covered              
+        bin reg_addresses[587202575]                       10          1          -    Covered              
+        bin reg_addresses[587202576]                       10          1          -    Covered              
+        bin reg_addresses[587202577]                       10          1          -    Covered              
+        bin reg_addresses[587202578]                       10          1          -    Covered              
+        bin reg_addresses[587202579]                       10          1          -    Covered              
+        bin reg_addresses[587202580]                       10          1          -    Covered              
+        bin reg_addresses[587202581]                       10          1          -    Covered              
+        bin reg_addresses[587202582]                       10          1          -    Covered              
+        bin reg_addresses[587202583]                       10          1          -    Covered              
+        bin reg_addresses[587202584]                       10          1          -    Covered              
+        bin reg_addresses[587202585]                       10          1          -    Covered              
+        bin reg_addresses[587202586]                       10          1          -    Covered              
+        bin reg_addresses[587202587]                       10          1          -    Covered              
+        bin reg_addresses[587202588]                       10          1          -    Covered              
+        bin reg_addresses[587202589]                       10          1          -    Covered              
+        bin reg_addresses[587202590]                       10          1          -    Covered              
+        bin reg_addresses[587202591]                       10          1          -    Covered              
+        bin reg_addresses[587202592]                       10          1          -    Covered              
+        bin reg_addresses[587202593]                       10          1          -    Covered              
+        bin reg_addresses[587202594]                       10          1          -    Covered              
+        bin reg_addresses[587202595]                       10          1          -    Covered              
+        bin reg_addresses[587202596]                       10          1          -    Covered              
+        bin reg_addresses[587202597]                       10          1          -    Covered              
+        bin reg_addresses[587202598]                       10          1          -    Covered              
+        bin reg_addresses[587202599]                       10          1          -    Covered              
+        bin reg_addresses[587202600]                       10          1          -    Covered              
+        bin reg_addresses[587202601]                       10          1          -    Covered              
+        bin reg_addresses[587202602]                       10          1          -    Covered              
+        bin reg_addresses[587202603]                       10          1          -    Covered              
+        bin reg_addresses[587202604]                       10          1          -    Covered              
+        bin reg_addresses[587202605]                       10          1          -    Covered              
+        bin reg_addresses[587202606]                       10          1          -    Covered              
+        bin reg_addresses[587202607]                       10          1          -    Covered              
+        bin reg_addresses[587202608]                       10          1          -    Covered              
+        bin reg_addresses[587202609]                       10          1          -    Covered              
+        bin reg_addresses[587202610]                       10          1          -    Covered              
+        bin reg_addresses[587202611]                       10          1          -    Covered              
+        bin reg_addresses[587202612]                       10          1          -    Covered              
+        bin reg_addresses[587202613]                       10          1          -    Covered              
+        bin reg_addresses[587202614]                       10          1          -    Covered              
+        bin reg_addresses[587202615]                       10          1          -    Covered              
+        bin reg_addresses[587202616]                       10          1          -    Covered              
+        bin reg_addresses[587202617]                       10          1          -    Covered              
+        bin reg_addresses[587202618]                       10          1          -    Covered              
+        bin reg_addresses[587202619]                       10          1          -    Covered              
+        bin reg_addresses[587202620]                       10          1          -    Covered              
+        bin reg_addresses[587202621]                       10          1          -    Covered              
+        bin reg_addresses[587202622]                       10          1          -    Covered              
+        bin reg_addresses[587202623]                       10          1          -    Covered              
+        bin reg_addresses[587202624]                       10          1          -    Covered              
+        bin reg_addresses[587202625]                       10          1          -    Covered              
+        bin reg_addresses[587202626]                       10          1          -    Covered              
+        bin reg_addresses[587202627]                       10          1          -    Covered              
+        bin reg_addresses[587202628]                       10          1          -    Covered              
+        bin reg_addresses[587202629]                       10          1          -    Covered              
+        bin reg_addresses[587202630]                       10          1          -    Covered              
+        bin reg_addresses[587202631]                       10          1          -    Covered              
+        bin reg_addresses[587202632]                       10          1          -    Covered              
+        bin reg_addresses[587202633]                       10          1          -    Covered              
+        bin reg_addresses[587202634]                       10          1          -    Covered              
+        bin reg_addresses[587202635]                       10          1          -    Covered              
+        bin reg_addresses[587202636]                       10          1          -    Covered              
+        bin reg_addresses[587202637]                       10          1          -    Covered              
+        bin reg_addresses[587202638]                       10          1          -    Covered              
+        bin reg_addresses[587202639]                       10          1          -    Covered              
+        bin reg_addresses[587202640]                       10          1          -    Covered              
+        bin reg_addresses[587202641]                       10          1          -    Covered              
+        bin reg_addresses[587202642]                       10          1          -    Covered              
+        bin reg_addresses[587202643]                       10          1          -    Covered              
+        bin reg_addresses[587202644]                       10          1          -    Covered              
+        bin reg_addresses[587202645]                       10          1          -    Covered              
+        bin reg_addresses[587202646]                       10          1          -    Covered              
+        bin reg_addresses[587202647]                       10          1          -    Covered              
+        bin reg_addresses[587202648]                       10          1          -    Covered              
+        bin reg_addresses[587202649]                       10          1          -    Covered              
+        bin reg_addresses[587202650]                       10          1          -    Covered              
+        bin reg_addresses[587202651]                       10          1          -    Covered              
+        bin reg_addresses[587202652]                       10          1          -    Covered              
+        bin reg_addresses[587202653]                       10          1          -    Covered              
+        bin reg_addresses[587202654]                       10          1          -    Covered              
+        bin reg_addresses[587202655]                       10          1          -    Covered              
+        bin reg_addresses[587202656]                       10          1          -    Covered              
+        bin reg_addresses[587202657]                       10          1          -    Covered              
+        bin reg_addresses[587202658]                       10          1          -    Covered              
+        bin reg_addresses[587202659]                       10          1          -    Covered              
+        bin reg_addresses[587202660]                       10          1          -    Covered              
+        bin reg_addresses[587202661]                       10          1          -    Covered              
+        bin reg_addresses[587202662]                       10          1          -    Covered              
+        bin reg_addresses[587202663]                       10          1          -    Covered              
+        bin reg_addresses[587202664]                       10          1          -    Covered              
+        bin reg_addresses[587202665]                       10          1          -    Covered              
+        bin reg_addresses[587202666]                       10          1          -    Covered              
+        bin reg_addresses[587202667]                       10          1          -    Covered              
+        bin reg_addresses[587202668]                       10          1          -    Covered              
+        bin reg_addresses[587202669]                       10          1          -    Covered              
+        bin reg_addresses[587202670]                       10          1          -    Covered              
+        bin reg_addresses[587202671]                       10          1          -    Covered              
+        bin reg_addresses[587202672]                       10          1          -    Covered              
+        bin reg_addresses[587202673]                       10          1          -    Covered              
+        bin reg_addresses[587202674]                       10          1          -    Covered              
+        bin reg_addresses[587202675]                       10          1          -    Covered              
+        bin reg_addresses[587202676]                       10          1          -    Covered              
+        bin reg_addresses[587202677]                       10          1          -    Covered              
+        bin reg_addresses[587202678]                       10          1          -    Covered              
+        bin reg_addresses[587202679]                       10          1          -    Covered              
+        bin reg_addresses[587202680]                       10          1          -    Covered              
+        bin reg_addresses[587202681]                       10          1          -    Covered              
+        bin reg_addresses[587202682]                       10          1          -    Covered              
+        bin reg_addresses[587202683]                       10          1          -    Covered              
+        bin reg_addresses[587202684]                       10          1          -    Covered              
+        bin reg_addresses[587202685]                       10          1          -    Covered              
+        bin reg_addresses[587202686]                       10          1          -    Covered              
+        bin reg_addresses[587202687]                       10          1          -    Covered              
+        bin reg_addresses[587202688]                       10          1          -    Covered              
+        bin reg_addresses[587202689]                       10          1          -    Covered              
+        bin reg_addresses[587202690]                       10          1          -    Covered              
+        bin reg_addresses[587202691]                       10          1          -    Covered              
+        bin reg_addresses[587202692]                       10          1          -    Covered              
+        bin reg_addresses[587202693]                       10          1          -    Covered              
+        bin reg_addresses[587202694]                       10          1          -    Covered              
+        bin reg_addresses[587202695]                       10          1          -    Covered              
+        bin reg_addresses[587202696]                       10          1          -    Covered              
+        bin reg_addresses[587202697]                       10          1          -    Covered              
+ TYPE /control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cg_commands 
+                                                       91.66%        100          -    Uncovered            
+    covered/total bins:                                    17         20          -                      
+    missing/total bins:                                     3         20          -                      
+    % Hit:                                             85.00%        100          -                      
+    Coverpoint PWDATA                                 100.00%        100          -    Covered              
+        covered/total bins:                                 6          6          -                      
+        missing/total bins:                                 0          6          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint play_out                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross #cross__0#                                   75.00%        100          -    Uncovered            
+        covered/total bins:                                 9         12          -                      
+        missing/total bins:                                 3         12          -                      
+        % Hit:                                         75.00%        100          -                      
+ Covergroup instance \/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cg_commands_inst  
+                                                       91.66%        100          -    Uncovered            
+    covered/total bins:                                    17         20          -                      
+    missing/total bins:                                     3         20          -                      
+    % Hit:                                             85.00%        100          -                      
+    Coverpoint PWDATA                                 100.00%        100          -    Covered              
+        covered/total bins:                                 6          6          -                      
+        missing/total bins:                                 0          6          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cmd_clr                                       341          1          -    Covered              
+        bin cmd_cfg                                         5          1          -    Covered              
+        bin cmd_level                                      11          1          -    Covered              
+        bin cmd_start                                   91100          1          -    Covered              
+        bin cmd_stop                                       66          1          -    Covered              
+        bin cmd_irqack                                 178879          1          -    Covered              
+        default bin illegal                              4814                     -    Occurred             
+    Coverpoint play_out                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin standby                                      4248          1          -    Covered              
+        bin play                                       270968          1          -    Covered              
+    Cross #cross__0#                                   75.00%        100          -    Uncovered            
+        covered/total bins:                                 9         12          -                      
+        missing/total bins:                                 3         12          -                      
+        % Hit:                                         75.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <cmd_irqack,play>                      178870          1          -    Covered              
+            bin <cmd_stop,play>                             6          1          -    Covered              
+            bin <cmd_start,play>                        91083          1          -    Covered              
+            bin <cmd_irqack,standby>                        9          1          -    Covered              
+            bin <cmd_stop,standby>                         60          1          -    Covered              
+            bin <cmd_start,standby>                        17          1          -    Covered              
+            bin <cmd_level,standby>                        11          1          -    Covered              
+            bin <cmd_cfg,standby>                           5          1          -    Covered              
+            bin <cmd_clr,standby>                         341          1          -    Covered              
+            bin <cmd_level,play>                            0          1          1    ZERO                 
+            bin <cmd_cfg,play>                              0          1          1    ZERO                 
+            bin <cmd_clr,play>                              0          1          1    ZERO                 
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cg_rbreads 
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                   138        138          -                      
+    missing/total bins:                                     0        138          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint #coverpoint__0#                        100.00%        100          -    Covered              
+        covered/total bins:                               138        138          -                      
+        missing/total bins:                                 0        138          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cg_rbreads_inst  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                   138        138          -                      
+    missing/total bins:                                     0        138          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint #coverpoint__0#                        100.00%        100          -    Covered              
+        covered/total bins:                               138        138          -                      
+        missing/total bins:                                 0        138          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin reg_addresses[587202560]                       42          1          -    Covered              
+        bin reg_addresses[587202561]                       10          1          -    Covered              
+        bin reg_addresses[587202562]                       10          1          -    Covered              
+        bin reg_addresses[587202563]                       10          1          -    Covered              
+        bin reg_addresses[587202564]                       10          1          -    Covered              
+        bin reg_addresses[587202565]                       10          1          -    Covered              
+        bin reg_addresses[587202566]                       10          1          -    Covered              
+        bin reg_addresses[587202567]                       10          1          -    Covered              
+        bin reg_addresses[587202568]                       10          1          -    Covered              
+        bin reg_addresses[587202569]                       10          1          -    Covered              
+        bin reg_addresses[587202570]                       10          1          -    Covered              
+        bin reg_addresses[587202571]                       10          1          -    Covered              
+        bin reg_addresses[587202572]                       10          1          -    Covered              
+        bin reg_addresses[587202573]                       10          1          -    Covered              
+        bin reg_addresses[587202574]                       10          1          -    Covered              
+        bin reg_addresses[587202575]                       10          1          -    Covered              
+        bin reg_addresses[587202576]                       10          1          -    Covered              
+        bin reg_addresses[587202577]                       10          1          -    Covered              
+        bin reg_addresses[587202578]                       10          1          -    Covered              
+        bin reg_addresses[587202579]                       10          1          -    Covered              
+        bin reg_addresses[587202580]                       10          1          -    Covered              
+        bin reg_addresses[587202581]                       10          1          -    Covered              
+        bin reg_addresses[587202582]                       10          1          -    Covered              
+        bin reg_addresses[587202583]                       10          1          -    Covered              
+        bin reg_addresses[587202584]                       10          1          -    Covered              
+        bin reg_addresses[587202585]                       10          1          -    Covered              
+        bin reg_addresses[587202586]                       10          1          -    Covered              
+        bin reg_addresses[587202587]                       10          1          -    Covered              
+        bin reg_addresses[587202588]                       10          1          -    Covered              
+        bin reg_addresses[587202589]                       10          1          -    Covered              
+        bin reg_addresses[587202590]                       10          1          -    Covered              
+        bin reg_addresses[587202591]                       10          1          -    Covered              
+        bin reg_addresses[587202592]                       10          1          -    Covered              
+        bin reg_addresses[587202593]                       10          1          -    Covered              
+        bin reg_addresses[587202594]                       10          1          -    Covered              
+        bin reg_addresses[587202595]                       10          1          -    Covered              
+        bin reg_addresses[587202596]                       10          1          -    Covered              
+        bin reg_addresses[587202597]                       10          1          -    Covered              
+        bin reg_addresses[587202598]                       10          1          -    Covered              
+        bin reg_addresses[587202599]                       10          1          -    Covered              
+        bin reg_addresses[587202600]                       10          1          -    Covered              
+        bin reg_addresses[587202601]                       10          1          -    Covered              
+        bin reg_addresses[587202602]                       10          1          -    Covered              
+        bin reg_addresses[587202603]                       10          1          -    Covered              
+        bin reg_addresses[587202604]                       10          1          -    Covered              
+        bin reg_addresses[587202605]                       10          1          -    Covered              
+        bin reg_addresses[587202606]                       10          1          -    Covered              
+        bin reg_addresses[587202607]                       10          1          -    Covered              
+        bin reg_addresses[587202608]                       10          1          -    Covered              
+        bin reg_addresses[587202609]                       10          1          -    Covered              
+        bin reg_addresses[587202610]                       10          1          -    Covered              
+        bin reg_addresses[587202611]                       10          1          -    Covered              
+        bin reg_addresses[587202612]                       10          1          -    Covered              
+        bin reg_addresses[587202613]                       10          1          -    Covered              
+        bin reg_addresses[587202614]                       10          1          -    Covered              
+        bin reg_addresses[587202615]                       10          1          -    Covered              
+        bin reg_addresses[587202616]                       10          1          -    Covered              
+        bin reg_addresses[587202617]                       10          1          -    Covered              
+        bin reg_addresses[587202618]                       10          1          -    Covered              
+        bin reg_addresses[587202619]                       10          1          -    Covered              
+        bin reg_addresses[587202620]                       10          1          -    Covered              
+        bin reg_addresses[587202621]                       10          1          -    Covered              
+        bin reg_addresses[587202622]                       10          1          -    Covered              
+        bin reg_addresses[587202623]                       10          1          -    Covered              
+        bin reg_addresses[587202624]                       10          1          -    Covered              
+        bin reg_addresses[587202625]                       10          1          -    Covered              
+        bin reg_addresses[587202626]                       10          1          -    Covered              
+        bin reg_addresses[587202627]                       10          1          -    Covered              
+        bin reg_addresses[587202628]                       10          1          -    Covered              
+        bin reg_addresses[587202629]                       10          1          -    Covered              
+        bin reg_addresses[587202630]                       10          1          -    Covered              
+        bin reg_addresses[587202631]                       10          1          -    Covered              
+        bin reg_addresses[587202632]                       10          1          -    Covered              
+        bin reg_addresses[587202633]                       10          1          -    Covered              
+        bin reg_addresses[587202634]                       10          1          -    Covered              
+        bin reg_addresses[587202635]                       10          1          -    Covered              
+        bin reg_addresses[587202636]                       10          1          -    Covered              
+        bin reg_addresses[587202637]                       10          1          -    Covered              
+        bin reg_addresses[587202638]                       10          1          -    Covered              
+        bin reg_addresses[587202639]                       10          1          -    Covered              
+        bin reg_addresses[587202640]                       10          1          -    Covered              
+        bin reg_addresses[587202641]                       10          1          -    Covered              
+        bin reg_addresses[587202642]                       10          1          -    Covered              
+        bin reg_addresses[587202643]                       10          1          -    Covered              
+        bin reg_addresses[587202644]                       10          1          -    Covered              
+        bin reg_addresses[587202645]                       10          1          -    Covered              
+        bin reg_addresses[587202646]                       10          1          -    Covered              
+        bin reg_addresses[587202647]                       10          1          -    Covered              
+        bin reg_addresses[587202648]                       10          1          -    Covered              
+        bin reg_addresses[587202649]                       10          1          -    Covered              
+        bin reg_addresses[587202650]                       10          1          -    Covered              
+        bin reg_addresses[587202651]                       10          1          -    Covered              
+        bin reg_addresses[587202652]                       10          1          -    Covered              
+        bin reg_addresses[587202653]                       10          1          -    Covered              
+        bin reg_addresses[587202654]                       10          1          -    Covered              
+        bin reg_addresses[587202655]                       10          1          -    Covered              
+        bin reg_addresses[587202656]                       10          1          -    Covered              
+        bin reg_addresses[587202657]                       10          1          -    Covered              
+        bin reg_addresses[587202658]                       10          1          -    Covered              
+        bin reg_addresses[587202659]                       10          1          -    Covered              
+        bin reg_addresses[587202660]                       10          1          -    Covered              
+        bin reg_addresses[587202661]                       10          1          -    Covered              
+        bin reg_addresses[587202662]                       10          1          -    Covered              
+        bin reg_addresses[587202663]                       10          1          -    Covered              
+        bin reg_addresses[587202664]                       10          1          -    Covered              
+        bin reg_addresses[587202665]                       10          1          -    Covered              
+        bin reg_addresses[587202666]                       10          1          -    Covered              
+        bin reg_addresses[587202667]                       10          1          -    Covered              
+        bin reg_addresses[587202668]                       10          1          -    Covered              
+        bin reg_addresses[587202669]                       10          1          -    Covered              
+        bin reg_addresses[587202670]                       10          1          -    Covered              
+        bin reg_addresses[587202671]                       10          1          -    Covered              
+        bin reg_addresses[587202672]                       10          1          -    Covered              
+        bin reg_addresses[587202673]                       10          1          -    Covered              
+        bin reg_addresses[587202674]                       10          1          -    Covered              
+        bin reg_addresses[587202675]                       10          1          -    Covered              
+        bin reg_addresses[587202676]                       10          1          -    Covered              
+        bin reg_addresses[587202677]                       10          1          -    Covered              
+        bin reg_addresses[587202678]                       10          1          -    Covered              
+        bin reg_addresses[587202679]                       10          1          -    Covered              
+        bin reg_addresses[587202680]                       10          1          -    Covered              
+        bin reg_addresses[587202681]                       10          1          -    Covered              
+        bin reg_addresses[587202682]                       10          1          -    Covered              
+        bin reg_addresses[587202683]                       10          1          -    Covered              
+        bin reg_addresses[587202684]                       10          1          -    Covered              
+        bin reg_addresses[587202685]                       10          1          -    Covered              
+        bin reg_addresses[587202686]                       10          1          -    Covered              
+        bin reg_addresses[587202687]                       10          1          -    Covered              
+        bin reg_addresses[587202688]                       10          1          -    Covered              
+        bin reg_addresses[587202689]                       10          1          -    Covered              
+        bin reg_addresses[587202690]                       10          1          -    Covered              
+        bin reg_addresses[587202691]                       10          1          -    Covered              
+        bin reg_addresses[587202692]                       10          1          -    Covered              
+        bin reg_addresses[587202693]                       10          1          -    Covered              
+        bin reg_addresses[587202694]                       10          1          -    Covered              
+        bin reg_addresses[587202695]                       10          1          -    Covered              
+        bin reg_addresses[587202696]                       10          1          -    Covered              
+        bin reg_addresses[587202697]                       10          1          -    Covered              
+ TYPE /control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cg_commands 
+                                                       91.66%        100          -    Uncovered            
+    covered/total bins:                                    17         20          -                      
+    missing/total bins:                                     3         20          -                      
+    % Hit:                                             85.00%        100          -                      
+    Coverpoint PWDATA                                 100.00%        100          -    Covered              
+        covered/total bins:                                 6          6          -                      
+        missing/total bins:                                 0          6          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint play_out                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross #cross__0#                                   75.00%        100          -    Uncovered            
+        covered/total bins:                                 9         12          -                      
+        missing/total bins:                                 3         12          -                      
+        % Hit:                                         75.00%        100          -                      
+ Covergroup instance \/control_unit_tb/DUT_INSTANCE/CHECKER_MODULE/cg_commands_inst  
+                                                       91.66%        100          -    Uncovered            
+    covered/total bins:                                    17         20          -                      
+    missing/total bins:                                     3         20          -                      
+    % Hit:                                             85.00%        100          -                      
+    Coverpoint PWDATA                                 100.00%        100          -    Covered              
+        covered/total bins:                                 6          6          -                      
+        missing/total bins:                                 0          6          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin cmd_clr                                       341          1          -    Covered              
+        bin cmd_cfg                                         5          1          -    Covered              
+        bin cmd_level                                      11          1          -    Covered              
+        bin cmd_start                                   91100          1          -    Covered              
+        bin cmd_stop                                       66          1          -    Covered              
+        bin cmd_irqack                                 178879          1          -    Covered              
+        default bin illegal                              4814                     -    Occurred             
+    Coverpoint play_out                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin standby                                      4248          1          -    Covered              
+        bin play                                       270968          1          -    Covered              
+    Cross #cross__0#                                   75.00%        100          -    Uncovered            
+        covered/total bins:                                 9         12          -                      
+        missing/total bins:                                 3         12          -                      
+        % Hit:                                         75.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <cmd_irqack,play>                      178870          1          -    Covered              
+            bin <cmd_stop,play>                             6          1          -    Covered              
+            bin <cmd_start,play>                        91083          1          -    Covered              
+            bin <cmd_irqack,standby>                        9          1          -    Covered              
+            bin <cmd_stop,standby>                         60          1          -    Covered              
+            bin <cmd_start,standby>                        17          1          -    Covered              
+            bin <cmd_level,standby>                        11          1          -    Covered              
+            bin <cmd_cfg,standby>                           5          1          -    Covered              
+            bin <cmd_clr,standby>                         341          1          -    Covered              
+            bin <cmd_level,play>                            0          1          1    ZERO                 
+            bin <cmd_cfg,play>                              0          1          1    ZERO                 
+            bin <cmd_clr,play>                              0          1          1    ZERO                 
+
+TOTAL COVERGROUP COVERAGE: 95.83%  COVERGROUP TYPES: 2
+
+Total Coverage By Instance (filtered view): 95.83%
+

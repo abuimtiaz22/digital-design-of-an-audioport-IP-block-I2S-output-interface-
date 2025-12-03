@@ -1,0 +1,361 @@
+# transcript sizelimit $VSIM_TRANSCRIPT_SIZE
+# 
+# set VSIM_DEBUGDB     ${OUTPUT_DIR}/${DESIGN_NAME}_scrtl.dbg
+# output/dsp_unit_scrtl.dbg
+# set VSIM_DESIGNFILE  ${OUTPUT_DIR}/${DESIGN_NAME}_scrtl.bin
+# output/dsp_unit_scrtl.bin
+# set VSIM_QWAVEDB     ${OUTPUT_DIR}/${DESIGN_NAME}_scrtl.db
+# output/dsp_unit_scrtl.db
+# set VSIM_VOPTDIR     ${DESIGN_NAME}_systemc_vopt
+# dsp_unit_systemc_vopt
+# set VSIM_WORKDIR     ${OUTPUT_DIR}/${DESIGN_NAME}_questasim_work
+# output/dsp_unit_questasim_work
+# set VSIM_SCLIBDIR    ${OUTPUT_DIR}/${DESIGN_NAME}_questasim_sclib
+# output/dsp_unit_questasim_sclib
+# 
+# if { [info exists vsim_libs_created ] == 0 } {
+#     file delete -force $VSIM_DEBUGDB
+#     file delete -force $VSIM_DESIGNFILE
+#     file delete -force $VSIM_QWAVEDB
+#     file delete -force $VSIM_WORKDIR
+#     file delete -force $VSIM_SCLIBDIR
+# }
+# 
+# set SCCOM_SETTINGS " -g -I ${INPUT_DIR} -work $VSIM_SCLIBDIR -verbose -DHLS_RTL"
+#  -g -I input -work output/dsp_unit_questasim_sclib -verbose -DHLS_RTL
+# set VLOG_SETTINGS " +acc -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec \
+# 		    +define+design_top_is_${DESIGN_NAME} +define+DESIGN_NAME_MACRO=${DESIGN_NAME} +define+HLS_RTL \
+#                     +incdir+${INPUT_DIR} \
+#                     -sv -work work"
+#  +acc -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_dsp_unit +define+DESIGN_NAME_MACRO=dsp_unit +define+HLS_RTL  +incdir+input  -sv -work work
+# set VCOM_SETTINGS " -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh \
+#                     -work work"       
+#  -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+# set VSIM_SETTINGS " -note 6599 -displaymsgmode both -voptargs=+acc -classdebug -assertdebug -coverage \
+#                     -debugDB=${VSIM_DEBUGDB} -sclib ${VSIM_SCLIBDIR} -L ${VSIM_SCLIBDIR} \
+#                     systemc_lib.sc_main"
+#  -note 6599 -displaymsgmode both -voptargs=+acc -classdebug -assertdebug -coverage  -debugDB=output/dsp_unit_scrtl.dbg -sclib output/dsp_unit_questasim_sclib -L output/dsp_unit_questasim_sclib  systemc_lib.sc_main
+# 
+# 
+#################################################################
+# Merge user settings
+#################################################################
+# 
+# set VLOG_SETTINGS  [concat $VLOG_SCRTL_OPTIONS $VLOG_SETTINGS ]
+# +acc -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_dsp_unit +define+DESIGN_NAME_MACRO=dsp_unit +define+HLS_RTL  +incdir+input  -sv -work work
+# set VSIM_SETTINGS  [concat $VSIM_SCRTL_OPTIONS $VSIM_SETTINGS ]
+# -t 1ps -sc_arg "-run" -sc_arg "vsim_rtl" -sc_arg "-output" -sc_arg "results" -note 6599 -displaymsgmode both -voptargs=+acc -classdebug -assertdebug -coverage  -debugDB=output/dsp_unit_scrtl.dbg -sclib output/dsp_unit_questasim_sclib -L output/dsp_unit_questasim_sclib  systemc_lib.sc_main
+# set SCCOM_SETTINGS [concat $VSIM_SCCOM_OPTIONS $SCCOM_SETTINGS ]
+# -DSC_GUI_SIMULATION -g -I input -work output/dsp_unit_questasim_sclib -verbose -DHLS_RTL
+# 
+#################################################################
+# Create libraries
+#################################################################
+# 
+# if { [info exists vsim_libs_created ] == 0 } {
+#     vlib ${VSIM_WORKDIR}
+#     vmap work ${VSIM_WORKDIR}
+#     vlib ${VSIM_SCLIBDIR}
+#     vmap systemc_lib ${VSIM_SCLIBDIR}
+#     set vsim_libs_created 1
+# }
+# 1
+# 
+#################################################################
+# Compilation
+#################################################################
+# 
+# RTL DUT
+# foreach filename [concat ${DESIGN_FILES} ${RTL_FILES} ${SVA_FILES} ] {
+#     set ext [file extension $filename]
+#     if { $ext == ".vhd" } {
+# 	eval "vcom $VCOM_SETTINGS ${filename}"
+#     } elseif { $ext == ".v" || $ext == ".sv" } {
+# 	eval "vlog $VLOG_SETTINGS ${filename}"	
+#     }
+# }
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:28:39 on Apr 04,2025
+# vlog -reportprogress 300 "+acc" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+define+HLS_RTL" "+incdir+input" -sv -work work input/apb_pkg.sv 
+# -- Compiling package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 03:28:39 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:28:39 on Apr 04,2025
+# vlog -reportprogress 300 "+acc" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+define+HLS_RTL" "+incdir+input" -sv -work work input/audioport_pkg.sv 
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 03:28:40 on Apr 04,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:28:40 on Apr 04,2025
+# vlog -reportprogress 300 "+acc" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+define+HLS_RTL" "+incdir+input" -sv -work work input/audioport_util_pkg.sv 
+# -- Compiling package audioport_util_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 03:28:40 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:28:40 on Apr 04,2025
+# vlog -reportprogress 300 "+acc" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+define+HLS_RTL" "+incdir+input" -sv -work work results/dsp_unit_hls_rtl.v 
+# -- Compiling module mgc_out_dreg_v2
+# -- Compiling module ccs_in_v1
+# -- Compiling module ccs_sync_out_vld_v1
+# -- Compiling module dsp_unit_read_inputs_core
+# -- Compiling module dsp_unit_read_inputs
+# -- Compiling module dsp_unit_write_outputs_core
+# -- Compiling module dsp_unit_write_outputs
+# -- Compiling module dsp_unit_regs_proc
+# -- Compiling module dsp_unit_dsp_proc_dsp_proc_fsm
+# -- Compiling module dsp_unit_dsp_proc_staller
+# -- Compiling module dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl
+# -- Compiling module dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl
+# -- Compiling module dsp_unit_dsp_proc_write_outputs_mioi
+# -- Compiling module dsp_unit_dsp_proc_read_inputs_mioi
+# -- Compiling module dsp_unit_dsp_proc
+# -- Compiling module dsp_unit_rtl
+# 
+# Top level modules:
+# 	dsp_unit_rtl
+# End time: 03:28:40 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:28:40 on Apr 04,2025
+# vlog -reportprogress 300 "+acc" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+define+HLS_RTL" "+incdir+input" -sv -work work input/dsp_unit.sv 
+# -- Compiling package dsp_unit_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module dsp_unit
+# 
+# Top level modules:
+# 	dsp_unit
+# End time: 03:28:40 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 03:28:40 on Apr 04,2025
+# vlog -reportprogress 300 "+acc" -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_dsp_unit" "+define+DESIGN_NAME_MACRO=dsp_unit" "+define+HLS_RTL" "+incdir+input" -sv -work work input/dsp_unit_svamod.sv 
+# -- Compiling package dsp_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module dsp_unit_svamod
+# 
+# Top level modules:
+# 	dsp_unit_svamod
+# End time: 03:28:40 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# SystemC testbenh
+# foreach filename ${SYSTEMC_TESTBENCH_FILES} {
+#     eval "sccom $SCCOM_SETTINGS ${filename}"
+# }
+# sccom -reportprogress -DSC_GUI_SIMULATION -g -I input -work output/dsp_unit_questasim_sclib -verbose -DHLS_RTL input/dsp_unit_tb.cpp 
+# Start time: 03:28:40 on Apr 04,2025
+# 
+# QuestaSim-64 sccom 2024.3_2 compiler 2024.11 Nov 25 2024
+# 
+# -- Compiling module dsp_unit_tb
+# End time: 03:28:43 on Apr 04,2025, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# sccom -reportprogress -DSC_GUI_SIMULATION -g -I input -work output/dsp_unit_questasim_sclib -verbose -DHLS_RTL input/dsp_unit_top.cpp 
+# Start time: 03:28:43 on Apr 04,2025
+# 
+# QuestaSim-64 sccom 2024.3_2 compiler 2024.11 Nov 25 2024
+# 
+# -- Compiling module dsp_unit
+# -- Compiling module dsp_unit_tb
+# -- Compiling module dsp_unit_top
+# End time: 03:28:46 on Apr 04,2025, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# sccom -reportprogress -DSC_GUI_SIMULATION -g -I input -work output/dsp_unit_questasim_sclib -verbose -DHLS_RTL input/dsp_unit_sc_main.cpp 
+# Start time: 03:28:46 on Apr 04,2025
+# 
+# QuestaSim-64 sccom 2024.3_2 compiler 2024.11 Nov 25 2024
+# 
+# -- Compiling module dsp_unit
+# -- Compiling module dsp_unit_tb
+# -- Compiling module dsp_unit_top
+# Exported modules:
+# 	sc_main
+# End time: 03:28:49 on Apr 04,2025, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# eval "sccom ${SCCOM_SETTINGS} -link"
+# sccom -reportprogress -DSC_GUI_SIMULATION -g -I input -work output/dsp_unit_questasim_sclib -verbose -DHLS_RTL -link 
+# Start time: 03:28:49 on Apr 04,2025
+# 
+# QuestaSim-64 sccom 2024.3_2 compiler 2024.11 Nov 25 2024
+# End time: 03:28:53 on Apr 04,2025, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# 
+# SVA bindings
+# set SVA_BIND_PACKAGE ""
+# if { [info exists SC_SVA_BIND_FILE ] } {
+#     foreach filename [concat ${DESIGN_FILES} ${SVA_FILES} ] {
+# 	set ext [file extension $filename]
+# 	if { $ext == ".sv" } {
+# 	    eval "vlog $VLOG_SETTINGS -sv -work work ${filename}"	
+# 	}
+#     }
+#     
+#     set SVA_BIND_PACKAGE ${DESIGN_NAME}_sva_bind_pkg
+#     eval "vlog ${VLOG_SETTINGS} -mfcu -cuname ${SVA_BIND_PACKAGE} $SC_SVA_BIND_FILE"
+# } 
+# 
+#################################################################
+# Simulation (elaboration)
+#################################################################
+# 
+# eval "vsim $VSIM_SETTINGS ${SVA_BIND_PACKAGE}"
+# vsim -t 1ps -sc_arg "-run" -sc_arg "vsim_rtl" -sc_arg "-output" -sc_arg "results" -note 6599 -displaymsgmode both -voptargs="+acc" -classdebug -assertdebug -coverage -debugDB=output/dsp_unit_scrtl.dbg -sclib output/dsp_unit_questasim_sclib -L output/dsp_unit_questasim_sclib systemc_lib.sc_main 
+# Start time: 03:28:53 on Apr 04,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Warning: (vopt-13408) Code coverage will be disabled for some DUs/packages/classes and source files.
+# ** Note: (vopt-1947)   FSM RECOGNITION INFO
+# 	Fsm recognized in : dsp_unit_dsp_proc_dsp_proc_fsm(fast)
+# 	Current State Variable : state_var : results/dsp_unit_hls_rtl.v(1034)
+# 	Next State Variable : state_var_NS : results/dsp_unit_hls_rtl.v(1035)
+# 	Clock : clk
+# 	Reset States are: { dsp_proc_rlp_C_0 }
+# 	State Set is : { PROCESS_LOOP_C_0 , PROCESS_LOOP_C_1 , SHIFT_LOOP_C_0 , PROCESS_LOOP_C_2 , FILTER_LOOP_C_0 , PROCESS_LOOP_C_3 , dsp_proc_rlp_C_0 }
+# ** Note: (vopt-143) Recognized 1 FSM in module "dsp_unit_dsp_proc_dsp_proc_fsm(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_sclib/_sc/linux_x86_64_gcc-10.3.0/systemc.so
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_sclib.sc_main
+# Loading sv_std.std
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.apb_pkg(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.audioport_pkg(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_sv_unit(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit(fast)
+# Simulation output is saved to file results/dsp_unit_vsim_rtl_out.txt
+# Simulation output is saved in SoX format to file results/dsp_unit_vsim_rtl_out.dat
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_rtl(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_dsp_proc(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_dsp_proc_read_inputs_mioi(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_read_inputs(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_read_inputs_core(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.mgc_out_dreg_v2(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.mgc_out_dreg_v2(fast__1)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.mgc_out_dreg_v2(fast__2)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.mgc_out_dreg_v2(fast__3)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.mgc_out_dreg_v2(fast__4)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.mgc_out_dreg_v2(fast__5)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.mgc_out_dreg_v2(fast__6)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.ccs_in_v1(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.ccs_sync_out_vld_v1(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_dsp_proc_write_outputs_mioi(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_write_outputs(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_write_outputs_core(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.ccs_in_v1(fast__1)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.ccs_in_v1(fast__2)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.ccs_in_v1(fast__3)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_dsp_proc_staller(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_dsp_proc_dsp_proc_fsm(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_regs_proc(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.audioport_util_pkg(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_svamod_sv_unit(fast)
+# Loading /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_questasim_work.dsp_unit_svamod(fast)
+# ** Note: (vsim-8900) Creating design debug database output/dsp_unit_scrtl.dbg.
+# 
+#################################################################
+# Coverage DB Setup
+#################################################################
+# 
+# set covname "sim_coverage"
+# sim_coverage
+# 
+# coverage save -onexit ${RESULTS_DIR}/${DESIGN_NAME}_rtl_${covname}.ucdb
+# 
+#################################################################
+# Setup Wave window
+#################################################################
+# 
+# run 0 
+# Using default filter coefficients values
+# 
+# log -r /*
+# 
+# if [batch_mode] {
+#     onfinish stop
+# } else {
+#     if { [info exists VSIM_SC_RTL_WAVES ] == 1 } {
+# 	source $VSIM_SC_RTL_WAVES
+#     } else {
+# 	add wave -r sim:/sc_main/*
+# 	configure wave -signalnamewidth 1
+# 	configure wave -datasetprefix 0
+#     }
+# }
+# 
+#################################################################
+# Simulation (run)
+#################################################################
+# 
+# run $SYSTEMC_SIMULATION_TIME
+# Using default filter coefficients values
+# ** Note (downgraded): (vsim-6599) T1, Write to config registers
+# ** Note (downgraded): (vsim-6599) T2: Write dsp_regs
+# ** Note (downgraded): (vsim-6599) T3; Scaling Filters OFF
+# ** Note (downgraded): (vsim-6599) T4 Filter, Impulse
+# ** Note (downgraded): (vsim-6599) T5 FIR0 Sweep
+# ** Note (downgraded): (vsim-6599) T6 FIR1 Sweep
+# ** Note (downgraded): (vsim-6599) T7 Clear Data
+# ** Note (downgraded): (vsim-6599) Stop
+# Max. latency = 135 clock cycles.
+# ** Note: (vsim-6574) SystemC simulation stopped by user.
+# 1
+# 
+# 
+#################################################################
+# Post-simulation reporting
+#################################################################
+# 
+# 
+# coverage report -instance=/sc_main/${DESIGN_NAME}*. \
+#     -output ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${covname}_summary.txt
+# coverage report -instance=/sc_main/${DESIGN_NAME}*. \
+#     -recursive -output ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${covname}_summary_recursive.txt
+# ** Note: (vsim-19063) Please note that '-recursive' option's functionality is changed. For more information, please refer 
+# to the reference manual.
+# coverage report -instance=/sc_main/${DESIGN_NAME}*. \
+#     -details \
+#     -output ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${covname}_details.txt
+# coverage report -assert -details -output ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${covname}_assert_details.txt
+# coverage report -directive -details -output ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${covname}_cover_details.txt
+# coverage report -cvg -details -output ${REPORTS_DIR}/3_vsim_${DESIGN_NAME}_rtl_${covname}_cvg_details.txt
+# 
+#################################################################
+# End-of-run actions
+#################################################################
+# 
+# exec touch ${OUTPUT_DIR}/3_${DESIGN_NAME}_rtlsim
+# 
+# if [batch_mode] {
+#     exit
+# } else {
+#     wave zoom full
+#     view msgviewer
+# }
+# .main_pane.msgviewer.interior.cs.body.tree
+# 
+# 
+# 
+# Saving coverage database on exit...
+# SIMULATION STOPPED AT TIME = 73980491 ns
+# --------------------------------------------------------------------------------
+# Maximum latency = 0
+# --------------------------------------------------------------------------------
+# End time: 03:30:47 on Apr 04,2025, Elapsed time: 0:01:54
+# Errors: 0, Warnings: 2

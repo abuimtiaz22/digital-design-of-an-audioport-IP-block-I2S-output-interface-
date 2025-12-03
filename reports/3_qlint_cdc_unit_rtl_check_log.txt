@@ -1,0 +1,171 @@
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# 
+# This material contains trade secrets or otherwise
+# confidential information owned by
+# Siemens Industry Software Inc. or its affiliates
+# (collectively, "SISW"), or its licensors. Access
+# to and use of this information is strictly limited
+# as set forth in the customer's applicable
+# agreements with SISW.
+# 
+# Unpublished work. Copyright 2024 Siemens
+# 
+# do scripts/qlint.tcl
+# Command : vlib output/cdc_unit_qlint_work
+# Command : vmap work output/cdc_unit_qlint_work
+# QuestaSim-64 vmap 2024.3_2 Lib Mapping Utility 2024.11 Nov 25 2024
+# vmap work output/cdc_unit_qlint_work 
+# Modifying modelsim.ini
+# Command : vlog +define+design_top_is_cdc_unit +define+SYNTHESIS +incdir+input -cuname cdc_unit_sva_bind_pkg -mfcu input/apb_pkg.sv input/audioport_pkg.sv input/audioport_util_pkg.sv input/cdc_unit.sv
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 09:51:58 on Mar 21,2025
+# vlog "+define+design_top_is_cdc_unit" "+define+SYNTHESIS" "+incdir+input" -cuname cdc_unit_sva_bind_pkg -mfcu input/apb_pkg.sv input/audioport_pkg.sv input/audioport_util_pkg.sv input/cdc_unit.sv 
+# -- Compiling package apb_pkg
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling package audioport_util_pkg
+# -- Importing package audioport_pkg
+# -- Compiling package cdc_unit_sva_bind_pkg
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module cdc_unit
+# 
+# Top level modules:
+# 	cdc_unit
+# End time: 09:51:58 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Command : sdc load input/cdc_unit.sdc
+# 
+# Loaded goal 'release'.
+# Command : lint run -d cdc_unit {}
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Fri Mar 21 09:51:59 2025 by aimtiaz23 on kataja7.oulu.fi
+# 
+# Executing Command : lint run -d cdc_unit {}
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qlint.tcl, Line: 90
+# 
+### Starting Step: netlist elaborate ### 
+# 
+## Elaborating Design...
+# Reading MTI mapping for library mapping
+# Writing all MTI mappings to vmap output ...
+# 
+# Top level modules:
+# 	cdc_unit
+# 
+# Analyzing design...
+# -- Loading module z0in_work.cdc_unit
+# 
+# Performing 363 Lint Checks
+# =============================
+# 
+# Lint Stage 1 of 5 - Pre Design Elaboration (11 checks)
+# -------------------------------------------------------
+# Optimizing 4 design-units (inlining 0/1 module instances):
+# -- Optimizing package z0in_work.apb_pkg(fast)
+# Lint Stage-1 100% complete [Total Progress -   7%]
+# 
+# Lint Stage 2 of 5 - Design Elaboration (265 checks)
+# ----------------------------------------------------
+# -- Optimizing package z0in_work.audioport_pkg(fast)
+# Lint Stage-2  25% complete (1 out of 4 modules checked) [Total Progress -   9%]
+# -- Optimizing package z0in_work.cdc_unit_sva_bind_pkg(fast)
+# Lint Stage-2  50% complete (2 out of 4 modules checked) [Total Progress -  14%]
+# -- Optimizing module z0in_work.cdc_unit(fast)
+# Lint Stage-2  75% complete (3 out of 4 modules checked) [Total Progress -  18%]
+# Optimized design name is zi_opt_def_1632431082_1
+# Lint Stage-2 100% complete (4 out of 4 modules checked) [Total Progress -  23%]
+# 
+### Starting Step: netlist create ### 
+# 
+## Synthesizing netlist...
+# 
+# Lint Stage 3 of 5 - Post Design Elaboration (37 checks)
+# --------------------------------------------------------
+# Lint Stage-3  24% complete [Total Progress -  27%]
+# Lint Stage-3  49% complete [Total Progress -  29%]
+# Lint Stage-3  73% complete [Total Progress -  32%]
+# Warning : All files in a library are compiled without -lint du option.  Library 'cdc_unit_qlint_work'.  [lint-43]
+#         : Compile time check and pragma detection will not work for this library.
+# Lint Stage-3  97% complete [Total Progress -  34%]
+# Lint Stage-3 100% complete [Total Progress -  35%]
+# Analyzing designs.
+# Elaborating module 'cdc_unit'.
+# 
+# Lint Stage 4 of 5 - Design Synthesis (14 checks)
+# -------------------------------------------------
+# Lint Stage-4  21% complete [Total Progress -  67%]
+# Lint Stage-4  43% complete [Total Progress -  69%]
+# Lint Stage-4  64% complete [Total Progress -  71%]
+# Lint Stage-4  86% complete [Total Progress -  73%]
+# Lint Stage-4 100% complete [Total Progress -  75%]
+# Flattening design 'cdc_unit'.
+# 
+# Lint Stage 5 of 5 - Post Design Synthesis (36 checks)
+# ------------------------------------------------------
+# Lint Stage-5  25% complete [Total Progress -  88%]
+# Lint Stage-5  50% complete [Total Progress -  92%]
+# Lint Stage-5  75% complete [Total Progress -  96%]
+# Lint Stage-5 100% complete [Total Progress - 100%]
+# 
+# Lint Checking Completed
+# 
+# Trend Report: Trend directory path is not set, HTML trend report will not be generated.
+# 
+##Time Taken (Synthesis) = 48309.000000 ticks = 0.048309 secs
+# Summary: 1 Warnings in processing "netlist create"
+# Performance stats (Sdc processing::started) : cpu : 0(2) sec  memory : 0(260) mb  elapsed : 0(11) sec
+# Reading design database from output/cdc_unit_qlint_run_log/qcache/LINT/CACHE...completed (0.001313 (s)).
+# Performance stats (Sdc processing::ended) : cpu : 1(3) sec  memory : 538(798) mb  elapsed : 0(11) sec
+## Applying Lint Waivers...
+# 
+# Message Summary
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     1  Warning  lint-43            All files in a library are compiled without -lint du option.
+# 
+# Final Process Statistics: Max memory 538MB, CPU time 2s, Total time 9s
+# Result Summary
+# -----------------------------------------------------------
+# Error (0)
+# -----------------------------------------------------------
+# 
+# -----------------------------------------------------------
+# Warning (4)
+# -----------------------------------------------------------
+#   async_control_is_gated                  :1
+#   mux_select_const                        :3
+# 
+# -----------------------------------------------------------
+# Info (14)
+# -----------------------------------------------------------
+#   clock_with_both_edges                   :1
+#   combo_path_input_to_output              :1
+#   const_reg_data                          :1
+#   flop_redundant                          :1
+#   flop_with_inverted_clock                :2
+#   line_char_large                         :4
+#   module_output_not_registered            :3
+#   var_set_not_read                        :1
+# 
+# -----------------------------------------------------------
+# Resolved (0)
+# -----------------------------------------------------------
+# 
+# Generating Debug Information...
+# 
+# =================================================================
+# To view results in batch
+#   /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qlint_run_log/lint.rpt
+# 
+# To view results in GUI 
+#   qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qlint_run_log/lint.db
+# =================================================================
+# 
+# End of log Fri Mar 21 09:52:13 2025
+# 

@@ -1,0 +1,2050 @@
+**************************************************
+Report         : unmatched_points
+
+Reference      : r:/WORK/audioport
+Implementation : i:/WORK/audioport
+Version        : U-2022.12
+Date           : Sun May  4 01:20:08 2025
+**************************************************
+
+1005 Unmatched points (0 reference, 1005 implementation):
+
+  Impl LATCG      i:/WORK/audioport/cdc_unit_1/clk_gate_audio0_out_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/cdc_unit_1/clk_gate_audio0_out_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/cdc_unit_1/clk_gate_audio0_reg_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/cdc_unit_1/clk_gate_audio0_reg_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/cdc_unit_1/clk_gate_audio1_out_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/cdc_unit_1/clk_gate_audio1_reg_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_0_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_0__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_10_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_10__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_11_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_11__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_12_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_12__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_13_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_13__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_14_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_14__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_15_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_15__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_16_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_16__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_17_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_17__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_18_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_18__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_19_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_19__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_1_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_1__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_20_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_20__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_21_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_21__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_22_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_22__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_23_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_23__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_24_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_24__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_25_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_25__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_26_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_26__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_27_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_27__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_28_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_28__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_29_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_29__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_2_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_2__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_30_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_30__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_31_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_31__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_32_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_32__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_33_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_33__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_34_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_34__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_35_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_35__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_36_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_36__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_37_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_37__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_38_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_38__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_39_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_39__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_3_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_3__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_40_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_40__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_41_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_41__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_42_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_42__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_43_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_43__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_44_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_44__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_45_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_45__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_46_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_46__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_47_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_47__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_48_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_48__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_49_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_49__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_4_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_4__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_50_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_50__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_51_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_51__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_52_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_52__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_53_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_53__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_54_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_54__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_55_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_55__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_5_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_5__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_6_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_6__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_7_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_7__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_8_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_8__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_9_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ldata_r_reg_9__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_lhead_r_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_ltail_r_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_0_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_0__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_100_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_100__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_101_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_101__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_102_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_102__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_103_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_103__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_104_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_104__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_105_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_105__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_106_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_106__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_107_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_107__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_108_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_108__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_109_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_109__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_10_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_10__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_110_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_110__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_111_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_111__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_112_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_112__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_113_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_113__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_114_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_114__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_115_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_115__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_116_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_116__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_117_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_117__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_118_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_118__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_119_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_119__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_11_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_11__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_120_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_120__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_121_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_121__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_122_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_122__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_123_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_123__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_124_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_124__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_125_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_125__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_126_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_126__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_127_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_127__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_128_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_128__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_129_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_129__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_12_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_12__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_130_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_130__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_131_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_131__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_132_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_132__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_133_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_133__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_134_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_134__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_135_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_135__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_136_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_136__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_137_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_137__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_13_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_13__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_14_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_14__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_15_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_15__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_16_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_16__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_17_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_17__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_18_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_18__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_19_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_19__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_1_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_1__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_20_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_20__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_21_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_21__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_22_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_22__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_23_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_23__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_24_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_24__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_25_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_25__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_26_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_26__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_27_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_27__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_28_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_28__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_29_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_29__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_2_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_2__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_30_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_30__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_31_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_31__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_32_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_32__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_33_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_33__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_34_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_34__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_35_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_35__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_36_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_36__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_37_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_37__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_38_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_38__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_39_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_39__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_3_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_3__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_40_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_40__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_41_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_41__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_42_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_42__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_43_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_43__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_44_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_44__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_45_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_45__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_46_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_46__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_47_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_47__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_48_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_48__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_49_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_49__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_4_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_4__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_50_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_50__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_51_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_51__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_52_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_52__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_53_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_53__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_54_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_54__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_55_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_55__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_56_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_56__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_57_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_57__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_58_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_58__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_59_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_59__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_5_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_5__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_60_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_60__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_61_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_61__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_62_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_62__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_63_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_63__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_64_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_64__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_65_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_65__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_66_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_66__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_67_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_67__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_68_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_68__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_69_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_69__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_6_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_6__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_70_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_70__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_71_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_71__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_72_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_72__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_73_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_73__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_74_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_74__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_75_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_75__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_76_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_76__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_77_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_77__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_78_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_78__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_79_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_79__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_7_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_7__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_80_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_80__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_81_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_81__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_82_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_82__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_83_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_83__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_84_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_84__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_85_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_85__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_86_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_86__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_87_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_87__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_88_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_88__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_89_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_89__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_8_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_8__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_90_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_90__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_91_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_91__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_92_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_92__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_93_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_93__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_94_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_94__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_95_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_95__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_96_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_96__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_97_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_97__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_98_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_98__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_99_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_99__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_9_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rbank_r_reg_9__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_0_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_0__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_10_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_10__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_11_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_11__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_12_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_12__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_13_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_13__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_14_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_14__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_15_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_15__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_16_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_16__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_17_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_17__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_18_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_18__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_19_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_19__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_1_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_1__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_20_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_20__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_21_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_21__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_22_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_22__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_23_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_23__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_24_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_24__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_25_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_25__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_26_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_26__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_27_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_27__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_28_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_28__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_29_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_29__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_2_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_2__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_30_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_30__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_31_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_31__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_32_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_32__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_33_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_33__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_34_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_34__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_35_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_35__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_36_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_36__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_37_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_37__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_38_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_38__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_39_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_39__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_3_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_3__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_40_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_40__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_41_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_41__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_42_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_42__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_43_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_43__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_44_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_44__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_45_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_45__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_46_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_46__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_47_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_47__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_48_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_48__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_49_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_49__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_4_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_4__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_50_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_50__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_51_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_51__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_52_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_52__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_53_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_53__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_54_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_54__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_55_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_55__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_5_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_5__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_6_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_6__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_7_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_7__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_8_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_8__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_9_/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rdata_r_reg_9__0/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rhead_r_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/control_unit_1/clk_gate_rtail_r_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_FILTER_LOOP_i_6_0_sva_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_audio0_in_v_sva_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_audio1_in_v_sva_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_0_sva_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_0_sva_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_10_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_10_sva_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_11_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_12_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_13_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_14_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_15_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_16_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_17_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_18_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_19_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_1_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_20_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_21_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_22_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_23_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_24_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_25_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_26_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_27_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_28_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_29_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_2_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_30_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_31_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_32_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_33_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_34_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_35_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_36_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_37_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_38_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_39_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_3_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_40_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_41_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_42_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_43_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_44_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_45_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_46_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_47_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_48_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_49_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_4_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_50_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_51_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_52_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_53_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_54_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_55_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_56_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_57_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_58_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_59_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_5_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_60_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_61_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_62_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_63_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_64_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_65_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_66_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_66_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_6_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_7_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data0_r_8_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_0_sva_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_10_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_10_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_10_sva_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_10_sva_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_11_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_11_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_12_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_12_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_13_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_13_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_14_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_14_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_15_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_15_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_16_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_16_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_17_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_17_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_18_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_18_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_19_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_19_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_1_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_1_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_20_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_20_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_21_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_21_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_22_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_22_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_23_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_23_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_24_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_24_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_25_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_25_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_26_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_26_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_27_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_27_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_28_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_28_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_29_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_29_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_2_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_2_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_30_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_30_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_31_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_31_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_32_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_32_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_33_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_33_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_34_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_34_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_35_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_35_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_36_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_36_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_37_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_37_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_38_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_38_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_39_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_39_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_3_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_3_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_40_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_40_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_41_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_41_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_42_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_42_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_43_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_43_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_44_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_44_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_45_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_45_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_46_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_46_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_47_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_47_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_48_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_48_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_49_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_49_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_4_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_4_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_50_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_50_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_51_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_51_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_52_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_52_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_53_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_53_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_54_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_54_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_55_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_55_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_56_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_56_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_57_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_57_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_58_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_58_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_59_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_59_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_5_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_5_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_60_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_60_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_61_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_61_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_62_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_62_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_63_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_63_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_64_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_64_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_65_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_65_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_66_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_6_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_6_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_7_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_7_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_8_lpi_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_data1_r_8_lpi_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_level0_v_sva_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_level0_v_sva_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_level1_v_sva_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_level1_v_sva_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_scheduled_region_else_if_else_acc0_54_0_sva_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_scheduled_region_else_if_else_acc0_54_0_sva_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_scheduled_region_else_if_else_acc0_54_0_sva_reg_1/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_scheduled_region_else_if_else_acc0_54_0_sva_reg_2/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_scheduled_region_else_if_else_acc1_54_0_sva_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_scheduled_region_else_if_else_acc1_54_0_sva_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_scheduled_region_else_if_else_acc1_54_0_sva_reg_1/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst_write_outputs_mioi_dsp_unit_write_outputs_core_inst_clk_gate_this_audio0_out_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst_write_outputs_mioi_dsp_unit_write_outputs_core_inst_clk_gate_this_audio0_out_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst_write_outputs_mioi_dsp_unit_write_outputs_core_inst_clk_gate_this_audio1_out_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_0_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_0_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_100_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_100_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_101_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_101_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_102_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_102_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_103_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_103_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_104_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_104_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_105_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_105_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_106_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_106_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_107_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_107_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_108_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_108_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_109_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_109_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_10_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_10_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_110_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_110_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_111_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_111_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_112_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_112_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_113_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_113_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_114_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_114_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_115_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_115_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_116_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_116_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_117_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_117_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_118_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_118_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_119_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_119_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_11_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_11_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_120_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_120_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_121_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_121_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_122_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_122_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_123_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_123_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_124_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_124_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_125_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_125_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_126_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_126_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_127_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_127_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_128_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_128_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_129_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_129_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_12_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_12_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_130_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_130_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_131_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_131_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_132_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_132_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_133_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_133_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_13_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_13_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_14_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_14_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_15_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_15_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_16_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_16_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_17_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_17_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_18_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_18_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_19_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_19_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_1_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_1_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_20_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_20_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_21_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_21_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_22_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_22_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_23_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_23_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_24_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_24_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_25_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_25_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_26_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_26_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_27_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_27_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_28_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_28_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_29_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_29_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_2_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_2_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_30_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_30_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_31_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_31_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_32_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_32_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_33_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_33_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_34_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_34_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_35_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_35_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_36_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_36_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_37_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_37_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_38_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_38_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_39_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_39_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_3_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_3_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_40_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_40_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_41_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_41_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_42_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_42_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_43_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_43_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_44_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_44_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_45_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_45_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_46_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_46_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_47_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_47_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_48_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_48_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_49_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_49_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_4_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_4_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_50_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_50_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_51_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_51_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_52_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_52_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_53_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_53_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_54_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_54_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_55_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_55_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_56_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_56_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_57_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_57_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_58_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_58_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_59_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_59_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_5_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_5_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_60_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_60_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_61_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_61_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_62_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_62_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_63_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_63_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_64_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_64_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_65_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_65_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_66_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_66_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_67_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_67_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_68_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_68_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_69_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_69_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_6_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_6_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_70_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_70_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_71_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_71_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_72_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_72_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_73_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_73_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_74_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_74_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_75_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_75_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_76_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_76_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_77_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_77_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_78_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_78_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_79_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_79_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_7_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_7_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_80_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_80_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_81_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_81_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_82_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_82_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_83_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_83_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_84_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_84_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_85_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_85_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_86_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_86_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_87_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_87_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_88_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_88_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_89_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_89_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_8_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_8_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_90_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_90_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_91_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_91_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_92_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_92_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_93_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_93_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_94_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_94_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_95_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_95_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_96_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_96_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_97_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_97_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_98_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_98_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_99_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_99_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_9_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_9_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_filter_r_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_level0_r_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_level1_r_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/i2s_unit_1/clk_gate_input_reg_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/i2s_unit_1/clk_gate_input_reg_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/i2s_unit_1/clk_gate_input_reg_reg_1/latch
+
+  Impl LATCG      i:/WORK/audioport/i2s_unit_1/clk_gate_shift_reg_reg/latch
+
+  Impl LATCG      i:/WORK/audioport/i2s_unit_1/clk_gate_shift_reg_reg_0/latch
+
+  Impl LATCG      i:/WORK/audioport/i2s_unit_1/clk_gate_shift_reg_reg_1/latch
+
+ [BBNet: multiply-driven net
+  BBox:  black-box
+  BBPin: black-box pin
+  Block: hierarchical block
+  BlPin: hierarchical block pin
+  Cut:   cut-point
+  DFF:   non-constant DFF register
+  DFF0:  constant 0 DFF register
+  DFF1:  constant 1 DFF register
+  DFFX:  constant X DFF register
+  DFF0X: constrained 0X DFF register
+  DFF1X: constrained 1X DFF register
+  LAT:   non-constant latch register
+  LAT0:  constant 0 latch register
+  LAT1:  constant 1 latch register
+  LATX:  constant X latch register
+  LAT0X: constrained 0X latch register
+  LAT1X: constrained 1X latch register
+  LATCG: clock-gating latch register
+  TLA:   transparent latch register
+  TLA0X: transparent constrained 0X latch register
+  TLA1X: transparent constrained 1X latch register
+  Loop:  cycle break point
+  Net:   matchable net
+  Port:  primary (top-level) port
+  Und:   undriven signal cut-point
+  Unk:   unknown signal cut-point]
+
+1

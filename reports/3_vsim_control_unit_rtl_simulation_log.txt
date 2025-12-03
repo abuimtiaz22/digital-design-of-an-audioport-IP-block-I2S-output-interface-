@@ -1,0 +1,258 @@
+# //  Questa Sim-64
+# //  Version 2024.3_2 linux_x86_64 Nov 25 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do scripts/vsim_rtlsim.tcl
+# 1739484390
+# Script start time: 00:06:30
+# 0
+# 1
+# 1
+# -all
+# QuestaSim
+# 0
+# 1
+# output/control_unit_rtl.dbg
+# output/control_unit_rtl.bin
+# output/control_unit_rtl.db
+# control_unit_rtl_vopt
+# output/control_unit_questasim_work
+#  -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_control_unit +define+DESIGN_NAME_MACRO=control_unit  +incdir+input  -sv -work work
+#  -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+#  -suppress 10587 -suppress 13408 +acc +cover=bcxefs -coverfec -debugdb -noincr -designfile output/control_unit_rtl.bin
+#  -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/control_unit_rtl.dbg
+# -suppress 13314 -suppress 13233 +define+RTL_SIM -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec  +define+design_top_is_control_unit +define+DESIGN_NAME_MACRO=control_unit  +incdir+input  -sv -work work
+# -2008 -lint -fsmdebug -fsmverbose b -fsmmultitrans +cover=bcxefs -coverfec -mixedsvvh  -work work
+# -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/control_unit_rtl.dbg
+# 1
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:06:31 on Feb 14,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_control_unit" "+define+DESIGN_NAME_MACRO=control_unit" "+incdir+input" -sv -work work input/apb_pkg.sv 
+# -- Compiling package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:06:31 on Feb 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:06:31 on Feb 14,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_control_unit" "+define+DESIGN_NAME_MACRO=control_unit" "+incdir+input" -sv -work work input/audioport_pkg.sv 
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:06:31 on Feb 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:06:31 on Feb 14,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_control_unit" "+define+DESIGN_NAME_MACRO=control_unit" "+incdir+input" -sv -work work input/audioport_util_pkg.sv 
+# -- Compiling package audioport_util_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:06:31 on Feb 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:06:31 on Feb 14,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_control_unit" "+define+DESIGN_NAME_MACRO=control_unit" "+incdir+input" -sv -work work input/control_unit.sv 
+# -- Compiling package control_unit_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 00:06:31 on Feb 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:06:31 on Feb 14,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_control_unit" "+define+DESIGN_NAME_MACRO=control_unit" "+incdir+input" -sv -work work input/control_unit_svamod.sv 
+# -- Compiling package control_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module control_unit_svamod
+# 
+# Top level modules:
+# 	control_unit_svamod
+# End time: 00:06:32 on Feb 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0, Suppressed Warnings: 6
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:06:32 on Feb 14,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_control_unit" "+define+DESIGN_NAME_MACRO=control_unit" "+incdir+input" -sv -work work input/apb_if.sv 
+# -- Compiling package apb_if_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling interface apb_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:06:32 on Feb 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:06:32 on Feb 14,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_control_unit" "+define+DESIGN_NAME_MACRO=control_unit" "+incdir+input" -sv -work work input/irq_out_if.sv 
+# -- Compiling package irq_out_if_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling interface irq_out_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:06:32 on Feb 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:06:32 on Feb 14,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_control_unit" "+define+DESIGN_NAME_MACRO=control_unit" "+incdir+input" -sv -work work input/control_unit_test.sv 
+# -- Compiling package control_unit_test_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling program control_unit_test
+# 
+# Top level modules:
+# 	control_unit_test
+# End time: 00:06:32 on Feb 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:06:32 on Feb 14,2025
+# vlog -reportprogress 300 -suppress 13314 -suppress 13233 "+define+RTL_SIM" -lint -fsmdebug -fsmverbose b -fsmmultitrans "+cover=bcxefs" -coverfec "+define+design_top_is_control_unit" "+define+DESIGN_NAME_MACRO=control_unit" "+incdir+input" -sv -work work input/control_unit_tb.sv 
+# -- Compiling package control_unit_tb_sv_unit
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module control_unit_tb
+# 
+# Top level modules:
+# 	control_unit_tb
+# End time: 00:06:32 on Feb 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 00:06:32 on Feb 14,2025
+# vopt -reportprogress 300 -suppress 10587 -suppress 13408 "+acc" "+cover=bcxefs" -coverfec -debugdb -noincr -designfile output/control_unit_rtl.bin work.control_unit_tb -o control_unit_rtl_vopt 
+# 
+# Top level modules:
+# 	control_unit_tb
+# 
+# Analyzing design...
+# -- Loading module control_unit_tb
+# -- Loading interface apb_if
+# -- Loading interface irq_out_if
+# -- Loading module control_unit
+# -- Loading program control_unit_test
+# -- Loading module control_unit_svamod
+# Optimizing 17 design-units (inlining 0/6 module instances):
+# -- Optimizing package apb_pkg(fast)
+# -- Optimizing package audioport_pkg(fast)
+# -- Optimizing package audioport_util_pkg(fast)
+# -- Optimizing package control_unit_tb_sv_unit(fast)
+# -- Optimizing package apb_if_sv_unit(fast)
+# -- Optimizing package irq_out_if_sv_unit(fast)
+# -- Optimizing package control_unit_sv_unit(fast)
+# -- Optimizing package control_unit_test_sv_unit(fast)
+# -- Optimizing package control_unit_svamod_sv_unit(fast)
+# -- Optimizing module control_unit_svamod(fast)
+# -- Processing module control_unit_svamod(fast) for debug
+# -- Optimizing program control_unit_test(fast)
+# -- Optimizing module control_unit(fast)
+# -- Processing module control_unit(fast) for debug
+# -- Optimizing interface apb_if(fast__1)
+# -- Optimizing module control_unit_tb(fast)
+# -- Processing module control_unit_tb(fast) for debug
+# -- Optimizing interface irq_out_if(fast__1)
+# -- Optimizing interface irq_out_if(fast)
+# -- Optimizing interface apb_if(fast)
+# viscom:
+# VISCOM: Start time: 00:06:33 on Feb 14,2025
+# 
+# VISCOM: QuestaSim /sw/rhel8/siemens/questa_sim-2024.3_2/questasim/linux_x86_64/VisualizerRls/bin/viscom 2024.3_2 at 2024.11 Nov 25 2024
+# VISCOM: Writing output/control_unit_rtl.bin
+# VISCOM: Done writing output/control_unit_rtl.bin
+# VISCOM: End time: 00:06:33 on Feb 14,2025, Elapsed time: 0:00:00 (Process Size : 317MB, Peak Process Size : 317MB)
+# 
+# 
+# Optimized design name is control_unit_rtl_vopt
+# End time: 00:06:35 on Feb 14,2025, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0, Suppressed Warnings: 4
+# vsim control_unit_rtl_vopt -fsmdebug -assertdebug -msgmode both -classdebug -uvmcontrol=all -coverage -debugDB=output/control_unit_rtl.dbg 
+# Start time: 00:06:35 on Feb 14,2025
+# Loading sv_std.std
+# Loading work.apb_pkg(fast)
+# Loading work.audioport_pkg(fast)
+# Loading work.audioport_util_pkg(fast)
+# Loading work.control_unit_tb_sv_unit(fast)
+# Loading work.control_unit_tb(fast)
+# Loading work.apb_if_sv_unit(fast)
+# Loading work.apb_if(fast__1)
+# Loading work.irq_out_if_sv_unit(fast)
+# Loading work.irq_out_if(fast__1)
+# Loading work.control_unit_sv_unit(fast)
+# Loading work.control_unit(fast)
+# Loading work.control_unit_svamod_sv_unit(fast)
+# Loading work.control_unit_svamod(fast)
+# Loading work.control_unit_test_sv_unit(fast)
+# Loading work.control_unit_test(fast)
+# ** Note: (vsim-8900) Creating design debug database output/control_unit_rtl.dbg.
+# 1
+# sim_coverage
+# ** Info: apb_test
+#    Time: 65 ns  Scope: control_unit_tb.TEST.apb_test File: input/control_unit_test_tasks.svh Line: 20
+# ** Info: address_decoding_test
+#    Time: 396500 ps  Scope: control_unit_tb.TEST.address_decoding_test File: input/control_unit_test_tasks.svh Line: 52
+# ** Info: register_test
+#    Time: 5934500 ps  Scope: control_unit_tb.TEST.register_test File: input/control_unit_test_tasks.svh Line: 80
+# ** Info: fifo_bus_test
+#    Time: 16893500 ps  Scope: control_unit_tb.TEST.fifo_bus_test File: input/control_unit_test_tasks.svh Line: 104
+# ** Info: prdata_off_test
+#    Time: 16893500 ps  Scope: control_unit_tb.TEST.prdata_off_test File: input/control_unit_test_tasks.svh Line: 116
+# ** Info: cmd_start_stop_test
+#    Time: 32181500 ps  Scope: control_unit_tb.TEST.cmd_start_stop_test File: input/control_unit_test_tasks.svh Line: 189
+# ** Info: status_test
+#    Time: 32181500 ps  Scope: control_unit_tb.TEST.status_test File: input/control_unit_test_tasks.svh Line: 196
+# ** Info: cmd_clr_test
+#    Time: 32181500 ps  Scope: control_unit_tb.TEST.cmd_clr_test File: input/control_unit_test_tasks.svh Line: 203
+# ** Info: cmd_cfg_test
+#    Time: 40995500 ps  Scope: control_unit_tb.TEST.cmd_cfg_test File: input/control_unit_test_tasks.svh Line: 240
+# ** Info: cmd_level_test
+#    Time: 41073500 ps  Scope: control_unit_tb.TEST.cmd_level_test File: input/control_unit_test_tasks.svh Line: 258
+# ** Info: clr_error_test
+#    Time: 41151500 ps  Scope: control_unit_tb.TEST.clr_error_test File: input/control_unit_test_tasks.svh Line: 275
+# ** Info: req_tick_test
+#    Time: 41151500 ps  Scope: control_unit_tb.TEST.req_tick_test File: input/control_unit_test_tasks.svh Line: 282
+# ** Info: fifo_test
+#    Time: 42568500 ps  Scope: control_unit_tb.TEST.fifo_test File: input/control_unit_test_tasks.svh Line: 336
+# ** Info: irq_up_test
+#    Time: 42568500 ps  Scope: control_unit_tb.TEST.irq_up_test File: input/control_unit_test_tasks.svh Line: 342
+# ** Info: irq_down_test
+#    Time: 42568500 ps  Scope: control_unit_tb.TEST.irq_down_test File: input/control_unit_test_tasks.svh Line: 355
+# ** Info: performance_test
+#    Time: 67918500 ps  Scope: control_unit_tb.TEST.performance_test File: input/control_unit_test_tasks.svh Line: 450
+#####################################################################################################
+# control_unit_test results: PASSED:          10 / FAILED:           0
+#####################################################################################################
+# ** Note: $finish    : input/control_unit_test.sv(85)
+#    Time: 3577801500 ps  Iteration: 3  Instance: /control_unit_tb/TEST
+# 1
+# Break in Module control_unit_test at input/control_unit_test.sv line 85
+# ** Note: (vsim-19063) Please note that '-recursive' option's functionality is changed. For more information, please refer 
+# to the reference manual.
+# file22
+# 1739484416
+# Script end time: 00:06:56
+# .main_pane.msgviewer.interior.cs.body.tree
+# Saving coverage database on exit...
+# End time: 00:07:43 on Feb 14,2025, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 0

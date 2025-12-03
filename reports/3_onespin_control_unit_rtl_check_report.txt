@@ -1,0 +1,147 @@
+# 
+# OneSpin 360 Message Log
+#  version      = 2022.4
+#  build_date   = Oct 23 2022 08:52:49
+#  license_mode = mgls
+#  mgls         = 1.5.1
+#  tool         = onespin
+#  platform     = Linux_x86_64
+#  os           = Linux
+#  os_version   = 4.18.0-553.36.1.el8_10.x86_64
+# 
+-I- Logging messages into '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/reports/3_onespin_control_unit_rtl_check_report.txt'.
+=== =========================================================================================================================================================================
+-I- 118 consistency check results:
+=== =========================================================================================================================================================================
+-I- 12 checks open:
+--- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-I- dead_code_check_40: open, dead code check for lines 199 - 202 of instance 'left_fifo_ns/blk1/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-I- dead_code_check_44: open, dead code check for lines 209 - 212 of instance 'left_fifo_ns/blk2/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-I- dead_code_check_48: open, dead code check for lines 219 - 222 of instance 'left_fifo_ns/blk3/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-I- dead_code_check_58: open, dead code check for line 255 of instance 'lfifo_decoder/if_blk3' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-I- dead_code_check_66: open, dead code check for lines 306 - 309 of instance 'right_fifo_ns/blk1/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-I- dead_code_check_70: open, dead code check for lines 316 - 319 of instance 'right_fifo_ns/blk2/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-I- dead_code_check_74: open, dead code check for lines 326 - 329 of instance 'right_fifo_ns/blk3/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-I- dead_code_check_84: open, dead code check for line 362 of instance 'rfifo_decoder/if_blk3' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-I- integer_check_1: not yet checked, integer check for "lhead_r"
+-I- integer_check_2: not yet checked, integer check for "ltail_r"
+-I- integer_check_3: not yet checked, integer check for "rhead_r"
+-I- integer_check_4: not yet checked, integer check for "rtail_r"
+--- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-C- 98 checks hold:
+--- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-C- truncation_check_1: certain hold, truncation check for "" in line 198 of toplevel instance of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- truncation_check_2: certain hold, truncation check for "" in line 208 of toplevel instance of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- truncation_check_3: certain hold, truncation check for "" in line 218 of toplevel instance of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- truncation_check_4: certain hold, truncation check for "" in line 305 of toplevel instance of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- truncation_check_5: certain hold, truncation check for "" in line 315 of toplevel instance of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- truncation_check_6: certain hold, truncation check for "" in line 325 of toplevel instance of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- init_check_1: certain hold, init check for "irq_r"
+-C- init_check_2: certain hold, init check for "lhead_r"
+-C- init_check_3: certain hold, init check for "llooped_r"
+-C- init_check_4: certain hold, init check for "ltail_r"
+-C- init_check_5: certain hold, init check for "play_r"
+-C- init_check_6: certain hold, init check for "req_r"
+-C- init_check_7: certain hold, init check for "rhead_r"
+-C- init_check_8: certain hold, init check for "rlooped_r"
+-C- init_check_9: certain hold, init check for "rtail_r"
+-C- dead_code_check_1: hold, dead code check for lines 40 - 45 of instance 'apb_decoder' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_2: hold, dead code check for lines 48 - 53 of instance 'address_decoder' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_3: hold, dead code check for line 50 of instance 'address_decoder/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_4: hold, dead code check for line 52 of instance 'address_decoder/if_blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_5: hold, dead code check for lines 61 - 78 of instance 'play_control' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_6: hold, dead code check for line 63 of instance 'play_control/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_7: hold, dead code check for line 65 of instance 'play_control/if_blk2/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_8: hold, dead code check for line 67 of instance 'play_control/if_blk2/if_blk2/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_9: hold, dead code check for line 67 of instance 'play_control/if_blk2/if_blk2/if_blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_10: hold, dead code check for line 73 of instance 'play_control/if_blk3' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_11: hold, dead code check for line 75 of instance 'play_control/if_blk4/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_12: hold, dead code check for line 77 of instance 'play_control/if_blk4/if_blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_13: hold, dead code check for lines 83 - 95 of instance 'command_decoder' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_14: hold, dead code check for lines 100 - 103 of instance 'standby_command_decoder' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_15: hold, dead code check for lines 109 - 126 of instance 'apb_driver' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_16: hold, dead code check for lines 111 - 122 of instance 'apb_driver/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_17: hold, dead code check for lines 113 - 115 of instance 'apb_driver/blk1/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_18: hold, dead code check for lines 116 - 118 of instance 'apb_driver/blk1/if_blk1/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_19: hold, dead code check for lines 119 - 121 of instance 'apb_driver/blk1/if_blk1/if_blk1/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_20: hold, dead code check for line 121 of instance 'apb_driver/blk1/if_blk1/if_blk1/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_21: hold, dead code check for lines 123 - 125 of instance 'apb_driver/blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_22: hold, dead code check for lines 130 - 135 of instance 'tick_out_logic' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_23: hold, dead code check for line 132 of instance 'tick_out_logic/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_24: hold, dead code check for line 134 of instance 'tick_out_logic/if_blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_25: hold, dead code check for lines 139 - 152 of instance 'register_bank' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_26: hold, dead code check for lines 140 - 142 of instance 'register_bank/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_27: hold, dead code check for lines 142 - 151 of instance 'register_bank/blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_28: hold, dead code check for line 144 of instance 'register_bank/blk2/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_29: hold, dead code check for line 144 of instance 'register_bank/blk2/if_blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_30: hold, dead code check for line 147 of instance 'register_bank/blk2/if_blk3' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_31: hold, dead code check for line 147 of instance 'register_bank/blk2/if_blk4' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_32: hold, dead code check for line 150 of instance 'register_bank/blk2/if_blk5' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_33: hold, dead code check for line 150 of instance 'register_bank/blk2/if_blk6' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_34: hold, dead code check for lines 170 - 183 of instance 'left_fifo' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_35: hold, dead code check for lines 171 - 176 of instance 'left_fifo/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_36: hold, dead code check for lines 177 - 182 of instance 'left_fifo/blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_37: hold, dead code check for lines 186 - 232 of instance 'left_fifo_ns' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_38: hold, dead code check for lines 195 - 203 of instance 'left_fifo_ns/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_39: hold, dead code check for line 198 of instance 'left_fifo_ns/blk1/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_41: hold, dead code check for line 203 of instance 'left_fifo_ns/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_42: hold, dead code check for lines 206 - 213 of instance 'left_fifo_ns/blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_43: hold, dead code check for line 208 of instance 'left_fifo_ns/blk2/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_45: hold, dead code check for line 213 of instance 'left_fifo_ns/if_blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_46: hold, dead code check for lines 216 - 223 of instance 'left_fifo_ns/blk3' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_47: hold, dead code check for line 218 of instance 'left_fifo_ns/blk3/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_49: hold, dead code check for line 223 of instance 'left_fifo_ns/if_blk3' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_50: hold, dead code check for lines 226 - 231 of instance 'left_fifo_ns/blk4' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_51: hold, dead code check for line 231 of instance 'left_fifo_ns/if_blk4' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_52: hold, dead code check for lines 237 - 242 of instance 'lfifo_mux' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_53: hold, dead code check for line 239 of instance 'lfifo_mux/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_54: hold, dead code check for line 241 of instance 'lfifo_mux/if_blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_55: hold, dead code check for lines 247 - 258 of instance 'lfifo_decoder' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_56: hold, dead code check for line 250 of instance 'lfifo_decoder/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_57: hold, dead code check for line 252 of instance 'lfifo_decoder/if_blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_59: hold, dead code check for line 257 of instance 'lfifo_decoder/if_blk4' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_60: hold, dead code check for lines 277 - 290 of instance 'right_fifo' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_61: hold, dead code check for lines 278 - 283 of instance 'right_fifo/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_62: hold, dead code check for lines 284 - 289 of instance 'right_fifo/blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_63: hold, dead code check for lines 293 - 339 of instance 'right_fifo_ns' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_64: hold, dead code check for lines 302 - 310 of instance 'right_fifo_ns/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_65: hold, dead code check for line 305 of instance 'right_fifo_ns/blk1/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_67: hold, dead code check for line 310 of instance 'right_fifo_ns/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_68: hold, dead code check for lines 313 - 320 of instance 'right_fifo_ns/blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_69: hold, dead code check for line 315 of instance 'right_fifo_ns/blk2/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_71: hold, dead code check for line 320 of instance 'right_fifo_ns/if_blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_72: hold, dead code check for lines 323 - 330 of instance 'right_fifo_ns/blk3' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_73: hold, dead code check for line 325 of instance 'right_fifo_ns/blk3/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_75: hold, dead code check for line 330 of instance 'right_fifo_ns/if_blk3' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_76: hold, dead code check for lines 333 - 338 of instance 'right_fifo_ns/blk4' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_77: hold, dead code check for line 338 of instance 'right_fifo_ns/if_blk4' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_78: hold, dead code check for lines 344 - 349 of instance 'rfifo_mux' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_79: hold, dead code check for line 346 of instance 'rfifo_mux/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_80: hold, dead code check for line 348 of instance 'rfifo_mux/if_blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_81: hold, dead code check for lines 354 - 365 of instance 'rfifo_decoder' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_82: hold, dead code check for line 357 of instance 'rfifo_decoder/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_83: hold, dead code check for line 359 of instance 'rfifo_decoder/if_blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_85: hold, dead code check for line 364 of instance 'rfifo_decoder/if_blk4' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_86: hold, dead code check for lines 370 - 380 of instance 'interrupt_control' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_87: hold, dead code check for line 372 of instance 'interrupt_control/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_88: hold, dead code check for line 374 of instance 'interrupt_control/if_blk2/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_89: hold, dead code check for line 376 of instance 'interrupt_control/if_blk2/if_blk2/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_90: hold, dead code check for line 378 of instance 'interrupt_control/if_blk2/if_blk2/if_blk2/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-C- dead_code_check_91: hold, dead code check for line 378 of instance 'interrupt_control/if_blk2/if_blk2/if_blk2/if_blk2' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+--- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-V- 8 checks fail:
+--- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-V- array_index_check_1: certain fail, array access within index bounds check for "rbank_r" in line 114 of instance 'apb_driver/blk1/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-V- array_index_check_2: certain fail, array access within index bounds check for "rbank_r" in line 144 of instance 'register_bank/blk2/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-V- array_index_check_3: certain fail, array access within index bounds check for "ldata_ns" in line 196 of instance 'left_fifo_ns/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-V- array_index_check_4: certain fail, array access within index bounds check for "ldata_r" in line 239 of instance 'lfifo_mux/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-V- array_index_check_5: certain fail, array access within index bounds check for "rdata_ns" in line 303 of instance 'right_fifo_ns/blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-V- array_index_check_6: certain fail, array access within index bounds check for "rdata_r" in line 346 of instance 'rfifo_mux/if_blk1' of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-V- process_write_check_1: certain fail, process_write-write race check for "rbank_r" in line 107 of toplevel instance of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+-V- illegal_logic_check_1: certain fail, illegal logic check for "PRDATA" in line 15 of toplevel instance of file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/control_unit.sv'
+--- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-I- 6 array_index checks, 6 truncation checks, 1 process_write check, 1 illegal_logic check, 9 init checks, 91 dead_code checks and 4 integer checks.
+-I- 118 consistency checks in total (including 7 model building assertions).
+--- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-I- Validity: up_to_date
+=== =========================================================================================================================================================================

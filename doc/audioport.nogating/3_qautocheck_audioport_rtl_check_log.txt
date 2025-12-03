@@ -1,0 +1,607 @@
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# 
+# This material contains trade secrets or otherwise
+# confidential information owned by
+# Siemens Industry Software Inc. or its affiliates
+# (collectively, "SISW"), or its licensors. Access
+# to and use of this information is strictly limited
+# as set forth in the customer's applicable
+# agreements with SISW.
+# 
+# Unpublished work. Copyright 2024 Siemens
+# 
+# do scripts/qautocheck.tcl
+# Command : vlib output/audioport_qautocheck_work
+# Command : vmap work output/audioport_qautocheck_work
+# QuestaSim-64 vmap 2024.3_2 Lib Mapping Utility 2024.11 Nov 25 2024
+# vmap work output/audioport_qautocheck_work 
+# Modifying modelsim.ini
+# Command : vcom -2008 -mixedsvvh -work work input/i2s_unit.vhd
+# QuestaSim-64 vcom 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 01:03:09 on Apr 10,2025
+# vcom -2008 -mixedsvvh -work work input/i2s_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_unit
+# -- Compiling architecture RTL of i2s_unit
+# End time: 01:03:10 on Apr 10,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Command : vlog +define+design_top_is_audioport +define+RTL_VERIF +incdir+input -cuname audioport_sva_bind_pkg -mfcu input/apb_pkg.sv input/audioport_pkg.sv input/audioport_util_pkg.sv input/control_unit.sv results/dsp_unit_hls_rtl.v input/dsp_unit.sv input/cdc_unit.sv input/audioport.sv input/control_unit_svamod.sv input/dsp_unit_svamod.sv input/cdc_unit_svamod.sv input/i2s_unit_svamod.sv input/audioport_svamod.sv input/sva_bindings.svh
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 01:03:10 on Apr 10,2025
+# vlog "+define+design_top_is_audioport" "+define+RTL_VERIF" "+incdir+input" -cuname audioport_sva_bind_pkg -mfcu input/apb_pkg.sv input/audioport_pkg.sv input/audioport_util_pkg.sv input/control_unit.sv results/dsp_unit_hls_rtl.v input/dsp_unit.sv input/cdc_unit.sv input/audioport.sv input/control_unit_svamod.sv input/dsp_unit_svamod.sv input/cdc_unit_svamod.sv input/i2s_unit_svamod.sv input/audioport_svamod.sv input/sva_bindings.svh 
+# -- Compiling package apb_pkg
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# -- Compiling package audioport_util_pkg
+# -- Importing package audioport_pkg
+# ** Warning: input/control_unit_svamod.sv(46): (vlog-13314) Defaulting port 'rbank_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: input/control_unit_svamod.sv(54): (vlog-13314) Defaulting port 'ldata_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: input/control_unit_svamod.sv(61): (vlog-13314) Defaulting port 'rdata_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling package audioport_sva_bind_pkg
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module control_unit
+# -- Compiling module mgc_out_dreg_v2
+# -- Compiling module ccs_in_v1
+# -- Compiling module ccs_sync_out_vld_v1
+# -- Compiling module dsp_unit_read_inputs_core
+# -- Compiling module dsp_unit_read_inputs
+# -- Compiling module dsp_unit_write_outputs_core
+# -- Compiling module dsp_unit_write_outputs
+# -- Compiling module dsp_unit_regs_proc
+# -- Compiling module dsp_unit_dsp_proc_dsp_proc_fsm
+# -- Compiling module dsp_unit_dsp_proc_staller
+# -- Compiling module dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl
+# -- Compiling module dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl
+# -- Compiling module dsp_unit_dsp_proc_write_outputs_mioi
+# -- Compiling module dsp_unit_dsp_proc_read_inputs_mioi
+# -- Compiling module dsp_unit_dsp_proc
+# -- Compiling module dsp_unit_rtl
+# -- Compiling module dsp_unit
+# -- Compiling module cdc_unit
+# -- Compiling module audioport
+# -- Compiling module control_unit_svamod
+# ** Warning: input/control_unit_svamod.sv(46): (vlog-13314) Defaulting port 'rbank_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: input/control_unit_svamod.sv(54): (vlog-13314) Defaulting port 'ldata_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: input/control_unit_svamod.sv(61): (vlog-13314) Defaulting port 'rdata_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling module dsp_unit_svamod
+# -- Compiling module cdc_unit_svamod
+# -- Compiling module i2s_unit_svamod
+# -- Compiling module audioport_svamod
+# 
+# Top level modules:
+# 	audioport
+# End time: 01:03:11 on Apr 10,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 6
+# Command : autocheck compile -d audioport {}
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Thu Apr 10 01:03:11 2025 by aimtiaz23 on kataja7.oulu.fi
+# 
+# Executing Command : autocheck compile -d audioport {}
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qautocheck.tcl, Line: 103
+# 
+### Starting Step: netlist elaborate ### 
+# 
+## Elaborating Design...
+# Reading MTI mapping for library mapping
+# Writing all MTI mappings to vmap output ...
+# 
+# Top level modules:
+# 	audioport
+# 
+# Analyzing design...
+# -- Loading module z0in_work.audioport
+# -- Loading module z0in_work.control_unit
+# -- Loading module z0in_work.dsp_unit
+# -- Loading module z0in_work.dsp_unit_rtl
+# -- Loading module z0in_work.dsp_unit_dsp_proc
+# -- Loading module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi
+# -- Loading module z0in_work.dsp_unit_read_inputs
+# -- Loading module z0in_work.dsp_unit_read_inputs_core
+# -- Loading module z0in_work.mgc_out_dreg_v2
+# -- Loading module z0in_work.ccs_in_v1
+# -- Loading module z0in_work.ccs_sync_out_vld_v1
+# -- Loading module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl
+# -- Loading module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi
+# -- Loading module z0in_work.dsp_unit_write_outputs
+# -- Loading module z0in_work.dsp_unit_write_outputs_core
+# -- Loading module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl
+# -- Loading module z0in_work.dsp_unit_dsp_proc_staller
+# -- Loading module z0in_work.dsp_unit_dsp_proc_dsp_proc_fsm
+# -- Loading module z0in_work.dsp_unit_regs_proc
+# -- Loading module z0in_work.cdc_unit
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading entity i2s_unit
+# -- Loading architecture RTL of i2s_unit
+# -- Loading module z0in_work.audioport_svamod
+# -- Loading module z0in_work.cdc_unit_svamod
+# -- Loading module z0in_work.dsp_unit_svamod
+# -- Loading module z0in_work.control_unit_svamod
+# -- Loading module z0in_work.i2s_unit_svamod
+# -- Loading package vl_types
+# Optimizing 41 design-units (inlining 0/36 module instances, 0/1 architecture instances):
+# -- Optimizing package z0in_work.apb_pkg(fast)
+# -- Optimizing package z0in_work.audioport_pkg(fast)
+# -- Optimizing package z0in_work.audioport_util_pkg(fast)
+# -- Optimizing package z0in_work.audioport_sva_bind_pkg(fast)
+# -- Optimizing module z0in_work.control_unit_svamod(fast)
+# Warning : Vopt warning.  (vopt-13314) Defaulting port 'rbank_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed, File 'input/control_unit_svamod.sv', Line 46.  [parser-285]
+#         : Elaboration will continue.
+# Warning : Vopt warning.  (vopt-13314) Defaulting port 'ldata_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed, File 'input/control_unit_svamod.sv', Line 54.  [parser-285]
+#         : Elaboration will continue.
+# Warning : Vopt warning.  (vopt-13314) Defaulting port 'rdata_r' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed, File 'input/control_unit_svamod.sv', Line 61.  [parser-285]
+#         : Elaboration will continue.
+# -- Optimizing module z0in_work.control_unit(fast)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__1)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__2)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__3)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__4)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__5)
+# -- Optimizing module z0in_work.mgc_out_dreg_v2(fast__6)
+# -- Optimizing module z0in_work.ccs_in_v1(fast)
+# -- Optimizing module z0in_work.ccs_sync_out_vld_v1(fast)
+# -- Optimizing module z0in_work.dsp_unit_read_inputs_core(fast)
+# -- Optimizing module z0in_work.dsp_unit_read_inputs(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_read_inputs_mioi(fast)
+# -- Optimizing module z0in_work.ccs_in_v1(fast__1)
+# -- Optimizing module z0in_work.ccs_in_v1(fast__2)
+# -- Optimizing module z0in_work.ccs_in_v1(fast__3)
+# -- Optimizing module z0in_work.dsp_unit_write_outputs_core(fast)
+# -- Optimizing module z0in_work.dsp_unit_write_outputs(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_write_outputs_mioi(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_staller(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc_dsp_proc_fsm(fast)
+# -- Optimizing module z0in_work.dsp_unit_dsp_proc(fast)
+# -- Optimizing module z0in_work.dsp_unit_regs_proc(fast)
+# -- Optimizing module z0in_work.dsp_unit_rtl(fast)
+# -- Optimizing module z0in_work.dsp_unit_svamod(fast)
+# -- Optimizing module z0in_work.dsp_unit(fast)
+# -- Optimizing module z0in_work.cdc_unit_svamod(fast)
+# -- Optimizing module z0in_work.cdc_unit(fast)
+# -- Optimizing module z0in_work.i2s_unit_svamod(fast)
+# -- Optimizing architecture RTL of i2s_unit
+# -- Optimizing module z0in_work.audioport_svamod(fast)
+# -- Optimizing module z0in_work.audioport(fast)
+# Optimized design name is zi_opt_af0_958646833_1
+# Summary: 3 Warnings in processing "netlist elaborate"
+# 
+### Starting Step: netlist create ### 
+# 
+## Synthesizing netlist...
+# Warning : Clock period or waveform specification has precision exceeding 3 digits past decimal point.  Clock 'mclk', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 11.  [directive-114]
+#         : Absolute numbers for clock specification are not necessary. Respecify the clocks with relative numbers.
+# Processing module 'control_unit_svamod'
+# Elaborating module 'control_unit_svamod'.
+# Processing module 'control_unit'
+# Elaborating module 'control_unit'.
+# Processing module 'mgc_out_dreg_v2'
+# Elaborating module 'mgc_out_dreg_v2'.
+# Processing module 'mgc_out_dreg_v2(3)'
+# Elaborating module 'mgc_out_dreg_v2(3)'.
+# Processing module 'mgc_out_dreg_v2(5)'
+# Elaborating module 'mgc_out_dreg_v2(5)'.
+# Processing module 'ccs_in_v1'
+# Elaborating module 'ccs_in_v1'.
+# Processing module 'ccs_sync_out_vld_v1'
+# Elaborating module 'ccs_sync_out_vld_v1'.
+# Processing module 'dsp_unit_read_inputs_core'
+# Elaborating module 'dsp_unit_read_inputs_core'.
+# Processing module 'dsp_unit_read_inputs'
+# Elaborating module 'dsp_unit_read_inputs'.
+# Processing module 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'
+# Elaborating module 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'.
+# Processing module 'dsp_unit_dsp_proc_read_inputs_mioi'
+# Elaborating module 'dsp_unit_dsp_proc_read_inputs_mioi'.
+# Processing module 'ccs_in_v1(1)'
+# Elaborating module 'ccs_in_v1(1)'.
+# Processing module 'dsp_unit_write_outputs_core'
+# Elaborating module 'dsp_unit_write_outputs_core'.
+# Processing module 'dsp_unit_write_outputs'
+# Elaborating module 'dsp_unit_write_outputs'.
+# Processing module 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'
+# Elaborating module 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'.
+# Processing module 'dsp_unit_dsp_proc_write_outputs_mioi'
+# Elaborating module 'dsp_unit_dsp_proc_write_outputs_mioi'.
+# Processing module 'dsp_unit_dsp_proc_staller'
+# Elaborating module 'dsp_unit_dsp_proc_staller'.
+# Processing module 'dsp_unit_dsp_proc_dsp_proc_fsm'
+# Elaborating module 'dsp_unit_dsp_proc_dsp_proc_fsm'.
+# Processing module 'dsp_unit_dsp_proc'
+# Elaborating module 'dsp_unit_dsp_proc'.
+# Processing module 'dsp_unit_regs_proc'
+# Elaborating module 'dsp_unit_regs_proc'.
+# Processing module 'dsp_unit_rtl'
+# Elaborating module 'dsp_unit_rtl'.
+# Processing module 'dsp_unit_svamod'
+# Elaborating module 'dsp_unit_svamod'.
+# Processing module 'dsp_unit'
+# Elaborating module 'dsp_unit'.
+# Processing module 'cdc_unit_svamod'
+# Elaborating module 'cdc_unit_svamod'.
+# Processing module 'cdc_unit'
+# Elaborating module 'cdc_unit'.
+# Processing module 'i2s_unit_svamod'
+# Elaborating module 'i2s_unit_svamod'.
+# Processing module 'i2s_unit(rtl)'
+# Elaborating module 'i2s_unit(rtl)'.
+# Processing module 'audioport_svamod'
+# Elaborating module 'audioport_svamod'.
+# 
+# Warning : Assertion compiler error.  File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport_svamod.sv' line 126: Assertion is too complex or has too much latency to create a checker.  [ac-1]
+#         : Skipping construct.
+# Processing module 'audioport'
+# Elaborating module 'audioport'.
+# 
+##Time Taken (Synthesis) = 5584014.000000 ticks = 5.584014 secs
+# Summary: 5 Warnings in processing "netlist create"
+# 
+### Starting Step: autocheck compile ### 
+# 
+## Processing Formal Logic...
+# Processing module 'control_unit_svamod'
+# Restoring module 'control_unit_svamod'.
+# Processing module 'control_unit'
+# Restoring module 'control_unit'.
+# Processing module 'mgc_out_dreg_v2'
+# Restoring module 'mgc_out_dreg_v2'.
+# Processing module 'mgc_out_dreg_v2(3)'
+# Restoring module 'mgc_out_dreg_v2(3)'.
+# Processing module 'mgc_out_dreg_v2(5)'
+# Restoring module 'mgc_out_dreg_v2(5)'.
+# Processing module 'ccs_in_v1'
+# Restoring module 'ccs_in_v1'.
+# Processing module 'ccs_sync_out_vld_v1'
+# Restoring module 'ccs_sync_out_vld_v1'.
+# Processing module 'dsp_unit_read_inputs_core'
+# Restoring module 'dsp_unit_read_inputs_core'.
+# Processing module 'dsp_unit_read_inputs'
+# Restoring module 'dsp_unit_read_inputs'.
+# Processing module 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'
+# Restoring module 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'.
+# Processing module 'dsp_unit_dsp_proc_read_inputs_mioi'
+# Restoring module 'dsp_unit_dsp_proc_read_inputs_mioi'.
+# Processing module 'ccs_in_v1(1)'
+# Restoring module 'ccs_in_v1(1)'.
+# Processing module 'dsp_unit_write_outputs_core'
+# Restoring module 'dsp_unit_write_outputs_core'.
+# Processing module 'dsp_unit_write_outputs'
+# Restoring module 'dsp_unit_write_outputs'.
+# Processing module 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'
+# Restoring module 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'.
+# Processing module 'dsp_unit_dsp_proc_write_outputs_mioi'
+# Restoring module 'dsp_unit_dsp_proc_write_outputs_mioi'.
+# Processing module 'dsp_unit_dsp_proc_staller'
+# Restoring module 'dsp_unit_dsp_proc_staller'.
+# Processing module 'dsp_unit_dsp_proc_dsp_proc_fsm'
+# Restoring module 'dsp_unit_dsp_proc_dsp_proc_fsm'.
+# Processing module 'dsp_unit_dsp_proc'
+# Restoring module 'dsp_unit_dsp_proc'.
+# Processing module 'dsp_unit_regs_proc'
+# Restoring module 'dsp_unit_regs_proc'.
+# Processing module 'dsp_unit_rtl'
+# Restoring module 'dsp_unit_rtl'.
+# Processing module 'dsp_unit_svamod'
+# Restoring module 'dsp_unit_svamod'.
+# Processing module 'dsp_unit'
+# Restoring module 'dsp_unit'.
+# Processing module 'cdc_unit_svamod'
+# Restoring module 'cdc_unit_svamod'.
+# Processing module 'cdc_unit'
+# Restoring module 'cdc_unit'.
+# Processing module 'i2s_unit_svamod'
+# Restoring module 'i2s_unit_svamod'.
+# Processing module 'i2s_unit(rtl)'
+# Restoring module 'i2s_unit(rtl)'.
+# Processing module 'audioport_svamod'
+# Restoring module 'audioport_svamod'.
+# Processing module 'audioport'
+# Restoring module 'audioport'.
+# Flattening design 'control_unit_svamod'.
+# Flattening design 'control_unit'.
+# Flattening design 'mgc_out_dreg_v2'.
+# Flattening design 'mgc_out_dreg_v2(3)'.
+# Flattening design 'mgc_out_dreg_v2(5)'.
+# Flattening design 'ccs_in_v1'.
+# Flattening design 'ccs_sync_out_vld_v1'.
+# Flattening design 'dsp_unit_read_inputs_core'.
+# Flattening design 'dsp_unit_read_inputs'.
+# Flattening design 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'.
+# Flattening design 'dsp_unit_dsp_proc_read_inputs_mioi'.
+# Flattening design 'ccs_in_v1(1)'.
+# Flattening design 'dsp_unit_write_outputs_core'.
+# Flattening design 'dsp_unit_write_outputs'.
+# Flattening design 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'.
+# Flattening design 'dsp_unit_dsp_proc_write_outputs_mioi'.
+# Flattening design 'dsp_unit_dsp_proc_staller'.
+# Flattening design 'dsp_unit_dsp_proc_dsp_proc_fsm'.
+# Flattening design 'dsp_unit_dsp_proc'.
+# Flattening design 'dsp_unit_regs_proc'.
+# Flattening design 'dsp_unit_rtl'.
+# Flattening design 'dsp_unit_svamod'.
+# Flattening design 'dsp_unit'.
+# Flattening design 'cdc_unit_svamod'.
+# Flattening design 'cdc_unit'.
+# Flattening design 'i2s_unit_svamod'.
+# Flattening design 'i2s_unit(rtl)'.
+# Flattening design 'audioport_svamod'.
+# Flattening design 'audioport'.
+# 
+# Signals replaced by netlist constant
+# -------------------------------------------------------------------------------
+# Signal                         Value
+# -------------------------------------------------------------------------------
+# test_mode_in                   1'b0
+# -------------------------------------------------------------------------------
+# 
+# Info    : Detected clock.  Clock: clk.  [netlist-11]
+# Info    : Detected clock.  Clock: mclk.  [netlist-11]
+# Warning : Adjusted clock period.  Clock 'mclk', specified: 54.253, adjusted: 52.5.  [attributes-57]
+#         : Processing will continue.
+# Warning : Reduced number of significant clock edges.  Number dropped by more than 3333X.  [attributes-58]
+#         : Processing will continue.
+# Info    : Detected asynchronous reset.  Signal: rst_n, active low.  [netlist-106]
+# Warning : Signal specified in directive is not an input or control point.  Directive will be ignored.  [formal-380]
+#         : Signal 'cdc_unit_1.mrst_n', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line '15'.
+#         : Use netlist cutpoint on signal to apply reset.
+# 
+# Clocks (***automatically adjusted***)
+# ------------------------------------------------------------------------------
+# Port                                   Period         Waveform
+# ------------------------------------------------------------------------------
+# clk                                      17.5           0 8.75 
+# mclk                                     52.5          0 26.25 
+# ------------------------------------------------------------------------------
+# 
+# Blackboxes
+# ------------------------------------------------------------------------------
+# Module name                                                Reason
+# ------------------------------------------------------------------------------
+# <no blackboxed modules>
+# ------------------------------------------------------------------------------
+# 
+# Inferred directives
+# ------------------------------------------------------------------------------
+# <no inferred directives>
+# ------------------------------------------------------------------------------
+# 
+# Error   : Signal specified in port constraint is not controllable.  Signal 'PRDATA[0]', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 21.  [directive-269]
+#         : Directive will be ignored.
+# Error   : Signal specified in port constraint is not controllable.  Signal 'PREADY', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 21.  [directive-269]
+#         : Directive will be ignored.
+# Error   : Signal specified in port constraint is not controllable.  Signal 'PSLVERR', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 21.  [directive-269]
+#         : Directive will be ignored.
+# Error   : Signal specified in port constraint is not controllable.  Signal 'irq_out', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 21.  [directive-269]
+#         : Directive will be ignored.
+# Error   : Signal specified in port constraint is not controllable.  Signal 'ws_out', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 24.  [directive-269]
+#         : Directive will be ignored.
+# Error   : Signal specified in port constraint is not controllable.  Signal 'sck_out', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 24.  [directive-269]
+#         : Directive will be ignored.
+# Error   : Signal specified in port constraint is not controllable.  Signal 'sdo_out', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 24.  [directive-269]
+#         : Directive will be ignored.
+# Formal model has been created.  Design 'audioport'.
+# 
+# Property Summary
+# -------------------------------------------------------------------------------
+# Total  Directives :25
+# Assert Directives :0
+# Assume Directives :25
+# Cover  Directives :0
+# 
+# SVA Summary
+# -------------------------------------------------------------------------------
+# SVA Directive Type        Directives           Checkers
+# -------------------------------------------------------------------------------
+# Assert                         0                   0
+# Assume                        25                  25
+# Cover                          0                   0
+# -------------------------------------------------------------------------------
+# 
+# AutoCheck Compile Summary
+# -------------------------------------------------------------------------------
+# Check                     Evaluations         Found        Waived
+# -------------------------------------------------------------------------------
+# ASSIGN_IMPLICIT_CONSTANT           43             0             0
+# CASE_DUPLICATE                      0             0             0
+# CLK_DELAY                          37             0             0
+# CLK_IN_DATA                      1400             0             0
+# COMBO_LOOP                        121             0             0
+# DECLARATION_UNDRIVEN               65             0             0
+# DECLARATION_UNUSED                 65             2             0
+# DECLARATION_UNUSED_UNDRIVEN         0             0             0
+# FUNCTION_INCOMPLETE_ASSIGN          0             0             0
+# INDEX_UNREACHABLE                7104             0             0
+# LATCH_INFERRED                     36             0             0
+# LOGIC_UNDRIVEN                     65             0             0
+# LOGIC_UNUSED                      141             1             0
+# PORT_UNDRIVEN                     211             0             0
+# PORT_UNUSED                       211             1             0
+# REG_MIXED_ASSIGNS                 211             0             0
+# REG_NO_RESET                      175             0             0
+# REG_RACE                            0             0             0
+# REG_VARIABLE_ARESET               350             0             0
+# RESET_HIGH_LOW                      1             0             0
+# RESET_SYNC_ASYNC                    1             0             0
+# SLIST_INCOMPLETE                   36             0             0
+# X_ASSIGN_REACHABLE                  0             0             0
+# -------------------------------------------------------------------------------
+# AC Total                        10273             4             0
+# -------------------------------------------------------------------------------
+# 
+# 
+# To see results in the GUI run:
+# qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qautocheck_run_log/autocheck.db
+# 
+# 
+# Message Summary
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     7  Error    directive-269      Signal specified in port constraint is not controllable.
+#     1  Warning  ac-1               Assertion compiler error.
+#     1  Warning  attributes-57      Adjusted clock period.
+#     1  Warning  attributes-58      Reduced number of significant clock edges.
+#     1  Warning  directive-114      Clock period or waveform specification has precision exceeding 3 digits past decimal point.
+#     1  Warning  formal-380         Signal specified in directive is not an input or control point.
+#     3  Warning  parser-285         Vopt warning.
+#     1  Info     netlist-106        Detected asynchronous reset.
+#     2  Info     netlist-11         Detected clock.
+# 
+# Summary: 7 Errors, 8 Warnings in processing "autocheck compile"
+# Final Process Statistics: Max memory 1038MB, CPU time 10s, Total time 14s
+# 
+# End of log Thu Apr 10 01:03:27 2025
+# 
+# Command : autocheck verify -timeout 2m -jobs 4
+# 
+# Questa Static Verification System
+# Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+# log created Thu Apr 10 01:03:28 2025 by aimtiaz23 on kataja7.oulu.fi
+# 
+# Executing Command : autocheck verify -timeout 2m -jobs 4 
+# File: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/scripts/qautocheck.tcl, Line: 109
+# 
+# Info    : Using initialization sequence file to initialize design state.  File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/rst.questa_init'.  [formal-205]
+# Error   : Signal specified in port constraint is not controllable.  Signal 'PRDATA[0]', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 21.  [directive-269]
+#         : Directive will be ignored.
+# Error   : Signal specified in port constraint is not controllable.  Signal 'PREADY', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 21.  [directive-269]
+#         : Directive will be ignored.
+# Error   : Signal specified in port constraint is not controllable.  Signal 'PSLVERR', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 21.  [directive-269]
+#         : Directive will be ignored.
+# Error   : Signal specified in port constraint is not controllable.  Signal 'irq_out', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 21.  [directive-269]
+#         : Directive will be ignored.
+# Error   : Signal specified in port constraint is not controllable.  Signal 'ws_out', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 24.  [directive-269]
+#         : Directive will be ignored.
+# Error   : Signal specified in port constraint is not controllable.  Signal 'sck_out', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 24.  [directive-269]
+#         : Directive will be ignored.
+# Error   : Signal specified in port constraint is not controllable.  Signal 'sdo_out', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport.questa_dir.tcl', Line 24.  [directive-269]
+#         : Directive will be ignored.
+# Info    : Automatically constraining reset signal to de-assert after initialization sequence (use -auto_constraint_off option to disable).  Signal 'rst_n', Value '1'.  [formal-285]
+# Info	: Warning(line 4): no $default_clock declared, using clk
+# Applying synthesis semantics to design: audioport
+# Info    : The number of engine jobs set is less than the available compute resources.  Remove the '-jobs 4' option to improve performance. Up to 16 engine jobs can be simultaneously run per license.  [formal-477]
+# [00:00:01] Status: Done 0/303, 0 issues, Mem=0GB
+# Info    : Established connection with engine process.  Hostname 'kataja7.oulu.fi', PID 1402, Id 1, Time [00:00:01].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'kataja7.oulu.fi', PID 1401, Id 3, Time [00:00:01].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'kataja7.oulu.fi', PID 1410, Id 4, Time [00:00:01].  [formal-385]
+# Info    : Established connection with engine process.  Hostname 'kataja7.oulu.fi', PID 1411, Id 2, Time [00:00:01].  [formal-385]
+# [00:01:18] REG_STUCK_AT: 'i2s_unit_1.shift_reg', "-----------------------------------------------0"(First bit found. See Details for all stuck bits.)
+# [00:01:18] REG_TOGGLE_VIOLATION: 'cdc_unit_1.mrst_n_sync1', 1'b1 -> 1'b0
+# [00:01:26] REG_TOGGLE_VIOLATION: 'cdc_unit_1.mrst_n_sync2', 1'b1 -> 1'b0
+# Info    : Timeout reached.  Formal process will terminate.  [formal-206]
+# [00:02:00] Status: Done 291/303, 3 issues, Mem=3GB
+# 
+# AutoCheck Compile Summary
+# -------------------------------------------------------------------------------
+# Check                     Evaluations         Found        Waived
+# -------------------------------------------------------------------------------
+# ASSIGN_IMPLICIT_CONSTANT           43             0             0
+# CASE_DUPLICATE                      0             0             0
+# CLK_DELAY                          37             0             0
+# CLK_IN_DATA                      1400             0             0
+# COMBO_LOOP                        121             0             0
+# DECLARATION_UNDRIVEN               65             0             0
+# DECLARATION_UNUSED                 65             2             0
+# DECLARATION_UNUSED_UNDRIVEN         0             0             0
+# FUNCTION_INCOMPLETE_ASSIGN          0             0             0
+# INDEX_UNREACHABLE                7104             0             0
+# LATCH_INFERRED                     36             0             0
+# LOGIC_UNDRIVEN                     65             0             0
+# LOGIC_UNUSED                      141             1             0
+# PORT_UNDRIVEN                     211             0             0
+# PORT_UNUSED                       211             1             0
+# REG_MIXED_ASSIGNS                 211             0             0
+# REG_NO_RESET                      175             0             0
+# REG_RACE                            0             0             0
+# REG_VARIABLE_ARESET               350             0             0
+# RESET_HIGH_LOW                      1             0             0
+# RESET_SYNC_ASYNC                    1             0             0
+# SLIST_INCOMPLETE                   36             0             0
+# X_ASSIGN_REACHABLE                  0             0             0
+# -------------------------------------------------------------------------------
+# AC Total                        10273             4             0
+# -------------------------------------------------------------------------------
+# 
+# 
+# AutoCheck Verify Summary
+# -------------------------------------------------------------------------------
+# Check                     Evaluations         Found        Waived
+# -------------------------------------------------------------------------------
+# ARITH_OVERFLOW_SUB                  0             0             0
+# ARITH_OVERFLOW_VAL                  7             0             0
+# ARITH_ZERO_DIV                      0             0             0
+# ARITH_ZERO_MOD                      0             0             0
+# BLOCK_UNREACHABLE                  93             0             0
+# BUS_MULTIPLY_DRIVEN                 0             0             0
+# BUS_UNDRIVEN                        0             0             0
+# BUS_VALUE_CONFLICT                  0             0             0
+# CASE_DEFAULT                      OFF           OFF           OFF
+# CASE_FULL                           0             0             0
+# CASE_PARALLEL                       0             0             0
+# FSM_DEADLOCK_STATE                  0             0             0
+# FSM_LOCKOUT_STATE                   0             0             0
+# FSM_STUCK_BIT                       0             0             0
+# FSM_UNREACHABLE_STATE               0             0             0
+# FSM_UNREACHABLE_TRANS               0             0             0
+# INDEX_ILLEGAL                       5             0             0
+# INIT_X_PESSIMISM                    0             0             0
+# INIT_X_UNRESOLVED                   0             0             0
+# INIT_X_UNRESOLVED_MEM               0             0             0
+# ONE_COLD                            0             0             0
+# ONE_HOT                             0             0             0
+# REG_MULTIPLY_DRIVEN                 0             0             0
+# REG_STUCK_AT                      175             1             0
+# REG_TOGGLE_VIOLATION               23             2             0
+# -------------------------------------------------------------------------------
+# AC Total                          303             3             0
+# -------------------------------------------------------------------------------
+# 
+# 
+# 
+# --------- Process Statistics ----------
+# Elapsed Time                     120 s
+# Total CPU Time                   452 s
+# Total Peak Memory                2.9 GB
+# ---------- Engine Processes -----------
+# Average CPU Time                 111 s
+# Minimum CPU Utilization           93 %
+# Average Peak Memory              0.6 GB
+# Maximum Peak Memory              0.9 GB
+# Peak Cores                         4
+# Distinct Machines                  1
+# Launch Failures                    0
+# Unexpected Process Terminations    0
+# Successful Re-connections          0
+# ---------------------------------------
+# 
+# 
+# Message Summary
+# ---------------------------------------------------------------------------
+# Count  Type     Message ID         Summary
+# ---------------------------------------------------------------------------
+#     7  Error    directive-269      Signal specified in port constraint is not controllable.
+#     1  Info     formal-205         Using initialization sequence file to initialize design state.
+#     1  Info     formal-206         Timeout reached.
+#     1  Info     formal-285         Automatically constraining reset signal to de-assert after initialization sequence (use -auto_constraint_off option to disable).
+#     4  Info     formal-385         Established connection with engine process.
+#     1  Info     formal-477         The number of engine jobs set is less than the available compute resources.
+# 
+# Final Process Statistics: Peak Memory 0.85GB, Cumulative CPU Time 452s, Elapsed Time 120s
+# 
+# To see results in the GUI run:
+# qverify /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_qautocheck_run_log/autocheck.db
+# 
+# 

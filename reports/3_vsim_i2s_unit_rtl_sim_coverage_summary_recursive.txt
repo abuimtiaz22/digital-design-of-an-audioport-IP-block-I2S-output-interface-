@@ -1,0 +1,28 @@
+Recursive Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /i2s_unit_tb/DUT_INSTANCE/CHECKER_MODULE
+=== Design Unit: work.i2s_unit_svamod
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                      34        34         0   100.00%
+    Directives                      17        17         0   100.00%
+    Toggles                        338       333         5    98.52%
+
+=================================================================================
+=== Instance: /i2s_unit_tb/DUT_INSTANCE
+=== Design Unit: work.i2s_unit(rtl)
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                      34        34         0   100.00%
+    Branches                        39        39         0   100.00%
+    Conditions                      11         9         2    81.81%
+    Directives                      17        17         0   100.00%
+    Statements                      31        31         0   100.00%
+    Toggles                        676       666        10    98.52%
+
+
+Total Coverage By Instance (filtered view): 96.72%
+

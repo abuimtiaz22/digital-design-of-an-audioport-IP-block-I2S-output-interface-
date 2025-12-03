@@ -1,0 +1,566 @@
+# //  Questa Sim-64
+# //  Version 2024.3_2 linux_x86_64 Nov 25 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do scripts/vsim_glsim.tcl
+# 1742550350
+# Script start time: 11:45:50
+# 0
+# MAX
+# MAX
+# -all
+# QuestaSim
+# 0
+# 1
+# output/cdc_unit_gatelevel.bin
+# output/cdc_unit_questasim_work
+# cdc_unit_gatelevel_vopt
+# output/cdc_unit_questasim_gatelevel_lib
+#  +acc +define+design_top_is_cdc_unit +define+DESIGN_NAME_MACRO=cdc_unit  +incdir+input
+#  -suppress 10587 +acc -debugdb
+# -msgmode both -t 1ps -noglitch +bitblast -uvmcontrol=all -debugdb
+# +nowarn3448 -suppress 13314 -suppress 13233 +define+GATELEVEL_SIM +acc +define+design_top_is_cdc_unit +define+DESIGN_NAME_MACRO=cdc_unit  +incdir+input
+# -suppress 10587 +acc -debugdb
+# +nowarn3448 +nowarn8756 -msgmode both -t 1ps -noglitch +bitblast -uvmcontrol=all -debugdb
+# results/cdc_unit_gatelevel.v
+# results/cdc_unit_gatelevel.sdf
+# output/cdc_unit_gatelevel.sdf.sdfcom
+# -maxdelays
+# vsim_rtlsim.tcl: Using previously compiled SDF file output/cdc_unit_gatelevel.sdf.sdfcom
+# 1
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:45:51 on Mar 21,2025
+# vlog -reportprogress 300 "+nowarn3448" -suppress 13314 -suppress 13233 "+define+GATELEVEL_SIM" "+acc" "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/apb_pkg.sv 
+# -- Compiling package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 11:45:51 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:45:51 on Mar 21,2025
+# vlog -reportprogress 300 "+nowarn3448" -suppress 13314 -suppress 13233 "+define+GATELEVEL_SIM" "+acc" "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/audioport_pkg.sv 
+# -- Compiling package audioport_pkg
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 11:45:52 on Mar 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:45:52 on Mar 21,2025
+# vlog -reportprogress 300 "+nowarn3448" -suppress 13314 -suppress 13233 "+define+GATELEVEL_SIM" "+acc" "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/audioport_util_pkg.sv 
+# -- Compiling package audioport_util_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 11:45:52 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:45:52 on Mar 21,2025
+# vlog -reportprogress 300 "+nowarn3448" -suppress 13314 -suppress 13233 "+define+GATELEVEL_SIM" "+acc" "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/cdc_unit_test.sv 
+# -- Compiling package cdc_unit_test_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling program cdc_unit_test
+# 
+# Top level modules:
+# 	cdc_unit_test
+# End time: 11:45:52 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:45:52 on Mar 21,2025
+# vlog -reportprogress 300 "+nowarn3448" -suppress 13314 -suppress 13233 "+define+GATELEVEL_SIM" "+acc" "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/cdc_unit_tb.sv 
+# -- Compiling package cdc_unit_tb_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module cdc_unit_tb
+# 
+# Top level modules:
+# 	cdc_unit_tb
+# End time: 11:45:52 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:45:52 on Mar 21,2025
+# vlog -reportprogress 300 "+nowarn3448" -suppress 13314 -suppress 13233 "+define+GATELEVEL_SIM" "+acc" "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -sv -work work input/cdc_unit_svamod.sv 
+# -- Compiling package cdc_unit_svamod_sv_unit
+# -- Importing package audioport_pkg
+# -- Importing package apb_pkg
+# -- Importing package audioport_util_pkg
+# -- Compiling module cdc_unit_svamod
+# 
+# Top level modules:
+# 	cdc_unit_svamod
+# End time: 11:45:52 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:45:52 on Mar 21,2025
+# vlog -reportprogress 300 -work work /research/cas/public/DT3_2025/lib/verilog/NangateOpenCellLibrary.v 
+# -- Compiling module AND2_X1
+# -- Compiling module AND2_X2
+# -- Compiling module AND2_X4
+# -- Compiling module AND3_X1
+# -- Compiling module AND3_X2
+# -- Compiling module AND3_X4
+# -- Compiling module AND4_X1
+# -- Compiling module AND4_X2
+# -- Compiling module AND4_X4
+# -- Compiling module ANTENNA_X1
+# -- Compiling module AOI211_X1
+# -- Compiling module AOI211_X2
+# -- Compiling module AOI211_X4
+# -- Compiling module AOI21_X1
+# -- Compiling module AOI21_X2
+# -- Compiling module AOI21_X4
+# -- Compiling module AOI221_X1
+# -- Compiling module AOI221_X2
+# -- Compiling module AOI221_X4
+# -- Compiling module AOI222_X1
+# -- Compiling module AOI222_X2
+# -- Compiling module AOI222_X4
+# -- Compiling module AOI22_X1
+# -- Compiling module AOI22_X2
+# -- Compiling module AOI22_X4
+# -- Compiling module BUF_X1
+# -- Compiling module BUF_X16
+# -- Compiling module BUF_X2
+# -- Compiling module BUF_X32
+# -- Compiling module BUF_X4
+# -- Compiling module BUF_X8
+# -- Compiling module CLKBUF_X1
+# -- Compiling module CLKBUF_X2
+# -- Compiling module CLKBUF_X3
+# -- Compiling UDP seq_CLKGATETST_X1
+# -- Compiling module CLKGATETST_X1
+# -- Compiling UDP seq_CLKGATETST_X2
+# -- Compiling module CLKGATETST_X2
+# -- Compiling UDP seq_CLKGATETST_X4
+# -- Compiling module CLKGATETST_X4
+# -- Compiling UDP seq_CLKGATETST_X8
+# -- Compiling module CLKGATETST_X8
+# -- Compiling UDP seq_CLKGATE_X1
+# -- Compiling module CLKGATE_X1
+# -- Compiling UDP seq_CLKGATE_X2
+# -- Compiling module CLKGATE_X2
+# -- Compiling UDP seq_CLKGATE_X4
+# -- Compiling module CLKGATE_X4
+# -- Compiling UDP seq_CLKGATE_X8
+# -- Compiling module CLKGATE_X8
+# -- Compiling UDP seq_DFFRS_X1
+# -- Compiling module DFFRS_X1
+# -- Compiling UDP seq_DFFRS_X2
+# -- Compiling module DFFRS_X2
+# -- Compiling UDP seq_DFFR_X1
+# -- Compiling module DFFR_X1
+# -- Compiling UDP seq_DFFR_X2
+# -- Compiling module DFFR_X2
+# -- Compiling UDP seq_DFFS_X1
+# -- Compiling module DFFS_X1
+# -- Compiling UDP seq_DFFS_X2
+# -- Compiling module DFFS_X2
+# -- Compiling UDP seq_DFF_X1
+# -- Compiling module DFF_X1
+# -- Compiling UDP seq_DFF_X2
+# -- Compiling module DFF_X2
+# -- Compiling UDP seq_DLH_X1
+# -- Compiling module DLH_X1
+# -- Compiling UDP seq_DLH_X2
+# -- Compiling module DLH_X2
+# -- Compiling UDP seq_DLL_X1
+# -- Compiling module DLL_X1
+# -- Compiling UDP seq_DLL_X2
+# -- Compiling module DLL_X2
+# -- Compiling module FA_X1
+# -- Compiling module FILLCELL_X1
+# -- Compiling module FILLCELL_X2
+# -- Compiling module FILLCELL_X4
+# -- Compiling module FILLCELL_X8
+# -- Compiling module FILLCELL_X16
+# -- Compiling module FILLCELL_X32
+# -- Compiling module HA_X1
+# -- Compiling module INV_X1
+# -- Compiling module INV_X16
+# -- Compiling module INV_X2
+# -- Compiling module INV_X32
+# -- Compiling module INV_X4
+# -- Compiling module INV_X8
+# -- Compiling module LOGIC0_X1
+# -- Compiling module LOGIC1_X1
+# -- Compiling module MUX2_X1
+# -- Compiling module MUX2_X2
+# -- Compiling module NAND2_X1
+# -- Compiling module NAND2_X2
+# -- Compiling module NAND2_X4
+# -- Compiling module NAND3_X1
+# -- Compiling module NAND3_X2
+# -- Compiling module NAND3_X4
+# -- Compiling module NAND4_X1
+# -- Compiling module NAND4_X2
+# -- Compiling module NAND4_X4
+# -- Compiling module NOR2_X1
+# -- Compiling module NOR2_X2
+# -- Compiling module NOR2_X4
+# -- Compiling module NOR3_X1
+# -- Compiling module NOR3_X2
+# -- Compiling module NOR3_X4
+# -- Compiling module NOR4_X1
+# -- Compiling module NOR4_X2
+# -- Compiling module NOR4_X4
+# -- Compiling module OAI211_X1
+# -- Compiling module OAI211_X2
+# -- Compiling module OAI211_X4
+# -- Compiling module OAI21_X1
+# -- Compiling module OAI21_X2
+# -- Compiling module OAI21_X4
+# -- Compiling module OAI221_X1
+# -- Compiling module OAI221_X2
+# -- Compiling module OAI221_X4
+# -- Compiling module OAI222_X1
+# -- Compiling module OAI222_X2
+# -- Compiling module OAI222_X4
+# -- Compiling module OAI22_X1
+# -- Compiling module OAI22_X2
+# -- Compiling module OAI22_X4
+# -- Compiling module OAI33_X1
+# -- Compiling module OR2_X1
+# -- Compiling module OR2_X2
+# -- Compiling module OR2_X4
+# -- Compiling module OR3_X1
+# -- Compiling module OR3_X2
+# -- Compiling module OR3_X4
+# -- Compiling module OR4_X1
+# -- Compiling module OR4_X2
+# -- Compiling module OR4_X4
+# -- Compiling UDP seq_SDFFRS_X1
+# -- Compiling module SDFFRS_X1
+# -- Compiling UDP seq_SDFFRS_X2
+# -- Compiling module SDFFRS_X2
+# -- Compiling UDP seq_SDFFR_X1
+# -- Compiling module SDFFR_X1
+# -- Compiling UDP seq_SDFFR_X2
+# -- Compiling module SDFFR_X2
+# -- Compiling UDP seq_SDFFS_X1
+# -- Compiling module SDFFS_X1
+# -- Compiling UDP seq_SDFFS_X2
+# -- Compiling module SDFFS_X2
+# -- Compiling UDP seq_SDFF_X1
+# -- Compiling module SDFF_X1
+# -- Compiling UDP seq_SDFF_X2
+# -- Compiling module SDFF_X2
+# -- Compiling module TBUF_X1
+# -- Compiling module TBUF_X16
+# -- Compiling module TBUF_X2
+# -- Compiling module TBUF_X4
+# -- Compiling module TBUF_X8
+# -- Compiling module TINV_X1
+# -- Compiling UDP seq_TLAT_X1
+# -- Compiling module TLAT_X1
+# -- Compiling module XNOR2_X1
+# -- Compiling module XNOR2_X2
+# -- Compiling module XOR2_X1
+# -- Compiling module XOR2_X2
+# -- Compiling UDP ng_xbuf
+# 
+# Top level modules:
+# 	AND2_X1
+# 	AND2_X2
+# 	AND2_X4
+# 	AND3_X1
+# 	AND3_X2
+# 	AND3_X4
+# 	AND4_X1
+# 	AND4_X2
+# 	AND4_X4
+# 	ANTENNA_X1
+# 	AOI211_X1
+# 	AOI211_X2
+# 	AOI211_X4
+# 	AOI21_X1
+# 	AOI21_X2
+# 	AOI21_X4
+# 	AOI221_X1
+# 	AOI221_X2
+# 	AOI221_X4
+# 	AOI222_X1
+# 	AOI222_X2
+# 	AOI222_X4
+# 	AOI22_X1
+# 	AOI22_X2
+# 	AOI22_X4
+# 	BUF_X1
+# 	BUF_X16
+# 	BUF_X2
+# 	BUF_X32
+# 	BUF_X4
+# 	BUF_X8
+# 	CLKBUF_X1
+# 	CLKBUF_X2
+# 	CLKBUF_X3
+# 	CLKGATETST_X1
+# 	CLKGATETST_X2
+# 	CLKGATETST_X4
+# 	CLKGATETST_X8
+# 	CLKGATE_X1
+# 	CLKGATE_X2
+# 	CLKGATE_X4
+# 	CLKGATE_X8
+# 	DFFRS_X1
+# 	DFFRS_X2
+# 	DFFR_X1
+# 	DFFR_X2
+# 	DFFS_X1
+# 	DFFS_X2
+# 	DFF_X1
+# 	DFF_X2
+# 	DLH_X1
+# 	DLH_X2
+# 	DLL_X1
+# 	DLL_X2
+# 	FA_X1
+# 	FILLCELL_X1
+# 	FILLCELL_X2
+# 	FILLCELL_X4
+# 	FILLCELL_X8
+# 	FILLCELL_X16
+# 	FILLCELL_X32
+# 	HA_X1
+# 	INV_X1
+# 	INV_X16
+# 	INV_X2
+# 	INV_X32
+# 	INV_X4
+# 	INV_X8
+# 	LOGIC0_X1
+# 	LOGIC1_X1
+# 	MUX2_X1
+# 	MUX2_X2
+# 	NAND2_X1
+# 	NAND2_X2
+# 	NAND2_X4
+# 	NAND3_X1
+# 	NAND3_X2
+# 	NAND3_X4
+# 	NAND4_X1
+# 	NAND4_X2
+# 	NAND4_X4
+# 	NOR2_X1
+# 	NOR2_X2
+# 	NOR2_X4
+# 	NOR3_X1
+# 	NOR3_X2
+# 	NOR3_X4
+# 	NOR4_X1
+# 	NOR4_X2
+# 	NOR4_X4
+# 	OAI211_X1
+# 	OAI211_X2
+# 	OAI211_X4
+# 	OAI21_X1
+# 	OAI21_X2
+# 	OAI21_X4
+# 	OAI221_X1
+# 	OAI221_X2
+# 	OAI221_X4
+# 	OAI222_X1
+# 	OAI222_X2
+# 	OAI222_X4
+# 	OAI22_X1
+# 	OAI22_X2
+# 	OAI22_X4
+# 	OAI33_X1
+# 	OR2_X1
+# 	OR2_X2
+# 	OR2_X4
+# 	OR3_X1
+# 	OR3_X2
+# 	OR3_X4
+# 	OR4_X1
+# 	OR4_X2
+# 	OR4_X4
+# 	SDFFRS_X1
+# 	SDFFRS_X2
+# 	SDFFR_X1
+# 	SDFFR_X2
+# 	SDFFS_X1
+# 	SDFFS_X2
+# 	SDFF_X1
+# 	SDFF_X2
+# 	TBUF_X1
+# 	TBUF_X16
+# 	TBUF_X2
+# 	TBUF_X4
+# 	TBUF_X8
+# 	TINV_X1
+# 	TLAT_X1
+# 	XNOR2_X1
+# 	XNOR2_X2
+# 	XOR2_X1
+# 	XOR2_X2
+# End time: 11:45:53 on Mar 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:45:53 on Mar 21,2025
+# vlog -reportprogress 300 "+nowarn3448" -suppress 13314 -suppress 13233 "+define+GATELEVEL_SIM" "+acc" "+define+design_top_is_cdc_unit" "+define+DESIGN_NAME_MACRO=cdc_unit" "+incdir+input" -work work results/cdc_unit_gatelevel.v 
+# -- Compiling module cdc_unit
+# 
+# Top level modules:
+# 	cdc_unit
+# End time: 11:45:53 on Mar 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:45:53 on Mar 21,2025
+# vopt -reportprogress 300 -suppress 10587 "+acc" -debugdb work.cdc_unit_tb -o cdc_unit_gatelevel_vopt -designfile output/cdc_unit_gatelevel.bin 
+# 
+# Top level modules:
+# 	cdc_unit_tb
+# 
+# Analyzing design...
+# -- Loading module cdc_unit_tb
+# -- Loading module cdc_unit
+# -- Loading module DFFR_X1
+# -- Loading UDP seq_DFFR_X1
+# -- Loading UDP ng_xbuf
+# -- Loading module MUX2_X1
+# -- Loading module INV_X1
+# -- Loading module CLKBUF_X1
+# -- Loading module NOR2_X1
+# -- Loading module CLKBUF_X2
+# -- Loading module AOI21_X1
+# -- Loading module AOI22_X1
+# -- Loading program cdc_unit_test
+# -- Loading module cdc_unit_svamod
+# Optimizing 23 design-units (inlining 0/4 module instances, 0/219 cell instances, 330/330 UDP instances):
+# -- Optimizing package apb_pkg(fast)
+# -- Optimizing package cdc_unit_tb_sv_unit(fast)
+# -- Optimizing package cdc_unit_test_sv_unit(fast)
+# -- Optimizing package cdc_unit_svamod_sv_unit(fast)
+# -- Optimizing package audioport_pkg(fast)
+# -- Optimizing package audioport_util_pkg(fast)
+# -- Optimizing module cdc_unit(fast)
+# -- Processing module cdc_unit(fast) for debug
+# -- Optimizing module cdc_unit_svamod(fast)
+# -- Processing module cdc_unit_svamod(fast) for debug
+# -- Optimizing program cdc_unit_test(fast)
+# -- Optimizing module AOI22_X1(fast)
+# -- Processing module AOI22_X1(fast) for debug
+# -- Inlining UDP seq_DFFR_X1
+# -- Inlining UDP ng_xbuf
+# -- Optimizing module DFFR_X1(fast)
+# -- Processing module DFFR_X1(fast) for debug
+# -- Inlining UDP seq_DFFR_X1
+# -- Inlining UDP ng_xbuf
+# -- Optimizing module DFFR_X1(fast__1)
+# -- Processing module DFFR_X1(fast__1) for debug
+# -- Optimizing module cdc_unit_tb(fast)
+# -- Processing module cdc_unit_tb(fast) for debug
+# -- Optimizing module MUX2_X1(fast)
+# -- Processing module MUX2_X1(fast) for debug
+# -- Optimizing module MUX2_X1(fast__1)
+# -- Processing module MUX2_X1(fast__1) for debug
+# -- Optimizing module AOI21_X1(fast)
+# -- Processing module AOI21_X1(fast) for debug
+# -- Optimizing module NOR2_X1(fast)
+# -- Processing module NOR2_X1(fast) for debug
+# -- Optimizing module INV_X1(fast)
+# -- Processing module INV_X1(fast) for debug
+# -- Optimizing module CLKBUF_X1(fast)
+# -- Processing module CLKBUF_X1(fast) for debug
+# -- Optimizing module INV_X1(fast__1)
+# -- Processing module INV_X1(fast__1) for debug
+# -- Optimizing module CLKBUF_X2(fast)
+# -- Processing module CLKBUF_X2(fast) for debug
+# viscom:
+# VISCOM: Start time: 11:45:54 on Mar 21,2025
+# 
+# VISCOM: QuestaSim /sw/rhel8/siemens/questa_sim-2024.3_2/questasim/linux_x86_64/VisualizerRls/bin/viscom 2024.3_2 at 2024.11 Nov 25 2024
+# VISCOM: Writing output/cdc_unit_gatelevel.bin
+# VISCOM: Done writing output/cdc_unit_gatelevel.bin
+# VISCOM: End time: 11:45:55 on Mar 21,2025, Elapsed time: 0:00:01 (Process Size : 318MB, Peak Process Size : 318MB)
+# 
+# 
+# Optimized design name is cdc_unit_gatelevel_vopt
+# End time: 11:45:55 on Mar 21,2025, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0, Suppressed Warnings: 1
+# vsim cdc_unit_gatelevel_vopt "+nowarn3448" "+nowarn8756" -msgmode both -t 1ps -noglitch "+bitblast" -uvmcontrol=all -debugdb -sdfmax "/cdc_unit_tb/DUT_INSTANCE=output/cdc_unit_gatelevel.sdf.sdfcom" -sdfnoerror 
+# Start time: 11:45:55 on Mar 21,2025
+# Loading sv_std.std
+# Loading work.apb_pkg(fast)
+# Loading work.audioport_pkg(fast)
+# Loading work.audioport_util_pkg(fast)
+# Loading work.cdc_unit_tb_sv_unit(fast)
+# Loading work.cdc_unit_tb(fast)
+# Loading work.cdc_unit(fast)
+# Loading work.DFFR_X1(fast)
+# Loading work.DFFR_X1(fast__1)
+# Loading work.MUX2_X1(fast)
+# Loading work.INV_X1(fast)
+# Loading work.CLKBUF_X1(fast)
+# Loading work.INV_X1(fast__1)
+# Loading work.MUX2_X1(fast__1)
+# Loading work.NOR2_X1(fast)
+# Loading work.CLKBUF_X2(fast)
+# Loading work.AOI21_X1(fast)
+# Loading work.AOI22_X1(fast)
+# Loading work.cdc_unit_svamod_sv_unit(fast)
+# Loading work.cdc_unit_svamod(fast)
+# Loading work.cdc_unit_test_sv_unit(fast)
+# Loading work.cdc_unit_test(fast)
+# Loading instances from output/cdc_unit_gatelevel.sdf.sdfcom
+# Loading timing data from output/cdc_unit_gatelevel.sdf.sdfcom
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /cdc_unit_tb File: input/cdc_unit_tb.sv
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# Disabling timing checks on /cdc_unit_tb/DUT_INSTANCE/handshake_req_sync1_reg
+# Disabling timing checks on /cdc_unit_tb/DUT_INSTANCE/req_in_sync1_reg
+# Disabling timing checks on /cdc_unit_tb/DUT_INSTANCE/mrst_n_sync1_reg
+# Disabling timing checks on /cdc_unit_tb/DUT_INSTANCE/play_in_sync1_reg
+# Disabling timing checks on /cdc_unit_tb/DUT_INSTANCE/handshake_ack_sync1_reg
+# ** Info: T1: testmux_test
+#    Time: 163944 ps  Scope: cdc_unit_tb.TEST.testmux_test File: input/cdc_unit_test_tasks.svh Line: 2
+# ** Info: T2: reset_sync_test
+#    Time: 767174 ps  Scope: cdc_unit_tb.TEST.reset_sync_test File: input/cdc_unit_test_tasks.svh Line: 58
+# ** Info: T3: play_sync_test
+#    Time: 4043538 ps  Scope: cdc_unit_tb.TEST.play_sync_test File: input/cdc_unit_test_tasks.svh Line: 132
+# ** Info: T4: pulse_sync_test
+#    Time: 5272367 ps  Scope: cdc_unit_tb.TEST.pulse_sync_test File: input/cdc_unit_test_tasks.svh Line: 202
+# ** Error: af_req_sync
+#    Time: 8470888 ps Started: 8457888 ps  Scope: audioport_util_pkg.assert_error File: input/audioport_util_pkg.sv Line: 30
+# ** Info: T5: audio_sync_test
+#    Time: 10825289 ps  Scope: cdc_unit_tb.TEST.audio_sync_test File: input/cdc_unit_test_tasks.svh Line: 267
+#####################################################################################################
+# cdc_unit_test results: PASSED:           4 / FAILED:           1
+#####################################################################################################
+#  
+# ------------------------------------
+# Crossing   |        Latency 
+#            |        ns  clk mclk
+# ------------------------------------
+# reset_sync |    81.080    7    2
+# play_sync  |   107.200    9    2
+# req_sync   |    25.808    2    1
+# audio_sync |   173.475   14    4
+# -----------------------------------
+# ** Note: $finish    : input/cdc_unit_test.sv(176)
+#    Time: 35164186 ps  Iteration: 1  Instance: /cdc_unit_tb/TEST
+# 1
+# Break in Module cdc_unit_test at input/cdc_unit_test.sv line 176
+# 1742550362
+# Script end time: 11:46:02
+# 0 ps
+# 36922395 ps
+# End time: 13:27:22 on Mar 21,2025, Elapsed time: 1:41:27
+# Errors: 1, Warnings: 0

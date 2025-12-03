@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : clock timing
+        -type summary
+Design : dsp_unit
+Version: T-2022.03-SP5-1
+Date   : Fri Apr  4 03:56:37 2025
+****************************************
+
+  Clock: clk
+----------------------------------------------------------------------------
+  Maximum setup launch latency:
+      dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/io_read_ccs_ccore_start_rsc_sft_lpi_1_dfm_1_reg/CK
+                                                             0.00      wr-+
+
+  Minimum setup capture latency:
+      dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/io_read_ccs_ccore_start_rsc_sft_lpi_1_dfm_1_reg/CK
+                                                             0.00      wr-+
+
+  Minimum hold launch latency:
+      dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/io_read_ccs_ccore_start_rsc_sft_lpi_1_dfm_1_reg/CK
+                                                             0.00      br-+
+
+  Maximum hold capture latency:
+      dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/io_read_ccs_ccore_start_rsc_sft_lpi_1_dfm_1_reg/CK
+                                                             0.00      br-+
+
+  Maximum active transition:
+      dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/io_read_ccs_ccore_start_rsc_sft_lpi_1_dfm_1_reg/CK
+                                                             0.00      wr-+
+
+  Minimum active transition:
+      dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/io_read_ccs_ccore_start_rsc_sft_lpi_1_dfm_1_reg/CK
+                                                             0.00      wr-+
+
+  Maximum setup skew:
+      dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/FILTER_LOOP_i_6_0_sva_reg[0]/CK
+                                                                       wr-+
+      dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/FILTER_LOOP_i_6_0_sva_reg[0]/CK
+                                                             0.00      wr-+
+
+  Maximum hold skew:
+      dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/FILTER_LOOP_i_6_0_sva_reg[0]/CK
+                                                                       br-+
+      dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/FILTER_LOOP_i_6_0_sva_reg[0]/CK
+                                                             0.00      br-+
+----------------------------------------------------------------------------
+
+1

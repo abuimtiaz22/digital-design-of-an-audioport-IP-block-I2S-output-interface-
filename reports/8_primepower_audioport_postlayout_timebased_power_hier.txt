@@ -1,0 +1,1342 @@
+****************************************
+Report : Time Based Power
+	-hierarchy
+	-levels 2
+Design : audioport
+Version: U-2022.12
+Date   : Mon May  5 00:12:27 2025
+****************************************
+
+
+
+                                      Int      Switch   Leak     Total
+Hierarchy                             Power    Power    Power    Power    %
+----------------------------------------------------------------------------------
+audioport                             6.54e-04 2.95e-04 2.31e-03 3.26e-03 100.0
+  control_unit_1 (control_unit_test_1)
+                                      5.78e-04 2.21e-04 9.66e-04 1.76e-03  54.1
+    clk_gate_rbank_r_reg_3__0 (SNPS_CLOCK_GATE_HIGH_control_unit_235)
+                                      4.54e-07    0.000 1.25e-07 5.79e-07   0.0
+    clk_gate_ldata_r_reg_3__0 (SNPS_CLOCK_GATE_HIGH_control_unit_123)
+                                      4.97e-07 1.17e-08 7.37e-08 5.83e-07   0.0
+    clk_gate_ldata_r_reg_20__0 (SNPS_CLOCK_GATE_HIGH_control_unit_157)
+                                      4.84e-07    0.000 7.36e-08 5.58e-07   0.0
+    clk_gate_rbank_r_reg_69__0 (SNPS_CLOCK_GATE_HIGH_control_unit_367)
+                                      4.73e-07 1.72e-08 7.37e-08 5.64e-07   0.0
+    clk_gate_rbank_r_reg_48__0 (SNPS_CLOCK_GATE_HIGH_control_unit_325)
+                                      4.51e-07 1.99e-08 7.37e-08 5.45e-07   0.0
+    clk_gate_rbank_r_reg_119__0 (SNPS_CLOCK_GATE_HIGH_control_unit_467)
+                                      5.08e-07 2.16e-08 1.25e-07 6.55e-07   0.0
+    clk_gate_rdata_r_reg_46__0 (SNPS_CLOCK_GATE_HIGH_control_unit_95)
+                                      4.91e-07    0.000 7.36e-08 5.64e-07   0.0
+    clk_gate_rbank_r_reg_27__0 (SNPS_CLOCK_GATE_HIGH_control_unit_283)
+                                      4.36e-07    0.000 1.25e-07 5.61e-07   0.0
+    clk_gate_rdata_r_reg_25__0 (SNPS_CLOCK_GATE_HIGH_control_unit_53)
+                                      4.75e-07    0.000 7.36e-08 5.48e-07   0.0
+    clk_gate_ldata_r_reg_40__0 (SNPS_CLOCK_GATE_HIGH_control_unit_197)
+                                      4.84e-07    0.000 7.36e-08 5.58e-07   0.0
+    clk_gate_rbank_r_reg_2__0 (SNPS_CLOCK_GATE_HIGH_control_unit_233)
+                                      4.54e-07    0.000 1.25e-07 5.78e-07   0.0
+    clk_gate_rbank_r_reg_89__0 (SNPS_CLOCK_GATE_HIGH_control_unit_407)
+                                      4.61e-07 2.32e-08 1.25e-07 6.09e-07   0.0
+    clk_gate_ldata_r_reg_2__0 (SNPS_CLOCK_GATE_HIGH_control_unit_121)
+                                      4.99e-07 1.16e-08 7.37e-08 5.84e-07   0.0
+    clk_gate_ldata_r_reg_19__0 (SNPS_CLOCK_GATE_HIGH_control_unit_155)
+                                      4.94e-07    0.000 7.36e-08 5.67e-07   0.0
+    clk_gate_rbank_r_reg_68__0 (SNPS_CLOCK_GATE_HIGH_control_unit_365)
+                                      4.73e-07 1.67e-08 7.37e-08 5.64e-07   0.0
+    clk_gate_rbank_r_reg_47__0 (SNPS_CLOCK_GATE_HIGH_control_unit_323)
+                                      4.69e-07    0.000 7.37e-08 5.43e-07   0.0
+    clk_gate_rbank_r_reg_118__0 (SNPS_CLOCK_GATE_HIGH_control_unit_465)
+                                      4.76e-07 2.15e-08 1.25e-07 6.22e-07   0.0
+    clk_gate_rdata_r_reg_45__0 (SNPS_CLOCK_GATE_HIGH_control_unit_93)
+                                      4.80e-07    0.000 7.36e-08 5.54e-07   0.0
+    clk_gate_rbank_r_reg_26__0 (SNPS_CLOCK_GATE_HIGH_control_unit_281)
+                                      4.72e-07    0.000 1.25e-07 5.96e-07   0.0
+    clk_gate_rdata_r_reg_24__0 (SNPS_CLOCK_GATE_HIGH_control_unit_51)
+                                      4.86e-07    0.000 7.36e-08 5.60e-07   0.0
+    clk_gate_ldata_r_reg_39__0 (SNPS_CLOCK_GATE_HIGH_control_unit_195)
+                                      4.93e-07    0.000 7.36e-08 5.67e-07   0.0
+    clk_gate_rbank_r_reg_1__0 (SNPS_CLOCK_GATE_HIGH_control_unit_231)
+                                      4.38e-07    0.000 1.25e-07 5.63e-07   0.0
+    clk_gate_rbank_r_reg_88__0 (SNPS_CLOCK_GATE_HIGH_control_unit_405)
+                                      4.43e-07 2.14e-08 1.25e-07 5.89e-07   0.0
+    clk_gate_ldata_r_reg_1__0 (SNPS_CLOCK_GATE_HIGH_control_unit_119)
+                                      4.89e-07 1.10e-08 7.37e-08 5.74e-07   0.0
+    clk_gate_ldata_r_reg_18__0 (SNPS_CLOCK_GATE_HIGH_control_unit_153)
+                                      4.76e-07 1.05e-08 7.37e-08 5.60e-07   0.0
+    clk_gate_rbank_r_reg_67__0 (SNPS_CLOCK_GATE_HIGH_control_unit_363)
+                                      4.73e-07 1.82e-08 7.37e-08 5.65e-07   0.0
+    clk_gate_rbank_r_reg_46__0 (SNPS_CLOCK_GATE_HIGH_control_unit_321)
+                                      4.62e-07    0.000 7.36e-08 5.35e-07   0.0
+    clk_gate_rbank_r_reg_117__0 (SNPS_CLOCK_GATE_HIGH_control_unit_463)
+                                      4.91e-07 1.96e-08 7.37e-08 5.84e-07   0.0
+    clk_gate_rdata_r_reg_44__0 (SNPS_CLOCK_GATE_HIGH_control_unit_91)
+                                      4.86e-07    0.000 7.36e-08 5.60e-07   0.0
+    clk_gate_rbank_r_reg_25__0 (SNPS_CLOCK_GATE_HIGH_control_unit_279)
+                                      4.73e-07    0.000 1.25e-07 5.97e-07   0.0
+    clk_gate_rdata_r_reg_23__0 (SNPS_CLOCK_GATE_HIGH_control_unit_49)
+                                      4.40e-07    0.000 6.11e-08 5.01e-07   0.0
+    clk_gate_ldata_r_reg_38__0 (SNPS_CLOCK_GATE_HIGH_control_unit_193)
+                                      4.95e-07    0.000 7.36e-08 5.68e-07   0.0
+    clk_gate_rbank_r_reg_0__0 (SNPS_CLOCK_GATE_HIGH_control_unit_229)
+                                      4.47e-07    0.000 1.25e-07 5.72e-07   0.0
+    clk_gate_rdata_r_reg_9__0 (SNPS_CLOCK_GATE_HIGH_control_unit_21)
+                                      4.85e-07 1.21e-08 7.37e-08 5.70e-07   0.0
+    clk_gate_rbank_r_reg_87__0 (SNPS_CLOCK_GATE_HIGH_control_unit_403)
+                                      4.54e-07 2.48e-08 1.25e-07 6.03e-07   0.0
+    clk_gate_ldata_r_reg_0__0 (SNPS_CLOCK_GATE_HIGH_control_unit_117)
+                                      4.88e-07 1.10e-08 7.37e-08 5.73e-07   0.0
+    clk_gate_ldata_r_reg_17__0 (SNPS_CLOCK_GATE_HIGH_control_unit_151)
+                                      4.79e-07 3.94e-10 6.11e-08 5.40e-07   0.0
+    clk_gate_rbank_r_reg_66__0 (SNPS_CLOCK_GATE_HIGH_control_unit_361)
+                                      4.65e-07 1.77e-08 7.37e-08 5.57e-07   0.0
+    clk_gate_rbank_r_reg_137__0 (SNPS_CLOCK_GATE_HIGH_control_unit_503)
+                                      4.88e-07 1.92e-08 7.37e-08 5.81e-07   0.0
+    clk_gate_rbank_r_reg_45__0 (SNPS_CLOCK_GATE_HIGH_control_unit_319)
+                                      4.62e-07    0.000 7.36e-08 5.35e-07   0.0
+    clk_gate_rbank_r_reg_116__0 (SNPS_CLOCK_GATE_HIGH_control_unit_461)
+                                      4.88e-07 1.94e-08 7.37e-08 5.81e-07   0.0
+    clk_gate_rdata_r_reg_43__0 (SNPS_CLOCK_GATE_HIGH_control_unit_89)
+                                      4.84e-07    0.000 7.37e-08 5.58e-07   0.0
+    clk_gate_rbank_r_reg_24__0 (SNPS_CLOCK_GATE_HIGH_control_unit_277)
+                                      4.60e-07    0.000 1.25e-07 5.84e-07   0.0
+    clk_gate_rdata_r_reg_22__0 (SNPS_CLOCK_GATE_HIGH_control_unit_47)
+                                      4.73e-07    0.000 6.11e-08 5.35e-07   0.0
+    clk_gate_ldata_r_reg_37__0 (SNPS_CLOCK_GATE_HIGH_control_unit_191)
+                                      4.86e-07    0.000 7.36e-08 5.60e-07   0.0
+    clk_gate_rdata_r_reg_8__0 (SNPS_CLOCK_GATE_HIGH_control_unit_19)
+                                      4.91e-07 1.26e-08 7.37e-08 5.77e-07   0.0
+    clk_gate_rbank_r_reg_86__0 (SNPS_CLOCK_GATE_HIGH_control_unit_401)
+                                      4.45e-07 2.08e-08 1.25e-07 5.90e-07   0.0
+    clk_gate_ldata_r_reg_16__0 (SNPS_CLOCK_GATE_HIGH_control_unit_149)
+                                      4.90e-07 1.05e-08 7.37e-08 5.75e-07   0.0
+    clk_gate_rbank_r_reg_65__0 (SNPS_CLOCK_GATE_HIGH_control_unit_359)
+                                      4.49e-07 2.02e-08 1.25e-07 5.93e-07   0.0
+    clk_gate_rbank_r_reg_136__0 (SNPS_CLOCK_GATE_HIGH_control_unit_501)
+                                      4.88e-07 1.88e-08 7.37e-08 5.81e-07   0.0
+    clk_gate_rbank_r_reg_44__0 (SNPS_CLOCK_GATE_HIGH_control_unit_317)
+                                      4.63e-07    0.000 7.36e-08 5.36e-07   0.0
+    clk_gate_rbank_r_reg_115__0 (SNPS_CLOCK_GATE_HIGH_control_unit_459)
+                                      5.08e-07 2.04e-08 1.25e-07 6.53e-07   0.0
+    clk_gate_rdata_r_reg_42__0 (SNPS_CLOCK_GATE_HIGH_control_unit_87)
+                                      4.84e-07    0.000 7.37e-08 5.58e-07   0.0
+    clk_gate_rbank_r_reg_23__0 (SNPS_CLOCK_GATE_HIGH_control_unit_275)
+                                      4.42e-07    0.000 1.25e-07 5.66e-07   0.0
+    clk_gate_rdata_r_reg_21__0 (SNPS_CLOCK_GATE_HIGH_control_unit_45)
+                                      4.80e-07    0.000 7.36e-08 5.54e-07   0.0
+    clk_gate_ldata_r_reg_36__0 (SNPS_CLOCK_GATE_HIGH_control_unit_189)
+                                      4.76e-07    0.000 6.11e-08 5.37e-07   0.0
+    clk_gate_rdata_r_reg_7__0 (SNPS_CLOCK_GATE_HIGH_control_unit_17)
+                                      4.91e-07 1.11e-08 7.37e-08 5.76e-07   0.0
+    clk_gate_rbank_r_reg_85__0 (SNPS_CLOCK_GATE_HIGH_control_unit_399)
+                                      4.61e-07 2.24e-08 1.25e-07 6.08e-07   0.0
+    clk_gate_ldata_r_reg_15__0 (SNPS_CLOCK_GATE_HIGH_control_unit_147)
+                                      4.52e-07 1.21e-08 7.37e-08 5.38e-07   0.0
+    clk_gate_rbank_r_reg_64__0 (SNPS_CLOCK_GATE_HIGH_control_unit_357)
+                                      4.73e-07 1.74e-08 7.37e-08 5.64e-07   0.0
+    clk_gate_rbank_r_reg_135__0 (SNPS_CLOCK_GATE_HIGH_control_unit_499)
+                                      4.88e-07 1.73e-08 7.37e-08 5.79e-07   0.0
+    clk_gate_rbank_r_reg_43__0 (SNPS_CLOCK_GATE_HIGH_control_unit_315)
+                                      4.70e-07    0.000 7.37e-08 5.43e-07   0.0
+    clk_gate_rbank_r_reg_114__0 (SNPS_CLOCK_GATE_HIGH_control_unit_457)
+                                      5.08e-07 2.11e-08 1.25e-07 6.54e-07   0.0
+    clk_gate_rdata_r_reg_41__0 (SNPS_CLOCK_GATE_HIGH_control_unit_85)
+                                      4.75e-07    0.000 7.36e-08 5.48e-07   0.0
+    clk_gate_rbank_r_reg_22__0 (SNPS_CLOCK_GATE_HIGH_control_unit_273)
+                                      4.85e-07    0.000 1.25e-07 6.10e-07   0.0
+    clk_gate_rdata_r_reg_20__0 (SNPS_CLOCK_GATE_HIGH_control_unit_43)
+                                      4.86e-07    0.000 7.36e-08 5.60e-07   0.0
+    clk_gate_ldata_r_reg_35__0 (SNPS_CLOCK_GATE_HIGH_control_unit_187)
+                                      4.93e-07    0.000 7.36e-08 5.67e-07   0.0
+    clk_gate_rdata_r_reg_6__0 (SNPS_CLOCK_GATE_HIGH_control_unit_15)
+                                      4.95e-07 1.13e-08 7.37e-08 5.80e-07   0.0
+    clk_gate_rbank_r_reg_84__0 (SNPS_CLOCK_GATE_HIGH_control_unit_397)
+                                      4.45e-07 2.08e-08 1.25e-07 5.90e-07   0.0
+    clk_gate_ldata_r_reg_14__0 (SNPS_CLOCK_GATE_HIGH_control_unit_145)
+                                      4.99e-07 1.14e-08 7.37e-08 5.84e-07   0.0
+    clk_gate_rbank_r_reg_63__0 (SNPS_CLOCK_GATE_HIGH_control_unit_355)
+                                      4.79e-07 2.27e-08 1.25e-07 6.26e-07   0.0
+    clk_gate_rbank_r_reg_134__0 (SNPS_CLOCK_GATE_HIGH_control_unit_497)
+                                      4.88e-07 1.68e-08 7.37e-08 5.79e-07   0.0
+    clk_gate_rbank_r_reg_42__0 (SNPS_CLOCK_GATE_HIGH_control_unit_313)
+                                      4.70e-07    0.000 7.37e-08 5.43e-07   0.0
+    clk_gate_rbank_r_reg_113__0 (SNPS_CLOCK_GATE_HIGH_control_unit_455)
+                                      4.76e-07 2.16e-08 1.25e-07 6.22e-07   0.0
+    clk_gate_rdata_r_reg_40__0 (SNPS_CLOCK_GATE_HIGH_control_unit_83)
+                                      4.86e-07    0.000 7.36e-08 5.60e-07   0.0
+    clk_gate_rbank_r_reg_21__0 (SNPS_CLOCK_GATE_HIGH_control_unit_271)
+                                      4.85e-07    0.000 1.25e-07 6.10e-07   0.0
+    clk_gate_ldata_r_reg_55__0 (SNPS_CLOCK_GATE_HIGH_control_unit_227)
+                                      4.93e-07    0.000 7.36e-08 5.67e-07   0.0
+    clk_gate_rdata_r_reg_19__0 (SNPS_CLOCK_GATE_HIGH_control_unit_41)
+                                      4.74e-07    0.000 6.11e-08 5.35e-07   0.0
+    clk_gate_ldata_r_reg_34__0 (SNPS_CLOCK_GATE_HIGH_control_unit_185)
+                                      4.95e-07    0.000 7.36e-08 5.68e-07   0.0
+    clk_gate_rdata_r_reg_5__0 (SNPS_CLOCK_GATE_HIGH_control_unit_13)
+                                      4.85e-07 1.42e-08 7.37e-08 5.73e-07   0.0
+    clk_gate_rbank_r_reg_83__0 (SNPS_CLOCK_GATE_HIGH_control_unit_395)
+                                      4.88e-07 1.95e-08 7.37e-08 5.81e-07   0.0
+    clk_gate_ldata_r_reg_13__0 (SNPS_CLOCK_GATE_HIGH_control_unit_143)
+                                      4.89e-07 1.07e-08 7.37e-08 5.73e-07   0.0
+    clk_gate_rbank_r_reg_62__0 (SNPS_CLOCK_GATE_HIGH_control_unit_353)
+                                      4.79e-07 2.55e-08 1.25e-07 6.29e-07   0.0
+    clk_gate_rbank_r_reg_133__0 (SNPS_CLOCK_GATE_HIGH_control_unit_495)
+                                      4.88e-07 1.79e-08 7.37e-08 5.80e-07   0.0
+    clk_gate_rbank_r_reg_41__0 (SNPS_CLOCK_GATE_HIGH_control_unit_311)
+                                      4.69e-07    0.000 7.37e-08 5.43e-07   0.0
+    clk_gate_rbank_r_reg_112__0 (SNPS_CLOCK_GATE_HIGH_control_unit_453)
+                                      5.09e-07 2.10e-08 1.25e-07 6.54e-07   0.0
+    clk_gate_rbank_r_reg_20__0 (SNPS_CLOCK_GATE_HIGH_control_unit_269)
+                                      4.85e-07    0.000 1.25e-07 6.10e-07   0.0
+    clk_gate_rdata_r_reg_39__0 (SNPS_CLOCK_GATE_HIGH_control_unit_81)
+                                      4.87e-07    0.000 7.36e-08 5.61e-07   0.0
+    clk_gate_ldata_r_reg_54__0 (SNPS_CLOCK_GATE_HIGH_control_unit_225)
+                                      4.95e-07    0.000 7.36e-08 5.68e-07   0.0
+    clk_gate_rdata_r_reg_18__0 (SNPS_CLOCK_GATE_HIGH_control_unit_39)
+                                      4.95e-07 1.12e-08 7.37e-08 5.80e-07   0.0
+    clk_gate_ldata_r_reg_33__0 (SNPS_CLOCK_GATE_HIGH_control_unit_183)
+                                      4.91e-07    0.000 7.36e-08 5.65e-07   0.0
+    clk_gate_rdata_r_reg_4__0 (SNPS_CLOCK_GATE_HIGH_control_unit_11)
+                                      4.91e-07 1.18e-08 7.37e-08 5.77e-07   0.0
+    clk_gate_rbank_r_reg_82__0 (SNPS_CLOCK_GATE_HIGH_control_unit_393)
+                                      5.08e-07 2.06e-08 1.25e-07 6.54e-07   0.0
+    clk_gate_ldata_r_reg_12__0 (SNPS_CLOCK_GATE_HIGH_control_unit_141)
+                                      4.79e-07 1.03e-08 6.11e-08 5.50e-07   0.0
+    clk_gate_rbank_r_reg_61__0 (SNPS_CLOCK_GATE_HIGH_control_unit_351)
+                                      4.61e-07 2.19e-08 1.25e-07 6.07e-07   0.0
+    clk_gate_rbank_r_reg_132__0 (SNPS_CLOCK_GATE_HIGH_control_unit_493)
+                                      4.88e-07 1.67e-08 7.37e-08 5.79e-07   0.0
+    clk_gate_rbank_r_reg_40__0 (SNPS_CLOCK_GATE_HIGH_control_unit_309)
+                                      4.63e-07    0.000 7.36e-08 5.36e-07   0.0
+    clk_gate_rbank_r_reg_111__0 (SNPS_CLOCK_GATE_HIGH_control_unit_451)
+                                      4.91e-07 1.57e-08 7.37e-08 5.81e-07   0.0
+    clk_gate_rdata_r_reg_38__0 (SNPS_CLOCK_GATE_HIGH_control_unit_79)
+                                      4.91e-07    0.000 7.36e-08 5.65e-07   0.0
+    clk_gate_rbank_r_reg_19__0 (SNPS_CLOCK_GATE_HIGH_control_unit_267)
+                                      4.85e-07    0.000 1.25e-07 6.09e-07   0.0
+    clk_gate_ldata_r_reg_53__0 (SNPS_CLOCK_GATE_HIGH_control_unit_223)
+                                      4.91e-07    0.000 7.36e-08 5.65e-07   0.0
+    clk_gate_rdata_r_reg_17__0 (SNPS_CLOCK_GATE_HIGH_control_unit_37)
+                                      4.85e-07 1.41e-08 7.37e-08 5.72e-07   0.0
+    clk_gate_ldata_r_reg_32__0 (SNPS_CLOCK_GATE_HIGH_control_unit_181)
+                                      4.85e-07    0.000 7.36e-08 5.58e-07   0.0
+    clk_gate_rdata_r_reg_3__0 (SNPS_CLOCK_GATE_HIGH_control_unit_9)
+                                      4.77e-07 1.03e-08 6.11e-08 5.48e-07   0.0
+    clk_gate_rbank_r_reg_81__0 (SNPS_CLOCK_GATE_HIGH_control_unit_391)
+                                      4.76e-07 2.21e-08 1.25e-07 6.23e-07   0.0
+    clk_gate_ldata_r_reg_11__0 (SNPS_CLOCK_GATE_HIGH_control_unit_139)
+                                      4.97e-07 1.13e-08 7.37e-08 5.82e-07   0.0
+    clk_gate_rbank_r_reg_60__0 (SNPS_CLOCK_GATE_HIGH_control_unit_349)
+                                      4.79e-07 2.71e-08 1.25e-07 6.30e-07   0.0
+    clk_gate_rbank_r_reg_131__0 (SNPS_CLOCK_GATE_HIGH_control_unit_491)
+                                      4.87e-07 1.62e-08 7.37e-08 5.77e-07   0.0
+    clk_gate_rbank_r_reg_39__0 (SNPS_CLOCK_GATE_HIGH_control_unit_307)
+                                      4.63e-07    0.000 7.36e-08 5.36e-07   0.0
+    clk_gate_rbank_r_reg_110__0 (SNPS_CLOCK_GATE_HIGH_control_unit_449)
+                                      4.88e-07 1.88e-08 7.37e-08 5.80e-07   0.0
+    clk_gate_rdata_r_reg_37__0 (SNPS_CLOCK_GATE_HIGH_control_unit_77)
+                                      4.80e-07    0.000 7.36e-08 5.54e-07   0.0
+    clk_gate_rbank_r_reg_18__0 (SNPS_CLOCK_GATE_HIGH_control_unit_265)
+                                      4.72e-07    0.000 1.25e-07 5.96e-07   0.0
+    clk_gate_ldata_r_reg_52__0 (SNPS_CLOCK_GATE_HIGH_control_unit_221)
+                                      4.76e-07    0.000 6.11e-08 5.37e-07   0.0
+    clk_gate_rdata_r_reg_16__0 (SNPS_CLOCK_GATE_HIGH_control_unit_35)
+                                      4.91e-07 1.16e-08 7.37e-08 5.76e-07   0.0
+    clk_gate_lhead_r_reg (SNPS_CLOCK_GATE_HIGH_control_unit_116)
+                                      5.13e-07 4.22e-08 6.11e-08 6.17e-07   0.0
+    clk_gate_ldata_r_reg_31__0 (SNPS_CLOCK_GATE_HIGH_control_unit_179)
+                                      4.93e-07    0.000 7.36e-08 5.67e-07   0.0
+    clk_gate_rdata_r_reg_2__0 (SNPS_CLOCK_GATE_HIGH_control_unit_7)
+                                      4.95e-07 1.10e-08 7.37e-08 5.80e-07   0.0
+    clk_gate_rbank_r_reg_80__0 (SNPS_CLOCK_GATE_HIGH_control_unit_389)
+                                      4.88e-07 2.00e-08 7.37e-08 5.82e-07   0.0
+    clk_gate_ldata_r_reg_10__0 (SNPS_CLOCK_GATE_HIGH_control_unit_137)
+                                      4.99e-07 1.19e-08 7.37e-08 5.85e-07   0.0
+    clk_gate_rbank_r_reg_59__0 (SNPS_CLOCK_GATE_HIGH_control_unit_347)
+                                      7.55e-07 4.99e-07 1.36e-07 1.39e-06   0.0
+    clk_gate_rbank_r_reg_130__0 (SNPS_CLOCK_GATE_HIGH_control_unit_489)
+                                      5.08e-07 2.15e-08 1.25e-07 6.54e-07   0.0
+    clk_gate_rbank_r_reg_38__0 (SNPS_CLOCK_GATE_HIGH_control_unit_305)
+                                      4.69e-07    0.000 7.37e-08 5.43e-07   0.0
+    clk_gate_rbank_r_reg_109__0 (SNPS_CLOCK_GATE_HIGH_control_unit_447)
+                                      4.87e-07 1.75e-08 7.37e-08 5.79e-07   0.0
+    clk_gate_rdata_r_reg_36__0 (SNPS_CLOCK_GATE_HIGH_control_unit_75)
+                                      4.86e-07    0.000 7.36e-08 5.60e-07   0.0
+    clk_gate_rbank_r_reg_17__0 (SNPS_CLOCK_GATE_HIGH_control_unit_263)
+                                      4.42e-07    0.000 1.25e-07 5.66e-07   0.0
+    clk_gate_ldata_r_reg_51__0 (SNPS_CLOCK_GATE_HIGH_control_unit_219)
+                                      4.93e-07    0.000 7.36e-08 5.67e-07   0.0
+    clk_gate_rdata_r_reg_15__0 (SNPS_CLOCK_GATE_HIGH_control_unit_33)
+                                      4.77e-07 9.49e-09 6.11e-08 5.48e-07   0.0
+    clk_gate_ldata_r_reg_30__0 (SNPS_CLOCK_GATE_HIGH_control_unit_177)
+                                      4.95e-07    0.000 7.36e-08 5.68e-07   0.0
+    clk_gate_rdata_r_reg_1__0 (SNPS_CLOCK_GATE_HIGH_control_unit_5)
+                                      4.85e-07 1.28e-08 7.37e-08 5.71e-07   0.0
+    clk_gate_rbank_r_reg_79__0 (SNPS_CLOCK_GATE_HIGH_control_unit_387)
+                                      4.91e-07 1.92e-08 7.37e-08 5.84e-07   0.0
+    clk_gate_rbank_r_reg_58__0 (SNPS_CLOCK_GATE_HIGH_control_unit_345)
+                                      4.59e-07 1.92e-08 7.37e-08 5.52e-07   0.0
+    clk_gate_rbank_r_reg_129__0 (SNPS_CLOCK_GATE_HIGH_control_unit_487)
+                                      4.76e-07 2.32e-08 1.25e-07 6.24e-07   0.0
+    clk_gate_rbank_r_reg_37__0 (SNPS_CLOCK_GATE_HIGH_control_unit_303)
+                                      4.56e-07    0.000 1.25e-07 5.81e-07   0.0
+    clk_gate_rbank_r_reg_108__0 (SNPS_CLOCK_GATE_HIGH_control_unit_445)
+                                      4.88e-07 1.87e-08 7.37e-08 5.81e-07   0.0
+    clk_gate_rdata_r_reg_35__0 (SNPS_CLOCK_GATE_HIGH_control_unit_73)
+                                      4.84e-07    0.000 7.37e-08 5.58e-07   0.0
+    clk_gate_rbank_r_reg_16__0 (SNPS_CLOCK_GATE_HIGH_control_unit_261)
+                                      7.80e-07 9.82e-07 2.17e-07 1.98e-06   0.1
+    clk_gate_ldata_r_reg_50__0 (SNPS_CLOCK_GATE_HIGH_control_unit_217)
+                                      4.95e-07    0.000 7.36e-08 5.68e-07   0.0
+    clk_gate_rdata_r_reg_14__0 (SNPS_CLOCK_GATE_HIGH_control_unit_31)
+                                      4.88e-07 1.06e-08 7.37e-08 5.73e-07   0.0
+    clk_gate_rbank_r_reg_99__0 (SNPS_CLOCK_GATE_HIGH_control_unit_427)
+                                      4.64e-07 1.62e-08 7.37e-08 5.54e-07   0.0
+    clk_gate_rdata_r_reg_0__0 (SNPS_CLOCK_GATE_HIGH_control_unit_3)
+                                      4.90e-07 1.18e-08 7.37e-08 5.76e-07   0.0
+    clk_gate_ldata_r_reg_29__0 (SNPS_CLOCK_GATE_HIGH_control_unit_175)
+                                      4.84e-07    0.000 7.36e-08 5.58e-07   0.0
+    clk_gate_rbank_r_reg_78__0 (SNPS_CLOCK_GATE_HIGH_control_unit_385)
+                                      4.87e-07 1.71e-08 7.37e-08 5.78e-07   0.0
+    clk_gate_rbank_r_reg_57__0 (SNPS_CLOCK_GATE_HIGH_control_unit_343)
+                                      4.51e-07 2.22e-08 1.25e-07 5.98e-07   0.0
+    clk_gate_rbank_r_reg_128__0 (SNPS_CLOCK_GATE_HIGH_control_unit_485)
+                                      4.76e-07 2.26e-08 1.25e-07 6.24e-07   0.0
+    clk_gate_rdata_r_reg_55__0 (SNPS_CLOCK_GATE_HIGH_control_unit_113)
+                                      4.40e-07    0.000 6.11e-08 5.01e-07   0.0
+    clk_gate_rbank_r_reg_36__0 (SNPS_CLOCK_GATE_HIGH_control_unit_301)
+                                      4.62e-07    0.000 7.36e-08 5.35e-07   0.0
+    clk_gate_rbank_r_reg_107__0 (SNPS_CLOCK_GATE_HIGH_control_unit_443)
+                                      4.91e-07 1.82e-08 7.37e-08 5.83e-07   0.0
+    clk_gate_rdata_r_reg_34__0 (SNPS_CLOCK_GATE_HIGH_control_unit_71)
+                                      4.91e-07    0.000 7.36e-08 5.65e-07   0.0
+    clk_gate_rbank_r_reg_15__0 (SNPS_CLOCK_GATE_HIGH_control_unit_259)
+                                      4.54e-07    0.000 7.37e-08 5.28e-07   0.0
+    clk_gate_rdata_r_reg_13__0 (SNPS_CLOCK_GATE_HIGH_control_unit_29)
+                                      4.85e-07 1.28e-08 7.37e-08 5.71e-07   0.0
+    clk_gate_ldata_r_reg_49__0 (SNPS_CLOCK_GATE_HIGH_control_unit_215)
+                                      4.84e-07    0.000 7.36e-08 5.58e-07   0.0
+    clk_gate_rbank_r_reg_98__0 (SNPS_CLOCK_GATE_HIGH_control_unit_425)
+                                      4.64e-07 1.75e-08 7.37e-08 5.55e-07   0.0
+    clk_gate_ldata_r_reg_28__0 (SNPS_CLOCK_GATE_HIGH_control_unit_173)
+                                      4.76e-07    0.000 6.11e-08 5.37e-07   0.0
+    clk_gate_rbank_r_reg_77__0 (SNPS_CLOCK_GATE_HIGH_control_unit_383)
+                                      5.09e-07 2.05e-08 1.25e-07 6.54e-07   0.0
+    clk_gate_rbank_r_reg_56__0 (SNPS_CLOCK_GATE_HIGH_control_unit_341)
+                                      4.51e-07 2.21e-08 1.25e-07 5.98e-07   0.0
+    clk_gate_rbank_r_reg_127__0 (SNPS_CLOCK_GATE_HIGH_control_unit_483)
+                                      4.76e-07 2.10e-08 1.25e-07 6.22e-07   0.0
+    clk_gate_rdata_r_reg_54__0 (SNPS_CLOCK_GATE_HIGH_control_unit_111)
+                                      4.91e-07    0.000 7.36e-08 5.65e-07   0.0
+    clk_gate_rbank_r_reg_35__0 (SNPS_CLOCK_GATE_HIGH_control_unit_299)
+                                      4.69e-07    0.000 7.37e-08 5.43e-07   0.0
+    clk_gate_rhead_r_reg (SNPS_CLOCK_GATE_HIGH_control_unit_2)
+                                      4.90e-07 4.08e-08 6.11e-08 5.92e-07   0.0
+    clk_gate_rbank_r_reg_106__0 (SNPS_CLOCK_GATE_HIGH_control_unit_441)
+                                      4.91e-07 1.69e-08 7.37e-08 5.82e-07   0.0
+    clk_gate_rdata_r_reg_33__0 (SNPS_CLOCK_GATE_HIGH_control_unit_69)
+                                      4.80e-07    0.000 7.36e-08 5.54e-07   0.0
+    clk_gate_rbank_r_reg_14__0 (SNPS_CLOCK_GATE_HIGH_control_unit_257)
+                                      4.54e-07    0.000 7.37e-08 5.28e-07   0.0
+    clk_gate_rdata_r_reg_12__0 (SNPS_CLOCK_GATE_HIGH_control_unit_27)
+                                      4.79e-07 1.23e-08 7.37e-08 5.65e-07   0.0
+    clk_gate_ldata_r_reg_48__0 (SNPS_CLOCK_GATE_HIGH_control_unit_213)
+                                      4.76e-07    0.000 6.11e-08 5.37e-07   0.0
+    clk_gate_rbank_r_reg_97__0 (SNPS_CLOCK_GATE_HIGH_control_unit_423)
+                                      4.64e-07 1.84e-08 7.37e-08 5.56e-07   0.0
+    clk_gate_ldata_r_reg_27__0 (SNPS_CLOCK_GATE_HIGH_control_unit_171)
+                                      4.93e-07    0.000 7.36e-08 5.67e-07   0.0
+    clk_gate_rbank_r_reg_76__0 (SNPS_CLOCK_GATE_HIGH_control_unit_381)
+                                      5.09e-07 2.12e-08 1.25e-07 6.54e-07   0.0
+    clk_gate_rbank_r_reg_55__0 (SNPS_CLOCK_GATE_HIGH_control_unit_339)
+                                      4.80e-07 2.35e-08 1.25e-07 6.28e-07   0.0
+    clk_gate_rbank_r_reg_126__0 (SNPS_CLOCK_GATE_HIGH_control_unit_481)
+                                      5.08e-07 2.15e-08 1.25e-07 6.54e-07   0.0
+    clk_gate_rdata_r_reg_53__0 (SNPS_CLOCK_GATE_HIGH_control_unit_109)
+                                      4.80e-07    0.000 7.36e-08 5.54e-07   0.0
+    clk_gate_rbank_r_reg_34__0 (SNPS_CLOCK_GATE_HIGH_control_unit_297)
+                                      4.63e-07    0.000 7.36e-08 5.36e-07   0.0
+    clk_gate_rbank_r_reg_105__0 (SNPS_CLOCK_GATE_HIGH_control_unit_439)
+                                      4.88e-07 1.75e-08 7.37e-08 5.79e-07   0.0
+    clk_gate_rdata_r_reg_32__0 (SNPS_CLOCK_GATE_HIGH_control_unit_67)
+                                      4.86e-07    0.000 7.36e-08 5.60e-07   0.0
+    clk_gate_rbank_r_reg_13__0 (SNPS_CLOCK_GATE_HIGH_control_unit_255)
+                                      4.63e-07    0.000 7.36e-08 5.36e-07   0.0
+    clk_gate_ltail_r_reg (SNPS_CLOCK_GATE_HIGH_control_unit_115)
+                                      4.58e-07    0.000 6.11e-08 5.19e-07   0.0
+    clk_gate_rdata_r_reg_11__0 (SNPS_CLOCK_GATE_HIGH_control_unit_25)
+                                      4.91e-07 1.10e-08 7.37e-08 5.76e-07   0.0
+    clk_gate_ldata_r_reg_47__0 (SNPS_CLOCK_GATE_HIGH_control_unit_211)
+                                      4.93e-07    0.000 7.36e-08 5.67e-07   0.0
+    clk_gate_rbank_r_reg_96__0 (SNPS_CLOCK_GATE_HIGH_control_unit_421)
+                                      4.54e-07 1.89e-08 7.37e-08 5.47e-07   0.0
+    clk_gate_rbank_r_reg_9__0 (SNPS_CLOCK_GATE_HIGH_control_unit_247)
+                                      4.55e-07    0.000 7.37e-08 5.29e-07   0.0
+    clk_gate_ldata_r_reg_9__0 (SNPS_CLOCK_GATE_HIGH_control_unit_135)
+                                      4.95e-07 1.22e-08 7.37e-08 5.81e-07   0.0
+    clk_gate_ldata_r_reg_26__0 (SNPS_CLOCK_GATE_HIGH_control_unit_169)
+                                      4.95e-07    0.000 7.36e-08 5.68e-07   0.0
+    clk_gate_rbank_r_reg_75__0 (SNPS_CLOCK_GATE_HIGH_control_unit_379)
+                                      4.87e-07 1.94e-08 7.37e-08 5.80e-07   0.0
+    clk_gate_rbank_r_reg_54__0 (SNPS_CLOCK_GATE_HIGH_control_unit_337)
+                                      4.79e-07 2.82e-08 1.25e-07 6.31e-07   0.0
+    clk_gate_rbank_r_reg_125__0 (SNPS_CLOCK_GATE_HIGH_control_unit_479)
+                                      4.76e-07 2.26e-08 1.25e-07 6.24e-07   0.0
+    clk_gate_rdata_r_reg_52__0 (SNPS_CLOCK_GATE_HIGH_control_unit_107)
+                                      4.75e-07    0.000 7.36e-08 5.48e-07   0.0
+    clk_gate_rbank_r_reg_33__0 (SNPS_CLOCK_GATE_HIGH_control_unit_295)
+                                      4.54e-07    0.000 7.37e-08 5.28e-07   0.0
+    clk_gate_rbank_r_reg_104__0 (SNPS_CLOCK_GATE_HIGH_control_unit_437)
+                                      4.91e-07 1.69e-08 7.37e-08 5.82e-07   0.0
+    clk_gate_rdata_r_reg_31__0 (SNPS_CLOCK_GATE_HIGH_control_unit_65)
+                                      4.73e-07    0.000 6.11e-08 5.35e-07   0.0
+    clk_gate_rbank_r_reg_12__0 (SNPS_CLOCK_GATE_HIGH_control_unit_253)
+                                      4.63e-07    0.000 7.36e-08 5.36e-07   0.0
+    clk_gate_rdata_r_reg_10__0 (SNPS_CLOCK_GATE_HIGH_control_unit_23)
+                                      4.79e-07 1.09e-08 7.37e-08 5.64e-07   0.0
+    clk_gate_ldata_r_reg_46__0 (SNPS_CLOCK_GATE_HIGH_control_unit_209)
+                                      4.95e-07    0.000 7.36e-08 5.68e-07   0.0
+    clk_gate_rbank_r_reg_95__0 (SNPS_CLOCK_GATE_HIGH_control_unit_419)
+                                      4.61e-07 2.33e-08 1.25e-07 6.09e-07   0.0
+    clk_gate_rbank_r_reg_8__0 (SNPS_CLOCK_GATE_HIGH_control_unit_245)
+                                      4.55e-07    0.000 7.37e-08 5.29e-07   0.0
+    clk_gate_ldata_r_reg_8__0 (SNPS_CLOCK_GATE_HIGH_control_unit_133)
+                                      4.90e-07 1.05e-08 7.37e-08 5.75e-07   0.0
+    clk_gate_ldata_r_reg_25__0 (SNPS_CLOCK_GATE_HIGH_control_unit_167)
+                                      4.75e-07    0.000 6.11e-08 5.37e-07   0.0
+    clk_gate_rbank_r_reg_74__0 (SNPS_CLOCK_GATE_HIGH_control_unit_377)
+                                      4.87e-07 1.76e-08 7.37e-08 5.79e-07   0.0
+    clk_gate_rbank_r_reg_53__0 (SNPS_CLOCK_GATE_HIGH_control_unit_335)
+                                      4.79e-07 2.58e-08 1.25e-07 6.29e-07   0.0
+    clk_gate_rbank_r_reg_124__0 (SNPS_CLOCK_GATE_HIGH_control_unit_477)
+                                      5.09e-07 1.95e-08 1.25e-07 6.53e-07   0.0
+    clk_gate_rdata_r_reg_51__0 (SNPS_CLOCK_GATE_HIGH_control_unit_105)
+                                      4.87e-07    0.000 7.36e-08 5.61e-07   0.0
+    clk_gate_rbank_r_reg_32__0 (SNPS_CLOCK_GATE_HIGH_control_unit_293)
+                                      4.42e-07    0.000 1.25e-07 5.66e-07   0.0
+    clk_gate_rbank_r_reg_103__0 (SNPS_CLOCK_GATE_HIGH_control_unit_435)
+                                      4.91e-07 1.92e-08 7.37e-08 5.84e-07   0.0
+    clk_gate_rdata_r_reg_30__0 (SNPS_CLOCK_GATE_HIGH_control_unit_63)
+                                      4.75e-07    0.000 7.36e-08 5.48e-07   0.0
+    clk_gate_rbank_r_reg_11__0 (SNPS_CLOCK_GATE_HIGH_control_unit_251)
+                                      4.54e-07    0.000 7.37e-08 5.28e-07   0.0
+    clk_gate_ldata_r_reg_45__0 (SNPS_CLOCK_GATE_HIGH_control_unit_207)
+                                      4.84e-07    0.000 7.36e-08 5.58e-07   0.0
+    clk_gate_rbank_r_reg_94__0 (SNPS_CLOCK_GATE_HIGH_control_unit_417)
+                                      4.45e-07 2.14e-08 1.25e-07 5.91e-07   0.0
+    clk_gate_rbank_r_reg_7__0 (SNPS_CLOCK_GATE_HIGH_control_unit_243)
+                                      4.72e-07    0.000 1.25e-07 5.96e-07   0.0
+    clk_gate_ldata_r_reg_7__0 (SNPS_CLOCK_GATE_HIGH_control_unit_131)
+                                      4.97e-07 1.13e-08 7.37e-08 5.82e-07   0.0
+    clk_gate_ldata_r_reg_24__0 (SNPS_CLOCK_GATE_HIGH_control_unit_165)
+                                      4.91e-07    0.000 7.36e-08 5.65e-07   0.0
+    clk_gate_rbank_r_reg_73__0 (SNPS_CLOCK_GATE_HIGH_control_unit_375)
+                                      4.87e-07 1.96e-08 7.37e-08 5.81e-07   0.0
+    clk_gate_rbank_r_reg_52__0 (SNPS_CLOCK_GATE_HIGH_control_unit_333)
+                                      4.67e-07 2.37e-08 1.25e-07 6.15e-07   0.0
+    clk_gate_rbank_r_reg_123__0 (SNPS_CLOCK_GATE_HIGH_control_unit_475)
+                                      4.91e-07 1.77e-08 7.37e-08 5.83e-07   0.0
+    clk_gate_rdata_r_reg_50__0 (SNPS_CLOCK_GATE_HIGH_control_unit_103)
+                                      4.84e-07    0.000 7.37e-08 5.58e-07   0.0
+    clk_gate_rbank_r_reg_31__0 (SNPS_CLOCK_GATE_HIGH_control_unit_291)
+                                      4.73e-07    0.000 1.25e-07 5.97e-07   0.0
+    clk_gate_rbank_r_reg_102__0 (SNPS_CLOCK_GATE_HIGH_control_unit_433)
+                                      4.91e-07 1.67e-08 7.37e-08 5.82e-07   0.0
+    clk_gate_rbank_r_reg_10__0 (SNPS_CLOCK_GATE_HIGH_control_unit_249)
+                                      5.17e-07    0.000 7.37e-08 5.91e-07   0.0
+    clk_gate_rdata_r_reg_29__0 (SNPS_CLOCK_GATE_HIGH_control_unit_61)
+                                      4.80e-07    0.000 7.36e-08 5.54e-07   0.0
+    clk_gate_ldata_r_reg_44__0 (SNPS_CLOCK_GATE_HIGH_control_unit_205)
+                                      4.76e-07    0.000 6.11e-08 5.37e-07   0.0
+    clk_gate_rbank_r_reg_93__0 (SNPS_CLOCK_GATE_HIGH_control_unit_415)
+                                      4.61e-07 2.25e-08 1.25e-07 6.08e-07   0.0
+    clk_gate_rbank_r_reg_6__0 (SNPS_CLOCK_GATE_HIGH_control_unit_241)
+                                      4.44e-07    0.000 1.25e-07 5.69e-07   0.0
+    clk_gate_ldata_r_reg_6__0 (SNPS_CLOCK_GATE_HIGH_control_unit_129)
+                                      4.99e-07 1.14e-08 7.37e-08 5.84e-07   0.0
+    clk_gate_ldata_r_reg_23__0 (SNPS_CLOCK_GATE_HIGH_control_unit_163)
+                                      4.93e-07    0.000 7.36e-08 5.67e-07   0.0
+    clk_gate_rbank_r_reg_72__0 (SNPS_CLOCK_GATE_HIGH_control_unit_373)
+                                      4.88e-07 1.72e-08 7.37e-08 5.79e-07   0.0
+    clk_gate_rbank_r_reg_51__0 (SNPS_CLOCK_GATE_HIGH_control_unit_331)
+                                      4.79e-07 2.28e-08 1.25e-07 6.26e-07   0.0
+    clk_gate_rtail_r_reg (SNPS_CLOCK_GATE_HIGH_control_unit_1)
+                                      4.37e-07    0.000 6.11e-08 4.98e-07   0.0
+    clk_gate_rbank_r_reg_122__0 (SNPS_CLOCK_GATE_HIGH_control_unit_473)
+                                      4.44e-07 2.18e-08 1.25e-07 5.90e-07   0.0
+    clk_gate_rbank_r_reg_30__0 (SNPS_CLOCK_GATE_HIGH_control_unit_289)
+                                      4.44e-07    0.000 1.25e-07 5.69e-07   0.0
+    clk_gate_rdata_r_reg_49__0 (SNPS_CLOCK_GATE_HIGH_control_unit_101)
+                                      4.75e-07    0.000 7.36e-08 5.49e-07   0.0
+    clk_gate_rbank_r_reg_101__0 (SNPS_CLOCK_GATE_HIGH_control_unit_431)
+                                      4.87e-07 1.71e-08 7.37e-08 5.78e-07   0.0
+    clk_gate_rdata_r_reg_28__0 (SNPS_CLOCK_GATE_HIGH_control_unit_59)
+                                      4.87e-07    0.000 7.36e-08 5.60e-07   0.0
+    clk_gate_ldata_r_reg_43__0 (SNPS_CLOCK_GATE_HIGH_control_unit_203)
+                                      4.93e-07    0.000 7.36e-08 5.67e-07   0.0
+    clk_gate_rbank_r_reg_92__0 (SNPS_CLOCK_GATE_HIGH_control_unit_413)
+                                      4.61e-07 2.15e-08 1.25e-07 6.07e-07   0.0
+    clk_gate_rbank_r_reg_5__0 (SNPS_CLOCK_GATE_HIGH_control_unit_239)
+                                      4.72e-07    0.000 1.25e-07 5.96e-07   0.0
+    clk_gate_ldata_r_reg_5__0 (SNPS_CLOCK_GATE_HIGH_control_unit_127)
+                                      4.90e-07 1.08e-08 7.37e-08 5.75e-07   0.0
+    clk_gate_ldata_r_reg_22__0 (SNPS_CLOCK_GATE_HIGH_control_unit_161)
+                                      4.95e-07    0.000 7.36e-08 5.68e-07   0.0
+    clk_gate_rbank_r_reg_71__0 (SNPS_CLOCK_GATE_HIGH_control_unit_371)
+                                      4.91e-07 1.70e-08 7.37e-08 5.82e-07   0.0
+    clk_gate_rbank_r_reg_50__0 (SNPS_CLOCK_GATE_HIGH_control_unit_329)
+                                      4.43e-07 2.09e-08 1.25e-07 5.89e-07   0.0
+    clk_gate_rbank_r_reg_121__0 (SNPS_CLOCK_GATE_HIGH_control_unit_471)
+                                      4.43e-07 2.19e-08 1.25e-07 5.90e-07   0.0
+    clk_gate_rdata_r_reg_48__0 (SNPS_CLOCK_GATE_HIGH_control_unit_99)
+                                      4.86e-07    0.000 7.36e-08 5.60e-07   0.0
+    clk_gate_rbank_r_reg_29__0 (SNPS_CLOCK_GATE_HIGH_control_unit_287)
+                                      4.71e-07    0.000 1.25e-07 5.96e-07   0.0
+    clk_gate_rbank_r_reg_100__0 (SNPS_CLOCK_GATE_HIGH_control_unit_429)
+                                      4.87e-07 1.77e-08 7.37e-08 5.79e-07   0.0
+    clk_gate_rdata_r_reg_27__0 (SNPS_CLOCK_GATE_HIGH_control_unit_57)
+                                      4.51e-07    0.000 7.37e-08 5.24e-07   0.0
+    clk_gate_ldata_r_reg_42__0 (SNPS_CLOCK_GATE_HIGH_control_unit_201)
+                                      4.95e-07    0.000 7.36e-08 5.68e-07   0.0
+    clk_gate_rbank_r_reg_91__0 (SNPS_CLOCK_GATE_HIGH_control_unit_411)
+                                      4.45e-07 2.06e-08 1.25e-07 5.90e-07   0.0
+    clk_gate_rbank_r_reg_4__0 (SNPS_CLOCK_GATE_HIGH_control_unit_237)
+                                      4.99e-07    0.000 6.11e-08 5.60e-07   0.0
+    clk_gate_ldata_r_reg_4__0 (SNPS_CLOCK_GATE_HIGH_control_unit_125)
+                                      4.89e-07 1.13e-08 7.37e-08 5.74e-07   0.0
+    clk_gate_ldata_r_reg_21__0 (SNPS_CLOCK_GATE_HIGH_control_unit_159)
+                                      4.48e-07    0.000 7.36e-08 5.21e-07   0.0
+    clk_gate_rbank_r_reg_70__0 (SNPS_CLOCK_GATE_HIGH_control_unit_369)
+                                      4.73e-07 1.61e-08 7.37e-08 5.63e-07   0.0
+    clk_gate_rbank_r_reg_49__0 (SNPS_CLOCK_GATE_HIGH_control_unit_327)
+                                      4.67e-07 2.60e-08 1.25e-07 6.17e-07   0.0
+    clk_gate_rbank_r_reg_120__0 (SNPS_CLOCK_GATE_HIGH_control_unit_469)
+                                      4.91e-07 1.82e-08 7.37e-08 5.83e-07   0.0
+    clk_gate_rdata_r_reg_47__0 (SNPS_CLOCK_GATE_HIGH_control_unit_97)
+                                      4.87e-07    0.000 7.36e-08 5.61e-07   0.0
+    clk_gate_rbank_r_reg_28__0 (SNPS_CLOCK_GATE_HIGH_control_unit_285)
+                                      4.55e-07    0.000 7.37e-08 5.29e-07   0.0
+    clk_gate_rdata_r_reg_26__0 (SNPS_CLOCK_GATE_HIGH_control_unit_55)
+                                      4.73e-07    0.000 6.11e-08 5.35e-07   0.0
+    clk_gate_ldata_r_reg_41__0 (SNPS_CLOCK_GATE_HIGH_control_unit_199)
+                                      4.84e-07    0.000 7.36e-08 5.58e-07   0.0
+    clk_gate_rbank_r_reg_90__0 (SNPS_CLOCK_GATE_HIGH_control_unit_409)
+                                      4.61e-07 2.45e-08 1.25e-07 6.10e-07   0.0
+  cdc_unit_1 (cdc_unit_test_1)        5.96e-06 1.20e-06 1.22e-05 1.94e-05   0.6
+    clk_gate_audio1_out_reg (SNPS_CLOCK_GATE_HIGH_cdc_unit_1)
+                                      1.12e-07    0.000 2.05e-07 3.17e-07   0.0
+    clk_gate_audio1_reg_reg (SNPS_CLOCK_GATE_HIGH_cdc_unit_4)
+                                      5.17e-07    0.000 7.37e-08 5.90e-07   0.0
+  dsp_unit_1 (dsp_unit_test_1)        4.42e-05 2.94e-05 1.30e-03 1.37e-03  42.1
+    dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_level1_r_reg (SNPS_CLOCK_GATE_HIGH_dsp_unit_regs_proc_269)
+                                      7.40e-07 2.46e-07 7.23e-08 1.06e-06   0.0
+    dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_2_reg (SNPS_CLOCK_GATE_HIGH_dsp_unit_regs_proc_0)
+                                      4.47e-07    0.000 1.25e-07 5.72e-07   0.0
+    dsp_unit_rtl_1_dsp_unit_dsp_proc_inst (dsp_unit_dsp_proc_test_1)
+                                      4.23e-05 2.92e-05 8.31e-04 9.02e-04  27.7
+  i2s_unit_1 (i2s_unit_test_1)        1.63e-05 3.81e-06 1.46e-05 3.47e-05   1.1
+    clk_gate_input_reg_reg_1 (SNPS_CLOCK_GATE_HIGH_i2s_unit_4)
+                                      7.87e-07 1.90e-06 2.07e-07 2.89e-06   0.1
+    clk_gate_shift_reg_reg_1 (SNPS_CLOCK_GATE_HIGH_i2s_unit_1)
+                                      7.87e-07 1.91e-06 2.07e-07 2.90e-06   0.1
+
+
+                                      Peak     Peak            Glitch   X-tran
+Hierarchy                             Power    Time            Power    Power
+--------------------------------------------------------------------------------
+audioport                                0.391 3323.165-3323.166
+                                                               3.66e-09    0.000
+  control_unit_1 (control_unit_test_1)
+                                         0.390 3323.165-3323.166
+                                                               3.66e-09    0.000
+    clk_gate_rbank_r_reg_3__0 (SNPS_CLOCK_GATE_HIGH_control_unit_235)
+                                      1.72e-04 2002.248-2002.249
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_3__0 (SNPS_CLOCK_GATE_HIGH_control_unit_123)
+                                      3.98e-04 5772.246-5772.247
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_20__0 (SNPS_CLOCK_GATE_HIGH_control_unit_157)
+                                      1.08e-04 2002.238-2002.239
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_69__0 (SNPS_CLOCK_GATE_HIGH_control_unit_367)
+                                      4.36e-04 2847.223-2847.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_48__0 (SNPS_CLOCK_GATE_HIGH_control_unit_325)
+                                      6.35e-04 2015.209-2015.210
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_119__0 (SNPS_CLOCK_GATE_HIGH_control_unit_467)
+                                      7.56e-04 4790.746-4790.747
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_46__0 (SNPS_CLOCK_GATE_HIGH_control_unit_95)
+                                      9.99e-05 2002.244-2002.245
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_27__0 (SNPS_CLOCK_GATE_HIGH_control_unit_283)
+                                      3.77e-04 2002.268-2002.269
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_25__0 (SNPS_CLOCK_GATE_HIGH_control_unit_53)
+                                      1.22e-04 2002.232-2002.233
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_40__0 (SNPS_CLOCK_GATE_HIGH_control_unit_197)
+                                      1.08e-04 2002.238-2002.239
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_2__0 (SNPS_CLOCK_GATE_HIGH_control_unit_233)
+                                      1.72e-04 2002.254-2002.255
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_89__0 (SNPS_CLOCK_GATE_HIGH_control_unit_407)
+                                      8.26e-04 3627.248-3627.249
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_2__0 (SNPS_CLOCK_GATE_HIGH_control_unit_121)
+                                      3.87e-04 5694.246-5694.247
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_19__0 (SNPS_CLOCK_GATE_HIGH_control_unit_155)
+                                      9.78e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_68__0 (SNPS_CLOCK_GATE_HIGH_control_unit_365)
+                                      4.38e-04 2808.223-2808.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_47__0 (SNPS_CLOCK_GATE_HIGH_control_unit_323)
+                                      1.37e-04 2002.223-2002.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_118__0 (SNPS_CLOCK_GATE_HIGH_control_unit_465)
+                                      7.94e-04 4751.750-4751.751
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_45__0 (SNPS_CLOCK_GATE_HIGH_control_unit_93)
+                                      1.14e-04 2002.240-2002.241
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_26__0 (SNPS_CLOCK_GATE_HIGH_control_unit_281)
+                                      1.28e-04 2002.234-2002.235
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_24__0 (SNPS_CLOCK_GATE_HIGH_control_unit_51)
+                                      1.05e-04 2002.243-2002.244
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_39__0 (SNPS_CLOCK_GATE_HIGH_control_unit_195)
+                                      9.78e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_1__0 (SNPS_CLOCK_GATE_HIGH_control_unit_231)
+                                      2.95e-04 2002.231-2002.232
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_88__0 (SNPS_CLOCK_GATE_HIGH_control_unit_405)
+                                      8.95e-04 3588.277-3588.278
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_1__0 (SNPS_CLOCK_GATE_HIGH_control_unit_119)
+                                      3.97e-04 5616.238-5616.239
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_18__0 (SNPS_CLOCK_GATE_HIGH_control_unit_153)
+                                      4.12e-04 6942.228-6942.229
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_67__0 (SNPS_CLOCK_GATE_HIGH_control_unit_363)
+                                      4.33e-04 2769.223-2769.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_46__0 (SNPS_CLOCK_GATE_HIGH_control_unit_321)
+                                      1.67e-04 2002.219-2002.220
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_117__0 (SNPS_CLOCK_GATE_HIGH_control_unit_463)
+                                      4.32e-04 4719.230-4719.231
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_44__0 (SNPS_CLOCK_GATE_HIGH_control_unit_91)
+                                      1.05e-04 2002.243-2002.244
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_25__0 (SNPS_CLOCK_GATE_HIGH_control_unit_279)
+                                      1.23e-04 2002.225-2002.226
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_23__0 (SNPS_CLOCK_GATE_HIGH_control_unit_49)
+                                      1.99e-04 2002.187-2002.188
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_38__0 (SNPS_CLOCK_GATE_HIGH_control_unit_193)
+                                      9.63e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_0__0 (SNPS_CLOCK_GATE_HIGH_control_unit_229)
+                                      2.10e-04 2002.240-2002.241
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_9__0 (SNPS_CLOCK_GATE_HIGH_control_unit_21)
+                                      4.16e-04 6279.240-6279.241
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_87__0 (SNPS_CLOCK_GATE_HIGH_control_unit_403)
+                                      8.57e-04 3549.240-3549.241
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_0__0 (SNPS_CLOCK_GATE_HIGH_control_unit_117)
+                                      3.97e-04 5538.238-5538.239
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_17__0 (SNPS_CLOCK_GATE_HIGH_control_unit_151)
+                                      1.64e-04 6864.207-6864.208
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_66__0 (SNPS_CLOCK_GATE_HIGH_control_unit_361)
+                                      4.49e-04 2730.219-2730.220
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_137__0 (SNPS_CLOCK_GATE_HIGH_control_unit_503)
+                                      4.28e-04 5499.221-5499.222
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_45__0 (SNPS_CLOCK_GATE_HIGH_control_unit_319)
+                                      1.67e-04 2002.219-2002.220
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_116__0 (SNPS_CLOCK_GATE_HIGH_control_unit_461)
+                                      4.29e-04 4680.221-4680.222
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_43__0 (SNPS_CLOCK_GATE_HIGH_control_unit_89)
+                                      1.08e-04 2002.174-2002.175
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_24__0 (SNPS_CLOCK_GATE_HIGH_control_unit_277)
+                                      1.51e-04 2002.265-2002.266
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_22__0 (SNPS_CLOCK_GATE_HIGH_control_unit_47)
+                                      8.76e-05 2002.174-2002.175
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_37__0 (SNPS_CLOCK_GATE_HIGH_control_unit_191)
+                                      1.06e-04 2002.207-2002.208
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_8__0 (SNPS_CLOCK_GATE_HIGH_control_unit_19)
+                                      4.06e-04 6201.243-6201.244
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_86__0 (SNPS_CLOCK_GATE_HIGH_control_unit_401)
+                                      8.79e-04 3510.275-3510.276
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_16__0 (SNPS_CLOCK_GATE_HIGH_control_unit_149)
+                                      3.93e-04 6786.207-6786.208
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_65__0 (SNPS_CLOCK_GATE_HIGH_control_unit_359)
+                                      8.53e-04 2691.244-2691.245
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_136__0 (SNPS_CLOCK_GATE_HIGH_control_unit_501)
+                                      4.27e-04 5460.221-5460.222
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_44__0 (SNPS_CLOCK_GATE_HIGH_control_unit_317)
+                                      1.63e-04 2002.221-2002.222
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_115__0 (SNPS_CLOCK_GATE_HIGH_control_unit_459)
+                                      7.38e-04 4634.746-4634.747
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_42__0 (SNPS_CLOCK_GATE_HIGH_control_unit_87)
+                                      1.08e-04 2002.174-2002.175
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_23__0 (SNPS_CLOCK_GATE_HIGH_control_unit_275)
+                                      2.58e-04 2002.243-2002.244
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_21__0 (SNPS_CLOCK_GATE_HIGH_control_unit_45)
+                                      1.14e-04 2002.240-2002.241
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_36__0 (SNPS_CLOCK_GATE_HIGH_control_unit_189)
+                                      8.59e-05 2002.207-2002.208
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_7__0 (SNPS_CLOCK_GATE_HIGH_control_unit_17)
+                                      3.88e-04 6123.225-6123.226
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_85__0 (SNPS_CLOCK_GATE_HIGH_control_unit_399)
+                                      8.14e-04 3471.248-3471.249
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_15__0 (SNPS_CLOCK_GATE_HIGH_control_unit_147)
+                                      6.22e-04 6695.278-6695.279
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_64__0 (SNPS_CLOCK_GATE_HIGH_control_unit_357)
+                                      4.33e-04 2652.223-2652.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_135__0 (SNPS_CLOCK_GATE_HIGH_control_unit_499)
+                                      4.27e-04 5421.221-5421.222
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_43__0 (SNPS_CLOCK_GATE_HIGH_control_unit_315)
+                                      1.37e-04 2002.223-2002.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_114__0 (SNPS_CLOCK_GATE_HIGH_control_unit_457)
+                                      7.60e-04 4595.746-4595.747
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_41__0 (SNPS_CLOCK_GATE_HIGH_control_unit_85)
+                                      1.22e-04 2002.232-2002.233
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_22__0 (SNPS_CLOCK_GATE_HIGH_control_unit_273)
+                                      1.07e-04 2002.225-2002.226
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_20__0 (SNPS_CLOCK_GATE_HIGH_control_unit_43)
+                                      1.05e-04 2002.243-2002.244
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_35__0 (SNPS_CLOCK_GATE_HIGH_control_unit_187)
+                                      9.78e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_6__0 (SNPS_CLOCK_GATE_HIGH_control_unit_15)
+                                      3.90e-04 6045.244-6045.245
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_84__0 (SNPS_CLOCK_GATE_HIGH_control_unit_397)
+                                      8.68e-04 3432.275-3432.276
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_14__0 (SNPS_CLOCK_GATE_HIGH_control_unit_145)
+                                      3.90e-04 6630.246-6630.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_63__0 (SNPS_CLOCK_GATE_HIGH_control_unit_355)
+                                      7.94e-04 2606.723-2606.724
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_134__0 (SNPS_CLOCK_GATE_HIGH_control_unit_497)
+                                      4.21e-04 5382.221-5382.222
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_42__0 (SNPS_CLOCK_GATE_HIGH_control_unit_313)
+                                      1.37e-04 2002.223-2002.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_113__0 (SNPS_CLOCK_GATE_HIGH_control_unit_455)
+                                      7.77e-04 4556.750-4556.751
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_40__0 (SNPS_CLOCK_GATE_HIGH_control_unit_83)
+                                      1.05e-04 2002.243-2002.244
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_21__0 (SNPS_CLOCK_GATE_HIGH_control_unit_271)
+                                      1.07e-04 2002.225-2002.226
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_55__0 (SNPS_CLOCK_GATE_HIGH_control_unit_227)
+                                      9.78e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_19__0 (SNPS_CLOCK_GATE_HIGH_control_unit_41)
+                                      9.72e-05 6976.528-6976.529
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_34__0 (SNPS_CLOCK_GATE_HIGH_control_unit_185)
+                                      9.63e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_5__0 (SNPS_CLOCK_GATE_HIGH_control_unit_13)
+                                      4.26e-04 5967.240-5967.241
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_83__0 (SNPS_CLOCK_GATE_HIGH_control_unit_395)
+                                      4.30e-04 3393.221-3393.222
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_13__0 (SNPS_CLOCK_GATE_HIGH_control_unit_143)
+                                      3.93e-04 6552.238-6552.239
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_62__0 (SNPS_CLOCK_GATE_HIGH_control_unit_353)
+                                      7.94e-04 2567.723-2567.724
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_133__0 (SNPS_CLOCK_GATE_HIGH_control_unit_495)
+                                      4.32e-04 5343.221-5343.222
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_41__0 (SNPS_CLOCK_GATE_HIGH_control_unit_311)
+                                      1.37e-04 2002.223-2002.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_112__0 (SNPS_CLOCK_GATE_HIGH_control_unit_453)
+                                      7.56e-04 4517.746-4517.747
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_20__0 (SNPS_CLOCK_GATE_HIGH_control_unit_269)
+                                      1.07e-04 2002.225-2002.226
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_39__0 (SNPS_CLOCK_GATE_HIGH_control_unit_81)
+                                      1.04e-04 2002.225-2002.226
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_54__0 (SNPS_CLOCK_GATE_HIGH_control_unit_225)
+                                      9.63e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_18__0 (SNPS_CLOCK_GATE_HIGH_control_unit_39)
+                                      3.91e-04 6981.244-6981.245
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_33__0 (SNPS_CLOCK_GATE_HIGH_control_unit_183)
+                                      9.99e-05 2002.244-2002.245
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_4__0 (SNPS_CLOCK_GATE_HIGH_control_unit_11)
+                                      4.01e-04 5889.243-5889.244
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_82__0 (SNPS_CLOCK_GATE_HIGH_control_unit_393)
+                                      7.62e-04 3347.746-3347.747
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_12__0 (SNPS_CLOCK_GATE_HIGH_control_unit_141)
+                                      2.27e-04 6474.207-6474.208
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_61__0 (SNPS_CLOCK_GATE_HIGH_control_unit_351)
+                                      8.14e-04 2528.739-2528.740
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_132__0 (SNPS_CLOCK_GATE_HIGH_control_unit_493)
+                                      4.22e-04 5304.221-5304.222
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_40__0 (SNPS_CLOCK_GATE_HIGH_control_unit_309)
+                                      1.63e-04 2002.221-2002.222
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_111__0 (SNPS_CLOCK_GATE_HIGH_control_unit_451)
+                                      4.13e-04 4485.230-4485.231
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_38__0 (SNPS_CLOCK_GATE_HIGH_control_unit_79)
+                                      9.99e-05 2002.244-2002.245
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_19__0 (SNPS_CLOCK_GATE_HIGH_control_unit_267)
+                                      1.07e-04 2002.225-2002.226
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_53__0 (SNPS_CLOCK_GATE_HIGH_control_unit_223)
+                                      9.99e-05 2002.244-2002.245
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_17__0 (SNPS_CLOCK_GATE_HIGH_control_unit_37)
+                                      4.28e-04 6903.240-6903.241
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_32__0 (SNPS_CLOCK_GATE_HIGH_control_unit_181)
+                                      1.08e-04 2002.238-2002.239
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_3__0 (SNPS_CLOCK_GATE_HIGH_control_unit_9)
+                                      2.29e-04 5811.174-5811.175
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_81__0 (SNPS_CLOCK_GATE_HIGH_control_unit_391)
+                                      8.13e-04 3308.750-3308.751
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_11__0 (SNPS_CLOCK_GATE_HIGH_control_unit_139)
+                                      3.99e-04 6396.246-6396.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_60__0 (SNPS_CLOCK_GATE_HIGH_control_unit_349)
+                                      8.09e-04 2489.723-2489.724
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_131__0 (SNPS_CLOCK_GATE_HIGH_control_unit_491)
+                                      4.28e-04 5265.226-5265.227
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_39__0 (SNPS_CLOCK_GATE_HIGH_control_unit_307)
+                                      1.63e-04 2002.221-2002.222
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_110__0 (SNPS_CLOCK_GATE_HIGH_control_unit_449)
+                                      4.23e-04 4446.226-4446.227
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_37__0 (SNPS_CLOCK_GATE_HIGH_control_unit_77)
+                                      1.14e-04 2002.240-2002.241
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_18__0 (SNPS_CLOCK_GATE_HIGH_control_unit_265)
+                                      1.28e-04 2002.234-2002.235
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_52__0 (SNPS_CLOCK_GATE_HIGH_control_unit_221)
+                                      8.59e-05 2002.207-2002.208
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_16__0 (SNPS_CLOCK_GATE_HIGH_control_unit_35)
+                                      3.89e-04 6825.243-6825.244
+                                                                  0.000    0.000
+    clk_gate_lhead_r_reg (SNPS_CLOCK_GATE_HIGH_control_unit_116)
+                                      2.27e-04 5538.292-5538.293
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_31__0 (SNPS_CLOCK_GATE_HIGH_control_unit_179)
+                                      9.78e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_2__0 (SNPS_CLOCK_GATE_HIGH_control_unit_7)
+                                      3.94e-04 5733.244-5733.245
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_80__0 (SNPS_CLOCK_GATE_HIGH_control_unit_389)
+                                      4.32e-04 3276.221-3276.222
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_10__0 (SNPS_CLOCK_GATE_HIGH_control_unit_137)
+                                      3.90e-04 6318.246-6318.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_59__0 (SNPS_CLOCK_GATE_HIGH_control_unit_347)
+                                      9.40e-04 2457.229-2457.230
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_130__0 (SNPS_CLOCK_GATE_HIGH_control_unit_489)
+                                      7.43e-04 5219.746-5219.747
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_38__0 (SNPS_CLOCK_GATE_HIGH_control_unit_305)
+                                      1.37e-04 2002.223-2002.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_109__0 (SNPS_CLOCK_GATE_HIGH_control_unit_447)
+                                      4.31e-04 4407.226-4407.227
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_36__0 (SNPS_CLOCK_GATE_HIGH_control_unit_75)
+                                      1.05e-04 2002.243-2002.244
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_17__0 (SNPS_CLOCK_GATE_HIGH_control_unit_263)
+                                      2.58e-04 2002.243-2002.244
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_51__0 (SNPS_CLOCK_GATE_HIGH_control_unit_219)
+                                      9.78e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_15__0 (SNPS_CLOCK_GATE_HIGH_control_unit_33)
+                                      2.31e-04 6747.174-6747.175
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_30__0 (SNPS_CLOCK_GATE_HIGH_control_unit_177)
+                                      9.63e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_1__0 (SNPS_CLOCK_GATE_HIGH_control_unit_5)
+                                      4.20e-04 5655.240-5655.241
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_79__0 (SNPS_CLOCK_GATE_HIGH_control_unit_387)
+                                      4.38e-04 3237.230-3237.231
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_58__0 (SNPS_CLOCK_GATE_HIGH_control_unit_345)
+                                      4.59e-04 2418.183-2418.184
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_129__0 (SNPS_CLOCK_GATE_HIGH_control_unit_487)
+                                      8.09e-04 5180.750-5180.751
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_37__0 (SNPS_CLOCK_GATE_HIGH_control_unit_303)
+                                      1.63e-04 2002.223-2002.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_108__0 (SNPS_CLOCK_GATE_HIGH_control_unit_445)
+                                      4.34e-04 4368.221-4368.222
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_35__0 (SNPS_CLOCK_GATE_HIGH_control_unit_73)
+                                      1.08e-04 2002.174-2002.175
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_16__0 (SNPS_CLOCK_GATE_HIGH_control_unit_261)
+                                      3.18e-04 2002.281-2002.282
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_50__0 (SNPS_CLOCK_GATE_HIGH_control_unit_217)
+                                      9.63e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_14__0 (SNPS_CLOCK_GATE_HIGH_control_unit_31)
+                                      3.90e-04 6669.174-6669.175
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_99__0 (SNPS_CLOCK_GATE_HIGH_control_unit_427)
+                                      4.52e-04 4017.240-4017.241
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_0__0 (SNPS_CLOCK_GATE_HIGH_control_unit_3)
+                                      4.02e-04 5577.243-5577.244
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_29__0 (SNPS_CLOCK_GATE_HIGH_control_unit_175)
+                                      1.08e-04 2002.238-2002.239
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_78__0 (SNPS_CLOCK_GATE_HIGH_control_unit_385)
+                                      4.20e-04 3198.226-3198.227
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_57__0 (SNPS_CLOCK_GATE_HIGH_control_unit_343)
+                                      8.72e-04 2379.223-2379.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_128__0 (SNPS_CLOCK_GATE_HIGH_control_unit_485)
+                                      8.10e-04 5141.750-5141.751
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_55__0 (SNPS_CLOCK_GATE_HIGH_control_unit_113)
+                                      1.99e-04 2002.187-2002.188
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_36__0 (SNPS_CLOCK_GATE_HIGH_control_unit_301)
+                                      1.67e-04 2002.219-2002.220
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_107__0 (SNPS_CLOCK_GATE_HIGH_control_unit_443)
+                                      4.25e-04 4329.230-4329.231
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_34__0 (SNPS_CLOCK_GATE_HIGH_control_unit_71)
+                                      9.99e-05 2002.244-2002.245
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_15__0 (SNPS_CLOCK_GATE_HIGH_control_unit_259)
+                                      2.16e-04 2002.243-2002.244
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_13__0 (SNPS_CLOCK_GATE_HIGH_control_unit_29)
+                                      4.13e-04 6591.240-6591.241
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_49__0 (SNPS_CLOCK_GATE_HIGH_control_unit_215)
+                                      1.08e-04 2002.238-2002.239
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_98__0 (SNPS_CLOCK_GATE_HIGH_control_unit_425)
+                                      4.52e-04 3978.240-3978.241
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_28__0 (SNPS_CLOCK_GATE_HIGH_control_unit_173)
+                                      8.59e-05 2002.207-2002.208
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_77__0 (SNPS_CLOCK_GATE_HIGH_control_unit_383)
+                                      7.50e-04 3152.746-3152.747
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_56__0 (SNPS_CLOCK_GATE_HIGH_control_unit_341)
+                                      8.77e-04 2340.223-2340.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_127__0 (SNPS_CLOCK_GATE_HIGH_control_unit_483)
+                                      7.89e-04 5102.750-5102.751
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_54__0 (SNPS_CLOCK_GATE_HIGH_control_unit_111)
+                                      9.99e-05 2002.244-2002.245
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_35__0 (SNPS_CLOCK_GATE_HIGH_control_unit_299)
+                                      1.37e-04 2002.223-2002.224
+                                                                  0.000    0.000
+    clk_gate_rhead_r_reg (SNPS_CLOCK_GATE_HIGH_control_unit_2)
+                                      4.70e-04 6812.288-6812.289
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_106__0 (SNPS_CLOCK_GATE_HIGH_control_unit_441)
+                                      4.20e-04 4290.230-4290.231
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_33__0 (SNPS_CLOCK_GATE_HIGH_control_unit_69)
+                                      1.14e-04 2002.240-2002.241
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_14__0 (SNPS_CLOCK_GATE_HIGH_control_unit_257)
+                                      2.16e-04 2002.244-2002.245
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_12__0 (SNPS_CLOCK_GATE_HIGH_control_unit_27)
+                                      4.11e-04 6513.232-6513.233
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_48__0 (SNPS_CLOCK_GATE_HIGH_control_unit_213)
+                                      8.59e-05 2002.207-2002.208
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_97__0 (SNPS_CLOCK_GATE_HIGH_control_unit_423)
+                                      4.51e-04 3939.240-3939.241
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_27__0 (SNPS_CLOCK_GATE_HIGH_control_unit_171)
+                                      9.78e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_76__0 (SNPS_CLOCK_GATE_HIGH_control_unit_381)
+                                      7.72e-04 3113.746-3113.747
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_55__0 (SNPS_CLOCK_GATE_HIGH_control_unit_339)
+                                      7.99e-04 2294.712-2294.713
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_126__0 (SNPS_CLOCK_GATE_HIGH_control_unit_481)
+                                      7.70e-04 5063.746-5063.747
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_53__0 (SNPS_CLOCK_GATE_HIGH_control_unit_109)
+                                      1.14e-04 2002.240-2002.241
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_34__0 (SNPS_CLOCK_GATE_HIGH_control_unit_297)
+                                      1.63e-04 2002.221-2002.222
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_105__0 (SNPS_CLOCK_GATE_HIGH_control_unit_439)
+                                      4.31e-04 4251.221-4251.222
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_32__0 (SNPS_CLOCK_GATE_HIGH_control_unit_67)
+                                      1.05e-04 2002.243-2002.244
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_13__0 (SNPS_CLOCK_GATE_HIGH_control_unit_255)
+                                      1.63e-04 2002.221-2002.222
+                                                                  0.000    0.000
+    clk_gate_ltail_r_reg (SNPS_CLOCK_GATE_HIGH_control_unit_115)
+                                      1.11e-04 2002.292-2002.293
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_11__0 (SNPS_CLOCK_GATE_HIGH_control_unit_25)
+                                      3.82e-04 6435.225-6435.226
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_47__0 (SNPS_CLOCK_GATE_HIGH_control_unit_211)
+                                      9.78e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_96__0 (SNPS_CLOCK_GATE_HIGH_control_unit_421)
+                                      4.63e-04 3900.231-3900.232
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_9__0 (SNPS_CLOCK_GATE_HIGH_control_unit_247)
+                                      2.05e-04 2002.183-2002.184
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_9__0 (SNPS_CLOCK_GATE_HIGH_control_unit_135)
+                                      4.08e-04 6240.244-6240.245
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_26__0 (SNPS_CLOCK_GATE_HIGH_control_unit_169)
+                                      9.63e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_75__0 (SNPS_CLOCK_GATE_HIGH_control_unit_379)
+                                      4.30e-04 3081.226-3081.227
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_54__0 (SNPS_CLOCK_GATE_HIGH_control_unit_337)
+                                      8.56e-04 2255.723-2255.724
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_125__0 (SNPS_CLOCK_GATE_HIGH_control_unit_479)
+                                      8.21e-04 5024.750-5024.751
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_52__0 (SNPS_CLOCK_GATE_HIGH_control_unit_107)
+                                      1.22e-04 2002.232-2002.233
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_33__0 (SNPS_CLOCK_GATE_HIGH_control_unit_295)
+                                      2.16e-04 2002.244-2002.245
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_104__0 (SNPS_CLOCK_GATE_HIGH_control_unit_437)
+                                      4.23e-04 4212.230-4212.231
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_31__0 (SNPS_CLOCK_GATE_HIGH_control_unit_65)
+                                      8.76e-05 2002.174-2002.175
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_12__0 (SNPS_CLOCK_GATE_HIGH_control_unit_253)
+                                      1.63e-04 2002.221-2002.222
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_10__0 (SNPS_CLOCK_GATE_HIGH_control_unit_23)
+                                      4.02e-04 6357.232-6357.233
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_46__0 (SNPS_CLOCK_GATE_HIGH_control_unit_209)
+                                      9.63e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_95__0 (SNPS_CLOCK_GATE_HIGH_control_unit_419)
+                                      8.19e-04 3854.739-3854.740
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_8__0 (SNPS_CLOCK_GATE_HIGH_control_unit_245)
+                                      2.05e-04 2002.183-2002.184
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_8__0 (SNPS_CLOCK_GATE_HIGH_control_unit_133)
+                                      3.84e-04 6162.207-6162.208
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_25__0 (SNPS_CLOCK_GATE_HIGH_control_unit_167)
+                                      8.58e-05 2002.207-2002.208
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_74__0 (SNPS_CLOCK_GATE_HIGH_control_unit_377)
+                                      4.24e-04 3042.226-3042.227
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_53__0 (SNPS_CLOCK_GATE_HIGH_control_unit_335)
+                                      8.97e-04 2216.723-2216.724
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_124__0 (SNPS_CLOCK_GATE_HIGH_control_unit_477)
+                                      7.39e-04 4985.746-4985.747
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_51__0 (SNPS_CLOCK_GATE_HIGH_control_unit_105)
+                                      1.05e-04 2002.225-2002.226
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_32__0 (SNPS_CLOCK_GATE_HIGH_control_unit_293)
+                                      2.58e-04 2002.244-2002.245
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_103__0 (SNPS_CLOCK_GATE_HIGH_control_unit_435)
+                                      4.29e-04 4166.717-4166.718
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_30__0 (SNPS_CLOCK_GATE_HIGH_control_unit_63)
+                                      1.22e-04 2002.232-2002.233
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_11__0 (SNPS_CLOCK_GATE_HIGH_control_unit_251)
+                                      2.16e-04 2002.243-2002.244
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_45__0 (SNPS_CLOCK_GATE_HIGH_control_unit_207)
+                                      1.08e-04 2002.238-2002.239
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_94__0 (SNPS_CLOCK_GATE_HIGH_control_unit_417)
+                                      8.64e-04 3822.275-3822.276
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_7__0 (SNPS_CLOCK_GATE_HIGH_control_unit_243)
+                                      1.28e-04 2002.234-2002.235
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_7__0 (SNPS_CLOCK_GATE_HIGH_control_unit_131)
+                                      3.95e-04 6084.246-6084.247
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_24__0 (SNPS_CLOCK_GATE_HIGH_control_unit_165)
+                                      9.99e-05 2002.244-2002.245
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_73__0 (SNPS_CLOCK_GATE_HIGH_control_unit_375)
+                                      4.28e-04 3003.226-3003.227
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_52__0 (SNPS_CLOCK_GATE_HIGH_control_unit_333)
+                                      8.04e-04 2177.755-2177.756
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_123__0 (SNPS_CLOCK_GATE_HIGH_control_unit_475)
+                                      4.28e-04 4953.230-4953.231
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_50__0 (SNPS_CLOCK_GATE_HIGH_control_unit_103)
+                                      1.08e-04 2002.174-2002.175
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_31__0 (SNPS_CLOCK_GATE_HIGH_control_unit_291)
+                                      1.23e-04 2002.225-2002.226
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_102__0 (SNPS_CLOCK_GATE_HIGH_control_unit_433)
+                                      4.16e-04 4134.230-4134.231
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_10__0 (SNPS_CLOCK_GATE_HIGH_control_unit_249)
+                                      7.83e-05 2002.185-2002.186
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_29__0 (SNPS_CLOCK_GATE_HIGH_control_unit_61)
+                                      1.14e-04 2002.240-2002.241
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_44__0 (SNPS_CLOCK_GATE_HIGH_control_unit_205)
+                                      8.59e-05 2002.207-2002.208
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_93__0 (SNPS_CLOCK_GATE_HIGH_control_unit_415)
+                                      8.13e-04 3776.739-3776.740
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_6__0 (SNPS_CLOCK_GATE_HIGH_control_unit_241)
+                                      2.35e-04 2002.223-2002.224
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_6__0 (SNPS_CLOCK_GATE_HIGH_control_unit_129)
+                                      3.86e-04 6006.246-6006.247
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_23__0 (SNPS_CLOCK_GATE_HIGH_control_unit_163)
+                                      9.78e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_72__0 (SNPS_CLOCK_GATE_HIGH_control_unit_373)
+                                      4.23e-04 2964.226-2964.227
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_51__0 (SNPS_CLOCK_GATE_HIGH_control_unit_331)
+                                      7.87e-04 2138.723-2138.724
+                                                                  0.000    0.000
+    clk_gate_rtail_r_reg (SNPS_CLOCK_GATE_HIGH_control_unit_1)
+                                      2.44e-04 2015.288-2015.289
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_122__0 (SNPS_CLOCK_GATE_HIGH_control_unit_473)
+                                      1.16e-03 4901.276-4901.277
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_30__0 (SNPS_CLOCK_GATE_HIGH_control_unit_289)
+                                      2.35e-04 2002.223-2002.224
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_49__0 (SNPS_CLOCK_GATE_HIGH_control_unit_101)
+                                      1.22e-04 2002.232-2002.233
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_101__0 (SNPS_CLOCK_GATE_HIGH_control_unit_431)
+                                      4.20e-04 4095.226-4095.227
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_28__0 (SNPS_CLOCK_GATE_HIGH_control_unit_59)
+                                      1.05e-04 2002.243-2002.244
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_43__0 (SNPS_CLOCK_GATE_HIGH_control_unit_203)
+                                      9.78e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_92__0 (SNPS_CLOCK_GATE_HIGH_control_unit_413)
+                                      7.99e-04 3744.254-3744.255
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_5__0 (SNPS_CLOCK_GATE_HIGH_control_unit_239)
+                                      1.28e-04 2002.234-2002.235
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_5__0 (SNPS_CLOCK_GATE_HIGH_control_unit_127)
+                                      3.90e-04 5928.207-5928.208
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_22__0 (SNPS_CLOCK_GATE_HIGH_control_unit_161)
+                                      9.63e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_71__0 (SNPS_CLOCK_GATE_HIGH_control_unit_371)
+                                      4.24e-04 2925.230-2925.231
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_50__0 (SNPS_CLOCK_GATE_HIGH_control_unit_329)
+                                      9.19e-04 2093.209-2093.210
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_121__0 (SNPS_CLOCK_GATE_HIGH_control_unit_471)
+                                      8.90e-04 4875.281-4875.282
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_48__0 (SNPS_CLOCK_GATE_HIGH_control_unit_99)
+                                      1.05e-04 2002.243-2002.244
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_29__0 (SNPS_CLOCK_GATE_HIGH_control_unit_287)
+                                      1.28e-04 2002.234-2002.235
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_100__0 (SNPS_CLOCK_GATE_HIGH_control_unit_429)
+                                      4.22e-04 4056.226-4056.227
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_27__0 (SNPS_CLOCK_GATE_HIGH_control_unit_57)
+                                      2.49e-04 2002.187-2002.188
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_42__0 (SNPS_CLOCK_GATE_HIGH_control_unit_201)
+                                      9.63e-05 2002.246-2002.247
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_91__0 (SNPS_CLOCK_GATE_HIGH_control_unit_411)
+                                      8.63e-04 3705.275-3705.276
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_4__0 (SNPS_CLOCK_GATE_HIGH_control_unit_237)
+                                      6.80e-05 2002.124-2002.125
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_4__0 (SNPS_CLOCK_GATE_HIGH_control_unit_125)
+                                      3.96e-04 5850.238-5850.239
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_21__0 (SNPS_CLOCK_GATE_HIGH_control_unit_159)
+                                      3.68e-04 2002.260-2002.261
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_70__0 (SNPS_CLOCK_GATE_HIGH_control_unit_369)
+                                      4.32e-04 2886.223-2886.224
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_49__0 (SNPS_CLOCK_GATE_HIGH_control_unit_327)
+                                      8.41e-04 2060.755-2060.756
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_120__0 (SNPS_CLOCK_GATE_HIGH_control_unit_469)
+                                      4.26e-04 4836.230-4836.231
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_47__0 (SNPS_CLOCK_GATE_HIGH_control_unit_97)
+                                      1.05e-04 2002.225-2002.226
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_28__0 (SNPS_CLOCK_GATE_HIGH_control_unit_285)
+                                      2.05e-04 2002.183-2002.184
+                                                                  0.000    0.000
+    clk_gate_rdata_r_reg_26__0 (SNPS_CLOCK_GATE_HIGH_control_unit_55)
+                                      8.76e-05 2002.174-2002.175
+                                                                  0.000    0.000
+    clk_gate_ldata_r_reg_41__0 (SNPS_CLOCK_GATE_HIGH_control_unit_199)
+                                      1.08e-04 2002.238-2002.239
+                                                                  0.000    0.000
+    clk_gate_rbank_r_reg_90__0 (SNPS_CLOCK_GATE_HIGH_control_unit_409)
+                                      8.35e-04 3659.739-3659.740
+                                                                  0.000    0.000
+  cdc_unit_1 (cdc_unit_test_1)        1.57e-03 4992.302-4992.303
+                                                                  0.000    0.000
+    clk_gate_audio1_out_reg (SNPS_CLOCK_GATE_HIGH_cdc_unit_1)
+                                      3.77e-04 2008.261-2008.262
+                                                                  0.000    0.000
+    clk_gate_audio1_reg_reg (SNPS_CLOCK_GATE_HIGH_cdc_unit_4)
+                                      7.82e-05 2002.185-2002.186
+                                                                  0.000    0.000
+  dsp_unit_1 (dsp_unit_test_1)        1.05e-02 6747.224-6747.225
+                                                                  0.000    0.000
+    dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_level1_r_reg (SNPS_CLOCK_GATE_HIGH_dsp_unit_regs_proc_269)
+                                      3.90e-04 2002.146-2002.147
+                                                                  0.000    0.000
+    dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_2_reg (SNPS_CLOCK_GATE_HIGH_dsp_unit_regs_proc_0)
+                                      1.48e-04 2002.000-2002.001
+                                                                  0.000    0.000
+    dsp_unit_rtl_1_dsp_unit_dsp_proc_inst (dsp_unit_dsp_proc_test_1)
+                                      1.00e-02 2002.224-2002.225
+                                                                  0.000    0.000
+  i2s_unit_1 (i2s_unit_test_1)        1.75e-02 2062.586-2062.587
+                                                                  0.000    0.000
+    clk_gate_input_reg_reg_1 (SNPS_CLOCK_GATE_HIGH_i2s_unit_4)
+                                      1.40e-03 2008.261-2008.262
+                                                                  0.000    0.000
+    clk_gate_shift_reg_reg_1 (SNPS_CLOCK_GATE_HIGH_i2s_unit_1)
+                                      1.36e-03 2008.261-2008.262
+                                                                  0.000    0.000
+1

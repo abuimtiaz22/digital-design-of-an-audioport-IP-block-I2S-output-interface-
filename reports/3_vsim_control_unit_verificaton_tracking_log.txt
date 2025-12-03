@@ -1,0 +1,120 @@
+# 
+# set testplan_db ""
+# set simulation_db ""
+# set formal_db ""
+# set cdc_testplan_db ""
+# set cdc_db ""
+# 
+# set cov_ucdb_list {}
+# set testplan_ucdb_list {}
+# set merged_testplans ${OUTPUT_DIR}/${DESIGN_NAME}_merged_testplans.ucdb
+# output/control_unit_merged_testplans.ucdb
+# 
+##########################################################################################################
+# Delete old tracking database and automatically generate UCDB testplan
+##########################################################################################################
+# 
+# if { [file exists ${RESULTS_DIR}/${DESIGN_NAME}_rtl_tracking.ucdb ] != 0 } {
+#     file delete ${RESULTS_DIR}/${DESIGN_NAME}_rtl_tracking.ucdb
+# }
+# 
+# if { [file exists ${RESULTS_DIR}/${DESIGN_NAME}_rtl_testplan.ucdb ] != 0 } {
+#     file delete ${RESULTS_DIR}/${DESIGN_NAME}_rtl_testplan.ucdb
+# }
+# 
+# if { [file exists $merged_testplans ] != 0 } {
+#     file exists $merged_testplans
+# }
+# 
+##########################################################################################################
+# Create UCDB testplan
+##########################################################################################################
+# 
+# if { [info exists VSIM_TESTPLAN ] != 0 } {
+#     set testplan_db ${RESULTS_DIR}/${DESIGN_NAME}_rtl_testplan.ucdb
+#     echo "xml2ucdb options: $XML2UCDB_OPTIONS"
+#     eval "xml2ucdb ${XML2UCDB_OPTIONS} -format Excel $VSIM_TESTPLAN ${testplan_db}"
+#     set testplan_ucdb_list [concat  $testplan_ucdb_list  [list $testplan_db]]
+# } else {
+#     echo "Error: No testplan for ${DESIGN_NAME}."
+#     exit
+# }
+# xml2ucdb options: -GDESIGN_NAME=control_unit -GSIM_PREFIX=/control_unit_tb/DUT_INSTANCE -GFORMAL_PREFIX=/control_unit
+# results/control_unit_rtl_testplan.ucdb
+# 
+# 
+##########################################################################################################
+# Merge coverage for all designs (only one design supported)
+##########################################################################################################
+# 
+# set designs [concat [list $DESIGN_NAME] ]
+# control_unit
+# 
+# foreach design $designs {
+# 
+#     set rtl_dbs [glob -nocomplain ${RESULTS_DIR}/${design}_rtl_sim_coverage*.ucdb ]
+#     set cov_ucdb_list [concat  $cov_ucdb_list  $rtl_dbs]
+# 
+#     set rtl_dbs [glob -nocomplain ${RESULTS_DIR}/${design}_rtl_formal*coverage*.ucdb ]
+#     set cov_ucdb_list [concat  $cov_ucdb_list  $rtl_dbs]
+# 
+#     set rtl_dbs [glob -nocomplain ${RESULTS_DIR}/${design}_rtl_cdc_coverage.ucdb ]
+#     set cov_ucdb_list [concat  $cov_ucdb_list  $rtl_dbs]
+# 
+# }
+# 
+# echo "Found the following testplans:"
+# Found the following testplans:
+# foreach db ${testplan_ucdb_list}  {
+#     echo $db
+# }
+# results/control_unit_rtl_testplan.ucdb
+# 
+# echo "Found the following coverage databases:"
+# Found the following coverage databases:
+# foreach db ${cov_ucdb_list} {
+#     echo $db
+# }
+# results/control_unit_rtl_sim_coverage.ucdb
+# results/control_unit_rtl_formal_coverage.ucdb
+# 
+# eval "vcover merge  -out ${merged_testplans} ${testplan_ucdb_list}"
+# QuestaSim-64 vcover 2024.3_2 Coverage Utility 2024.11 Nov 25 2024
+# Start time: 00:07:52 on Feb 14,2025
+# vcover merge -out output/control_unit_merged_testplans.ucdb results/control_unit_rtl_testplan.ucdb 
+# QuestaSim-64 vcover 2024.3_2 Coverage Utility 2024.11 Nov 25 2024
+# Merging file results/control_unit_rtl_testplan.ucdb
+# Writing merged result to output/control_unit_merged_testplans.ucdb
+# 
+# End time: 00:07:52 on Feb 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# eval "vcover merge  -testassociated -out ${RESULTS_DIR}/${design}_rtl_tracking.ucdb ${merged_testplans} ${cov_ucdb_list}"
+# QuestaSim-64 vcover 2024.3_2 Coverage Utility 2024.11 Nov 25 2024
+# Start time: 00:07:52 on Feb 14,2025
+# vcover merge -testassociated -out results/control_unit_rtl_tracking.ucdb output/control_unit_merged_testplans.ucdb results/control_unit_rtl_sim_coverage.ucdb results/control_unit_rtl_formal_coverage.ucdb 
+# QuestaSim-64 vcover 2024.3_2 Coverage Utility 2024.11 Nov 25 2024
+# Merging file output/control_unit_merged_testplans.ucdb
+# Merging file results/control_unit_rtl_sim_coverage.ucdb
+# Merging file results/control_unit_rtl_formal_coverage.ucdb
+# Writing merged result to results/control_unit_rtl_tracking.ucdb
+# 
+# Applying tag commands ...
+# All of 2 rules are applied successfully.
+# All tags are applied successfully.
+# End time: 00:07:52 on Feb 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# file delete ${merged_testplans}
+# 
+# coverage open ${RESULTS_DIR}/${DESIGN_NAME}_rtl_tracking.ucdb
+# coverage read -dataset control_unit_rtl_tracking results/control_unit_rtl_tracking.ucdb
+# results/control_unit_rtl_tracking.ucdb opened as coverage dataset "control_unit_rtl_tracking"
+# coverage report -instance=/${DESIGN_NAME}_tb/DUT_INSTANCE. -output ${REPORTS_DIR}/3_vmgr_${DESIGN_NAME}_rtl_coverage_summary.txt
+# 
+# if { [batch_mode ] == 0 } {
+#     add testbrowser ${RESULTS_DIR}/${DESIGN_NAME}_rtl_tracking.ucdb
+#     view tracker
+# }
+# .main_pane.tracker.interior.cs.body.tree
+# 
+# exec touch ${OUTPUT_DIR}/3_${DESIGN_NAME}_rtl_tracking

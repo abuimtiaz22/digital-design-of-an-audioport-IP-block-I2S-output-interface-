@@ -1,0 +1,33 @@
+****************************************
+Report : Time Based Power
+	-net_power
+	-nworst 3
+	-sort_by net_switching_power
+Design : audioport
+Version: U-2022.12
+Date   : Mon May  5 00:12:27 2025
+****************************************
+
+
+
+  Attributes
+  ----------
+      a  -  Switching activity information / Switching power information annotated on net
+      p  -  Propagated switching activity information on net
+      d  -  Default switching activity used on net
+      u  -  Net switching activity uninitialized
+      m  -  Net is driven by multiple pins
+      b  -  Net is a primary input (boundary net)
+
+		Toggle rates reported with respect to time unit 1ns
+--------------------------------------------------------------------------------
+                                  Total      Static   Toggle   Switching
+Net                         Vdd   Net Load   Prob.    Rate     Power      Attrs
+--------------------------------------------------------------------------------
+CTS_3                       1.10    0.082    0.501    0.1538   7.604e-06  a
+CTS_14                      1.10    0.055    0.500    0.1538   5.128e-06  a
+CTS_9                       1.10    0.055    0.500    0.1538   5.107e-06  a
+--------------------------------------------------------------------------------
+Total (3 nets)                                                 1.784e-05 Watt
+
+1

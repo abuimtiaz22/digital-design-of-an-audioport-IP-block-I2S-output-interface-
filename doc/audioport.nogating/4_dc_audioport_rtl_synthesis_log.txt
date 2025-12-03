@@ -1,0 +1,2476 @@
+Initializing gui preferences from file  /homedir01/aimtiaz23/.synopsys_dc_gui/preferences.tcl
+#################################################################
+#     Synthesis script for Synopsys Design Compiler 
+#     (c) 2023 Univ. of Oulu
+#################################################################
+set systemTime [clock seconds]
+1746304448
+puts "Script start time: [clock format $systemTime -format %H:%M:%S]"
+Script start time: 23:34:08
+set sh_continue_on_error false
+false
+#################################################################
+# Customizable variables
+#################################################################
+set INSERT_SCAN_CHAINS                0
+0
+set GATE_CLOCK                        0
+0
+set CLOCK_GATE_MAX_FANOUT             16 
+16
+set SYNTHESIS_FIX_HOLD                0
+0
+set SYNTHESIS_RECREM_ARCS             0
+0
+set RTL_POWER_ESTIMATION              0
+0
+set VHDL_ARCHITECTURE                 "rtl"
+rtl
+set SYNOPSYS_ANALYZE_OPTIONS          ""
+set SYNOPSYS_ELABORATE_OPTIONS        ""
+set SYNOPSYS_PATHANALYZER_PATHS       100
+100
+set SYNOPSYS_PATHANALYZER_SLACK_LIMIT 10
+10
+set DC_COMPILE_OPTIONS                ""
+set DC_WRITE_PARASITICS               1
+1
+set DC_LINK_LIBRARY_FILES             ""
+set DFT_SETUP_FILE                    ""
+if {$in_gui_session == false } {
+    set INTERACTIVE 0
+}
+#################################################################
+# Read technology and design settings
+#################################################################
+set EDA_TOOL "Design-Compiler"
+Design-Compiler
+set EDA_TOOL_TARGET "ASIC"
+ASIC
+source -echo scripts/0_setup.tcl
+##################################################################################################
+# Flow settings
+##################################################################################################
+set script_debug_enabled 0
+set TEXT_EDITOR "gedit"
+set SHOW_REPORTS 0
+set DUT_INSTANCE_NAME "DUT_INSTANCE"
+set LAUNCH_DIR        [pwd]
+set ::env(LAUNCH_DIR) [pwd]
+set DESIGN_DIR        [pwd]
+set INPUT_DIR         "input"
+set RESULTS_DIR       "results"
+if { [file exists $RESULTS_DIR ] == 0 } {
+    exec mkdir $RESULTS_DIR
+}
+set REPORTS_DIR       "reports"
+if { [file exists $REPORTS_DIR ] == 0 } {
+    exec mkdir $REPORTS_DIR
+}
+set OUTPUT_DIR        "output"
+if { [file exists $OUTPUT_DIR ] == 0 } {
+    exec mkdir $OUTPUT_DIR
+}
+if { [info exists INTERACTIVE ] == 0} {
+    set INTERACTIVE 1
+}
+if {[catch {fconfigure stdin -mode}]} {
+    set INTERACTIVE 0
+} 
+# Override with environment variable so that shell scripts can run be use in batch mode
+if [info exists env(ELLAB_DIGITAL_FLOW_MODE) ] {
+    if { $env(ELLAB_DIGITAL_FLOW_MODE) == "INTERACTIVE" } {
+        set INTERACTIVE 1
+    } else {
+        set INTERACTIVE 0
+    }
+}
+##################################################################################################
+# Design Settings
+##################################################################################################
+set DESIGN_FILES    {}
+set RTL_FILES       {}
+set SVA_FILES       {}
+set TESTBENCH_FILES {}
+source ${INPUT_DIR}/0_setup_design.tcl
+if { [info exists TESTBENCH_NAME] == 0 } {
+    set TESTBENCH_NAME ${DESIGN_NAME}_tb
+}
+##################################################################################################
+# Technology specific settings
+##################################################################################################
+if { [info exists TARGET_TECHNOLOGY ] == 0} {
+    if { [info exists EDA_TOOL_TARGET] } {
+        if { $EDA_TOOL_TARGET == "ASIC" } {
+            set TARGET_TECHNOLOGY "NANGate"
+        } else {
+            #   set TARGET_TECHNOLOGY "Xilinx"
+            set TARGET_TECHNOLOGY "Altera"
+        }
+    } else {
+        set TARGET_TECHNOLOGY "NANGate"
+    }
+}
+if [info exists env(ELLAB_DIGITAL_FLOW_TECH) ] {
+    set TARGET_TECHNOLOGY $env(ELLAB_DIGITAL_FLOW_TECH)
+}
+set setup_file scripts/0_setup_${TARGET_TECHNOLOGY}.tcl
+if [file exists $setup_file] {
+    source $setup_file
+} else {
+    puts "Technology settings not found for ${TARGET_TECHNOLOGY}"
+    exit
+}
+set tmp_list { }
+if { [info exists DESIGN_FILES ] } {
+    foreach filename ${DESIGN_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        } else {
+            if { $script_debug_enabled } {
+                puts "File ${filename} not found"
+                return
+            }
+        }
+    }
+}
+set DESIGN_FILES $tmp_list
+set tmp_list { }
+if { [info exists RTL_FILES ] } {
+    foreach filename ${RTL_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        } else {
+            if { $script_debug_enabled } {
+                puts "File ${filename} not found"
+                return
+            }
+        }
+    }
+}
+set RTL_FILES $tmp_list
+set tmp_list { }
+if { [info exists SVA_FILES ] } {
+    foreach filename ${SVA_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        } else {
+            if { $script_debug_enabled } {
+                puts "File ${filename} not found"
+                return
+            }
+        }
+    }
+}
+set SVA_FILES $tmp_list
+set tmp_list { }
+if { [info exists TESTBENCH_FILES ] } {
+    foreach filename ${TESTBENCH_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        } else {
+        }
+    }
+}
+set TESTBENCH_FILES $tmp_list
+set tmp_list { }
+if { [info exists SYSTEMC_SOURCE_FILES ] } {
+    foreach filename ${SYSTEMC_SOURCE_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        }
+    }
+}
+set SYSTEMC_SOURCE_FILES $tmp_list
+set tmp_list { }
+if { [info exists SYSTEMC_HEADER_FILES ] } {
+    foreach filename ${SYSTEMC_HEADER_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        }
+    }
+}
+set SYSTEMC_HEADER_FILES $tmp_list
+set tmp_list { }
+if { [info exists SYSTEMC_TESTBENCH_FILES ] } {
+    foreach filename ${SYSTEMC_TESTBENCH_FILES} {
+        if { [file exists $filename ] == 1 } {
+            lappend tmp_list ${filename}
+        }
+    }
+}
+set SYSTEMC_TESTBENCH_FILES $tmp_list
+set chan [open ${OUTPUT_DIR}/last_design_name w]
+puts $chan $DESIGN_NAME
+close $chan
+file delete -force [glob -nocomplain $REPORTS_DIR/4_dc_${DESIGN_NAME}_* ]
+#################################################################
+# Design Compiler Settings
+#################################################################
+remove_design -designs
+1
+set sh_output_log_file ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_rtl_synthesis_log.txt
+reports/4_dc_audioport_rtl_synthesis_log.txt
+set_app_var hdlin_vhdl_std 2008
+2008
+if { [info exists DC_ALIB_PATH ] } {
+    set_app_var alib_library_analysis_path $DC_ALIB_PATH
+}
+/research/cas/public/DT3_2025/lib/logic_lib/alib
+if { [info exists DC_SUPPRESS_MESSAGES ] } {
+    foreach msg_id $DC_SUPPRESS_MESSAGES {
+        suppress_message $msg_id
+    }
+}
+set work_dir ${OUTPUT_DIR}/${DESIGN_NAME}_SYNOPSYS_WORK
+output/audioport_SYNOPSYS_WORK
+file delete -force $work_dir
+define_design_lib WORK -path $work_dir
+1
+if { $SYNTHESIS_RECREM_ARCS == 1 } {
+    set enable_recovery_removal_arcs true
+}
+set hdlin_while_loop_iterations 3000
+3000
+set_svf ${RESULTS_DIR}/${DESIGN_NAME}.svf
+1
+#####################################################################################
+#  TECHNOLOGY SETTINGS
+#####################################################################################
+set search_path        "$search_path  $DC_LIBRARY_PATH $work_dir"
+. /sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn /sw/rhel7/synopsys/syn/T-2022.03-SP5-1/dw/syn_ver /sw/rhel7/synopsys/syn/T-2022.03-SP5-1/dw/sim_ver  /research/cas/public/DT3_2025/lib/logic_lib output/audioport_SYNOPSYS_WORK
+set link_library       [concat "* $DC_TARGET_LIBRARY_FILE dw_foundation.sldb  " $DC_LINK_LIBRARY_FILES]
+* NangateOpenCellLibrary_typical.db dw_foundation.sldb
+set target_library     ${DC_TARGET_LIBRARY_FILE}
+NangateOpenCellLibrary_typical.db
+set symbol_library     ${DC_TARGET_LIBRARY_FILE}
+NangateOpenCellLibrary_typical.db
+set synthetic_library  "dw_foundation.sldb"
+dw_foundation.sldb
+if { $RTL_POWER_ESTIMATION == 1 } {
+    saif_map -start
+}
+Information: The SAIF name mapping information database is now active. (PWR-602)
+1
+#####################################################################################
+#  RTL HDL INPUT
+#####################################################################################
+foreach filename [concat ${DESIGN_FILES} ${RTL_FILES} ] {
+    set ext [file extension $filename]
+    if { $ext == ".vhd" } {
+        analyze -library WORK -format vhdl $filename
+    } elseif { $ext == ".sv" } {
+        eval "analyze -library WORK -format sverilog $filename -define { design_top_is_$DESIGN_NAME} $SYNOPSYS_ANALYZE_OPTIONS"
+    } elseif { $ext == ".v" } {
+        eval "analyze -library WORK -format verilog $filename  -define { design_top_is_$DESIGN_NAME} $SYNOPSYS_ANALYZE_OPTIONS"
+    }
+}
+Running PRESTO HDLC
+Compiling source file ./input/apb_pkg.sv
+Opening include file ./input/audioport.svh
+Presto compilation completed successfully.
+Loading db file '/research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db'
+Loading db file '/sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn/dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file ./input/audioport_pkg.sv
+Opening include file ./input/audioport.svh
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./input/audioport_util_pkg.sv
+Opening include file ./input/audioport.svh
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./input/control_unit.sv
+Opening include file ./input/audioport.svh
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./results/dsp_unit_hls_rtl.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./input/dsp_unit.sv
+Opening include file ./input/audioport.svh
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./input/cdc_unit.sv
+Opening include file ./input/audioport.svh
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration I2S_UNIT
+Compiling Architecture RTL of I2S_UNIT
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./input/audioport.sv
+Opening include file ./input/audioport.svh
+Presto compilation completed successfully.
+if { $RTL_LANGUAGE == "VHDL" } {
+    eval "elaborate $DESIGN_NAME -architecture $VHDL_ARCHITECTURE -library WORK $SYNOPSYS_ELABORATE_OPTIONS"
+} else {
+    eval "elaborate $DESIGN_NAME -library WORK $SYNOPSYS_ELABORATE_OPTIONS"
+}
+Loading db file '/sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn/gtech.db'
+Loading db file '/sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (audioport)
+Elaborated 1 design.
+Current design is now 'audioport'.
+Information: Building the design 'control_unit'. (HDL-193)
+Warning:  ./input/control_unit.sv:200: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./input/control_unit.sv:210: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./input/control_unit.sv:220: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./input/control_unit.sv:307: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./input/control_unit.sv:317: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./input/control_unit.sv:327: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine control_unit line 61 in file
+                './input/control_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     play_r_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine control_unit line 71 in file
+                './input/control_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      req_r_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine control_unit line 142 in file
+                './input/control_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rbank_r_reg     | Flip-flop | 4416  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine control_unit line 173 in file
+                './input/control_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    llooped_r_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     ldata_r_reg     | Flip-flop | 1344  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     lhead_r_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     ltail_r_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine control_unit line 280 in file
+                './input/control_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rlooped_r_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     rdata_r_reg     | Flip-flop | 1344  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     rhead_r_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     rtail_r_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine control_unit line 373 in file
+                './input/control_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      irq_r_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (control_unit)
+Information: Building the design 'dsp_unit'. (HDL-193)
+Presto compilation completed successfully. (dsp_unit)
+Information: Building the design 'cdc_unit'. (HDL-193)
+
+Inferred memory devices in process
+        in routine cdc_unit line 71 in file
+                './input/cdc_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  mrst_n_sync2_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  mrst_n_sync1_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine cdc_unit line 86 in file
+                './input/cdc_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  play_in_sync2_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  play_in_sync1_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine cdc_unit line 104 in file
+                './input/cdc_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   req_in_prev_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  req_in_sync1_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  req_in_sync2_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine cdc_unit line 126 in file
+                './input/cdc_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  handshake_req_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   audio0_reg_reg    | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   audio1_reg_reg    | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine cdc_unit line 146 in file
+                './input/cdc_unit.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| handshake_req_sync2_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| handshake_req_sync1_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+        in routine cdc_unit line 157 in file
+                './input/cdc_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  handshake_ack_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine cdc_unit line 170 in file
+                './input/cdc_unit.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| handshake_ack_sync2_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| handshake_ack_sync1_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+        in routine cdc_unit line 181 in file
+                './input/cdc_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    tick_prev_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   audio0_out_reg    | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   audio1_out_reg    | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  tick_out_reg_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (cdc_unit)
+Information: Building the design 'i2s_unit'. (HDL-193)
+
+Inferred memory devices in process
+        in routine i2s_unit line 58 in file
+                './input/i2s_unit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     play_r_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine i2s_unit line 73 in file
+                './input/i2s_unit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     counter_reg     | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine i2s_unit line 92 in file
+                './input/i2s_unit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    input_reg_reg    | Flip-flop |  48   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine i2s_unit line 106 in file
+                './input/i2s_unit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |  48   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (i2s_unit)
+Information: Building the design 'dsp_unit_rtl'. (HDL-193)
+Presto compilation completed successfully. (dsp_unit_rtl)
+Information: Building the design 'dsp_unit_dsp_proc'. (HDL-193)
+Warning:  ./results/dsp_unit_hls_rtl.v:4603: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./results/dsp_unit_hls_rtl.v:4722: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 2634 in file
+        './results/dsp_unit_hls_rtl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           5084           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3305 in file
+        './results/dsp_unit_hls_rtl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           5699           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4159 in file
+        './results/dsp_unit_hls_rtl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           5401           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4557 in file
+        './results/dsp_unit_hls_rtl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           5187           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4575 in file
+        './results/dsp_unit_hls_rtl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           5103           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4723 in file
+        './results/dsp_unit_hls_rtl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           5718           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4729 in file
+        './results/dsp_unit_hls_rtl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           5485           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3305 in file
+                './results/dsp_unit_hls_rtl.v'.
+===========================================================================================================
+|                  Register Name                  |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================================================
+|            FILTER_LOOP_i_6_0_sva_reg            | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+| scheduled_region_else_if_else_acc0_54_0_sva_reg | Flip-flop |  55   |  Y  | N  | Y  | N  | N  | N  | N  |
+| scheduled_region_else_if_else_acc1_54_0_sva_reg | Flip-flop |  55   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       reg_read_inputs_mioi_iswt0_cse_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===========================================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3322 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  data0_r_0_sva_reg  | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  data1_r_0_sva_reg  | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3334 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| data1_r_1_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_1_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3346 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_10_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_10_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3358 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_10_sva_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_10_sva_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3370 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_11_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_11_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3382 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_12_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_12_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3394 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_13_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_13_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3406 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_14_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_14_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3418 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_15_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_15_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3430 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_16_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_16_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3442 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_17_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_17_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3454 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_18_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_18_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3466 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_19_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_19_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3478 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| data1_r_2_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_2_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3490 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_20_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_20_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3502 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_21_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_21_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3514 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_22_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_22_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3526 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_23_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_23_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3538 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_24_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_24_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3550 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_25_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_25_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3562 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_26_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_26_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3574 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_27_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_27_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3586 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_28_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_28_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3598 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_29_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_29_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3610 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| data1_r_3_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_3_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3622 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_30_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_30_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3634 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_31_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_31_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3646 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_32_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_32_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3658 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_33_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_33_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3670 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_34_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_34_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3682 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_35_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_35_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3694 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_36_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_36_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3706 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_37_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_37_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3718 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_38_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_38_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3730 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_39_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_39_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3742 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| data1_r_4_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_4_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3754 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_40_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_40_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3766 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_41_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_41_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3778 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_42_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_42_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3790 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_43_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_43_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3802 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_44_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_44_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3814 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_45_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_45_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3826 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_46_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_46_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3838 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_47_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_47_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3850 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_48_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_48_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3862 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_49_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_49_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3874 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| data1_r_5_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_5_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3886 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_50_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_50_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3898 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_51_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_51_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3910 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_52_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_52_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3922 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_53_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_53_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3934 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_54_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_54_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3946 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_55_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_55_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3958 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_56_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_56_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3970 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_57_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_57_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3982 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_58_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_58_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 3994 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_59_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_59_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 4006 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| data1_r_6_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_6_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 4018 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_60_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_60_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 4030 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_61_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_61_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 4042 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_62_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_62_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 4054 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_63_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_63_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 4066 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_64_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_64_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 4078 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data1_r_65_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_65_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 4090 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| data1_r_7_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_7_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 4102 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| data1_r_8_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data0_r_8_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 4114 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+|   level1_v_sva_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+| audio0_in_v_sva_reg  | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   level0_v_sva_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+| audio1_in_v_sva_reg  | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| filter_cfg_v_sva_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 4130 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  clr_in_v_sva_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  tick_in_v_sva_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc line 4140 in file
+                './results/dsp_unit_hls_rtl.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| data0_r_66_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data1_r_66_lpi_2_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully. (dsp_unit_dsp_proc)
+Information: Building the design 'dsp_unit_regs_proc'. (HDL-193)
+
+Inferred memory devices in process
+        in routine dsp_unit_regs_proc line 709 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  dsp_regs_r_2_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_0_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_1_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    filter_r_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_133_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_132_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_131_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_130_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_129_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_128_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_127_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_126_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_125_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_124_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_123_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_122_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_121_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_120_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_119_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_118_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_117_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_116_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_115_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_114_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_113_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_112_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_111_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_110_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_109_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_108_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_107_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_106_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_105_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_104_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_103_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_102_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_101_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| dsp_regs_r_100_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_99_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_98_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_97_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_96_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_95_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_94_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_93_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_92_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_91_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_90_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_89_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_88_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_87_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_86_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_85_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_84_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_83_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_82_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_81_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_80_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_79_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_78_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_77_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_76_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_75_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_74_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_73_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_72_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_71_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_70_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_69_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_68_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_67_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_66_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_65_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_64_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_63_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_62_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_61_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_60_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_59_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_58_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_57_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_56_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_55_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_54_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_53_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_52_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_51_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_50_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_49_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_48_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_47_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_46_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_45_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_44_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_43_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_42_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_41_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_40_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_39_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_38_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_37_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_36_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_35_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_34_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_33_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_32_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_31_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_30_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_29_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_28_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_27_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_26_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_25_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_24_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_23_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_22_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_21_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_20_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_19_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_18_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_17_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_16_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_15_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_14_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_13_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_12_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_11_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_10_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_9_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_8_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_7_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_6_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_5_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_4_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dsp_regs_r_3_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_regs_proc line 985 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    level1_r_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_regs_proc line 993 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    level0_r_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (dsp_unit_regs_proc)
+Information: Building the design 'dsp_unit_dsp_proc_read_inputs_mioi'. (HDL-193)
+Presto compilation completed successfully. (dsp_unit_dsp_proc_read_inputs_mioi)
+Information: Building the design 'dsp_unit_dsp_proc_write_outputs_mioi'. (HDL-193)
+Presto compilation completed successfully. (dsp_unit_dsp_proc_write_outputs_mioi)
+Information: Building the design 'dsp_unit_dsp_proc_staller'. (HDL-193)
+Presto compilation completed successfully. (dsp_unit_dsp_proc_staller)
+Information: Building the design 'dsp_unit_dsp_proc_dsp_proc_fsm'. (HDL-193)
+
+Statistics for case statements in always block at line 1039 in file
+        './results/dsp_unit_hls_rtl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1041           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine dsp_unit_dsp_proc_dsp_proc_fsm line 1092 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    state_var_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (dsp_unit_dsp_proc_dsp_proc_fsm)
+Information: Building the design 'dsp_unit_read_inputs'. (HDL-193)
+Presto compilation completed successfully. (dsp_unit_read_inputs)
+Information: Building the design 'dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl'. (HDL-193)
+Presto compilation completed successfully. (dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl)
+Information: Building the design 'dsp_unit_write_outputs'. (HDL-193)
+Presto compilation completed successfully. (dsp_unit_write_outputs)
+Information: Building the design 'dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl'. (HDL-193)
+Presto compilation completed successfully. (dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl)
+Information: Building the design 'dsp_unit_read_inputs_core'. (HDL-193)
+
+Inferred memory devices in process
+        in routine dsp_unit_read_inputs_core line 194 in file
+                './results/dsp_unit_hls_rtl.v'.
+===========================================================================================================
+|                  Register Name                  |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================================================
+| io_read_ccs_ccore_start_rsc_sft_lpi_1_dfm_1_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===========================================================================================================
+Presto compilation completed successfully. (dsp_unit_read_inputs_core)
+Information: Building the design 'dsp_unit_write_outputs_core'. (HDL-193)
+
+Inferred memory devices in process
+        in routine dsp_unit_write_outputs_core line 318 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  this_tick_out_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine dsp_unit_write_outputs_core line 326 in file
+                './results/dsp_unit_hls_rtl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| this_audio0_out_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+| this_audio1_out_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (dsp_unit_write_outputs_core)
+Information: Building the design 'mgc_out_dreg_v2' instantiated from design 'dsp_unit_read_inputs_core' with
+        the parameters "rscid=1,width=1". (HDL-193)
+Presto compilation completed successfully. (mgc_out_dreg_v2_rscid1_width1)
+Information: Building the design 'mgc_out_dreg_v2' instantiated from design 'dsp_unit_read_inputs_core' with
+        the parameters "rscid=2,width=1". (HDL-193)
+Presto compilation completed successfully. (mgc_out_dreg_v2_rscid2_width1)
+Information: Building the design 'mgc_out_dreg_v2' instantiated from design 'dsp_unit_read_inputs_core' with
+        the parameters "rscid=3,width=1". (HDL-193)
+Presto compilation completed successfully. (mgc_out_dreg_v2_rscid3_width1)
+Information: Building the design 'mgc_out_dreg_v2' instantiated from design 'dsp_unit_read_inputs_core' with
+        the parameters "rscid=4,width=16". (HDL-193)
+Presto compilation completed successfully. (mgc_out_dreg_v2_rscid4_width16)
+Information: Building the design 'mgc_out_dreg_v2' instantiated from design 'dsp_unit_read_inputs_core' with
+        the parameters "rscid=5,width=16". (HDL-193)
+Presto compilation completed successfully. (mgc_out_dreg_v2_rscid5_width16)
+Information: Building the design 'mgc_out_dreg_v2' instantiated from design 'dsp_unit_read_inputs_core' with
+        the parameters "rscid=6,width=24". (HDL-193)
+Presto compilation completed successfully. (mgc_out_dreg_v2_rscid6_width24)
+Information: Building the design 'mgc_out_dreg_v2' instantiated from design 'dsp_unit_read_inputs_core' with
+        the parameters "rscid=7,width=24". (HDL-193)
+Presto compilation completed successfully. (mgc_out_dreg_v2_rscid7_width24)
+Information: Building the design 'ccs_in_v1' instantiated from design 'dsp_unit_read_inputs_core' with
+        the parameters "rscid=15,width=1". (HDL-193)
+Presto compilation completed successfully. (ccs_in_v1_rscid15_width1)
+Information: Building the design 'ccs_sync_out_vld_v1' instantiated from design 'dsp_unit_read_inputs_core' with
+        the parameters "rscid=16". (HDL-193)
+Presto compilation completed successfully. (ccs_sync_out_vld_v1_rscid16)
+Information: Building the design 'ccs_in_v1' instantiated from design 'dsp_unit_write_outputs_core' with
+        the parameters "rscid=8,width=24". (HDL-193)
+Presto compilation completed successfully. (ccs_in_v1_rscid8_width24)
+Information: Building the design 'ccs_in_v1' instantiated from design 'dsp_unit_write_outputs_core' with
+        the parameters "rscid=9,width=24". (HDL-193)
+Presto compilation completed successfully. (ccs_in_v1_rscid9_width24)
+Information: Building the design 'ccs_in_v1' instantiated from design 'dsp_unit_write_outputs_core' with
+        the parameters "rscid=14,width=1". (HDL-193)
+Presto compilation completed successfully. (ccs_in_v1_rscid14_width1)
+1
+if { [current_design_name] != $DESIGN_NAME } {
+    rename_design [current_design_name] $DESIGN_NAME
+}
+link
+
+  Linking design 'audioport'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (30 designs)              /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/audioport.db, etc
+  NangateOpenCellLibrary (library) /research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db
+  dw_foundation.sldb (library) /sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn/dw_foundation.sldb
+
+1
+set file_name [concat ${DESIGN_NAME}_elaborated.ddc]
+audioport_elaborated.ddc
+write -hierarchy -format ddc -output ${OUTPUT_DIR}/$file_name $DESIGN_NAME
+Writing ddc file 'output/audioport_elaborated.ddc'.
+1
+#####################################################################################
+#  CONSTRAINTS
+#####################################################################################
+set_operating_conditions -library $DC_TARGET_LIBRARY $DC_OPERATING_CONDITIONS
+Using operating conditions 'typical' found in library 'NangateOpenCellLibrary'.
+1
+if { [info exists SDC_FILE ] } {
+    if { [file exists $SDC_FILE ] } {
+        echo "4_dc_srtl_synthesis: Reading SDC_FILE ${SDC_FILE}"
+        read_sdc -echo $SDC_FILE
+    }
+}
+4_dc_srtl_synthesis: Reading SDC_FILE input/audioport.sdc
+
+Reading SDC version 2.1...
+##############################################
+# audioport.sdc: Timing Constraints File
+##############################################
+##############################################
+# clk clock domain
+##############################################
+# 1. Define clock period and clock edge times in ns
+create_clock -name clk -period 17.5 clk
+set_clock_latency  0. clk
+set_clock_uncertainty 0.0 clk
+# 2. Define reset input timing w.r.t. clock in ns
+set_input_delay  -clock clk 8.25 rst_n
+# 3. Define input external delays (arrival times) wrt clock in ns
+set_input_delay -clock clk 5.0 PSEL
+set_input_delay -clock clk 5.0 PENABLE
+set_input_delay -clock clk 5.0 PWRITE
+set_input_delay -clock clk 5.0 PADDR
+set_input_delay -clock clk 5.0 PWDATA
+set_input_delay -clock clk 5.0 test_mode_in
+set_input_delay -clock clk 5.0 scan_en_in
+# 4. Define output external delays (setup times) wrt clock in ns
+set_output_delay -clock clk 5.0 PRDATA
+set_output_delay -clock clk 5.0 PREADY
+set_output_delay -clock clk 5.0 PSLVERR
+set_output_delay -clock clk 5.0 irq_out
+##############################################
+# mclk clock domain
+##############################################
+# 1. Define clock period and clock edge times in ns
+create_clock -name mclk -period 54.25 mclk
+# 2. Define input external delays (arrival times) wrt clock in ns
+# 3. Define output external delays (setup times) wrt clock in ns
+set_output_delay -clock mclk 0.0 ws_out
+set_output_delay -clock mclk 0.0 sck_out
+set_output_delay -clock mclk 0.0 sdo_out
+set_clock_groups -asynchronous -name audioport_clk_domains -group clk -group mclk
+##############################################
+# Input drives and output loads
+##############################################
+set_load 0.2 [all_outputs]
+##############################################
+# Timing Exceptions
+##############################################
+#set_case_analysis 0 scan_en_in
+#set_case_analysis 0 test_mode_in
+1
+if { [info exists SYNTHESIS_CONSTRAINTS_FILE ] } {
+    source -echo $SYNTHESIS_CONSTRAINTS_FILE
+}
+if { $EDA_TOOL == "Design-Compiler" } {
+    set_ungroup control_unit_1 false
+    set_ungroup dsp_unit_1     false
+    set_ungroup i2s_unit_1     false
+    set_ungroup cdc_unit_1     false
+}
+if { $EDA_TOOL == "Genus" } {
+    set_db [vfind / -hinst control_unit_1] .ungroup_ok false
+    set_db [vfind / -hinst dsp_unit_1]     .ungroup_ok false
+    set_db [vfind / -hinst cdc_unit_1]     .ungroup_ok false
+    set_db [vfind / -hinst i2s_unit_1]     .ungroup_ok false
+}
+# Create path groups
+suppress_message UID-101
+set all_clocks [get_clocks -quiet]
+{clk mclk}
+set clock_ports [filter_collection [get_attribute [get_clocks -quiet] sources] object_class==port]
+{clk mclk}
+set non_clock_inputs [remove_from_collection [all_inputs] ${clock_ports} ] 
+{rst_n PSEL PENABLE PWRITE PADDR[31] PADDR[30] PADDR[29] PADDR[28] PADDR[27] PADDR[26] PADDR[25] PADDR[24] PADDR[23] PADDR[22] PADDR[21] PADDR[20] PADDR[19] PADDR[18] PADDR[17] PADDR[16] PADDR[15] PADDR[14] PADDR[13] PADDR[12] PADDR[11] PADDR[10] PADDR[9] PADDR[8] PADDR[7] PADDR[6] PADDR[5] PADDR[4] PADDR[3] PADDR[2] PADDR[1] PADDR[0] PWDATA[31] PWDATA[30] PWDATA[29] PWDATA[28] PWDATA[27] PWDATA[26] PWDATA[25] PWDATA[24] PWDATA[23] PWDATA[22] PWDATA[21] PWDATA[20] PWDATA[19] PWDATA[18] PWDATA[17] PWDATA[16] PWDATA[15] PWDATA[14] PWDATA[13] PWDATA[12] PWDATA[11] PWDATA[10] PWDATA[9] PWDATA[8] PWDATA[7] PWDATA[6] PWDATA[5] PWDATA[4] PWDATA[3] PWDATA[2] PWDATA[1] PWDATA[0] test_mode_in scan_en_in}
+unsuppress_message UID-101
+foreach_in_collection clock $all_clocks {
+    if { [get_attribute -quiet $clock sources] != "" } {
+        set clock_name [get_object_name $clock]
+        set reglist [all_registers -clock $clock_name]
+        if { [llength $reglist] > 0 } {
+            group_path -name ${clock_name}_reg2reg -from [all_registers -clock $clock_name -clock_pins] -to [all_registers -data_pins]
+            group_path -name ${clock_name}_in2reg  -from $non_clock_inputs -to [all_registers -clock $clock_name -data_pins]
+            group_path -name ${clock_name}_reg2out -from [all_registers -clock $clock_name -clock_pins] -to [all_outputs]
+        }
+        group_path -name ${clock_name}_in2out  -from [all_inputs] -to [all_outputs]
+    }
+}
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Changed wire load model for 'alt1' from '(none)' to '5K_hvratio_1_1'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to '5K_hvratio_1_1'. (OPT-170)
+Information: Updating graph... (UID-83)
+Information: Updating graph... (UID-83)
+Information: Updating graph... (UID-83)
+Information: Updating graph... (UID-83)
+Information: Updating graph... (UID-83)
+Information: Updating graph... (UID-83)
+# Enable hold fixing
+if { $SYNTHESIS_FIX_HOLD == 1 } {
+    foreach clock $CLOCK_NAMES {
+        set_fix_hold $clock
+    }
+}
+#####################################################################################
+#  COMPILATION
+#####################################################################################
+set_fix_multiple_port_nets -all -buffer_constants
+1
+if {$INSERT_SCAN_CHAINS > 0 } {
+
+    #####################################################################################
+    #  COMPILATION WITH DFT
+    #####################################################################################
+
+    if { $GATE_CLOCK == 1 } {
+        set_clock_gating_style -max_fanout $CLOCK_GATE_MAX_FANOUT \
+                               -positive_edge_logic {integrated } \
+                               -negative_edge_logic {or} \
+                               -control_point before \
+                               -control_signal scan_enable 
+        eval "compile_ultra $DC_COMPILE_OPTIONS -gate_clock -scan"
+    } else {
+        eval "compile_ultra $DC_COMPILE_OPTIONS -scan"
+    }
+
+    set file_name [concat ${DESIGN_NAME}_compiled.ddc]
+    write -hierarchy -format ddc -output ${OUTPUT_DIR}/$file_name $DESIGN_NAME
+
+    
+    if { [file exists $DFT_SETUP_FILE] } {
+        source -echo $DFT_SETUP_FILE
+    }
+    
+    if { [info exists "DFT_AUTOFIX_SCRIPT" ] } {
+        source -echo $DFT_AUTOFIX_SCRIPT
+    }
+    
+    create_test_protocol -infer_clock -infer_asynch
+    dft_drc
+    dft_drc -verbose > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_dft_drc.txt
+    preview_dft        > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_preview_dft.txt
+    insert_dft
+
+    compile_ultra -incremental -scan
+
+} else {
+
+    #####################################################################################
+    #  COMPILATION WITHOUT DFT
+    #####################################################################################
+
+    if { $GATE_CLOCK == 1 } {
+        set_clock_gating_style -max_fanout $CLOCK_GATE_MAX_FANOUT \
+                               -positive_edge_logic {integrated } \
+                               -negative_edge_logic {or}
+        eval "compile_ultra $DC_COMPILE_OPTIONS -gate_clock"
+    } else {
+        eval "compile_ultra $DC_COMPILE_OPTIONS"
+    }
+    
+}
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | T-2022.03-DWBB_202203.4 |     *     |
+| Licensed DW Building Blocks        | T-2022.03-DWBB_202203.4 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Comand Line  | compile_ultra -scan                                                               |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 43759                                  |
+| Number of User Hierarchies                              | 29                                     |
+| Sequential Cell Count                                   | 15141                                  |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 11                                     |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 2                                      |
+| Number of Dont Touch Cells                              | 1556                                   |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 15141                                  |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 242 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'audioport'
+
+Loaded alib file '/research/cas/public/DT3_2025/lib/logic_lib/alib/alib-52/NangateOpenCellLibrary_typical.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_regs_proc_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_staller_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_dsp_proc_fsm_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/dsp_unit_dsp_proc_read_inputs_mioi_read_inputs_mio_wait_ctrl_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/dsp_unit_dsp_proc_write_outputs_mioi_write_outputs_mio_wait_ctrl_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/tick_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/clr_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/filter_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/level0_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/level1_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/audio0_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/audio1_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/ccs_ccore_start_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/ccs_ccore_done_synci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/dsp0_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/dsp1_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/ccs_ccore_start_rsci before Pass 1 (OPT-776)
+Information: Ungrouping 24 of 30 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'dsp_unit_dsp_proc'
+Information: Added key list 'DesignWare' to design 'dsp_unit_dsp_proc'. (DDB-72)
+ Implement Synthetic for 'dsp_unit_dsp_proc'.
+  Processing 'control_unit'
+Information: Added key list 'DesignWare' to design 'control_unit'. (DDB-72)
+ Implement Synthetic for 'control_unit'.
+  Processing 'dsp_unit'
+  Processing 'audioport'
+  Processing 'i2s_unit'
+Information: Added key list 'DesignWare' to design 'i2s_unit'. (DDB-72)
+ Implement Synthetic for 'i2s_unit'.
+  Processing 'cdc_unit'
+ Implement Synthetic for 'cdc_unit'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: There are 162 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
+Information: Automatic shift-register identification is enabled for scan. Not all registers will be scan-replaced. (OPT-467)
+Information: There are 162 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:04:57  236829.1      0.00       0.0    1780.9                           7145888.5000
+    0:05:01  236650.9      0.00       0.0    4314.1                           7138311.0000
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:05:05  242429.7      0.00       0.0    1843.8                           7440427.0000
+    0:05:08  242429.7      0.00       0.0    1843.8                           7440427.0000
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:05:49  159876.1      0.00       0.0    1724.0                           3098032.5000
+    0:05:49  159876.1      0.00       0.0    1724.0                           3098032.5000
+    0:05:49  159876.1      0.00       0.0    1724.0                           3098032.5000
+    0:05:53  159876.1      0.00       0.0    1724.0                           3098032.5000
+    0:06:01  159875.0      0.00       0.0    1724.0                           3098029.5000
+    0:06:06  159875.0      0.00       0.0    1724.0                           3098029.5000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:06:29  157720.7      0.00       0.0    1527.2                           2991145.5000
+    0:06:52  155043.7      0.00       0.0    1315.0                           2868145.5000
+    0:06:55  154641.2      0.00       0.0    1315.0                           2849382.2500
+    0:06:55  154641.2      0.00       0.0    1315.0                           2849382.2500
+    0:06:55  154641.2      0.00       0.0    1315.0                           2849382.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:07:07  154373.4      0.00       0.0    1217.5                           2823532.2500
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+    0:07:10  154423.1      0.00       0.0       0.0                           2825890.0000
+    0:07:10  154423.1      0.00       0.0       0.0                           2825890.0000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:07:10  154423.1      0.00       0.0       0.0                           2825890.0000
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+    0:07:29  156975.9      0.00       0.0       0.0                           2950906.2500
+    0:07:31  163992.7      0.00       0.0       0.0                           3321592.7500
+    0:07:31  163992.7      0.00       0.0       0.0                           3321592.7500
+    0:07:31  163992.7      0.00       0.0       0.0                           3321592.7500
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+    0:07:38  155357.8      0.00       0.0       0.0                           2844554.5000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:07:41  155358.9      0.00       0.0       0.0                           2844583.2500
+    0:07:45  155195.3      0.00       0.0       0.0                           2845500.0000
+    0:07:45  155195.3      0.00       0.0       0.0                           2845500.0000
+    0:07:45  155195.3      0.00       0.0       0.0                           2845500.0000
+    0:07:50  155164.2      0.00       0.0       0.0                           2843102.2500
+    0:08:12  154606.1      0.00       0.0       0.0                           2832116.2500
+    0:08:19  154246.0      0.00       0.0       0.0                           2823657.0000
+    0:08:19  154246.0      0.00       0.0       0.0                           2823657.0000
+    0:08:19  154246.0      0.00       0.0       0.0                           2823657.0000
+    0:08:19  154246.0      0.00       0.0       0.0                           2823657.0000
+    0:08:20  154246.0      0.00       0.0       0.0                           2823657.0000
+    0:08:20  154246.0      0.00       0.0       0.0                           2823657.0000
+    0:08:27  154237.4      0.00       0.0       6.3                           2823838.7500
+Loading db file '/research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Writing ddc file 'output/audioport_compiled.ddc'.
+#################################################################################
+# Scan Chain Setup File for audioport
+#################################################################################
+# Scan clock (rises at 45ns, falls at 55ns, test clock period is 100ns by default)
+set_dft_signal -view existing_dft -type ScanClock -timing { 45 55 } -port clk
+Accepted dft signal specification for modes: all_dft
+# Reset
+set_dft_signal -view existing_dft -type Reset -port rst_n -active_state 0
+Accepted dft signal specification for modes: all_dft
+# Test mode select input tied to low in test mode
+set_dft_signal -view existing_dft -type Constant -port test_mode_in -active_state 1
+Accepted dft signal specification for modes: all_dft
+# Unused clock input mclk tied to low in test mode
+set_dft_signal -view existing_dft -type Constant -port mclk -active_state 0
+Accepted dft signal specification for modes: all_dft
+# Scan enable input    
+set_dft_signal -view spec -type ScanEnable -port scan_en_in -active_state 1
+Accepted dft signal specification for modes: all_dft
+# Settings for two scan paths
+set_scan_configuration -style multiplexed_flip_flop \
+                       -chain_count 2 \
+                       -clock_mixing mix_clocks 
+Accepted scan configuration for modes: all_dft
+# Scan path inputs and outputs
+set_dft_signal -view spec -type ScanDataIn  -port "PADDR[0]"
+Accepted dft signal specification for modes: all_dft
+set_dft_signal -view spec -type ScanDataOut -port "PRDATA[0]"
+Accepted dft signal specification for modes: all_dft
+set_dft_signal -view spec -type ScanDataIn  -port "PADDR[1]"
+Accepted dft signal specification for modes: all_dft
+set_dft_signal -view spec -type ScanDataOut -port "PRDATA[1]"
+Accepted dft signal specification for modes: all_dft
+if { $EDA_TOOL == "Design-Compiler" } {
+
+    # Define clock port as test data used for fixing
+    set_dft_signal -view spec -type TestData -port clk
+
+    # Enable fixing of uncontrollable clock, reset and set pins of flip-flops
+    set_dft_configuration     -fix_clock enable
+    set_dft_configuration     -fix_reset enable
+    set_dft_configuration     -fix_set   enable
+
+    # Chose OR-gate based solution
+    set_autofix_configuration -type clock -control_signal test_mode_in
+    set_autofix_configuration -type set   -control_signal test_mode_in
+    set_autofix_configuration -type reset -control_signal test_mode_in
+
+} 
+Accepted dft signal specification for modes: all_dft
+Accepted dft configuration specification.
+Accepted dft configuration specification.
+Accepted dft configuration specification.
+Error: Control signal port test_mode_in must have the TestMode, ScanEnable, or lbistEnable signal type. (TESTXG-10)
+Discarded Autofix configuration specifications.
+Error: Control signal port test_mode_in must have the TestMode, ScanEnable, or lbistEnable signal type. (TESTXG-10)
+Discarded Autofix configuration specifications.
+Error: Control signal port test_mode_in must have the TestMode, ScanEnable, or lbistEnable signal type. (TESTXG-10)
+Discarded Autofix configuration specifications.
+if { $EDA_TOOL == "Genus" } {
+
+    fix_dft_violations -test_control test_mode_in -async_set -async_reset
+
+}
+In mode: all_dft...
+
+Information: Starting test protocol creation. (TEST-219)
+  ...inferring clock signals...
+Information: Inferred system/test clock port clk (45.0,55.0). (TEST-260)
+  ...inferring asynchronous signals...
+Information: Inferred active low asynchronous control port rst_n. (TEST-261)
+In mode: all_dft...
+  Pre-DFT DRC enabled
+Information: There are 162 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+        ...checking for scan equivalents...
+  ...checking vector rules...
+  ...checking pre-dft rules...
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 0
+
+-----------------------------------------------------------------
+
+
+Test Design rule checking did not find violations
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  0 out of 15141 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      *15134 cells are valid scan cells
+      *   7 cells are non-scan shift-register cells
+
+Information: Test design rule checking completed. (TEST-123)
+Current design is 'audioport'.
+Current design is 'audioport'.
+Current design is 'audioport'.
+Current design is 'audioport'.
+  Information: Using test design rule information from previous dft_drc run.
+    Running Autofix
+Information: No test design rule violation needs to be fixed by Autofix. (TEST-215)
+  Architecting Scan Chains
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+Resetting current test mode
+Information: There are 163 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
+  Beginning Mapping Optimizations
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+
+
+  Beginning Phase 1 Design Rule Fixing  (max_capacitance)
+  ------------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:20  154243.8      0.00       0.0       4.7 dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/n17917
+    0:00:20  154243.8      0.00       0.0       4.7 dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/n17917
+    0:00:20  154243.8      0.00       0.0       4.7 dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/n17917
+    0:00:20  154245.4      0.00       0.0       3.2 dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/n10968
+    0:00:20  154245.4      0.00       0.0       3.2 dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/n10968
+    0:00:20  154245.4      0.00       0.0       3.2 dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/n10968
+    0:00:20  154245.4      0.00       0.0       3.2 dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/n10968
+    0:00:21  154245.4      0.00       0.0       0.0 dsp_unit_1/cfg_in        
+
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+| Comand Line  | compile_ultra -incremental -scan                                                  |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 58292                                  |
+| Number of User Hierarchies                              | 5                                      |
+| Sequential Cell Count                                   | 15141                                  |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 10                                     |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 2                                      |
+| Number of Dont Touch Cells                              | 0                                      |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 15137                                  |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+Information: There are 167 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: There are 163 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
+Information: There are 163 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:12  154245.4      0.00       0.0       0.0                           2824025.2500
+    0:00:12  154245.4      0.00       0.0       0.0                           2824025.2500
+
+  Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:21  154244.4      0.00       0.0       0.0                           2823996.5000
+    0:00:27  166900.1      0.00       0.0       0.0                           3431680.2500
+    0:00:34  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:34  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:34  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:34  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:34  156222.6      0.00       0.0       0.0                           2861266.2500
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:34  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:34  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:34  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:34  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:34  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:35  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:35  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:39  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:39  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:39  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:39  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:39  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:39  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:39  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:39  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:39  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:39  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:43  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:43  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:43  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:43  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:43  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:43  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:43  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:43  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:43  156222.6      0.00       0.0       0.0                           2861266.2500
+    0:00:44  156223.7      0.00       0.0       0.0                           2861295.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:44  156223.7      0.00       0.0       0.0                           2861295.0000
+    0:00:48  156223.7      0.00       0.0       0.0                           2861295.0000
+    0:00:56  156212.5      0.00       0.0       0.0                           2861117.5000
+    0:01:24  154741.2      0.00       0.0       0.0                           2831093.7500
+    0:01:30  154379.0      0.00       0.0       0.0                           2823385.7500
+    0:01:30  154379.0      0.00       0.0       0.0                           2823385.7500
+    0:01:30  154379.0      0.00       0.0       0.0                           2823385.7500
+    0:01:30  154379.0      0.00       0.0       0.0                           2823385.7500
+    0:01:34  154371.2      0.00       0.0      11.3                           2823535.7500
+Loading db file '/research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+remove_unconnected_ports -blast_buses [find -hierarchy cell "*" ]
+Removing port 'cfg_reg_in[31]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[30]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[29]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[28]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[27]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[26]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[25]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[24]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[23]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[22]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[21]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[20]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[19]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[18]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[17]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[16]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[15]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[14]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[13]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[12]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[11]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[10]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[9]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[8]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[7]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[6]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[5]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[4]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[3]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[2]' from design 'dsp_unit_test_1'
+Removing port 'cfg_reg_in[1]' from design 'dsp_unit_test_1'
+Removing port 'PADDR[31]' from design 'control_unit_test_1'
+Removing port 'PADDR[30]' from design 'control_unit_test_1'
+Removing port 'PADDR[29]' from design 'control_unit_test_1'
+Removing port 'PADDR[28]' from design 'control_unit_test_1'
+Removing port 'PADDR[27]' from design 'control_unit_test_1'
+Removing port 'PADDR[26]' from design 'control_unit_test_1'
+Removing port 'PADDR[25]' from design 'control_unit_test_1'
+Removing port 'PADDR[24]' from design 'control_unit_test_1'
+Removing port 'PADDR[23]' from design 'control_unit_test_1'
+Removing port 'PADDR[22]' from design 'control_unit_test_1'
+Removing port 'PADDR[21]' from design 'control_unit_test_1'
+Removing port 'PADDR[20]' from design 'control_unit_test_1'
+Removing port 'PADDR[19]' from design 'control_unit_test_1'
+Removing port 'PADDR[18]' from design 'control_unit_test_1'
+Removing port 'PADDR[17]' from design 'control_unit_test_1'
+Removing port 'PADDR[16]' from design 'control_unit_test_1'
+Removing port 'PADDR[15]' from design 'control_unit_test_1'
+Removing port 'PADDR[14]' from design 'control_unit_test_1'
+Removing port 'PADDR[13]' from design 'control_unit_test_1'
+Removing port 'PADDR[12]' from design 'control_unit_test_1'
+Removing port 'PADDR[11]' from design 'control_unit_test_1'
+Removing port 'PADDR[10]' from design 'control_unit_test_1'
+Removing port 'PADDR[1]' from design 'control_unit_test_1'
+Removing port 'PADDR[0]' from design 'control_unit_test_1'
+Removing port 'PSLVERR' from design 'control_unit_test_1'
+Removing port 'PREADY' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[31]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[30]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[29]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[28]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[27]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[26]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[25]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[24]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[23]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[22]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[21]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[20]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[19]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[18]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[17]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[16]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[15]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[14]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[13]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[12]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[11]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[10]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[9]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[8]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[7]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[6]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[5]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[4]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[3]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[2]' from design 'control_unit_test_1'
+Removing port 'cfg_reg_out[1]' from design 'control_unit_test_1'
+1
+optimize_netlist -area
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+
+Information: There are 23 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Information: There are 163 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
+
+  Updating timing information
+
+
+  Beginning Area Optimization
+  -----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:06  154371.2      0.00       0.0      11.3                           2823537.7500
+    0:01:05  153842.4      0.00       0.0      11.3                           2814311.2500
+Loading db file '/research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+if { $SYNTHESIS_FIX_HOLD == 1 } {
+    echo "4_dc_srtl_synthesis: Fixing hold violations with compile -incremental -only_hold_time"
+    compile -incremental -only_hold_time
+}
+#####################################################################################
+#  WRITE OUT RESULTS
+#####################################################################################
+if { $RTL_POWER_ESTIMATION == 1 } {
+    read_saif -auto_map_names -input ${RESULTS_DIR}/${DESIGN_NAME}_rtl.saif -instance_name ${TESTBENCH_NAME}/${DUT_INSTANCE_NAME} -verbose
+    report_power  > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_power.txt
+    report_saif -hier -rtl_saif -missing > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_saif.txt
+    saif_map -write_map ${RESULTS_DIR}/${DESIGN_NAME}_rtl.saifmap ; # Required by ICC2
+}
+Information: Writing SAIF name mapping information to file 'results/audioport_rtl.saifmap'. (PWR-635)
+1
+report_area -hierarchy -designware -nosplit  > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_area.txt
+report_reference -hierarchy                  > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_reference.txt
+report_timing  -delay_type max               > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_timing_setup.txt
+report_timing -delay_type min                > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_timing_hold.txt
+report_qor                                   > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_qor.txt
+report_clock_timing -type summary            > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_gatelevel_clock_summary.txt
+if {$INSERT_SCAN_CHAINS > 0 } {
+    report_scan_path > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_scan_path.txt
+}
+if { $GATE_CLOCK == 1 } {
+    report_clock_gating -verbose > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_clock_gating_summary.txt
+    report_clock_gating -style > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_clock_gating_style.txt
+    report_clock_gating -structure > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_clock_gating_structure.txt
+    report_clock_gating -gated > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_clock_gating_gated.txt
+    report_clock_gating -ungated > ${REPORTS_DIR}/4_dc_${DESIGN_NAME}_clock_gating_ungated.txt
+}
+change_names -rules verilog -hierarchy
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+1
+write -hierarchy -format ddc -output ${OUTPUT_DIR}/${DESIGN_NAME}_gatelevel.ddc $DESIGN_NAME
+Writing ddc file 'output/audioport_gatelevel.ddc'.
+1
+if {$INSERT_SCAN_CHAINS > 0 } {
+    write_test_protocol -output ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.spf
+    write_scan_def -output ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.scandef
+}
+Writing test protocol file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/audioport_gatelevel.spf' for mode 'Internal_scan'...
+1
+write_sdc -version 1.7 ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.sdc
+1
+set verilogout_show_unconnected_pins  true
+true
+write -hierarchy -format verilog -output ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.v
+Writing verilog file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/audioport_gatelevel.v'.
+1
+if { $DC_WRITE_PARASITICS == 1 } {
+    write_sdf -version 2.1 ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.sdf
+}
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/audioport_gatelevel.sdf'. (WT-3)
+1
+set_svf -off
+1
+set systemTime [clock seconds]
+1746305276
+puts "Script end time: [clock format $systemTime -format %H:%M:%S]"
+Script end time: 23:47:56
+if { $INTERACTIVE == 0} {
+    exit
+} else {
+
+# In interactive mode, create path categories for Timing > New Path Analyzer
+    foreach_in_collection path_group [get_path_groups] {
+        set group_name [get_object_name $path_group]
+        set collname ${group_name}_max
+        set $collname [get_timing_paths -group $group_name -delay_type max -nworst $SYNOPSYS_PATHANALYZER_PATHS -max $SYNOPSYS_PATHANALYZER_PATHS -slack_lesser_than $SYNOPSYS_PATHANALYZER_SLACK_LIMIT ]
+        set collname ${group_name}_min
+        set $collname [get_timing_paths -group $group_name -delay_type min -nworst $SYNOPSYS_PATHANALYZER_PATHS -max $SYNOPSYS_PATHANALYZER_PATHS -slack_lesser_than $SYNOPSYS_PATHANALYZER_SLACK_LIMIT ]
+    }
+}
+dc_shell> exit
+
+Memory usage for this session 618 Mbytes.
+Memory usage for this session including child processes 623 Mbytes.
+CPU usage for this session 774 seconds ( 0.21 hours ).
+Elapsed time for this session 3494 seconds ( 0.97 hours ).
+
+Thank you...
+

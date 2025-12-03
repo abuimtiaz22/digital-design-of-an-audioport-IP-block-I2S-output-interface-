@@ -1,0 +1,178 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : cdc_unit
+Version: T-2022.03-SP5-1
+Date   : Fri Mar 21 10:19:16 2025
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: tick_in (input port clocked by clk)
+  Endpoint: audio0_reg_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk_in2reg
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cdc_unit           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.62       1.62 r
+  tick_in (in)                             0.00       1.62 r
+  U196/Z (MUX2_X1)                         0.10       1.72 f
+  audio0_reg_reg[0]/D (DFFR_X1)            0.01       1.73 f
+  data arrival time                                   1.73
+
+  clock clk (rise edge)                   13.00      13.00
+  clock network delay (ideal)              0.00      13.00
+  audio0_reg_reg[0]/CK (DFFR_X1)           0.00      13.00 r
+  library setup time                      -0.04      12.96
+  data required time                                 12.96
+  -----------------------------------------------------------
+  data required time                                 12.96
+  data arrival time                                  -1.73
+  -----------------------------------------------------------
+  slack (MET)                                        11.23
+
+
+  Startpoint: req_in_prev_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: req_out (output port clocked by clk)
+  Path Group: clk_reg2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cdc_unit           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  req_in_prev_reg/CK (DFFR_X1)             0.00       0.00 r
+  req_in_prev_reg/Q (DFFR_X1)              0.10       0.10 r
+  U122/ZN (NOR2_X1)                        0.02       0.12 f
+  req_out (out)                            0.00       0.12 f
+  data arrival time                                   0.12
+
+  clock clk (rise edge)                   13.00      13.00
+  clock network delay (ideal)              0.00      13.00
+  output external delay                   -1.62      11.38
+  data required time                                 11.38
+  -----------------------------------------------------------
+  data required time                                 11.38
+  data arrival time                                  -0.12
+  -----------------------------------------------------------
+  slack (MET)                                        11.25
+
+
+  Startpoint: handshake_req_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: handshake_req_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk_reg2reg
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cdc_unit           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  handshake_req_reg/CK (DFFR_X1)           0.00       0.00 r
+  handshake_req_reg/Q (DFFR_X1)            0.09       0.09 f
+  U120/ZN (AOI21_X1)                       0.04       0.13 r
+  U116/ZN (INV_X1)                         0.02       0.15 f
+  handshake_req_reg/D (DFFR_X1)            0.01       0.16 f
+  data arrival time                                   0.16
+
+  clock clk (rise edge)                   13.00      13.00
+  clock network delay (ideal)              0.00      13.00
+  handshake_req_reg/CK (DFFR_X1)           0.00      13.00 r
+  library setup time                      -0.04      12.96
+  data required time                                 12.96
+  -----------------------------------------------------------
+  data required time                                 12.96
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (MET)                                        12.80
+
+
+  Startpoint: audio0_out_reg[0]
+              (rising edge-triggered flip-flop clocked by mclk)
+  Endpoint: audio0_out[0]
+            (output port clocked by mclk)
+  Path Group: mclk_reg2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cdc_unit           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock mclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  audio0_out_reg[0]/CK (DFFR_X1)           0.00       0.00 r
+  audio0_out_reg[0]/Q (DFFR_X1)            0.10       0.10 r
+  audio0_out[0] (out)                      0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock mclk (rise edge)                  54.20      54.20
+  clock network delay (ideal)              0.00      54.20
+  output external delay                   -6.78      47.42
+  data required time                                 47.42
+  -----------------------------------------------------------
+  data required time                                 47.42
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                        47.32
+
+
+  Startpoint: handshake_ack_reg
+              (rising edge-triggered flip-flop clocked by mclk)
+  Endpoint: audio0_out_reg[0]
+            (rising edge-triggered flip-flop clocked by mclk)
+  Path Group: mclk_reg2reg
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cdc_unit           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock mclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  handshake_ack_reg/CK (DFFR_X1)           0.00       0.00 r
+  handshake_ack_reg/Q (DFFR_X1)            0.09       0.09 f
+  U118/ZN (NOR2_X1)                        0.16       0.24 r
+  U119/Z (CLKBUF_X2)                       0.19       0.43 r
+  U148/Z (MUX2_X1)                         0.10       0.54 f
+  audio0_out_reg[0]/D (DFFR_X1)            0.01       0.55 f
+  data arrival time                                   0.55
+
+  clock mclk (rise edge)                  54.20      54.20
+  clock network delay (ideal)              0.00      54.20
+  audio0_out_reg[0]/CK (DFFR_X1)           0.00      54.20 r
+  library setup time                      -0.04      54.16
+  data required time                                 54.16
+  -----------------------------------------------------------
+  data required time                                 54.16
+  data arrival time                                  -0.55
+  -----------------------------------------------------------
+  slack (MET)                                        53.61
+
+
+1

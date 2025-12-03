@@ -1,0 +1,534 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+
+                                  PrimePower 
+
+                 Version U-2022.12 for linux64 - Nov 27, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+############################################################
+#  Dynamic power consumption estimate script for PrimePower
+#  (c) 2023, University of Oulu
+############################################################
+set systemTime [clock seconds]
+1746393124
+puts "Script start time: [clock format $systemTime -format %H:%M:%S]"
+Script start time: 00:12:04
+###########################################################
+# Customizable Variables
+###########################################################
+set POSTLAYOUT_POWER          1
+1
+set PRIMEPOWER_OPEN_WV        0
+0
+set PRIMEPOWER_OPEN_NWAVE     1
+1
+set PRIMEPOWER_REPORT_DIGITS  6
+6
+##########################################################
+# Read technology and design settings
+##########################################################
+set EDA_TOOL "PrimePower"
+PrimePower
+set EDA_TOOL_TARGET "ASIC"
+ASIC
+source scripts/0_setup.tcl
+##########################################################
+# PrimePower Settings
+##########################################################
+suppress_message CMD-041
+set_message_info -id RC-009 -limit 1
+1
+source scripts/0_setup.tcl
+if {$in_gui_session == false } {
+    set INTERACTIVE 0
+}
+if { $POSTLAYOUT_POWER == 1 } {
+    set PHASE "postlayout"
+} else {
+    set PHASE "gatelevel"
+}
+postlayout
+set power_enable_timing_analysis     true 
+Information: Checked out license 'PrimeTime' (PT-019)
+true
+set power_enable_multi_rail_analysis true 
+true
+if {$power_enable_timing_analysis == false} {set_app_var power_enable_timing_analysis true} 
+set power_analysis_mode time_based 
+time_based
+set_app_var report_default_significant_digits $PRIMEPOWER_REPORT_DIGITS
+6
+##########################################################
+# Read and link the netlist
+##########################################################
+set sh_source_uses_search_path true ;
+true
+set search_path "$search_path  $DC_LIBRARY_PATH  ."
+  /research/cas/public/DT3_2025/lib/logic_lib  .
+set link_library  "* $DC_TARGET_LIBRARY_FILE "
+* NangateOpenCellLibrary_typical.db 
+read_verilog ${RESULTS_DIR}/${DESIGN_NAME}_${PHASE}.v
+1
+current_design ${DESIGN_NAME}
+Information: current_design won't return any data before link (DES-071)
+link -verbose
+Loading db file '/research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db'
+Loading verilog file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/audioport_postlayout.v'
+Linking design audioport...
+
+Designs used to link audioport:
+Information: Design: SNPS_CLOCK_GATE_HIGH_cdc_unit_0... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_cdc_unit_1... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_cdc_unit_2... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_cdc_unit_3... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_cdc_unit_4... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_cdc_unit_5... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_0... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_1... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_10... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_100... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_101... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_102... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_103... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_104... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_105... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_106... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_107... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_108... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_109... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_11... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_110... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_111... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_112... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_113... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_114... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_115... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_116... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_117... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_118... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_119... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_12... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_120... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_121... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_122... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_123... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_124... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_125... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_126... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_127... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_128... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_129... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_13... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_130... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_131... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_132... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_133... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_134... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_135... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_136... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_137... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_138... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_139... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_14... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_140... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_141... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_142... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_143... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_144... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_145... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_146... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_147... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_148... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_149... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_15... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_150... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_151... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_152... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_153... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_154... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_155... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_156... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_157... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_158... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_159... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_16... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_160... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_161... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_162... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_163... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_164... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_165... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_166... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_167... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_168... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_169... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_17... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_170... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_171... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_172... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_173... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_174... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_175... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_176... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_177... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_178... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_179... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_18... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_180... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_181... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_control_unit_182... (LNK-044)
+Note - message 'LNK-044' default limit (100) exceeded.  Remainder will be suppressed.
+
+
+Libraries used to link audioport:
+  NangateOpenCellLibrary
+
+Removed 676 unconnected cells and blackboxes.
+Information: Net PSLVERR has been identified as a power/ground net. (LNK-040)
+Information: Net PREADY has been identified as a power/ground net. (LNK-040)
+Information: Removing 1010 unneeded designs..... (LNK-034)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_0' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_502' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_500' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_498' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_496' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_494' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_492' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_490' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_488' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_486' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_484' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_482' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_480' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_478' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_476' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_474' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_472' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_470' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_468' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_466' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_464' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_462' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_460' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_458' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_456' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_454' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_452' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_450' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_448' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_446' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_444' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_442' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_440' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_438' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_436' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_434' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_432' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_430' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_428' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_426' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_424' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_422' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_420' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_418' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_416' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_414' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_412' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_410' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_408' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_406' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_404' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_402' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_400' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_398' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_396' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_394' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_392' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_390' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_388' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_386' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_384' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_382' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_380' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_378' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_376' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_374' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_372' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_370' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_368' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_366' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_364' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_362' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_360' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_358' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_356' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_354' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_352' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_350' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_348' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_346' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_344' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_342' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_340' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_338' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_336' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_334' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_332' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_330' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_328' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_326' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_324' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_322' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_320' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_318' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_316' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_314' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_312' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_310' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_308' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_control_unit_306' in file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/results/audioport_postlayout.v' is not used in the current design.  (LNK-039)
+Note - message 'LNK-039' default limit (100) exceeded.  Remainder will be suppressed.
+Information: 82 (61.19%) library cells are unused in library NangateOpenCellLibrary..... (LNK-045)
+Information: total 82 library cells are unused (LNK-046)
+Design 'audioport' was successfully linked.
+Information: There are 39786 leaf cells, ports, hiers and 86052 nets in the design (LNK-047)
+1
+##########################################################
+# Read SDC and set transition time or annotate parasitics
+##########################################################
+set SDC_FILE ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.sdc
+results/audioport_gatelevel.sdc
+read_sdc -version 1.7 ${RESULTS_DIR}/${DESIGN_NAME}_gatelevel.sdc
+
+Reading SDC version 1.7...
+1
+1
+# Use real clock tree latency and skew
+set_propagated_clock [get_clocks -filter defined(sources)]
+Warning: Converting clock object 'clk' from ideal to propagated. (UITE-315)
+1
+set_clock_uncertainty 0 [get_clocks -filter defined(sources)]
+1
+set spef_file ${RESULTS_DIR}/${DESIGN_NAME}_${PHASE}.max.spef.gz
+results/audioport_postlayout.max.spef.gz
+if { [file exists $spef_file ] } {
+    read_parasitics $spef_file
+} else {
+    set spef_file ${RESULTS_DIR}/${DESIGN_NAME}_${PHASE}.spef
+    read_parasitics $spef_file
+}
+Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
+Information: read_parasitics command is executed in background
+1
+#########################################################
+# Check, update, or report the timing
+#########################################################
+#remove_ideal_network [get_ports "*" -filter {direction == in}]
+update_timing
+Information: Building multi voltage information for entire design. (MV-022)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Warning: No clock-gating check is inferred for clock mclk at pins cdc_unit_1/U123/S and cdc_unit_1/U123/A of cell cdc_unit_1/U123. (PTE-060)
+Warning: No clock-gating check is inferred for clock clk at pins cdc_unit_1/U123/S and cdc_unit_1/U123/B of cell cdc_unit_1/U123. (PTE-060)
+Warning: No clock-gating check is inferred for clock mclk at pins cdc_unit_1/U124/S and cdc_unit_1/U124/A of cell cdc_unit_1/U124. (PTE-060)
+Warning: No clock-gating check is inferred for clock clk at pins cdc_unit_1/U124/S and cdc_unit_1/U124/B of cell cdc_unit_1/U124. (PTE-060)
+Note - message 'RC-009' limit (1) exceeded.  Remainder will be suppressed.
+Warning: The drive-resistance for the timing arc (NangateOpenCellLibrary/INV_X4) FE_OFC360_scan_en_in/A-->ZN (min rising & falling negative_unate) is much less than the network impedance to ground; PrimeTime has adjusted the drive-resistance to improve accuracy. (RC-009)
+1
+check_timing
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Warning: There are 50 ports with parasitics but with no driving cell.
+
+Information: Checking 'unconstrained_endpoints'.
+Information: Checking 'unexpandable_clocks'.
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+Information: Checking 'voltage_level'.
+0
+report_timing
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : audioport
+Version: U-2022.12
+Date   : Mon May  5 00:12:17 2025
+****************************************
+
+
+  Startpoint: PSEL (input port clocked by clk)
+  Endpoint: PRDATA[10] (output port clocked by clk)
+  Path Group: mclk_in2out
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (propagated)                    0.000000   0.000000
+  input external delay                                5.000000   5.000000 f
+  PSEL (in)                                           0.000000 & 5.000000 f
+  control_unit_1/U132/ZN (NAND2_X1)                   0.031892 & 5.031892 r
+  control_unit_1/U145/ZN (INV_X1)                     0.013170 & 5.045063 f
+  control_unit_1/U158/ZN (NAND3_X1)                   0.061493 & 5.106555 r
+  control_unit_1/U159/ZN (INV_X1)                     0.015514 & 5.122069 f
+  control_unit_1/U160/ZN (NAND2_X1)                   0.092324 & 5.214393 r
+  control_unit_1/U165/ZN (NOR2_X1)                    0.014148 & 5.228541 f
+  control_unit_1/FE_OFC985_n5184/Z (BUF_X1)           0.080462 & 5.309003 f
+  control_unit_1/FE_OFC1851_FE_OFN1044_n5184/Z (CLKBUF_X3)
+                                                      0.099532 & 5.408535 f
+  control_unit_1/U2789/ZN (AOI22_X1)                  0.203066 & 5.611601 r
+  control_unit_1/U2792/ZN (NAND4_X1)                  0.048113 & 5.659714 f
+  control_unit_1/U2793/ZN (NOR4_X1)                   0.095808 & 5.755522 r
+  control_unit_1/U2821/ZN (NAND4_X1)                  0.056736 & 5.812257 f
+  control_unit_1/U2822/ZN (NOR4_X1)                   0.105289 & 5.917546 r
+  control_unit_1/U2824/ZN (OAI221_X1)                 0.082974 & 6.000521 f
+  PRDATA[10] (out)                                    0.001334 & 6.001855 f
+  data arrival time                                              6.001855
+
+  clock clk (rise edge)                               17.500000  17.500000
+  clock network delay (propagated)                    0.000000   17.500000
+  clock reconvergence pessimism                       0.000000   17.500000
+  output external delay                               -5.000000  12.500000
+  data required time                                             12.500000
+  ------------------------------------------------------------------------------
+  data required time                                             12.500000
+  data arrival time                                              -6.001855
+  ------------------------------------------------------------------------------
+  slack (MET)                                                    6.498145
+
+
+1
+#########################################################
+# Read switching activity file
+#########################################################
+# If you have trouble reading the VCD dump, uncomment 
+# the following line to see what the vcd file structure is
+# report_vcd_hierarchy ${RESULTS_DIR}/${DESIGN_NAME}_postlayout.vcd.gz
+set vcd_file ${RESULTS_DIR}/${DESIGN_NAME}_${PHASE}.vcd.gz
+results/audioport_postlayout.vcd.gz
+if { [file exists $vcd_file ] } {
+    read_vcd -strip_path ${DESIGN_NAME}_tb/DUT_INSTANCE $vcd_file
+} else {
+    set vcd_file ${RESULTS_DIR}/${DESIGN_NAME}_${PHASE}.vcd
+    read_vcd -strip_path ${DESIGN_NAME}_tb/DUT_INSTANCE $vcd_file
+}
+
+======================================================================
+Summary:
+Total number of nets = 55049
+Number of annotated nets = 55049 (100.00%)
+Total number of leaf cells = 39341
+Number of fully annotated leaf cells = 39341 (100.00%)
+======================================================================
+
+1
+#########################################################
+# Analyze power
+#########################################################
+check_power
+Information: Checking 'out_of_table_range'.
+Warning: There are 28 out_of_range ramps.
+Information: Checking 'missing_table'.
+Information: Checking 'missing_function'.
+0
+set_power_analysis_options -waveform_format fsdb -waveform_output "${RESULTS_DIR}/${DESIGN_NAME}_${PHASE}_power"
+update_power
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/results/audioport_postlayout.vcd.gz'
+FSDB Writer, Release Verdi_T-2022.06-SP1, RH Linux x86_64/64bit, 05/05/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*NOVAS WARN* The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+Information: The waveform options are:
+		File name:	results/audioport_postlayout_power.fsdb
+		File format:	fsdb
+		Time interval:	0.001ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+ Last event time = 2426.498000 ns  Last event time = 2860.157000 ns  Last event time = 3334.701000 ns  Last event time = 3809.278000 ns  Last event time = 4296.732000 ns  Last event time = 4777.759000 ns  Last event time = 5258.727000 ns  Last event time = 5713.630000 ns  Last event time = 6142.598000 ns  Last event time = 6573.371000 ns Information: analysis is done for time window (2000ns - 7000ns)
+
+Warning: Switching activity for constant net cdc_unit_1/mrst_n_sync1_reg/D is reset by SAIF/VCD.  (PSW-208)
+Information: Total simulation time = 5000.000000 ns
+1
+report_power -verbose              > ${REPORTS_DIR}/8_primepower_${DESIGN_NAME}_${PHASE}_timebased_power.txt
+report_power -hier -levels 2       > ${REPORTS_DIR}/8_primepower_${DESIGN_NAME}_${PHASE}_timebased_power_hier.txt
+report_power -cell_power -nworst 3 > ${REPORTS_DIR}/8_primepower_${DESIGN_NAME}_${PHASE}_timebased_power_worst_cells.txt
+report_power -net_power  -nworst 3 > ${REPORTS_DIR}/8_primepower_${DESIGN_NAME}_${PHASE}_timebased_power_worst_nets.txt
+save_session ${OUTPUT_DIR}/${DESIGN_NAME}_${PHASE}_ptpx_session
+Information: Cleaning and overwriting all data in the existing directory '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/audioport_postlayout_ptpx_session'. (SR-002)
+Saving environmental constraints.....
+Saving netlist information.....
+Saving miscellaneous application information.....
+Saving timing information.....
+Saving power information.....
+Saving variable information.....
+Information: At least 24 MB of free disk space in pt_tmp_dir will be required to restore this session.  (SR-044)
+1
+exec touch ${OUTPUT_DIR}/8_${DESIGN_NAME}_powerest
+set systemTime [clock seconds]
+1746393153
+puts "Script end time: [clock format $systemTime -format %H:%M:%S]"
+Script end time: 00:12:33
+if { $INTERACTIVE == 0} {
+exit
+} else {
+    if { $PRIMEPOWER_OPEN_WV } {
+	exec wv "-ace_gui" "scripts/8_wv_setup.tcl" &
+    }
+    if { $PRIMEPOWER_OPEN_NWAVE } {
+	exec nWave "${RESULTS_DIR}/${DESIGN_NAME}_${PHASE}_power.fsdb" "-play" "scripts/8_nwave_setup.tcl" &
+    }
+}
+20346
+20346
+20346
+pwr_shell> logDir = /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/nWaveLog
+
+
+                                   Verdi (R)
+
+               Version T-2022.06-SP2 for linux64 - Nov 22, 2022 
+
+                    Copyright (c) 1999 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+rcfile = /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/novas.rc
+guiConfFile (read)= /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/novas.conf (working directory)
+guiConfFile (write)= /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/novas.conf (working directory)
+*WARN* Verdi-Elite (Verdi) license is not available. Try to check out Verdi-Apex (Verdi-Ultra) license.

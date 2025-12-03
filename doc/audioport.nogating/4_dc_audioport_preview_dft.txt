@@ -1,0 +1,43 @@
+
+Information: Starting test design rule checking. (TEST-222)
+Test Design rule checking did not find violations
+Information: Test design rule checking completed. (TEST-123)
+    Running Autofix
+Information: No test design rule violation needs to be fixed by Autofix. (TEST-215)
+  Architecting Scan Chains
+
+****************************************
+Preview_dft report
+For    : 'Insert_dft' command
+Design : audioport
+Version: T-2022.03-SP5-1
+Date   : Sat May  3 23:43:40 2025
+****************************************
+
+Number of chains: 2
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: mix_clocks
+Scan enable: scan_en_in (no hookup pin)
+
+
+Scan chain '1' (PADDR[0] --> PRDATA[0]) contains 7571 cells
+
+
+Scan chain '2' (PADDR[1] --> PRDATA[1]) contains 7570 cells
+
+
+
+************ Test Point Plan Report ************
+Total number of test points  : 0
+Number of Autofix test points: 0
+Number of Wrapper test points: 0
+Number of test modes         : 0
+Number of test point enables : 0
+Number of data sources       : 0
+Number of data sinks         : 0
+**************************************************
+
+Dft signals:
+ TestData: clk (no hookup pin)
+1

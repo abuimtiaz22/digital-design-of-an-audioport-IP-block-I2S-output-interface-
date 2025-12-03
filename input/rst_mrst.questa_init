@@ -1,0 +1,8 @@
+$default_input_value 0
+rst_n = 0
+mrst_n = 0
+// Hold rst for 3 clock cycles and deassert
+##
+## 2
+rst_n = 1
+mrst_n = 1

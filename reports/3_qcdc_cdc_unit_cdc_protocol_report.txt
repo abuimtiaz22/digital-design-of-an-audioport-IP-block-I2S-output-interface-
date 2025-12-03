@@ -1,0 +1,106 @@
+-------------------------------------------------------------------------------
+Questa CDC Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+CDC Protocol report
+Design : cdc_unit
+
+Created Fri Mar 21 10:14:29 2025
+-------------------------------------------------------------------------------
+
+=================================================================
+Section 1  : CDC SVA Protocol Summary
+Section 2  : CDC SVA Protocol List
+Section 3  : CDC SVA Protocol Details
+Section 4  : CDC SVA Protocol Setup
+=================================================================
+
+=================================================================
+Section 1  : CDC SVA Protocol Summary
+=================================================================
+
+Protocols Recognized   :   5
+-------------------------------------------------------------------------------
+Protocol Type                             Protocols               Checks
+-------------------------------------------------------------------------------
+cdc_dsel                                          2                    2
+cdc_sync                                          3                    3
+-------------------------------------------------------------------------------
+All                                               5                    5
+-------------------------------------------------------------------------------
+
+=================================================================
+Section 2  : CDC SVA Protocol List
+=================================================================
+
+cdc_dsel  cdc_protocol.dmux_6080
+cdc_dsel  cdc_protocol.dmux_6100
+cdc_sync  cdc_protocol.async_reset_8013
+cdc_sync  cdc_protocol.two_dff_63806
+cdc_sync  cdc_protocol.two_dff_74335
+
+=================================================================
+Section 3  : CDC SVA Protocol Details
+=================================================================
+
+Type/Scheme   :  cdc_dsel  cdc_protocol.dmux_6080
+----------------------------------------------------
+  Check tx_data_stable   : Off <Default Off>
+  Check rx_data_stable   : On <Default On>
+  Check tx_select_stable : Off <Default Off>
+  TX SIGNAL              : audio1_reg
+  TX CLOCK               : clk
+  RX SIGNAL              : audio1_out
+  RX CLOCK               : mclk
+  TX_MIN                 : 5
+
+Type/Scheme   :  cdc_dsel  cdc_protocol.dmux_6100
+----------------------------------------------------
+  Check tx_data_stable   : Off <Default Off>
+  Check rx_data_stable   : On <Default On>
+  Check tx_select_stable : Off <Default Off>
+  TX SIGNAL              : audio0_reg
+  TX CLOCK               : clk
+  RX SIGNAL              : audio0_out
+  RX CLOCK               : mclk
+  TX_MIN                 : 5
+
+Type/Scheme   :  cdc_sync  cdc_protocol.async_reset_8013
+----------------------------------------------------
+  Check tx_stable        : On <Default On>
+  TX SIGNAL              : rst_n
+  TX CLOCK               : clk
+  TX_MIN                 : 5
+
+Type/Scheme   :  cdc_sync  cdc_protocol.two_dff_63806
+----------------------------------------------------
+  Check tx_stable        : On <Default On>
+  TX SIGNAL              : handshake_req
+  TX CLOCK               : clk
+  TX_MIN                 : 5
+
+Type/Scheme   :  cdc_sync  cdc_protocol.two_dff_74335
+----------------------------------------------------
+  Check tx_stable        : On <Default On>
+  TX SIGNAL              : play_in
+  TX CLOCK               : clk
+  TX_MIN                 : 5
+
+
+=================================================================
+Section 4  : CDC SVA Protocol Setup
+=================================================================
+
+Questa Propcheck Makefile
+----------------------------------------------------
+   Makefile  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/cdc_protocol/formal/Makefile
+
+Questa Sim argument files (2-step flow)
+----------------------------------------------------
+  vlog  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vlog.arg
+  vsim  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vsim_2step.arg
+
+Questa Sim vopt flow argument files (3-step flow)
+----------------------------------------------------
+  vlog  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vlog.arg
+  vopt  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vopt.arg
+  vsim  : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qcdc_run_log/cdc_protocol/simulation/cdc_protocol_vsim_3step.arg
+

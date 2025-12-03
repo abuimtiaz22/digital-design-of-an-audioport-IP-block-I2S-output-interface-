@@ -1,0 +1,674 @@
+//  Catapult CDesign Checker 2024.2_1/1143609 (Production Release) Wed Nov 13 18:57:31 PST 2024
+//  
+//          Copyright (c) Siemens EDA, 1996-2024, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                   PROPERTY OF SIEMENS EDA OR ITS LICENSORS.
+//  
+//  Running on Linux aimtiaz23@lehmus-cn8.oulu.fi:322528 4.18.0-553.44.1.el8_10.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v27.2_1.0, HLS_PKGS v27.2_1.0, 
+//                       SIF_TOOLKITS v27.2_1.0, SIF_XILINX v27.2_1.0, 
+//                       SIF_ALTERA v27.2_1.0, CCS_LIBS v27.2_1.0, 
+//                       CDS_PPRO v2024.1_3, CDS_DesignChecker v2024.2_1, 
+//                       CDS_OASYS v21.1_3.1, CDS_PSR v24.1_0.20, 
+//                       DesignPad v2.78_1.0, DesignAnalyzer 2024.2/1130210
+//  
+//  Start time Thu Apr  3 14:51:37 2025
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log322528d82a7d90.0"
+dofile ./scripts/catapult_check.tcl
+# > set CATAPULT_REMOVE_PROJECT           1
+# 1
+# > set CATAPULT_COMPILER_FLAGS           ""
+# > set EDA_TOOL "Catapult"
+# Catapult
+# > source scripts/0_setup.tcl
+# > set reports [glob -nocomplain $REPORTS_DIR/2_catapult_${DESIGN_NAME}_*_check_report.txt ]
+# reports/2_catapult_dsp_unit_qor_check_report.txt reports/2_catapult_dsp_unit_overflow_check_report.txt reports/2_catapult_dsp_unit_code_check_report.txt
+# > foreach rep $reports { file delete $rep }
+# > if { [file exists scripts/catapult_proc.tcl ] } {
+# >     source scripts/catapult_proc.tcl
+# > }
+# > logfile move ${LAUNCH_DIR}/${REPORTS_DIR}/2_catapult_${DESIGN_NAME}_check.log
+# Moving session transcript to file "/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/reports/2_catapult_dsp_unit_check.log"
+# > logfile move -disable
+# > options set Cache/UserCacheHome                    ${LAUNCH_DIR}/${OUTPUT_DIR}/${DESIGN_NAME}_catapult_check_cache
+# /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_catapult_check_cache
+# > options set Input/CompilerFlags                    [concat "-DCATAPULT_HLS" $CATAPULT_COMPILER_FLAGS]
+# -DCATAPULT_HLS
+# > options set Input/CppStandard                      c++11
+# c++11
+# > options set Input/TargetPlatform                   x86_64
+# x86_64
+# > flow package require /CDesignChecker
+# 8.2
+# > set CATAPULT_PROJECT_NAME ${DESIGN_NAME}_CATAPULT_CHECK
+# dsp_unit_CATAPULT_CHECK
+# > set CATAPULT_PROJECT_DIR ${OUTPUT_DIR}
+# output
+# > if { [file exists "${CATAPULT_PROJECT_DIR}/${CATAPULT_PROJECT_NAME}" ] == 1 } {
+# >     puts "Deleting old checker project directory"
+# >     file delete -force "${CATAPULT_PROJECT_DIR}/${CATAPULT_PROJECT_NAME}"
+# > }
+# Deleting old checker project directory
+# > project new -name ${CATAPULT_PROJECT_NAME} -directory "${CATAPULT_PROJECT_DIR}/${CATAPULT_PROJECT_NAME}"
+# Creating project directory '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/'. (PRJ-1)
+# > foreach filename $SYSTEMC_HEADER_FILES {
+# >     solution file add ${LAUNCH_DIR}/$filename -preserve_path true	
+# > }
+# > foreach filename $SYSTEMC_SOURCE_FILES {
+# >     solution file add ${LAUNCH_DIR}/$filename -preserve_path true	
+# > }
+# > foreach filename $SYSTEMC_TESTBENCH_FILES {
+# >     solution file add ${LAUNCH_DIR}/$filename -exclude true  -preserve_path true	
+# > }
+# > go new
+# > go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Front End called with arguments: -- /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit.cpp /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit_top.h /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit_tb.h /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/dsp_unit.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.6 (CIN-1)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 18.91 seconds, memory usage 1922604kB, peak memory usage 1922604kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'dsp_unit.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/../input/dsp_unit.h(13): Found top design routine 'dsp_unit' specified by directive (CIN-52)
+# $PROJECT_HOME/../input/dsp_unit.h(50): Inlining member function 'dsp_unit::dsp_unit' on object '' (CIN-64)
+# Warning: $PROJECT_HOME/../input/dsp_unit.h(57): Method sc_module::dont_initialize is not supported for synthesis and will be ignored, this may cause a simulation mismatch (CIN-108)
+# $PROJECT_HOME/../input/dsp_unit.cpp(4): Inlining member function 'dsp_unit::dsp_proc' on object '' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(24): Inlining member function 'sc_core::sc_inout<sc_dt::sc_int<24>>::write' on object 'audio0_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(25): Inlining member function 'sc_core::sc_inout<sc_dt::sc_int<24>>::write' on object 'audio1_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(26): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'tick_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): Synthesizing method 'dsp_unit::read_inputs' (CIN-13)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): Inlining member function 'dsp_unit::read_inputs' on object 'this' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): Optimizing block '/dsp_unit::read_inputs' ... (CIN-4)
+# $PROJECT_HOME/../input/dsp_unit.h(63): INOUT port 'this.level0_r' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../input/dsp_unit.h(64): INOUT port 'this.level1_r' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../input/dsp_unit.h(65): INOUT port 'this.filter_r' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): INOUT port 'filter' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(111): INOUT port 'level0' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(111): INOUT port 'level1' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(112): INOUT port 'audio0' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(112): INOUT port 'audio1' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): Synthesizing method 'dsp_unit::write_outputs' (CIN-13)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): Inlining member function 'dsp_unit::write_outputs' on object 'this' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(133): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'this.tick_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(134): Inlining member function 'sc_core::sc_inout<sc_dt::sc_int<24>>::write' on object 'this.audio0_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(135): Inlining member function 'sc_core::sc_inout<sc_dt::sc_int<24>>::write' on object 'this.audio1_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(137): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'this.tick_out' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.cpp(130): Optimizing block '/dsp_unit::write_outputs' ... (CIN-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(142): Inlining member function 'dsp_unit::regs_proc' on object '' (CIN-64)
+# $PROJECT_HOME/../input/dsp_unit.h(13): Optimizing block '/dsp_unit' ... (CIN-4)
+# $PROJECT_HOME/../input/dsp_unit.cpp(44): Creating instance '/read_inputs():inst' of ModularIO 'dsp_unit::read_inputs' (CIN-204)
+# $PROJECT_HOME/../input/dsp_unit.cpp(104): Creating instance '/write_outputs():inst' of ModularIO 'dsp_unit::write_outputs' (CIN-204)
+# Info: $PROJECT_HOME/../input/dsp_unit.h(50): Partition '/dsp_unit/SC_CTOR' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/../input/dsp_unit.cpp(52): Loop '/dsp_unit/dsp_proc/scheduled_region:if:for' iterated at most 67 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(63): Loop '/dsp_unit/dsp_proc/SHIFT_LOOP' iterated at most 66 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(82): Loop '/dsp_unit/dsp_proc/FILTER_LOOP' iterated at most 67 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(54): Detected constant initialization of array 'data0_r', optimizing loop 'scheduled_region:if:for' (LOOP-12)
+# $PROJECT_HOME/../input/dsp_unit.cpp(55): Detected constant initialization of array 'data1_r', optimizing loop 'scheduled_region:if:for' (LOOP-12)
+# $PROJECT_HOME/../input/dsp_unit.cpp(149): Loop '/dsp_unit/regs_proc/COEFF_RESET_LOOP' iterated at most 134 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(164): Loop '/dsp_unit/regs_proc/COEFF_WRITE_LOOP' iterated at most 134 times. (LOOP-2)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): INOUT port 'tick' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../input/dsp_unit.cpp(110): INOUT port 'clr' is only used as an output. (OPT-11)
+# Design 'dsp_unit' was read (SOL-1)
+# Info: CDesignChecker Shell script written to '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'dsp_unit.v1': elapsed time 14.32 seconds, memory usage 1922604kB, peak memory usage 1922604kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 539, Real ops = 25, Vars = 212 (SOL-21)
+# > flow run /CDesignChecker/write_options {VER_MODE -code_checks} 
+# > flow run /CDesignChecker/launch_sleccpc_sh ./CDesignChecker/design_checker.sh -code_checks 
+# Info: Using CDesignChecker installed at '/sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/cds_cpc/rls'
+# Warning: Opening IPC...
+# A hard limit has been imposed on this process's resident set size (max number of virtual pages resident in RAM) by the OS, LSF, limit or ulimit. The 33554432 MB limit may disrupt tool operation. (APP-RHL)
+# Reading startup script '/sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/cds_cpc/rls/slecrc' (APP-RSS)
+# > 
+# > 
+# 0
+# 
+# > 
+# 10000
+# 
+# > 
+# > 
+# 1
+# 
+# > 
+# 1
+# 
+# Warning: Generating SLEC wrappers and TCL script...
+# > 
+# -cat2slec_work_dir /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/./CDesignChecker -workdir .. -cpc -symbolic_memory_threshold_size 256
+# 
+# > 
+# cat2slec debug information will be logged in "/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/./CDesignChecker/cat2slec.debug". (CTS-CDFN)
+# SLEC process is using 65 MB, peak 69 MB, and 4 seconds [+65MB, +69MB, +4s] @ Thu Apr  3 14:52:22 2025 (UI-STATS)
+# 
+# Detected SLEC Version : SLEC 2024.2_1/ (CTS-SVI)
+# The tool command file will be written to "cat2slec.cmd". (CTS-CCFN)
+# Detected Catapult Version : 8.2 (CTS-CVI)
+# The specified design is a SystemC design. (CTS-SDD)
+# Extracting information for the block "dsp_unit". (CTS-ETN)
+# Encountered active high clock "clk". (CTS-CAH)
+# Encountered active low reset "rst_n". (CTS-RAL)
+# Executed systemc design in CDC via Catapult. (CTS-SDIC)
+# Final SLEC script is generated at: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/CDesignChecker/run_design_checker.tcl (CTS-FSSN)
+# cat2slec is running via IPC from Catapult - not exiting TCL shell. (CTS-SFCI)
+# > 
+# 10000
+# 
+# > 
+# 1
+# 
+# > 
+# > 
+# Warning: Running CDesignChecker...
+# > 
+# 1
+# 
+# > 
+# 0
+# 
+# > 
+# Solver cache location set to 'workdir'. (SOL-SCL)
+# # # This file is automatically generated by Catapult each time CDesignChecker is
+# # # is launched from Catapult. Any user-applied edits will be overwritten.
+# # 
+# # set ::env(SLEC_GCC_HOME) /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/dcs_gcc/usr
+# # # Property checks
+# # 
+# # # add Verification Mode settings
+# # set_verification_mode -c_property_checks -code_checks
+# config_solver_clustering -enable  -engine StateCheck -max_size 20
+# Setting the currently running product to SLEC CDC. (APP-SCP)
+# set_global -if_unchanged print_slec_summary                           0
+# set_global -if_unchanged ctrl_c_unattended_mode                       1
+# set_global -if_unchanged _is_prehls_cformal_flow                      1
+# set_global -if_unchanged _enable_pragma_hls_exclude                   0
+# set_global -if_unchanged systemc_version                            2.3
+# set_global -if_unchanged reduce_memory_exprs                          1
+# set_global -if_unchanged _enable_interim_pass_list                    1
+# set_global -if_unchanged ceg_generate_checkers                        0
+# set_global -if_unchanged enable_hierarchy_synthesis                   1
+# Message "CEG-BSCI" is now disabled. (UI-MID)
+# Message "CEG-SCVER" is now disabled. (UI-MID)
+# set_global  _is_cdesignchecker_flow_enabled     1
+# # 
+# # # Symbolic Memory Control
+# # set_global symbolic_memory_threshold_size 256
+# # 
+# # # verification effort
+# # set_verification_effort -medium
+# set_global number_of_ll3_iterations 3
+# set_global soft_runtime_limit 7200
+# set_global output_problem_time_limit 1
+# set_global __sol_use_engine_time_limit_for_last_output 0
+# set_global sim_max_transactions 200
+# set_global sim_based_validation_timeout 900
+# set_global output_problem_time_limit_factor 4.0
+# # set_global report_undecided_solver_properties 1
+# # set USER_WAIVER_FILE ""
+# # 
+# # #Waveform format
+# # config_trace_files -format qwave -simdump
+# # 
+# # 
+# # #Debug Settings
+# # set_global generate_testbenches 1 
+# # set_global enable_ac_probes 1 
+# # set_global sim_based_validation 0 
+# # set_global _enable_cdesignchecker_debug_flow 0
+# # 
+# ### Reading user-provided value '1' from the Tcl variable 'Run_Formal_Part_One'
+# ### Reading user-provided value '0' from the Tcl variable 'Run_Formal_Part_Two'
+# # 
+# # # VIOLATED properties
+# # # waive_checks -rule OSA -file dsp_unit.cpp -line 80 -column 25
+# # # waive_checks -rule OSA -file dsp_unit.cpp -line 81 -column 25
+# # # waive_checks -rule APT -file dsp_unit.h -line 62 -column 31
+# # # waive_checks -rule APT -file dsp_unit.h -line 66 -column 31
+# # # waive_checks -rule APT -file dsp_unit.h -line 67 -column 31
+# # # CDesignChecker Pre-build-design user options
+# Please refer to /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/./CDesignChecker/calypto/build_design.log for a comprehensive list of messages and warnings issued in build_design. These may provide hints for debugging issues (if any) related to performance, potential out of bound accesses etc. (UI-BDLM)
+# 
+#                   (Subsequent repetitions of this message will be suppressed.
+#                    Use 'enable_msg UI-BDLM' to show all repetitions.)
+# 
+# Reading design files into the 'spec' design library. (CPT-RDF)
+# SystemC version 2.3 features will be used. (CPT-SC21)
+# Using GCC 10.3.0 to parse system function interfaces and STL. (CPT-UGV)
+# Finished reading SystemC files into the 'spec' design library. (CPT-FRD)
+# Linking the 'spec' design library. (CPT-LDF)
+# /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/input/dsp_unit.h(13): SC_MODULE class "dsp_unit" identified as top module for C++ elaboration. (CPT-CETI)
+# Warning: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/input/dsp_unit.h(53): Method async_reset_signal_is() will be interpreted as reset_signal_is(). Testbenches may not compile because this function is not part of standard SystemC headers. (CPT-ARTSR)
+# Generating design_checks.db file. (CPT-DCD)
+# Generating design_checks.xml file. (CPT-OLX)
+# Generating design check reports. (CPT-OLT)
+# Found 'dsp_unit' as the top module of the 'spec' design library. (CPT-FTH)
+# Warning: Closing IPC...
+# > set solution_dir [solution get /SOLUTION_DIR]
+# /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1
+# > exec cp $solution_dir/Design_Check.rpt ${REPORTS_DIR}/2_catapult_${DESIGN_NAME}_code_check_report.txt
+# > flow run /CDesignChecker/write_options {VER_MODE -overflow_checks} 
+# > flow run /CDesignChecker/launch_sleccpc_sh ./CDesignChecker/design_checker.sh -overflow_checks 
+# Info: Using CDesignChecker installed at '/sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/cds_cpc/rls'
+# Warning: Opening IPC...
+# A hard limit has been imposed on this process's resident set size (max number of virtual pages resident in RAM) by the OS, LSF, limit or ulimit. The 33554432 MB limit may disrupt tool operation. (APP-RHL)
+# Reading startup script '/sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/cds_cpc/rls/slecrc' (APP-RSS)
+# > 
+# > 
+# 0
+# 
+# > 
+# 10000
+# 
+# > 
+# > 
+# 1
+# 
+# > 
+# 1
+# 
+# Warning: Generating SLEC wrappers and TCL script...
+# > 
+# -cat2slec_work_dir /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/./CDesignChecker -workdir .. -cpc -symbolic_memory_threshold_size 256
+# 
+# > 
+# cat2slec debug information will be logged in "/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/./CDesignChecker/cat2slec.debug". (CTS-CDFN)
+# SLEC process is using 65 MB, peak 69 MB, and 1 seconds [+65MB, +69MB, +1s] @ Thu Apr  3 14:52:37 2025 (UI-STATS)
+# 
+# Detected SLEC Version : SLEC 2024.2_1/ (CTS-SVI)
+# The tool command file will be written to "cat2slec.cmd". (CTS-CCFN)
+# Detected Catapult Version : 8.2 (CTS-CVI)
+# The specified design is a SystemC design. (CTS-SDD)
+# Extracting information for the block "dsp_unit". (CTS-ETN)
+# Encountered active high clock "clk". (CTS-CAH)
+# Encountered active low reset "rst_n". (CTS-RAL)
+# Executed systemc design in CDC via Catapult. (CTS-SDIC)
+# Final SLEC script is generated at: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/CDesignChecker/run_design_checker.tcl (CTS-FSSN)
+# cat2slec is running via IPC from Catapult - not exiting TCL shell. (CTS-SFCI)
+# > 
+# 10000
+# 
+# > 
+# 1
+# 
+# > 
+# > 
+# Warning: Running CDesignChecker...
+# > 
+# 1
+# 
+# > 
+# 0
+# 
+# > 
+# Solver cache location set to 'workdir'. (SOL-SCL)
+# # # This file is automatically generated by Catapult each time CDesignChecker is
+# # # is launched from Catapult. Any user-applied edits will be overwritten.
+# # 
+# # set ::env(SLEC_GCC_HOME) /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/dcs_gcc/usr
+# # # Property checks
+# # 
+# # # add Verification Mode settings
+# # set_verification_mode -c_property_checks -overflow_checks
+# config_solver_clustering -enable  -engine StateCheck -max_size 20
+# Setting the currently running product to SLEC CDC. (APP-SCP)
+# set_global -if_unchanged orc_binary_sim                               1
+# set_global -if_unchanged print_slec_summary                           0
+# set_global -if_unchanged stop_at_first_falsification                  0
+# set_global -if_unchanged ctrl_c_unattended_mode                       1
+# set_global -if_unchanged generate_testbenches                         0
+# set_global -if_unchanged output_problem_time_limit                    1
+# set_global -if_unchanged ceg_generate_testbenches_for              spec
+# set_global -if_unchanged testbenches_dump_waveforms                   0
+# set_global -if_unchanged stop_solvers_after_num_falsifications       30
+# set_global -if_unchanged _is_prehls_cformal_flow                      1
+# set_global -if_unchanged max_num_testbenches                         25
+# set_global -if_unchanged _enable_pragma_hls_exclude                   0
+# set_global -if_unchanged orc_generate_waveforms_for                spec
+# set_global -if_unchanged systemc_version                            2.3
+# set_global -if_unchanged sim_max_transactions                       200
+# set_global -if_unchanged soft_runtime_limit                        7200
+# set_global -if_unchanged find_invariants                              0
+# set_global -if_unchanged sim_based_validation_timeout               900
+# set_global -if_unchanged ceg_flat_sysc_tb                             1
+# set_global -if_unchanged output_problem_time_limit_factor           4.0
+# set_global -if_unchanged reduce_memory_exprs                          1
+# set_global -if_unchanged seq_perform_state_checks              only_bec
+# set_global -if_unchanged _enable_interim_pass_list                    1
+# set_global -if_unchanged number_of_ll3_iterations                     3
+# set_global -if_unchanged ceg_generate_checkers                        0
+# set_global -if_unchanged enable_hierarchy_synthesis                   1
+# Message "CEG-BSCI" is now disabled. (UI-MID)
+# Message "CEG-SCVER" is now disabled. (UI-MID)
+# set_global  _is_cdesignchecker_flow_enabled                           1
+# # 
+# # # Symbolic Memory Control
+# # set_global symbolic_memory_threshold_size 256
+# # 
+# # # verification effort
+# # set_verification_effort -medium
+# set_global number_of_ll3_iterations 3
+# set_global soft_runtime_limit 7200
+# set_global output_problem_time_limit 1
+# set_global __sol_use_engine_time_limit_for_last_output 0
+# set_global sim_max_transactions 200
+# set_global sim_based_validation_timeout 900
+# set_global output_problem_time_limit_factor 4.0
+# # set_global report_undecided_solver_properties 1
+# # set USER_WAIVER_FILE ""
+# # 
+# # #Waveform format
+# # config_trace_files -format qwave -simdump
+# # 
+# # 
+# # #Debug Settings
+# # set_global generate_testbenches 1 
+# # set_global enable_ac_probes 1 
+# # set_global sim_based_validation 0 
+# # set_global _enable_cdesignchecker_debug_flow 0
+# # 
+# ### Reading user-provided value '1' from the Tcl variable 'Run_Formal_Part_One'
+# ### Reading user-provided value '0' from the Tcl variable 'Run_Formal_Part_Two'
+# # # CDesignChecker Pre-build-design user options
+# Please refer to /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/./CDesignChecker/calypto/build_design.log for a comprehensive list of messages and warnings issued in build_design. These may provide hints for debugging issues (if any) related to performance, potential out of bound accesses etc. (UI-BDLM)
+# 
+#                   (Subsequent repetitions of this message will be suppressed.
+#                    Use 'enable_msg UI-BDLM' to show all repetitions.)
+# 
+# Reading design files into the 'spec' design library. (CPT-RDF)
+# SystemC version 2.3 features will be used. (CPT-SC21)
+# Using GCC 10.3.0 to parse system function interfaces and STL. (CPT-UGV)
+# Finished reading SystemC files into the 'spec' design library. (CPT-FRD)
+# Linking the 'spec' design library. (CPT-LDF)
+# /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/input/dsp_unit.h(13): SC_MODULE class "dsp_unit" identified as top module for C++ elaboration. (CPT-CETI)
+# Warning: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/input/dsp_unit.h(53): Method async_reset_signal_is() will be interpreted as reset_signal_is(). Testbenches may not compile because this function is not part of standard SystemC headers. (CPT-ARTSR)
+# Generating design_checks.db file. (CPT-DCD)
+# Generating design_checks.xml file. (CPT-OLX)
+# Generating design check reports. (CPT-OLT)
+# Found 'dsp_unit' as the top module of the 'spec' design library. (CPT-FTH)
+# > 
+# 0
+# 
+# > 
+# 1
+# 
+# > 
+# Solver cache location set to 'workdir'. (SOL-SCL)
+# ### Reading user-provided value '1' from the Tcl variable '_Design_Already_Read'
+# ### Reading user-provided value '0' from the Tcl variable 'Run_Lint_Only'
+# ### Reading user-provided value '0' from the Tcl variable 'Run_Formal_Part_One'
+# ### Reading user-provided value '1' from the Tcl variable 'Run_Formal_Part_Two'
+# ### Reading user-provided value '0' from the Tcl variable 'Enable_DB_Flow'
+# ### Reading user-provided value '1' from the Tcl variable 'Induction_Depth'
+# Synthesizing the 'spec' design library. (CPT-STN)
+# Setting 'dsp_unit' as the top module of the 'spec' design library. (CDB-STH)
+# Finished synthesizing the 'spec' design library. (CPT-FBD)
+# SLEC process is using 82 MB, peak 412 MB, and 21 seconds [-46MB, +0MB, +1s] @ Thu Apr  3 14:52:57 2025 (UI-STATS)
+# 
+# Saving the netlist database to 'design.db'. (CDB-WDF)
+# Created 6 property check(s). (UI-GIM)
+# # # CDesignChecker user constraints
+# SLEC process is using 82 MB, peak 412 MB, and 21 seconds [+0MB, +0MB, +0s] @ Thu Apr  3 14:52:57 2025 (UI-STATS)
+# 
+# set_reset_value -spec -list prop_ovf_dsp_unit_ln84 prop_ovf_dsp_unit_ln85 prop_ovf_dsp_unit_ln88 prop_ovf_dsp_unit_ln89 prop_ovf_dsp_unit_ln99 prop_ovf_dsp_unit_ln100 -value 0
+# Running full proof verification. (ORC-SPM)
+# Finished netlist transformations. (ORC-FPN)
+# SLEC process is using 83 MB, peak 412 MB, and 21 seconds [+1MB, +0MB, +0s] @ Thu Apr  3 14:52:57 2025 (UI-STATS)
+# 
+# Bit-blasting the clock tree. (TA-BBCT)
+# SLEC process is using 83 MB, peak 412 MB, and 21 seconds [+0MB, +0MB, +0s] @ Thu Apr  3 14:52:57 2025 (UI-STATS)
+# 
+# Started mapping the 'spec' and 'impl' designs. (PSS-SDM)
+# Warning: Unmapped output/blackbox-input ports have been disconnected by logic pruning and will not show up in any SLEC generated waveforms. Please refer to '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/./CDesignChecker/calypto/mapping.log' for the list of unmapped outputs. Please use the global setting 'set_global prune_unmapped_logic 0' to get SLEC to dump these ports in waveforms. (TDB-PUP)
+# Warning: Some flops have been removed by dead/unmapped logic pruning. Please refer to '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/./CDesignChecker/calypto/mapping.log' for the list of removed flops. (TDB-DRF)
+# Finished mapping the 'spec' and 'impl' designs. (PSS-FDM)
+# SLEC process is using 83 MB, peak 412 MB, and 21 seconds [+0MB, +0MB, +0s] @ Thu Apr  3 14:52:57 2025 (UI-STATS)
+# 
+# Determining input clock domains. (TA-ACDD)
+# Setting clock ## Clock : _Ideal_Clk_ (Period : 100, Rising edge : 2, Falling edge : 52) is set on spec.clk on automatically inferred clock port 'spec.clk'. (TA-ADCA)
+# SLEC process is using 83 MB, peak 412 MB, and 21 seconds [+0MB, +0MB, +0s] @ Thu Apr  3 14:52:57 2025 (UI-STATS)
+# 
+# Bit-blasting the clock tree. (TA-BBCT)
+# SLEC process is using 83 MB, peak 412 MB, and 21 seconds [+0MB, +0MB, +0s] @ Thu Apr  3 14:52:57 2025 (UI-STATS)
+# 
+# Started processing of constraints and maps. (ORC-SPCM)
+# Unmapped ports/flops exist. Please refer to the file 'CDesignChecker/calypto/mapping.log' for the complete list of unmapped inputs, outputs and flops. (TDB-EUS)
+# If unmapped flops exist, explicitly specify flop maps or use the command "create_namemap_rule" to make SLEC infer flop maps based on flop names. (TDB-TNM)
+# Finished processing of constraints and maps. (ORC-FPCM)
+# SLEC process is using 83 MB, peak 412 MB, and 21 seconds [+0MB, +0MB, +0s] @ Thu Apr  3 14:52:57 2025 (UI-STATS)
+# 
+# SLEC will invoke verification engines in the following sequence: StateCheck -> HL3. Please see file 'CDesignChecker/calypto/.solver_progress.log' for further details. (ORC-PES)
+# Started processing reset. (ORC-SPR)
+# Warning: Design 'spec' has uninitialized flops. (SLEC-RFNI)
+# Finished processing reset. For the list of reset-values, please refer to calypto/reset.log. (ORC-FPR)
+# SLEC process is using 84 MB, peak 412 MB, and 22 seconds [+1MB, +0MB, +1s] @ Thu Apr  3 14:52:58 2025 (UI-STATS)
+# 
+# Finished performing optimizations. (ORC-FSRAO)
+# SLEC process is using 84 MB, peak 412 MB, and 22 seconds [+0MB, +0MB, +0s] @ Thu Apr  3 14:52:58 2025 (UI-STATS)
+# 
+# Started performing consistency checks in the spec and impl designs. (ORC-SCCIV)
+# Finished performing consistency checks in the spec and impl designs. (ORC-FCCIV)
+# SLEC process is using 85 MB, peak 412 MB, and 23 seconds [+1MB, +0MB, +1s] @ Thu Apr  3 14:52:59 2025 (UI-STATS)
+# 
+# Starting to unroll the design to obtain outputs and flops for transaction 1. (ORC-UDM)
+# Starting to apply constraints for sequential analysis. (TDB-STAC)
+# Finished application of constraints for sequential analysis. (TDB-DAC)
+# SLEC process is using 85 MB, peak 412 MB, and 23 seconds [+0MB, +0MB, +0s] @ Thu Apr  3 14:52:59 2025 (UI-STATS)
+# 
+# Finished performing optimization-enabled design unrolling. (CDBO-ODU)
+# SLEC process is using 87 MB, peak 412 MB, and 23 seconds [+2MB, +0MB, +0s] @ Thu Apr  3 14:52:59 2025 (UI-STATS)
+# 
+# Finished unrolling design to obtain outputs and flops for transaction 1. (ORC-UDDM)
+# SLEC process is using 87 MB, peak 412 MB, and 23 seconds [+0MB, +0MB, +0s] @ Thu Apr  3 14:52:59 2025 (UI-STATS)
+# 
+# Starting state checks to classify flops as inductive or non-inductive. (SEQ-SSCP)
+# Finished state checks to classify flops as inductive or non-inductive: 285 non-inductive, 0 inductive. (SEQ-DSCP)
+# Starting sequential analysis (Engine L0). (SEQ-TTPS)
+# SLEC process is using 89 MB, peak 572 MB, and 28 seconds [+2MB, +160MB, +5s] @ Thu Apr  3 14:53:04 2025 (UI-STATS)
+# 
+# Started normalizing spec and impl netlists for sequential analysis. (SEQ-PO1M)
+# Started optimizations on normalized netlist. (SEQ-SOX)
+# Finished optimizations on normalized netlist. (SEQ-FOX)
+# SLEC process is using 97 MB, peak 572 MB, and 32 seconds [+8MB, +0MB, +4s] @ Thu Apr  3 14:53:08 2025 (UI-STATS)
+# 
+# Determined 5 to be the acyclic sequential depth of the normalized spec and impl netlists. (SEQ-ASD)
+# Finished normalizing spec and impl netlists for sequential analysis. (SEQ-O1M)
+# SLEC process is using 97 MB, peak 572 MB, and 32 seconds [+0MB, +0MB, +0s] @ Thu Apr  3 14:53:08 2025 (UI-STATS)
+# 
+# Finished sequential analysis (Engine L0). (SEQ-DTPS)
+# SLEC process is using 97 MB, peak 572 MB, and 32 seconds [+0MB, +0MB, +0s] @ Thu Apr  3 14:53:08 2025 (UI-STATS)
+# 
+# Starting sequential analysis (Engine HL3). (SEQ-TSI)
+# Posing 6 problems for level 3 sequential analysis (sequential search). (SEQ-NSPP)
+# Attempting proofs with a time limit of 1 second(s) per problem (0 implies no limit). (SEQ-LTLPP)
+# Level 3 progress so far: problems proven    1, falsified    0, aborted    0, remaining    5. (SEQ-SSP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    0, remaining    4. (SEQ-SSP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    1, remaining    3. (SEQ-SSP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    2, remaining    2. (SEQ-SSP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    3, remaining    1. (SEQ-SSP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    4, remaining    0. (SEQ-SSP)
+# Attempting proofs with a time limit of 4 second(s) per problem (0 implies no limit). (SEQ-LTLPP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    1, remaining    3. (SEQ-SSP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    2, remaining    2. (SEQ-SSP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    3, remaining    1. (SEQ-SSP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    4, remaining    0. (SEQ-SSP)
+# Attempting proofs with a time limit of 16 second(s) per problem (0 implies no limit). (SEQ-LTLPP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    1, remaining    3. (SEQ-SSP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    2, remaining    2. (SEQ-SSP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    3, remaining    1. (SEQ-SSP)
+# Level 3 progress so far: problems proven    2, falsified    0, aborted    4, remaining    0. (SEQ-SSP)
+# Current Solver Progress : 2 output problems proven, 0 falsified, 4 aborted, 0 remaining : 127 seconds elapsed. (SEQ-SWTWP)
+# Finished sequential analysis (Engine HL3). (SEQ-DSI)
+# SLEC process is using 98 MB, peak 572 MB, and 245 seconds, 4:05 [+1MB, +0MB, +213s] @ Thu Apr  3 14:56:41 2025 (UI-STATS)
+# 
+# Finished sequential analysis. (ORC-FSA)
+# SLEC process is using 97 MB, peak 572 MB, and 246 seconds, 4:06 [-1MB, +0MB, +1s] @ Thu Apr  3 14:56:42 2025 (UI-STATS)
+# 
+# 
+# No problems were falsified.
+# 
+# 
+# Generating design_checks.db file. (CPT-DCD)
+# Generating design_checks.xml file. (CPT-OLX)
+# Generating design check reports. (CPT-OLT)
+# Summary of Design Checks.  (CPT-DCS)
+# ==================================================================================== 
+# *****************************Status of Property Checks******************************
+# ==================================================================================== 
+# 
+# 
+#                                                     Violated   Waived     Undecided     
+# ==================================================================================== 
+# FATAL                                               0          0          0             
+# ==================================================================================== 
+# 
+# ==================================================================================== 
+# ERROR                                               0          0          4             
+# ==================================================================================== 
+# OVL (Overflow)                                      0          0          4             
+# 
+# ==================================================================================== 
+# WARNING                                             0          0          0             
+# ==================================================================================== 
+# 
+# ==================================================================================== 
+# INFO                                                0          0          0             
+# ==================================================================================== 
+# 
+# ==================================================================================== 
+# 
+# Warning: Closing IPC...
+# > exec cp $solution_dir/Design_Check01.rpt ${REPORTS_DIR}/2_catapult_${DESIGN_NAME}_overflow_check_report.txt
+# > flow run /CDesignChecker/write_options {VER_MODE -qofr_checks} 
+# > flow run /CDesignChecker/launch_sleccpc_sh ./CDesignChecker/design_checker.sh -qofr_checks 
+# Info: Using CDesignChecker installed at '/sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/cds_cpc/rls'
+# Warning: Opening IPC...
+# A hard limit has been imposed on this process's resident set size (max number of virtual pages resident in RAM) by the OS, LSF, limit or ulimit. The 33554432 MB limit may disrupt tool operation. (APP-RHL)
+# Reading startup script '/sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/cds_cpc/rls/slecrc' (APP-RSS)
+# > 
+# > 
+# 0
+# 
+# > 
+# 10000
+# 
+# > 
+# > 
+# 1
+# 
+# > 
+# 1
+# 
+# Warning: Generating SLEC wrappers and TCL script...
+# > 
+# -cat2slec_work_dir /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/./CDesignChecker -workdir .. -cpc -symbolic_memory_threshold_size 256
+# 
+# > 
+# cat2slec debug information will be logged in "/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/./CDesignChecker/cat2slec.debug". (CTS-CDFN)
+# SLEC process is using 65 MB, peak 69 MB, and 2 seconds [+65MB, +69MB, +2s] @ Thu Apr  3 14:56:50 2025 (UI-STATS)
+# 
+# Detected SLEC Version : SLEC 2024.2_1/ (CTS-SVI)
+# The tool command file will be written to "cat2slec.cmd". (CTS-CCFN)
+# Detected Catapult Version : 8.2 (CTS-CVI)
+# The specified design is a SystemC design. (CTS-SDD)
+# Extracting information for the block "dsp_unit". (CTS-ETN)
+# Encountered active high clock "clk". (CTS-CAH)
+# Encountered active low reset "rst_n". (CTS-RAL)
+# Executed systemc design in CDC via Catapult. (CTS-SDIC)
+# Final SLEC script is generated at: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/CDesignChecker/run_design_checker.tcl (CTS-FSSN)
+# cat2slec is running via IPC from Catapult - not exiting TCL shell. (CTS-SFCI)
+# > 
+# 10000
+# 
+# > 
+# 1
+# 
+# > 
+# > 
+# Warning: Running CDesignChecker...
+# > 
+# 1
+# 
+# > 
+# 0
+# 
+# > 
+# Solver cache location set to 'workdir'. (SOL-SCL)
+# # # This file is automatically generated by Catapult each time CDesignChecker is
+# # # is launched from Catapult. Any user-applied edits will be overwritten.
+# # 
+# # set ::env(SLEC_GCC_HOME) /sw/rhel7/siemens/catapult_2024.2_1/Mgc_home/pkgs/dcs_gcc/usr
+# # # Property checks
+# # 
+# # # add Verification Mode settings
+# # set_verification_mode -c_property_checks -qofr_checks
+# config_solver_clustering -enable  -engine StateCheck -max_size 20
+# Setting the currently running product to SLEC CDC. (APP-SCP)
+# set_global -if_unchanged print_slec_summary                           0
+# set_global -if_unchanged ctrl_c_unattended_mode                       1
+# set_global -if_unchanged _is_prehls_cformal_flow                      1
+# set_global -if_unchanged _enable_pragma_hls_exclude                   0
+# set_global -if_unchanged systemc_version                            2.3
+# set_global -if_unchanged reduce_memory_exprs                          1
+# set_global -if_unchanged _enable_interim_pass_list                    1
+# set_global -if_unchanged ceg_generate_checkers                        0
+# set_global -if_unchanged enable_hierarchy_synthesis                   1
+# Message "CEG-BSCI" is now disabled. (UI-MID)
+# Message "CEG-SCVER" is now disabled. (UI-MID)
+# set_global  _is_cdesignchecker_flow_enabled     1
+# # 
+# # # Symbolic Memory Control
+# # set_global symbolic_memory_threshold_size 256
+# # 
+# # # verification effort
+# # set_verification_effort -medium
+# set_global number_of_ll3_iterations 3
+# set_global soft_runtime_limit 7200
+# set_global output_problem_time_limit 1
+# set_global __sol_use_engine_time_limit_for_last_output 0
+# set_global sim_max_transactions 200
+# set_global sim_based_validation_timeout 900
+# set_global output_problem_time_limit_factor 4.0
+# # set_global report_undecided_solver_properties 1
+# # set USER_WAIVER_FILE ""
+# # 
+# # #Waveform format
+# # config_trace_files -format qwave -simdump
+# # 
+# # 
+# # #Debug Settings
+# # set_global generate_testbenches 1 
+# # set_global enable_ac_probes 1 
+# # set_global sim_based_validation 0 
+# # set_global _enable_cdesignchecker_debug_flow 0
+# # 
+# ### Reading user-provided value '1' from the Tcl variable 'Run_Formal_Part_One'
+# ### Reading user-provided value '0' from the Tcl variable 'Run_Formal_Part_Two'
+# # 
+# # # UNDECIDED properties
+# # # waive_checks -rule OVL -file dsp_unit.cpp -line 84 -column 13
+# # # waive_checks -rule OVL -file dsp_unit.cpp -line 85 -column 13
+# # # waive_checks -rule OVL -file dsp_unit.cpp -line 88 -column 11
+# # # waive_checks -rule OVL -file dsp_unit.cpp -line 89 -column 11
+# # # CDesignChecker Pre-build-design user options
+# Please refer to /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/dsp_unit_CATAPULT_CHECK/dsp_unit.v1/./CDesignChecker/calypto/build_design.log for a comprehensive list of messages and warnings issued in build_design. These may provide hints for debugging issues (if any) related to performance, potential out of bound accesses etc. (UI-BDLM)
+# 
+#                   (Subsequent repetitions of this message will be suppressed.
+#                    Use 'enable_msg UI-BDLM' to show all repetitions.)
+# 
+# Reading design files into the 'spec' design library. (CPT-RDF)
+# SystemC version 2.3 features will be used. (CPT-SC21)
+# Using GCC 10.3.0 to parse system function interfaces and STL. (CPT-UGV)
+# Finished reading SystemC files into the 'spec' design library. (CPT-FRD)
+# Linking the 'spec' design library. (CPT-LDF)
+# /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/input/dsp_unit.h(13): SC_MODULE class "dsp_unit" identified as top module for C++ elaboration. (CPT-CETI)
+# Warning: /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/input/dsp_unit.h(53): Method async_reset_signal_is() will be interpreted as reset_signal_is(). Testbenches may not compile because this function is not part of standard SystemC headers. (CPT-ARTSR)
+# Generating design_checks.db file. (CPT-DCD)
+# Generating design_checks.xml file. (CPT-OLX)
+# Generating design check reports. (CPT-OLT)
+# Found 'dsp_unit' as the top module of the 'spec' design library. (CPT-FTH)
+# Warning: Closing IPC...
+# > exec cp $solution_dir/Design_Check02.rpt ${REPORTS_DIR}/2_catapult_${DESIGN_NAME}_qor_check_report.txt
+# > end dofile ./scripts/catapult_check.tcl
+// Finish time Thu Apr  3 14:57:03 2025, time elapsed 5:26, peak memory 1.84GB, exit status 0

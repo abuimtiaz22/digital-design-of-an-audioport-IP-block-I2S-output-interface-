@@ -1,0 +1,72 @@
+ 
+****************************************
+Report : area
+Design : audioport
+Version: T-2022.03-SP5-1
+Date   : Sat May  3 23:47:11 2025
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                        13596
+Number of nets:                         87095
+Number of cells:                        57972
+Number of combinational cells:          42823
+Number of sequential cells:             15141
+Number of macros/black boxes:               0
+Number of buf/inv:                       6637
+Number of references:                       6
+
+Combinational area:              53164.090869
+Buf/Inv area:                     3885.462015
+Noncombinational area:          100678.341444
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                153842.432313
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area              Local cell area
+                                  --------------------  ------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-      Noncombi-    Black-
+                                  Total        Total    national    national     boxes   Design
+--------------------------------  -----------  -------  ----------  -----------  ------  ------------------------
+audioport                         153842.4323    100.0      4.7880       0.0000  0.0000  audioport
+cdc_unit_1                           920.0940      0.6    191.2540     728.8400  0.0000  cdc_unit_test_1
+control_unit_1                     67014.4452     43.6  19579.9945   47434.4507  0.0000  control_unit_test_1
+dsp_unit_1                         84944.7071     55.2   8147.8460   28734.6504  0.0000  dsp_unit_test_1
+dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst  48062.2108    31.2 24986.7104  23075.5003 0.0000 dsp_unit_dsp_proc_test_1
+i2s_unit_1                           958.3980      0.6    253.4980     704.9000  0.0000  i2s_unit_test_1
+--------------------------------  -----------  -------  ----------  -----------  ------  ------------------------
+Total                                                   53164.0909  100678.3414  0.0000
+
+
+Area of detected synthetic parts
+--------------------------------
+  No DW parts to report!
+
+Estimated area of ungrouped synthetic parts
+-------------------------------------------
+                                       Estimated  Perc. of
+  Module               Implem.  Count       Area cell area
+  -------------------- -------  ----- ---------- ---------
+  DP_OP_704J1_122_5522     str      1  2796.2599      1.8%
+  DP_OP_705J1_123_5522     str      1  2796.2599      1.8%
+  DW01_add             apparch      5    63.8400      0.0%
+  DW01_inc             apparch      5    67.3796      0.0%
+  DW01_sub             apparch      1     3.1388      0.0%
+  DW_cmp               apparch     10    18.5668      0.0%
+  DW_decode_en            cgen      1    82.9919      0.1%
+  -------------------- -------  ----- ---------- ---------
+  DP_OP Subtotal:                   2  5592.5198      3.6%
+  Total:                           24  5828.4370      3.8%
+
+Subtotal of datapath(DP_OP) cell area:  5592.5198  3.6%  (estimated)
+Total synthetic cell area:              5828.4370  3.8%  (estimated)
+
+1

@@ -1,0 +1,68 @@
+ 
+****************************************
+Report : clock timing
+        -type summary
+Design : cdc_unit
+Version: T-2022.03-SP5-1
+Date   : Fri Mar 21 10:19:16 2025
+****************************************
+
+  Clock: clk
+----------------------------------------------------------------------------
+  Maximum setup launch latency:
+      req_in_sync1_reg/CK                                    0.00      wr-+
+
+  Minimum setup capture latency:
+      req_in_sync1_reg/CK                                    0.00      wr-+
+
+  Minimum hold launch latency:
+      req_in_sync1_reg/CK                                    0.00      br-+
+
+  Maximum hold capture latency:
+      req_in_sync1_reg/CK                                    0.00      br-+
+
+  Maximum active transition:
+      req_in_sync1_reg/CK                                    0.00      wr-+
+
+  Minimum active transition:
+      req_in_sync1_reg/CK                                    0.00      wr-+
+
+  Maximum setup skew:
+      audio0_reg_reg[0]/CK                                             wr-+
+      audio0_reg_reg[0]/CK                                   0.00      wr-+
+
+  Maximum hold skew:
+      audio0_reg_reg[0]/CK                                             br-+
+      audio0_reg_reg[0]/CK                                   0.00      br-+
+----------------------------------------------------------------------------
+
+  Clock: mclk
+----------------------------------------------------------------------------
+  Maximum setup launch latency:
+      mrst_n_sync1_reg/CK                                    0.00      wri-+
+
+  Minimum setup capture latency:
+      mrst_n_sync2_reg/CK                                    0.00      wri-+
+
+  Minimum hold launch latency:
+      mrst_n_sync1_reg/CK                                    0.00      bri-+
+
+  Maximum hold capture latency:
+      mrst_n_sync2_reg/CK                                    0.00      bri-+
+
+  Maximum active transition:
+      mrst_n_sync1_reg/CK                                    0.00      wri-+
+
+  Minimum active transition:
+      mrst_n_sync1_reg/CK                                    0.00      wri-+
+
+  Maximum setup skew:
+      audio0_out_reg[0]/CK                                             wr-+
+      audio0_out_reg[0]/CK                                   0.00      wr-+
+
+  Maximum hold skew:
+      audio0_out_reg[0]/CK                                             br-+
+      audio0_out_reg[0]/CK                                   0.00      br-+
+----------------------------------------------------------------------------
+
+1

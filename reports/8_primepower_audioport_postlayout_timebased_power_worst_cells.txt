@@ -1,0 +1,47 @@
+****************************************
+Report : Time Based Power
+	-cell_power
+	-nworst 3
+	-sort_by cell_internal_power
+Design : audioport
+Version: U-2022.12
+Date   : Mon May  5 00:12:27 2025
+****************************************
+
+
+
+  Attributes
+  ----------
+      a  -  Annotated internal | leakage | switching power 
+      b  -  Black-box (unresolved) cell
+      c  -  Clock pin internal power only
+      d  -  Does not include clock pin internal power
+      h  -  Hierarchical cell
+
+                        Internal  Switching Leakage   Total
+Cell                    Power     Power     Power     Power    (     %)   Attrs
+--------------------------------------------------------------------------------
+control_unit_1          5.777e-04 2.205e-04 9.663e-04 1.765e-03 (55.62%)  h
+dsp_unit_1              4.424e-05 2.940e-05 1.300e-03 1.373e-03 (43.29%)  h
+i2s_unit_1              1.627e-05 3.806e-06 1.464e-05 3.472e-05 ( 1.09%)  h
+--------------------------------------------------------------------------------
+Totals (3 cells)        6.383e-04 2.537e-04 2.281e-03 3.173e-03 (100.0%)
+
+
+  Attributes
+  ----------
+      a  -  Annotated internal | leakage | switching power 
+      b  -  Black-box (unresolved) cell
+      c  -  Clock pin internal power only
+      d  -  Does not include clock pin internal power
+      h  -  Hierarchical cell
+
+                          Peak         Peak            Glitch    X-tran
+Cell                      Power        Time            Power     Power    Attrs
+--------------------------------------------------------------------------------
+control_unit_1             0.3895 3323.165-3323.166  3.663e-09    0.0000  h
+dsp_unit_1                 0.0105 6747.224-6747.225     0.0000    0.0000  h
+i2s_unit_1                 0.0175 2062.586-2062.587     0.0000    0.0000  h
+--------------------------------------------------------------------------------
+Totals (3 cells)                                     3.663e-09    0.0000
+1

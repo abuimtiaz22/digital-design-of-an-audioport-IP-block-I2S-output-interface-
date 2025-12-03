@@ -1,0 +1,136 @@
+====================================================================================================
+Lint Check Report
+Questa Lint  Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+
+Timestamp            : Sat May  3 21:39:55 2025
+Description          : Report for referring checks count, check violations details, and  design information
+Design               : i2s_unit
+Database             : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/i2s_unit_qlint_run_log/lint.db
+Design Quality Score : 99.2%
+
+Sections:
+   Section 1 : Check Summary
+   Section 2 : Check Details
+   Section 3 : Design Information
+====================================================================================================
+
+
+====================================================================================================
+Section 1 : Check Summary
+====================================================================================================
+-------------
+| Error (2) |
+-------------
+  unsynth_arithmetic_operator             : 2
+
+---------------
+| Warning (6) |
+---------------
+  div_mod_lhs_too_wide                    : 2
+  div_mod_rem_operand_complex_expr        : 1
+  if_stmt_with_arith_expr                 : 2
+  seq_block_has_complex_cond              : 1
+
+------------
+| Info (5) |
+------------
+  module_output_not_registered            : 4
+  process_signal_assign_large             : 1
+
+----------------
+| Resolved (0) |
+----------------
+
+
+====================================================================================================
+Section 2 : Check Details
+====================================================================================================
+-------------
+| Error (2) |
+-------------
+
+Check: unsynth_arithmetic_operator [Category: Synthesis] (2)
+       [Message: Restricted arithmetic operator used, which might be unsynthesizable. Operators '<operator>', Expression '<expression>', Module '<module>', File '<file>', Line '<line>'.]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+unsynth_arithmetic_operator: [uninspected] Restricted arithmetic operator used, which might be unsynthesizable. Operators '{mod}', Expression '(TO_INTEGER(counter) - 11) mod 8', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Line '142'. [Example Hierarchy:i2s_unit]
+
+unsynth_arithmetic_operator: [uninspected] Restricted arithmetic operator used, which might be unsynthesizable. Operators '{mod}', Expression '(TO_INTEGER(counter) mod 8)', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Line '150'. [Example Hierarchy:i2s_unit]
+
+
+
+---------------
+| Warning (6) |
+---------------
+
+Check: div_mod_lhs_too_wide [Category: Rtl Design Style] (2)
+       [Message: Width of division or modulus LHS operand is greater than 12. Operand '<operand>', Width '<width>', Module '<module>', File '<file>', Line '<line>'.]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+div_mod_lhs_too_wide: [uninspected] Width of division or modulus LHS operand is greater than 12. Operand '(TO_INTEGER(counter) - 11)', Width '33', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Line '142'. [Example Hierarchy:i2s_unit]
+
+div_mod_lhs_too_wide: [uninspected] Width of division or modulus LHS operand is greater than 12. Operand 'TO_INTEGER(counter)', Width '32', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Line '150'. [Example Hierarchy:i2s_unit]
+
+
+Check: div_mod_rem_operand_complex_expr [Category: Rtl Design Style] (1)
+       [Message: Operand of division, mod or rem operator has arithmetic or logical expressions. Expression '<expression>', Module '<module>', File '<file>', Line '<line>'.]
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+div_mod_rem_operand_complex_expr: [uninspected] Operand of division, mod or rem operator has arithmetic or logical expressions. Expression '(TO_INTEGER(counter) - 11) mod 8', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Line '142'. [Example Hierarchy:i2s_unit]
+
+
+Check: if_stmt_with_arith_expr [Category: Rtl Design Style] (2)
+       [Message: Arithmetic operation is used in conditional expression of if statement. Expression '<expression>', Module '<module>', File '<file>', Line '<line>'.]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+if_stmt_with_arith_expr: [uninspected] Arithmetic operation is used in conditional expression of if statement. Expression '(TO_INTEGER(counter) - 11) mod 8', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Line '142'. [Example Hierarchy:i2s_unit]
+
+if_stmt_with_arith_expr: [uninspected] Arithmetic operation is used in conditional expression of if statement. Expression '(TO_INTEGER(counter) mod 8)', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Line '150'. [Example Hierarchy:i2s_unit]
+
+
+Check: seq_block_has_complex_cond [Category: Reset] (1)
+       [Message: Sequential block has complex condition. Condition '<condition>', Module '<module>', File '<file>', Condition at line '<line>', Block at line '<line1>'.]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+seq_block_has_complex_cond: [uninspected] Sequential block has complex condition. Condition 'tick_in = '1' and play_r = '1'', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Condition at line '97', Block at line '92'. [Example Hierarchy:i2s_unit]
+
+
+
+------------
+| Info (5) |
+------------
+
+Check: module_output_not_registered [Category: Connectivity] (4)
+       [Message: Module output port is not registered. Port '<port>', Module '<module>', File '<file>', Line '<line>'.]
+------------------------------------------------------------------------------------------------------------------------
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'req_out', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Line '25'. [Example Hierarchy:i2s_unit]
+
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'ws_out', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Line '26'. [Example Hierarchy:i2s_unit]
+
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'sck_out', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Line '27'. [Example Hierarchy:i2s_unit]
+
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'sdo_out', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Line '28'. [Example Hierarchy:i2s_unit]
+
+
+Check: process_signal_assign_large [Category: Rtl Design Style] (1)
+       [Message: Process block has more signal assignments than the specified limit. Total count '<count>', Specified limit '<limit>', Module '<module>', File '<file>', Line '<line>'.]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+process_signal_assign_large: [uninspected] Process block has more signal assignments than the specified limit. Total count '6', Specified limit '5', Module 'i2s_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/i2s_unit.vhd', Line '124'. [Example Hierarchy:i2s_unit]
+
+
+
+----------------
+| Resolved (0) |
+----------------
+
+
+
+====================================================================================================
+Section 3 : Design Information
+====================================================================================================
+-----------
+| Summary |
+-----------
+  Register Bits                           : 106
+  Latch Bits                              : 0
+  User-specified Blackboxes               : 0
+  Inferred Blackboxes                     : 0
+  Empty Modules                           : 0
+  Unresolved Modules                      : 0
+  Hierarchical IPs                        : 0
+

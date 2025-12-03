@@ -1,0 +1,161 @@
+====================================================================================================
+Lint Check Report
+Questa Lint  Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+
+Timestamp            : Fri Mar 21 09:52:08 2025
+Description          : Report for referring checks count, check violations details, and  design information
+Design               : cdc_unit
+Database             : /study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/output/cdc_unit_qlint_run_log/lint.db
+Design Quality Score : 99.8%
+
+Sections:
+   Section 1 : Check Summary
+   Section 2 : Check Details
+   Section 3 : Design Information
+====================================================================================================
+
+
+====================================================================================================
+Section 1 : Check Summary
+====================================================================================================
+-------------
+| Error (0) |
+-------------
+
+---------------
+| Warning (4) |
+---------------
+  async_control_is_gated                  : 1
+  mux_select_const                        : 3
+
+-------------
+| Info (14) |
+-------------
+  clock_with_both_edges                   : 1
+  combo_path_input_to_output              : 1
+  const_reg_data                          : 1
+  flop_redundant                          : 1
+  flop_with_inverted_clock                : 2
+  line_char_large                         : 4
+  module_output_not_registered            : 3
+  var_set_not_read                        : 1
+
+----------------
+| Resolved (0) |
+----------------
+
+
+====================================================================================================
+Section 2 : Check Details
+====================================================================================================
+-------------
+| Error (0) |
+-------------
+
+
+---------------
+| Warning (4) |
+---------------
+
+Check: async_control_is_gated [Category: Reset] (1)
+       [Message: Asynchronous control signal is gated. Source: Signal '<signal>', Module '<module>', File '<file>', Line '<line>', Usage example: Signal '<signal1>', Module '<module1>', File '<file1>', Line '<line1>'.]
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+async_control_is_gated: [uninspected] Asynchronous control signal is gated. Source: Signal 'muxrst_n', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '59', Usage example: Signal 'muxrst_n', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '91'. [Example Hierarchy:cdc_unit]
+
+
+Check: mux_select_const [Category: Connectivity] (3)
+       [Message: Constant value drives mux select pin. Signal '<signal>', Module '<module>', File '<file>', Line '<line>'.]
+----------------------------------------------------------------------------------------------------------------------------
+mux_select_const: [uninspected] Constant value drives mux select pin. Signal 'muxclk', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '57'. [Example Hierarchy:cdc_unit]
+
+mux_select_const: [uninspected] Constant value drives mux select pin. Signal 'rsync_clk', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '58'. [Example Hierarchy:cdc_unit]
+
+mux_select_const: [uninspected] Constant value drives mux select pin. Signal 'muxrst_n', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '59'. [Example Hierarchy:cdc_unit]
+
+
+
+-------------
+| Info (14) |
+-------------
+
+Check: clock_with_both_edges [Category: Clock] (1)
+       [Message: Both edges of clock are used in design. Signal '<clock>', Posegde Register: Signal '<signal1>', Module '<module1>', File '<file1>', Line '<line1>', Negedge Register: Signal '<signal2>', Module '<module2>', File '<file2>', Line '<line2>'.]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+clock_with_both_edges: [uninspected] Both edges of clock are used in design. Signal 'mclk', Posegde Register: Signal 'play_in_sync1', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '32', Negedge Register: Signal 'mrst_n_sync1', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '69'. [Example Hierarchy:cdc_unit]
+
+
+Check: combo_path_input_to_output [Category: Connectivity] (1)
+       [Message: Top level input to output has pure combinational path. Input port(s) '<input>', Output port '<output>', Module '<module>', File '<file>', Line '<line>']
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+combo_path_input_to_output: [uninspected] Top level input to output has pure combinational path. Input port(s) 'mclk', Output port 'muxclk_out', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '17' [Example Hierarchy:cdc_unit]
+
+
+Check: const_reg_data [Category: Connectivity] (1)
+       [Message: Constant value drives register data pin. Signal '<signal>', Module '<module>', File '<file>', Line '<line>'.]
+-------------------------------------------------------------------------------------------------------------------------------
+const_reg_data: [uninspected] Constant value drives register data pin. Signal 'mrst_n_sync1', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '76'. [Example Hierarchy:cdc_unit]
+
+
+Check: flop_redundant [Category: Connectivity] (1)
+       [Message: Redundant flip-flops found. Flops count '<count>', First flop '<flop1>', Module '<module1>', File '<file1>', Line '<line1>', Second flop '<flop2>', Module '<module2>', File '<file2>', Line '<line2>'.]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+flop_redundant: [uninspected] Redundant flip-flops found. Flops count '2', First flop 'tick_reg', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '42', Second flop 'handshake_req', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '43'. [Example Hierarchy:cdc_unit]
+
+
+Check: flop_with_inverted_clock [Category: Clock] (2)
+       [Message: Inverted clock drives Flip-flop. Preferred edge '<type>', Flop '<flop>', Module '<module>', File '<file>', Line '<line>'.]
+--------------------------------------------------------------------------------------------------------------------------------------------
+flop_with_inverted_clock: [uninspected] Inverted clock drives Flip-flop. Preferred edge 'positive', Flop 'mrst_n_sync1', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '76'. [Example Hierarchy:cdc_unit]
+
+flop_with_inverted_clock: [uninspected] Inverted clock drives Flip-flop. Preferred edge 'positive', Flop 'mrst_n_sync2', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '77'. [Example Hierarchy:cdc_unit]
+
+
+Check: line_char_large [Category: Rtl Design Style] (4)
+       [Message: Line has more characters than the specified limit. Current count '<count>', Specified Limit '<limit>', Tab equivalent spacing '<tab_size>', File '<file>', Line '<line>'.]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+line_char_large: [uninspected] Line has more characters than the specified limit. Current count '111', Specified Limit '110', Tab equivalent spacing '2', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport_pkg.sv', Line '112'. [RTL ID:388d64bb_00300]
+
+line_char_large: [uninspected] Line has more characters than the specified limit. Current count '112', Specified Limit '110', Tab equivalent spacing '2', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport_pkg.sv', Line '113'. [RTL ID:ee9147a2_00300]
+
+line_char_large: [uninspected] Line has more characters than the specified limit. Current count '111', Specified Limit '110', Tab equivalent spacing '2', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport_pkg.sv', Line '114'. [RTL ID:7c4727f6_00300]
+
+line_char_large: [uninspected] Line has more characters than the specified limit. Current count '111', Specified Limit '110', Tab equivalent spacing '2', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/audioport_pkg.sv', Line '117'. [RTL ID:fec5e4ae_00300]
+
+
+Check: module_output_not_registered [Category: Connectivity] (3)
+       [Message: Module output port is not registered. Port '<port>', Module '<module>', File '<file>', Line '<line>'.]
+------------------------------------------------------------------------------------------------------------------------
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'req_out', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '14'. [Example Hierarchy:cdc_unit]
+
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'muxclk_out', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '17'. [Example Hierarchy:cdc_unit]
+
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'muxrst_n_out', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '18'. [Example Hierarchy:cdc_unit]
+
+
+Check: var_set_not_read [Category: Rtl Design Style] (1)
+       [Message: Variable is set, but is not read. Signal '<signal>', Module '<module>', File '<file>', Line '<line>'.]
+------------------------------------------------------------------------------------------------------------------------
+var_set_not_read: [uninspected] Variable is set, but is not read. Signal 'tick_reg', Module 'cdc_unit', File '/study/2025/521406S/personal/aimtiaz23/DT3_2025/project/workdir/input/cdc_unit.sv', Line '130'. [Example Hierarchy:cdc_unit]
+
+
+
+----------------
+| Resolved (0) |
+----------------
+
+
+
+====================================================================================================
+Section 3 : Design Information
+====================================================================================================
+-----------
+| Summary |
+-----------
+  Register Bits                           : 112
+  Latch Bits                              : 0
+  User-specified Blackboxes               : 0
+  Inferred Blackboxes                     : 0
+  Empty Modules                           : 0
+  Unresolved Modules                      : 0
+  Hierarchical IPs                        : 0
+

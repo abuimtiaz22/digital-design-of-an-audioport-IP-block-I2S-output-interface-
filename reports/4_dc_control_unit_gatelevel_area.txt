@@ -1,0 +1,60 @@
+ 
+****************************************
+Report : area
+Design : control_unit
+Version: T-2022.03-SP5-1
+Date   : Thu Feb 13 14:57:07 2025
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /research/cas/public/DT3_2025/lib/logic_lib/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                         4510
+Number of nets:                         27785
+Number of cells:                        25024
+Number of combinational cells:          17889
+Number of sequential cells:              7133
+Number of macros/black boxes:               0
+Number of buf/inv:                       5142
+Number of references:                      35
+
+Combinational area:              19530.784492
+Buf/Inv area:                     2881.312020
+Noncombinational area:           37947.561224
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 57478.345717
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------
+control_unit                      57478.3457    100.0  19530.7845  37947.5612  0.0000  control_unit
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------
+Total                                                  19530.7845  37947.5612  0.0000
+
+
+Area of detected synthetic parts
+--------------------------------
+  No DW parts to report!
+
+Estimated area of ungrouped synthetic parts
+-------------------------------------------
+                           Estimated  Perc. of
+  Module   Implem.  Count       Area cell area
+  -------- -------  ----- ---------- ---------
+  DW01_inc apparch      4    48.0198      0.1%
+  DW_cmp   apparch      3     6.1180      0.0%
+  -------- -------  ----- ---------- ---------
+  Total:                7    54.1378      0.1%
+
+Total synthetic cell area:              54.1378  0.1%  (estimated)
+
+1

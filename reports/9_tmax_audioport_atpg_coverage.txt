@@ -1,0 +1,13 @@
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT     325770
+ Possibly detected                PT          0
+ Undetectable                     UD        292
+ ATPG untestable                  AU       1215
+ Not detected                     ND         73
+ -----------------------------------------------
+ total faults                            327350
+ test coverage                            99.61%
+ -----------------------------------------------

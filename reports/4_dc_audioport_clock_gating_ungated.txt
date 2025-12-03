@@ -1,0 +1,111 @@
+ 
+****************************************
+Report : clock_gating
+        -ungated
+Design : audioport
+Version: T-2022.03-SP5-1
+Date   : Sun May  4 01:03:09 2025
+****************************************
+
+Information: Identification of clock-gating cells has not been performed. Pre-existing clock-gating cells will not be reported. (PWR-947)
+
+--------------------------------------------------------------------------------
+                             Ungated Register Report
+--------------------------------------------------------------------------------
+           Ungated Register     |  Reason                  |  What Next?
+--------------------------------------------------------------------------------
+    control_unit_1/play_r_reg   |  Min bitwidth not met    |  -
+    control_unit_1/req_r_reg    |  Always enabled register |  -
+    control_unit_1/rbank_r_reg[1][0]
+                                |  Min bitwidth not met    |  -
+    control_unit_1/llooped_r_reg
+                                |  Min bitwidth not met    |  -
+    control_unit_1/rlooped_r_reg
+                                |  Min bitwidth not met    |  -
+    control_unit_1/irq_r_reg    |  Min bitwidth not met    |  -
+    cdc_unit_1/mrst_n_sync1_reg |  Always enabled register |  -
+    cdc_unit_1/play_in_sync1_reg
+                                |  Always enabled register |  -
+    cdc_unit_1/req_in_sync1_reg |  Always enabled register |  -
+    cdc_unit_1/handshake_ack_sync1_reg
+                                |  Always enabled register |  -
+    cdc_unit_1/handshake_req_reg
+                                |  Min bitwidth not met    |  -
+    cdc_unit_1/handshake_req_sync1_reg
+                                |  Always enabled register |  -
+    cdc_unit_1/handshake_ack_reg
+                                |  Always enabled register |  -
+    cdc_unit_1/tick_out_reg_reg |  Always enabled register |  -
+    cdc_unit_1/handshake_req_sync2_reg
+                                |  Always enabled register |  -
+    cdc_unit_1/tick_prev_reg    |  Always enabled register |  -
+    cdc_unit_1/handshake_ack_sync2_reg
+                                |  Always enabled register |  -
+    cdc_unit_1/req_in_sync2_reg |  Always enabled register |  -
+    cdc_unit_1/req_in_prev_reg  |  Always enabled register |  -
+    cdc_unit_1/play_in_sync2_reg
+                                |  Always enabled register |  -
+    cdc_unit_1/mrst_n_sync2_reg |  Always enabled register |  -
+    i2s_unit_1/counter_reg[0]   |  Always enabled register |  -
+    i2s_unit_1/play_r_reg       |  Min bitwidth not met    |  -
+    i2s_unit_1/counter_reg[1]   |  Always enabled register |  -
+    i2s_unit_1/counter_reg[2]   |  Always enabled register |  -
+    i2s_unit_1/counter_reg[3]   |  Always enabled register |  -
+    i2s_unit_1/counter_reg[4]   |  Always enabled register |  -
+    i2s_unit_1/counter_reg[5]   |  Always enabled register |  -
+    i2s_unit_1/counter_reg[6]   |  Always enabled register |  -
+    i2s_unit_1/counter_reg[7]   |  Min bitwidth not met    |  -
+    i2s_unit_1/counter_reg[8]   |  Always enabled register |  -
+    dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_read_inputs_mioi_inst/read_inputs_mioi/dsp_unit_read_inputs_core_inst/io_read_ccs_ccore_start_rsc_sft_lpi_1_dfm_1_reg
+                                |  Min bitwidth not met    |  -
+    dsp_unit_1/dsp_unit_rtl_1/dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_write_outputs_mioi_inst/write_outputs_mioi/dsp_unit_write_outputs_core_inst/this_tick_out_reg
+                                |  Always enabled register |  -
+                                |                          |
+--------------------------------------------------------------------------------
+
+---------------------------------------------------------------
+  Tool-inserted ungated reasons
+---------------------------------------------------------------
+  Reason for not gating    | Regs  |  Regs %  | Bits |  Bits %
+---------------------------------------------------------------
+  Always enabled register  | 24    |  72.73   | 24   |  72.73
+  Min bitwidth not met     | 9     |  27.27   | 9    |  27.27
+---------------------------------------------------------------
+
+
+                             Clock Gating Summary
+          ------------------------------------------------------------
+          |    Number of Clock gating elements    |     1005         |
+          |                                       |                  |
+          |    Number of Gated registers          | 15108 (99.78%)   |
+          |                                       |                  |
+          |    Number of Ungated registers        |    33 (0.22%)    |
+          |                                       |                  |
+          |    Total number of registers          |    15141         |
+          ------------------------------------------------------------
+
+
+
+                             Clock Gating Report by Origin
+          +-------------------------------------------------+------------------+
+          |                                                 |    Actual (%)    |
+          |                                                 |    Count         |
+          +-------------------------------------------------+------------------+
+          |  Number of tool-inserted clock gating elements  |  1005 (100.00%)  |
+          |                                                 |                  |
+          |  Number of pre-existing clock gating elements   |     0 (0.00%)    |
+          |                                                 |                  |
+          |  Number of gated registers                      | 15108 (99.78%)   |
+          |                                                 |                  |
+          |  Number of tool-inserted gated registers        | 15108 (99.78%)   |
+          |                                                 |                  |
+          |  Number of pre-existing gated registers         |     0 (0.00%)    |
+          |                                                 |                  |
+          |  Number of ungated registers                    |    33 (0.22%)    |
+          |                                                 |                  |
+          |  Number of registers                            |    15141         |
+          +-------------------------------------------------+------------------+
+
+
+
+1

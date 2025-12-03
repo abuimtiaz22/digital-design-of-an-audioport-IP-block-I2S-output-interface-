@@ -1,0 +1,319 @@
+
+Questa Reset Check Report Version 2024.3_2 5905218 linux_x86_64 04-Dec-2024
+
+-----------------------------------------------------------------
+ResetCheck Analysis Report.
+Design : audioport
+
+Created Fri Apr 25 15:15:59 2025
+-----------------------------------------------------------------
+
+
+=================================================================
+Section 1 : Design Information
+Section 2 : Clock Information
+Section 3 : Reset Information
+Section 4 : Clock/Reset Mapping Information
+Section 5 : ResetCheck Results
+Section 6 : Custom Synchronization
+Section 7 : Constant Information
+Section 8 : Port Domain Information
+Section 9 : Port Reset Domain Information
+Section 10 : Modal Analysis Information
+Section 11 : Modal Design Information
+=================================================================
+
+
+=================================================================
+Section 1 : Design Information
+=================================================================
+
+Design Information
+--------------------------
+Design Complexity Number          = 8629
+Number of RDC Signals             = 6
+Number of blackboxes              = 0
+Number of Register bits           = 15142
+Number of Latch bits              = 0
+Number of RAMs                    = 0
+Number of Empty Modules           = 0
+Number of Unresolved Modules      = 0
+Number of Gate-Level Modules      = 0
+Number of Dead-end Registers      = 1
+Number of Unclocked Registers     = 0
+
+
+
+
+=================================================================
+Section 2 : Clock Information
+=================================================================
+
+Clock Group Summary for 'audioport' 
+===================================
+Total Number of Clock Groups         : 2
+ 1. User-Specified                   :(2)
+ 2. Inferred                         :(0)
+    2.1 Primary                      : 0
+    2.2 Undriven                     : 0
+    2.3 Blackbox                     : 0
+    2.4 Gated Mux                    : 0
+    2.5 Gated Combo                  : 0
+ 3. Ignored                          :(0)
+
+
+=================================================================
+1. User-Specified (2)
+=================================================================
+Group     0(14979 Register Bits, 0 Latch Bits)
+-----------
+clk 
+
+Group     1(163 Register Bits, 0 Latch Bits)
+-----------
+mclk 
+
+
+=================================================================
+2. Inferred (0)
+=================================================================
+
+2.1 Primary (0)
+-----------------------------------------------------------------
+None
+
+2.2 Undriven (0)
+-----------------------------------------------------------------
+None
+
+2.3 Blackbox (0)
+-----------------------------------------------------------------
+None
+
+2.4 Gated Mux (0)
+-----------------------------------------------------------------
+None
+
+2.5 Gated Combo (0)
+-----------------------------------------------------------------
+None
+
+=================================================================
+3. Ignored(0)
+=================================================================
+None
+
+
+To see detailed clock information, use Tcl command "resetcheck generate tree -clock"
+
+
+=================================================================
+Section 3 : Reset Information
+=================================================================
+
+Reset Tree Summary for 'audioport' 
+===================================
+Total Number of Resets               : 2
+ 1. User-Specified                   :(2)
+ 2. Inferred                         :(0)
+   2.1 Asynchronous                  :(0)
+   2.2 Asynchronous & Synchronous    :(0)
+   2.3 Synchronous                   :(0)
+ 3. Ignored                          :(0)
+
+
+
+=================================================================
+1. User-Specified (2)
+=================================================================
+Group       1: rst_n
+---------------------
+rst_n <rst_n:U,A,L> (14982 Register Bits, 0 Latch Bits)
+  cdc_unit_1.rst_n 
+
+Group       2: mrst_n
+----------------------
+cdc_unit_1.mrst_n <mrst_n:U,A,L> (218 Register Bits, 0 Latch Bits)
+  cdc_unit_1.muxrst_n 
+
+
+=================================================================
+2. Inferred (0)
+=================================================================
+
+-----------------------------------------------------------------
+2.1 Asynchronous (0)
+-----------------------------------------------------------------
+None
+
+-----------------------------------------------------------------
+2.2 Asynchronous & Synchronous (0)
+-----------------------------------------------------------------
+None
+
+-----------------------------------------------------------------
+2.3 Synchronous (0)
+-----------------------------------------------------------------
+None
+
+=================================================================
+3. Ignored (0)
+=================================================================
+None
+
+To see detailed reset information, use Tcl command "resetcheck generate tree -reset"
+
+
+=================================================================
+Section 4 : Clock/Reset Mapping Information
+=================================================================
+
+Clock - Reset Mapping
+---------------------
+
+clk
+    rst_n
+
+mclk
+    rst_n
+    cdc_unit_1.mrst_n
+
+Reset - Clock Mapping
+---------------------
+
+rst_n
+    clk
+    mclk
+
+cdc_unit_1.mrst_n
+    mclk
+
+
+
+=================================================================
+Section 5 : ResetCheck Results
+=================================================================
+
+ResetCheck Summary
+-----------------------------------------------------------------
+Total number of checks:                                      (6)
+-----------------------------------------------------------------
+
+Violation (1)
+-----------------------------------------------------------------
+Combinational logic before RDC/CDC synchronizer              (1)
+
+Caution (2)
+-----------------------------------------------------------------
+Reset domain crossing from areset to areset spans clock domains (2)
+
+Evaluation (3)
+-----------------------------------------------------------------
+RDC/CDC signal synchronized by DFF synchronizer              (3)
+
+Resolved - Waived or Verified Status (0)
+-----------------------------------------------------------------
+<None>
+
+Filtered (0)
+-----------------------------------------------------------------
+<None>
+
+
+
+=================================================================
+Section 6 : Custom Synchronization
+=================================================================
+
+
+Module                Instance            
+------------------------------------
+None
+
+
+
+=================================================================
+Section 7 : Constant Information
+=================================================================
+
+Signal                         value                         
+-----------------------------------------------------------------
+test_mode_in                   1'b0                          
+
+
+=================================================================
+Section 8 : Port Domain Information
+=================================================================
+
+Port                Direction     Constraints    Clock Domain             Type      
+-----------------------------------------------------------------------------------
+clk                   input         Clock          { clk }                 User    
+rst_n                 input         Reset          { clk }                 User    
+mclk                  input         Clock          { mclk }                User    
+PSEL                  input                        { clk }                 User    
+PENABLE               input                        { clk }                 User    
+PWRITE                input                        { clk }                 User    
+PADDR                 input                        { clk }                 User    
+PWDATA                input                        { clk }                 User    
+test_mode_in          input         Constant       { <constant> }          User    
+scan_en_in            input                        { clk }                 User    
+PRDATA                output                       { clk }                 User    
+PREADY                output                       { clk }                 User    
+PSLVERR               output                       { clk }                 User    
+irq_out               output                       { clk }                 User    
+ws_out                output                       { mclk }                User    
+sck_out               output                       { mclk }                User    
+sdo_out               output                       { mclk }                User    
+
+
+=================================================================
+Section 9 : Port Reset Domain Information
+=================================================================
+Port                Direction     Reset Domain                         Type      
+-----------------------------------------------------------------------------------
+clk                   input         { rst_n }                         Questa ResetCheck
+rst_n                 input         { rst_n }                         Questa ResetCheck
+mclk                  input         { mrst_n rst_n }                  Questa ResetCheck
+PSEL                  input         { rst_n }                         User      
+PENABLE               input         { rst_n }                         User      
+PWRITE                input         { rst_n }                         User      
+PADDR                 input         { rst_n }                         User      
+PWDATA                input         { rst_n }                         User      
+test_mode_in          input         { <undef> }                       Questa ResetCheck
+scan_en_in            input         { rst_n }                         User      
+PRDATA                output        { rst_n }                         User      
+PREADY                output        { rst_n }                         User      
+PSLVERR               output        { rst_n }                         User      
+irq_out               output        { rst_n }                         User      
+ws_out                output        { <undef> }                       User      
+sck_out               output        { <undef> }                       User      
+sdo_out               output        { <undef> }                       User      
+
+
+=================================================================
+Section 10 : Modal Analysis Information
+=================================================================
+
+Mode information
+================
+
+None
+
+User Modes
+==========
+
+None
+
+Inferred Modes
+==============
+
+None
+
+
+=================================================================
+Section 11 : Modal Design Information
+=================================================================
+
+
+To see detailed ResetCheck Analysis information, use Tcl command "resetcheck generate report"
+

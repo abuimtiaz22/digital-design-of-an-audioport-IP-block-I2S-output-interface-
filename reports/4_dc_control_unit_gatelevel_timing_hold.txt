@@ -1,0 +1,140 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : control_unit
+Version: T-2022.03-SP5-1
+Date   : Thu Feb 13 14:57:08 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: PWDATA[5] (input port clocked by clk)
+  Endpoint: level_out (output port clocked by clk)
+  Path Group: clk_in2out
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  control_unit       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.62       1.62 r
+  PWDATA[5] (in)                           0.00       1.62 r
+  U34369/ZN (NOR3_X1)                      0.05       1.67 f
+  level_out (out)                          0.00       1.68 f
+  data arrival time                                   1.68
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -1.62      -1.62
+  data required time                                 -1.62
+  -----------------------------------------------------------
+  data required time                                 -1.62
+  data arrival time                                  -1.68
+  -----------------------------------------------------------
+  slack (MET)                                         3.30
+
+
+  Startpoint: req_in (input port clocked by clk)
+  Endpoint: req_r_reg (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk_in2reg
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  control_unit       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.62       1.62 r
+  req_in (in)                              0.00       1.62 r
+  U35114/ZN (AND2_X1)                      0.04       1.66 r
+  req_r_reg/D (DFFR_X1)                    0.01       1.67 r
+  data arrival time                                   1.67
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  req_r_reg/CK (DFFR_X1)                   0.00       0.00 r
+  library hold time                        0.01       0.01
+  data required time                                  0.01
+  -----------------------------------------------------------
+  data required time                                  0.01
+  data arrival time                                  -1.67
+  -----------------------------------------------------------
+  slack (MET)                                         1.66
+
+
+  Startpoint: irq_r_reg (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: irq_out (output port clocked by clk)
+  Path Group: clk_reg2out
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  control_unit       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  irq_r_reg/CK (DFFR_X1)                   0.00 #     0.00 r
+  irq_r_reg/Q (DFFR_X1)                    0.09       0.09 f
+  irq_out (out)                            0.00       0.09 f
+  data arrival time                                   0.09
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -1.62      -1.62
+  data required time                                 -1.62
+  -----------------------------------------------------------
+  data required time                                 -1.62
+  data arrival time                                  -0.09
+  -----------------------------------------------------------
+  slack (MET)                                         1.72
+
+
+  Startpoint: ldata_r_reg[0][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ldata_r_reg[0][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk_reg2reg
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  control_unit       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  ldata_r_reg[0][0]/CK (DFFR_X1)           0.00 #     0.00 r
+  ldata_r_reg[0][0]/QN (DFFR_X1)           0.07       0.07 r
+  U36656/ZN (OAI22_X1)                     0.02       0.09 f
+  ldata_r_reg[0][0]/D (DFFR_X1)            0.01       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  ldata_r_reg[0][0]/CK (DFFR_X1)           0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.10
+
+
+1

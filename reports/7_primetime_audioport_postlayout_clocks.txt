@@ -1,0 +1,73 @@
+****************************************
+Report : clock timing
+	-type summary
+Design : audioport
+Version: U-2022.12
+Date   : Sun May  4 14:39:50 2025
+****************************************
+
+  Clock: clk                                                   
+----------------------------------------------------------------------------
+  Maximum setup launch latency:
+      control_unit_1/rbank_r_reg_33__27_/CK                    0.368   rp-+
+
+  Minimum setup capture latency:
+      dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_clk_gate_dsp_regs_r_2_reg/latch_clone/CK
+                                                               0.026   rp-+
+
+  Minimum hold launch latency:
+      control_unit_1/rdata_r_reg_50__5_/CK                     0.273   rp-+
+
+  Maximum hold capture latency:
+      control_unit_1/rbank_r_reg_33__27_/CK                    0.368   rp-+
+
+  Maximum active transition:
+      dsp_unit_1/dsp_unit_rtl_1_dsp_unit_regs_proc_inst_dsp_regs_r_4_reg_3_/CK
+                                                               0.105   rp-+
+
+  Minimum active transition:
+      control_unit_1/rbank_r_reg_66__11_/CK                    0.010   rp-+
+
+  Maximum setup skew:
+      dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/dsp_unit_dsp_proc_dsp_proc_fsm_inst_state_var_reg_2_/CK
+                                                                       rp-+
+      dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/clk_gate_audio1_in_v_sva_reg/latch_clone/CK
+                                                               0.199   rp-+
+
+  Maximum hold skew:
+      dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/data1_r_46_lpi_2_reg_6_/CK
+                                                                       rp-+
+      dsp_unit_1/dsp_unit_rtl_1_dsp_unit_dsp_proc_inst/data1_r_64_lpi_2_reg_6_/CK
+                                                               0.079   rp-+
+----------------------------------------------------------------------------
+
+  Clock: mclk                                                  
+----------------------------------------------------------------------------
+  Maximum setup launch latency:
+      i2s_unit_1/input_reg_reg_37_/CK                          0.137   rp-+
+
+  Minimum setup capture latency:
+      cdc_unit_1/clk_gate_audio1_out_reg/latch_clone/CK        0.064   rp-+
+
+  Minimum hold launch latency:
+      cdc_unit_1/mrst_n_sync1_reg/CK                           0.111   rpi-+
+
+  Maximum hold capture latency:
+      i2s_unit_1/input_reg_reg_37_/CK                          0.137   rp-+
+
+  Maximum active transition:
+      i2s_unit_1/input_reg_reg_32_/CK                          0.038   rp-+
+
+  Minimum active transition:
+      i2s_unit_1/input_reg_reg_0_/CK                           0.027   rp-+
+
+  Maximum setup skew:
+      i2s_unit_1/counter_reg_8_/CK                                     rp-+
+      i2s_unit_1/clk_gate_shift_reg_reg_1/latch_clone/CK       0.064   rp-+
+
+  Maximum hold skew:
+      cdc_unit_1/mrst_n_sync2_reg/CK                                   rpi-+
+      i2s_unit_1/input_reg_reg_37_/CK                          0.027   rp-+
+----------------------------------------------------------------------------
+
+1
